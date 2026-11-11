@@ -206,7 +206,6 @@
     },
     "stranded_salt_caravan": {
       "name": "Stranded Salt Caravan",
-      "sprite": "encounter_overturned_wagon",
       "text": "Six wagons of rock salt sit axle-deep in a sinkhole. The drovers have eaten their mules and are starting to eye each other.",
       "choices": [
         {"text": "Buy their salted stores",
@@ -223,7 +222,6 @@
     },
     "bitter_well": {
       "name": "The Bitter Well",
-      "sprite": "place_saint_orrins_rest",
       "text": "A well-house of cracked tile, its rope still wet. The water smells of iron and something older. Someone has scratched 'do not drink' into the lintel, and someone else has scratched it out.",
       "choices": [
         {"text": "Draw water for the column",
@@ -238,7 +236,6 @@
     },
     "hedge_witch_hut": {
       "name": "Hedge-Witch's Hut",
-      "sprite": "place_barrow_camp",
       "text": "A turf hut hung with bird skulls and drying nettles. The old woman inside does not look up from her pot. 'Coin first,' she says, 'questions after.'",
       "choices": [
         {"text": "Pay for a charm",
@@ -254,7 +251,6 @@
     },
     "deserters_fire": {
       "name": "Deserters' Fire",
-      "sprite": "encounter_free_company_camp",
       "text": "A dozen crossbowmen in mismatched livery huddle round a fire in a ditch. They have the look of men who ran from the same battle in different directions.",
       "choices": [
         {"text": "Offer them amnesty",
@@ -267,7 +263,6 @@
     },
     "lost_pilgrims_band": {
       "name": "Lost Pilgrims",
-      "sprite": "encounter_dispossessed_column",
       "text": "Barefoot pilgrims in ash-grey robes, searching for a shrine that burned a generation ago. They ask you the way as if you might know.",
       "choices": [
         {"text": "Guide them to the road",
@@ -283,7 +278,6 @@
     },
     "grey_ferryman": {
       "name": "The Grey Ferryman",
-      "sprite": "place_fenwick_dike",
       "text": "A flat barge on a rope, and a ferryman with a face like wet clay. 'Across is quicker,' he says. 'Across is always quicker.'",
       "choices": [
         {"text": "Pay the fare",
@@ -301,7 +295,6 @@
     },
     "abandoned_quarry": {
       "name": "Abandoned Quarry",
-      "sprite": "place_lockstone",
       "text": "Terraces of cut stone step down into a flooded pit. Rusted picks still lie where the quarrymen dropped them the day the sky turned red.",
       "choices": [
         {"text": "Put the men to work",
@@ -319,7 +312,6 @@
     },
     "charcoal_burners": {
       "name": "Charcoal Burners",
-      "sprite": "place_elderwold_stumps",
       "text": "Smoke mounds smoulder among fresh stumps. Soot-black families are felling an old wood one tree at a time and selling the char to anyone with a forge.",
       "choices": [
         {"text": "Buy charcoal and brimstone",
@@ -337,7 +329,6 @@
     },
     "rune_cairn": {
       "name": "Rune Cairn",
-      "sprite": "place_lockstone",
       "text": "A man-high cairn of flat stones, each cut with angular runes that seem to shift when you look away. The grass around it will not grow.",
       "choices": [
         {"text": "Read the runes",
@@ -350,7 +341,6 @@
     },
     "burned_field_hospital": {
       "name": "Burned Field Hospital",
-      "sprite": "place_saint_orrins_rest",
       "text": "Scorched tents and rows of cots. A handful of wounded soldiers from a lost battle still breathe, tended by a single exhausted surgeon.",
       "choices": [
         {"text": "Tend the wounded",
@@ -366,7 +356,6 @@
     },
     "starving_hounds": {
       "name": "Starving Hounds",
-      "sprite": "encounter_thornwolf_den",
       "text": "A pack of frost-furred war dogs, collars still on, circling the frozen body of their handler. Their ribs show through the fur.",
       "choices": [
         {"text": "Feed them",
@@ -383,7 +372,6 @@
     },
     "smugglers_cove": {
       "name": "Smugglers' Cove",
-      "sprite": "place_fenwick_dike",
       "text": "Lanterns hooded with sacking, barrels rolled up a shingle beach by night. The smugglers freeze when they see your banners, then decide to smile.",
       "choices": [
         {"text": "Buy their contraband",
@@ -401,7 +389,6 @@
     },
     "old_drillmaster": {
       "name": "The Old Drillmaster",
-      "sprite": "encounter_hall_of_echoes",
       "text": "A one-legged sergeant on a barrel by the roadside, watching your column march past with open contempt. 'Call that a file?' he says. 'Give me a week.'",
       "choices": [
         {"text": "Pay him to drill the ranks",
@@ -415,7 +402,6 @@
     },
     "weeping_spring": {
       "name": "Weeping Spring",
-      "sprite": "encounter_drowned_chapel",
       "text": "Water runs down the face of a rock carved into a woman's shape, pooling in a basin worn smooth by centuries of hands. It hums faintly with old magic.",
       "choices": [
         {"text": "Drink from the basin",
@@ -431,7 +417,6 @@
     },
     "wyrm_carcass": {
       "name": "Carcass of a Wyrm",
-      "sprite": "place_wound",
       "text": "A wyrm the length of a village lies dead in a scorched furrow it ploughed when it fell. Carrion birds blacken its back. Something else is feeding at the far end.",
       "choices": [
         {"text": "Harvest the scales",
@@ -449,7 +434,6 @@
     },
     "besieged_hamlet": {
       "name": "Besieged Hamlet",
-      "sprite": "place_barrow_camp",
       "text": "Brigands have ringed a walled hamlet and are working a ram on the gate. On the wall, villagers wave torn sheets at your banners.",
       "choices": [
         {"text": "Break the siege",
@@ -465,7 +449,6 @@
     },
     "sunken_reliquary": {
       "name": "Sunken Reliquary",
-      "sprite": "encounter_drowned_chapel",
       "text": "A reliquary chapel slid into a flooded quarry long ago. Through the green water you can see gilt glinting on the altar, and pale shapes drifting between the pews.",
       "choices": [
         {"text": "Send your divers down",
@@ -480,7 +463,6 @@
     },
     "market_of_bones": {
       "name": "Market of Bones",
-      "sprite": "place_barrow_camp",
       "text": "Stalls of bleached bone and lacquered skulls under a canvas of stitched hides. The traders wear masks and accept any coin, any soul.",
       "choices": [
         {"text": "Buy fresh stock",
@@ -499,7 +481,6 @@
     },
     "ironwood_grove": {
       "name": "Ironwood Grove",
-      "sprite": "place_elderwold_stumps",
       "text": "Black-barked trees with leaves like beaten copper, ringing faintly in the wind. Their wood turns axes. The air in the grove is very still, and very watchful.",
       "choices": [
         {"text": "Fell the ironwood",
@@ -516,7 +497,6 @@
     },
     "cold_forge": {
       "name": "Cold Forge of the Deep",
-      "sprite": "place_pyrehold",
       "text": "A deep-folk forge-hall cut into the hillside, its great furnace dead for an age. Half-finished constructs stand in rows, waiting for a fire that never came.",
       "choices": [
         {"text": "Relight the furnace",
@@ -534,7 +514,6 @@
     },
     "masked_envoy": {
       "name": "The Masked Envoy",
-      "sprite": "place_cindermaw_gate",
       "text": "A palanquin of black lacquer under a silk awning, guarded by slender figures in mirrored masks. A voice from behind the curtain offers to sell you the truth.",
       "choices": [
         {"text": "Accept the Court's courtesy",
@@ -552,7 +531,6 @@
     },
     "frozen_warband": {
       "name": "Frozen Warband",
-      "sprite": "encounter_barrow_field",
       "text": "A whole raiding party frozen where it camped, rimed men still sitting round a dead fire. One of them blinks.",
       "choices": [
         {"text": "Thaw them out",
@@ -569,7 +547,6 @@
     },
     "low_tide_shrine": {
       "name": "Shrine of the Low Tide",
-      "sprite": "encounter_drowned_chapel",
       "text": "When the marsh draws back, a ring of carved stones rises from the mud, each one shaped like a coiled fish. Offerings of shell and bone lie on the central slab.",
       "choices": [
         {"text": "Make the old offering",
@@ -584,7 +561,6 @@
     },
     "brand_sergeant": {
       "name": "The Brand-Sergeant",
-      "sprite": "encounter_ember_rift",
       "text": "A horned demon in a sergeant's sash sits on a crate of chains beside a glowing brazier. 'Recruiting,' it says, and grins with too many teeth.",
       "choices": [
         {"text": "Take the brand",
@@ -600,7 +576,6 @@
     },
     "tomb_of_the_unbowed": {
       "name": "Tomb of the Unbowed",
-      "sprite": "place_saint_orrins_rest",
       "text": "A knight's tomb on a hill, the effigy's sword still clasped in stone hands. Fresh flowers lie at its feet, though there is no village for leagues.",
       "choices": [
         {"text": "Keep vigil",
@@ -619,7 +594,6 @@
     },
     "giants_toll": {
       "name": "The Giant's Toll",
-      "sprite": "place_lockstone",
       "text": "A cairn giant sits across the pass with a boulder in its lap, chewing on a tree. 'Toll,' it rumbles. 'Or song. Or fight. Giant is bored.'",
       "choices": [
         {"text": "Pay the toll",
@@ -637,7 +611,6 @@
     },
     "stargazers_tower": {
       "name": "Stargazer's Broken Tower",
-      "sprite": "place_pyrehold",
       "text": "A tower snapped off halfway up, its top storey lying in the field like a fallen crown. Brass instruments still turn in the wind, tracking stars no one has seen since the sky went red.",
       "choices": [
         {"text": "Study the instruments",
@@ -651,7 +624,6 @@
     },
     "plague_cart": {
       "name": "The Plague Cart",
-      "sprite": "encounter_overturned_wagon",
       "text": "A cart heaped with the shrouded dead, its driver slumped over the reins. A bell on the shaft still tolls with every gust of wind.",
       "choices": [
         {"text": "Burn the cart",
@@ -669,7 +641,6 @@
     },
     "ember_crucible": {
       "name": "The Ember Crucible",
-      "sprite": "place_pyrehold",
       "text": "A ring of slag around a pit of cinders that has not cooled in living memory. A blind tender rakes the coals and says the fire takes one soldier in and gives back what that soldier would have become after a lifetime of war.",
       "choices": [
         {"text": "Pay the tender's rites",
@@ -685,7 +656,6 @@
     },
     "barrow_of_the_last_rank": {
       "name": "Barrow of the Last Rank",
-      "sprite": "place_barrow_camp",
       "text": "A long mound where a whole regiment was buried standing, shields still locked. The shepherds say that whoever keeps the night watch here wakes up with the old regiment's discipline in their bones.",
       "choices": [
         {"text": "Keep the night watch",
