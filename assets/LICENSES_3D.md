@@ -8,4 +8,7 @@ All are CC0 (public domain); no attribution is required, it is kept for our reco
 | `assets/nature/*.glb` | Quaternius "Ultimate Stylized Nature" pack, via github.com/walterpalladino/godot-quaternius-ultimate-stylized-nature; converted to 512 px textures with darker tints | CC0 1.0 |
 
 The 3D unit models in `assets/units3d/` are the project's own (Tripo models from our reference art,
-exported by `tools/assets/export_live_units.gd`).
+exported by `tools/assets/export_live_units.gd`). The animation clips of 105 of them (the humanoid units
+whose spec clips are `*_mx_*.glb`) are retargeted from Adobe Mixamo animations: usable in the game under
+Adobe's Mixamo terms, not covered by the MIT licence, and not to be extracted or redistributed on their own.
+See [CREDITS.md](../CREDITS.md).
