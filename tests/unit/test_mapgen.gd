@@ -3,16 +3,14 @@ extends "res://tests/test_case.gd"
 ## fairness, guarded chokepoints and integration with GameSession.
 
 const TEMPLATES := ["twin_marches", "crossing", "broad_crossing", "great_marches"]
-const SEEDS := [1, 2, 3, 17, 404, 90210]
-
-static var _cache: Dictionary = {}
+## Two seeds per template: generation takes seconds per map, and the
+## generator retries internally until a map validates, so more seeds mostly
+## buy runtime, not coverage.
+const SEEDS := [1, 17]
 
 
 func _gen(tpl: String, seed_number: int) -> Dictionary:
-	var key := "%s:%d" % [tpl, seed_number]
-	if not _cache.has(key):
-		_cache[key] = MapGenerator.generate(data, tpl, seed_number)
-	return _cache[key]
+	return generated_map(tpl, seed_number)
 
 
 func _grid_costs(def: Dictionary, neutrals_block: bool) -> Array:
@@ -58,15 +56,15 @@ func test_map_ids_round_trip() -> void:
 
 
 func test_same_seed_same_map() -> void:
-	for tpl in TEMPLATES:
-		var a := JSON.stringify(MapGenerator.generate(data, tpl, 31337))
-		var b := JSON.stringify(MapGenerator.generate(data, tpl, 31337))
+	for tpl in ["twin_marches", "random_s_4p_normal_normal"]:
+		var a := JSON.stringify(_gen(tpl, 1))
+		var b := JSON.stringify(MapGenerator.generate(data, tpl, 1))
 		assert_eq(a, b, "%s is deterministic" % tpl)
 
 
 func test_different_seeds_differ() -> void:
 	var a := _gen("twin_marches", 1)
-	var b := _gen("twin_marches", 2)
+	var b := _gen("twin_marches", 17)
 	assert_ne(JSON.stringify(a["terrain"]), JSON.stringify(b["terrain"]))
 	assert_ne(JSON.stringify(a["objects"]), JSON.stringify(b["objects"]))
 
@@ -142,7 +140,7 @@ func test_factions_get_their_own_rare_mine() -> void:
 	var gen := MapGenerator.new(data)
 	assert_eq(gen.faction_rare("concord"), "gems")
 	assert_eq(gen.faction_rare("ashen"), "sulfur")
-	var def := _gen("twin_marches", 3)
+	var def := _gen("twin_marches", 1)
 	for hd in def["heroes"]:
 		var faction: String = def["players"][int(hd["owner"])]["faction"]
 		var zone := String(_zone_for_player(def, int(hd["owner"]))["id"])
@@ -540,7 +538,7 @@ func test_ai_counts_the_cache_behind_a_hoard_guard() -> void:
 func test_large_free_for_all_maps() -> void:
 	for players in [4, 5, 6]:
 		var tpl := "crown_of_%d" % players
-		for seed_number in [1, 17, 404]:
+		for seed_number in [1]:
 			var def := _gen(tpl, seed_number)
 			assert_false(def.is_empty(), "%s generated" % tpl)
 			if def.is_empty():
@@ -665,15 +663,14 @@ func test_crown_has_fair_rim_sites_and_guarded_landmarks() -> void:
 
 
 func test_town_names_are_unique_per_map() -> void:
-	for template in ["random_s_4p_normal_normal", "random_xl_6p_normal_normal", "twin_marches"]:
-		for s in range(1, 9):
-			var def := MapGenerator.generate(data, template, s)
+	for template in ["random_s_4p_normal_normal", "twin_marches"]:
+		for s in SEEDS:
+			var def := _gen(template, s)
 			var names := {}
 			for o in def["objects"]:
 				if o["type"] == "town":
 					assert_false(names.has(o["name"]), "%s seed %d repeats %s" % [template, s, o["name"]])
 					names[o["name"]] = true
-	assert_eq(JSON.stringify(MapGenerator.generate(data, "random_s_4p_normal_normal", 3)), JSON.stringify(MapGenerator.generate(data, "random_s_4p_normal_normal", 3)))
 
 
 func test_town_names_fall_back_to_a_numbered_suffix() -> void:

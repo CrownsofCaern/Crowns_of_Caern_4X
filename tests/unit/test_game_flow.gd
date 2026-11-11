@@ -2,6 +2,10 @@ extends "res://tests/test_case.gd"
 ## Game flow: new-game setup, hero battles, sieges with defending heroes,
 ## victory and defeat, save slots.
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_computer_duel_reaches_an_end"]
+
 const SAVE_DIR := "user://test_saves"
 ## Upper bound for a computer-only duel on twin_marches. The test guards
 ## against stand-offs, not pace: the slowest seed ends near day 52, and

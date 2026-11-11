@@ -4,6 +4,10 @@ extends "res://tests/test_case.gd"
 ## every chapter, its veterans where the story puts them, and a finale against
 ## several enemies at once.
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_multi_enemy_finales_play_out_turns"]
+
 const TIERS := [2, 3, 3, 4, 5, 5, 6, 7, 8, 8]
 ## id -> faction, the hand-made maps, the enemy factions per chapter, and for
 ## each veteran the chapters (0-based) it is on the map. Optional: "allies"

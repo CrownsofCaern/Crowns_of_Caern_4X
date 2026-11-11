@@ -1504,11 +1504,17 @@ func _explore_targets(h: Hero, field: AiDistanceField, move: float) -> Array:
 	var fog: FogOfWar = session.state.player(player)["fog"]
 	var radius := maxi(1, h.vision_radius(data))
 	var best := {}
+	var taken := {}
+	for o in map.objects.values():
+		taken[AdventureMap.object_pos(o)] = true
+	for e in session.state.heroes.values():
+		if e.alive:
+			taken[e.pos] = true
 	for y in map.height:
 		for x in map.width:
 			var p := Vector2i(x, y)
 			var cost := field.cost_to(p)
-			if cost <= 0 or not fog.is_explored(p) or not map.object_at(p).is_empty() or session.state.hero_at(p) != null:
+			if cost <= 0 or not fog.is_explored(p) or taken.has(p):
 				continue
 			if not _next_to_unexplored(fog, map, p):
 				continue

@@ -2,6 +2,10 @@ extends "res://tests/test_case.gd"
 ## Teams and alliances: setup, who may fight whom, shared vision, sending
 ## resources, victory of an alliance, saves, campaign data and the AI.
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_ai_respects_alliances"]
+
 
 ## Mournfield (4 slots): players 0 and 3 against 1 and 2 by default.
 func _game(teams: Array = [1, 2, 2, 1], seed_value: int = 7) -> GameSession:

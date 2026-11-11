@@ -10,6 +10,9 @@ extends RefCounted
 ## Ties are broken by tile index, so the result never depends on hashing.
 
 const UNREACHABLE := -1
+## The eight neighbours, in the order the field has always visited them.
+const _DX: Array[int] = [-1, 0, 1, -1, 1, -1, 0, 1]
+const _DY: Array[int] = [-1, -1, -1, 0, 0, 1, 1, 1]
 
 var width: int = 0
 var height: int = 0
@@ -27,13 +30,22 @@ static func build(map: AdventureMap, from: Vector2i, blocked: Dictionary, max_co
 	f._cost.fill(UNREACHABLE)
 	var solid := PackedByteArray()
 	solid.resize(n)
+	# Entering costs, looked up once per tile rather than once per neighbour.
+	var enter := PackedInt32Array()
+	enter.resize(n)
+	var enter_diag := PackedInt32Array()
+	enter_diag.resize(n)
 	for y in map.height:
 		for x in map.width:
 			var p := Vector2i(x, y)
 			if not map.is_passable(p):
 				solid[y * map.width + x] = 2
-			elif blocked.has(p) and p != from:
+				continue
+			if blocked.has(p) and p != from:
 				solid[y * map.width + x] = 1
+			var step := float(map.move_cost(p))
+			enter[y * map.width + x] = int(round(step))
+			enter_diag[y * map.width + x] = int(round(step * Pathfinder.DIAGONAL_FACTOR))
 	var start := from.y * map.width + from.x
 	f._cost[start] = 0
 	var heap := []   # packed keys: cost * n + index (deterministic tie-break)
@@ -51,26 +63,26 @@ static func build(map: AdventureMap, from: Vector2i, blocked: Dictionary, max_co
 			continue   # destination only, or beyond the horizon
 		var px := idx % map.width
 		var py := idx / map.width
-		for dy in [-1, 0, 1]:
-			for dx in [-1, 0, 1]:
-				if dx == 0 and dy == 0:
+		for k in 8:
+			var dx: int = _DX[k]
+			var dy: int = _DY[k]
+			var qx: int = px + dx
+			var qy: int = py + dy
+			if qx < 0 or qy < 0 or qx >= map.width or qy >= map.height:
+				continue
+			var q := qy * map.width + qx
+			if solid[q] == 2 or done[q] == 1:
+				continue
+			var nc := c
+			if dx != 0 and dy != 0:
+				if solid[py * map.width + qx] != 0 or solid[qy * map.width + px] != 0:
 					continue
-				var qx: int = px + dx
-				var qy: int = py + dy
-				if qx < 0 or qy < 0 or qx >= map.width or qy >= map.height:
-					continue
-				var q := qy * map.width + qx
-				if solid[q] == 2 or done[q] == 1:
-					continue
-				var step := float(map.move_cost(Vector2i(qx, qy)))
-				if dx != 0 and dy != 0:
-					if solid[py * map.width + qx] != 0 or solid[qy * map.width + px] != 0:
-						continue
-					step *= Pathfinder.DIAGONAL_FACTOR
-				var nc := c + int(round(step))
-				if f._cost[q] == UNREACHABLE or nc < f._cost[q]:
-					f._cost[q] = nc
-					_push(heap, nc * n + q)
+				nc += enter_diag[q]
+			else:
+				nc += enter[q]
+			if f._cost[q] == UNREACHABLE or nc < f._cost[q]:
+				f._cost[q] = nc
+				_push(heap, nc * n + q)
 	return f
 
 

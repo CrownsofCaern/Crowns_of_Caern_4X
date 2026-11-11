@@ -169,9 +169,7 @@ func test_failed_robbery_hostility_is_local_and_guards_persist() -> void:
 
 
 func test_generation_editor_and_old_saves() -> void:
-	var a := MapGenerator.generate(data, "crossing", 17)
-	var b := MapGenerator.generate(data, "crossing", 17)
-	assert_eq(a, b)
+	var a := generated_map("crossing", 17)   # determinism: test_mapgen
 	var posts: Array = a["objects"].filter(func(o): return MapCobolts.is_post(o, data))
 	assert_false(posts.is_empty())
 	assert_eq(MapValidator.validate(a, data), [] as Array[String])

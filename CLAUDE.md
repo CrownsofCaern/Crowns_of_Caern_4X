@@ -17,12 +17,17 @@ anything visual. The original project brief is the final reference for scope and
   Every skill/ability listed in data must have a real effect.
 - **Tests with every feature.** Add tests in `tests/unit/test_*.gd` (methods `test_*`, asserts as in
   `tests/test_case.gd`). Statistical tests use fixed seeds and generous bounds.
+- **Keep the suite fast** (full `./run_tests.sh` under 4 minutes). Generating a map takes seconds: use
+  `generated_map(template, seed)` (cached per runner) and the seeds other tests already use, and don't
+  repeat a determinism check `test_mapgen` already makes. A test that plays whole AI games or sweeps
+  balance goes into the file's `const SLOW := [...]` and runs with `--slow`.
 - **Saves are versioned.** Changing saved fields means bumping `GameState.SAVE_VERSION` and handling old saves.
 
 ## Commands
 
 ```sh
-./run_tests.sh [filter]                     # must pass before every commit
+./run_tests.sh [filter]                     # must pass before every commit (a filter skips the asset pipeline)
+./run_tests.sh --slow                        # also the SLOW tests: before changing the AI, balance or map generation
 godot --headless --path . --script res://tools/balance_report.gd -- 300 res://reports/balance_report.md
 xvfb-run -a godot --path . --rendering-driver opengl3 --script res://tools/screenshot.gd -- /tmp/screens
 python3 tools/assets/pipeline.py build       # rebuild art after changing assets/specs (see tools/assets/README.md)

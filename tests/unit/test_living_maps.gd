@@ -3,6 +3,10 @@ extends "res://tests/test_case.gd"
 ## FactionMechanics), the new encounters, site kinds (watchtower, drill,
 ## mana_well) and map-wide omens (plague, roaming horrors, spoils).
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_generator_places_the_new_site_kinds"]
+
 
 func _session(seed_value: int = 3) -> GameSession:
 	return GameSession.new_game(data, "twin_marches", seed_value)
@@ -384,17 +388,19 @@ func test_drill_ground_trains_the_army_once() -> void:
 
 func test_generator_places_the_new_site_kinds() -> void:
 	var kinds := {}
-	for seed_value in range(1, 13):
-		var def := MapGenerator.generate(data, "twin_marches", seed_value)
+	for seed_value in [1, 17] + range(2, 13):
+		var def := generated_map("twin_marches", seed_value)
 		for o in def["objects"]:
 			if o["type"] == "site":
 				kinds[String(data.sites[o["site"]]["kind"])] = true
+		if kinds.has("watchtower") and kinds.has("drill") and kinds.has("mana_well"):
+			break   # every kind seen: no need to generate more maps
 	for k in ["watchtower", "drill", "mana_well"]:
 		assert_true(kinds.has(k), "%s placed on some generated map" % k)
 
 
 func test_generated_maps_carry_more_encounters() -> void:
-	var def := MapGenerator.generate(data, "twin_marches", 4)
+	var def := generated_map("twin_marches", 4)
 	var n := 0
 	var kinds := {}
 	for o in def["objects"]:

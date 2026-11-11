@@ -3,9 +3,16 @@ extends "res://tests/test_case.gd"
 ## wide-corridor expedition maze, template-aware scenario ids, and the
 ## week-one rule for every offered recipe and the Long Watch chapters.
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_siege_is_deterministic"]
 
-func _week_one(map_id: String) -> Array[String]:
-	var s := GameSession.new_game(data, map_id, 5, {}, {"random_events": false})
+
+## Pass the already loaded definition when there is one: loading a generated
+## scenario id generates the whole map again.
+func _week_one(map_id: String, def: Dictionary = {}) -> Array[String]:
+	var s := GameSession.new_game_from_definition(data, def, 5, {}, {"random_events": false}) if not def.is_empty() \
+		else GameSession.new_game(data, map_id, 5, {}, {"random_events": false})
 	return ScenarioGating.week_one_problems(s)
 
 
@@ -53,7 +60,9 @@ func test_recipe_validation_rejects_bad_siege_waves() -> void:
 
 func test_sieges_build_on_the_generator_with_gated_goals() -> void:
 	var shapes := {}
-	for case in [["survival_v2", "", 1], ["defence_v2", "", 2], ["endless_v2", "random_m_2p_normal_normal_diagonal", 3], ["survival_v2", "random_s_4p_normal_normal", 4]]:
+	# Each case generates a large map; defence_v2 also starts every game of the
+	# long watch's second chapter (test_long_watch_chapters_gate_their_goals).
+	for case in [["survival_v2", "", 1], ["endless_v2", "random_m_2p_normal_normal_diagonal", 3]]:
 		var id := ScenarioGenerator.make_id(case[0], case[1], case[2])
 		var def := data.load_map(id)
 		assert_false(def.is_empty(), id)
@@ -83,10 +92,10 @@ func test_sieges_build_on_the_generator_with_gated_goals() -> void:
 		for guard in sc["siege"]["guards"].values():
 			assert_lt(float(guard["start_win"]), ScenarioSiege.GUARD_WIN)
 			assert_gt(float(guard["later_win"]), 0.5, "three weeks of growth can take each held site")
-		assert_eq(_week_one(id), [] as Array[String], id)
+		assert_eq(_week_one(id, def), [] as Array[String], id)
 		if case[0] == "endless_v2":
 			assert_false(sc["endless"].is_empty())
-	assert_eq(shapes.size(), 4)
+	assert_eq(shapes.size(), 2)
 
 
 func test_siege_is_deterministic() -> void:

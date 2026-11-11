@@ -33,7 +33,7 @@ assets/manifest.json   rects, anchors, nine-slice margins, terrain layout (read 
 ```sh
 python3 tools/assets/pipeline.py build      # build + validate + godot --import
 python3 tools/assets/pipeline.py validate   # sizes, hard alpha, palette, naming, coverage of game data
-python3 tools/assets/pipeline.py check      # committed output == fresh build (run by ./run_tests.sh)
+python3 tools/assets/pipeline.py check      # committed output == fresh build, compared by pixels (run by ./run_tests.sh)
 python3 tools/assets/pipeline.py prompts    # assets/source/prompts.md: the full prompt for every asset
 python3 tools/assets/pipeline.py generate --provider openai [--only creature_flayer] [--force]
 python3 -m unittest discover -s tools/assets/tests

@@ -3,6 +3,10 @@ extends "res://tests/test_case.gd"
 ## curated seeds (random_maps.curated in map_templates.json) and custom maps;
 ## no story maps, hand-written templates or legacy recipes.
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_curated_conquest_maps_generate"]
+
 
 func _curated() -> Array:
 	return RandomMapTemplate.settings(data.map_templates).get("curated", [])
@@ -56,6 +60,12 @@ func test_curated_entries_validate_and_conquest_ids_load() -> void:
 	for entry in curated:
 		var id := GameSetup.map_id_for(entry, 999)
 		assert_eq(id, "gen:%s:%d" % [entry["template"], int(entry["map_seed"])], "a curated map ignores the seed box")
+
+
+## Every curated seed really generates (a map each: slow).
+func test_curated_conquest_maps_generate() -> void:
+	for entry in GameSetup.curated_entries(data, "conquest"):
+		var id := GameSetup.map_id_for(entry, 999)
 		var def := data.load_map(id)
 		assert_false(def.is_empty(), "%s generates" % id)
 		if not def.is_empty():

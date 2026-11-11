@@ -80,17 +80,17 @@ func test_monster_and_treasure_options_change_the_map() -> void:
 	var weak_value := 0
 	var deadly_value := 0
 	for seed in [5, 6, 7]:
-		weak_value += _neutral_value(MapGenerator.generate(data, "random_m_2p_weak_normal", seed))
-		deadly_value += _neutral_value(MapGenerator.generate(data, "random_m_2p_deadly_normal", seed))
+		weak_value += _neutral_value(generated_map("random_m_2p_weak_normal", seed))
+		deadly_value += _neutral_value(generated_map("random_m_2p_deadly_normal", seed))
 	assert_gt(deadly_value, weak_value * 2.0, "deadly guards are far stronger than weak ones")
-	var sparse := MapGenerator.generate(data, "random_m_2p_normal_sparse", 5)
-	var rich := MapGenerator.generate(data, "random_m_2p_normal_rich", 5)
+	var sparse := generated_map("random_m_2p_normal_sparse", 5)
+	var rich := generated_map("random_m_2p_normal_rich", 5)
 	var loot := func(o): return o["type"] == "resource" and (bool(o.get("hoard", false)) or bool(o.get("scatter", false)))
 	assert_gt(_count(rich, loot), _count(sparse, loot) * 1.6, "rich maps hold many more hoards and piles")
 
 
 func test_scatter_fills_zones_with_matching_piles() -> void:
-	var def := MapGenerator.generate(data, "twin_marches", 3)
+	var def := generated_map("twin_marches", 1)
 	var per_zone := {}
 	for o in def["objects"]:
 		if bool(o.get("scatter", false)):

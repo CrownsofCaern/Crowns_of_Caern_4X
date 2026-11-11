@@ -3,6 +3,10 @@ extends "res://tests/test_case.gd"
 ## every playable faction fight each other on neutral desert. No faction may
 ## dominate or be helpless on average. Mirrors tools/roster_report.gd.
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_mid_game_faction_parity", "test_late_game_faction_parity"]
+
 const PLAYABLE := ["concord", "ashen", "hollow", "thornwood", "forge", "frostmarch", "darkelf", "fishmen"]
 const RESOURCE_VALUE := {"gold": 1, "wood": 100, "ore": 100, "mercury": 250, "sulfur": 250, "crystal": 250, "gems": 250}
 const RUNS := 30

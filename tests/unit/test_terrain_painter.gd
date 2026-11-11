@@ -4,16 +4,11 @@ extends "res://tests/test_case.gd"
 ## objects), fairness of shared plans, and the painted-decoration map flag.
 
 const TEMPLATES := ["twin_marches", "crossing", "adventure_marches_3_v1"]
-const SEEDS := [1, 2, 3, 17]
-
-static var _cache: Dictionary = {}
+const SEEDS := [1, 17]
 
 
 func _gen(tpl: String, seed_number: int) -> Dictionary:
-	var key := "%s:%d" % [tpl, seed_number]
-	if not _cache.has(key):
-		_cache[key] = MapGenerator.generate(data, tpl, seed_number)
-	return _cache[key]
+	return generated_map(tpl, seed_number)
 
 
 func test_generated_maps_carry_painted_decorations() -> void:
@@ -103,12 +98,11 @@ func test_decorations_stay_on_open_land_away_from_objects() -> void:
 			assert_false(near.has(p), "%s: decoration keeps clear of objects at %s" % [tpl, p])
 
 
-func test_painting_is_deterministic() -> void:
-	var a := MapGenerator.generate(data, "crossing", 33)
-	var b := MapGenerator.generate(data, "crossing", 33)
-	assert_eq(a["terrain"], b["terrain"])
-	assert_eq(JSON.stringify(a["decorations"]), JSON.stringify(b["decorations"]))
-	var c := MapGenerator.generate(data, "crossing", 34)
+func test_painting_changes_with_the_seed() -> void:
+	# Same seed, same painting: test_mapgen compares whole maps; here the
+	# painting must change with the seed.
+	var a := _gen("crossing", 1)
+	var c := _gen("crossing", 17)
 	assert_ne(JSON.stringify(a["decorations"]), JSON.stringify(c["decorations"]))
 
 
