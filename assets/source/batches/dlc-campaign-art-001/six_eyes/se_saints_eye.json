@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_six_eyes_se_saints_eye_briefing",
+  "campaign": "six_eyes",
+  "chapter": "se_saints_eye",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_saints_eye-prompt.txt",
+  "prompt_sha256": "a7163b6be0e04960f3ddca52c074aed9a0366c40a5981f25634624992e484348",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "b2183e4ce2ce2091bf15ebe756f26f851a6e93955e83062e6440461215422e63",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

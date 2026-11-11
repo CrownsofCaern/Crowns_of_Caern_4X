@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_last_light_ll_knight_briefing",
+  "campaign": "last_light",
+  "chapter": "ll_knight",
+  "usage": "briefing",
+  "story_source": {
+    "pull_request": 45,
+    "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/last-light-story-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/last-light-story-001/campaign_last_light_ll_knight_briefing.txt",
+  "prompt_sha256": "90a1ecc8755ea959caa43dab010be42bd01db178c8ffe04b3a7c820f03046582",
+  "conditioning": [
+    "assets/source/batches/heroes-001/source.png",
+    "assets/source/batches/towns-001/source.png"
+  ],
+  "source_sha256": "761c9e3cc45b4c1b43b7352fcb8144b3a780e812ded159dae8a90a5951022f93",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

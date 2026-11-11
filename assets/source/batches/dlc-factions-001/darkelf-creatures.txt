@@ -1,0 +1,17 @@
+Create an original production sprite sheet for Crowns of Cinder, matching the supplied approved dark fantasy sprite rendering benchmark (not its undead subjects). TRUE TRANSPARENT background, no text, no labels, no grid lines, no shadows or scenery. EXACT 4 columns x 4 rows, 16 isolated full-body figures, equal generous cell spacing. Three-quarter view FACING RIGHT, upper-left lighting, rich painted pixel detail and dark 1-pixel-like contours, anatomically coherent, readable at 128px. All bodies, feet, tails, horns, weapons and wings inside their own cells with wide transparent gutters. hardened ash-grey dark elves, long angular ears, severe faces, obsidian segmented armour, tarnished silver edges, deep violet cloth, tiny amethyst lights, cruel elegant blades; predatory aristocratic menace, never cute, no generic black humans. Read rows left to right; base and powerful upgrade side by side.
+Cell 1, Gloam Spear: lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield.
+Cell 2, Dusk Sentinel: lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield; upgraded with closed silver-edged plate and large hooked shield, longer serrated spear.
+Cell 3, Shardbow: grim elf crossbowman in violet hood and black leather, compact two-handed crossbow.
+Cell 4, Venom Arbalist: grim elf crossbowman in violet hood and black leather, compact two-handed crossbow; upgraded with armoured high-collared veteran with heavy recurved arbalest and small poison vial.
+Cell 5, Knifedancer: athletic masked elf assassin in fitted black armour holding two curved daggers.
+Cell 6, Blood Scythe: athletic masked elf assassin in fitted black armour holding two curved daggers; upgraded with severe silver death mask, layered spiked shoulder armour, two long sickle blades.
+Cell 7, Cave Lancer: elf lancer astride a lean six-legged black cave lizard, violet saddlecloth.
+Cell 8, Dread Rider: elf lancer astride a lean six-legged black cave lizard, violet saddlecloth; upgraded with heavily armoured lancer and silver-plated six-legged lizard with larger spined crest.
+Cell 9, Veil Adept: severe grey-skinned elf sorceress in layered violet robes with single amethyst staff.
+Cell 10, Mirror Witch: severe grey-skinned elf sorceress in layered violet robes with single amethyst staff; upgraded with tall silver headdress, floating intact mirror-shard halo joined to staff, deeper layered robes.
+Cell 11, Silk Stalker: large threatening black cave spider with eight clearly separated legs, purple abdominal markings.
+Cell 12, Widow Matriarch: large threatening black cave spider with eight clearly separated legs, purple abdominal markings; upgraded with massive black widow spider, silver carapace plates and enlarged violet-marked abdomen.
+Cell 13, Obsidian Guard: towering elf executioner in broad black plate with a heavy two-handed axe.
+Cell 14, Onyx Executioner: towering elf executioner in broad black plate with a heavy two-handed axe; upgraded with larger black-silver armour, high spined gorget, enormous crescent execution axe.
+Cell 15, Gloam Drake: four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings.
+Cell 16, Eclipse Dragon: four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings; upgraded with large regal obsidian wyvern, silver horn crown and sweeping violet membrane wings with luminous amethyst seams.

@@ -1,0 +1,585 @@
+{
+  "_doc": "Eight tiers of base and upgraded creatures for The Abyssal Shoal.",
+  "creatures": {
+    "fm_brine_spear": {
+      "name": "Brine Spear",
+      "faction": "fishmen",
+      "tier": 1,
+      "role": "infantry",
+      "hp": 11,
+      "attack": 3,
+      "defense": 7,
+      "damage": [
+        1,
+        3
+      ],
+      "speed": 4,
+      "initiative": 3,
+      "growth": 14,
+      "cost": {
+        "gold": 70
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "brace"
+        }
+      ],
+      "terrain": {},
+      "desc": "lean gilled fish man with webbed feet, bone spear, small shell buckler.",
+      "upgrade": "fm_reef_guard"
+    },
+    "fm_reef_guard": {
+      "name": "Reef Guard",
+      "faction": "fishmen",
+      "tier": 1,
+      "role": "infantry",
+      "hp": 12,
+      "attack": 4,
+      "defense": 8,
+      "damage": [
+        1,
+        4
+      ],
+      "speed": 4,
+      "initiative": 4,
+      "growth": 14,
+      "cost": {
+        "gold": 80
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "brace"
+        },
+        {
+          "id": "first_strike"
+        }
+      ],
+      "terrain": {},
+      "desc": "lean gilled fish man with webbed feet, bone spear, small shell buckler.",
+      "upgrade_of": "fm_brine_spear"
+    },
+    "fm_hookcaster": {
+      "name": "Hookcaster",
+      "faction": "fishmen",
+      "tier": 2,
+      "role": "ranged",
+      "hp": 12,
+      "attack": 5,
+      "defense": 5,
+      "damage": [
+        2,
+        4
+      ],
+      "speed": 4,
+      "initiative": 5,
+      "growth": 9,
+      "cost": {
+        "gold": 130
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "ranged"
+        }
+      ],
+      "terrain": {},
+      "desc": "hunched fish man holding a two-handed bronze harpoon launcher, spare barbed shafts on back.",
+      "upgrade": "fm_abyss_harpooner"
+    },
+    "fm_abyss_harpooner": {
+      "name": "Abyss Harpooner",
+      "faction": "fishmen",
+      "tier": 2,
+      "role": "ranged",
+      "hp": 13,
+      "attack": 6,
+      "defense": 6,
+      "damage": [
+        2,
+        5
+      ],
+      "speed": 4,
+      "initiative": 6,
+      "growth": 9,
+      "cost": {
+        "gold": 170
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "ranged"
+        },
+        {
+          "id": "armor_pierce",
+          "fraction": 0.3
+        }
+      ],
+      "terrain": {},
+      "desc": "hunched fish man holding a two-handed bronze harpoon launcher, spare barbed shafts on back.",
+      "upgrade_of": "fm_hookcaster"
+    },
+    "fm_shellback": {
+      "name": "Shellback",
+      "faction": "fishmen",
+      "tier": 3,
+      "role": "heavy",
+      "hp": 28,
+      "attack": 6,
+      "defense": 9,
+      "damage": [
+        3,
+        6
+      ],
+      "speed": 4,
+      "initiative": 4,
+      "growth": 7,
+      "cost": {
+        "gold": 100,
+        "ore": 1
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "shield_wall",
+          "ranged_reduction": 0.3
+        }
+      ],
+      "terrain": {},
+      "desc": "stocky armoured fish man behind a huge weathered shell shield holding short cleaver.",
+      "upgrade": "fm_barnacle_bulwark"
+    },
+    "fm_barnacle_bulwark": {
+      "name": "Barnacle Bulwark",
+      "faction": "fishmen",
+      "tier": 3,
+      "role": "heavy",
+      "hp": 31,
+      "attack": 7,
+      "defense": 10,
+      "damage": [
+        3,
+        7
+      ],
+      "speed": 4,
+      "initiative": 5,
+      "growth": 7,
+      "cost": {
+        "gold": 155,
+        "ore": 1
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "shield_wall",
+          "ranged_reduction": 0.3
+        },
+        {
+          "id": "riposte"
+        }
+      ],
+      "terrain": {},
+      "desc": "stocky armoured fish man behind a huge weathered shell shield holding short cleaver.",
+      "upgrade_of": "fm_shellback"
+    },
+    "fm_mire_crab": {
+      "name": "Mire Crab",
+      "faction": "fishmen",
+      "tier": 4,
+      "role": "heavy",
+      "hp": 52,
+      "attack": 8,
+      "defense": 11,
+      "damage": [
+        6,
+        9
+      ],
+      "speed": 4,
+      "initiative": 3,
+      "growth": 5,
+      "cost": {
+        "gold": 205,
+        "ore": 2
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "shield_wall",
+          "ranged_reduction": 0.2
+        }
+      ],
+      "terrain": {},
+      "desc": "large low six-legged dark teal crab with two heavy front claws, coral shell nodules.",
+      "upgrade": "fm_siege_carapace"
+    },
+    "fm_siege_carapace": {
+      "name": "Siege Carapace",
+      "faction": "fishmen",
+      "tier": 4,
+      "role": "heavy",
+      "hp": 58,
+      "attack": 9,
+      "defense": 12,
+      "damage": [
+        7,
+        10
+      ],
+      "speed": 4,
+      "initiative": 4,
+      "growth": 5,
+      "cost": {
+        "gold": 340,
+        "ore": 2
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "shield_wall",
+          "ranged_reduction": 0.2
+        },
+        {
+          "id": "taunt",
+          "chance": 0.35
+        }
+      ],
+      "terrain": {},
+      "desc": "large low six-legged dark teal crab with two heavy front claws, coral shell nodules.",
+      "upgrade_of": "fm_mire_crab"
+    },
+    "fm_lantern_acolyte": {
+      "name": "Lantern Acolyte",
+      "faction": "fishmen",
+      "tier": 5,
+      "role": "support",
+      "hp": 34,
+      "attack": 7,
+      "defense": 9,
+      "damage": [
+        3,
+        6
+      ],
+      "speed": 5,
+      "initiative": 6,
+      "growth": 3,
+      "cost": {
+        "gold": 360,
+        "crystal": 1
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "heal",
+          "per_creature": 6
+        },
+        {
+          "id": "inspire",
+          "morale": 1
+        }
+      ],
+      "terrain": {},
+      "desc": "thin anglerfish humanoid in ragged teal robes, head lure and pearl-topped staff.",
+      "upgrade": "fm_drowned_oracle"
+    },
+    "fm_drowned_oracle": {
+      "name": "Drowned Oracle",
+      "faction": "fishmen",
+      "tier": 5,
+      "role": "support",
+      "hp": 38,
+      "attack": 8,
+      "defense": 10,
+      "damage": [
+        3,
+        7
+      ],
+      "speed": 5,
+      "initiative": 7,
+      "growth": 3,
+      "cost": {
+        "gold": 470,
+        "crystal": 1
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "heal",
+          "per_creature": 6
+        },
+        {
+          "id": "inspire",
+          "morale": 1
+        },
+        {
+          "id": "aura",
+          "defense": 1
+        }
+      ],
+      "terrain": {},
+      "desc": "thin anglerfish humanoid in ragged teal robes, head lure and pearl-topped staff.",
+      "upgrade_of": "fm_lantern_acolyte"
+    },
+    "fm_tide_mauler": {
+      "name": "Tide Mauler",
+      "faction": "fishmen",
+      "tier": 6,
+      "role": "infantry",
+      "hp": 96,
+      "attack": 13,
+      "defense": 16,
+      "damage": [
+        11,
+        16
+      ],
+      "speed": 4,
+      "initiative": 3,
+      "growth": 3,
+      "cost": {
+        "gold": 845,
+        "gems": 1
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "relentless"
+        }
+      ],
+      "terrain": {},
+      "desc": "broad muscular shark-headed amphibious brute with scarred teal skin and two-handed anchor axe.",
+      "upgrade": "fm_trench_reaver"
+    },
+    "fm_trench_reaver": {
+      "name": "Trench Reaver",
+      "faction": "fishmen",
+      "tier": 6,
+      "role": "infantry",
+      "hp": 108,
+      "attack": 15,
+      "defense": 18,
+      "damage": [
+        12,
+        18
+      ],
+      "speed": 4,
+      "initiative": 4,
+      "growth": 3,
+      "cost": {
+        "gold": 1225,
+        "gems": 1
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "relentless"
+        },
+        {
+          "id": "life_drain",
+          "fraction": 0.3
+        }
+      ],
+      "terrain": {},
+      "desc": "broad muscular shark-headed amphibious brute with scarred teal skin and two-handed anchor axe.",
+      "upgrade_of": "fm_tide_mauler"
+    },
+    "fm_coil_serpent": {
+      "name": "Coil Serpent",
+      "faction": "fishmen",
+      "tier": 7,
+      "role": "heavy",
+      "hp": 146,
+      "attack": 16,
+      "defense": 19,
+      "damage": [
+        16,
+        26
+      ],
+      "speed": 4,
+      "initiative": 3,
+      "growth": 2,
+      "cost": {
+        "gold": 2025,
+        "gems": 2
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "regenerate",
+          "amount": 40
+        }
+      ],
+      "terrain": {},
+      "desc": "coiled amphibious sea serpent with two visible clawed forelimbs, dorsal fins and broad jaws.",
+      "upgrade": "fm_storm_leviathan"
+    },
+    "fm_storm_leviathan": {
+      "name": "Storm Leviathan",
+      "faction": "fishmen",
+      "tier": 7,
+      "role": "heavy",
+      "hp": 164,
+      "attack": 18,
+      "defense": 21,
+      "damage": [
+        18,
+        29
+      ],
+      "speed": 4,
+      "initiative": 4,
+      "growth": 2,
+      "cost": {
+        "gold": 2385,
+        "gems": 2
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "regenerate",
+          "amount": 40
+        },
+        {
+          "id": "cleave",
+          "fraction": 0.4
+        }
+      ],
+      "terrain": {},
+      "desc": "coiled amphibious sea serpent with two visible clawed forelimbs, dorsal fins and broad jaws.",
+      "upgrade_of": "fm_coil_serpent"
+    },
+    "fm_trench_titan": {
+      "name": "Trench Titan",
+      "faction": "fishmen",
+      "tier": 8,
+      "role": "heavy",
+      "hp": 249,
+      "attack": 20,
+      "defense": 24,
+      "damage": [
+        27,
+        44
+      ],
+      "speed": 6,
+      "initiative": 5,
+      "growth": 1,
+      "cost": {
+        "gold": 2165,
+        "crystal": 2
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "unwavering"
+        }
+      ],
+      "terrain": {},
+      "desc": "towering bipedal deep-sea angler monster, two massive arms, lure, toothy jaws, coral back growths.",
+      "upgrade": "fm_abyss_sovereign"
+    },
+    "fm_abyss_sovereign": {
+      "name": "Abyss Sovereign",
+      "faction": "fishmen",
+      "tier": 8,
+      "role": "heavy",
+      "hp": 279,
+      "attack": 22,
+      "defense": 26,
+      "damage": [
+        30,
+        48
+      ],
+      "speed": 6,
+      "initiative": 6,
+      "growth": 1,
+      "cost": {
+        "gold": 2545,
+        "crystal": 2
+      },
+      "morale": 0,
+      "tags": [
+        "fishmen"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "unwavering"
+        },
+        {
+          "id": "breath",
+          "fraction": 0.6
+        },
+        {
+          "id": "stun",
+          "chance": 0.25
+        },
+        {
+          "id": "fear",
+          "morale": 1
+        }
+      ],
+      "terrain": {},
+      "desc": "towering bipedal deep-sea angler monster, two massive arms, lure, toothy jaws, coral back growths.",
+      "upgrade_of": "fm_trench_titan"
+    }
+  }
+}

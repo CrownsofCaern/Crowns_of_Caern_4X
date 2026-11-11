@@ -1,0 +1,23 @@
+{
+  "id": "mountain_glacial_pass",
+  "terrain": "mountain",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/mountain_glacial_pass.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "d9d57277f8adc8b83157f2ba64281051863991714a69a017d215ec826759e6d0",
+  "prompt_file": "assets/source/batches/battlefields-001/mountain_glacial_pass.txt",
+  "prompt_sha256": "fb9a6cbb8691a6f909a82ec732765d93f07d6251206db9d765473baeea6edc22",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/mountain_glacial_pass-live.png",
+    "forecast": "docs/art/production/battlefields/mountain_glacial_pass-forecast.png"
+  }
+}

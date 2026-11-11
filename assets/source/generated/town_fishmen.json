@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/fishmen-heroes-towns.png",
+  "source_sheet_sha256": "aa8c75e41d32e504a9621ca757d842258cb17d5adc69ed4cdaf40c61964fdf31",
+  "size": [
+    1448,
+    1086
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/fishmen-heroes-towns.txt",
+  "prompt_sha256": "c2fda062a6bcceb8223e1c6161faa5a584ea1fce54e5d40184ecbce829755d60",
+  "conditioning": [
+    "assets/source/batches/hollow-001/source.png",
+    "assets/source/batches/dlc-factions-001/fishmen-creatures.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/hollow-001/source.png": "c0a65504208fe13a5820f9e42439ee1d7ebaa5009c5ead6d0d49e9f4d65e03d1",
+    "assets/source/batches/dlc-factions-001/fishmen-creatures.png": "5c2b01a428459b5cdff330050ebf414189f02a6154975f6dbd4767a44e99290f"
+  },
+  "asset_id": "town_fishmen",
+  "row": 1,
+  "column": 2,
+  "extraction": {
+    "row_bounds": [
+      362,
+      724
+    ],
+    "column_cuts": [
+      0,
+      362,
+      724,
+      1086,
+      1448
+    ],
+    "bent_seams": {},
+    "warnings": [],
+    "row_extraction": {
+      "bounds": [
+        362,
+        724
+      ],
+      "top_seam": 362,
+      "bottom_seam": 724
+    }
+  },
+  "source_sha256": "aa3784d1f21d311939a66bc6870f16f0ea70e0e16becbee0e198342da92e8706",
+  "native_size": [
+    192,
+    192
+  ],
+  "processing": "Adaptive transparent gutters; alpha below 64 cleared; palette preserved",
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

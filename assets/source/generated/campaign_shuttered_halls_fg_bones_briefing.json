@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_shuttered_halls_fg_bones_briefing",
+  "campaign": "shuttered_halls",
+  "chapter": "fg_bones",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_shuttered_halls_fg_bones_briefing.txt",
+  "prompt_sha256": "f9c40aa01861bd9f7be241d7d479c5be185b2d1fcb664aa1ab2465a72ad3e643",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "8fa09e769ece54221aa7cd663567868676dd7bf292c085891455b53846b2f612",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

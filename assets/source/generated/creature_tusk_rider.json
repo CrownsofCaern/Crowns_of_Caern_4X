@@ -1,0 +1,20 @@
+{
+  "batch": "frostmarch-001",
+  "source_sheet": "assets/source/batches/frostmarch-001/source.png",
+  "source_sheet_sha256": "0e22d3d719794ad84f341f538365949af4d5adb98fd0b951832af8e38596d01e",
+  "crop_xyxy": [
+    627,
+    315,
+    896,
+    604
+  ],
+  "isolation": "largest 4-connected alpha>=128 component",
+  "source_sha256": "c3cfae188f63abd53b309db836b0e65ea1e2a053ece7cd12291ec8ca920e1c38",
+  "provider": "ChatGPT image_gen",
+  "quality_status": "pending_visual_review",
+  "native_size": [
+    128,
+    128
+  ],
+  "conditioning": "Approved Concord rendering; faction-specific repository definitions"
+}

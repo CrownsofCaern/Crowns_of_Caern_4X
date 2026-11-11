@@ -1,0 +1,4688 @@
+{
+  "schema_version": 1,
+  "status": "rendered_candidates",
+  "activation": "art_only_optional_pack",
+  "story_links": [],
+  "factions": {
+    "darkelf": {
+      "name": "The Umbral Court",
+      "identity": "dark elves",
+      "color": "#b48ce0",
+      "style": "hardened ash-grey dark elves, long angular ears, severe faces, obsidian segmented armour, tarnished silver edges, deep violet cloth, tiny amethyst lights, cruel elegant blades; predatory aristocratic menace, never cute, no generic black humans",
+      "architecture": "angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "creature_ids": [
+        "de_gloam_spear",
+        "de_dusk_sentinel",
+        "de_shardbow",
+        "de_venom_arbalist",
+        "de_knifedancer",
+        "de_blood_scythe",
+        "de_cave_lancer",
+        "de_dread_rider",
+        "de_veil_adept",
+        "de_mirror_witch",
+        "de_silk_stalker",
+        "de_widow_matriarch",
+        "de_obsidian_guard",
+        "de_onyx_executioner",
+        "de_gloam_drake",
+        "de_eclipse_dragon"
+      ],
+      "building_ids": [
+        "de_hall",
+        "de_market",
+        "de_yard",
+        "de_tavern",
+        "de_masons",
+        "de_palisade",
+        "de_keep",
+        "de_bastion",
+        "de_dw1",
+        "de_dw2",
+        "de_dw3",
+        "de_dw4",
+        "de_dw5",
+        "de_dw6",
+        "de_dw7",
+        "de_dw8",
+        "de_up1",
+        "de_up2",
+        "de_up3",
+        "de_up4",
+        "de_up5",
+        "de_up6",
+        "de_up7",
+        "de_up8",
+        "de_court",
+        "de_assembly",
+        "de_exchequer",
+        "de_drill",
+        "de_fletchers",
+        "de_remount"
+      ],
+      "hero_ids": [
+        "de_dreadmarshal",
+        "de_veilseer",
+        "de_nightstalker"
+      ],
+      "town_slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "de_hall",
+            "de_court",
+            "de_assembly",
+            "de_exchequer"
+          ],
+          "at": [
+            785,
+            345
+          ],
+          "size": [
+            265,
+            190
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "de_palisade",
+            "de_keep",
+            "de_bastion"
+          ],
+          "at": [
+            1290,
+            455
+          ],
+          "size": [
+            260,
+            220
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "de_dw1",
+            "de_up1"
+          ],
+          "at": [
+            200,
+            590
+          ],
+          "size": [
+            230,
+            160
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "de_dw2",
+            "de_up2"
+          ],
+          "at": [
+            440,
+            555
+          ],
+          "size": [
+            220,
+            155
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "de_dw3",
+            "de_up3"
+          ],
+          "at": [
+            240,
+            375
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "de_dw4",
+            "de_up4"
+          ],
+          "at": [
+            1235,
+            655
+          ],
+          "size": [
+            270,
+            180
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "de_dw5",
+            "de_up5"
+          ],
+          "at": [
+            960,
+            575
+          ],
+          "size": [
+            170,
+            210
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "de_dw6",
+            "de_up6"
+          ],
+          "at": [
+            1110,
+            370
+          ],
+          "size": [
+            150,
+            240
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "de_dw7",
+            "de_up7"
+          ],
+          "at": [
+            1320,
+            840
+          ],
+          "size": [
+            270,
+            200
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "de_dw8",
+            "de_up8"
+          ],
+          "at": [
+            565,
+            370
+          ],
+          "size": [
+            200,
+            200
+          ]
+        },
+        {
+          "id": "de_market",
+          "variants": [
+            "de_market"
+          ],
+          "at": [
+            640,
+            650
+          ],
+          "size": [
+            240,
+            180
+          ]
+        },
+        {
+          "id": "de_yard",
+          "variants": [
+            "de_yard"
+          ],
+          "at": [
+            1030,
+            800
+          ],
+          "size": [
+            230,
+            155
+          ]
+        },
+        {
+          "id": "de_tavern",
+          "variants": [
+            "de_tavern"
+          ],
+          "at": [
+            260,
+            795
+          ],
+          "size": [
+            235,
+            190
+          ]
+        },
+        {
+          "id": "de_masons",
+          "variants": [
+            "de_masons"
+          ],
+          "at": [
+            520,
+            820
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "de_drill",
+          "variants": [
+            "de_drill"
+          ],
+          "at": [
+            800,
+            810
+          ],
+          "size": [
+            210,
+            140
+          ]
+        },
+        {
+          "id": "de_fletchers",
+          "variants": [
+            "de_fletchers"
+          ],
+          "at": [
+            720,
+            990
+          ],
+          "size": [
+            200,
+            150
+          ]
+        },
+        {
+          "id": "de_remount",
+          "variants": [
+            "de_remount"
+          ],
+          "at": [
+            1080,
+            975
+          ],
+          "size": [
+            240,
+            150
+          ]
+        }
+      ],
+      "campaigns": [],
+      "map_town_stages": [
+        "town_darkelf_1",
+        "town_darkelf_2",
+        "town_darkelf_3",
+        "town_darkelf"
+      ]
+    },
+    "fishmen": {
+      "name": "The Abyssal Shoal",
+      "identity": "fish men",
+      "color": "#5cc9bd",
+      "style": "monstrous amphibious fish men with visible gills, webbed clawed hands and feet, dead predatory eyes, mottled deep teal scales, corroded bronze, pearl and ivory shell armour, muted coral accents, restrained cyan bioluminescence; eldritch abyssal menace, no cartoon fish, no cheerful humans",
+      "architecture": "cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "creature_ids": [
+        "fm_brine_spear",
+        "fm_reef_guard",
+        "fm_hookcaster",
+        "fm_abyss_harpooner",
+        "fm_shellback",
+        "fm_barnacle_bulwark",
+        "fm_mire_crab",
+        "fm_siege_carapace",
+        "fm_lantern_acolyte",
+        "fm_drowned_oracle",
+        "fm_tide_mauler",
+        "fm_trench_reaver",
+        "fm_coil_serpent",
+        "fm_storm_leviathan",
+        "fm_trench_titan",
+        "fm_abyss_sovereign"
+      ],
+      "building_ids": [
+        "fm_hall",
+        "fm_market",
+        "fm_yard",
+        "fm_tavern",
+        "fm_masons",
+        "fm_palisade",
+        "fm_keep",
+        "fm_bastion",
+        "fm_dw1",
+        "fm_dw2",
+        "fm_dw3",
+        "fm_dw4",
+        "fm_dw5",
+        "fm_dw6",
+        "fm_dw7",
+        "fm_dw8",
+        "fm_up1",
+        "fm_up2",
+        "fm_up3",
+        "fm_up4",
+        "fm_up5",
+        "fm_up6",
+        "fm_up7",
+        "fm_up8",
+        "fm_court",
+        "fm_assembly",
+        "fm_exchequer",
+        "fm_drill",
+        "fm_fletchers",
+        "fm_remount"
+      ],
+      "hero_ids": [
+        "fm_tidemarshal",
+        "fm_deep_oracle",
+        "fm_reef_hunter"
+      ],
+      "town_slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "fm_hall",
+            "fm_court",
+            "fm_assembly",
+            "fm_exchequer"
+          ],
+          "at": [
+            785,
+            345
+          ],
+          "size": [
+            265,
+            190
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "fm_palisade",
+            "fm_keep",
+            "fm_bastion"
+          ],
+          "at": [
+            1290,
+            455
+          ],
+          "size": [
+            260,
+            220
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "fm_dw1",
+            "fm_up1"
+          ],
+          "at": [
+            200,
+            590
+          ],
+          "size": [
+            230,
+            160
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "fm_dw2",
+            "fm_up2"
+          ],
+          "at": [
+            440,
+            555
+          ],
+          "size": [
+            220,
+            155
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "fm_dw3",
+            "fm_up3"
+          ],
+          "at": [
+            240,
+            375
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "fm_dw4",
+            "fm_up4"
+          ],
+          "at": [
+            1235,
+            655
+          ],
+          "size": [
+            270,
+            180
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "fm_dw5",
+            "fm_up5"
+          ],
+          "at": [
+            960,
+            575
+          ],
+          "size": [
+            170,
+            210
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "fm_dw6",
+            "fm_up6"
+          ],
+          "at": [
+            1110,
+            370
+          ],
+          "size": [
+            150,
+            240
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "fm_dw7",
+            "fm_up7"
+          ],
+          "at": [
+            1320,
+            840
+          ],
+          "size": [
+            270,
+            200
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "fm_dw8",
+            "fm_up8"
+          ],
+          "at": [
+            565,
+            370
+          ],
+          "size": [
+            200,
+            200
+          ]
+        },
+        {
+          "id": "fm_market",
+          "variants": [
+            "fm_market"
+          ],
+          "at": [
+            640,
+            650
+          ],
+          "size": [
+            240,
+            180
+          ]
+        },
+        {
+          "id": "fm_yard",
+          "variants": [
+            "fm_yard"
+          ],
+          "at": [
+            1030,
+            800
+          ],
+          "size": [
+            230,
+            155
+          ]
+        },
+        {
+          "id": "fm_tavern",
+          "variants": [
+            "fm_tavern"
+          ],
+          "at": [
+            260,
+            795
+          ],
+          "size": [
+            235,
+            190
+          ]
+        },
+        {
+          "id": "fm_masons",
+          "variants": [
+            "fm_masons"
+          ],
+          "at": [
+            520,
+            820
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "fm_drill",
+          "variants": [
+            "fm_drill"
+          ],
+          "at": [
+            800,
+            810
+          ],
+          "size": [
+            210,
+            140
+          ]
+        },
+        {
+          "id": "fm_fletchers",
+          "variants": [
+            "fm_fletchers"
+          ],
+          "at": [
+            720,
+            990
+          ],
+          "size": [
+            200,
+            150
+          ]
+        },
+        {
+          "id": "fm_remount",
+          "variants": [
+            "fm_remount"
+          ],
+          "at": [
+            1080,
+            975
+          ],
+          "size": [
+            240,
+            150
+          ]
+        }
+      ],
+      "campaigns": [],
+      "map_town_stages": [
+        "town_fishmen_1",
+        "town_fishmen_2",
+        "town_fishmen_3",
+        "town_fishmen"
+      ]
+    }
+  },
+  "creatures": {
+    "de_gloam_spear": {
+      "id": "de_gloam_spear",
+      "name": "Gloam Spear",
+      "faction": "darkelf",
+      "tier": 1,
+      "role": "infantry",
+      "desc": "lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield",
+      "upgrade": "de_dusk_sentinel"
+    },
+    "de_dusk_sentinel": {
+      "id": "de_dusk_sentinel",
+      "name": "Dusk Sentinel",
+      "faction": "darkelf",
+      "tier": 1,
+      "role": "infantry",
+      "desc": "lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield; upgraded with closed silver-edged plate and large hooked shield, longer serrated spear",
+      "upgrade_of": "de_gloam_spear"
+    },
+    "de_shardbow": {
+      "id": "de_shardbow",
+      "name": "Shardbow",
+      "faction": "darkelf",
+      "tier": 2,
+      "role": "ranged",
+      "desc": "grim elf crossbowman in violet hood and black leather, compact two-handed crossbow",
+      "upgrade": "de_venom_arbalist"
+    },
+    "de_venom_arbalist": {
+      "id": "de_venom_arbalist",
+      "name": "Venom Arbalist",
+      "faction": "darkelf",
+      "tier": 2,
+      "role": "ranged",
+      "desc": "grim elf crossbowman in violet hood and black leather, compact two-handed crossbow; upgraded with armoured high-collared veteran with heavy recurved arbalest and small poison vial",
+      "upgrade_of": "de_shardbow"
+    },
+    "de_knifedancer": {
+      "id": "de_knifedancer",
+      "name": "Knifedancer",
+      "faction": "darkelf",
+      "tier": 3,
+      "role": "infantry",
+      "desc": "athletic masked elf assassin in fitted black armour holding two curved daggers",
+      "upgrade": "de_blood_scythe"
+    },
+    "de_blood_scythe": {
+      "id": "de_blood_scythe",
+      "name": "Blood Scythe",
+      "faction": "darkelf",
+      "tier": 3,
+      "role": "infantry",
+      "desc": "athletic masked elf assassin in fitted black armour holding two curved daggers; upgraded with severe silver death mask, layered spiked shoulder armour, two long sickle blades",
+      "upgrade_of": "de_knifedancer"
+    },
+    "de_cave_lancer": {
+      "id": "de_cave_lancer",
+      "name": "Cave Lancer",
+      "faction": "darkelf",
+      "tier": 4,
+      "role": "cavalry",
+      "desc": "elf lancer astride a lean six-legged black cave lizard, violet saddlecloth",
+      "upgrade": "de_dread_rider"
+    },
+    "de_dread_rider": {
+      "id": "de_dread_rider",
+      "name": "Dread Rider",
+      "faction": "darkelf",
+      "tier": 4,
+      "role": "cavalry",
+      "desc": "elf lancer astride a lean six-legged black cave lizard, violet saddlecloth; upgraded with heavily armoured lancer and silver-plated six-legged lizard with larger spined crest",
+      "upgrade_of": "de_cave_lancer"
+    },
+    "de_veil_adept": {
+      "id": "de_veil_adept",
+      "name": "Veil Adept",
+      "faction": "darkelf",
+      "tier": 5,
+      "role": "support",
+      "desc": "severe grey-skinned elf sorceress in layered violet robes with single amethyst staff",
+      "upgrade": "de_mirror_witch"
+    },
+    "de_mirror_witch": {
+      "id": "de_mirror_witch",
+      "name": "Mirror Witch",
+      "faction": "darkelf",
+      "tier": 5,
+      "role": "support",
+      "desc": "severe grey-skinned elf sorceress in layered violet robes with single amethyst staff; upgraded with tall silver headdress, floating intact mirror-shard halo joined to staff, deeper layered robes",
+      "upgrade_of": "de_veil_adept"
+    },
+    "de_silk_stalker": {
+      "id": "de_silk_stalker",
+      "name": "Silk Stalker",
+      "faction": "darkelf",
+      "tier": 6,
+      "role": "heavy",
+      "desc": "large threatening black cave spider with eight clearly separated legs, purple abdominal markings",
+      "upgrade": "de_widow_matriarch"
+    },
+    "de_widow_matriarch": {
+      "id": "de_widow_matriarch",
+      "name": "Widow Matriarch",
+      "faction": "darkelf",
+      "tier": 6,
+      "role": "heavy",
+      "desc": "large threatening black cave spider with eight clearly separated legs, purple abdominal markings; upgraded with massive black widow spider, silver carapace plates and enlarged violet-marked abdomen",
+      "upgrade_of": "de_silk_stalker"
+    },
+    "de_obsidian_guard": {
+      "id": "de_obsidian_guard",
+      "name": "Obsidian Guard",
+      "faction": "darkelf",
+      "tier": 7,
+      "role": "heavy",
+      "desc": "towering elf executioner in broad black plate with a heavy two-handed axe",
+      "upgrade": "de_onyx_executioner"
+    },
+    "de_onyx_executioner": {
+      "id": "de_onyx_executioner",
+      "name": "Onyx Executioner",
+      "faction": "darkelf",
+      "tier": 7,
+      "role": "heavy",
+      "desc": "towering elf executioner in broad black plate with a heavy two-handed axe; upgraded with larger black-silver armour, high spined gorget, enormous crescent execution axe",
+      "upgrade_of": "de_obsidian_guard"
+    },
+    "de_gloam_drake": {
+      "id": "de_gloam_drake",
+      "name": "Gloam Drake",
+      "faction": "darkelf",
+      "tier": 8,
+      "role": "flyer",
+      "desc": "four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings",
+      "upgrade": "de_eclipse_dragon"
+    },
+    "de_eclipse_dragon": {
+      "id": "de_eclipse_dragon",
+      "name": "Eclipse Dragon",
+      "faction": "darkelf",
+      "tier": 8,
+      "role": "flyer",
+      "desc": "four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings; upgraded with large regal obsidian wyvern, silver horn crown and sweeping violet membrane wings with luminous amethyst seams",
+      "upgrade_of": "de_gloam_drake"
+    },
+    "fm_brine_spear": {
+      "id": "fm_brine_spear",
+      "name": "Brine Spear",
+      "faction": "fishmen",
+      "tier": 1,
+      "role": "infantry",
+      "desc": "lean gilled fish man with webbed feet, bone spear, small shell buckler",
+      "upgrade": "fm_reef_guard"
+    },
+    "fm_reef_guard": {
+      "id": "fm_reef_guard",
+      "name": "Reef Guard",
+      "faction": "fishmen",
+      "tier": 1,
+      "role": "infantry",
+      "desc": "lean gilled fish man with webbed feet, bone spear, small shell buckler; upgraded with heavier ivory shell armour, coral-spiked crest, bronze trident and larger shell shield",
+      "upgrade_of": "fm_brine_spear"
+    },
+    "fm_hookcaster": {
+      "id": "fm_hookcaster",
+      "name": "Hookcaster",
+      "faction": "fishmen",
+      "tier": 2,
+      "role": "ranged",
+      "desc": "hunched fish man holding a two-handed bronze harpoon launcher, spare barbed shafts on back",
+      "upgrade": "fm_abyss_harpooner"
+    },
+    "fm_abyss_harpooner": {
+      "id": "fm_abyss_harpooner",
+      "name": "Abyss Harpooner",
+      "faction": "fishmen",
+      "tier": 2,
+      "role": "ranged",
+      "desc": "hunched fish man holding a two-handed bronze harpoon launcher, spare barbed shafts on back; upgraded with larger eelbone launcher, deep-sea helm, multiple barbed shafts and bronze shoulder plates",
+      "upgrade_of": "fm_hookcaster"
+    },
+    "fm_shellback": {
+      "id": "fm_shellback",
+      "name": "Shellback",
+      "faction": "fishmen",
+      "tier": 3,
+      "role": "heavy",
+      "desc": "stocky armoured fish man behind a huge weathered shell shield holding short cleaver",
+      "upgrade": "fm_barnacle_bulwark"
+    },
+    "fm_barnacle_bulwark": {
+      "id": "fm_barnacle_bulwark",
+      "name": "Barnacle Bulwark",
+      "faction": "fishmen",
+      "tier": 3,
+      "role": "heavy",
+      "desc": "stocky armoured fish man behind a huge weathered shell shield holding short cleaver; upgraded with hulking barnacle-encrusted shell armour with enormous layered shell shield and bronze hooked blade",
+      "upgrade_of": "fm_shellback"
+    },
+    "fm_mire_crab": {
+      "id": "fm_mire_crab",
+      "name": "Mire Crab",
+      "faction": "fishmen",
+      "tier": 4,
+      "role": "heavy",
+      "desc": "large low six-legged dark teal crab with two heavy front claws, coral shell nodules",
+      "upgrade": "fm_siege_carapace"
+    },
+    "fm_siege_carapace": {
+      "id": "fm_siege_carapace",
+      "name": "Siege Carapace",
+      "faction": "fishmen",
+      "tier": 4,
+      "role": "heavy",
+      "desc": "large low six-legged dark teal crab with two heavy front claws, coral shell nodules; upgraded with enormous crab with thick bronze-banded shell, serrated enlarged claws and shell siege spikes",
+      "upgrade_of": "fm_mire_crab"
+    },
+    "fm_lantern_acolyte": {
+      "id": "fm_lantern_acolyte",
+      "name": "Lantern Acolyte",
+      "faction": "fishmen",
+      "tier": 5,
+      "role": "support",
+      "desc": "thin anglerfish humanoid in ragged teal robes, head lure and pearl-topped staff",
+      "upgrade": "fm_drowned_oracle"
+    },
+    "fm_drowned_oracle": {
+      "id": "fm_drowned_oracle",
+      "name": "Drowned Oracle",
+      "faction": "fishmen",
+      "tier": 5,
+      "role": "support",
+      "desc": "thin anglerfish humanoid in ragged teal robes, head lure and pearl-topped staff; upgraded with tall abyssal priest with shell headdress, brighter head lure, ornate staff and heavy layered robes",
+      "upgrade_of": "fm_lantern_acolyte"
+    },
+    "fm_tide_mauler": {
+      "id": "fm_tide_mauler",
+      "name": "Tide Mauler",
+      "faction": "fishmen",
+      "tier": 6,
+      "role": "infantry",
+      "desc": "broad muscular shark-headed amphibious brute with scarred teal skin and two-handed anchor axe",
+      "upgrade": "fm_trench_reaver"
+    },
+    "fm_trench_reaver": {
+      "id": "fm_trench_reaver",
+      "name": "Trench Reaver",
+      "faction": "fishmen",
+      "tier": 6,
+      "role": "infantry",
+      "desc": "broad muscular shark-headed amphibious brute with scarred teal skin and two-handed anchor axe; upgraded with larger heavily scarred shark brute, bronze-and-shell shoulder armour and massive serrated anchor axe",
+      "upgrade_of": "fm_tide_mauler"
+    },
+    "fm_coil_serpent": {
+      "id": "fm_coil_serpent",
+      "name": "Coil Serpent",
+      "faction": "fishmen",
+      "tier": 7,
+      "role": "heavy",
+      "desc": "coiled amphibious sea serpent with two visible clawed forelimbs, dorsal fins and broad jaws",
+      "upgrade": "fm_storm_leviathan"
+    },
+    "fm_storm_leviathan": {
+      "id": "fm_storm_leviathan",
+      "name": "Storm Leviathan",
+      "faction": "fishmen",
+      "tier": 7,
+      "role": "heavy",
+      "desc": "coiled amphibious sea serpent with two visible clawed forelimbs, dorsal fins and broad jaws; upgraded with massive royal coiled leviathan, ivory crown spines, armoured scale ridges and cyan-lit throat",
+      "upgrade_of": "fm_coil_serpent"
+    },
+    "fm_trench_titan": {
+      "id": "fm_trench_titan",
+      "name": "Trench Titan",
+      "faction": "fishmen",
+      "tier": 8,
+      "role": "heavy",
+      "desc": "towering bipedal deep-sea angler monster, two massive arms, lure, toothy jaws, coral back growths",
+      "upgrade": "fm_abyss_sovereign"
+    },
+    "fm_abyss_sovereign": {
+      "id": "fm_abyss_sovereign",
+      "name": "Abyss Sovereign",
+      "faction": "fishmen",
+      "tier": 8,
+      "role": "heavy",
+      "desc": "towering bipedal deep-sea angler monster, two massive arms, lure, toothy jaws, coral back growths; upgraded with colossal abyssal king with enormous shell crown, corroded bronze armour, stronger cyan lure and a huge coral-headed sceptre",
+      "upgrade_of": "fm_trench_titan"
+    }
+  },
+  "hero_classes": {
+    "de_dreadmarshal": {
+      "id": "de_dreadmarshal",
+      "name": "Dreadmarshal",
+      "faction": "darkelf",
+      "desc": "armoured dark elf commander with glaive riding a lean six-legged black cave lizard"
+    },
+    "de_veilseer": {
+      "id": "de_veilseer",
+      "name": "Veilseer",
+      "faction": "darkelf",
+      "desc": "hooded dark elf sorceress with violet staff riding a sleek black cave lizard"
+    },
+    "de_nightstalker": {
+      "id": "de_nightstalker",
+      "name": "Nightstalker",
+      "faction": "darkelf",
+      "desc": "masked dark elf scout with compact crossbow riding a low six-legged cave lizard"
+    },
+    "fm_tidemarshal": {
+      "id": "fm_tidemarshal",
+      "name": "Tidemarshal",
+      "faction": "fishmen",
+      "desc": "gilled fish man commander with coral trident riding a huge armoured six-legged shore crab"
+    },
+    "fm_deep_oracle": {
+      "id": "fm_deep_oracle",
+      "name": "Deep Oracle",
+      "faction": "fishmen",
+      "desc": "robed anglerfish oracle with pearl staff riding a broad six-legged shore crab"
+    },
+    "fm_reef_hunter": {
+      "id": "fm_reef_hunter",
+      "name": "Reef Hunter",
+      "faction": "fishmen",
+      "desc": "lean fish man harpoon scout riding a swift low six-legged shore crab"
+    }
+  },
+  "buildings": {
+    "de_hall": {
+      "id": "de_hall",
+      "name": "Conclave Hall",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_market": {
+      "id": "de_market",
+      "name": "Market",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_yard": {
+      "id": "de_yard",
+      "name": "War Yard",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_tavern": {
+      "id": "de_tavern",
+      "name": "Tavern",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_masons": {
+      "id": "de_masons",
+      "name": "Stoneworks",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_palisade": {
+      "id": "de_palisade",
+      "name": "Outer Wall",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_keep": {
+      "id": "de_keep",
+      "name": "Gatehouse",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_bastion": {
+      "id": "de_bastion",
+      "name": "Citadel Walls",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_dw1": {
+      "id": "de_dw1",
+      "name": "Gloam Spear Dwelling",
+      "faction": "darkelf",
+      "visual_tier": 1
+    },
+    "de_dw2": {
+      "id": "de_dw2",
+      "name": "Shardbow Dwelling",
+      "faction": "darkelf",
+      "visual_tier": 2
+    },
+    "de_dw3": {
+      "id": "de_dw3",
+      "name": "Knifedancer Dwelling",
+      "faction": "darkelf",
+      "visual_tier": 3
+    },
+    "de_dw4": {
+      "id": "de_dw4",
+      "name": "Cave Lancer Dwelling",
+      "faction": "darkelf",
+      "visual_tier": 4
+    },
+    "de_dw5": {
+      "id": "de_dw5",
+      "name": "Veil Adept Dwelling",
+      "faction": "darkelf",
+      "visual_tier": 5
+    },
+    "de_dw6": {
+      "id": "de_dw6",
+      "name": "Silk Stalker Dwelling",
+      "faction": "darkelf",
+      "visual_tier": 6
+    },
+    "de_dw7": {
+      "id": "de_dw7",
+      "name": "Obsidian Guard Dwelling",
+      "faction": "darkelf",
+      "visual_tier": 7
+    },
+    "de_dw8": {
+      "id": "de_dw8",
+      "name": "Gloam Drake Dwelling",
+      "faction": "darkelf",
+      "visual_tier": 8
+    },
+    "de_up1": {
+      "id": "de_up1",
+      "name": "Dusk Sentinel Sanctum",
+      "faction": "darkelf",
+      "visual_tier": 1
+    },
+    "de_up2": {
+      "id": "de_up2",
+      "name": "Venom Arbalist Sanctum",
+      "faction": "darkelf",
+      "visual_tier": 2
+    },
+    "de_up3": {
+      "id": "de_up3",
+      "name": "Blood Scythe Sanctum",
+      "faction": "darkelf",
+      "visual_tier": 3
+    },
+    "de_up4": {
+      "id": "de_up4",
+      "name": "Dread Rider Sanctum",
+      "faction": "darkelf",
+      "visual_tier": 4
+    },
+    "de_up5": {
+      "id": "de_up5",
+      "name": "Mirror Witch Sanctum",
+      "faction": "darkelf",
+      "visual_tier": 5
+    },
+    "de_up6": {
+      "id": "de_up6",
+      "name": "Widow Matriarch Sanctum",
+      "faction": "darkelf",
+      "visual_tier": 6
+    },
+    "de_up7": {
+      "id": "de_up7",
+      "name": "Onyx Executioner Sanctum",
+      "faction": "darkelf",
+      "visual_tier": 7
+    },
+    "de_up8": {
+      "id": "de_up8",
+      "name": "Eclipse Dragon Sanctum",
+      "faction": "darkelf",
+      "visual_tier": 8
+    },
+    "de_court": {
+      "id": "de_court",
+      "name": "High Conclave",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_assembly": {
+      "id": "de_assembly",
+      "name": "Sovereign Palace",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_exchequer": {
+      "id": "de_exchequer",
+      "name": "Imperial Palace",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_drill": {
+      "id": "de_drill",
+      "name": "Training Court",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_fletchers": {
+      "id": "de_fletchers",
+      "name": "Missile Workshop",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "de_remount": {
+      "id": "de_remount",
+      "name": "Beast Pens",
+      "faction": "darkelf",
+      "visual_tier": null
+    },
+    "fm_hall": {
+      "id": "fm_hall",
+      "name": "Conclave Hall",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_market": {
+      "id": "fm_market",
+      "name": "Market",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_yard": {
+      "id": "fm_yard",
+      "name": "War Yard",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_tavern": {
+      "id": "fm_tavern",
+      "name": "Tavern",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_masons": {
+      "id": "fm_masons",
+      "name": "Stoneworks",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_palisade": {
+      "id": "fm_palisade",
+      "name": "Outer Wall",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_keep": {
+      "id": "fm_keep",
+      "name": "Gatehouse",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_bastion": {
+      "id": "fm_bastion",
+      "name": "Citadel Walls",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_dw1": {
+      "id": "fm_dw1",
+      "name": "Brine Spear Dwelling",
+      "faction": "fishmen",
+      "visual_tier": 1
+    },
+    "fm_dw2": {
+      "id": "fm_dw2",
+      "name": "Hookcaster Dwelling",
+      "faction": "fishmen",
+      "visual_tier": 2
+    },
+    "fm_dw3": {
+      "id": "fm_dw3",
+      "name": "Shellback Dwelling",
+      "faction": "fishmen",
+      "visual_tier": 3
+    },
+    "fm_dw4": {
+      "id": "fm_dw4",
+      "name": "Mire Crab Dwelling",
+      "faction": "fishmen",
+      "visual_tier": 4
+    },
+    "fm_dw5": {
+      "id": "fm_dw5",
+      "name": "Lantern Acolyte Dwelling",
+      "faction": "fishmen",
+      "visual_tier": 5
+    },
+    "fm_dw6": {
+      "id": "fm_dw6",
+      "name": "Tide Mauler Dwelling",
+      "faction": "fishmen",
+      "visual_tier": 6
+    },
+    "fm_dw7": {
+      "id": "fm_dw7",
+      "name": "Coil Serpent Dwelling",
+      "faction": "fishmen",
+      "visual_tier": 7
+    },
+    "fm_dw8": {
+      "id": "fm_dw8",
+      "name": "Trench Titan Dwelling",
+      "faction": "fishmen",
+      "visual_tier": 8
+    },
+    "fm_up1": {
+      "id": "fm_up1",
+      "name": "Reef Guard Sanctum",
+      "faction": "fishmen",
+      "visual_tier": 1
+    },
+    "fm_up2": {
+      "id": "fm_up2",
+      "name": "Abyss Harpooner Sanctum",
+      "faction": "fishmen",
+      "visual_tier": 2
+    },
+    "fm_up3": {
+      "id": "fm_up3",
+      "name": "Barnacle Bulwark Sanctum",
+      "faction": "fishmen",
+      "visual_tier": 3
+    },
+    "fm_up4": {
+      "id": "fm_up4",
+      "name": "Siege Carapace Sanctum",
+      "faction": "fishmen",
+      "visual_tier": 4
+    },
+    "fm_up5": {
+      "id": "fm_up5",
+      "name": "Drowned Oracle Sanctum",
+      "faction": "fishmen",
+      "visual_tier": 5
+    },
+    "fm_up6": {
+      "id": "fm_up6",
+      "name": "Trench Reaver Sanctum",
+      "faction": "fishmen",
+      "visual_tier": 6
+    },
+    "fm_up7": {
+      "id": "fm_up7",
+      "name": "Storm Leviathan Sanctum",
+      "faction": "fishmen",
+      "visual_tier": 7
+    },
+    "fm_up8": {
+      "id": "fm_up8",
+      "name": "Abyss Sovereign Sanctum",
+      "faction": "fishmen",
+      "visual_tier": 8
+    },
+    "fm_court": {
+      "id": "fm_court",
+      "name": "High Conclave",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_assembly": {
+      "id": "fm_assembly",
+      "name": "Sovereign Palace",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_exchequer": {
+      "id": "fm_exchequer",
+      "name": "Imperial Palace",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_drill": {
+      "id": "fm_drill",
+      "name": "Training Court",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_fletchers": {
+      "id": "fm_fletchers",
+      "name": "Missile Workshop",
+      "faction": "fishmen",
+      "visual_tier": null
+    },
+    "fm_remount": {
+      "id": "fm_remount",
+      "name": "Beast Pens",
+      "faction": "fishmen",
+      "visual_tier": null
+    }
+  },
+  "assets": [
+    {
+      "id": "creature_de_gloam_spear",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "de_gloam_spear"
+      }
+    },
+    {
+      "id": "creature_de_dusk_sentinel",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield; upgraded with closed silver-edged plate and large hooked shield, longer serrated spear",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "de_gloam_spear",
+      "data": {
+        "type": "creature",
+        "id": "de_dusk_sentinel"
+      }
+    },
+    {
+      "id": "creature_de_shardbow",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "grim elf crossbowman in violet hood and black leather, compact two-handed crossbow",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "de_shardbow"
+      }
+    },
+    {
+      "id": "creature_de_venom_arbalist",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "grim elf crossbowman in violet hood and black leather, compact two-handed crossbow; upgraded with armoured high-collared veteran with heavy recurved arbalest and small poison vial",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "de_shardbow",
+      "data": {
+        "type": "creature",
+        "id": "de_venom_arbalist"
+      }
+    },
+    {
+      "id": "creature_de_knifedancer",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "athletic masked elf assassin in fitted black armour holding two curved daggers",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "de_knifedancer"
+      }
+    },
+    {
+      "id": "creature_de_blood_scythe",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "athletic masked elf assassin in fitted black armour holding two curved daggers; upgraded with severe silver death mask, layered spiked shoulder armour, two long sickle blades",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "de_knifedancer",
+      "data": {
+        "type": "creature",
+        "id": "de_blood_scythe"
+      }
+    },
+    {
+      "id": "creature_de_cave_lancer",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "elf lancer astride a lean six-legged black cave lizard, violet saddlecloth",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "de_cave_lancer"
+      }
+    },
+    {
+      "id": "creature_de_dread_rider",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "elf lancer astride a lean six-legged black cave lizard, violet saddlecloth; upgraded with heavily armoured lancer and silver-plated six-legged lizard with larger spined crest",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "de_cave_lancer",
+      "data": {
+        "type": "creature",
+        "id": "de_dread_rider"
+      }
+    },
+    {
+      "id": "creature_de_veil_adept",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "severe grey-skinned elf sorceress in layered violet robes with single amethyst staff",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "de_veil_adept"
+      }
+    },
+    {
+      "id": "creature_de_mirror_witch",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "severe grey-skinned elf sorceress in layered violet robes with single amethyst staff; upgraded with tall silver headdress, floating intact mirror-shard halo joined to staff, deeper layered robes",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "de_veil_adept",
+      "data": {
+        "type": "creature",
+        "id": "de_mirror_witch"
+      }
+    },
+    {
+      "id": "creature_de_silk_stalker",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "large threatening black cave spider with eight clearly separated legs, purple abdominal markings",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "de_silk_stalker"
+      }
+    },
+    {
+      "id": "creature_de_widow_matriarch",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "large threatening black cave spider with eight clearly separated legs, purple abdominal markings; upgraded with massive black widow spider, silver carapace plates and enlarged violet-marked abdomen",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "de_silk_stalker",
+      "data": {
+        "type": "creature",
+        "id": "de_widow_matriarch"
+      }
+    },
+    {
+      "id": "creature_de_obsidian_guard",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "towering elf executioner in broad black plate with a heavy two-handed axe",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "de_obsidian_guard"
+      }
+    },
+    {
+      "id": "creature_de_onyx_executioner",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "towering elf executioner in broad black plate with a heavy two-handed axe; upgraded with larger black-silver armour, high spined gorget, enormous crescent execution axe",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "de_obsidian_guard",
+      "data": {
+        "type": "creature",
+        "id": "de_onyx_executioner"
+      }
+    },
+    {
+      "id": "creature_de_gloam_drake",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "de_gloam_drake"
+      }
+    },
+    {
+      "id": "creature_de_eclipse_dragon",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings; upgraded with large regal obsidian wyvern, silver horn crown and sweeping violet membrane wings with luminous amethyst seams",
+      "faction": "darkelf",
+      "dlc": true,
+      "upgrade_of": "de_gloam_drake",
+      "data": {
+        "type": "creature",
+        "id": "de_eclipse_dragon"
+      }
+    },
+    {
+      "id": "hero_de_dreadmarshal",
+      "category": "hero",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "armoured dark elf commander with glaive riding a lean six-legged black cave lizard",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "hero_de_veilseer",
+      "category": "hero",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "hooded dark elf sorceress with violet staff riding a sleek black cave lizard",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "hero_de_nightstalker",
+      "category": "hero",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "masked dark elf scout with compact crossbow riding a low six-legged cave lizard",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "town_darkelf_1",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        192,
+        192
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern, town progression stage 1 of four; increasing size and fortification",
+      "faction": "darkelf",
+      "dlc": true,
+      "flag": [
+        96,
+        2
+      ]
+    },
+    {
+      "id": "town_darkelf_2",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        192,
+        192
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern, town progression stage 2 of four; increasing size and fortification",
+      "faction": "darkelf",
+      "dlc": true,
+      "flag": [
+        96,
+        2
+      ]
+    },
+    {
+      "id": "town_darkelf_3",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        192,
+        192
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern, town progression stage 3 of four; increasing size and fortification",
+      "faction": "darkelf",
+      "dlc": true,
+      "flag": [
+        96,
+        2
+      ]
+    },
+    {
+      "id": "town_darkelf",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        192,
+        192
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern, town progression stage 4 of four; increasing size and fortification",
+      "faction": "darkelf",
+      "dlc": true,
+      "flag": [
+        96,
+        2
+      ]
+    },
+    {
+      "id": "building_de_hall",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Conclave Hall, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_market",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Market, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_yard",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "War Yard, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_tavern",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Tavern, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_masons",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Stoneworks, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_palisade",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Outer Wall, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_keep",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Gatehouse, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_bastion",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Citadel Walls, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_dw1",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Gloam Spear Dwelling, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_dw2",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Shardbow Dwelling, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_dw3",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Knifedancer Dwelling, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_dw4",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Cave Lancer Dwelling, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_dw5",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Veil Adept Dwelling, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_dw6",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Silk Stalker Dwelling, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_dw7",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Obsidian Guard Dwelling, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_dw8",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Gloam Drake Dwelling, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_up1",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Dusk Sentinel Sanctum, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_up2",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Venom Arbalist Sanctum, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_up3",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Blood Scythe Sanctum, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_up4",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Dread Rider Sanctum, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_up5",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Mirror Witch Sanctum, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_up6",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Widow Matriarch Sanctum, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_up7",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Onyx Executioner Sanctum, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_up8",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Eclipse Dragon Sanctum, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_court",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "High Conclave, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_assembly",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Sovereign Palace, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_exchequer",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Imperial Palace, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_drill",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Training Court, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_fletchers",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Missile Workshop, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "building_de_remount",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Beast Pens, standalone building of angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "dlc_darkelf_crest",
+      "category": "ui",
+      "atlas": "ui",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": "center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "heraldic faction crest without lettering, hardened ash-grey dark elves, long angular ears, severe faces, obsidian segmented armour, tarnished silver edges, deep violet cloth, tiny amethyst lights, cruel elegant blades; predatory aristocratic menace, never cute, no generic black humans",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "dlc_darkelf_artifact",
+      "category": "ui",
+      "atlas": "ui",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": "center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "faction relic icon, hardened ash-grey dark elves, long angular ears, severe faces, obsidian segmented armour, tarnished silver edges, deep violet cloth, tiny amethyst lights, cruel elegant blades; predatory aristocratic menace, never cute, no generic black humans",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "dlc_darkelf_ability",
+      "category": "ui",
+      "atlas": "ui",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": "center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "faction spell icon, hardened ash-grey dark elves, long angular ears, severe faces, obsidian segmented armour, tarnished silver edges, deep violet cloth, tiny amethyst lights, cruel elegant blades; predatory aristocratic menace, never cute, no generic black humans",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "dlc_darkelf_cursor",
+      "category": "ui",
+      "atlas": "ui",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": "center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "attack cursor with sharp pointer and faction motif, hardened ash-grey dark elves, long angular ears, severe faces, obsidian segmented armour, tarnished silver edges, deep violet cloth, tiny amethyst lights, cruel elegant blades; predatory aristocratic menace, never cute, no generic black humans",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "dlc_darkelf_obelisk",
+      "category": "object",
+      "atlas": "objects",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "faction boundary obelisk, angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "dlc_darkelf_portal",
+      "category": "object",
+      "atlas": "objects",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "ancient faction portal, angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "dlc_darkelf_shrine",
+      "category": "object",
+      "atlas": "objects",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "isolated faction shrine, angular black basalt and tarnished silver, knife-like gothic spires, violet crystal lamps, hanging dark silk, spider-web tracery, obsidian terraces in a vast underground cavern",
+      "faction": "darkelf",
+      "dlc": true
+    },
+    {
+      "id": "creature_fm_brine_spear",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "lean gilled fish man with webbed feet, bone spear, small shell buckler",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "fm_brine_spear"
+      }
+    },
+    {
+      "id": "creature_fm_reef_guard",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "lean gilled fish man with webbed feet, bone spear, small shell buckler; upgraded with heavier ivory shell armour, coral-spiked crest, bronze trident and larger shell shield",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "fm_brine_spear",
+      "data": {
+        "type": "creature",
+        "id": "fm_reef_guard"
+      }
+    },
+    {
+      "id": "creature_fm_hookcaster",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "hunched fish man holding a two-handed bronze harpoon launcher, spare barbed shafts on back",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "fm_hookcaster"
+      }
+    },
+    {
+      "id": "creature_fm_abyss_harpooner",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "hunched fish man holding a two-handed bronze harpoon launcher, spare barbed shafts on back; upgraded with larger eelbone launcher, deep-sea helm, multiple barbed shafts and bronze shoulder plates",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "fm_hookcaster",
+      "data": {
+        "type": "creature",
+        "id": "fm_abyss_harpooner"
+      }
+    },
+    {
+      "id": "creature_fm_shellback",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "stocky armoured fish man behind a huge weathered shell shield holding short cleaver",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "fm_shellback"
+      }
+    },
+    {
+      "id": "creature_fm_barnacle_bulwark",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "stocky armoured fish man behind a huge weathered shell shield holding short cleaver; upgraded with hulking barnacle-encrusted shell armour with enormous layered shell shield and bronze hooked blade",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "fm_shellback",
+      "data": {
+        "type": "creature",
+        "id": "fm_barnacle_bulwark"
+      }
+    },
+    {
+      "id": "creature_fm_mire_crab",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "large low six-legged dark teal crab with two heavy front claws, coral shell nodules",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "fm_mire_crab"
+      }
+    },
+    {
+      "id": "creature_fm_siege_carapace",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "large low six-legged dark teal crab with two heavy front claws, coral shell nodules; upgraded with enormous crab with thick bronze-banded shell, serrated enlarged claws and shell siege spikes",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "fm_mire_crab",
+      "data": {
+        "type": "creature",
+        "id": "fm_siege_carapace"
+      }
+    },
+    {
+      "id": "creature_fm_lantern_acolyte",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "thin anglerfish humanoid in ragged teal robes, head lure and pearl-topped staff",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "fm_lantern_acolyte"
+      }
+    },
+    {
+      "id": "creature_fm_drowned_oracle",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "thin anglerfish humanoid in ragged teal robes, head lure and pearl-topped staff; upgraded with tall abyssal priest with shell headdress, brighter head lure, ornate staff and heavy layered robes",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "fm_lantern_acolyte",
+      "data": {
+        "type": "creature",
+        "id": "fm_drowned_oracle"
+      }
+    },
+    {
+      "id": "creature_fm_tide_mauler",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "broad muscular shark-headed amphibious brute with scarred teal skin and two-handed anchor axe",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "fm_tide_mauler"
+      }
+    },
+    {
+      "id": "creature_fm_trench_reaver",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "broad muscular shark-headed amphibious brute with scarred teal skin and two-handed anchor axe; upgraded with larger heavily scarred shark brute, bronze-and-shell shoulder armour and massive serrated anchor axe",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "fm_tide_mauler",
+      "data": {
+        "type": "creature",
+        "id": "fm_trench_reaver"
+      }
+    },
+    {
+      "id": "creature_fm_coil_serpent",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "coiled amphibious sea serpent with two visible clawed forelimbs, dorsal fins and broad jaws",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "fm_coil_serpent"
+      }
+    },
+    {
+      "id": "creature_fm_storm_leviathan",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "coiled amphibious sea serpent with two visible clawed forelimbs, dorsal fins and broad jaws; upgraded with massive royal coiled leviathan, ivory crown spines, armoured scale ridges and cyan-lit throat",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "fm_coil_serpent",
+      "data": {
+        "type": "creature",
+        "id": "fm_storm_leviathan"
+      }
+    },
+    {
+      "id": "creature_fm_trench_titan",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "towering bipedal deep-sea angler monster, two massive arms, lure, toothy jaws, coral back growths",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "",
+      "data": {
+        "type": "creature",
+        "id": "fm_trench_titan"
+      }
+    },
+    {
+      "id": "creature_fm_abyss_sovereign",
+      "category": "creature",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "towering bipedal deep-sea angler monster, two massive arms, lure, toothy jaws, coral back growths; upgraded with colossal abyssal king with enormous shell crown, corroded bronze armour, stronger cyan lure and a huge coral-headed sceptre",
+      "faction": "fishmen",
+      "dlc": true,
+      "upgrade_of": "fm_trench_titan",
+      "data": {
+        "type": "creature",
+        "id": "fm_abyss_sovereign"
+      }
+    },
+    {
+      "id": "hero_fm_tidemarshal",
+      "category": "hero",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "gilled fish man commander with coral trident riding a huge armoured six-legged shore crab",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "hero_fm_deep_oracle",
+      "category": "hero",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "robed anglerfish oracle with pearl staff riding a broad six-legged shore crab",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "hero_fm_reef_hunter",
+      "category": "hero",
+      "atlas": "units",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "lean fish man harpoon scout riding a swift low six-legged shore crab",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "town_fishmen_1",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        192,
+        192
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns, town progression stage 1 of four; increasing size and fortification",
+      "faction": "fishmen",
+      "dlc": true,
+      "flag": [
+        96,
+        2
+      ]
+    },
+    {
+      "id": "town_fishmen_2",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        192,
+        192
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns, town progression stage 2 of four; increasing size and fortification",
+      "faction": "fishmen",
+      "dlc": true,
+      "flag": [
+        96,
+        2
+      ]
+    },
+    {
+      "id": "town_fishmen_3",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        192,
+        192
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns, town progression stage 3 of four; increasing size and fortification",
+      "faction": "fishmen",
+      "dlc": true,
+      "flag": [
+        96,
+        2
+      ]
+    },
+    {
+      "id": "town_fishmen",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        192,
+        192
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns, town progression stage 4 of four; increasing size and fortification",
+      "faction": "fishmen",
+      "dlc": true,
+      "flag": [
+        96,
+        2
+      ]
+    },
+    {
+      "id": "building_fm_hall",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Conclave Hall, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_market",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Market, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_yard",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "War Yard, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_tavern",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Tavern, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_masons",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Stoneworks, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_palisade",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Outer Wall, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_keep",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Gatehouse, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_bastion",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Citadel Walls, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_dw1",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Brine Spear Dwelling, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_dw2",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Hookcaster Dwelling, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_dw3",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Shellback Dwelling, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_dw4",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Mire Crab Dwelling, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_dw5",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Lantern Acolyte Dwelling, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_dw6",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Tide Mauler Dwelling, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_dw7",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Coil Serpent Dwelling, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_dw8",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Trench Titan Dwelling, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_up1",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Reef Guard Sanctum, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_up2",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Abyss Harpooner Sanctum, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_up3",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Barnacle Bulwark Sanctum, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_up4",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Siege Carapace Sanctum, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_up5",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Drowned Oracle Sanctum, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_up6",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Trench Reaver Sanctum, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_up7",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Storm Leviathan Sanctum, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_up8",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Abyss Sovereign Sanctum, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_court",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "High Conclave, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_assembly",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Sovereign Palace, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_exchequer",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Imperial Palace, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_drill",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Training Court, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_fletchers",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Missile Workshop, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "building_fm_remount",
+      "category": "structure",
+      "atlas": "objects",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "Beast Pens, standalone building of cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "dlc_fishmen_crest",
+      "category": "ui",
+      "atlas": "ui",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": "center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "heraldic faction crest without lettering, monstrous amphibious fish men with visible gills, webbed clawed hands and feet, dead predatory eyes, mottled deep teal scales, corroded bronze, pearl and ivory shell armour, muted coral accents, restrained cyan bioluminescence; eldritch abyssal menace, no cartoon fish, no cheerful humans",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "dlc_fishmen_artifact",
+      "category": "ui",
+      "atlas": "ui",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": "center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "faction relic icon, monstrous amphibious fish men with visible gills, webbed clawed hands and feet, dead predatory eyes, mottled deep teal scales, corroded bronze, pearl and ivory shell armour, muted coral accents, restrained cyan bioluminescence; eldritch abyssal menace, no cartoon fish, no cheerful humans",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "dlc_fishmen_ability",
+      "category": "ui",
+      "atlas": "ui",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": "center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "faction spell icon, monstrous amphibious fish men with visible gills, webbed clawed hands and feet, dead predatory eyes, mottled deep teal scales, corroded bronze, pearl and ivory shell armour, muted coral accents, restrained cyan bioluminescence; eldritch abyssal menace, no cartoon fish, no cheerful humans",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "dlc_fishmen_cursor",
+      "category": "ui",
+      "atlas": "ui",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": "center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "attack cursor with sharp pointer and faction motif, monstrous amphibious fish men with visible gills, webbed clawed hands and feet, dead predatory eyes, mottled deep teal scales, corroded bronze, pearl and ivory shell armour, muted coral accents, restrained cyan bioluminescence; eldritch abyssal menace, no cartoon fish, no cheerful humans",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "dlc_fishmen_obelisk",
+      "category": "object",
+      "atlas": "objects",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "faction boundary obelisk, cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "dlc_fishmen_portal",
+      "category": "object",
+      "atlas": "objects",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "ancient faction portal, cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    },
+    {
+      "id": "dlc_fishmen_shrine",
+      "category": "object",
+      "atlas": "objects",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": "bottom_center",
+      "export_scale": 1,
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "palette": "master",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "keep"
+      },
+      "prompt": "isolated faction shrine, cyclopean sea-dark basalt, corroded bronze, ivory shell vaults and coral buttresses, restrained turquoise bioluminescence, tidal stone causeways on a storm-lashed coast, no underwater floating towns",
+      "faction": "fishmen",
+      "dlc": true
+    }
+  ],
+  "batches": [
+    {
+      "id": "darkelf-creatures",
+      "kind": "creatures",
+      "grid": [
+        4,
+        4
+      ],
+      "asset_ids": [
+        "creature_de_gloam_spear",
+        "creature_de_dusk_sentinel",
+        "creature_de_shardbow",
+        "creature_de_venom_arbalist",
+        "creature_de_knifedancer",
+        "creature_de_blood_scythe",
+        "creature_de_cave_lancer",
+        "creature_de_dread_rider",
+        "creature_de_veil_adept",
+        "creature_de_mirror_witch",
+        "creature_de_silk_stalker",
+        "creature_de_widow_matriarch",
+        "creature_de_obsidian_guard",
+        "creature_de_onyx_executioner",
+        "creature_de_gloam_drake",
+        "creature_de_eclipse_dragon"
+      ],
+      "reference": "assets/source/batches/hollow-001/source.png",
+      "transparent": true,
+      "faction": "darkelf",
+      "source": "assets/source/batches/dlc-factions-001/darkelf-creatures.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-creatures.txt",
+      "source_sha256": "1e763406818c8e4c62c764cb79fc560c92098617f1ac064fa8835edae9699600"
+    },
+    {
+      "id": "darkelf-buildings-1",
+      "kind": "buildings",
+      "grid": [
+        4,
+        4
+      ],
+      "asset_ids": [
+        "building_de_hall",
+        "building_de_market",
+        "building_de_yard",
+        "building_de_tavern",
+        "building_de_masons",
+        "building_de_palisade",
+        "building_de_keep",
+        "building_de_bastion",
+        "building_de_dw1",
+        "building_de_dw2",
+        "building_de_dw3",
+        "building_de_dw4",
+        "building_de_dw5",
+        "building_de_dw6",
+        "building_de_dw7",
+        "dlc_darkelf_obelisk"
+      ],
+      "reference": "assets/source/batches/concord-town-001/foundation.png",
+      "transparent": true,
+      "faction": "darkelf",
+      "source": "assets/source/batches/dlc-factions-001/darkelf-buildings-1.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-buildings-1.txt",
+      "source_sha256": "fe9ba29f9fcb1fb94dcf057862ce5c17efab95b22af1621a5c0af14627d750b4"
+    },
+    {
+      "id": "darkelf-buildings-2",
+      "kind": "buildings",
+      "grid": [
+        4,
+        4
+      ],
+      "asset_ids": [
+        "building_de_dw8",
+        "building_de_up1",
+        "building_de_up2",
+        "building_de_up3",
+        "building_de_up4",
+        "building_de_up5",
+        "building_de_up6",
+        "building_de_up7",
+        "building_de_up8",
+        "building_de_court",
+        "building_de_assembly",
+        "building_de_exchequer",
+        "building_de_drill",
+        "building_de_fletchers",
+        "building_de_remount",
+        "dlc_darkelf_portal"
+      ],
+      "reference": "assets/source/batches/concord-town-001/foundation.png",
+      "transparent": true,
+      "faction": "darkelf",
+      "source": "assets/source/batches/dlc-factions-001/darkelf-buildings-2.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-buildings-2.txt",
+      "source_sha256": "6f842af58e1f18bf802693b4805eecfcbb927222fbad1c81236b59000cc77838"
+    },
+    {
+      "id": "darkelf-heroes-towns",
+      "kind": "mixed",
+      "grid": [
+        4,
+        3
+      ],
+      "asset_ids": [
+        "hero_de_dreadmarshal",
+        "hero_de_veilseer",
+        "hero_de_nightstalker",
+        "town_darkelf_1",
+        "town_darkelf_2",
+        "town_darkelf_3",
+        "town_darkelf",
+        "dlc_darkelf_crest",
+        "dlc_darkelf_artifact",
+        "dlc_darkelf_ability",
+        "dlc_darkelf_cursor",
+        "dlc_darkelf_shrine"
+      ],
+      "reference": "assets/source/batches/hollow-001/source.png",
+      "transparent": true,
+      "faction": "darkelf",
+      "source": "assets/source/batches/dlc-factions-001/darkelf-heroes-towns.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-heroes-towns.txt",
+      "source_sha256": "fa4053c2c7d4675d1c293c39612520363469b17837ec36b7f92b32feec73300b"
+    },
+    {
+      "id": "darkelf-foundation",
+      "kind": "foundation",
+      "asset_ids": [],
+      "reference": "assets/source/batches/concord-town-001/foundation.png",
+      "transparent": false,
+      "faction": "darkelf",
+      "source": "assets/source/batches/dlc-factions-001/darkelf-foundation.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-foundation.txt",
+      "source_sha256": "3c22ea9911bca46db6792da1d0449470c6d964ae43ae4bc5015f47b189efe777"
+    },
+    {
+      "id": "fishmen-creatures",
+      "kind": "creatures",
+      "grid": [
+        4,
+        4
+      ],
+      "asset_ids": [
+        "creature_fm_brine_spear",
+        "creature_fm_reef_guard",
+        "creature_fm_hookcaster",
+        "creature_fm_abyss_harpooner",
+        "creature_fm_shellback",
+        "creature_fm_barnacle_bulwark",
+        "creature_fm_mire_crab",
+        "creature_fm_siege_carapace",
+        "creature_fm_lantern_acolyte",
+        "creature_fm_drowned_oracle",
+        "creature_fm_tide_mauler",
+        "creature_fm_trench_reaver",
+        "creature_fm_coil_serpent",
+        "creature_fm_storm_leviathan",
+        "creature_fm_trench_titan",
+        "creature_fm_abyss_sovereign"
+      ],
+      "reference": "assets/source/batches/hollow-001/source.png",
+      "transparent": true,
+      "faction": "fishmen",
+      "source": "assets/source/batches/dlc-factions-001/fishmen-creatures.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/fishmen-creatures.txt",
+      "source_sha256": "5c2b01a428459b5cdff330050ebf414189f02a6154975f6dbd4767a44e99290f"
+    },
+    {
+      "id": "fishmen-buildings-1",
+      "kind": "buildings",
+      "grid": [
+        4,
+        4
+      ],
+      "asset_ids": [
+        "building_fm_hall",
+        "building_fm_market",
+        "building_fm_yard",
+        "building_fm_tavern",
+        "building_fm_masons",
+        "building_fm_palisade",
+        "building_fm_keep",
+        "building_fm_bastion",
+        "building_fm_dw1",
+        "building_fm_dw2",
+        "building_fm_dw3",
+        "building_fm_dw4",
+        "building_fm_dw5",
+        "building_fm_dw6",
+        "building_fm_dw7",
+        "dlc_fishmen_obelisk"
+      ],
+      "reference": "assets/source/batches/concord-town-001/foundation.png",
+      "transparent": true,
+      "faction": "fishmen",
+      "source": "assets/source/batches/dlc-factions-001/fishmen-buildings-1.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/fishmen-buildings-1.txt",
+      "source_sha256": "272a7349ead04b9a06cd7813c23fa0631286f5c734185a46fa7a02302709e9fa"
+    },
+    {
+      "id": "fishmen-buildings-2",
+      "kind": "buildings",
+      "grid": [
+        4,
+        4
+      ],
+      "asset_ids": [
+        "building_fm_dw8",
+        "building_fm_up1",
+        "building_fm_up2",
+        "building_fm_up3",
+        "building_fm_up4",
+        "building_fm_up5",
+        "building_fm_up6",
+        "building_fm_up7",
+        "building_fm_up8",
+        "building_fm_court",
+        "building_fm_assembly",
+        "building_fm_exchequer",
+        "building_fm_drill",
+        "building_fm_fletchers",
+        "building_fm_remount",
+        "dlc_fishmen_portal"
+      ],
+      "reference": "assets/source/batches/concord-town-001/foundation.png",
+      "transparent": true,
+      "faction": "fishmen",
+      "source": "assets/source/batches/dlc-factions-001/fishmen-buildings-2.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/fishmen-buildings-2.txt",
+      "source_sha256": "ffd2393c9b673a9ebbd95b8c2ee8d05d46235fadbcf1bd8c746912f3ea930d2b"
+    },
+    {
+      "id": "fishmen-heroes-towns",
+      "kind": "mixed",
+      "grid": [
+        4,
+        3
+      ],
+      "asset_ids": [
+        "hero_fm_tidemarshal",
+        "hero_fm_deep_oracle",
+        "hero_fm_reef_hunter",
+        "town_fishmen_1",
+        "town_fishmen_2",
+        "town_fishmen_3",
+        "town_fishmen",
+        "dlc_fishmen_crest",
+        "dlc_fishmen_artifact",
+        "dlc_fishmen_ability",
+        "dlc_fishmen_cursor",
+        "dlc_fishmen_shrine"
+      ],
+      "reference": "assets/source/batches/hollow-001/source.png",
+      "transparent": true,
+      "faction": "fishmen",
+      "source": "assets/source/batches/dlc-factions-001/fishmen-heroes-towns.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/fishmen-heroes-towns.txt",
+      "source_sha256": "aa8c75e41d32e504a9621ca757d842258cb17d5adc69ed4cdaf40c61964fdf31"
+    },
+    {
+      "id": "fishmen-foundation",
+      "kind": "foundation",
+      "asset_ids": [],
+      "reference": "assets/source/batches/concord-town-001/foundation.png",
+      "transparent": false,
+      "faction": "fishmen",
+      "source": "assets/source/batches/dlc-factions-001/fishmen-foundation.png",
+      "prompt_file": "assets/source/batches/dlc-factions-001/fishmen-foundation.txt",
+      "source_sha256": "86a7777fb6f099aa814ea852336fd85f2cdbdee606bb4a223fb3b6e207b491ff"
+    }
+  ]
+}

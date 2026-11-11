@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_ashwinter_fm_south_briefing",
+  "campaign": "ashwinter",
+  "chapter": "fm_south",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_ashwinter_fm_south_briefing.txt",
+  "prompt_sha256": "ed4d827ca954340d8e078244b3f800554790bbc01ea59f4d17872284ad4725c5",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "dfc3bdbbbd2ce97aedcd2aa513f6acac865159d167c8ee3e93a150ca7eb7ee01",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

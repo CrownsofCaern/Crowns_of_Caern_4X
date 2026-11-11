@@ -1,0 +1,17 @@
+{
+  "source": "assets/source/batches/world-atlas-002/source.png",
+  "source_sha256": "84bd69b543c8c96b1cf58a05e7abcbc888c06f0ea75780a4bcc6d625c01c420c",
+  "prompt_file": "assets/source/batches/world-atlas-002/prompt.txt",
+  "prompt_sha256": "cb8b6cb65e825b6b24fd5e12377aed97ba9a940bd1b894bbab53c3f8784cfd00",
+  "reference": "assets/source/batches/world-atlas-001/source.png",
+  "reference_sha256": "5d0f559fd7f7871aa66beb53a5b77c66b309931a9fc9c4e7e30fc92638f8b077",
+  "provider": "ChatGPT image_gen",
+  "quality_status": "reviewed_empire_scale_revision",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "processing": "Unmodified original full-resolution output. Schematic labels, boundaries, settlements and route indexes are separate Godot overlays.",
+  "review": "Inspected: substantially reduced settlement scale, multiple settlements per region, extended hinterlands, northern glacier, western Forge, southwest forest, southern fens, eastern volcanic domain, wide sea reserve, no baked labels. World coordinates remain schematic rather than pixel-perfect source projections.",
+  "regional_style_approval": "Original world-atlas-001 painting approved by user as style reference for regional campaign paintings; original source retained."
+}

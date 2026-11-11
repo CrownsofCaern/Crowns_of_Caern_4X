@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_briar_oath_tw_briar_seal_briefing",
+  "campaign": "briar_oath",
+  "chapter": "tw_briar_seal",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_briar_oath_tw_briar_seal_briefing.txt",
+  "prompt_sha256": "60381f37ed78221352ac8d14bf07827384470317c10036529164fbbf6592348c",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "2b816286e346db8c629107ee8599f2b1a3fb558a7a22e8c48654872e9e24108d",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

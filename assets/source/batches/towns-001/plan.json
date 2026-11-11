@@ -1,0 +1,65 @@
+{
+  "name": "towns-001",
+  "grid": [
+    3,
+    2
+  ],
+  "category": "structure",
+  "spec_file": "objects.json",
+  "assets": [
+    {
+      "id": "town_concord",
+      "prompt": "grim walled human citadel of grey stone with slate-blue roofs, a central keep and lit windows",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "town_ashen",
+      "prompt": "demonic bastion of jagged obsidian spires with lava seams and a horned burning gate",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "town_hollow",
+      "prompt": "undead necropolis in a swamp: crooked black-stone keep with bruise-purple spires, rib gate, mausoleums, gibbets, green grave-light",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "town_thornwood",
+      "prompt": "hostile living-tree fortress: colossal gnarled tree grown into towers and halls, bramble palisades, pale lanterns",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "town_forge",
+      "prompt": "deep forge carved into a soot-black cliff: riveted iron gate, smoking chimneys, furnace grates, brass pipes, slag heaps",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "town_frostmarch",
+      "prompt": "timber longhouse steading in snow: snow-laden longhouse, log palisade with skulls, watch tower, blood-red shields",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5
+    }
+  ]
+}

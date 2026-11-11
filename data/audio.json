@@ -1,0 +1,453 @@
+{
+ "_doc": "Audio: buses, sound events and music. Paths are relative to res://assets/audio/. Every file is rendered by tools/audio/synth.py (original, see assets/audio/LICENSES.md). sounds: event id -> {files (variants, played round-robin), bus, volume_db, pitch_variation (optional, +-fraction, deterministic sequence)}. terrain_steps and pickups map terrain ids (plus 'road') and resource ids to sound events, with a 'default'. music: context -> {file or files (alternatives played one after another), loop, volume_db}; '<context>:<faction>' overrides the context (town themes, victory stingers). faction_sounds: events that have a per-faction take, rendered as <dir>/<event>_<faction>.ogg; the player's faction picks it. Stingers (loop false) play over the ducked loop. Validated by AudioCatalog.validate().",
+ "buses": {
+  "Master": {
+   "default": 0.8
+  },
+  "Music": {
+   "default": 0.6
+  },
+  "SFX": {
+   "default": 0.8
+  },
+  "UI": {
+   "default": 0.7
+  }
+ },
+ "music_fade_seconds": 1.5,
+ "sounds": {
+  "ui_click": {
+   "files": [
+    "sfx/ui_click.ogg",
+    "sfx/ui_click_2.ogg",
+    "sfx/ui_click_3.ogg"
+   ],
+   "bus": "UI",
+   "volume_db": -6.0,
+   "pitch_variation": 0.03
+  },
+  "ui_open": {
+   "files": [
+    "sfx/ui_open.ogg"
+   ],
+   "bus": "UI",
+   "volume_db": -6.0
+  },
+  "ui_close": {
+   "files": [
+    "sfx/ui_close.ogg"
+   ],
+   "bus": "UI",
+   "volume_db": -7.0
+  },
+  "ui_error": {
+   "files": [
+    "sfx/ui_error.ogg"
+   ],
+   "bus": "UI",
+   "volume_db": -4.0
+  },
+  "step_grass": {
+   "files": [
+    "sfx/step_grass_1.ogg",
+    "sfx/step_grass_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -11.0,
+   "pitch_variation": 0.06
+  },
+  "step_forest": {
+   "files": [
+    "sfx/step_forest_1.ogg",
+    "sfx/step_forest_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -11.0,
+   "pitch_variation": 0.06
+  },
+  "step_desert": {
+   "files": [
+    "sfx/step_desert_1.ogg",
+    "sfx/step_desert_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -11.0,
+   "pitch_variation": 0.06
+  },
+  "step_snow": {
+   "files": [
+    "sfx/step_snow_1.ogg",
+    "sfx/step_snow_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -11.0,
+   "pitch_variation": 0.06
+  },
+  "step_swamp": {
+   "files": [
+    "sfx/step_swamp_1.ogg",
+    "sfx/step_swamp_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -11.0,
+   "pitch_variation": 0.06
+  },
+  "step_rock": {
+   "files": [
+    "sfx/step_rock_1.ogg",
+    "sfx/step_rock_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -11.0,
+   "pitch_variation": 0.06
+  },
+  "step_road": {
+   "files": [
+    "sfx/step_road_1.ogg",
+    "sfx/step_road_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -11.0,
+   "pitch_variation": 0.06
+  },
+  "step_ash": {
+   "files": [
+    "sfx/step_ash_1.ogg",
+    "sfx/step_ash_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -11.0,
+   "pitch_variation": 0.06
+  },
+  "step_water": {
+   "files": [
+    "sfx/step_water_1.ogg",
+    "sfx/step_water_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -11.0,
+   "pitch_variation": 0.06
+  },
+  "pickup_gold": {
+   "files": [
+    "sfx/pickup_gold.ogg",
+    "sfx/pickup_gold_2.ogg",
+    "sfx/pickup_gold_3.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -3.0
+  },
+  "pickup_resource": {
+   "files": [
+    "sfx/pickup_resource.ogg",
+    "sfx/pickup_resource_2.ogg",
+    "sfx/pickup_resource_3.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -3.0
+  },
+  "pickup_crystal": {
+   "files": [
+    "sfx/pickup_crystal.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -4.0
+  },
+  "capture_mine": {
+   "files": [
+    "sfx/capture_mine.ogg",
+    "sfx/capture_mine_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -3.0
+  },
+  "capture_town": {
+   "files": [
+    "sfx/capture_town.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -2.0
+  },
+  "build": {
+   "files": [
+    "sfx/build.ogg",
+    "sfx/build_2.ogg",
+    "sfx/build_3.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -2.0
+  },
+  "recruit": {
+   "files": [
+    "sfx/recruit.ogg",
+    "sfx/recruit_2.ogg",
+    "sfx/recruit_3.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -2.0
+  },
+  "upgrade": {
+   "files": [
+    "sfx/upgrade.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -2.0
+  },
+  "hire_hero": {
+   "files": [
+    "sfx/hire_hero.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -2.0
+  },
+  "trade": {
+   "files": [
+    "sfx/trade.ogg",
+    "sfx/trade_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -4.0
+  },
+  "battle_prepare": {
+   "files": [
+    "sfx/battle_prepare.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -2.0
+  },
+  "battle_start": {
+   "files": [
+    "sfx/battle_start.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -1.0
+  },
+  "hero_fallen": {
+   "files": [
+    "sfx/hero_fallen.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -1.0
+  },
+  "town_lost": {
+   "files": [
+    "sfx/town_lost.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -1.0
+  },
+  "turn_begin": {
+   "files": [
+    "sfx/turn_begin.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -6.0
+  },
+  "week_begin": {
+   "files": [
+    "sfx/week_begin.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -3.0
+  },
+  "level_up": {
+   "files": [
+    "sfx/level_up.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -2.0
+  },
+  "encounter_good": {
+   "files": [
+    "sfx/encounter_good.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -3.0
+  },
+  "encounter_bad": {
+   "files": [
+    "sfx/encounter_bad.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -3.0
+  },
+  "battle_hit": {
+   "files": [
+    "sfx/battle_hit.ogg",
+    "sfx/battle_hit_2.ogg",
+    "sfx/battle_hit_3.ogg",
+    "sfx/battle_hit_4.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -13.0,
+   "pitch_variation": 0.08
+  },
+  "battle_shot": {
+   "files": [
+    "sfx/battle_shot.ogg",
+    "sfx/battle_shot_2.ogg",
+    "sfx/battle_shot_3.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -15.0,
+   "pitch_variation": 0.06
+  },
+  "battle_drums": {
+   "files": [
+    "sfx/battle_drums.ogg",
+    "sfx/battle_drums_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -10.0
+  },
+  "battle_horn": {
+   "files": [
+    "sfx/battle_horn.ogg",
+    "sfx/battle_horn_2.ogg"
+   ],
+   "bus": "SFX",
+   "volume_db": -12.0
+  }
+ },
+ "terrain_steps": {
+  "grass": "step_grass",
+  "forest": "step_forest",
+  "desert": "step_desert",
+  "snow": "step_snow",
+  "swamp": "step_swamp",
+  "infernal": "step_ash",
+  "rough": "step_rock",
+  "mountain": "step_rock",
+  "river": "step_water",
+  "water": "step_water",
+  "road": "step_road",
+  "default": "step_grass"
+ },
+ "pickups": {
+  "gold": "pickup_gold",
+  "crystal": "pickup_crystal",
+  "gems": "pickup_crystal",
+  "mercury": "pickup_crystal",
+  "default": "pickup_resource"
+ },
+ "music": {
+  "menu": {
+   "file": "music/menu.ogg",
+   "loop": true,
+   "volume_db": -2.0
+  },
+  "map": {
+   "files": [
+    "music/map.ogg",
+    "music/map_highlands.ogg",
+    "music/map_dusk.ogg"
+   ],
+   "loop": true,
+   "volume_db": -4.0
+  },
+  "town": {
+   "file": "music/town_default.ogg",
+   "loop": true,
+   "volume_db": -4.0
+  },
+  "town:concord": {
+   "file": "music/town_concord.ogg",
+   "loop": true,
+   "volume_db": -5.0
+  },
+  "town:ashen": {
+   "file": "music/town_ashen.ogg",
+   "loop": true,
+   "volume_db": -4.0
+  },
+  "battle_victory": {
+   "file": "music/battle_victory.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  },
+  "battle_defeat": {
+   "file": "music/battle_defeat.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  },
+  "game_victory": {
+   "file": "music/battle_victory.ogg",
+   "loop": false,
+   "volume_db": 0.0
+  },
+  "game_defeat": {
+   "file": "music/battle_defeat.ogg",
+   "loop": false,
+   "volume_db": 0.0
+  },
+  "battle": {
+   "file": "music/battle.ogg",
+   "loop": true,
+   "volume_db": -6.0
+  },
+  "battle_victory:concord": {
+   "file": "music/battle_victory_concord.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  },
+  "battle_victory:ashen": {
+   "file": "music/battle_victory_ashen.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  },
+  "battle_victory:hollow": {
+   "file": "music/battle_victory_hollow.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  },
+  "battle_victory:thornwood": {
+   "file": "music/battle_victory_thornwood.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  },
+  "battle_victory:forge": {
+   "file": "music/battle_victory_forge.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  },
+  "battle_victory:frostmarch": {
+   "file": "music/battle_victory_frostmarch.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  },
+  "battle_victory:darkelf": {
+   "file": "music/battle_victory_darkelf.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  },
+  "battle_victory:fishmen": {
+   "file": "music/battle_victory_fishmen.ogg",
+   "loop": false,
+   "volume_db": -2.0
+  }
+ },
+ "faction_sounds": {
+  "dir": "sfx/faction",
+  "events": [
+   "capture_town",
+   "build",
+   "recruit",
+   "upgrade",
+   "hire_hero",
+   "battle_start",
+   "turn_begin",
+   "week_begin",
+   "level_up"
+  ],
+  "factions": [
+   "concord",
+   "ashen",
+   "hollow",
+   "thornwood",
+   "forge",
+   "frostmarch",
+   "darkelf",
+   "fishmen"
+  ]
+ }
+}

@@ -1,0 +1,5177 @@
+{
+  "last_light": {
+    "name": "The Last Light",
+    "faction": "concord",
+    "text": "The dead rise in the south, the sky turns red and a hundred-year-old seal is breaking. Sir Aldous Wren of Greyhold learns why no one comes when the Concord calls. Chapter 1 is the tutorial; chapters 8 to 10 are the old Ember Chronicle.",
+    "heroes": [
+      "hero_wren",
+      "hero_maelis",
+      "hero_edda"
+    ],
+    "carry": {
+      "keep_worn": true,
+      "max_artifacts": 4
+    },
+    "chapters": [
+      {
+        "id": "ll_harvest",
+        "name": "Greyhold Harvest",
+        "map": "greyhold_harvest",
+        "level_cap": 3,
+        "max_tier": 2,
+        "random_events": false,
+        "ai": {
+          "passive": true,
+          "builds": false,
+          "recruits": false
+        },
+        "text": "The dead are crawling out of the barrow fields at harvest. Clear them from Greyhold's land.",
+        "intro": "Harvest in the southern marches, and the barrow fields are moving. Shamblers have dug themselves out of the old graves east of Greyhold and made a camp in the fen. Sir Aldous Wren, the town's lord, rides out with what men he has.\n\nHow to play: click a tile to plan Aldous's route, then click it again to march. Walk onto the sawmill and the ore pit to claim them, and pick up the piles on the way. Open Greyhold (T) to build and recruit. Each building costs resources and you can build once a day. Your towns can raise creatures up to tier 2 here. When you are ready, attack the rats in the grain: the forecast shows your odds before you commit. Then take Barrow Camp. Press E to end the day.\n\nThe dead here will not come to you. Take your time.",
+        "outro": "The barrow camp burns. The dead it held were fresh: farmers buried this summer, and others that no one in Greyhold remembers burying at all. The ground in the barrow fields is warm to the touch.",
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 300
+          }
+        ]
+      },
+      {
+        "id": "ll_barrow_roads",
+        "name": "The Barrow Roads",
+        "map": "gen:broad_crossing:311",
+        "level_cap": 4,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "concord",
+              "name": "Aldmere Concord"
+            },
+            {
+              "type": "computer",
+              "faction": "hollow"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_wren",
+            "name": "Aldous Wren",
+            "class": "knight",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "pike_militia",
+                24
+              ],
+              [
+                "longbowman",
+                12
+              ],
+              [
+                "shieldwarden",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_maelis",
+            "name": "Maelis Thorne",
+            "class": "ranger",
+            "owner": 0,
+            "army": [
+              [
+                "longbowman",
+                10
+              ],
+              [
+                "pike_militia",
+                8
+              ]
+            ]
+          }
+        ],
+        "text": "The dead march up the old roads in columns. Burn the barrows that send them.",
+        "intro": "Every barrow along the south road has opened. The dead march north in columns, too orderly for corpses. Maelis Thorne, Wren's ranger captain, has tracked them to a single grave-town.\n\nYour towns can raise creatures up to tier 3. Break the dead and take their town.",
+        "outro": "The grave-town falls, but the columns came from somewhere further south, where the fens begin.",
+        "start_resources": {
+          "gold": 1000
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": "ll_lanterns",
+        "name": "Lanterns in the Fen",
+        "map": "gen:broad_crossing:827",
+        "level_cap": 5,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "concord",
+              "name": "Aldmere Concord"
+            },
+            {
+              "type": "computer",
+              "faction": "hollow"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_wren",
+            "name": "Aldous Wren",
+            "class": "knight",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "pike_militia",
+                28
+              ],
+              [
+                "longbowman",
+                14
+              ],
+              [
+                "shieldwarden",
+                6
+              ]
+            ]
+          },
+          {
+            "id": "hero_maelis",
+            "name": "Maelis Thorne",
+            "class": "ranger",
+            "owner": 0,
+            "army": [
+              [
+                "longbowman",
+                12
+              ],
+              [
+                "pike_militia",
+                10
+              ]
+            ]
+          },
+          {
+            "id": "hero_edda",
+            "name": "Edda Vey",
+            "class": "oracle",
+            "owner": 0,
+            "army": [
+              [
+                "pike_militia",
+                12
+              ],
+              [
+                "longbowman",
+                6
+              ]
+            ]
+          }
+        ],
+        "text": "A lantern-priest joins the march and says the ground itself is warm.",
+        "intro": "Sister Edda Vey of the lantern temples joins the march with a lamp that burns blue near the dead. She says the warmth in the ground is not the summer. Something deep below is waking, and the dead are only the first to feel it.\n\nEdda is an Oracle: she sees far and learns fast. Hold the fen road and take the Hollow town that guards it.",
+        "outro": "Edda reads the ash in the lamp and goes pale. \"Not something waking,\" she says. \"Something leaking.\"",
+        "start_resources": {
+          "gold": 1500,
+          "wood": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 700
+          }
+        ]
+      },
+      {
+        "id": "ll_knight",
+        "name": "The Knight Who Came Back",
+        "map": "knight_who_came_back",
+        "level_cap": 6,
+        "max_tier": 4,
+        "text": "The dead are led by a knight in the colours of House Wren.",
+        "intro": "Scouts come back from the fens with a name no one wants to say. The dead are led by a knight on a gibbet-horse, in the faded colours of House Wren. Sir Orrin Wren died a hundred years ago holding the gate shut against the Ashen Host. His great-grandson now has to cut him down.\n\nOrrin rides with gibbet knights, which are far stronger than anything you can raise yet (tier 4). Retake Fenwick, cross the dikes and break Saint Orrin's Rest.",
+        "outro": "Orrin falls in the chapel yard. Before the light leaves his eyes he grips Aldous's wrist. \"The stone is cracking, boy. They will not tell you. Go to the mountain.\"",
+        "start_resources": {
+          "gold": 2000,
+          "wood": 5,
+          "ore": 5
+        },
+        "rewards": [
+          {
+            "type": "artifact",
+            "artifact": "standard_of_the_hold"
+          },
+          {
+            "type": "xp",
+            "amount": 900
+          }
+        ]
+      },
+      {
+        "id": "ll_doors",
+        "name": "Doors of Stone",
+        "map": "gen:broad_crossing:1409",
+        "level_cap": 7,
+        "max_tier": 5,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "concord",
+              "name": "Aldmere Concord"
+            },
+            {
+              "type": "computer",
+              "faction": "forge"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_wren",
+            "name": "Aldous Wren",
+            "class": "knight",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "pike_militia",
+                30
+              ],
+              [
+                "longbowman",
+                16
+              ],
+              [
+                "shieldwarden",
+                8
+              ],
+              [
+                "lancer",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_maelis",
+            "name": "Maelis Thorne",
+            "class": "ranger",
+            "owner": 0,
+            "army": [
+              [
+                "longbowman",
+                14
+              ],
+              [
+                "pike_militia",
+                10
+              ]
+            ]
+          },
+          {
+            "id": "hero_edda",
+            "name": "Edda Vey",
+            "class": "oracle",
+            "owner": 0,
+            "army": [
+              [
+                "pike_militia",
+                14
+              ],
+              [
+                "lightbearer",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "The Forge cast the Lockstone. Wren rides to its gates for help.",
+        "intro": "The Lockstone, the seal on the Wound, was cast by the Sunken Forge, and the Concord stopped paying for its upkeep forty years ago. Aldous rides to the mountain gates with Orrin's warning. The gates stay shut. Then the border wardens march out to drive off the \"debtors\".\n\nTier 5 is open: lantern priests heal your army. Break the wardens' hold.",
+        "outro": "The wardens fall back behind the rock. From the walls a runesmith shouts down: \"You owe us forty years. Pay it in your own blood.\" The gates do not open.",
+        "start_resources": {
+          "gold": 2500,
+          "wood": 5,
+          "ore": 5,
+          "crystal": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1200
+          }
+        ]
+      },
+      {
+        "id": "ll_stumps",
+        "name": "The Stumps of Elderwold",
+        "map": "gen:great_marches:2203",
+        "level_cap": 8,
+        "max_tier": 5,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "concord",
+              "name": "Aldmere Concord"
+            },
+            {
+              "type": "computer",
+              "faction": "thornwood"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_wren",
+            "name": "Aldous Wren",
+            "class": "knight",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "pike_militia",
+                34
+              ],
+              [
+                "longbowman",
+                18
+              ],
+              [
+                "shieldwarden",
+                8
+              ],
+              [
+                "lancer",
+                6
+              ],
+              [
+                "lightbearer",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_maelis",
+            "name": "Maelis Thorne",
+            "class": "ranger",
+            "owner": 0,
+            "army": [
+              [
+                "longbowman",
+                16
+              ],
+              [
+                "pike_militia",
+                12
+              ]
+            ]
+          },
+          {
+            "id": "hero_edda",
+            "name": "Edda Vey",
+            "class": "oracle",
+            "owner": 0,
+            "army": [
+              [
+                "pike_militia",
+                16
+              ],
+              [
+                "lightbearer",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "The road to the Wound runs through the forest the Concord cut down.",
+        "intro": "The short road to the Wound runs through Elderwold, the forest the Concord felled to feed its foundries. Nothing grows there now but stumps and thorn. The Thornwood Covenant has not forgotten.\n\nMaelis was born in this forest. She is quiet the whole way in. Take the Covenant's towns before their archers take your army apart.",
+        "outro": "A dying druid tells Maelis what the forest knew: the great roots of Elderwold held the Lockstone in place. When the Concord cut the trees, it cut the seal. Maelis does not tell Aldous for a day.",
+        "start_resources": {
+          "gold": 3000,
+          "wood": 10,
+          "ore": 5,
+          "gems": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1500
+          }
+        ]
+      },
+      {
+        "id": "ll_red_sky",
+        "name": "Raiders under a Red Sky",
+        "map": "gen:great_marches:3517",
+        "level_cap": 9,
+        "max_tier": 6,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "concord",
+              "name": "Aldmere Concord"
+            },
+            {
+              "type": "computer",
+              "faction": "frostmarch"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_wren",
+            "name": "Aldous Wren",
+            "class": "knight",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "pike_militia",
+                36
+              ],
+              [
+                "longbowman",
+                20
+              ],
+              [
+                "shieldwarden",
+                10
+              ],
+              [
+                "lancer",
+                6
+              ],
+              [
+                "lightbearer",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_maelis",
+            "name": "Maelis Thorne",
+            "class": "ranger",
+            "owner": 0,
+            "army": [
+              [
+                "longbowman",
+                18
+              ],
+              [
+                "pike_militia",
+                14
+              ]
+            ]
+          },
+          {
+            "id": "hero_edda",
+            "name": "Edda Vey",
+            "class": "oracle",
+            "owner": 0,
+            "army": [
+              [
+                "pike_militia",
+                18
+              ],
+              [
+                "lightbearer",
+                3
+              ],
+              [
+                "shieldwarden",
+                4
+              ]
+            ]
+          }
+        ],
+        "text": "The sky turns red. Starving clans raid the north while the army is away.",
+        "intro": "One morning the sky is red and stays red. Ash falls like snow. Word comes from the north: the Frostmarch clans are over the border, burning granaries. Their summer never came, and the Concord stopped sending grain long ago.\n\nTier 6 is open: sunhawk riders. The clans are fast and many. Drive them back over the border.",
+        "outro": "The last raider dies laughing. \"Your sky did this,\" he says. \"Your fire. We are only hungry.\" To the south-east, beyond the ash, the horizon glows.",
+        "start_resources": {
+          "gold": 3500,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1800
+          }
+        ]
+      },
+      {
+        "id": "ll_ford",
+        "name": "The Burning Ford",
+        "map": "burning_ford",
+        "level_cap": 10,
+        "max_tier": 7,
+        "cast": [
+          {
+            "id": "hero_edda",
+            "name": "Edda Vey",
+            "class": "oracle",
+            "owner": 0,
+            "army": [
+              [
+                "pike_militia",
+                20
+              ],
+              [
+                "lightbearer",
+                4
+              ],
+              [
+                "shieldwarden",
+                6
+              ]
+            ]
+          }
+        ],
+        "text": "The Lockstone breaks. The first Ashen army in a hundred years crosses the river.",
+        "intro": "The Lockstone has broken. For the first time in a hundred years the Ashen Host walks under the sky: slag-spawn, skinless hounds and things with hooks for arms. Its vanguard has already crossed the river at Greyhold's eastern ford.\n\nTier 7 is open: the bastion colossus. Hold the ford and break the vanguard.",
+        "outro": "The vanguard is broken but it was only meant to bleed you. Behind it, the whole Host is coming out of the Wound.",
+        "start_resources": {
+          "gold": 3000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2200
+          }
+        ]
+      },
+      {
+        "id": "ll_ashes",
+        "name": "Ashes Return",
+        "map": "ashes_return",
+        "level_cap": 11,
+        "max_tier": 8,
+        "cast": [
+          {
+            "id": "hero_edda",
+            "name": "Edda Vey",
+            "class": "oracle",
+            "owner": 0,
+            "army": [
+              [
+                "pike_militia",
+                20
+              ],
+              [
+                "lightbearer",
+                4
+              ],
+              [
+                "shieldwarden",
+                6
+              ]
+            ]
+          }
+        ],
+        "text": "The Host comes back in force. The Iron Margrave rides out of the last reserve.",
+        "intro": "The Host comes back across the wastes in force, and the Concord's capital sends its last reserve: the Iron Margraves, warlord-knights on barded destriers, who have not ridden to war since the Sealing.\n\nTier 8 is open. Every unit the Concord has is yours. Two war-leaders hold the wastes beyond the river. Break the Host's march and take both its towns.",
+        "outro": "The Host breaks and falls back to its pit. Cindermaw, the fortress on the lip of the Wound, is the last thing between the Concord and the gate.",
+        "start_resources": {
+          "gold": 5000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 6,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2600
+          }
+        ]
+      },
+      {
+        "id": "ll_embers",
+        "name": "Into the Embers",
+        "map": "into_the_embers",
+        "level_cap": 12,
+        "max_tier": 8,
+        "cast": [
+          {
+            "id": "hero_edda",
+            "name": "Edda Vey",
+            "class": "oracle",
+            "owner": 0,
+            "army": [
+              [
+                "pike_militia",
+                24
+              ],
+              [
+                "lightbearer",
+                6
+              ],
+              [
+                "shieldwarden",
+                8
+              ]
+            ]
+          }
+        ],
+        "text": "Carry the war to Cindermaw and hold the gate as Orrin did.",
+        "intro": "Cindermaw sits on the lip of the Wound, behind a ridge with two passes. Skarn Ashborn holds it with everything the Host has left. Beyond it, the gate stands open.\n\nTake Cindermaw and Pyrehold. Hold the gate as your great-grandfather did.",
+        "outro": "Aldous Wren stands where Orrin stood a hundred years ago, and the gate does not close. It cannot be closed by soldiers alone. The Concord will have to ask the peoples it wronged, and this time it will have to pay.",
+        "start_resources": {
+          "gold": 6000,
+          "ore": 10,
+          "crystal": 6,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  "pale_inheritance": {
+    "name": "The Pale Inheritance",
+    "faction": "hollow",
+    "text": "The dead are not rising to serve the demons. They are fleeing them. Ysmay Vane, the Unburied Regent of Sallowmere, turns their terror into a kingdom.",
+    "heroes": [
+      "hero_ysmay",
+      "hero_orrin",
+      "hero_corvin"
+    ],
+    "carry": {
+      "keep_worn": true,
+      "max_artifacts": 4
+    },
+    "chapters": [
+      {
+        "id": "ph_warm_earth",
+        "name": "The Warm Earth",
+        "map": "warm_earth",
+        "level_cap": 3,
+        "max_tier": 2,
+        "text": "The dead wake by the thousand in Sallowmere. A barrow-lord will not kneel to the Regent.",
+        "intro": "For three hundred years Ysmay Vane has ruled the fens of Sallowmere from a throne no one else wanted: a dwindling court of the dead, too few to matter. This autumn the ground is warm, and the dead are waking by the thousand. They crawl up out of the mud as if something below were chasing them.\n\nA court that grows can be a kingdom. Ysmay sends her champion, Sir Orrin Wren, a hundred years in his grave, to tell the barrow-lords of the fen. Vathek of Cairnholt answers that he kneels to no one.\n\nYour towns can raise creatures up to tier 2. Take Cairnholt.",
+        "outro": "Vathek's hill falls and his dead turn to the Regent without a word. They were never his; they were only near him. Ysmay counts what she has gained and finds the number is still rising. Every night more of the dead climb out of the fen, and none of them can say what woke them.",
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 300
+          }
+        ]
+      },
+      {
+        "id": "ph_barrow_lords",
+        "name": "Barrow-Lords",
+        "map": "gen:broad_crossing:4127",
+        "level_cap": 4,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "hollow",
+              "name": "The Regent's Court"
+            },
+            {
+              "type": "computer",
+              "faction": "hollow"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ysmay",
+            "name": "Ysmay Vane",
+            "class": "necromancer",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "shambler",
+                34
+              ],
+              [
+                "marrow_archer",
+                12
+              ],
+              [
+                "gravecrawler",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_orrin",
+            "name": "Sir Orrin Wren",
+            "class": "gravewarden",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                20
+              ],
+              [
+                "marrow_archer",
+                8
+              ]
+            ]
+          }
+        ],
+        "text": "Ysmay unites the fens by force, one barrow-lord at a time.",
+        "intro": "Cairnholt was the smallest of the barrow-lords. The others have heard, and they have gathered behind the oldest of them in the deep fen. They would rather go on sleeping than serve.\n\nYour towns can raise creatures up to tier 3: gravecrawlers. Break the barrow-lords and take their town.",
+        "outro": "The last barrow-lord kneels with his jaw hanging loose. \"Something is burning below,\" he says. \"Under the fen, under the graves. We are not rising, Regent. We are fleeing.\" Ysmay does not answer. A frightened army still marches.",
+        "start_resources": {
+          "gold": 1000
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": "ph_living_shore",
+        "name": "The Living Shore",
+        "map": "gen:broad_crossing:5381",
+        "level_cap": 5,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "hollow",
+              "name": "The Regent's Court"
+            },
+            {
+              "type": "computer",
+              "faction": "concord"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ysmay",
+            "name": "Ysmay Vane",
+            "class": "necromancer",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "shambler",
+                38
+              ],
+              [
+                "marrow_archer",
+                14
+              ],
+              [
+                "gravecrawler",
+                6
+              ]
+            ]
+          },
+          {
+            "id": "hero_orrin",
+            "name": "Sir Orrin Wren",
+            "class": "gravewarden",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                24
+              ],
+              [
+                "marrow_archer",
+                10
+              ]
+            ]
+          },
+          {
+            "id": "hero_corvin",
+            "name": "Father Corvin Mire",
+            "class": "blightcaller",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                20
+              ],
+              [
+                "marrow_archer",
+                6
+              ]
+            ]
+          }
+        ],
+        "text": "The first raids on the Concord marches. Father Corvin Mire joins the Regent.",
+        "intro": "The fens are full. North of them lie the Concord's marches: farms, mills and warm bodies, and graveyards that have never been asked what they want. Father Corvin Mire, once a lantern-priest of the Concord, now a Blightcaller, comes to the Regent's court with a list of the villages that buried his flock without rites.\n\nCorvin is a Blightcaller: rot follows him. Take the Concord town on the shore of the fen.",
+        "outro": "The town is yours and its graveyard empties into your ranks. Orrin stands a long time in front of the chapel, reading the names on the wall. One of them is his own.",
+        "start_resources": {
+          "gold": 1500,
+          "wood": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 700
+          }
+        ]
+      },
+      {
+        "id": "ph_rot",
+        "name": "Rot in the Roots",
+        "map": "gen:broad_crossing:6029",
+        "level_cap": 6,
+        "max_tier": 4,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "hollow",
+              "name": "The Regent's Court"
+            },
+            {
+              "type": "computer",
+              "faction": "thornwood"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ysmay",
+            "name": "Ysmay Vane",
+            "class": "necromancer",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "shambler",
+                42
+              ],
+              [
+                "marrow_archer",
+                16
+              ],
+              [
+                "gravecrawler",
+                8
+              ],
+              [
+                "wailing_shade",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_orrin",
+            "name": "Sir Orrin Wren",
+            "class": "gravewarden",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                26
+              ],
+              [
+                "marrow_archer",
+                10
+              ],
+              [
+                "gravecrawler",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_corvin",
+            "name": "Father Corvin Mire",
+            "class": "blightcaller",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                22
+              ],
+              [
+                "marrow_archer",
+                8
+              ]
+            ]
+          },
+          {
+            "id": "hero_cerrid",
+            "name": "Cerrid Ashbark",
+            "class": "grovewarden",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "thorn_skulker",
+                40
+              ],
+              [
+                "barkhide_warden",
+                16
+              ],
+              [
+                "briar_huntress",
+                10
+              ],
+              [
+                "rootbinder",
+                6
+              ],
+              [
+                "gloomwing_strix",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "Thornwood druids burn the edge of the fen to keep the rot from their forest.",
+        "intro": "Where the dead walk, the ground rots, and the rot is creeping north toward what is left of the Elderwold. The Thornwood Covenant has answered the only way it knows: Grovewarden Cerrid Ashbark is burning the edge of the fen, and the court's new graves with it.\n\nTier 4 is open: wailing shades. Drive the druids back from the fen.",
+        "outro": "Cerrid escapes into the trees with half his warband. Among the ashes of a druid camp Corvin finds old carvings of a great stone held in a net of roots. \"They knew,\" he says. \"The roots held something shut, and the Concord cut them down.\"",
+        "start_resources": {
+          "gold": 2000,
+          "wood": 5,
+          "ore": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 900
+          }
+        ]
+      },
+      {
+        "id": "ph_twice_dead",
+        "name": "Twice Dead",
+        "map": "twice_dead",
+        "level_cap": 7,
+        "max_tier": 5,
+        "text": "Orrin falls to his own great-grandson. Break through Greyhold and bring his body home.",
+        "intro": "Sir Orrin Wren rode to Saint Orrin's Rest to hold it against the Concord, and the Concord sent his own great-grandson. Aldous Wren cut him down at the chapel door and carried the body back to Greyhold to burn it at dawn.\n\nThe Regent does not let go of what is hers. Tier 5 is open: corpse weavers. Cross the dike, take Greyhold and recover Orrin's body before the pyre is lit.",
+        "outro": "Greyhold burns, but not Orrin. Ysmay finds him laid out in the chapel under a Concord banner, and raises him a second time before the walls have stopped smoking. He opens his eyes and asks only one thing: whether the boy lived. He did.",
+        "start_resources": {
+          "gold": 2500,
+          "wood": 5,
+          "ore": 5,
+          "mercury": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1200
+          }
+        ]
+      },
+      {
+        "id": "ph_lantern_siege",
+        "name": "The Lantern Siege",
+        "map": "gen:great_marches:7211",
+        "level_cap": 8,
+        "max_tier": 5,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "hollow",
+              "name": "The Regent's Court"
+            },
+            {
+              "type": "computer",
+              "faction": "concord"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ysmay",
+            "name": "Ysmay Vane",
+            "class": "necromancer",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "shambler",
+                50
+              ],
+              [
+                "marrow_archer",
+                22
+              ],
+              [
+                "gravecrawler",
+                10
+              ],
+              [
+                "wailing_shade",
+                6
+              ],
+              [
+                "corpse_weaver",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_orrin",
+            "name": "Sir Orrin Wren",
+            "class": "gravewarden",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                30
+              ],
+              [
+                "marrow_archer",
+                12
+              ],
+              [
+                "gravecrawler",
+                6
+              ],
+              [
+                "corpse_weaver",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_corvin",
+            "name": "Father Corvin Mire",
+            "class": "blightcaller",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                28
+              ],
+              [
+                "marrow_archer",
+                10
+              ],
+              [
+                "wailing_shade",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "A lantern temple-fortress burns the dead with holy light. It must fall.",
+        "intro": "North of the fens the lantern-priests have built a temple-fortress whose lamps burn the dead at a hundred paces. Every night the court loses whole columns to its light. Corvin served in a temple like it, once. He knows where the oil is kept.\n\nPut out the lanterns. Take the fortress.",
+        "outro": "The last lamp goes dark. In the temple vault Orrin finds a hundred years of records, among them the order that sealed the Wound: five peoples, one stone, and the roots of the Elderwold to hold it. He reads it twice, and then he says nothing at all for three days.",
+        "start_resources": {
+          "gold": 3000,
+          "wood": 10,
+          "ore": 5,
+          "mercury": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1500
+          }
+        ]
+      },
+      {
+        "id": "ph_deep_barrows",
+        "name": "Down the Deep Barrows",
+        "map": "gen:great_marches:7853",
+        "level_cap": 9,
+        "max_tier": 6,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "hollow",
+              "name": "The Regent's Court"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ysmay",
+            "name": "Ysmay Vane",
+            "class": "necromancer",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "shambler",
+                60
+              ],
+              [
+                "marrow_archer",
+                26
+              ],
+              [
+                "gravecrawler",
+                12
+              ],
+              [
+                "wailing_shade",
+                8
+              ],
+              [
+                "corpse_weaver",
+                4
+              ],
+              [
+                "gibbet_knight",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_orrin",
+            "name": "Sir Orrin Wren",
+            "class": "gravewarden",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                34
+              ],
+              [
+                "marrow_archer",
+                14
+              ],
+              [
+                "gravecrawler",
+                6
+              ],
+              [
+                "gibbet_knight",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_corvin",
+            "name": "Father Corvin Mire",
+            "class": "blightcaller",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                30
+              ],
+              [
+                "marrow_archer",
+                12
+              ],
+              [
+                "wailing_shade",
+                4
+              ],
+              [
+                "corpse_weaver",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "Ysmay goes below and finds why the dead woke: Ashen burrowers in the grave-realm.",
+        "intro": "The dead keep fleeing upward, so the Regent goes down. Beneath the oldest barrows lies the Barrow Below, where the dead of the south have slept since before the Concord had a name. It is full of smoke. Something has dug into it from the east: tunnels still hot, walls scored with claws.\n\nTier 6 is open: gibbet knights. Find the diggers and drive them out.",
+        "outro": "The diggers are Ashen: burrowers of the Host, tunnelling around the Lockstone through the land of the dead because the stone itself still holds. The dead did not wake because the world was warm. They woke because the Host was walking through their graves.",
+        "start_resources": {
+          "gold": 3500,
+          "wood": 10,
+          "ore": 10,
+          "mercury": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1800
+          }
+        ]
+      },
+      {
+        "id": "ph_hungry_fire",
+        "name": "The Hungry Fire",
+        "map": "gen:great_marches:8467",
+        "level_cap": 10,
+        "max_tier": 7,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "hollow",
+              "name": "The Regent's Court"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ysmay",
+            "name": "Ysmay Vane",
+            "class": "necromancer",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "shambler",
+                70
+              ],
+              [
+                "marrow_archer",
+                30
+              ],
+              [
+                "gravecrawler",
+                14
+              ],
+              [
+                "wailing_shade",
+                10
+              ],
+              [
+                "corpse_weaver",
+                6
+              ],
+              [
+                "gibbet_knight",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_orrin",
+            "name": "Sir Orrin Wren",
+            "class": "gravewarden",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                40
+              ],
+              [
+                "marrow_archer",
+                16
+              ],
+              [
+                "gravecrawler",
+                8
+              ],
+              [
+                "gibbet_knight",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_corvin",
+            "name": "Father Corvin Mire",
+            "class": "blightcaller",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                34
+              ],
+              [
+                "marrow_archer",
+                14
+              ],
+              [
+                "wailing_shade",
+                6
+              ],
+              [
+                "corpse_weaver",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_morvath",
+            "name": "Morvath the Kindler",
+            "class": "tormentor",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "cinderling",
+                70
+              ],
+              [
+                "scorchhound",
+                26
+              ],
+              [
+                "brimstone_hurler",
+                18
+              ],
+              [
+                "flayer",
+                10
+              ],
+              [
+                "ash_witch",
+                6
+              ],
+              [
+                "gorgewing",
+                3
+              ],
+              [
+                "pyre_titan",
+                1
+              ]
+            ]
+          }
+        ],
+        "text": "The fire eats the old tombs. The dead fight for their own graves.",
+        "intro": "The Lockstone has broken and the whole Host is coming out. Most of it marches on the Concord. Some of it stays below, and it is burning the Barrow Below tomb by tomb. Morvath the Kindler, who remembers the Sealing, feeds the dead to his fires because he likes the smell.\n\nTier 7 is open: charnel hulks. Fight for the graves.",
+        "outro": "Morvath's fires go out one by one. The dead who were burned do not come back: there is nothing left of them to raise. For the first time in three hundred years Ysmay Vane is afraid of something.",
+        "start_resources": {
+          "gold": 4000,
+          "wood": 10,
+          "ore": 10,
+          "mercury": 5,
+          "crystal": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2200
+          }
+        ]
+      },
+      {
+        "id": "ph_leviathan",
+        "name": "The Leviathan Stirs",
+        "map": "gen:great_marches:9091",
+        "level_cap": 11,
+        "max_tier": 8,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "hollow",
+              "name": "The Regent's Court"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ysmay",
+            "name": "Ysmay Vane",
+            "class": "necromancer",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "shambler",
+                80
+              ],
+              [
+                "marrow_archer",
+                34
+              ],
+              [
+                "gravecrawler",
+                16
+              ],
+              [
+                "wailing_shade",
+                10
+              ],
+              [
+                "corpse_weaver",
+                6
+              ],
+              [
+                "gibbet_knight",
+                4
+              ],
+              [
+                "charnel_hulk",
+                1
+              ]
+            ]
+          },
+          {
+            "id": "hero_orrin",
+            "name": "Sir Orrin Wren",
+            "class": "gravewarden",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                44
+              ],
+              [
+                "marrow_archer",
+                18
+              ],
+              [
+                "gravecrawler",
+                8
+              ],
+              [
+                "gibbet_knight",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_corvin",
+            "name": "Father Corvin Mire",
+            "class": "blightcaller",
+            "owner": 0,
+            "army": [
+              [
+                "shambler",
+                36
+              ],
+              [
+                "marrow_archer",
+                16
+              ],
+              [
+                "wailing_shade",
+                6
+              ],
+              [
+                "corpse_weaver",
+                6
+              ]
+            ]
+          },
+          {
+            "id": "hero_skarn",
+            "name": "Skarn Ashborn",
+            "class": "warlord",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "cinderling",
+                80
+              ],
+              [
+                "scorchhound",
+                30
+              ],
+              [
+                "brimstone_hurler",
+                20
+              ],
+              [
+                "flayer",
+                12
+              ],
+              [
+                "ash_witch",
+                6
+              ],
+              [
+                "gorgewing",
+                4
+              ],
+              [
+                "pyre_titan",
+                1
+              ]
+            ]
+          }
+        ],
+        "text": "A drowned colossus is raised from the deepest fen: the rotwing leviathan.",
+        "intro": "Skarn Ashborn himself has come down into the Barrow Below. The court cannot match the Host fire for fire, so the Regent reaches for the oldest thing in the fen: a winged colossus that drowned in the mire before the five peoples had names, and has been rotting there ever since.\n\nTier 8 is open: the rotwing leviathan. Raise it and break Skarn's host.",
+        "outro": "Skarn pulls back into the deepest tunnels, where the Host has made its own towns out of the old tombs. The leviathan circles above the fen under the red sky. Ysmay watches it and begins to speak of crowns.",
+        "start_resources": {
+          "gold": 5000,
+          "wood": 10,
+          "ore": 10,
+          "mercury": 6,
+          "crystal": 4,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2600
+          }
+        ]
+      },
+      {
+        "id": "ph_pale_crown",
+        "name": "The Pale Crown",
+        "map": "pale_crown",
+        "level_cap": 12,
+        "max_tier": 8,
+        "text": "One against two: drive both Ashen broods out of the Barrow Below and be crowned in the open air.",
+        "intro": "Two broods of the Host hold the burning tunnels: Skarn Ashborn's Burrow-Host in the north and the brood of Ithra Sootveil, his warlock, in the south. Between them and the Regent lies the Barrow Below and the Barrow Gate, which the Host has taken for its own.\n\nThe broods do not trust each other and will fight each other as readily as you. Take the Barrow Gate, then burn both broods out of the dead's country.",
+        "outro": "The last Ashen fire in the Barrow Below goes out. Ysmay Vane climbs her mound in Sallowmere and is crowned under the red sky by the dead of three hundred years, and the living of the south do not come to stop her. The southern marches are a kingdom of the dead now.\n\nOrrin's debt to the Regent is paid. He takes his sword and walks north toward Greyhold, to find his great-grandson. He knows something about how the Lockstone was made, and the boy will need to hear it.",
+        "start_resources": {
+          "gold": 6000,
+          "wood": 10,
+          "ore": 10,
+          "mercury": 6,
+          "sulfur": 4,
+          "crystal": 6,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  "unsealing": {
+    "name": "The Unsealing",
+    "faction": "ashen",
+    "text": "A hundred years in the Wound starved the Host and broke it into broods. Skarn Ashborn, a pit-chief with nothing, climbs out to lead it, and to burn everyone who shut it in.",
+    "heroes": [
+      "hero_skarn",
+      "hero_ithra",
+      "hero_morvath"
+    ],
+    "carry": {
+      "keep_worn": true,
+      "max_artifacts": 4
+    },
+    "chapters": [
+      {
+        "id": "un_pit",
+        "name": "The Pit Below",
+        "map": "pit_below",
+        "level_cap": 3,
+        "max_tier": 2,
+        "text": "Skarn Ashborn takes his first pit inside the Wound.",
+        "intro": "A hundred years in the Wound. The Host that was sealed in here has eaten what there was to eat, and then it began to eat itself. It is broods now, not a Host: packs of cinderlings and hounds, each around a chief who is strong this month.\n\nSkarn Ashborn is a pit-chief with one pit and no name worth burning. Next door, Vrask Gutmaw has a bigger pit. Your towns can raise creatures up to tier 2. Take the Gnawing Pit.",
+        "outro": "Vrask is eaten, as is the custom. His brood licks the ash from Skarn's claws. Two pits now. Above them, for the first time any of them can remember, the rock is warm.",
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 300
+          }
+        ]
+      },
+      {
+        "id": "un_brood_war",
+        "name": "Brood War",
+        "map": "gen:broad_crossing:2741",
+        "level_cap": 4,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "ashen",
+              "name": "Skarn's Brood"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_skarn",
+            "name": "Skarn Ashborn",
+            "class": "warlord",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "cinderling",
+                36
+              ],
+              [
+                "scorchhound",
+                10
+              ],
+              [
+                "brimstone_hurler",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_ithra",
+            "name": "Ithra Sootveil",
+            "class": "warlock",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                22
+              ],
+              [
+                "scorchhound",
+                6
+              ]
+            ]
+          }
+        ],
+        "text": "The broods kneel or burn. Ithra Sootveil joins and shows Skarn the cracks.",
+        "intro": "A warlock comes to Skarn's pit uninvited. Ithra Sootveil has spent forty years with her face pressed against the Lockstone, reading its cracks the way the living read stars. \"The stone is dying,\" she says. \"Someone up there killed its roots. When it breaks, the Host walks out, and it will want one chief. Be that chief.\"\n\nIthra is a Warlock. Tier 3 is open: brimstone hurlers. Break the strongest brood in the Wound.",
+        "outro": "The broods kneel. Ithra leads Skarn up the long shafts to the underside of the Lockstone and lays his hand on it. It is cracked through like a dropped plate, and it is hot.",
+        "start_resources": {
+          "gold": 1000
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": "un_wardens_keep",
+        "name": "The Wardens' Keep",
+        "map": "gen:broad_crossing:3389",
+        "level_cap": 5,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "ashen",
+              "name": "Skarn's Brood"
+            },
+            {
+              "type": "computer",
+              "faction": "forge"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_skarn",
+            "name": "Skarn Ashborn",
+            "class": "warlord",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "cinderling",
+                42
+              ],
+              [
+                "scorchhound",
+                12
+              ],
+              [
+                "brimstone_hurler",
+                6
+              ]
+            ]
+          },
+          {
+            "id": "hero_ithra",
+            "name": "Ithra Sootveil",
+            "class": "warlock",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                26
+              ],
+              [
+                "scorchhound",
+                8
+              ],
+              [
+                "brimstone_hurler",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "The Forge's old watch-keep on the Lockstone is half empty. Storm it.",
+        "intro": "The Sunken Forge built the Lockstone, and for a hundred years its wardens kept a watch-keep on the stone's edge. The Concord stopped paying for the watch. Half the keep stands empty now, and the cracks run right under its walls.\n\nIthra knows a crack wide enough for a cinderling. Get inside and take the keep.",
+        "outro": "The last warden dies at his post. In his ledger are the stone's measurements, written up every week for a hundred years. The last twenty pages say only: \"Wider.\"",
+        "start_resources": {
+          "gold": 1500,
+          "sulfur": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 700
+          }
+        ]
+      },
+      {
+        "id": "un_under_barrows",
+        "name": "Under the Barrows",
+        "map": "gen:broad_crossing:4463",
+        "level_cap": 6,
+        "max_tier": 4,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "ashen",
+              "name": "Skarn's Brood"
+            },
+            {
+              "type": "computer",
+              "faction": "hollow"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_skarn",
+            "name": "Skarn Ashborn",
+            "class": "warlord",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "cinderling",
+                48
+              ],
+              [
+                "scorchhound",
+                14
+              ],
+              [
+                "brimstone_hurler",
+                8
+              ],
+              [
+                "flayer",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_ithra",
+            "name": "Ithra Sootveil",
+            "class": "warlock",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                30
+              ],
+              [
+                "scorchhound",
+                10
+              ],
+              [
+                "brimstone_hurler",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_ysmay",
+            "name": "Ysmay Vane",
+            "class": "necromancer",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "shambler",
+                60
+              ],
+              [
+                "marrow_archer",
+                22
+              ],
+              [
+                "gravecrawler",
+                10
+              ],
+              [
+                "wailing_shade",
+                6
+              ],
+              [
+                "corpse_weaver",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "Burrowers dig around the seal through the land of the dead.",
+        "intro": "The stone still holds, so the Host goes around it. Skarn's burrowers dig west, into the Barrow Below, where the dead of the south have slept for a thousand years. The dead do not like the heat. They are climbing out of their graves to get away from it, and their Regent has come down to see why.\n\nTier 4 is open: flayers. Drive the dead out of the tunnels.",
+        "outro": "The dead pull back toward the surface. The tunnels are Skarn's. Ithra laughs for the first time in years: \"Do you hear that, chief? Up there, the living are blaming their own dead for this.\"",
+        "start_resources": {
+          "gold": 2000,
+          "sulfur": 4,
+          "ore": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 900
+          }
+        ]
+      },
+      {
+        "id": "un_lockstone",
+        "name": "Breaking the Lockstone",
+        "map": "breaking_the_lockstone",
+        "level_cap": 7,
+        "max_tier": 5,
+        "text": "Lantern-priests try to reconsecrate the stone. Morvath feeds the cracks with their fire, and the Lockstone shatters.",
+        "intro": "The Concord has finally noticed. Lantern-priests have marched to the Lockstone to bless it shut again with holy fire, and their Abbess, Maud Lorne, is already singing at the stone.\n\nMorvath the Kindler, who was there when the stone was laid, has come up from the deepest pit to watch. \"Let them light their fires,\" he says. \"Fire is ours.\" Morvath is a Tormentor. Tier 5 is open: ash witches. Take the Lantern Watch and Brightwater.",
+        "outro": "Morvath carries the priests' own lanterns into the cracks, one after another. The Lockstone groans, then breaks in three. For the first time in a hundred years the Ashen Host walks out under the sky, and the sky turns red to greet it.",
+        "start_resources": {
+          "gold": 2500,
+          "sulfur": 5,
+          "ore": 5,
+          "crystal": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1200
+          }
+        ]
+      },
+      {
+        "id": "un_kindling",
+        "name": "Kindling the Elderwold",
+        "map": "gen:great_marches:5519",
+        "level_cap": 8,
+        "max_tier": 5,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "ashen",
+              "name": "Skarn's Brood"
+            },
+            {
+              "type": "computer",
+              "faction": "thornwood"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_skarn",
+            "name": "Skarn Ashborn",
+            "class": "warlord",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "cinderling",
+                60
+              ],
+              [
+                "scorchhound",
+                20
+              ],
+              [
+                "brimstone_hurler",
+                12
+              ],
+              [
+                "flayer",
+                6
+              ],
+              [
+                "ash_witch",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_ithra",
+            "name": "Ithra Sootveil",
+            "class": "warlock",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                36
+              ],
+              [
+                "scorchhound",
+                12
+              ],
+              [
+                "brimstone_hurler",
+                6
+              ],
+              [
+                "ash_witch",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_morvath",
+            "name": "Morvath the Kindler",
+            "class": "tormentor",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                34
+              ],
+              [
+                "scorchhound",
+                12
+              ],
+              [
+                "flayer",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_cerrid",
+            "name": "Cerrid Ashbark",
+            "class": "grovewarden",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "thorn_skulker",
+                56
+              ],
+              [
+                "barkhide_warden",
+                22
+              ],
+              [
+                "briar_huntress",
+                14
+              ],
+              [
+                "rootbinder",
+                8
+              ],
+              [
+                "gloomwing_strix",
+                4
+              ]
+            ]
+          }
+        ],
+        "text": "The Host burns the stumps and the last groves of the felled forest.",
+        "intro": "The roots that held the stone came from the Elderwold. The Concord felled most of it; the stumps and the last groves still live. Ithra will not leave a single root in the ground that could hold anything shut again. The Thornwood druids, led by Cerrid Ashbark, have come to defend what is left.\n\nBurn the groves.",
+        "outro": "The last grove goes up like a torch. Cerrid's druids scatter into the smoke, cursing the Concord as loudly as the Host. Morvath watches the fire with his hands spread toward it, like a man at a hearth.",
+        "start_resources": {
+          "gold": 3000,
+          "sulfur": 5,
+          "ore": 5,
+          "wood": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1500
+          }
+        ]
+      },
+      {
+        "id": "un_ford",
+        "name": "The Ford",
+        "map": "gen:great_marches:6247",
+        "level_cap": 9,
+        "max_tier": 6,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "ashen",
+              "name": "Skarn's Brood"
+            },
+            {
+              "type": "computer",
+              "faction": "concord"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_skarn",
+            "name": "Skarn Ashborn",
+            "class": "warlord",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "cinderling",
+                70
+              ],
+              [
+                "scorchhound",
+                24
+              ],
+              [
+                "brimstone_hurler",
+                14
+              ],
+              [
+                "flayer",
+                8
+              ],
+              [
+                "ash_witch",
+                4
+              ],
+              [
+                "gorgewing",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_ithra",
+            "name": "Ithra Sootveil",
+            "class": "warlock",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                40
+              ],
+              [
+                "scorchhound",
+                14
+              ],
+              [
+                "brimstone_hurler",
+                8
+              ],
+              [
+                "ash_witch",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_morvath",
+            "name": "Morvath the Kindler",
+            "class": "tormentor",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                40
+              ],
+              [
+                "scorchhound",
+                14
+              ],
+              [
+                "flayer",
+                6
+              ],
+              [
+                "gorgewing",
+                1
+              ]
+            ]
+          },
+          {
+            "id": "hero_wren",
+            "name": "Aldous Wren",
+            "class": "knight",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "pike_militia",
+                60
+              ],
+              [
+                "longbowman",
+                28
+              ],
+              [
+                "shieldwarden",
+                14
+              ],
+              [
+                "lancer",
+                8
+              ],
+              [
+                "lightbearer",
+                5
+              ],
+              [
+                "sunhawk_rider",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "The Burning Ford from the Ashen side. A vanguard is only meant to bleed the enemy.",
+        "intro": "The Host's vanguard crosses the river at Greyhold's eastern ford. Skarn does not expect it to win. A vanguard is meant to find out how the living fight, and to bleed them while it does. Aldous Wren of Greyhold holds the far bank.\n\nTier 6 is open: gorgewings. Break Greyhold's knight.",
+        "outro": "Wren falls back with his army half gone. Ithra has counted every lance and every lantern he had. \"Now we know what they are,\" she says. \"Fewer than they think.\"",
+        "start_resources": {
+          "gold": 3500,
+          "sulfur": 6,
+          "ore": 10,
+          "crystal": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1800
+          }
+        ]
+      },
+      {
+        "id": "un_ash_snow",
+        "name": "Ash on the Snow",
+        "map": "gen:great_marches:6911",
+        "level_cap": 10,
+        "max_tier": 7,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "ashen",
+              "name": "Skarn's Brood"
+            },
+            {
+              "type": "computer",
+              "faction": "frostmarch"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_skarn",
+            "name": "Skarn Ashborn",
+            "class": "warlord",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "cinderling",
+                80
+              ],
+              [
+                "scorchhound",
+                28
+              ],
+              [
+                "brimstone_hurler",
+                16
+              ],
+              [
+                "flayer",
+                10
+              ],
+              [
+                "ash_witch",
+                5
+              ],
+              [
+                "gorgewing",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_ithra",
+            "name": "Ithra Sootveil",
+            "class": "warlock",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                46
+              ],
+              [
+                "scorchhound",
+                16
+              ],
+              [
+                "brimstone_hurler",
+                10
+              ],
+              [
+                "ash_witch",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_morvath",
+            "name": "Morvath the Kindler",
+            "class": "tormentor",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                46
+              ],
+              [
+                "scorchhound",
+                16
+              ],
+              [
+                "flayer",
+                8
+              ],
+              [
+                "gorgewing",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "The Host's flank meets the clans on snow. A hard detour.",
+        "intro": "The ash the Host breathes out has blotted out the sun in the north. The Ashwinter has driven the Frostmarch clans south, starving and furious, and they have run straight into the Host's flank. Snow eats fire. The Host hates it here.\n\nTier 7 is open: pyre titans. Break the clans and get off the snow.",
+        "outro": "The clans scatter north, but they took a heavy toll. Morvath is still shaking the frost out of his joints when word comes from the deepest pit: something old has heard that the stone is broken, and it is climbing.",
+        "start_resources": {
+          "gold": 4000,
+          "sulfur": 6,
+          "ore": 10,
+          "crystal": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2200
+          }
+        ]
+      },
+      {
+        "id": "un_maw",
+        "name": "The Maw Wakes",
+        "map": "gen:great_marches:7603",
+        "level_cap": 11,
+        "max_tier": 8,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "ashen",
+              "name": "Skarn's Brood"
+            },
+            {
+              "type": "computer",
+              "faction": "concord"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_skarn",
+            "name": "Skarn Ashborn",
+            "class": "warlord",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "cinderling",
+                90
+              ],
+              [
+                "scorchhound",
+                32
+              ],
+              [
+                "brimstone_hurler",
+                18
+              ],
+              [
+                "flayer",
+                12
+              ],
+              [
+                "ash_witch",
+                6
+              ],
+              [
+                "gorgewing",
+                4
+              ],
+              [
+                "pyre_titan",
+                1
+              ]
+            ]
+          },
+          {
+            "id": "hero_ithra",
+            "name": "Ithra Sootveil",
+            "class": "warlock",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                50
+              ],
+              [
+                "scorchhound",
+                18
+              ],
+              [
+                "brimstone_hurler",
+                12
+              ],
+              [
+                "ash_witch",
+                5
+              ],
+              [
+                "gorgewing",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_morvath",
+            "name": "Morvath the Kindler",
+            "class": "tormentor",
+            "owner": 0,
+            "army": [
+              [
+                "cinderling",
+                50
+              ],
+              [
+                "scorchhound",
+                18
+              ],
+              [
+                "flayer",
+                10
+              ],
+              [
+                "gorgewing",
+                2
+              ],
+              [
+                "pyre_titan",
+                1
+              ]
+            ]
+          }
+        ],
+        "text": "The cinder maw crawls up from the deepest pit.",
+        "intro": "It was old when the Host was sealed. It slept through the hundred years at the bottom of the Wound, and now it has woken hungry: a cinder maw, a mouth the size of a gatehouse. It follows Skarn because Skarn walks toward food.\n\nTier 8 is open: the cinder maw. The Concord has gathered a relief army on the road to Highmere. Feed it to the maw.",
+        "outro": "The relief army is gone. Only Highmere is left between the Host and the Concord's heartland: the eastern fortress, and behind its walls, the last of the Concord's friends.",
+        "start_resources": {
+          "gold": 5000,
+          "sulfur": 8,
+          "ore": 10,
+          "crystal": 5,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2600
+          }
+        ]
+      },
+      {
+        "id": "un_throne",
+        "name": "The Red Sky Throne",
+        "map": "red_sky_throne",
+        "level_cap": 12,
+        "max_tier": 8,
+        "text": "One against three: Highmere, the Thornwood Covenant and the Sunken Forge. Skarn takes Highmere and is crowned on its walls.",
+        "intro": "At the end of the world, they finally came. The Thornwood Covenant has come out of the burned forest and the Sunken Forge has opened its gates, and both have marched to Highmere, the Concord's eastern fortress. Three peoples who hate each other, standing in one place because of the Host.\n\nThey are three armies with three masters, and none of them trusts the others. Take Highmere. Break the war-grove and the Forge hold. Every enemy town must fall.",
+        "outro": "Highmere burns. Skarn Ashborn climbs its walls and sits down on the battlements under a sky the color of an open wound, and the Host roars its new name for him: the Red Sky King.\n\nBehind him, Ithra Sootveil has turned away from the burning city. She is looking south, at the dead country, where something pale is being crowned too.",
+        "start_resources": {
+          "gold": 6000,
+          "sulfur": 8,
+          "ore": 10,
+          "crystal": 6,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  "briar_oath": {
+    "name": "The Briar Oath",
+    "faction": "thornwood",
+    "text": "The Covenant has watched the Concord fell its forest for forty years. Cerrid Ashbark goes to war for the last grove, and learns what his own druids kept quiet.",
+    "heroes": [
+      "hero_cerrid",
+      "hero_neve",
+      "hero_brakka"
+    ],
+    "carry": {
+      "keep_worn": true,
+      "max_artifacts": 4
+    },
+    "chapters": [
+      {
+        "id": "tw_axe_line",
+        "name": "The Axe Line",
+        "map": "axe_line",
+        "level_cap": 3,
+        "max_tier": 2,
+        "text": "Logging camps press into the last grove. Drive them out.",
+        "intro": "For forty years the Concord has cut the Elderwold for its ships and its roofs, and for forty years the Covenant has buried its trees. The great forest is stumps now, all but one grove in the west. This spring the Axeford Timber Company has built its camp at the grove's edge.\n\nCerrid Ashbark, Grovewarden, has stopped asking. Your towns can raise creatures up to tier 2. Burn Axeford.",
+        "outro": "The camp burns. Among the loggers' things Neve Hollowreed finds an order with the Concord's seal: the last grove, by summer. \"Then they will come with soldiers,\" Cerrid says. \"Let them.\"",
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 300
+          }
+        ]
+      },
+      {
+        "id": "tw_smoke",
+        "name": "Smoke over Elderwold",
+        "map": "gen:broad_crossing:1187",
+        "level_cap": 4,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "thornwood",
+              "name": "The Thornwood Covenant"
+            },
+            {
+              "type": "computer",
+              "faction": "concord"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_cerrid",
+            "name": "Cerrid Ashbark",
+            "class": "grovewarden",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "thorn_skulker",
+                36
+              ],
+              [
+                "barkhide_warden",
+                14
+              ]
+            ]
+          },
+          {
+            "id": "hero_neve",
+            "name": "Neve Hollowreed",
+            "class": "huntmaster",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                22
+              ],
+              [
+                "barkhide_warden",
+                8
+              ]
+            ]
+          }
+        ],
+        "text": "The Concord answers with soldiers and fire.",
+        "intro": "The Concord's answer comes in a week: soldiers, and fire. They mean to burn the grove out rather than cut it. Smoke is rising over the stumps.\n\nTier 3 is open: briar huntresses. Break the Concord's fire-camp.",
+        "outro": "The fire-camp is broken, but the smoke is still rising. Somewhere to the south the ground itself is warm, and the druids' oldest songs have started to go wrong in their mouths.",
+        "start_resources": {
+          "gold": 1000
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": "tw_ambush",
+        "name": "Ambush at the Stumps",
+        "map": "gen:broad_crossing:1931",
+        "level_cap": 5,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "thornwood",
+              "name": "The Thornwood Covenant"
+            },
+            {
+              "type": "computer",
+              "faction": "concord"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_cerrid",
+            "name": "Cerrid Ashbark",
+            "class": "grovewarden",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "thorn_skulker",
+                41
+              ],
+              [
+                "barkhide_warden",
+                16
+              ]
+            ]
+          },
+          {
+            "id": "hero_neve",
+            "name": "Neve Hollowreed",
+            "class": "huntmaster",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                25
+              ],
+              [
+                "barkhide_warden",
+                10
+              ]
+            ]
+          },
+          {
+            "id": "hero_maelis",
+            "name": "Maelis Thorne",
+            "class": "ranger",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "longbowman",
+                30
+              ],
+              [
+                "pike_militia",
+                30
+              ],
+              [
+                "shieldwarden",
+                8
+              ]
+            ]
+          }
+        ],
+        "text": "The Concord's ranger captain rides into the felled forest. Cerrid knows her face.",
+        "intro": "A Concord column is marching through the stumps toward the south. Its scouts are led by a ranger captain called Maelis Thorne. Neve has a clean shot at her from the stumps, and Cerrid tells her to wait. He has seen that face before, thirty years ago, on a girl the soldiers carried off from a burning village. His sister.\n\nAmbush the column and take its camp.",
+        "outro": "Maelis gets away, as Cerrid meant her to. He does not tell Neve why. That night he carves a name into a living tree, the old way, so the forest will remember it.",
+        "start_resources": {
+          "gold": 1500,
+          "wood": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 700
+          }
+        ]
+      },
+      {
+        "id": "tw_hunters",
+        "name": "Hunters in the Snow",
+        "map": "gen:broad_crossing:2657",
+        "level_cap": 6,
+        "max_tier": 4,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "thornwood",
+              "name": "The Thornwood Covenant"
+            },
+            {
+              "type": "computer",
+              "faction": "frostmarch"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_cerrid",
+            "name": "Cerrid Ashbark",
+            "class": "grovewarden",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "thorn_skulker",
+                47
+              ],
+              [
+                "barkhide_warden",
+                18
+              ],
+              [
+                "briar_huntress",
+                10
+              ]
+            ]
+          },
+          {
+            "id": "hero_neve",
+            "name": "Neve Hollowreed",
+            "class": "huntmaster",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                28
+              ],
+              [
+                "barkhide_warden",
+                11
+              ],
+              [
+                "briar_huntress",
+                6
+              ]
+            ]
+          }
+        ],
+        "text": "Starving clans hunt the forest and burn its trees for warmth.",
+        "intro": "Snow in summer. Clans from the Frostmarch have come south through it, so hungry that they eat the deer raw and burn the living trees to keep from freezing. They do not even know whose forest it is.\n\nTier 4 is open: rootbinders. Drive the clans out of the forest.",
+        "outro": "The clans go back north into the white. One of their seers, dying, tells Neve that the summer did not fail: it was stolen. The sun went behind ash, and the ash comes from the south.",
+        "start_resources": {
+          "gold": 2000,
+          "wood": 5,
+          "ore": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 900
+          }
+        ]
+      },
+      {
+        "id": "tw_fens_edge",
+        "name": "The Fen's Edge",
+        "map": "gen:broad_crossing:3301",
+        "level_cap": 7,
+        "max_tier": 5,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "thornwood",
+              "name": "The Thornwood Covenant"
+            },
+            {
+              "type": "computer",
+              "faction": "hollow"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_cerrid",
+            "name": "Cerrid Ashbark",
+            "class": "grovewarden",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "thorn_skulker",
+                54
+              ],
+              [
+                "barkhide_warden",
+                21
+              ],
+              [
+                "briar_huntress",
+                12
+              ],
+              [
+                "rootbinder",
+                6
+              ]
+            ]
+          },
+          {
+            "id": "hero_neve",
+            "name": "Neve Hollowreed",
+            "class": "huntmaster",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                32
+              ],
+              [
+                "barkhide_warden",
+                13
+              ],
+              [
+                "briar_huntress",
+                7
+              ],
+              [
+                "rootbinder",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_brakka",
+            "name": "Old Mother Brakka",
+            "class": "thornspeaker",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                27
+              ],
+              [
+                "barkhide_warden",
+                10
+              ],
+              [
+                "briar_huntress",
+                6
+              ],
+              [
+                "rootbinder",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_ysmay",
+            "name": "Ysmay Vane",
+            "class": "necromancer",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "shambler",
+                70
+              ],
+              [
+                "marrow_archer",
+                26
+              ],
+              [
+                "gravecrawler",
+                12
+              ],
+              [
+                "wailing_shade",
+                6
+              ],
+              [
+                "corpse_weaver",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "Rot creeps north out of the fens. Burn the edge. Old Mother Brakka joins.",
+        "intro": "Where the dead walk, the ground rots, and the rot is creeping north out of the southern fens toward the forest. Old Mother Brakka, the eldest Thornspeaker, has walked out of the deep wood for the first time in fifty years. She says the edge must burn.\n\nBrakka is a Thornspeaker. Tier 5 is open: gloomwing strixes. Burn the fen's edge and drive the dead back.",
+        "outro": "The edge burns, and the dead pull back into the mist. Brakka does not watch the fire. She is looking past it, at the Wound, and her face is grey. \"It is time,\" she says, \"that I told you what the roots were for.\"",
+        "start_resources": {
+          "gold": 2500,
+          "wood": 5,
+          "ore": 5,
+          "crystal": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1200
+          }
+        ]
+      },
+      {
+        "id": "tw_roots",
+        "name": "What the Roots Remember",
+        "map": "roots_remember",
+        "level_cap": 8,
+        "max_tier": 5,
+        "text": "Brakka reads the dead Heartroots and admits what the druids knew. The first Ashen scouts reach the forest.",
+        "intro": "In the middle of the felled forest lie the Heartroots, or what is left of them: a ring of dead stumps as wide as castles. Brakka lays her hands on them and reads what they remember. A hundred years ago five peoples sealed the Host in the Wound with a stone, and the roots of the Elderwold grew around it like a fist. When the Concord felled the forest, the fist let go.\n\n\"We knew,\" Brakka says. \"The druids knew. We could have told them, and we let them cut.\" The first Ashen scouts are already at the clearing. Drive them off.",
+        "outro": "The scouts are gone, but they burned the clearing on their way out. Cerrid stands among the ashes of the Heartroots for a long time. The Concord felled the forest. The Covenant let it fall.",
+        "start_resources": {
+          "gold": 3000,
+          "wood": 10,
+          "ore": 5,
+          "gems": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1500
+          }
+        ]
+      },
+      {
+        "id": "tw_kindling",
+        "name": "Kindling",
+        "map": "gen:great_marches:4127",
+        "level_cap": 9,
+        "max_tier": 6,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "thornwood",
+              "name": "The Thornwood Covenant"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_cerrid",
+            "name": "Cerrid Ashbark",
+            "class": "grovewarden",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "thorn_skulker",
+                68
+              ],
+              [
+                "barkhide_warden",
+                27
+              ],
+              [
+                "briar_huntress",
+                15
+              ],
+              [
+                "rootbinder",
+                8
+              ],
+              [
+                "gloomwing_strix",
+                6
+              ]
+            ]
+          },
+          {
+            "id": "hero_neve",
+            "name": "Neve Hollowreed",
+            "class": "huntmaster",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                41
+              ],
+              [
+                "barkhide_warden",
+                16
+              ],
+              [
+                "briar_huntress",
+                9
+              ],
+              [
+                "rootbinder",
+                5
+              ],
+              [
+                "gloomwing_strix",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_brakka",
+            "name": "Old Mother Brakka",
+            "class": "thornspeaker",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                34
+              ],
+              [
+                "barkhide_warden",
+                13
+              ],
+              [
+                "briar_huntress",
+                8
+              ],
+              [
+                "rootbinder",
+                4
+              ],
+              [
+                "gloomwing_strix",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_ithra",
+            "name": "Ithra Sootveil",
+            "class": "warlock",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "cinderling",
+                80
+              ],
+              [
+                "scorchhound",
+                28
+              ],
+              [
+                "brimstone_hurler",
+                18
+              ],
+              [
+                "flayer",
+                10
+              ],
+              [
+                "ash_witch",
+                5
+              ],
+              [
+                "gorgewing",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "The Host burns the stumps and the last groves.",
+        "intro": "The Lockstone has broken. The Host is out, and its warlock, Ithra Sootveil, has come to the forest with one order: burn every root that could hold anything shut again.\n\nTier 6 is open: spore lobbers. Save what you can.",
+        "outro": "Ithra pulls back, but behind her the stumps of the Elderwold are burning from one horizon to the other. What is left of the forest is one valley, the Last Grove, and the Host knows where it is.",
+        "start_resources": {
+          "gold": 3500,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1800
+          }
+        ]
+      },
+      {
+        "id": "tw_last_grove",
+        "name": "The Last Grove",
+        "map": "gen:great_marches:4789",
+        "level_cap": 10,
+        "max_tier": 7,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "thornwood",
+              "name": "The Thornwood Covenant"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_cerrid",
+            "name": "Cerrid Ashbark",
+            "class": "grovewarden",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "thorn_skulker",
+                76
+              ],
+              [
+                "barkhide_warden",
+                29
+              ],
+              [
+                "briar_huntress",
+                17
+              ],
+              [
+                "rootbinder",
+                8
+              ],
+              [
+                "gloomwing_strix",
+                6
+              ],
+              [
+                "spore_lobber",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_neve",
+            "name": "Neve Hollowreed",
+            "class": "huntmaster",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                45
+              ],
+              [
+                "barkhide_warden",
+                18
+              ],
+              [
+                "briar_huntress",
+                10
+              ],
+              [
+                "rootbinder",
+                5
+              ],
+              [
+                "gloomwing_strix",
+                4
+              ],
+              [
+                "spore_lobber",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_brakka",
+            "name": "Old Mother Brakka",
+            "class": "thornspeaker",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                38
+              ],
+              [
+                "barkhide_warden",
+                15
+              ],
+              [
+                "briar_huntress",
+                8
+              ],
+              [
+                "rootbinder",
+                4
+              ],
+              [
+                "gloomwing_strix",
+                3
+              ],
+              [
+                "spore_lobber",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "Defend the heart of the remaining forest.",
+        "intro": "The Last Grove is a single valley of living trees, the oldest in the world. If it burns there is nothing left to grow back from. The Host is coming for it.\n\nTier 7 is open: rootbound ancients. Hold the Last Grove.",
+        "outro": "The grove stands. In its heart, under the oldest tree, Brakka digs up something the size of a fist and wrapped in moss: a seed, black and warm, older than the Covenant. \"The Mother's seed,\" she says. \"We swore never to plant it.\"",
+        "start_resources": {
+          "gold": 4000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 4,
+          "gems": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2200
+          }
+        ]
+      },
+      {
+        "id": "tw_seed",
+        "name": "Seed of the Mother",
+        "map": "gen:great_marches:5413",
+        "level_cap": 11,
+        "max_tier": 8,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "thornwood",
+              "name": "The Thornwood Covenant"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_cerrid",
+            "name": "Cerrid Ashbark",
+            "class": "grovewarden",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "thorn_skulker",
+                83
+              ],
+              [
+                "barkhide_warden",
+                32
+              ],
+              [
+                "briar_huntress",
+                18
+              ],
+              [
+                "rootbinder",
+                9
+              ],
+              [
+                "gloomwing_strix",
+                7
+              ],
+              [
+                "spore_lobber",
+                5
+              ],
+              [
+                "rootbound_ancient",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_neve",
+            "name": "Neve Hollowreed",
+            "class": "huntmaster",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                50
+              ],
+              [
+                "barkhide_warden",
+                19
+              ],
+              [
+                "briar_huntress",
+                11
+              ],
+              [
+                "rootbinder",
+                6
+              ],
+              [
+                "gloomwing_strix",
+                4
+              ],
+              [
+                "spore_lobber",
+                3
+              ],
+              [
+                "rootbound_ancient",
+                1
+              ]
+            ]
+          },
+          {
+            "id": "hero_brakka",
+            "name": "Old Mother Brakka",
+            "class": "thornspeaker",
+            "owner": 0,
+            "army": [
+              [
+                "thorn_skulker",
+                41
+              ],
+              [
+                "barkhide_warden",
+                16
+              ],
+              [
+                "briar_huntress",
+                9
+              ],
+              [
+                "rootbinder",
+                5
+              ],
+              [
+                "gloomwing_strix",
+                3
+              ],
+              [
+                "spore_lobber",
+                2
+              ],
+              [
+                "rootbound_ancient",
+                1
+              ]
+            ]
+          }
+        ],
+        "text": "A single seed carried out of the fire wakes the wyrdthorn mother.",
+        "intro": "The seed wakes when it touches ash. Within a night it is a thing of thorns and limbs and hunger that walks on its roots: a wyrdthorn mother, the forest's own ultimate answer, the reason the old druids swore never to plant it.\n\nTier 8 is open: the wyrdthorn mother. Carry her through the Host's lines.",
+        "outro": "The mother walks behind Cerrid like a hound. The road to the Wound is open. Brakka says a mother's roots can bind anything, even a broken seal, if she is planted at its edge.",
+        "start_resources": {
+          "gold": 5000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 5,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2600
+          }
+        ]
+      },
+      {
+        "id": "tw_briar_seal",
+        "name": "The Briar Seal",
+        "map": "briar_seal",
+        "level_cap": 12,
+        "max_tier": 8,
+        "text": "One against two: plant the wyrdthorn at the lip of the Wound while two Ashen broods hold it.",
+        "intro": "The Wound lies behind a ring of black rock, and two broods of the Host guard it: Ithra Sootveil's in the north and Morvath the Kindler's in the south. They are rivals and will fight each other as readily as you, but both will fight you.\n\nPlant the wyrdthorn at the lip of the Wound so its roots can bind the edge. To do it, every brood town must fall.",
+        "outro": "The broods are scattered and the mother is planted at the lip of the Wound. Her roots go down into the fire, and the fire hisses. The forest will grow back over the Wound, too slowly to save anyone this year, but it will grow.\n\nThat night Cerrid writes a letter, the first word between the Covenant and the Concord in forty years. It is addressed to Maelis Thorne, and it begins with her real name.",
+        "start_resources": {
+          "gold": 6000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 6,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  "shuttered_halls": {
+    "name": "The Shuttered Halls",
+    "faction": "forge",
+    "text": "The Forge cast the Lockstone and was never paid for it, so it shut its gates. Gunnra Sootmantle is the only one who believes the rock will not keep the fire out.",
+    "heroes": [
+      "hero_gunnra",
+      "hero_dask",
+      "hero_tobbin"
+    ],
+    "carry": {
+      "keep_worn": true,
+      "max_artifacts": 4
+    },
+    "chapters": [
+      {
+        "id": "fg_deep_shift",
+        "name": "Deep Shift",
+        "map": "deep_shift",
+        "level_cap": 3,
+        "max_tier": 2,
+        "text": "The lowest mines grow warm and the dead climb the shafts.",
+        "intro": "The Sunken Forge has kept its gates shut for forty years, since the Concord stopped paying for the Lockstone's upkeep. What happens on the surface stops at the rock: that is what the council says. But the lowest galleries of Stonevow Hold are warm this year, and last night something climbed up the shafts that had been buried.\n\nGunnra Sootmantle, Runesmith, goes down with Ironmarshal Dask Vell and his escort. Your towns can raise creatures up to tier 2. Clear the Lower Shafts.",
+        "outro": "The dead in the shafts were Forge dead, miners from the old wars, buried deep. Gunnra lays her hand on the rock. It is warm, and the warmth is coming from the south-east, from the Wound.",
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 300
+          }
+        ]
+      },
+      {
+        "id": "fg_bones",
+        "name": "Bones in the Seams",
+        "map": "gen:broad_crossing:1291",
+        "level_cap": 4,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "forge",
+              "name": "The Sunken Forge"
+            },
+            {
+              "type": "computer",
+              "faction": "hollow"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_gunnra",
+            "name": "Gunnra Sootmantle",
+            "class": "runesmith",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "forge_thrall",
+                30
+              ],
+              [
+                "rivet_crossbowman",
+                12
+              ]
+            ]
+          },
+          {
+            "id": "hero_dask",
+            "name": "Dask Vell",
+            "class": "ironmarshal",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                18
+              ],
+              [
+                "rivet_crossbowman",
+                7
+              ]
+            ]
+          }
+        ],
+        "text": "Seal the old tunnels before the dead reach the halls.",
+        "intro": "The dead are coming up through every old tunnel at once. The council orders the tunnels sealed with the dead still in them. Gunnra would rather know why they are rising.\n\nTier 3 is open: anvil guards. Break the dead's hold on the tunnels.",
+        "outro": "The tunnels are sealed. In the last of them Gunnra finds her grandmother's mark cut into the wall, a rune she has only ever seen in one other place: on the drawings of the Lockstone.",
+        "start_resources": {
+          "gold": 1000
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": "fg_debtors",
+        "name": "The Debtors' Road",
+        "map": "gen:broad_crossing:2083",
+        "level_cap": 5,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "forge",
+              "name": "The Sunken Forge"
+            },
+            {
+              "type": "computer",
+              "faction": "concord"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_gunnra",
+            "name": "Gunnra Sootmantle",
+            "class": "runesmith",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "forge_thrall",
+                34
+              ],
+              [
+                "rivet_crossbowman",
+                14
+              ]
+            ]
+          },
+          {
+            "id": "hero_dask",
+            "name": "Dask Vell",
+            "class": "ironmarshal",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                21
+              ],
+              [
+                "rivet_crossbowman",
+                8
+              ]
+            ]
+          },
+          {
+            "id": "hero_wren",
+            "name": "Aldous Wren",
+            "class": "knight",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "pike_militia",
+                40
+              ],
+              [
+                "longbowman",
+                20
+              ],
+              [
+                "shieldwarden",
+                8
+              ],
+              [
+                "lancer",
+                4
+              ],
+              [
+                "lightbearer",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "Concord envoys ask for help at the gates. The council says no, and the envoys try to force the pass.",
+        "intro": "A Concord lord, Aldous Wren of Greyhold, has come to the mountain gates asking for help against the dead. The council's answer is short: forty years of unpaid upkeep first. Wren decides to force the pass instead.\n\nDrive the debtors off the road.",
+        "outro": "Wren retreats down the mountain. From the walls a runesmith shouts after him that the Concord owes forty years. Gunnra is not shouting. She is wondering why a lord would ride all this way for help unless he was very afraid.",
+        "start_resources": {
+          "gold": 1500,
+          "wood": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 700
+          }
+        ]
+      },
+      {
+        "id": "fg_iron_bread",
+        "name": "Iron for Bread",
+        "map": "gen:broad_crossing:2777",
+        "level_cap": 6,
+        "max_tier": 4,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "forge",
+              "name": "The Sunken Forge"
+            },
+            {
+              "type": "computer",
+              "faction": "frostmarch"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_gunnra",
+            "name": "Gunnra Sootmantle",
+            "class": "runesmith",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "forge_thrall",
+                39
+              ],
+              [
+                "rivet_crossbowman",
+                16
+              ],
+              [
+                "anvil_guard",
+                9
+              ]
+            ]
+          },
+          {
+            "id": "hero_dask",
+            "name": "Dask Vell",
+            "class": "ironmarshal",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                23
+              ],
+              [
+                "rivet_crossbowman",
+                9
+              ],
+              [
+                "anvil_guard",
+                5
+              ]
+            ]
+          },
+          {
+            "id": "hero_ulvra",
+            "name": "Ulvra Kettleborn",
+            "class": "thane",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "clan_raider",
+                60
+              ],
+              [
+                "rimefang_hound",
+                24
+              ],
+              [
+                "oathless_berserker",
+                12
+              ],
+              [
+                "tusk_rider",
+                4
+              ]
+            ]
+          }
+        ],
+        "text": "The clans demand trade, then raid the high passes.",
+        "intro": "The northern clans have come down to the high passes with empty carts. They will trade iron for bread, they say, at any price. The Forge has no bread to spare. Thane Ulvra Kettleborn stops asking and starts raiding.\n\nTier 4 is open: slag golems. Clear the passes.",
+        "outro": "The clans pull back to the snow. Their thane leaves a message pinned to a gate with an axe: \"Your mountain is warm. Ours is dying. Remember who was cold first.\"",
+        "start_resources": {
+          "gold": 2000,
+          "wood": 5,
+          "ore": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 900
+          }
+        ]
+      },
+      {
+        "id": "fg_heat",
+        "name": "Heat from Below",
+        "map": "gen:broad_crossing:3517",
+        "level_cap": 7,
+        "max_tier": 5,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "forge",
+              "name": "The Sunken Forge"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_gunnra",
+            "name": "Gunnra Sootmantle",
+            "class": "runesmith",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "forge_thrall",
+                45
+              ],
+              [
+                "rivet_crossbowman",
+                18
+              ],
+              [
+                "anvil_guard",
+                10
+              ],
+              [
+                "slag_golem",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_dask",
+            "name": "Dask Vell",
+            "class": "ironmarshal",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                27
+              ],
+              [
+                "rivet_crossbowman",
+                11
+              ],
+              [
+                "anvil_guard",
+                6
+              ],
+              [
+                "slag_golem",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "Ashen tunnels break into the deepest halls. Hiding has failed.",
+        "intro": "The Lockstone has broken. Within a week the Host's burrowers break through the floor of the deepest hall, the one the council said nothing could reach. The mountain is not a wall. It never was.\n\nTier 5 is open: cinder engineers. Drive the burrowers back into their tunnels.",
+        "outro": "The burrowers are driven back, but word comes from the east: Kharrak Hold, the Forge's oldest fortress, has fallen. Its gates were opened from the inside, by the heat.",
+        "start_resources": {
+          "gold": 2500,
+          "wood": 5,
+          "ore": 5,
+          "crystal": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1200
+          }
+        ]
+      },
+      {
+        "id": "fg_fallen_hold",
+        "name": "The Fallen Hold",
+        "map": "fallen_hold",
+        "level_cap": 8,
+        "max_tier": 5,
+        "text": "Kharrak Hold has fallen. Take it back. Master Tobbin Greave joins.",
+        "intro": "Kharrak Hold has fallen to the Host. One Forge-master still holds out in the valley: Master Tobbin Greave, an Artificer the council exiled for building an engine it had forbidden. He has been fighting the Host alone from his workshop for a week.\n\nTobbin is an Artificer. Take Kharrak Hold back, and the Host's camp at the Wound's mouth.",
+        "outro": "Kharrak is retaken. Tobbin shows Gunnra the plans he was exiled for: an engine of molten iron that walks. \"The council forbade it,\" he says. \"The council is not here.\"",
+        "start_resources": {
+          "gold": 3000,
+          "wood": 10,
+          "ore": 5,
+          "gems": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1500
+          }
+        ]
+      },
+      {
+        "id": "fg_wardens_keep",
+        "name": "The Wardens' Keep",
+        "map": "gen:great_marches:4241",
+        "level_cap": 9,
+        "max_tier": 6,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "forge",
+              "name": "The Sunken Forge"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_gunnra",
+            "name": "Gunnra Sootmantle",
+            "class": "runesmith",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "forge_thrall",
+                57
+              ],
+              [
+                "rivet_crossbowman",
+                23
+              ],
+              [
+                "anvil_guard",
+                13
+              ],
+              [
+                "slag_golem",
+                6
+              ],
+              [
+                "cinder_engineer",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_dask",
+            "name": "Dask Vell",
+            "class": "ironmarshal",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                34
+              ],
+              [
+                "rivet_crossbowman",
+                14
+              ],
+              [
+                "anvil_guard",
+                8
+              ],
+              [
+                "slag_golem",
+                3
+              ],
+              [
+                "cinder_engineer",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_tobbin",
+            "name": "Master Tobbin Greave",
+            "class": "artificer",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                28
+              ],
+              [
+                "rivet_crossbowman",
+                11
+              ],
+              [
+                "anvil_guard",
+                7
+              ],
+              [
+                "slag_golem",
+                3
+              ],
+              [
+                "cinder_engineer",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_ithra",
+            "name": "Ithra Sootveil",
+            "class": "warlock",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "cinderling",
+                80
+              ],
+              [
+                "scorchhound",
+                28
+              ],
+              [
+                "brimstone_hurler",
+                18
+              ],
+              [
+                "flayer",
+                10
+              ],
+              [
+                "ash_witch",
+                5
+              ],
+              [
+                "gorgewing",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "Retake the Forge's watch-keep on the broken Lockstone.",
+        "intro": "The Forge's old watch-keep on the Lockstone fell to the Host before the stone broke. Its last warden kept his ledger to the end. The council says it does not matter now. Gunnra needs to see the pieces of the stone with her own eyes.\n\nTier 6 is open: ironhoof chargers. Retake the keep.",
+        "outro": "The warden's ledger is still on his table: a hundred years of measurements, and the last twenty pages say only \"Wider\". Gunnra looks at the broken stone and sees how it could be made again. It would need the Worldforge, and every master the Forge has.",
+        "start_resources": {
+          "gold": 3500,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1800
+          }
+        ]
+      },
+      {
+        "id": "fg_ore_ember",
+        "name": "Ore and Ember",
+        "map": "gen:great_marches:4903",
+        "level_cap": 10,
+        "max_tier": 7,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "forge",
+              "name": "The Sunken Forge"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_gunnra",
+            "name": "Gunnra Sootmantle",
+            "class": "runesmith",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "forge_thrall",
+                63
+              ],
+              [
+                "rivet_crossbowman",
+                25
+              ],
+              [
+                "anvil_guard",
+                15
+              ],
+              [
+                "slag_golem",
+                6
+              ],
+              [
+                "cinder_engineer",
+                4
+              ],
+              [
+                "ironhoof_charger",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_dask",
+            "name": "Dask Vell",
+            "class": "ironmarshal",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                38
+              ],
+              [
+                "rivet_crossbowman",
+                15
+              ],
+              [
+                "anvil_guard",
+                9
+              ],
+              [
+                "slag_golem",
+                4
+              ],
+              [
+                "cinder_engineer",
+                3
+              ],
+              [
+                "ironhoof_charger",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_tobbin",
+            "name": "Master Tobbin Greave",
+            "class": "artificer",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                32
+              ],
+              [
+                "rivet_crossbowman",
+                13
+              ],
+              [
+                "anvil_guard",
+                7
+              ],
+              [
+                "slag_golem",
+                3
+              ],
+              [
+                "cinder_engineer",
+                2
+              ],
+              [
+                "ironhoof_charger",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "Hold the ore roads while the forges are relit.",
+        "intro": "The Worldforge has been cold for a hundred years. To cast a new Lockstone it must be relit, and it will eat more ore in a month than the Forge mines in a year. The Host has found the ore roads.\n\nTier 7 is open: thunder bombards. Hold the ore roads.",
+        "outro": "The ore comes through. The Worldforge breathes again, and the whole mountain hums. The council, at last, has stopped saying no.",
+        "start_resources": {
+          "gold": 4000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 4,
+          "gems": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2200
+          }
+        ]
+      },
+      {
+        "id": "fg_engine",
+        "name": "The Molten Engine",
+        "map": "gen:great_marches:5651",
+        "level_cap": 11,
+        "max_tier": 8,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "forge",
+              "name": "The Sunken Forge"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_gunnra",
+            "name": "Gunnra Sootmantle",
+            "class": "runesmith",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "forge_thrall",
+                69
+              ],
+              [
+                "rivet_crossbowman",
+                28
+              ],
+              [
+                "anvil_guard",
+                16
+              ],
+              [
+                "slag_golem",
+                7
+              ],
+              [
+                "cinder_engineer",
+                5
+              ],
+              [
+                "ironhoof_charger",
+                5
+              ],
+              [
+                "thunder_bombard",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_dask",
+            "name": "Dask Vell",
+            "class": "ironmarshal",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                41
+              ],
+              [
+                "rivet_crossbowman",
+                17
+              ],
+              [
+                "anvil_guard",
+                10
+              ],
+              [
+                "slag_golem",
+                4
+              ],
+              [
+                "cinder_engineer",
+                3
+              ],
+              [
+                "ironhoof_charger",
+                3
+              ],
+              [
+                "thunder_bombard",
+                1
+              ]
+            ]
+          },
+          {
+            "id": "hero_tobbin",
+            "name": "Master Tobbin Greave",
+            "class": "artificer",
+            "owner": 0,
+            "army": [
+              [
+                "forge_thrall",
+                34
+              ],
+              [
+                "rivet_crossbowman",
+                14
+              ],
+              [
+                "anvil_guard",
+                8
+              ],
+              [
+                "slag_golem",
+                3
+              ],
+              [
+                "cinder_engineer",
+                2
+              ],
+              [
+                "ironhoof_charger",
+                2
+              ],
+              [
+                "thunder_bombard",
+                1
+              ]
+            ]
+          },
+          {
+            "id": "hero_morvath",
+            "name": "Morvath the Kindler",
+            "class": "tormentor",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "cinderling",
+                90
+              ],
+              [
+                "scorchhound",
+                32
+              ],
+              [
+                "brimstone_hurler",
+                20
+              ],
+              [
+                "flayer",
+                12
+              ],
+              [
+                "ash_witch",
+                6
+              ],
+              [
+                "gorgewing",
+                4
+              ],
+              [
+                "pyre_titan",
+                1
+              ]
+            ]
+          }
+        ],
+        "text": "Tobbin finishes the great engine the council forbade.",
+        "intro": "Morvath the Kindler is leading the Host against the mountain himself. Tobbin's engine is finished: a walking furnace of molten iron, the thing the council exiled him for.\n\nTier 8 is open: the molten engine. Break Morvath's host.",
+        "outro": "Morvath falls back. The engine stands steaming in the snow outside the gates, and the dwarves who forbade it come out to look at it. Inside, the new Lockstone is almost cast.",
+        "start_resources": {
+          "gold": 5000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 5,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2600
+          }
+        ]
+      },
+      {
+        "id": "fg_second_lockstone",
+        "name": "The Second Lockstone",
+        "map": "second_lockstone",
+        "level_cap": 12,
+        "max_tier": 8,
+        "text": "One against two: cast a new seal in the Worldforge while the Host and the dead besiege the mountain.",
+        "intro": "The new Lockstone needs three more days in the Worldforge. Skarn Ashborn's Host is camped in the high pass, and the dead have come up the drowned shafts in the south, the Regent Ysmay Vane at their head. The two hate each other, but both want the mountain.\n\nHold the Worldforge and break both sieges. Every enemy town must fall.",
+        "outro": "The sieges break. The second Lockstone comes out of the Worldforge white-hot and ringing, cut with the same runes Gunnra's grandmother cut a hundred years ago.\n\nIt is too big for the Forge to carry to the Wound alone. For the first time in forty years, Gunnra Sootmantle orders the gates opened.",
+        "start_resources": {
+          "gold": 6000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 6,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  },
+  "ashwinter": {
+    "name": "The Ashwinter",
+    "faction": "frostmarch",
+    "text": "Ash blots out the northern sun and the summer never comes. Ulvra Kettleborn unites the clans by the axe and leads them south for bread, and finds an old promise waiting.",
+    "heroes": [
+      "hero_ulvra",
+      "hero_bjarr",
+      "hero_iska"
+    ],
+    "carry": {
+      "keep_worn": true,
+      "max_artifacts": 4
+    },
+    "chapters": [
+      {
+        "id": "fm_sun_out",
+        "name": "The Sun Goes Out",
+        "map": "sun_goes_out",
+        "level_cap": 3,
+        "max_tier": 2,
+        "text": "Red snow falls. The clans fight over the last herds.",
+        "intro": "In the north the summer did not come. The sky went grey, then red, and the snow that falls is the color of rust. The herds are dying on their feet. Clan Grimfell has driven the last good herd onto its own grazing and says it will kill anyone who comes for it.\n\nUlvra Kettleborn, Thane, comes for it. Your towns can raise creatures up to tier 2. Take Grimfell.",
+        "outro": "Grimfell's thane kneels in the red snow. The herd is Ulvra's, and it will feed both clans for a month. After that there is nothing. The clans will have to go south, all of them, under one thane.",
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 300
+          }
+        ]
+      },
+      {
+        "id": "fm_one_hall",
+        "name": "One Hall",
+        "map": "gen:broad_crossing:1453",
+        "level_cap": 4,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "frostmarch",
+              "name": "Clan Kettleborn"
+            },
+            {
+              "type": "computer",
+              "faction": "frostmarch"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ulvra",
+            "name": "Ulvra Kettleborn",
+            "class": "thane",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "clan_raider",
+                32
+              ],
+              [
+                "rimefang_hound",
+                12
+              ]
+            ]
+          },
+          {
+            "id": "hero_bjarr",
+            "name": "Bjarr Coldhand",
+            "class": "reaver",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                19
+              ],
+              [
+                "rimefang_hound",
+                7
+              ]
+            ]
+          }
+        ],
+        "text": "Ulvra breaks the last clan that refuses her.",
+        "intro": "One clan still refuses to follow a Kettleborn south. It would rather starve in its own hall than eat in someone else's.\n\nTier 3 is open: oathless berserkers. Break the last clan.",
+        "outro": "The last clan comes into Ulvra's hall, and the Frostmarch is one people again for the first time since the Sealing. That night the skalds sing the old song of the Sealing, and Ulvra notices that nobody remembers the last verse.",
+        "start_resources": {
+          "gold": 1000
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": "fm_south",
+        "name": "South for Bread",
+        "map": "gen:broad_crossing:2239",
+        "level_cap": 5,
+        "max_tier": 3,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "frostmarch",
+              "name": "Clan Kettleborn"
+            },
+            {
+              "type": "computer",
+              "faction": "concord"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ulvra",
+            "name": "Ulvra Kettleborn",
+            "class": "thane",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "clan_raider",
+                37
+              ],
+              [
+                "rimefang_hound",
+                14
+              ]
+            ]
+          },
+          {
+            "id": "hero_bjarr",
+            "name": "Bjarr Coldhand",
+            "class": "reaver",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                22
+              ],
+              [
+                "rimefang_hound",
+                8
+              ]
+            ]
+          },
+          {
+            "id": "hero_iska",
+            "name": "Seer Iska Rime",
+            "class": "frostcaller",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                18
+              ],
+              [
+                "rimefang_hound",
+                7
+              ]
+            ]
+          },
+          {
+            "id": "hero_wren",
+            "name": "Aldous Wren",
+            "class": "knight",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "pike_militia",
+                40
+              ],
+              [
+                "longbowman",
+                20
+              ],
+              [
+                "shieldwarden",
+                8
+              ],
+              [
+                "lancer",
+                4
+              ],
+              [
+                "lightbearer",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "Raid the northern granaries. Seer Iska Rime joins.",
+        "intro": "The Concord's northern granaries are full, and the Concord stopped sending grain north years ago. A young seer, Iska Rime, joins the war-band. She has been reading the ash in the snow, and she says it did not come from the sky.\n\nIska is a Frostcaller. Raid the granaries.",
+        "outro": "The granaries burn. A Concord knight fights the clans to the last granary, and a raider laughs at him as he dies: \"Your sky did this. Your fire. We are only hungry.\" Iska wonders if that is true.",
+        "start_resources": {
+          "gold": 1500,
+          "wood": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 700
+          }
+        ]
+      },
+      {
+        "id": "fm_iron_pass",
+        "name": "The Iron Pass",
+        "map": "gen:broad_crossing:2903",
+        "level_cap": 6,
+        "max_tier": 4,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "frostmarch",
+              "name": "Clan Kettleborn"
+            },
+            {
+              "type": "computer",
+              "faction": "forge"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ulvra",
+            "name": "Ulvra Kettleborn",
+            "class": "thane",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "clan_raider",
+                42
+              ],
+              [
+                "rimefang_hound",
+                16
+              ],
+              [
+                "oathless_berserker",
+                9
+              ]
+            ]
+          },
+          {
+            "id": "hero_bjarr",
+            "name": "Bjarr Coldhand",
+            "class": "reaver",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                25
+              ],
+              [
+                "rimefang_hound",
+                9
+              ],
+              [
+                "oathless_berserker",
+                5
+              ]
+            ]
+          },
+          {
+            "id": "hero_iska",
+            "name": "Seer Iska Rime",
+            "class": "frostcaller",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                21
+              ],
+              [
+                "rimefang_hound",
+                8
+              ],
+              [
+                "oathless_berserker",
+                5
+              ]
+            ]
+          },
+          {
+            "id": "hero_dask",
+            "name": "Dask Vell",
+            "class": "ironmarshal",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "forge_thrall",
+                50
+              ],
+              [
+                "rivet_crossbowman",
+                20
+              ],
+              [
+                "anvil_guard",
+                10
+              ],
+              [
+                "slag_golem",
+                4
+              ]
+            ]
+          }
+        ],
+        "text": "The Forge shuts the mountain passes.",
+        "intro": "The clans asked the Forge to trade iron for bread, and the Forge shut the high passes on them. Ironmarshal Dask Vell holds them.\n\nTier 4 is open: tusk riders. Force the Iron Pass.",
+        "outro": "The pass is open. Ulvra pins a message to the Forge's gate with her axe: \"Your mountain is warm. Ours is dying. Remember who was cold first.\"",
+        "start_resources": {
+          "gold": 2000,
+          "wood": 5,
+          "ore": 5
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 900
+          }
+        ]
+      },
+      {
+        "id": "fm_highmere",
+        "name": "The Granary of Highmere",
+        "map": "granary_of_highmere",
+        "level_cap": 7,
+        "max_tier": 5,
+        "text": "A great raid on the Concord's richest store-city.",
+        "intro": "Highmere, the Concord's eastern fortress, holds enough grain to feed the clans through any winter. Its castellan, Odo Brack, has two granary towns outside the walls and a river in front of them.\n\nTier 5 is open: frost shamans. Take Harrowby, Millstead and Highmere itself.",
+        "outro": "The clans eat. For the first time since the sun went out, there is enough. Iska does not eat. She has climbed Highmere's tower and is looking south-east, where a column of ash is rising into the sky like smoke from a chimney.",
+        "start_resources": {
+          "gold": 2500,
+          "wood": 5,
+          "ore": 5,
+          "crystal": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1200
+          }
+        ]
+      },
+      {
+        "id": "fm_deer",
+        "name": "Deer of the Old Wood",
+        "map": "gen:great_marches:3671",
+        "level_cap": 8,
+        "max_tier": 5,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "frostmarch",
+              "name": "Clan Kettleborn"
+            },
+            {
+              "type": "computer",
+              "faction": "thornwood"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ulvra",
+            "name": "Ulvra Kettleborn",
+            "class": "thane",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "clan_raider",
+                54
+              ],
+              [
+                "rimefang_hound",
+                20
+              ],
+              [
+                "oathless_berserker",
+                12
+              ],
+              [
+                "tusk_rider",
+                7
+              ]
+            ]
+          },
+          {
+            "id": "hero_bjarr",
+            "name": "Bjarr Coldhand",
+            "class": "reaver",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                33
+              ],
+              [
+                "rimefang_hound",
+                12
+              ],
+              [
+                "oathless_berserker",
+                7
+              ],
+              [
+                "tusk_rider",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_iska",
+            "name": "Seer Iska Rime",
+            "class": "frostcaller",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                27
+              ],
+              [
+                "rimefang_hound",
+                10
+              ],
+              [
+                "oathless_berserker",
+                6
+              ],
+              [
+                "tusk_rider",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_neve",
+            "name": "Neve Hollowreed",
+            "class": "huntmaster",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "thorn_skulker",
+                60
+              ],
+              [
+                "barkhide_warden",
+                24
+              ],
+              [
+                "briar_huntress",
+                12
+              ],
+              [
+                "rootbinder",
+                6
+              ],
+              [
+                "gloomwing_strix",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "Hunting in the Covenant's forest means war with it.",
+        "intro": "South of Highmere lies what is left of the old forest, and in it are deer. The clans hunt them, and burn its trees to keep warm. The Thornwood Covenant's huntmaster, Neve Hollowreed, calls it theft.\n\nWin the hunting grounds.",
+        "outro": "Neve's hunters fall back. One of the clan seers, dying of a thorn, tells Neve the summer was stolen. Iska, listening, knows now where she must go.",
+        "start_resources": {
+          "gold": 3000,
+          "wood": 10,
+          "ore": 5,
+          "gems": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1500
+          }
+        ]
+      },
+      {
+        "id": "fm_cold_bones",
+        "name": "Cold Bones",
+        "map": "gen:great_marches:4357",
+        "level_cap": 9,
+        "max_tier": 6,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "frostmarch",
+              "name": "Clan Kettleborn"
+            },
+            {
+              "type": "computer",
+              "faction": "hollow"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ulvra",
+            "name": "Ulvra Kettleborn",
+            "class": "thane",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "clan_raider",
+                61
+              ],
+              [
+                "rimefang_hound",
+                23
+              ],
+              [
+                "oathless_berserker",
+                13
+              ],
+              [
+                "tusk_rider",
+                8
+              ],
+              [
+                "frost_shaman",
+                6
+              ]
+            ]
+          },
+          {
+            "id": "hero_bjarr",
+            "name": "Bjarr Coldhand",
+            "class": "reaver",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                36
+              ],
+              [
+                "rimefang_hound",
+                14
+              ],
+              [
+                "oathless_berserker",
+                8
+              ],
+              [
+                "tusk_rider",
+                5
+              ],
+              [
+                "frost_shaman",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_iska",
+            "name": "Seer Iska Rime",
+            "class": "frostcaller",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                30
+              ],
+              [
+                "rimefang_hound",
+                11
+              ],
+              [
+                "oathless_berserker",
+                7
+              ],
+              [
+                "tusk_rider",
+                4
+              ],
+              [
+                "frost_shaman",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_corvin",
+            "name": "Father Corvin Mire",
+            "class": "blightcaller",
+            "owner": 1,
+            "replaces": "hero_p1",
+            "army": [
+              [
+                "shambler",
+                90
+              ],
+              [
+                "marrow_archer",
+                34
+              ],
+              [
+                "gravecrawler",
+                14
+              ],
+              [
+                "wailing_shade",
+                8
+              ],
+              [
+                "corpse_weaver",
+                5
+              ],
+              [
+                "gibbet_knight",
+                3
+              ]
+            ]
+          }
+        ],
+        "text": "The dead walk across the frozen fens.",
+        "intro": "Iska's road south runs across the fens, and the fens are frozen. The dead walk on the ice. They are leaving the south as fast as the living are.\n\nTier 6 is open: rimeback aurochs. Cross the fens.",
+        "outro": "The dead are behind the clans now. Ahead, the ash column is a wall, and the snow at its foot is black. Iska finds the last verse of the Sealing song carved on a cairn: the clans gave their winter to the seal. The cold held the fire low.",
+        "start_resources": {
+          "gold": 3500,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 1800
+          }
+        ]
+      },
+      {
+        "id": "fm_source",
+        "name": "The Source of Winter",
+        "map": "gen:great_marches:5023",
+        "level_cap": 10,
+        "max_tier": 7,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "frostmarch",
+              "name": "Clan Kettleborn"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ulvra",
+            "name": "Ulvra Kettleborn",
+            "class": "thane",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "clan_raider",
+                67
+              ],
+              [
+                "rimefang_hound",
+                25
+              ],
+              [
+                "oathless_berserker",
+                15
+              ],
+              [
+                "tusk_rider",
+                8
+              ],
+              [
+                "frost_shaman",
+                6
+              ],
+              [
+                "rimeback_aurochs",
+                4
+              ]
+            ]
+          },
+          {
+            "id": "hero_bjarr",
+            "name": "Bjarr Coldhand",
+            "class": "reaver",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                40
+              ],
+              [
+                "rimefang_hound",
+                15
+              ],
+              [
+                "oathless_berserker",
+                9
+              ],
+              [
+                "tusk_rider",
+                5
+              ],
+              [
+                "frost_shaman",
+                4
+              ],
+              [
+                "rimeback_aurochs",
+                3
+              ]
+            ]
+          },
+          {
+            "id": "hero_iska",
+            "name": "Seer Iska Rime",
+            "class": "frostcaller",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                34
+              ],
+              [
+                "rimefang_hound",
+                13
+              ],
+              [
+                "oathless_berserker",
+                7
+              ],
+              [
+                "tusk_rider",
+                4
+              ],
+              [
+                "frost_shaman",
+                3
+              ],
+              [
+                "rimeback_aurochs",
+                2
+              ]
+            ]
+          }
+        ],
+        "text": "Iska follows the ash to the Wound. The Host is the reason the sun went out.",
+        "intro": "The ash comes from the Wound, where the Lockstone has broken and the Host has come out. Every breath the Host takes puts the sun out a little further. The Ashwinter is not a winter. It is smoke.\n\nTier 7 is open: cairn giants. Break the Host's northern flank.",
+        "outro": "The flank breaks. Iska stands on the scorched plain and says what the old promise means: winter does not come from the north. The clans carry it. A hundred years ago they marched it into the Wound to freeze the fire. They can do it again.",
+        "start_resources": {
+          "gold": 4000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 4,
+          "gems": 3
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2200
+          }
+        ]
+      },
+      {
+        "id": "fm_wyrm",
+        "name": "Wyrm-Wake",
+        "map": "gen:great_marches:5779",
+        "level_cap": 11,
+        "max_tier": 8,
+        "setup": {
+          "players": [
+            {
+              "type": "human",
+              "faction": "frostmarch",
+              "name": "Clan Kettleborn"
+            },
+            {
+              "type": "computer",
+              "faction": "ashen"
+            }
+          ]
+        },
+        "cast": [
+          {
+            "id": "hero_ulvra",
+            "name": "Ulvra Kettleborn",
+            "class": "thane",
+            "owner": 0,
+            "replaces": "hero_p0",
+            "army": [
+              [
+                "clan_raider",
+                74
+              ],
+              [
+                "rimefang_hound",
+                28
+              ],
+              [
+                "oathless_berserker",
+                16
+              ],
+              [
+                "tusk_rider",
+                9
+              ],
+              [
+                "frost_shaman",
+                7
+              ],
+              [
+                "rimeback_aurochs",
+                5
+              ],
+              [
+                "cairn_giant",
+                2
+              ]
+            ]
+          },
+          {
+            "id": "hero_bjarr",
+            "name": "Bjarr Coldhand",
+            "class": "reaver",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                44
+              ],
+              [
+                "rimefang_hound",
+                17
+              ],
+              [
+                "oathless_berserker",
+                10
+              ],
+              [
+                "tusk_rider",
+                6
+              ],
+              [
+                "frost_shaman",
+                4
+              ],
+              [
+                "rimeback_aurochs",
+                3
+              ],
+              [
+                "cairn_giant",
+                1
+              ]
+            ]
+          },
+          {
+            "id": "hero_iska",
+            "name": "Seer Iska Rime",
+            "class": "frostcaller",
+            "owner": 0,
+            "army": [
+              [
+                "clan_raider",
+                37
+              ],
+              [
+                "rimefang_hound",
+                14
+              ],
+              [
+                "oathless_berserker",
+                8
+              ],
+              [
+                "tusk_rider",
+                5
+              ],
+              [
+                "frost_shaman",
+                3
+              ],
+              [
+                "rimeback_aurochs",
+                2
+              ],
+              [
+                "cairn_giant",
+                1
+              ]
+            ]
+          }
+        ],
+        "text": "Wake the winter wyrm from its glacier.",
+        "intro": "To carry a winter you need the heart of one. In the oldest glacier of the north sleeps a winter wyrm, older than the clans, colder than the sky. The Host has sent a brood to keep it sleeping.\n\nTier 8 is open: the winter wyrm. Wake it and break the brood.",
+        "outro": "The wyrm wakes, and where it breathes the snow comes back. The whole Frostmarch is marching south behind it. Ulvra no longer talks about bread.",
+        "start_resources": {
+          "gold": 5000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 5,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 2600
+          }
+        ]
+      },
+      {
+        "id": "fm_bring_winter",
+        "name": "Bring the Winter",
+        "map": "bring_the_winter",
+        "level_cap": 12,
+        "max_tier": 8,
+        "text": "One against two: march the Ashwinter into the Wound and freeze its fires.",
+        "intro": "Two broods of the Host hold the Wound: Morvath the Kindler's Wound-Keepers in the north and the Deep Broods in the south, either side of the burning chasm. They are rivals and will fight each other, but both will fight you.\n\nMarch the winter into the Wound. Every brood town must fall.",
+        "outro": "The broods break, and the winter comes down into the Wound behind them. The fires bank low, as they did a hundred years ago. The clans have kept the old promise.\n\nWhether anyone will pay them for it this time, Ulvra does not know. She sits down at the edge of the Wound in the falling snow and waits to find out.",
+        "start_resources": {
+          "gold": 6000,
+          "wood": 10,
+          "ore": 10,
+          "crystal": 6,
+          "gems": 4
+        },
+        "rewards": [
+          {
+            "type": "xp",
+            "amount": 3000
+          }
+        ]
+      }
+    ]
+  }
+}

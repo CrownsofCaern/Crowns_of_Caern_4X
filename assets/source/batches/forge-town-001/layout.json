@@ -1,0 +1,36 @@
+{
+  "faction": "forge",
+  "note": "Cells are row-major (0-8). Cut and cleaned by tools/assets/crowns_of_cinder_assets/town_sheets.py; the painting is unchanged.",
+  "sheets": [
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/forge-sheet.png",
+      "sha256": "7f75cd8a8c11518a10e525d47258d0cff998a6d553a5e513a840ba22646f4db3",
+      "cells": [
+        "f_hall",
+        "f_market",
+        "f_fort1",
+        "f_dw1",
+        "f_dw2",
+        "f_dw3",
+        "f_dw4",
+        "f_dw5",
+        "f_dw8"
+      ]
+    },
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/forge-sheet-2.png",
+      "sha256": "66a80000765e2c12123b671169d121b2606fa20b55e40969e22c2c3b846f5bde",
+      "cells": [
+        "f_court",
+        "f_assembly",
+        "f_exchequer",
+        "f_yard",
+        "f_tavern",
+        "f_fort2",
+        "f_dw6",
+        "f_dw7",
+        "f_special"
+      ]
+    }
+  ]
+}

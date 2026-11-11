@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-animation-001",
+  "source": "assets/source/batches/dlc-animation-001/dlc-fishmen-03-source.png",
+  "source_sha256": "98e1ff582768b8623243fa5f9a09fb7096b2a41f21c5c445e739bee3fca0f520",
+  "size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/dlc-animation-001/dlc-fishmen-03-prompt.txt",
+  "prompt_sha256": "e72c01ddf1b4857e23c0673f86143b3bc153e8a9207d18adac89693602470123",
+  "conditioning": [
+    "assets/source/batches/dlc-animation-001/dlc-fishmen-03-reference.png"
+  ],
+  "reference_sha256": "626849453c5dbbd973eb855f2c1b7ad9e857bfa055bb4ac64e6d2222738f0b96",
+  "units": [
+    "fm_lantern_acolyte",
+    "fm_drowned_oracle",
+    "fm_tide_mauler",
+    "fm_trench_reaver"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "processing": "Existing animation extraction and registration; native 128px reference; 320x256 action canvas",
+  "quality_status": "animation_candidate"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "snow_white_reach",
+  "terrain": "snow",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/snow_white_reach.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "393918810c44a6b17ef6afcff95710b2368d23751f0a54a6ac46fdab05be5274",
+  "prompt_file": "assets/source/batches/battlefields-001/snow_white_reach.txt",
+  "prompt_sha256": "8a23d183ba9f6688b5bbaeae9b7e400ed108f0af119e8d42b8b3696da1b74fdb",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/snow_white_reach-live.png",
+    "forecast": "docs/art/production/battlefields/snow_white_reach-forecast.png"
+  }
+}

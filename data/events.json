@@ -1,0 +1,129 @@
+{
+  "_doc": "Random events (src/game/world_events.gd). From start_day on, every new week draws one omen from `weekly` (by weight) that holds for the whole week and affects every player alike; every new day each player has fortune_chance to meet one fortune from `fortunes` (only that player). All rolls use the game RNG. A game can turn events off with the rule random_events: false (a campaign chapter's \"random_events\"). Weekly effects: growth_pct {pct} (this week's dwelling growth in towns and on map sites), growth_tier {tiers [min, max], pct} (one rolled tier grows by pct more), hero_boon {mods} (every hero gets HeroModifiers mods until the week ends; heroes hired that week too), income_pct {resources [], pct} (daily income of those resources this week), resources_random {pool [], amount [min, max]} (every player gets the same rolled resource and amount once), neutral_growth {pct} (every neutral army on the map grows), plague {pct} (each day of the week every hero army loses pct of each stack of living creatures, rounded down, never its last creature), roamer {packs [{name, stacks [{creature, count, per_week}]}], steps, bounty {resource: n}, ravage {gold, pool_pct}} (one pack rises in the wilds far from every town and walks steps tiles a day toward the nearest held town; at an undefended town it ravages it and leaves; beating it pays the bounty; see src/game/roaming_threats.gd), spoils_pct {pct} (extra gold per experience for beating neutral armies). Fortune effects: resources {resource, amount [min, max]}, lose_pct {resource, pct, max} (lose a share, at most max), xp {amount} (one of the player's heroes), hero_boon {mods, days} (one hero), recruit {tiers [min, max], weeks} (creatures of the player's faction join a hero with room). A fortune whose effect cannot apply (no hero, no room) is skipped.",
+  "start_day": 8,
+  "fortune_chance": 0.12,
+  "weekly": {
+    "mana_tide": {"name": "Mana Tide", "weight": 1, "text": "A gentle tide of magic restores two extra mana each day.", "effects": [{"type": "mana_regen", "amount": 2}]},
+    "quiet_week": {
+      "name": "A Quiet Week",
+      "weight": 6,
+      "text": "No omen darkens the sky this week.",
+      "effects": []
+    },
+    "teeming_moon": {
+      "name": "Teeming Moon",
+      "weight": 2,
+      "text": "A swollen moon hangs over the land. Dwellings everywhere bring forth half again as many creatures.",
+      "effects": [{"type": "growth_pct", "pct": 0.5}]
+    },
+    "lean_week": {
+      "name": "Lean Week",
+      "weight": 1,
+      "text": "Blight in the granaries. Dwellings bring forth a quarter fewer creatures this week.",
+      "effects": [{"type": "growth_pct", "pct": -0.25}]
+    },
+    "levy_week": {
+      "name": "Week of the Levy",
+      "weight": 2,
+      "text": "Heralds ride from hamlet to hamlet. One rank of creatures musters in double numbers.",
+      "effects": [{"type": "growth_tier", "tiers": [1, 4], "pct": 1.0}]
+    },
+    "blood_sky": {
+      "name": "Blood Sky",
+      "weight": 2,
+      "text": "The sky burns red from dusk to dawn. Every army fights with fury: +1 attack for all heroes this week.",
+      "effects": [{"type": "hero_boon", "mods": {"attack": 1}}]
+    },
+    "ashfall": {
+      "name": "Ashfall",
+      "weight": 2,
+      "text": "Grey ash falls for days and chokes the roads. All heroes move 15% slower this week.",
+      "effects": [{"type": "hero_boon", "mods": {"movement_pct": -0.15}}]
+    },
+    "dry_roads": {
+      "name": "Dry Roads",
+      "weight": 2,
+      "text": "A dry wind hardens the mud. All heroes move 10% farther this week.",
+      "effects": [{"type": "hero_boon", "mods": {"movement_pct": 0.1}}]
+    },
+    "dread_week": {
+      "name": "Week of Dread",
+      "weight": 1,
+      "text": "Wailing on the wind at night. Soldiers lose heart: -1 morale for all heroes this week.",
+      "effects": [{"type": "hero_boon", "mods": {"morale": -1}}]
+    },
+    "tithe_riots": {
+      "name": "Tithe Riots",
+      "weight": 1,
+      "text": "The tax collectors are driven off with pitchforks. Gold income falls by a quarter this week.",
+      "effects": [{"type": "income_pct", "resources": ["gold"], "pct": -0.25}]
+    },
+    "rich_veins": {
+      "name": "Rich Veins",
+      "weight": 2,
+      "text": "Miners strike fresh seams. Every mine and yard yields half again as much this week.",
+      "effects": [{"type": "income_pct", "resources": ["wood", "ore", "mercury", "sulfur", "crystal", "gems"], "pct": 0.5}]
+    },
+    "starfall": {
+      "name": "Starfall",
+      "weight": 1,
+      "text": "Burning stones fall from the sky. Every lord's scavengers bring home the same strange harvest.",
+      "effects": [{"type": "resources_random", "pool": ["mercury", "sulfur", "crystal", "gems"], "amount": [3, 6]}]
+    },
+    "gathering_dark": {
+      "name": "The Gathering Dark",
+      "weight": 2,
+      "text": "Things gather in the wild places. Every neutral army grows by a fifth.",
+      "effects": [{"type": "neutral_growth", "pct": 0.2}]
+    },
+    "plague_week": {"name": "The Grey Cough", "weight": 1, "text": "A coughing sickness runs through every camp. Living soldiers die by the day; the dead and the made do not notice. Dwellings bring forth a tenth fewer creatures.", "effects": [{"type": "plague", "pct": 0.03}, {"type": "growth_pct", "pct": -0.1}]},
+    "roaming_horror": {"name": "Something Walks", "weight": 1, "text": "Shepherds flee the high pastures. A horror has risen in the wilds and walks toward the nearest town. Whoever brings it down will be paid in gold and gems.", "effects": [{"type": "roamer", "steps": 7, "packs": [{"name": "The Ashscale Matriarch", "stacks": [{"creature": "ashscale_basilisk", "count": 8, "per_week": 2}, {"creature": "venom_wyvern", "count": 1, "per_week": 1}]}, {"name": "The Barrow King's Hunt", "stacks": [{"creature": "barrow_revenant", "count": 6, "per_week": 2}, {"creature": "rime_wight", "count": 10, "per_week": 3}]}, {"name": "The Hill-Breaker", "stacks": [{"creature": "hill_giant", "count": 2, "per_week": 1}, {"creature": "ogre_mauler", "count": 6, "per_week": 2}]}, {"name": "The White Drake", "stacks": [{"creature": "frost_drake", "count": 2, "per_week": 1}, {"creature": "rime_wight", "count": 8, "per_week": 2}]}], "bounty": {"gold": 2500, "gems": 3}, "ravage": {"gold": 1500, "pool_pct": 0.5}}]},
+    "hunters_moon": {"name": "Hunters' Moon", "weight": 2, "text": "Every lord posts bounties on the beasts of the wild. Beating a neutral army this week pays a quarter more gold per experience.", "effects": [{"type": "spoils_pct", "pct": 0.25}]},
+    "market_fair": {"name": "The Ember Fair", "weight": 1, "text": "Traders come from every road for the great fair. Gold income rises by a fifth this week.", "effects": [{"type": "income_pct", "resources": ["gold"], "pct": 0.2}]},
+    "long_night": {"name": "The Long Night", "weight": 1, "text": "The red sky dims to a bruise and stays that way. Every hero sees one tile less this week.", "effects": [{"type": "hero_boon", "mods": {"vision": -1}}]}
+  },
+  "fortunes": {
+    "lost_caravan": {
+      "name": "Lost Caravan",
+      "weight": 3,
+      "text": "Your scouts find a merchant caravan abandoned on the road.",
+      "effects": [{"type": "resources", "resource": "gold", "amount": [400, 900]}]
+    },
+    "timber_raft": {
+      "name": "Drifting Rafts",
+      "weight": 2,
+      "text": "Timber rafts torn loose upriver wash up on your shores.",
+      "effects": [{"type": "resources", "resource": "wood", "amount": [3, 6]}]
+    },
+    "ore_cart": {
+      "name": "Abandoned Ore Carts",
+      "weight": 2,
+      "text": "A collapsed mine road leaves loaded ore carts for the taking.",
+      "effects": [{"type": "resources", "resource": "ore", "amount": [3, 6]}]
+    },
+    "store_fire": {
+      "name": "Fire in the Stores",
+      "weight": 2,
+      "text": "A fire breaks out in your treasury at night.",
+      "effects": [{"type": "lose_pct", "resource": "gold", "pct": 0.1, "max": 600}]
+    },
+    "wandering_scholar": {
+      "name": "Wandering Scholar",
+      "weight": 2,
+      "text": "A grey-bearded scholar shares the campfire and tells of old campaigns.",
+      "effects": [{"type": "xp", "amount": 400}]
+    },
+    "pilgrims_blessing": {
+      "name": "Pilgrims' Blessing",
+      "weight": 2,
+      "text": "A band of pilgrims blesses one of your hosts as it passes.",
+      "effects": [{"type": "hero_boon", "mods": {"morale": 1}, "days": 3}]
+    },
+    "deserters": {
+      "name": "Deserters Return",
+      "weight": 2,
+      "text": "Men who fled an earlier battle come back, ashamed, and ask to serve again.",
+      "effects": [{"type": "recruit", "tiers": [1, 2], "weeks": 0.5}]
+    }
+  }
+}

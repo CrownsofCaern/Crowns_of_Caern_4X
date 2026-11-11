@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_shuttered_halls_fg_heat_briefing",
+  "campaign": "shuttered_halls",
+  "chapter": "fg_heat",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_shuttered_halls_fg_heat_briefing.txt",
+  "prompt_sha256": "2bacf82da8507b51417b3cdeab58f87db87cfc27f6196e3c0fbcf34df30030e9",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "f17a2c22bd6650cb5a1797e402caa8a574810e5998bd9cb3f42a3c930fa62427",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

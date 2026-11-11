@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/wilds-01-source.png",
+  "source_sha256": "1d09c084af4f65a8962f0013224cb377dfea2a99ecac9ea2079f2c6b5d08188e",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/wilds-01-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/wilds-01-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "plague_rats",
+    "dune_scuttler",
+    "lost_pilgrims",
+    "moss_creeper"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "plague_rats",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_plague_rats.png",
+      "reference_sha256": "4c568aba1c1756aaba9f31bed85a2aaa938ebe7d8d15db4ec1121988dda033c8"
+    },
+    {
+      "id": "dune_scuttler",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_dune_scuttler.png",
+      "reference_sha256": "2a2b8c47ae6f601697426cfa986a892777a5e3e4a252b6c3cf9fdee5e63bbf0f"
+    },
+    {
+      "id": "lost_pilgrims",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_lost_pilgrims.png",
+      "reference_sha256": "e6547d6960eabe5711fe54e4262c56efc2d5eb858242369c043ff830cf7be680"
+    },
+    {
+      "id": "moss_creeper",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_moss_creeper.png",
+      "reference_sha256": "dd67e98f92a3de0d7abe3bbcc212fa5d974cf4b31939638959c17227f303afe9"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

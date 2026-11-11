@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/ashen-02-source.png",
+  "source_sha256": "fdd1f476ab0fde4732bcf2d9dc18c7205b24ab3917f186bf8bfe5d8ae03c0f35",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/ashen-02-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/ashen-02-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "brimstone_hurler",
+    "brimstone_bombardier",
+    "flayer",
+    "flayer_exalted"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "brimstone_hurler",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_brimstone_hurler.png",
+      "reference_sha256": "5ac3cdb8ec446825c60bf3533822f9c039089f6cdbb335db5fdf2430b75bf67a"
+    },
+    {
+      "id": "brimstone_bombardier",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_brimstone_bombardier.png",
+      "reference_sha256": "95a50c4d18cbc4fcb88c007880a7066ec3e1dbf3306f0d1e522a04de30dff539"
+    },
+    {
+      "id": "flayer",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_flayer.png",
+      "reference_sha256": "a350c2043e330f74b1519bcd71ea84990a109010e780c764a0b37a5d01e7844a"
+    },
+    {
+      "id": "flayer_exalted",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_flayer_exalted.png",
+      "reference_sha256": "fb9eebf6a705a1007a273fec7d5dc5fb1b2ffe4cc4927d89dd7469dc483503db"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

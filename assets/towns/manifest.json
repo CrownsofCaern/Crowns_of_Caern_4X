@@ -1,0 +1,2389 @@
+{
+  "schema_version": 1,
+  "factions": {
+    "concord": {
+      "size": [
+        1536,
+        1024
+      ],
+      "slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "c_hall",
+            "c_court",
+            "c_assembly",
+            "c_exchequer"
+          ],
+          "at": [
+            785,
+            345
+          ],
+          "size": [
+            265,
+            190
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "c_palisade",
+            "c_keep",
+            "c_bastion"
+          ],
+          "at": [
+            1290,
+            455
+          ],
+          "size": [
+            260,
+            220
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "c_dw1",
+            "c_up1"
+          ],
+          "at": [
+            200,
+            590
+          ],
+          "size": [
+            230,
+            160
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "c_dw2",
+            "c_up2"
+          ],
+          "at": [
+            440,
+            555
+          ],
+          "size": [
+            220,
+            155
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "c_dw3",
+            "c_up3"
+          ],
+          "at": [
+            240,
+            375
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "c_dw4",
+            "c_up4"
+          ],
+          "at": [
+            1235,
+            655
+          ],
+          "size": [
+            270,
+            180
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "c_dw5",
+            "c_up5"
+          ],
+          "at": [
+            960,
+            575
+          ],
+          "size": [
+            170,
+            210
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "c_dw6",
+            "c_up6"
+          ],
+          "at": [
+            1110,
+            370
+          ],
+          "size": [
+            150,
+            240
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "c_dw7",
+            "c_up7"
+          ],
+          "at": [
+            1320,
+            840
+          ],
+          "size": [
+            270,
+            200
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "c_dw8",
+            "c_up8"
+          ],
+          "at": [
+            565,
+            370
+          ],
+          "size": [
+            200,
+            200
+          ]
+        },
+        {
+          "id": "c_market",
+          "variants": [
+            "c_market"
+          ],
+          "at": [
+            640,
+            650
+          ],
+          "size": [
+            240,
+            180
+          ]
+        },
+        {
+          "id": "c_yard",
+          "variants": [
+            "c_yard"
+          ],
+          "at": [
+            1030,
+            800
+          ],
+          "size": [
+            230,
+            155
+          ]
+        },
+        {
+          "id": "c_tavern",
+          "variants": [
+            "c_tavern"
+          ],
+          "at": [
+            260,
+            795
+          ],
+          "size": [
+            235,
+            190
+          ]
+        },
+        {
+          "id": "c_masons",
+          "variants": [
+            "c_masons"
+          ],
+          "at": [
+            520,
+            820
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "c_drill",
+          "variants": [
+            "c_drill"
+          ],
+          "at": [
+            800,
+            810
+          ],
+          "size": [
+            210,
+            140
+          ]
+        },
+        {
+          "id": "c_fletchers",
+          "variants": [
+            "c_fletchers"
+          ],
+          "at": [
+            720,
+            990
+          ],
+          "size": [
+            200,
+            150
+          ]
+        },
+        {
+          "id": "c_remount",
+          "variants": [
+            "c_remount"
+          ],
+          "at": [
+            1080,
+            975
+          ],
+          "size": [
+            240,
+            150
+          ]
+        },
+        {
+          "id": "c_ultimate",
+          "variants": [
+            "c_ultimate"
+          ],
+          "at": [
+            960,
+            322
+          ],
+          "size": [
+            200,
+            185
+          ]
+        }
+      ],
+      "assets": {
+        "c_hall": "res://assets/towns/concord/c_hall.png",
+        "c_market": "res://assets/towns/concord/c_market.png",
+        "c_yard": "res://assets/towns/concord/c_yard.png",
+        "c_tavern": "res://assets/towns/concord/c_tavern.png",
+        "c_masons": "res://assets/towns/concord/c_masons.png",
+        "c_palisade": "res://assets/towns/concord/c_palisade.png",
+        "c_keep": "res://assets/towns/concord/c_keep.png",
+        "c_bastion": "res://assets/towns/concord/c_bastion.png",
+        "c_dw1": "res://assets/towns/concord/c_dw1.png",
+        "c_dw2": "res://assets/towns/concord/c_dw2.png",
+        "c_dw3": "res://assets/towns/concord/c_dw3.png",
+        "c_dw4": "res://assets/towns/concord/c_dw4.png",
+        "c_dw5": "res://assets/towns/concord/c_dw5.png",
+        "c_dw6": "res://assets/towns/concord/c_dw6.png",
+        "c_dw7": "res://assets/towns/concord/c_dw7.png",
+        "c_dw8": "res://assets/towns/concord/c_dw8.png",
+        "c_up1": "res://assets/towns/concord/c_up1.png",
+        "c_up2": "res://assets/towns/concord/c_up2.png",
+        "c_up3": "res://assets/towns/concord/c_up3.png",
+        "c_up4": "res://assets/towns/concord/c_up4.png",
+        "c_up5": "res://assets/towns/concord/c_up5.png",
+        "c_up6": "res://assets/towns/concord/c_up6.png",
+        "c_up7": "res://assets/towns/concord/c_up7.png",
+        "c_up8": "res://assets/towns/concord/c_up8.png",
+        "c_court": "res://assets/towns/concord/c_court.png",
+        "c_assembly": "res://assets/towns/concord/c_assembly.png",
+        "c_exchequer": "res://assets/towns/concord/c_exchequer.png",
+        "c_drill": "res://assets/towns/concord/c_drill.png",
+        "c_fletchers": "res://assets/towns/concord/c_fletchers.png",
+        "c_remount": "res://assets/towns/concord/c_remount.png",
+        "c_ultimate": "res://assets/towns/concord/c_ultimate.png"
+      },
+      "background": "res://assets/towns/concord/background.png"
+    },
+    "thornwood": {
+      "size": [
+        1672,
+        941
+      ],
+      "slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "t_hall",
+            "t_court",
+            "t_assembly",
+            "t_exchequer"
+          ],
+          "at": [
+            1195,
+            400
+          ],
+          "size": [
+            270,
+            230
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "t_fort1",
+            "t_fort2",
+            "t_fort3"
+          ],
+          "at": [
+            1390,
+            250
+          ],
+          "size": [
+            250,
+            175
+          ]
+        },
+        {
+          "id": "t_tavern",
+          "variants": [
+            "t_tavern"
+          ],
+          "at": [
+            275,
+            355
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "t_market",
+          "variants": [
+            "t_market"
+          ],
+          "at": [
+            470,
+            350
+          ],
+          "size": [
+            200,
+            165
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "t_dw1",
+            "t_up1"
+          ],
+          "at": [
+            330,
+            705
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "t_dw2",
+            "t_up2"
+          ],
+          "at": [
+            545,
+            690
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "t_dw3",
+            "t_up3"
+          ],
+          "at": [
+            1010,
+            655
+          ],
+          "size": [
+            205,
+            175
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "t_dw4",
+            "t_up4"
+          ],
+          "at": [
+            1235,
+            670
+          ],
+          "size": [
+            200,
+            175
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "t_dw5",
+            "t_up5"
+          ],
+          "at": [
+            1460,
+            655
+          ],
+          "size": [
+            175,
+            210
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "t_dw6",
+            "t_up6"
+          ],
+          "at": [
+            785,
+            585
+          ],
+          "size": [
+            180,
+            160
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "t_dw7",
+            "t_up7"
+          ],
+          "at": [
+            1105,
+            238
+          ],
+          "size": [
+            200,
+            165
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "t_dw8",
+            "t_up8"
+          ],
+          "at": [
+            650,
+            368
+          ],
+          "size": [
+            175,
+            160
+          ]
+        },
+        {
+          "id": "t_yard",
+          "variants": [
+            "t_yard"
+          ],
+          "at": [
+            125,
+            325
+          ],
+          "size": [
+            190,
+            175
+          ]
+        },
+        {
+          "id": "t_special",
+          "variants": [
+            "t_special"
+          ],
+          "at": [
+            150,
+            640
+          ],
+          "size": [
+            180,
+            170
+          ]
+        },
+        {
+          "id": "t_grow1",
+          "variants": [
+            "t_grow1"
+          ],
+          "at": [
+            720,
+            790
+          ],
+          "size": [
+            150,
+            120
+          ]
+        },
+        {
+          "id": "t_grow2",
+          "variants": [
+            "t_grow2"
+          ],
+          "at": [
+            1150,
+            805
+          ],
+          "size": [
+            150,
+            120
+          ]
+        },
+        {
+          "id": "t_ultimate",
+          "variants": [
+            "t_ultimate"
+          ],
+          "at": [
+            820,
+            190
+          ],
+          "size": [
+            300,
+            260
+          ]
+        }
+      ],
+      "assets": {
+        "t_hall": "res://assets/towns/thornwood/t_hall.png",
+        "t_court": "res://assets/towns/thornwood/t_court.png",
+        "t_assembly": "res://assets/towns/thornwood/t_assembly.png",
+        "t_exchequer": "res://assets/towns/thornwood/t_exchequer.png",
+        "t_fort1": "res://assets/towns/thornwood/t_fort1.png",
+        "t_fort2": "res://assets/towns/thornwood/t_fort1.png",
+        "t_fort3": "res://assets/towns/thornwood/t_fort3.png",
+        "t_tavern": "res://assets/towns/thornwood/t_tavern.png",
+        "t_market": "res://assets/towns/thornwood/t_market.png",
+        "t_dw1": "res://assets/towns/thornwood/t_dw1.png",
+        "t_up1": "res://assets/towns/thornwood/t_dw1.png",
+        "t_dw2": "res://assets/towns/thornwood/t_dw2.png",
+        "t_up2": "res://assets/towns/thornwood/t_dw2.png",
+        "t_dw3": "res://assets/towns/thornwood/t_dw3.png",
+        "t_up3": "res://assets/towns/thornwood/t_dw3.png",
+        "t_dw4": "res://assets/towns/thornwood/t_dw4.png",
+        "t_up4": "res://assets/towns/thornwood/t_dw4.png",
+        "t_dw5": "res://assets/towns/thornwood/t_dw5.png",
+        "t_up5": "res://assets/towns/thornwood/t_dw5.png",
+        "t_dw6": "res://assets/towns/thornwood/t_dw6.png",
+        "t_up6": "res://assets/towns/thornwood/t_dw6.png",
+        "t_dw7": "res://assets/towns/thornwood/t_dw7.png",
+        "t_up7": "res://assets/towns/thornwood/t_dw7.png",
+        "t_dw8": "res://assets/towns/thornwood/t_dw8.png",
+        "t_up8": "res://assets/towns/thornwood/t_dw8.png",
+        "t_yard": "res://assets/towns/thornwood/t_yard.png",
+        "t_special": "res://assets/towns/thornwood/t_special.png",
+        "t_ultimate": "res://assets/towns/thornwood/t_ultimate.png"
+      },
+      "background": "res://assets/towns/thornwood/background.png"
+    },
+    "hollow": {
+      "size": [
+        1672,
+        941
+      ],
+      "slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "h_hall",
+            "h_court",
+            "h_assembly",
+            "h_exchequer"
+          ],
+          "at": [
+            1250,
+            385
+          ],
+          "size": [
+            260,
+            230
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "h_fort1",
+            "h_fort2",
+            "h_fort3"
+          ],
+          "at": [
+            1400,
+            640
+          ],
+          "size": [
+            250,
+            190
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "h_dw1",
+            "h_up1"
+          ],
+          "at": [
+            200,
+            425
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "h_dw2",
+            "h_up2"
+          ],
+          "at": [
+            410,
+            430
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "h_dw3",
+            "h_up3"
+          ],
+          "at": [
+            700,
+            460
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "h_dw4",
+            "h_up4"
+          ],
+          "at": [
+            1010,
+            370
+          ],
+          "size": [
+            180,
+            170
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "h_dw5",
+            "h_up5"
+          ],
+          "at": [
+            300,
+            690
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "h_dw6",
+            "h_up6"
+          ],
+          "at": [
+            550,
+            690
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "h_dw7",
+            "h_up7"
+          ],
+          "at": [
+            1000,
+            610
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "h_dw8",
+            "h_up8"
+          ],
+          "at": [
+            1190,
+            615
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "h_market",
+          "variants": [
+            "h_market"
+          ],
+          "at": [
+            560,
+            195
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "h_yard",
+          "variants": [
+            "h_yard"
+          ],
+          "at": [
+            800,
+            830
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "h_tavern",
+          "variants": [
+            "h_tavern"
+          ],
+          "at": [
+            330,
+            195
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "h_grow1",
+          "variants": [
+            "h_grow1"
+          ],
+          "at": [
+            880,
+            455
+          ],
+          "size": [
+            150,
+            130
+          ]
+        },
+        {
+          "id": "h_grow2",
+          "variants": [
+            "h_grow2"
+          ],
+          "at": [
+            1480,
+            330
+          ],
+          "size": [
+            150,
+            130
+          ]
+        },
+        {
+          "id": "h_special",
+          "variants": [
+            "h_special"
+          ],
+          "at": [
+            620,
+            850
+          ],
+          "size": [
+            180,
+            160
+          ]
+        },
+        {
+          "id": "h_ultimate",
+          "variants": [
+            "h_ultimate"
+          ],
+          "at": [
+            1380,
+            700
+          ],
+          "size": [
+            300,
+            260
+          ]
+        }
+      ],
+      "assets": {
+        "h_hall": "res://assets/towns/hollow/h_hall.png",
+        "h_court": "res://assets/towns/hollow/h_court.png",
+        "h_assembly": "res://assets/towns/hollow/h_assembly.png",
+        "h_exchequer": "res://assets/towns/hollow/h_exchequer.png",
+        "h_fort1": "res://assets/towns/hollow/h_fort1.png",
+        "h_fort2": "res://assets/towns/hollow/h_fort2.png",
+        "h_fort3": "res://assets/towns/hollow/h_fort3.png",
+        "h_dw1": "res://assets/towns/hollow/h_dw1.png",
+        "h_up1": "res://assets/towns/hollow/h_dw1.png",
+        "h_dw2": "res://assets/towns/hollow/h_dw2.png",
+        "h_up2": "res://assets/towns/hollow/h_dw2.png",
+        "h_dw3": "res://assets/towns/hollow/h_dw3.png",
+        "h_up3": "res://assets/towns/hollow/h_dw3.png",
+        "h_dw4": "res://assets/towns/hollow/h_dw4.png",
+        "h_up4": "res://assets/towns/hollow/h_dw4.png",
+        "h_dw5": "res://assets/towns/hollow/h_dw5.png",
+        "h_up5": "res://assets/towns/hollow/h_dw5.png",
+        "h_dw6": "res://assets/towns/hollow/h_dw6.png",
+        "h_up6": "res://assets/towns/hollow/h_dw6.png",
+        "h_dw7": "res://assets/towns/hollow/h_dw7.png",
+        "h_up7": "res://assets/towns/hollow/h_dw7.png",
+        "h_dw8": "res://assets/towns/hollow/h_dw8.png",
+        "h_up8": "res://assets/towns/hollow/h_dw8.png",
+        "h_market": "res://assets/towns/hollow/h_market.png",
+        "h_yard": "res://assets/towns/hollow/h_yard.png",
+        "h_tavern": "res://assets/towns/hollow/h_tavern.png",
+        "h_ultimate": "res://assets/towns/hollow/h_ultimate.png"
+      },
+      "background": "res://assets/towns/hollow/background.png"
+    },
+    "frostmarch": {
+      "size": [
+        1672,
+        941
+      ],
+      "slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "r_hall",
+            "r_court",
+            "r_assembly",
+            "r_exchequer"
+          ],
+          "at": [
+            1000,
+            410
+          ],
+          "size": [
+            270,
+            230
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "r_fort1",
+            "r_fort2",
+            "r_fort3"
+          ],
+          "at": [
+            700,
+            190
+          ],
+          "size": [
+            260,
+            180
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "r_dw1",
+            "r_up1"
+          ],
+          "at": [
+            330,
+            670
+          ],
+          "size": [
+            180,
+            150
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "r_dw2",
+            "r_up2"
+          ],
+          "at": [
+            580,
+            690
+          ],
+          "size": [
+            180,
+            150
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "r_dw3",
+            "r_up3"
+          ],
+          "at": [
+            830,
+            690
+          ],
+          "size": [
+            180,
+            150
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "r_dw4",
+            "r_up4"
+          ],
+          "at": [
+            1250,
+            560
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "r_dw5",
+            "r_up5"
+          ],
+          "at": [
+            1470,
+            570
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "r_dw6",
+            "r_up6"
+          ],
+          "at": [
+            1250,
+            410
+          ],
+          "size": [
+            190,
+            170
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "r_dw7",
+            "r_up7"
+          ],
+          "at": [
+            450,
+            545
+          ],
+          "size": [
+            180,
+            150
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "r_dw8",
+            "r_up8"
+          ],
+          "at": [
+            700,
+            545
+          ],
+          "size": [
+            180,
+            160
+          ]
+        },
+        {
+          "id": "r_market",
+          "variants": [
+            "r_market"
+          ],
+          "at": [
+            500,
+            395
+          ],
+          "size": [
+            200,
+            165
+          ]
+        },
+        {
+          "id": "r_yard",
+          "variants": [
+            "r_yard"
+          ],
+          "at": [
+            450,
+            195
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "r_tavern",
+          "variants": [
+            "r_tavern"
+          ],
+          "at": [
+            230,
+            315
+          ],
+          "size": [
+            190,
+            165
+          ]
+        },
+        {
+          "id": "r_grow1",
+          "variants": [
+            "r_grow1"
+          ],
+          "at": [
+            1160,
+            690
+          ],
+          "size": [
+            150,
+            130
+          ]
+        },
+        {
+          "id": "r_grow2",
+          "variants": [
+            "r_grow2"
+          ],
+          "at": [
+            360,
+            300
+          ],
+          "size": [
+            150,
+            130
+          ]
+        },
+        {
+          "id": "r_special",
+          "variants": [
+            "r_special"
+          ],
+          "at": [
+            1000,
+            620
+          ],
+          "size": [
+            180,
+            160
+          ]
+        },
+        {
+          "id": "r_ultimate",
+          "variants": [
+            "r_ultimate"
+          ],
+          "at": [
+            1000,
+            700
+          ],
+          "size": [
+            300,
+            260
+          ]
+        }
+      ],
+      "assets": {
+        "r_hall": "res://assets/towns/frostmarch/r_hall.png",
+        "r_court": "res://assets/towns/frostmarch/r_court.png",
+        "r_assembly": "res://assets/towns/frostmarch/r_assembly.png",
+        "r_exchequer": "res://assets/towns/frostmarch/r_exchequer.png",
+        "r_fort1": "res://assets/towns/frostmarch/r_fort1.png",
+        "r_fort2": "res://assets/towns/frostmarch/r_fort2.png",
+        "r_fort3": "res://assets/towns/frostmarch/r_fort3.png",
+        "r_dw1": "res://assets/towns/frostmarch/r_dw1.png",
+        "r_up1": "res://assets/towns/frostmarch/r_dw1.png",
+        "r_dw2": "res://assets/towns/frostmarch/r_dw2.png",
+        "r_up2": "res://assets/towns/frostmarch/r_dw2.png",
+        "r_dw3": "res://assets/towns/frostmarch/r_dw3.png",
+        "r_up3": "res://assets/towns/frostmarch/r_dw3.png",
+        "r_dw4": "res://assets/towns/frostmarch/r_dw4.png",
+        "r_up4": "res://assets/towns/frostmarch/r_dw4.png",
+        "r_dw5": "res://assets/towns/frostmarch/r_dw5.png",
+        "r_up5": "res://assets/towns/frostmarch/r_dw5.png",
+        "r_dw6": "res://assets/towns/frostmarch/r_dw6.png",
+        "r_up6": "res://assets/towns/frostmarch/r_dw6.png",
+        "r_dw7": "res://assets/towns/frostmarch/r_dw7.png",
+        "r_up7": "res://assets/towns/frostmarch/r_dw7.png",
+        "r_dw8": "res://assets/towns/frostmarch/r_dw8.png",
+        "r_up8": "res://assets/towns/frostmarch/r_dw8.png",
+        "r_market": "res://assets/towns/frostmarch/r_market.png",
+        "r_yard": "res://assets/towns/frostmarch/r_yard.png",
+        "r_tavern": "res://assets/towns/frostmarch/r_tavern.png",
+        "r_ultimate": "res://assets/towns/frostmarch/r_ultimate.png"
+      },
+      "background": "res://assets/towns/frostmarch/background.png"
+    },
+    "forge": {
+      "size": [
+        1672,
+        941
+      ],
+      "slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "f_hall",
+            "f_court",
+            "f_assembly",
+            "f_exchequer"
+          ],
+          "at": [
+            1080,
+            400
+          ],
+          "size": [
+            270,
+            230
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "f_fort1",
+            "f_fort2",
+            "f_fort3"
+          ],
+          "at": [
+            1450,
+            290
+          ],
+          "size": [
+            240,
+            175
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "f_dw1",
+            "f_up1"
+          ],
+          "at": [
+            600,
+            640
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "f_dw2",
+            "f_up2"
+          ],
+          "at": [
+            830,
+            640
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "f_dw3",
+            "f_up3"
+          ],
+          "at": [
+            1060,
+            640
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "f_dw4",
+            "f_up4"
+          ],
+          "at": [
+            1290,
+            650
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "f_dw5",
+            "f_up5"
+          ],
+          "at": [
+            1180,
+            860
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "f_dw6",
+            "f_up6"
+          ],
+          "at": [
+            1420,
+            860
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "f_dw7",
+            "f_up7"
+          ],
+          "at": [
+            960,
+            850
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "f_dw8",
+            "f_up8"
+          ],
+          "at": [
+            1265,
+            265
+          ],
+          "size": [
+            180,
+            165
+          ]
+        },
+        {
+          "id": "f_market",
+          "variants": [
+            "f_market"
+          ],
+          "at": [
+            480,
+            485
+          ],
+          "size": [
+            190,
+            165
+          ]
+        },
+        {
+          "id": "f_yard",
+          "variants": [
+            "f_yard"
+          ],
+          "at": [
+            800,
+            390
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "f_tavern",
+          "variants": [
+            "f_tavern"
+          ],
+          "at": [
+            300,
+            480
+          ],
+          "size": [
+            190,
+            165
+          ]
+        },
+        {
+          "id": "f_grow1",
+          "variants": [
+            "f_grow1"
+          ],
+          "at": [
+            1450,
+            395
+          ],
+          "size": [
+            150,
+            130
+          ]
+        },
+        {
+          "id": "f_grow2",
+          "variants": [
+            "f_grow2"
+          ],
+          "at": [
+            700,
+            560
+          ],
+          "size": [
+            150,
+            130
+          ]
+        },
+        {
+          "id": "f_special",
+          "variants": [
+            "f_special"
+          ],
+          "at": [
+            1460,
+            650
+          ],
+          "size": [
+            180,
+            160
+          ]
+        },
+        {
+          "id": "f_ultimate",
+          "variants": [
+            "f_ultimate"
+          ],
+          "at": [
+            1000,
+            780
+          ],
+          "size": [
+            300,
+            260
+          ]
+        }
+      ],
+      "assets": {
+        "f_hall": "res://assets/towns/forge/f_hall.png",
+        "f_court": "res://assets/towns/forge/f_court.png",
+        "f_assembly": "res://assets/towns/forge/f_assembly.png",
+        "f_exchequer": "res://assets/towns/forge/f_exchequer.png",
+        "f_fort1": "res://assets/towns/forge/f_fort1.png",
+        "f_fort2": "res://assets/towns/forge/f_fort2.png",
+        "f_fort3": "res://assets/towns/forge/f_fort2.png",
+        "f_dw1": "res://assets/towns/forge/f_dw1.png",
+        "f_up1": "res://assets/towns/forge/f_dw1.png",
+        "f_dw2": "res://assets/towns/forge/f_dw2.png",
+        "f_up2": "res://assets/towns/forge/f_dw2.png",
+        "f_dw3": "res://assets/towns/forge/f_dw3.png",
+        "f_up3": "res://assets/towns/forge/f_dw3.png",
+        "f_dw4": "res://assets/towns/forge/f_dw4.png",
+        "f_up4": "res://assets/towns/forge/f_dw4.png",
+        "f_dw5": "res://assets/towns/forge/f_dw5.png",
+        "f_up5": "res://assets/towns/forge/f_dw5.png",
+        "f_dw6": "res://assets/towns/forge/f_dw6.png",
+        "f_up6": "res://assets/towns/forge/f_dw6.png",
+        "f_dw7": "res://assets/towns/forge/f_dw7.png",
+        "f_up7": "res://assets/towns/forge/f_dw7.png",
+        "f_dw8": "res://assets/towns/forge/f_dw8.png",
+        "f_up8": "res://assets/towns/forge/f_dw8.png",
+        "f_market": "res://assets/towns/forge/f_market.png",
+        "f_yard": "res://assets/towns/forge/f_yard.png",
+        "f_tavern": "res://assets/towns/forge/f_tavern.png",
+        "f_special": "res://assets/towns/forge/f_special.png",
+        "f_ultimate": "res://assets/towns/forge/f_ultimate.png"
+      },
+      "background": "res://assets/towns/forge/background.png"
+    },
+    "ashen": {
+      "size": [
+        1672,
+        941
+      ],
+      "slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "a_hall",
+            "a_tithe",
+            "a_chains",
+            "a_throne"
+          ],
+          "at": [
+            1250,
+            395
+          ],
+          "size": [
+            260,
+            220
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "a_trench",
+            "a_wall",
+            "a_ramparts"
+          ],
+          "at": [
+            1360,
+            190
+          ],
+          "size": [
+            260,
+            170
+          ]
+        },
+        {
+          "id": "a_den",
+          "variants": [
+            "a_den"
+          ],
+          "at": [
+            720,
+            315
+          ],
+          "size": [
+            190,
+            160
+          ]
+        },
+        {
+          "id": "a_market",
+          "variants": [
+            "a_market"
+          ],
+          "at": [
+            900,
+            320
+          ],
+          "size": [
+            190,
+            160
+          ]
+        },
+        {
+          "id": "a_mire",
+          "variants": [
+            "a_mire"
+          ],
+          "at": [
+            290,
+            470
+          ],
+          "size": [
+            160,
+            140
+          ]
+        },
+        {
+          "id": "a_vents",
+          "variants": [
+            "a_vents"
+          ],
+          "at": [
+            470,
+            470
+          ],
+          "size": [
+            180,
+            150
+          ]
+        },
+        {
+          "id": "a_spoils",
+          "variants": [
+            "a_spoils"
+          ],
+          "at": [
+            660,
+            470
+          ],
+          "size": [
+            180,
+            150
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "a_dw1",
+            "a_up1"
+          ],
+          "at": [
+            250,
+            640
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "a_dw2",
+            "a_up2"
+          ],
+          "at": [
+            470,
+            650
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "a_dw3",
+            "a_up3"
+          ],
+          "at": [
+            1050,
+            610
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "a_dw4",
+            "a_up4"
+          ],
+          "at": [
+            1280,
+            640
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "a_dw5",
+            "a_up5"
+          ],
+          "at": [
+            1480,
+            600
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "a_dw6",
+            "a_up6"
+          ],
+          "at": [
+            1080,
+            200
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "a_dw7",
+            "a_up7"
+          ],
+          "at": [
+            880,
+            690
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "a_dw8",
+            "a_up8"
+          ],
+          "at": [
+            380,
+            830
+          ],
+          "size": [
+            200,
+            170
+          ]
+        },
+        {
+          "id": "a_breed",
+          "variants": [
+            "a_breed"
+          ],
+          "at": [
+            620,
+            830
+          ],
+          "size": [
+            170,
+            140
+          ]
+        },
+        {
+          "id": "a_racks",
+          "variants": [
+            "a_racks"
+          ],
+          "at": [
+            1180,
+            720
+          ],
+          "size": [
+            170,
+            140
+          ]
+        },
+        {
+          "id": "a_ultimate",
+          "variants": [
+            "a_ultimate"
+          ],
+          "at": [
+            1500,
+            330
+          ],
+          "size": [
+            300,
+            260
+          ]
+        }
+      ],
+      "assets": {
+        "a_hall": "res://assets/towns/ashen/a_hall.png",
+        "a_tithe": "res://assets/towns/ashen/a_tithe.png",
+        "a_chains": "res://assets/towns/ashen/a_chains.png",
+        "a_throne": "res://assets/towns/ashen/a_throne.png",
+        "a_trench": "res://assets/towns/ashen/a_trench.png",
+        "a_wall": "res://assets/towns/ashen/a_trench.png",
+        "a_ramparts": "res://assets/towns/ashen/a_trench.png",
+        "a_den": "res://assets/towns/ashen/a_den.png",
+        "a_market": "res://assets/towns/ashen/a_market.png",
+        "a_mire": "res://assets/towns/ashen/a_mire.png",
+        "a_vents": "res://assets/towns/ashen/a_vents.png",
+        "a_spoils": "res://assets/towns/ashen/a_spoils.png",
+        "a_dw1": "res://assets/towns/ashen/a_dw1.png",
+        "a_up1": "res://assets/towns/ashen/a_dw1.png",
+        "a_dw2": "res://assets/towns/ashen/a_dw2.png",
+        "a_up2": "res://assets/towns/ashen/a_dw2.png",
+        "a_dw3": "res://assets/towns/ashen/a_dw3.png",
+        "a_up3": "res://assets/towns/ashen/a_dw3.png",
+        "a_dw4": "res://assets/towns/ashen/a_dw4.png",
+        "a_up4": "res://assets/towns/ashen/a_dw4.png",
+        "a_dw5": "res://assets/towns/ashen/a_dw5.png",
+        "a_up5": "res://assets/towns/ashen/a_dw5.png",
+        "a_dw6": "res://assets/towns/ashen/a_dw6.png",
+        "a_up6": "res://assets/towns/ashen/a_dw6.png",
+        "a_dw7": "res://assets/towns/ashen/a_dw7.png",
+        "a_up7": "res://assets/towns/ashen/a_dw7.png",
+        "a_dw8": "res://assets/towns/ashen/a_dw8.png",
+        "a_up8": "res://assets/towns/ashen/a_dw8.png",
+        "a_ultimate": "res://assets/towns/ashen/a_ultimate.png"
+      },
+      "background": "res://assets/towns/ashen/background.png"
+    },
+    "darkelf": {
+      "size": [
+        1536,
+        1024
+      ],
+      "slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "de_hall",
+            "de_court",
+            "de_assembly",
+            "de_exchequer"
+          ],
+          "at": [
+            785,
+            345
+          ],
+          "size": [
+            265,
+            190
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "de_palisade",
+            "de_keep",
+            "de_bastion"
+          ],
+          "at": [
+            1290,
+            455
+          ],
+          "size": [
+            260,
+            220
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "de_dw1",
+            "de_up1"
+          ],
+          "at": [
+            200,
+            590
+          ],
+          "size": [
+            230,
+            160
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "de_dw2",
+            "de_up2"
+          ],
+          "at": [
+            440,
+            555
+          ],
+          "size": [
+            220,
+            155
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "de_dw3",
+            "de_up3"
+          ],
+          "at": [
+            240,
+            375
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "de_dw4",
+            "de_up4"
+          ],
+          "at": [
+            1235,
+            655
+          ],
+          "size": [
+            270,
+            180
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "de_dw5",
+            "de_up5"
+          ],
+          "at": [
+            960,
+            575
+          ],
+          "size": [
+            170,
+            210
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "de_dw6",
+            "de_up6"
+          ],
+          "at": [
+            1110,
+            370
+          ],
+          "size": [
+            150,
+            240
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "de_dw7",
+            "de_up7"
+          ],
+          "at": [
+            1320,
+            840
+          ],
+          "size": [
+            270,
+            200
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "de_dw8",
+            "de_up8"
+          ],
+          "at": [
+            565,
+            370
+          ],
+          "size": [
+            200,
+            200
+          ]
+        },
+        {
+          "id": "de_market",
+          "variants": [
+            "de_market"
+          ],
+          "at": [
+            640,
+            650
+          ],
+          "size": [
+            240,
+            180
+          ]
+        },
+        {
+          "id": "de_yard",
+          "variants": [
+            "de_yard"
+          ],
+          "at": [
+            1030,
+            800
+          ],
+          "size": [
+            230,
+            155
+          ]
+        },
+        {
+          "id": "de_tavern",
+          "variants": [
+            "de_tavern"
+          ],
+          "at": [
+            260,
+            795
+          ],
+          "size": [
+            235,
+            190
+          ]
+        },
+        {
+          "id": "de_masons",
+          "variants": [
+            "de_masons"
+          ],
+          "at": [
+            520,
+            820
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "de_drill",
+          "variants": [
+            "de_drill"
+          ],
+          "at": [
+            800,
+            810
+          ],
+          "size": [
+            210,
+            140
+          ]
+        },
+        {
+          "id": "de_fletchers",
+          "variants": [
+            "de_fletchers"
+          ],
+          "at": [
+            720,
+            990
+          ],
+          "size": [
+            200,
+            150
+          ]
+        },
+        {
+          "id": "de_remount",
+          "variants": [
+            "de_remount"
+          ],
+          "at": [
+            1080,
+            975
+          ],
+          "size": [
+            240,
+            150
+          ]
+        },
+        {
+          "id": "de_ultimate",
+          "variants": [
+            "de_ultimate"
+          ],
+          "at": [
+            800,
+            520
+          ],
+          "size": [
+            300,
+            260
+          ]
+        }
+      ],
+      "assets": {
+        "de_hall": "res://assets/towns/darkelf/de_hall.png",
+        "de_market": "res://assets/towns/darkelf/de_market.png",
+        "de_yard": "res://assets/towns/darkelf/de_yard.png",
+        "de_tavern": "res://assets/towns/darkelf/de_tavern.png",
+        "de_masons": "res://assets/towns/darkelf/de_masons.png",
+        "de_palisade": "res://assets/towns/darkelf/de_palisade.png",
+        "de_keep": "res://assets/towns/darkelf/de_keep.png",
+        "de_bastion": "res://assets/towns/darkelf/de_bastion.png",
+        "de_dw1": "res://assets/towns/darkelf/de_dw1.png",
+        "de_dw2": "res://assets/towns/darkelf/de_dw2.png",
+        "de_dw3": "res://assets/towns/darkelf/de_dw3.png",
+        "de_dw4": "res://assets/towns/darkelf/de_dw4.png",
+        "de_dw5": "res://assets/towns/darkelf/de_dw5.png",
+        "de_dw6": "res://assets/towns/darkelf/de_dw6.png",
+        "de_dw7": "res://assets/towns/darkelf/de_dw7.png",
+        "de_dw8": "res://assets/towns/darkelf/de_dw8.png",
+        "de_up1": "res://assets/towns/darkelf/de_up1.png",
+        "de_up2": "res://assets/towns/darkelf/de_up2.png",
+        "de_up3": "res://assets/towns/darkelf/de_up3.png",
+        "de_up4": "res://assets/towns/darkelf/de_up4.png",
+        "de_up5": "res://assets/towns/darkelf/de_up5.png",
+        "de_up6": "res://assets/towns/darkelf/de_up6.png",
+        "de_up7": "res://assets/towns/darkelf/de_up7.png",
+        "de_up8": "res://assets/towns/darkelf/de_up8.png",
+        "de_court": "res://assets/towns/darkelf/de_court.png",
+        "de_assembly": "res://assets/towns/darkelf/de_assembly.png",
+        "de_exchequer": "res://assets/towns/darkelf/de_exchequer.png",
+        "de_drill": "res://assets/towns/darkelf/de_drill.png",
+        "de_fletchers": "res://assets/towns/darkelf/de_fletchers.png",
+        "de_remount": "res://assets/towns/darkelf/de_remount.png",
+        "de_ultimate": "res://assets/towns/darkelf/de_ultimate.png"
+      },
+      "background": "res://assets/towns/darkelf/background.png"
+    },
+    "fishmen": {
+      "size": [
+        1536,
+        1024
+      ],
+      "slots": [
+        {
+          "id": "civic",
+          "variants": [
+            "fm_hall",
+            "fm_court",
+            "fm_assembly",
+            "fm_exchequer"
+          ],
+          "at": [
+            785,
+            345
+          ],
+          "size": [
+            265,
+            190
+          ]
+        },
+        {
+          "id": "fortification",
+          "variants": [
+            "fm_palisade",
+            "fm_keep",
+            "fm_bastion"
+          ],
+          "at": [
+            1290,
+            455
+          ],
+          "size": [
+            260,
+            220
+          ]
+        },
+        {
+          "id": "dw1",
+          "variants": [
+            "fm_dw1",
+            "fm_up1"
+          ],
+          "at": [
+            200,
+            590
+          ],
+          "size": [
+            230,
+            160
+          ]
+        },
+        {
+          "id": "dw2",
+          "variants": [
+            "fm_dw2",
+            "fm_up2"
+          ],
+          "at": [
+            440,
+            555
+          ],
+          "size": [
+            220,
+            155
+          ]
+        },
+        {
+          "id": "dw3",
+          "variants": [
+            "fm_dw3",
+            "fm_up3"
+          ],
+          "at": [
+            240,
+            375
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "dw4",
+          "variants": [
+            "fm_dw4",
+            "fm_up4"
+          ],
+          "at": [
+            1235,
+            655
+          ],
+          "size": [
+            270,
+            180
+          ]
+        },
+        {
+          "id": "dw5",
+          "variants": [
+            "fm_dw5",
+            "fm_up5"
+          ],
+          "at": [
+            960,
+            575
+          ],
+          "size": [
+            170,
+            210
+          ]
+        },
+        {
+          "id": "dw6",
+          "variants": [
+            "fm_dw6",
+            "fm_up6"
+          ],
+          "at": [
+            1110,
+            370
+          ],
+          "size": [
+            150,
+            240
+          ]
+        },
+        {
+          "id": "dw7",
+          "variants": [
+            "fm_dw7",
+            "fm_up7"
+          ],
+          "at": [
+            1320,
+            840
+          ],
+          "size": [
+            270,
+            200
+          ]
+        },
+        {
+          "id": "dw8",
+          "variants": [
+            "fm_dw8",
+            "fm_up8"
+          ],
+          "at": [
+            565,
+            370
+          ],
+          "size": [
+            200,
+            200
+          ]
+        },
+        {
+          "id": "fm_market",
+          "variants": [
+            "fm_market"
+          ],
+          "at": [
+            640,
+            650
+          ],
+          "size": [
+            240,
+            180
+          ]
+        },
+        {
+          "id": "fm_yard",
+          "variants": [
+            "fm_yard"
+          ],
+          "at": [
+            1030,
+            800
+          ],
+          "size": [
+            230,
+            155
+          ]
+        },
+        {
+          "id": "fm_tavern",
+          "variants": [
+            "fm_tavern"
+          ],
+          "at": [
+            260,
+            795
+          ],
+          "size": [
+            235,
+            190
+          ]
+        },
+        {
+          "id": "fm_masons",
+          "variants": [
+            "fm_masons"
+          ],
+          "at": [
+            520,
+            820
+          ],
+          "size": [
+            220,
+            180
+          ]
+        },
+        {
+          "id": "fm_drill",
+          "variants": [
+            "fm_drill"
+          ],
+          "at": [
+            800,
+            810
+          ],
+          "size": [
+            210,
+            140
+          ]
+        },
+        {
+          "id": "fm_fletchers",
+          "variants": [
+            "fm_fletchers"
+          ],
+          "at": [
+            720,
+            990
+          ],
+          "size": [
+            200,
+            150
+          ]
+        },
+        {
+          "id": "fm_remount",
+          "variants": [
+            "fm_remount"
+          ],
+          "at": [
+            1080,
+            975
+          ],
+          "size": [
+            240,
+            150
+          ]
+        },
+        {
+          "id": "fm_ultimate",
+          "variants": [
+            "fm_ultimate"
+          ],
+          "at": [
+            800,
+            520
+          ],
+          "size": [
+            300,
+            260
+          ]
+        }
+      ],
+      "assets": {
+        "fm_hall": "res://assets/towns/fishmen/fm_hall.png",
+        "fm_market": "res://assets/towns/fishmen/fm_market.png",
+        "fm_yard": "res://assets/towns/fishmen/fm_yard.png",
+        "fm_tavern": "res://assets/towns/fishmen/fm_tavern.png",
+        "fm_masons": "res://assets/towns/fishmen/fm_masons.png",
+        "fm_palisade": "res://assets/towns/fishmen/fm_palisade.png",
+        "fm_keep": "res://assets/towns/fishmen/fm_keep.png",
+        "fm_bastion": "res://assets/towns/fishmen/fm_bastion.png",
+        "fm_dw1": "res://assets/towns/fishmen/fm_dw1.png",
+        "fm_dw2": "res://assets/towns/fishmen/fm_dw2.png",
+        "fm_dw3": "res://assets/towns/fishmen/fm_dw3.png",
+        "fm_dw4": "res://assets/towns/fishmen/fm_dw4.png",
+        "fm_dw5": "res://assets/towns/fishmen/fm_dw5.png",
+        "fm_dw6": "res://assets/towns/fishmen/fm_dw6.png",
+        "fm_dw7": "res://assets/towns/fishmen/fm_dw7.png",
+        "fm_dw8": "res://assets/towns/fishmen/fm_dw8.png",
+        "fm_up1": "res://assets/towns/fishmen/fm_up1.png",
+        "fm_up2": "res://assets/towns/fishmen/fm_up2.png",
+        "fm_up3": "res://assets/towns/fishmen/fm_up3.png",
+        "fm_up4": "res://assets/towns/fishmen/fm_up4.png",
+        "fm_up5": "res://assets/towns/fishmen/fm_up5.png",
+        "fm_up6": "res://assets/towns/fishmen/fm_up6.png",
+        "fm_up7": "res://assets/towns/fishmen/fm_up7.png",
+        "fm_up8": "res://assets/towns/fishmen/fm_up8.png",
+        "fm_court": "res://assets/towns/fishmen/fm_court.png",
+        "fm_assembly": "res://assets/towns/fishmen/fm_assembly.png",
+        "fm_exchequer": "res://assets/towns/fishmen/fm_exchequer.png",
+        "fm_drill": "res://assets/towns/fishmen/fm_drill.png",
+        "fm_fletchers": "res://assets/towns/fishmen/fm_fletchers.png",
+        "fm_remount": "res://assets/towns/fishmen/fm_remount.png",
+        "fm_ultimate": "res://assets/towns/fishmen/fm_ultimate.png"
+      },
+      "background": "res://assets/towns/fishmen/background.png"
+    }
+  }
+}

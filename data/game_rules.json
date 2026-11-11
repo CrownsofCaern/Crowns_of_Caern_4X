@@ -1,0 +1,19 @@
+{
+  "_doc": "Game-flow rules (src/game/game_session.gd, victory.gd). town_loss_grace_days: a player who holds no town but still has heroes is eliminated after this many new days without retaking one (a warning is shown each day). conquest: on a map with a single active player, victory means holding every town. save_slots: manual save slots offered by the save/load menu (an autosave slot comes on top). hero_defeat_xp_bonus: extra experience, as a share of the battle XP, for defeating an enemy hero. starting_garrison_weeks: at the start of a new game every player-owned town with an empty garrison gets its built dwellings' creatures of these tiers, as this many weeks of growth (tier -> weeks), so a capital cannot be walked into in the first days.  random_events: weekly omens and daily fortunes (data/events.json) are on; a game or campaign chapter can turn them off with the rule random_events: false. threat_warning_days: a human player is warned when an enemy hero they can see could reach one of their towns within this many days of full movement. scout_movement: movement points a hero spends to send a scout to a hostile army (Scouting cuts this, see scout_cost_pct); the report gives exact troop counts and exact battle odds for the rest of the day. scout_range_bonus: scouts reach this many tiles beyond the hero's vision radius. starting_heroes: in a standard game (a skirmish started from the new-game menu) every player starts with this many heroes, unless its faction sets its own starting_heroes in data/factions.json; campaigns keep the heroes their maps place. starting_army_max_tier: in a standard game every starting hero keeps only its creatures of this tier or lower (a hero left with none gets its faction's tavern army). cold_attrition (src/game/cold_attrition.gd): at the start of each day a hero on one of cold_attrition_terrains loses cold_attrition_pct (rounded up, never below 1) of every stack whose faction lists that terrain as hostile_terrain, unless the hero ignores hostile terrain or stands in a town. This value is the skirmish default; campaign chapters play with cold unless the chapter sets cold_attrition: false.",
+  "mana_base": 10,
+  "mana_per_knowledge": 2,
+  "mana_daily_regen": 1,
+  "town_loss_grace_days": 7,
+  "save_slots": 6,
+  "hero_defeat_xp_bonus": 0.25,
+  "starting_garrison_weeks": {"1": 1.0, "2": 0.5},
+  "threat_warning_days": 3,
+  "random_events": true,
+  "scout_movement": 300,
+  "scout_range_bonus": 4,
+  "starting_heroes": 1,
+  "starting_army_max_tier": 2,
+  "cold_attrition": false,
+  "cold_attrition_pct": 0.1,
+  "cold_attrition_terrains": ["snow"]
+}

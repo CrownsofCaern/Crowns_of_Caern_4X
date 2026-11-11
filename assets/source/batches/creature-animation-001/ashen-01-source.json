@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/ashen-01-source.png",
+  "source_sha256": "c94debd659a89ddf9471b35b3da4a91b7d3b15f49a07ee06e3e63db755c80fb0",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/ashen-01-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/ashen-01-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "cinderling",
+    "seared_cinderling",
+    "scorchhound",
+    "hellmaw_hound"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "cinderling",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinderling.png",
+      "reference_sha256": "a0b57ef23f553d60b649ec91d5e63c5428c3624ad0800e923897e4ab96d53e4e"
+    },
+    {
+      "id": "seared_cinderling",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_seared_cinderling.png",
+      "reference_sha256": "3ccc6b0b54d0e68f383b6a321b47877357bd60e6d5b9cf7d1e5cdd78f76715ff"
+    },
+    {
+      "id": "scorchhound",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_scorchhound.png",
+      "reference_sha256": "c6960e65e3ccf56596eaf1eee678b5e36ef6f56d81b752a6302128be9cfe9f53"
+    },
+    {
+      "id": "hellmaw_hound",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_hellmaw_hound.png",
+      "reference_sha256": "b251e0fbe807027a47d8ed57284dc19636d9f014bfda8b0ee02f99e893768252"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

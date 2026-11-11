@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_unsealing_un_under_barrows_briefing",
+  "campaign": "unsealing",
+  "chapter": "un_under_barrows",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_unsealing_un_under_barrows_briefing.txt",
+  "prompt_sha256": "decda21153df94d2f1fbc351dc5b162914e11493b60cbd11a7869bb10658a5ef",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "7909e2bc5d2aa8bd71118e8ee62cb8e1b847daecbeaee1029236986ca82ce211",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

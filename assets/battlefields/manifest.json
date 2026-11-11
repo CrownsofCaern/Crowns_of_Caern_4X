@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "default_terrain": "grass",
+  "terrains": {
+    "grass": [
+      "grass_windward",
+      "grass_border_ruins"
+    ],
+    "forest": [
+      "forest_blackpine",
+      "forest_elderwood"
+    ],
+    "desert": [
+      "desert_bone_dunes",
+      "desert_fallen_observatory"
+    ],
+    "snow": [
+      "snow_frozen_pass",
+      "snow_white_reach"
+    ],
+    "swamp": [
+      "swamp_blackfen",
+      "swamp_sunken_abbey"
+    ],
+    "infernal": [
+      "infernal_cinder_rift",
+      "infernal_obsidian_wastes"
+    ],
+    "rough": [
+      "rough_storm_highlands",
+      "rough_shattered_quarry"
+    ],
+    "river": [
+      "river_stoneford"
+    ],
+    "water": [
+      "water_storm_shore"
+    ],
+    "mountain": [
+      "mountain_glacial_pass"
+    ]
+  },
+  "assets": {
+    "grass_windward": {
+      "id": "grass_windward",
+      "terrain": "grass",
+      "name": "Windward March",
+      "path": "res://assets/battlefields/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a"
+    },
+    "grass_border_ruins": {
+      "id": "grass_border_ruins",
+      "terrain": "grass",
+      "name": "The Broken Border",
+      "path": "res://assets/battlefields/grass_border_ruins.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "97834347fa7fa0a843cd5669a5ffc4ca739d9a9b5a19ccae30fa5300dd977272"
+    },
+    "forest_blackpine": {
+      "id": "forest_blackpine",
+      "terrain": "forest",
+      "name": "Blackpine Clearing",
+      "path": "res://assets/battlefields/forest_blackpine.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "f3098c1112661af7112dc85c7e1f892c9295dfa4ca8e744f5b24cfe4fbe43f48"
+    },
+    "forest_elderwood": {
+      "id": "forest_elderwood",
+      "terrain": "forest",
+      "name": "Elderwood Hollow",
+      "path": "res://assets/battlefields/forest_elderwood.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "d128065313729d18e4898cddf629569000ab9b62ddb0804af35601da0cee2ba9"
+    },
+    "desert_bone_dunes": {
+      "id": "desert_bone_dunes",
+      "terrain": "desert",
+      "name": "The Bleached Reach",
+      "path": "res://assets/battlefields/desert_bone_dunes.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "f3df0ca2535374a828c9e1ecf304305e9db2d9854919f9149259f45930b131e1"
+    },
+    "desert_fallen_observatory": {
+      "id": "desert_fallen_observatory",
+      "terrain": "desert",
+      "name": "Fallen Observatory",
+      "path": "res://assets/battlefields/desert_fallen_observatory.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "85f84ae76ed95cec4ecb6f42d4a9930a80c8f678e03ddd0013465ae5514a3ae4"
+    },
+    "snow_frozen_pass": {
+      "id": "snow_frozen_pass",
+      "terrain": "snow",
+      "name": "The Frozen Pass",
+      "path": "res://assets/battlefields/snow_frozen_pass.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "9f4104132266ccca8e3111ffaa71e83d9f70a2845a95951d094678a3e928d3be"
+    },
+    "snow_white_reach": {
+      "id": "snow_white_reach",
+      "terrain": "snow",
+      "name": "White Reach",
+      "path": "res://assets/battlefields/snow_white_reach.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "393918810c44a6b17ef6afcff95710b2368d23751f0a54a6ac46fdab05be5274"
+    },
+    "swamp_blackfen": {
+      "id": "swamp_blackfen",
+      "terrain": "swamp",
+      "name": "Blackfen",
+      "path": "res://assets/battlefields/swamp_blackfen.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "9b217b0e33c49d8c93ce3ce2d054f11059777d11bd9c03c4da4b676be45a1dde"
+    },
+    "swamp_sunken_abbey": {
+      "id": "swamp_sunken_abbey",
+      "terrain": "swamp",
+      "name": "Sunken Abbey",
+      "path": "res://assets/battlefields/swamp_sunken_abbey.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "eab815183e2b8a530334928531667730c54ad0631c99833da0812784fba541fc"
+    },
+    "infernal_cinder_rift": {
+      "id": "infernal_cinder_rift",
+      "terrain": "infernal",
+      "name": "Cinder Rift",
+      "path": "res://assets/battlefields/infernal_cinder_rift.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "b88e2aacfe1f1518bee4df789fcad76892988956e67c4a495b08b1e6c086e350"
+    },
+    "infernal_obsidian_wastes": {
+      "id": "infernal_obsidian_wastes",
+      "terrain": "infernal",
+      "name": "Obsidian Wastes",
+      "path": "res://assets/battlefields/infernal_obsidian_wastes.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "be3a40c4bac90323cb88cf14875ba654c0756466f9f15fa84c9cf15df6f00680"
+    },
+    "rough_storm_highlands": {
+      "id": "rough_storm_highlands",
+      "terrain": "rough",
+      "name": "Storm Highlands",
+      "path": "res://assets/battlefields/rough_storm_highlands.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "36cc75c7be30465c47009e10ff8af3fd6b6ac248f0681819592968a2d5599446"
+    },
+    "rough_shattered_quarry": {
+      "id": "rough_shattered_quarry",
+      "terrain": "rough",
+      "name": "The Shattered Quarry",
+      "path": "res://assets/battlefields/rough_shattered_quarry.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "3172175f7b982d522b26d1439380f8548e5f491216e7d0c954c840ed22bb028d"
+    },
+    "river_stoneford": {
+      "id": "river_stoneford",
+      "terrain": "river",
+      "name": "Stoneford",
+      "path": "res://assets/battlefields/river_stoneford.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "e02553142a6f14a89382bed694cc7d7cf4560c5c436669ae3e708311ddae7589"
+    },
+    "water_storm_shore": {
+      "id": "water_storm_shore",
+      "terrain": "water",
+      "name": "Storm Shore",
+      "path": "res://assets/battlefields/water_storm_shore.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "240867281eb880b354bd6d31ddcd722e7a9240e31dbad4e490992249c1a528b6"
+    },
+    "mountain_glacial_pass": {
+      "id": "mountain_glacial_pass",
+      "terrain": "mountain",
+      "name": "Glacial Pass",
+      "path": "res://assets/battlefields/mountain_glacial_pass.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "horizon_ratio": 0.3,
+      "source_sha256": "d9d57277f8adc8b83157f2ba64281051863991714a69a017d215ec826759e6d0"
+    }
+  },
+  "pending": []
+}

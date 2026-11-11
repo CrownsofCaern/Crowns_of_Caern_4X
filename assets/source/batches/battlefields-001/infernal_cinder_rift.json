@@ -1,0 +1,23 @@
+{
+  "id": "infernal_cinder_rift",
+  "terrain": "infernal",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/infernal_cinder_rift.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "b88e2aacfe1f1518bee4df789fcad76892988956e67c4a495b08b1e6c086e350",
+  "prompt_file": "assets/source/batches/battlefields-001/infernal_cinder_rift.txt",
+  "prompt_sha256": "76a547b7c27924ad6bc546952bee1944f98abab24cdff20a65355192d3779005",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/infernal_cinder_rift-live.png",
+    "forecast": "docs/art/production/battlefields/infernal_cinder_rift-forecast.png"
+  }
+}

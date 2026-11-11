@@ -1,0 +1,1390 @@
+{
+  "_doc": "Adventure-map objects, heroes and structures. Resource sprites double as HUD icons. Towns and mines carry a `flag` point (sprite pixels) where the owner pennant (object_flag, tinted in game) is planted. One encounter_<id> per entry in data/encounters.json (procedural 'look' until generated art exists).",
+  "defaults": {
+    "category": "object",
+    "atlas": "objects",
+    "size": [
+      32,
+      32
+    ],
+    "palette": "master",
+    "outline": true,
+    "outline_weight": 1,
+    "anchor": "bottom_center",
+    "export_scale": 1,
+    "map_scale": 2
+  },
+  "assets": [
+    {
+      "id": "hero_knight",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "knight"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_knight.txt"
+      },
+      "prompt": "scarred knight in dented plate on a black warhorse with a navy caparison",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_ranger",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "ranger"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_ranger.txt"
+      },
+      "prompt": "hooded ranger in leather on a navy-caparisoned warhorse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_oracle",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "oracle"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_oracle.txt"
+      },
+      "prompt": "pale-robed oracle with glowing eyes on a navy-caparisoned warhorse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_warlock",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "warlock"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_warlock.txt"
+      },
+      "prompt": "horned warlock in ash robes with ember eyes on a horned hellsteed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_warlord",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "warlord"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_warlord.txt"
+      },
+      "prompt": "demon warlord in blood-red plate with great horns on a horned hellsteed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_tormentor",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "tormentor"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_tormentor.txt"
+      },
+      "prompt": "masked tormentor in black leather on a horned hellsteed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_necromancer",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "necromancer"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_necromancer.txt"
+      },
+      "prompt": "skull-faced necromancer in purple robes on a bone-headed steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_gravewarden",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "gravewarden"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_gravewarden.txt"
+      },
+      "prompt": "gravewarden in rusted armour with a bone crown on a bone-headed steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_blightcaller",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "blightcaller"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_blightcaller.txt"
+      },
+      "prompt": "beak-masked blightcaller in a rot-green cloak on a bone-headed steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_grovewarden",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "grovewarden"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_grovewarden.txt"
+      },
+      "prompt": "grovewarden in bark armour with an antler helm on an antlered steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_huntmaster",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "huntmaster"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_huntmaster.txt"
+      },
+      "prompt": "huntmaster under a wolf pelt on an antlered steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_thornspeaker",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "thornspeaker"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_thornspeaker.txt"
+      },
+      "prompt": "thorn-crowned thornspeaker in a moss hood on an antlered steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_artificer",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "artificer"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_artificer.txt"
+      },
+      "prompt": "goggled artificer in brass-trimmed steel on an iron-faced steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_ironmarshal",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "ironmarshal"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_ironmarshal.txt"
+      },
+      "prompt": "ironmarshal in black iron with a brass crest on an iron-faced steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_runesmith",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "runesmith"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_runesmith.txt"
+      },
+      "prompt": "runesmith with glowing ember runes on an iron-faced steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_thane",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "thane"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_thane.txt"
+      },
+      "prompt": "fur-mantled thane in a steel helm on a pale shaggy horse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_reaver",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "reaver"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_reaver.txt"
+      },
+      "prompt": "bare-chested war-painted reaver on a pale shaggy horse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_frostcaller",
+      "category": "hero",
+      "atlas": "units",
+      "data": {
+        "type": "hero_class",
+        "id": "frostcaller"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_frostcaller.txt"
+      },
+      "prompt": "ice-robed frostcaller with cold glowing eyes on a pale shaggy horse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "hero_banner",
+      "category": "hero",
+      "atlas": "units",
+      "tint": "player",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/heroes64/hero_banner.txt"
+      },
+      "prompt": "plain greyscale swallowtail banner cloth (tinted in game)",
+      "generate": false,
+      "size": [
+        64,
+        64
+      ],
+      "map_scale": 1
+    },
+    {
+      "id": "resource_gold",
+      "category": "object",
+      "size": [
+        96,
+        96
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "resource",
+        "id": "gold"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/resource_gold.txt"
+      },
+      "prompt": "Detailed dark fantasy resource pickup: heap of tarnished gold coins, high isometric view, upper-left lighting, worn materials, clear dark silhouette",
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "anchor": "bottom_center"
+    },
+    {
+      "id": "resource_wood",
+      "category": "object",
+      "size": [
+        96,
+        96
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "resource",
+        "id": "wood"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/resource_wood.txt"
+      },
+      "prompt": "Detailed dark fantasy resource pickup: stack of cut dark timber logs, high isometric view, upper-left lighting, worn materials, clear dark silhouette",
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "anchor": "bottom_center"
+    },
+    {
+      "id": "resource_ore",
+      "category": "object",
+      "size": [
+        96,
+        96
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "resource",
+        "id": "ore"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/resource_ore.txt"
+      },
+      "prompt": "Detailed dark fantasy resource pickup: heap of rust-flecked iron ore, high isometric view, upper-left lighting, worn materials, clear dark silhouette",
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "anchor": "bottom_center"
+    },
+    {
+      "id": "resource_mercury",
+      "category": "object",
+      "size": [
+        96,
+        96
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "resource",
+        "id": "mercury"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/resource_mercury.txt"
+      },
+      "prompt": "Detailed dark fantasy resource pickup: glass flask of quicksilver with a cork, high isometric view, upper-left lighting, worn materials, clear dark silhouette",
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "anchor": "bottom_center"
+    },
+    {
+      "id": "resource_sulfur",
+      "category": "object",
+      "size": [
+        96,
+        96
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "resource",
+        "id": "sulfur"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/resource_sulfur.txt"
+      },
+      "prompt": "Detailed dark fantasy resource pickup: pile of yellow brimstone crystals, high isometric view, upper-left lighting, worn materials, clear dark silhouette",
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "anchor": "bottom_center"
+    },
+    {
+      "id": "resource_crystal",
+      "category": "object",
+      "size": [
+        96,
+        96
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "resource",
+        "id": "crystal"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/resource_crystal.txt"
+      },
+      "prompt": "Detailed dark fantasy resource pickup: cluster of blood-red crystals, high isometric view, upper-left lighting, worn materials, clear dark silhouette",
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "anchor": "bottom_center"
+    },
+    {
+      "id": "resource_gems",
+      "category": "object",
+      "size": [
+        96,
+        96
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "resource",
+        "id": "gems"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/resource_gems.txt"
+      },
+      "prompt": "Detailed dark fantasy resource pickup: cluster of cold blue-cyan gems, high isometric view, upper-left lighting, worn materials, clear dark silhouette",
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "anchor": "bottom_center"
+    },
+    {
+      "id": "object_chest",
+      "category": "object",
+      "size": [
+        96,
+        96
+      ],
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/object_chest.txt"
+      },
+      "prompt": "iron-banded wooden treasure chest with a brass lock",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "town_concord",
+      "category": "structure",
+      "size": [
+        192,
+        160
+      ],
+      "atlas": "objects",
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "town_concord"
+      },
+      "prompt": "grim walled human citadel of grey stone with slate-blue roofs, a central keep and lit windows",
+      "flag": [
+        96,
+        2
+      ],
+      "data": {
+        "type": "town",
+        "id": "concord"
+      },
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "town_ashen",
+      "category": "structure",
+      "size": [
+        192,
+        160
+      ],
+      "atlas": "objects",
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "town_ashen"
+      },
+      "prompt": "demonic bastion of jagged obsidian spires with lava seams and a horned burning gate",
+      "flag": [
+        98,
+        2
+      ],
+      "data": {
+        "type": "town",
+        "id": "ashen"
+      },
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "town_hollow",
+      "category": "structure",
+      "size": [
+        192,
+        160
+      ],
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/town_hollow.txt"
+      },
+      "prompt": "undead necropolis in a swamp: crooked black-stone keep with bruise-purple spires, rib gate, mausoleums, gibbets, green grave-light",
+      "flag": [
+        90,
+        4
+      ],
+      "data": {
+        "type": "town",
+        "id": "hollow"
+      },
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "town_thornwood",
+      "category": "structure",
+      "size": [
+        192,
+        160
+      ],
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/town_thornwood.txt"
+      },
+      "prompt": "hostile living-tree fortress: colossal gnarled tree grown into towers and halls, bramble palisades, pale lanterns",
+      "flag": [
+        96,
+        2
+      ],
+      "data": {
+        "type": "town",
+        "id": "thornwood"
+      },
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "town_forge",
+      "category": "structure",
+      "size": [
+        192,
+        160
+      ],
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/town_forge.txt"
+      },
+      "prompt": "deep forge carved into a soot-black cliff: riveted iron gate, smoking chimneys, furnace grates, brass pipes, slag heaps",
+      "flag": [
+        94,
+        2
+      ],
+      "data": {
+        "type": "town",
+        "id": "forge"
+      },
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "town_frostmarch",
+      "category": "structure",
+      "size": [
+        192,
+        160
+      ],
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/town_frostmarch.txt"
+      },
+      "prompt": "timber longhouse steading in snow: snow-laden longhouse, log palisade with skulls, watch tower, blood-red shields",
+      "flag": [
+        28,
+        2
+      ],
+      "data": {
+        "type": "town",
+        "id": "frostmarch"
+      },
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "mine_gold",
+      "category": "structure",
+      "size": [
+        128,
+        112
+      ],
+      "atlas": "objects",
+      "flag": [
+        30,
+        8
+      ],
+      "data": {
+        "type": "mine",
+        "id": "gold"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/mine_gold.txt"
+      },
+      "prompt": "Gilded Shaft: timber mine headframe, rocky entrance and cart heaped with gold ore",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "mine_wood",
+      "category": "structure",
+      "size": [
+        128,
+        112
+      ],
+      "atlas": "objects",
+      "flag": [
+        30,
+        8
+      ],
+      "data": {
+        "type": "mine",
+        "id": "wood"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/mine_wood.txt"
+      },
+      "prompt": "Lumber Camp: working sawmill shed, log stockpiles, toothed saw and timber trestles; no underground mine",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "mine_ore",
+      "category": "structure",
+      "size": [
+        128,
+        112
+      ],
+      "atlas": "objects",
+      "flag": [
+        30,
+        8
+      ],
+      "data": {
+        "type": "mine",
+        "id": "ore"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/mine_ore.txt"
+      },
+      "prompt": "Ore Pit: stepped open iron quarry, winch and ore cart with rusty rocks",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "mine_mercury",
+      "category": "structure",
+      "size": [
+        128,
+        112
+      ],
+      "atlas": "objects",
+      "flag": [
+        30,
+        8
+      ],
+      "data": {
+        "type": "mine",
+        "id": "mercury"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/mine_mercury.txt"
+      },
+      "prompt": "Quicksilver Seep: alchemical retort house over silver mineral pools, sealed flasks and iron pipes",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "mine_sulfur",
+      "category": "structure",
+      "size": [
+        128,
+        112
+      ],
+      "atlas": "objects",
+      "flag": [
+        30,
+        8
+      ],
+      "data": {
+        "type": "mine",
+        "id": "sulfur"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/mine_sulfur.txt"
+      },
+      "prompt": "Brimstone Vent: smoking sulfur extraction works, black vent yellow crystals and protective timber shelter",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "mine_crystal",
+      "category": "structure",
+      "size": [
+        128,
+        112
+      ],
+      "atlas": "objects",
+      "flag": [
+        30,
+        8
+      ],
+      "data": {
+        "type": "mine",
+        "id": "crystal"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/mine_crystal.txt"
+      },
+      "prompt": "Crystal Grotto: rocky cavern entrance filled with angular blood-red crystals and a small haul cart",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "mine_gems",
+      "category": "structure",
+      "size": [
+        128,
+        112
+      ],
+      "atlas": "objects",
+      "flag": [
+        30,
+        8
+      ],
+      "data": {
+        "type": "mine",
+        "id": "gems"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/mine_gems.txt"
+      },
+      "prompt": "Gem Hollow: rocky excavation with cold cyan gems in the face and a workbench",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "object_flag",
+      "category": "object",
+      "size": [
+        13,
+        12
+      ],
+      "atlas": "objects",
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "flag"
+      },
+      "prompt": "plain greyscale swallowtail pennant on a short pole (tinted with the owner colour in game)"
+    },
+    {
+      "id": "encounter_ashen_saint_shrine",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "ashen_saint_shrine"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ashen_saint_shrine.txt"
+      },
+      "prompt": "Shrine of the Ash-Choked Saint: A soot-blackened reliquary leans against a dead oak. Inside, a saint's skull still wears a crown of tarnished silver, and the air tastes of old smoke.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_dispossessed_column",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "dispossessed_column"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_dispossessed_column.txt"
+      },
+      "prompt": "Column of the Dispossessed: Carts piled with bedding, grandmothers, a goat. Burned-out villagers trudge west, away from the red sky. Their eyes go to your banners, then to the ground.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_overturned_wagon",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "overturned_wagon"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_overturned_wagon.txt"
+      },
+      "prompt": "Overturned Supply Wagon: A quartermaster's wagon lies on its side, axle snapped, oxen gone. Crates are still lashed to the bed. The mud around it is churned by too many paws.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_blind_cartographer",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "blind_cartographer"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_blind_cartographer.txt"
+      },
+      "prompt": "The Blind Cartographer: An old man with milk-white eyes sits among rolled maps, inking coastlines by touch. 'I remember every road,' he says, 'for a price.'",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_free_company_camp",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "free_company_camp"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_free_company_camp.txt"
+      },
+      "prompt": "Free Company Encampment: Tents patched with captured banners. Slingers dice around a fire while their captain, a scarred woman with one ear, sizes up your army.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_drowned_chapel",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "drowned_chapel"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_drowned_chapel.txt"
+      },
+      "prompt": "The Drowned Chapel: Only the bell tower rises from the black water. Something silver glints in the drowned nave, and the reeds whisper with no wind.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_barrow_field",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "barrow_field"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_barrow_field.txt"
+      },
+      "prompt": "Field of Unquiet Barrows: Grave mounds in rows too straight to be natural, each capped with a rusted helm. The ground is cold even under the sun.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_ash_pit_champion",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "ash_pit_champion"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ash_pit_champion.txt"
+      },
+      "prompt": "Champion of the Ash Pit: A fighting pit ringed with spikes and cheering wretches. Its champion, a hulking brute in a branded iron mask, beats his chest at you.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_ember_rift",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "ember_rift"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ember_rift.txt"
+      },
+      "prompt": "Ember Rift: The ground splits into a glowing seam. Things with too many joints crawl at its lip, and the brimstone stink makes the horses scream.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_thornwolf_den",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "thornwolf_den"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_thornwolf_den.txt"
+      },
+      "prompt": "Thornwolf Den: Bones and bramble mark the mouth of a hollow under the roots. Yellow eyes watch from the dark; the pack has not decided what you are.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_brigand_toll",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "brigand_toll"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_brigand_toll.txt"
+      },
+      "prompt": "Brigand Toll: A chain across the bridge, a brazier and a dozen slingers on the far bank. 'Road's ours,' their leader calls. 'Pay up or swim.'",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_dying_courier",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "dying_courier"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_dying_courier.txt"
+      },
+      "prompt": "The Dying Courier: A rider slumped against a milestone, an arrow through his side and a sealed satchel clutched to his chest. 'The pass at Harrowgate,' he whispers. 'They must know.'",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_hall_of_echoes",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "hall_of_echoes"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_hall_of_echoes.txt"
+      },
+      "prompt": "Hall of Echoes: A roofless hall where every carved word is repeated back a heartbeat late. Generations of commanders have cut their lessons into its walls.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "place_lockstone",
+      "category": "object",
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ember_rift.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "The Lockstone: ancient massive metal-bound stone seal with dwarf-forged brass clamps and huge severed root braces, an ominous thin ember crack, compact monument",
+      "campaign_location": {
+        "campaign": "last_light",
+        "source_pr": 45
+      },
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "place_saint_orrins_rest",
+      "category": "object",
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_drowned_chapel.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Saint Orrin's Rest: ruined Concord chapel yard with Wren tower heraldry, a hanging iron cage and cold green grave lights, half sunken flagstones",
+      "campaign_location": {
+        "campaign": "last_light",
+        "source_pr": 45
+      },
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "place_elderwold_stumps",
+      "category": "object",
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_thornwolf_den.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Elderwold: cluster of gigantic felled ancient tree stumps and cut root buttresses, dead thorn and moss, hollow roots faintly glowing",
+      "campaign_location": {
+        "campaign": "last_light",
+        "source_pr": 45
+      },
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "place_fenwick_dike",
+      "category": "object",
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_brigand_toll.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Fenwick dike: short raised medieval stone and timber causeway, reeds and shallow water at its feet, ruined watch gate",
+      "campaign_location": {
+        "campaign": "last_light",
+        "source_pr": 45
+      },
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "place_barrow_camp",
+      "category": "object",
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_barrow_field.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Barrow Camp: opened burial mounds, ragged funeral tents, bone palisade and dim green corpse-fire",
+      "campaign_location": {
+        "campaign": "last_light",
+        "source_pr": 45
+      },
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "place_cindermaw_gate",
+      "category": "object",
+      "atlas": "objects",
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "town_ashen"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Cindermaw: imposing obsidian gate fortress at a volcanic ridge pass, iron teeth, crimson flags, ember fissures, compact isolated gate",
+      "campaign_location": {
+        "campaign": "last_light",
+        "source_pr": 45
+      },
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "place_pyrehold",
+      "category": "object",
+      "atlas": "objects",
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "town_ashen"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Pyrehold: demonic basalt war keep with orange furnace mouths and spiked towers on a small rock footprint",
+      "campaign_location": {
+        "campaign": "last_light",
+        "source_pr": 45
+      },
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "place_wound",
+      "category": "object",
+      "atlas": "objects",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ember_rift.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "The Wound: gaping molten fissure crowned by a shattered colossal gate and broken Lockstone fragments, crooked scorched roots at the lip",
+      "campaign_location": {
+        "campaign": "last_light",
+        "source_pr": 45
+      },
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "site_road_trader",
+      "category": "object",
+      "atlas": "objects",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve",
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "chest"
+      },
+      "prompt": "Original dark gothic fantasy road trader: hooded merchant beside a weathered covered handcart, rolled maps and iron-bound relic chest, warm amber lantern, three-quarter overhead adventure-map sprite, dark outlined pixel art, transparent background."
+    },
+    {
+      "id": "trader_chart",
+      "category": "object",
+      "atlas": "objects",
+      "size": [
+        64,
+        64
+      ],
+      "map_scale": 1,
+      "generated_palette": "preserve",
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "chest"
+      },
+      "prompt": "Original gothic fantasy inventory icon of a curled parchment map with fine ink roads, red wax seal and tarnished brass compass, warm ivory parchment and dark outlined pixel art on transparent background, no text."
+    },
+    {
+      "id": "site_cobolt_stall",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/cobolts/site_cobolt_stall.txt"
+      },
+      "size": [
+        160,
+        144
+      ],
+      "map_scale": 0.5,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map building sprite for Crowns of Cinder. Reference image 1 is the current road-trader sprite and defines the rendering style: richly detailed painterly pixel art, restrained realistic materials, thin dark outline and warm lantern highlights. Reference image 2 is the approved cobolt concept: retain the cobolt architecture and merchant identity. ONE building, elevated three-quarter overhead adventure-map view with roof and two sides visible, top-left light. Weathered wood, patched muted umber canvas with small desaturated petrol-teal cloth accents, tarnished brass scales, iron-bound chests, amber lantern. Closed awnings, screens and shuttered entrances hide all guards. NO people, creatures or visible troops. Compact readable silhouette and dense hand-painted detail, same world as existing road-trader sprite, not smooth cartoon, not vector, not glossy 3D. Transparent background with clean alpha. No surrounding terrain, roads, scenery, text, labels, borders, numbers, ground plane or shadow oval. Entire building and equipment visible with empty margins.\nSubject: Cobolt Roadside Stall, level one: one small covered wagon beside one weathered canvas shop awning with closed side screens, scales hanging on wooden post, a few brass-bound chests. Humble compact roadside business; no masonry fort.",
+      "generate": true,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "site_cobolt_yard",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/cobolts/site_cobolt_yard.txt"
+      },
+      "size": [
+        160,
+        144
+      ],
+      "map_scale": 0.5,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map building sprite for Crowns of Cinder. Reference image 1 is the current road-trader sprite and defines the rendering style: richly detailed painterly pixel art, restrained realistic materials, thin dark outline and warm lantern highlights. Reference image 2 is the approved cobolt concept: retain the cobolt architecture and merchant identity. ONE building, elevated three-quarter overhead adventure-map view with roof and two sides visible, top-left light. Weathered wood, patched muted umber canvas with small desaturated petrol-teal cloth accents, tarnished brass scales, iron-bound chests, amber lantern. Closed awnings, screens and shuttered entrances hide all guards. NO people, creatures or visible troops. Compact readable silhouette and dense hand-painted detail, same world as existing road-trader sprite, not smooth cartoon, not vector, not glossy 3D. Transparent background with clean alpha. No surrounding terrain, roads, scenery, text, labels, borders, numbers, ground plane or shadow oval. Entire building and equipment visible with empty margins.\nSubject: Cobolt Caravan Yard, level two: a compact fenced enclosure containing two canvas-covered wagons, covered merchant stalls, a closed timber gate with a hanging brass balance sign, concealed rear yard, stacked chests. Clearly richer than a lone stall. Keep canvas roofs and the fence from merging into a single unreadable mass.",
+      "generate": true,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "site_cobolt_exchange",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/cobolts/site_cobolt_exchange.txt"
+      },
+      "size": [
+        160,
+        144
+      ],
+      "map_scale": 0.5,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map building sprite for Crowns of Cinder. Reference image 1 is the current road-trader sprite and defines the rendering style: richly detailed painterly pixel art, restrained realistic materials, thin dark outline and warm lantern highlights. Reference image 2 is the approved cobolt concept: retain the cobolt architecture and merchant identity. ONE building, elevated three-quarter overhead adventure-map view with roof and two sides visible, top-left light. Weathered wood, patched muted umber canvas with small desaturated petrol-teal cloth accents, tarnished brass scales, iron-bound chests, amber lantern. Closed awnings, screens and shuttered entrances hide all guards. NO people, creatures or visible troops. Compact readable silhouette and dense hand-painted detail, same world as existing road-trader sprite, not smooth cartoon, not vector, not glossy 3D. Transparent background with clean alpha. No surrounding terrain, roads, scenery, text, labels, borders, numbers, ground plane or shadow oval. Entire building and equipment visible with empty margins.\nSubject: Cobolt Vault Exchange, level three: small fortified stone counting house with thick shuttered vault door, low weathered slate roof and a single chimney, attached closed canvas-covered caravan yard, brass scales over the entrance, stacked iron-bound chests and amber lanterns. Wealthy trade house, not a castle or huge town.",
+      "generate": true,
+      "generated_palette": "preserve"
+    }
+  ]
+}

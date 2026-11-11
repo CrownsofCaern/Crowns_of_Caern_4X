@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/wilds-04-source.png",
+  "source_sha256": "b57a07609df49ca5e779402b2228839a12876594d59676682ab44747bd3515d6",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/wilds-04-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/wilds-04-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "deserter_crossbows",
+    "shrieking_harpy",
+    "tomb_scarabs",
+    "gloom_panther"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "deserter_crossbows",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_deserter_crossbows.png",
+      "reference_sha256": "274bfd335031be69f42f623ce585c53a945667a784c1a228cae2706a38c08f20"
+    },
+    {
+      "id": "shrieking_harpy",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_shrieking_harpy.png",
+      "reference_sha256": "ffb85587589ec08562a8324290ba1a2ab792eeb83f1376adb97040b8bfdf283b"
+    },
+    {
+      "id": "tomb_scarabs",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_tomb_scarabs.png",
+      "reference_sha256": "52983d912f4660e64b852dcf360ea07900465f718a317ba382e05948dbf5e821"
+    },
+    {
+      "id": "gloom_panther",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_gloom_panther.png",
+      "reference_sha256": "389f4bf0f7dab8433c4e0f2421939cf5d00ebdd6edfb22690c65f35bd6c6b12f"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

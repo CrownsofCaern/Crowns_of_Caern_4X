@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_ashwinter_fm_bring_winter_briefing",
+  "campaign": "ashwinter",
+  "chapter": "fm_bring_winter",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_ashwinter_fm_bring_winter_briefing.txt",
+  "prompt_sha256": "eaf8f3a9acc747fcde1391e39e0e3ec0f74ed74750263172476d67e083ccb5b8",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "fc2c2d72f00568cf145b196d1b8548252d36747dc4c558ffc4061677ebd241c6",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "grid": [
+    3,
+    6
+  ],
+  "source_dimensions": [
+    887,
+    1774
+  ],
+  "review": "Mechanical grid extraction; design, silhouette and engine review pending",
+  "assets": [
+    {
+      "id": "hero_knight",
+      "prompt": "scarred knight in dented plate on a black warhorse with a navy caparison",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        0,
+        296,
+        296
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_ranger",
+      "prompt": "hooded ranger in leather on a navy-caparisoned warhorse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        296,
+        0,
+        591,
+        296
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_oracle",
+      "prompt": "pale-robed oracle with glowing eyes on a navy-caparisoned warhorse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        591,
+        0,
+        887,
+        296
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_warlock",
+      "prompt": "horned warlock in ash robes with ember eyes on a horned hellsteed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        296,
+        296,
+        591
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_warlord",
+      "prompt": "demon warlord in blood-red plate with great horns on a horned hellsteed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        296,
+        296,
+        591,
+        591
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_tormentor",
+      "prompt": "masked tormentor in black leather on a horned hellsteed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        591,
+        296,
+        887,
+        591
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_necromancer",
+      "prompt": "skull-faced necromancer in purple robes on a bone-headed steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        591,
+        296,
+        887
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_gravewarden",
+      "prompt": "gravewarden in rusted armour with a bone crown on a bone-headed steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        296,
+        591,
+        591,
+        887
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_blightcaller",
+      "prompt": "beak-masked blightcaller in a rot-green cloak on a bone-headed steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        591,
+        591,
+        887,
+        887
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_grovewarden",
+      "prompt": "grovewarden in bark armour with an antler helm on an antlered steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        887,
+        296,
+        1183
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_huntmaster",
+      "prompt": "huntmaster under a wolf pelt on an antlered steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        296,
+        887,
+        591,
+        1183
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_thornspeaker",
+      "prompt": "thorn-crowned thornspeaker in a moss hood on an antlered steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        591,
+        887,
+        887,
+        1183
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_artificer",
+      "prompt": "goggled artificer in brass-trimmed steel on an iron-faced steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        1183,
+        296,
+        1478
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_ironmarshal",
+      "prompt": "ironmarshal in black iron with a brass crest on an iron-faced steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        296,
+        1183,
+        591,
+        1478
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_runesmith",
+      "prompt": "runesmith with glowing ember runes on an iron-faced steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        591,
+        1183,
+        887,
+        1478
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_thane",
+      "prompt": "fur-mantled thane in a steel helm on a pale shaggy horse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        1478,
+        296,
+        1774
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_reaver",
+      "prompt": "bare-chested war-painted reaver on a pale shaggy horse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        296,
+        1478,
+        591,
+        1774
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "hero_frostcaller",
+      "prompt": "ice-robed frostcaller with cold glowing eyes on a pale shaggy horse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        591,
+        1478,
+        887,
+        1774
+      ],
+      "keep_components": true
+    }
+  ]
+}

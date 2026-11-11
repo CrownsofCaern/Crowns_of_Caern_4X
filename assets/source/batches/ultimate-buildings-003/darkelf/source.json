@@ -1,0 +1,16 @@
+{
+  "provider": "ChatGPT image_gen",
+  "source_sha256": "45a8ed19a375d7f5c8671640e8f8ed5aa5ac48af52e8b817b167ca47f2765e98",
+  "size": [
+    1313,
+    1198
+  ],
+  "prompt_file": "assets/source/batches/ultimate-buildings-003/darkelf/prompt.txt",
+  "prompt_sha256": "09fd9773821c5a15d2aff4f3722ce8c9058e8fd2ced64a7d3cae1080e6f5513c",
+  "conditioning": {
+    "assets/source/batches/ultimate-concord-001/source.png": "61a41437d38cf7b896ddfec20e99f1dd082ceac97a54a444e16d680f4865f1d9",
+    "assets/source/batches/dlc-factions-001/darkelf-foundation.png": "3c22ea9911bca46db6792da1d0449470c6d964ae43ae4bc5015f47b189efe777"
+  },
+  "quality_status": "rendered_candidate",
+  "human_approval": "pending"
+}

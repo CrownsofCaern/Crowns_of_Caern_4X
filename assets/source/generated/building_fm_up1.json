@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/fishmen-buildings-2.png",
+  "source_sheet_sha256": "ffd2393c9b673a9ebbd95b8c2ee8d05d46235fadbcf1bd8c746912f3ea930d2b",
+  "size": [
+    1261,
+    1247
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/fishmen-buildings-2.txt",
+  "prompt_sha256": "c1471bdc77b7a5fbb5dcae0c6eb0c66287484d7db3d4c7a97f3269aaf15e2bfd",
+  "conditioning": [
+    "assets/source/batches/concord-town-001/foundation.png",
+    "assets/source/batches/dlc-factions-001/fishmen-creatures.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/concord-town-001/foundation.png": "a1ceda73d6122e5f2d303fac933b53142fc351e4e5022243341ae7ea82d0669b",
+    "assets/source/batches/dlc-factions-001/fishmen-creatures.png": "5c2b01a428459b5cdff330050ebf414189f02a6154975f6dbd4767a44e99290f"
+  },
+  "asset_id": "building_fm_up1",
+  "row": 0,
+  "column": 1,
+  "extraction": {
+    "row_bounds": [
+      0,
+      312
+    ],
+    "column_cuts": [
+      0,
+      315,
+      630,
+      946,
+      1261
+    ],
+    "bent_seams": {},
+    "warnings": [],
+    "row_extraction": {
+      "bounds": [
+        0,
+        312
+      ],
+      "top_seam": 0,
+      "bottom_seam": 312
+    }
+  },
+  "source_sha256": "1ba87ab4f5113f529c4fc24abcbffa8b26a7853391e4ab9ccf1c65c9a6174f72",
+  "native_size": [
+    256,
+    256
+  ],
+  "processing": "Adaptive transparent gutters; alpha below 64 cleared; palette preserved",
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

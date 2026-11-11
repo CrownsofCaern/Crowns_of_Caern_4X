@@ -1,0 +1,20 @@
+{
+  "batch": "hollow-001",
+  "source_sheet": "assets/source/batches/hollow-001/source.png",
+  "source_sheet_sha256": "c0a65504208fe13a5820f9e42439ee1d7ebaa5009c5ead6d0d49e9f4d65e03d1",
+  "crop_xyxy": [
+    645,
+    614,
+    886,
+    893
+  ],
+  "isolation": "largest 4-connected alpha>=128 component",
+  "source_sha256": "98607bd6b6492db0aecb8efce55680fcf75d338e5c07e7c35d4fff38df6d9836",
+  "provider": "ChatGPT image_gen",
+  "quality_status": "pending_visual_review",
+  "native_size": [
+    128,
+    128
+  ],
+  "conditioning": "Approved Concord rendering; faction-specific repository definitions"
+}

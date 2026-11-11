@@ -1,0 +1,11 @@
+{
+  "_doc": "Per-faction colour accents for generated creature art: placeholder silhouettes for creatures that have no hand-made or generated sprite yet, and the recolour that marks upgraded creatures (upgrade_of). `rim` and `glow` are palette chars; `upgrade` maps palette chars of the base sprite to the upgraded look. `default` covers factions not listed.",
+  "default":    {"body": ["1", "2", "3"], "rim": "6", "glow": "h", "upgrade": {"G": "h", "h": "H", "g": "G", "u": "U", "Q": "u"}},
+  "concord":    {"body": ["b", "B", "q"], "rim": "C", "glow": "h", "upgrade": {"B": "c", "c": "C", "G": "h", "h": "H", "g": "G", "u": "U", "U": "x", "Q": "u"}},
+  "ashen":      {"body": ["^", "~", "r"], "rim": "E", "glow": "o", "upgrade": {"e": "E", "E": "o", "o": "O", "O": "y", "R": "e", ":": "R"}},
+  "wilds":      {"body": ["m", "M", "W"], "rim": "N", "glow": "z", "upgrade": {"n": "N", "N": "z", "z": "Z", "4": "5", "5": "6"}},
+  "hollow":     {"body": ["p", "P", "2"], "rim": "I", "glow": "$", "upgrade": {"i": "I", "I": "j", "j": "J", "@": "$", "$": "&", "P": "v", "v": "V"}},
+  "thornwood":  {"body": ["m", "M", "W"], "rim": "z", "glow": "J", "upgrade": {"M": "n", "n": "N", "N": "z", "W": "l", "l": "L"}},
+  "forge":      {"body": ["1", "q", "Q"], "rim": "G", "glow": "o", "upgrade": {"G": "h", "h": "H", "o": "O", "O": "y", "u": "U"}},
+  "frostmarch": {"body": ["-", "Q", "2"], "rim": "+", "glow": "*", "upgrade": {"=": "+", "+": "*", "*": "#", "R": "e", "e": "E"}}
+}

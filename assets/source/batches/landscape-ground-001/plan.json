@@ -1,0 +1,90 @@
+{
+  "name": "landscape-ground-001",
+  "grid": [
+    5,
+    2
+  ],
+  "category": "ground",
+  "assets": [
+    {
+      "id": "terrain_water",
+      "prompt": "deep dark lake water, faint moonlit ripples",
+      "size": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "terrain_river",
+      "prompt": "shallow cold river ford, stones under the current",
+      "size": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "terrain_swamp",
+      "prompt": "rotting bog, black pools, reeds",
+      "size": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "terrain_grass",
+      "prompt": "dark withered grassland under a red sky",
+      "size": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "terrain_desert",
+      "prompt": "pale dust and wind ripples, bleached bones",
+      "size": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "terrain_rough",
+      "prompt": "rocky grey highland scree",
+      "size": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "terrain_snow",
+      "prompt": "frozen snowfield with cold blue shadows",
+      "size": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "terrain_forest",
+      "prompt": "dense dark pine forest floor",
+      "size": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "terrain_infernal",
+      "prompt": "cinder wastes, ash ground cracked with glowing lava",
+      "size": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "terrain_mountain",
+      "prompt": "impassable jagged snow-capped peaks",
+      "size": [
+        40,
+        40
+      ]
+    }
+  ]
+}

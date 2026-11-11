@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/concord-02-source.png",
+  "source_sha256": "52da262d4b49f85becbcdeb3292503ad17ccfa019c3e8e420266e79dfe56d09f",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/concord-02-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/concord-02-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "shieldwarden",
+    "bulwark_sworn",
+    "lancer",
+    "oathbound_lancer"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "shieldwarden",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_shieldwarden.png",
+      "reference_sha256": "fc7e242567745debd35a147671283d4c06140f0d417b7787b0305525b8e42680"
+    },
+    {
+      "id": "bulwark_sworn",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_bulwark_sworn.png",
+      "reference_sha256": "88d025629879ae61843c3501d983262d62dd66f582e8a8a308e4aac5aa1424e8"
+    },
+    {
+      "id": "lancer",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_lancer.png",
+      "reference_sha256": "695bf2b005684d97077c2fe5609ff6754337b48fe4f8ba544356f94caf9c05b2"
+    },
+    {
+      "id": "oathbound_lancer",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_oathbound_lancer.png",
+      "reference_sha256": "5dc42c3f82b0a9eb140caadfea743c4b982ca65db7eea5128f16b275083017d3"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

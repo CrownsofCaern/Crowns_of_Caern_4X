@@ -1,0 +1,1664 @@
+{
+  "_doc": "Procedural map templates (src/world/generation). A template is a graph of zones joined by connections. Zones are laid out by a warped, weighted Voronoi partition around their anchors (fractions of the map size); zone borders become mountain walls and each connection carves a pass of `width` tiles through the wall, optionally held by a gate guard. Zone content comes from a profile in `profiles`; zones that share a `group` get identical rolled content (same mines, piles, guard strengths) so starts stay fair. `mirror` names the zone this one is the 180-degree rotation of (only with symmetry rotate180; `self` for the centre). Distance bands are movement points from the zone anchor (town or centre). Guard values are gold-equivalent army values (see guard_levels). Towns, mines and encounters use the map object schema of docs/DESIGN.md section 4: neutral towns get a `garrison` of the profile's level, guarded mines carry their own `guard`. Encounters are drawn from `encounter_risk` tiers (low in home zones, high in contested ones) and never placed on roads or passes.",
+  "neutral_habitats": {"native_chance": 0.85},
+  "guard_levels": {"none": 0, "light": 700, "weak": 1400, "medium": 3800, "strong": 8500, "deadly": 15000},
+  "distance_bands": {"near": [200, 650], "mid": [550, 1100], "far": [950, 99999]},
+  "encounter_risk": {
+    "low": ["overturned_wagon", "dying_courier", "dispossessed_column", "blind_cartographer", "free_company_camp", "drowned_chapel", "ashen_saint_shrine", "stranded_salt_caravan", "bitter_well", "hedge_witch_hut", "deserters_fire", "lost_pilgrims_band", "grey_ferryman", "abandoned_quarry", "charcoal_burners", "rune_cairn", "burned_field_hospital", "starving_hounds", "smugglers_cove", "old_drillmaster", "weeping_spring"],
+    "high": ["barrow_field", "ash_pit_champion", "ember_rift", "thornwolf_den", "brigand_toll", "hall_of_echoes", "wyrm_carcass", "besieged_hamlet", "sunken_reliquary", "market_of_bones", "ironwood_grove", "cold_forge", "masked_envoy", "frozen_warband", "low_tide_shrine", "brand_sergeant", "tomb_of_the_unbowed", "giants_toll", "stargazers_tower", "plague_cart", "ember_crucible", "barrow_of_the_last_rank"]
+  },
+  "pile_amounts": {"gold": [500, 1000, 250], "wood": [4, 8, 1], "ore": [4, 8, 1], "rare": [2, 5, 1]},
+  "treasure_amounts": {"gold": [1500, 2500, 250], "rare": [5, 8, 1]},
+  "armor_drops": {
+    "_doc": "Armor pieces (artifacts in drop_slots of artifacts.json). per_player: one identical piece in every start zone, behind the same guard at the same distance. extras: min-max more pieces in the open zones (weighted by profile), rarity weighted; each rarity sets its guard level.",
+    "per_player": {"rarity": "minor", "band": "mid", "guard": "weak"},
+    "extras": {"min": 1, "max": 3, "band": "mid",
+      "zone_weights": {"center": 3, "flank": 2, "wild": 1},
+      "rarity_weights": {"minor": 3, "major": 4, "relic": 1},
+      "guards": {"minor": "medium", "major": "strong", "relic": "deadly"}}
+  },
+  "hoard_rules": {
+    "_doc": "Guarded hoards, the density fill (MapGenerator._place_hoards). Each profile's `hoards` gives one hoard per `per_tiles` open zone tiles (clamped to min/max); each pick sets the guard level, distance band and weight. Guards vary by +-guard_spread around their level. With artifact_chance a hoard holds a droppable armour piece of the rarity artifact_rarity gives the level, otherwise resources worth value_ratio of the rolled guard (at least min_value gold-equivalent), the kind drawn by resource_weights (rare = a random rare resource). Mirrored zones get identical hoards.",
+    "guard_spread": 0.2,
+    "value_ratio": [0.4, 0.6],
+    "min_value": 500,
+    "artifact_chance": 0.2,
+    "artifact_rarity": {"light": "minor", "weak": "minor", "medium": "minor", "strong": "major", "deadly": "relic"},
+    "resource_weights": {"gold": 5, "rare": 3, "wood": 1, "ore": 1}
+  },
+  "scatter_rules": {
+    "_doc": "Scattered piles (MapGenerator._place_scatter): unguarded resource piles, one per `per_tiles` open zone tiles of a profile's `scatter` (clamped to min/max), so large zones are not emptier than small ones. The kind is drawn by resource_weights (rare = a random rare resource, amounts from pile_amounts) and the distance band by band_weights. Mirrored zones get identical piles.",
+    "resource_weights": {"gold": 3, "wood": 2, "ore": 2, "rare": 2},
+    "band_weights": {"near": 1, "mid": 2, "far": 2}
+  },
+  "random_maps": {
+    "_doc": "Random maps for the new-game screen (src/world/generation/random_map_template.gd, layout_families.gd). A random map is the template random_<size>_<players>p_<monsters>_<treasure>[_<family>]; without a family the seed picks one of the families that fit the player count, by weight. sizes: player_tiles is the map area per player (the square side follows, clamped to min_side/max_side); rings are the optional zone rings of the ring and archipelago families (wild backwaters, approach zones between start and heart, outer zones at the edge; the outer ring needs the wild ring). families: the zone graphs (see LayoutFamilies), with player range, weight, loop_chance (extra loop passes) and walls {water: chance a border is a lake instead of a ridge, thick: [lo, hi] extra wall tiles on each side}. Every map turns and mirrors its family into one of 8 orientations and jitters its anchors by anchor_jitter. pass_width: width range of unguarded passes (guarded passes are one tile, the guard is the chokepoint). neutral_towns: chances of 0, 1 or 2 neutral towns (scaled with the players, at most one per player), placed in the most contested zones, with this garrison unless the zone profile names one. optional_profiles: weights of the profiles rolled for optional zones (treasure valleys, mine lands, ruins, backwaters). monsters scale every neutral army (guard_scale), treasure scales hoards and scattered piles (treasure_scale). factions: the generator factions the player slots cycle through before the new-game setup sets the real ones; colors: one per player slot. guard_pockets: how guarded treasure is laid out, open (prize in the open, guard on a neighbouring tile; the guard rule keeps it out of reach) or sealed (walled pocket, the default of the named templates). curated: named seeds the new-game menu offers (GameSetup.curated_entries), {id, name, template, seed, text}: template is a random-map name that names its layout family; a mission adds recipe (a current scenario recipe, at most 4 players, no template for labyrinth). A curated entry always plays gen:<template>:<seed> (or scenario:<recipe>[:<template>]:<seed>); the seed box then only seeds the game.",
+    "guard_pockets": "open",
+    "min_players": 2,
+    "min_side": 44,
+    "max_side": 156,
+    "warp": 3.0,
+    "anchor_jitter": 0.035,
+    "zone_jitter": 0.02,
+    "pass_width": [2, 4],
+    "sizes": {
+      "s": {"name": "Small", "max_players": 4, "player_tiles": 1500, "rings": []},
+      "m": {"name": "Medium", "max_players": 6, "player_tiles": 2200, "rings": ["wild"]},
+      "l": {"name": "Large", "max_players": 6, "player_tiles": 2900, "rings": ["wild", "approach"]},
+      "xl": {"name": "Huge", "max_players": 6, "player_tiles": 3800, "rings": ["wild", "approach", "outer"]}
+    },
+    "families": {
+      "ring": {"name": "Ring", "description": "Starts around a contested heartland, with flank zones between neighbours.", "min_players": 2, "max_players": 6, "weight": 1.0, "loop_chance": 0.5, "walls": {"water": 0.2, "thick": [0, 2]}},
+      "hub": {"name": "Hub", "description": "Every realm reaches the heart down its own spoke; side valleys hang off each start.", "min_players": 2, "max_players": 6, "weight": 1.0, "loop_chance": 0.35, "walls": {"water": 0.25, "thick": [0, 2]}},
+      "archipelago": {"name": "Archipelago", "description": "Realms on islands split by dark lakes, joined by land bridges.", "min_players": 2, "max_players": 6, "weight": 0.8, "loop_chance": 0.5, "walls": {"water": 0.9, "thick": [1, 3]}},
+      "diagonal": {"name": "Diagonal", "description": "Corner to corner: the high road crosses the heart, long loops run round the far corners.", "min_players": 2, "max_players": 2, "weight": 1.0, "loop_chance": 0.6, "walls": {"water": 0.25, "thick": [0, 2]}},
+      "lanes": {"name": "Lanes", "description": "Three roads between two edges, with contested valleys on the outer lanes.", "min_players": 2, "max_players": 2, "weight": 1.0, "loop_chance": 0.4, "walls": {"water": 0.3, "thick": [0, 2]}},
+      "tree": {"name": "Branching", "description": "Branching valleys and deep dead ends; the realms meet only in the heart.", "min_players": 2, "max_players": 2, "weight": 0.8, "loop_chance": 0.3, "walls": {"water": 0.2, "thick": [1, 2]}}
+    },
+    "optional_profiles": {"valley": 3, "mineland": 2, "ruins": 2, "wild": 1},
+    "neutral_towns": {"weights": [1, 3, 2], "garrison": "medium"},
+    "monsters": {
+      "weak": {"name": "Weak", "scale": 0.7},
+      "normal": {"name": "Normal", "scale": 1.0},
+      "strong": {"name": "Strong", "scale": 1.35},
+      "deadly": {"name": "Deadly", "scale": 1.75}
+    },
+    "treasure": {
+      "sparse": {"name": "Sparse", "scale": 0.6},
+      "normal": {"name": "Normal", "scale": 1.0},
+      "rich": {"name": "Rich", "scale": 1.5}
+    },
+    "factions": ["concord", "ashen"],
+    "colors": ["#3d6fc4", "#b8402c", "#4f8a3c", "#c79a2e", "#7a4fa8", "#3a9a9a"],
+    "curated": [
+      {"id": "ember_crown", "name": "The Ember Crown", "template": "random_s_2p_normal_normal_ring", "seed": 4, "text": "Two realms circle a smouldering heartland; every road bends toward the middle."},
+      {"id": "four_hearths", "name": "Four Hearths Burning", "template": "random_m_4p_normal_normal_ring", "seed": 4, "text": "Four realms round a contested heart, with flank country between each pair of neighbours."},
+      {"id": "widows_circle", "name": "The Widow's Circle", "template": "random_xl_3p_normal_rich_ring", "seed": 5, "text": "Three realms on a vast, rich ring: long marches and deep wilds before anyone meets."},
+      {"id": "sixfold_ash", "name": "Sixfold Ash", "template": "random_l_6p_normal_normal_ring", "seed": 3, "text": "Six banners crowd one ring of ash; alliances form fast and break faster."},
+      {"id": "iron_wheel", "name": "Spokes of the Iron Wheel", "template": "random_m_3p_normal_normal_hub", "seed": 4, "text": "Each realm rides its own spoke to the hub; side valleys reward the patient."},
+      {"id": "hollow_throne", "name": "The Hollow Throne", "template": "random_l_4p_strong_normal_hub", "seed": 3, "text": "Four spokes lead to an empty seat of power, guarded by hard-bitten monsters."},
+      {"id": "five_roads", "name": "Where Five Roads Bleed", "template": "random_m_5p_normal_rich_hub", "seed": 2, "text": "Five rich realms, one crowded heart. Whoever holds the hub holds every road."},
+      {"id": "black_mere", "name": "Isles of the Black Mere", "template": "random_m_2p_normal_normal_archipelago", "seed": 1, "text": "Two island realms joined by narrow land bridges across dark water."},
+      {"id": "tarnwater", "name": "Tarnwater Holds", "template": "random_l_4p_normal_rich_archipelago", "seed": 3, "text": "Four holds on wealthy isles; every bridge is a chokepoint worth a battle."},
+      {"id": "drowned_kings", "name": "Six Drowned Kings", "template": "random_l_6p_normal_normal_archipelago", "seed": 4, "text": "Six island crowns around a sunken heart, linked only by bridges of stone."},
+      {"id": "gallows_road", "name": "The Gallows Road", "template": "random_m_2p_normal_normal_diagonal", "seed": 4, "text": "Corner to corner along one high road, with long loops round the far corners."},
+      {"id": "corners_of_ruin", "name": "Corners of Ruin", "template": "random_l_2p_strong_rich_diagonal", "seed": 2, "text": "A wide diagonal march through rich, deadly country."},
+      {"id": "thin_ash", "name": "A Thin Road through Ash", "template": "random_s_2p_weak_sparse_diagonal", "seed": 6, "text": "A short, lean duel: little treasure, weak guards, an early clash."},
+      {"id": "three_furrows", "name": "Three Furrows", "template": "random_m_2p_normal_normal_lanes", "seed": 3, "text": "Three roads between two edges; the outer lanes hide contested valleys."},
+      {"id": "gilded_ditches", "name": "The Gilded Ditches", "template": "random_l_2p_normal_rich_lanes", "seed": 5, "text": "Three long lanes lined with hoards. Pick one to hold and one to raid."},
+      {"id": "knifepoint", "name": "Knifepoint Lanes", "template": "random_s_2p_strong_normal_lanes", "seed": 1, "text": "Close lanes, hard guards: every pass costs blood."},
+      {"id": "rootdeep", "name": "Rootdeep", "template": "random_m_2p_normal_normal_tree", "seed": 5, "text": "Branching valleys and deep dead ends; the realms meet only in the heart."},
+      {"id": "forked_vale", "name": "The Forked Vale", "template": "random_l_2p_normal_normal_tree", "seed": 2, "text": "A broad tree of valleys with long trunks to the meeting ground."},
+      {"id": "elder_boughs", "name": "Under the Elder Boughs", "template": "random_xl_2p_strong_rich_tree", "seed": 4, "text": "A huge branching wild of rich dead ends and strong guardians."},
+      {"id": "ashwall_vigil", "name": "The Ashwall Vigil", "recipe": "survival_v2", "template": "random_l_3p_normal_normal_hub", "seed": 4, "text": "A stronghold at the end of its spoke, with the hill folk one valley away."},
+      {"id": "drowned_watch", "name": "The Drowned Watch", "recipe": "survival_v2", "template": "random_l_3p_normal_rich_archipelago", "seed": 7, "text": "Hold an island keep while the host crosses the bridges."},
+      {"id": "brazier_line", "name": "The Brazier Line", "recipe": "defence_v2", "template": "random_l_3p_normal_normal_ring", "seed": 11, "text": "Three keeps strung along a ring; the host can strike any of them."},
+      {"id": "saltmarsh_keeps", "name": "Keeps of the Salt Marsh", "recipe": "defence_v2", "template": "random_m_4p_strong_normal_hub", "seed": 6, "text": "Three keeps on the spokes of a hard country."},
+      {"id": "cinder_tide", "name": "The Cinder Tide", "recipe": "endless_v2", "template": "random_l_3p_normal_normal_ring", "seed": 9, "text": "Wave after wave across open ring country. How long can the walls stand?"},
+      {"id": "last_lantern", "name": "Vigil of the Last Lantern", "recipe": "endless_v2", "template": "random_xl_3p_normal_rich_hub", "seed": 3, "text": "A rich, sprawling hub to fortify against a host that never ends."},
+      {"id": "reed_banner", "name": "A Banner in the Reeds", "recipe": "townless_v1", "template": "random_m_2p_normal_normal_lanes", "seed": 5, "text": "A lone captain among the reed villages, one rival across the lanes."},
+      {"id": "wanderers_crown", "name": "The Wanderer's Crown", "recipe": "townless_v1", "template": "random_l_3p_normal_normal_hub", "seed": 8, "text": "No hall, no crown: win the villages of your spoke before two rivals ride in."},
+      {"id": "stone_heart_deep", "name": "Beneath the Stone Heart", "recipe": "labyrinth_v2", "seed": 12, "text": "A tight maze of guarded turns around a buried prize."},
+      {"id": "gloam_warren", "name": "The Gloam Warren", "recipe": "labyrinth_v2", "seed": 31, "text": "Long corridors and false ends; the deadline is the real enemy."}
+    ]
+  },
+  "sites": {
+    "_doc": "Rare map buildings (data/sites.json). per_player: one identical site of these kinds in every start zone, at the same distance. extras: min-max more picks in the open zones; each pick goes into every zone of a zone group chosen by profile weight (so mirrored zones get the same site, guard and creature). A site is never used twice on one map.",
+    "per_player": {"kinds": ["attribute", "boon", "lore", "drill", "mana_well", "watchtower"], "band": "mid"},
+    "extras": {"min": 3, "max": 5, "band": "mid", "zone_weights": {"center": 3, "flank": 2, "wild": 2, "valley": 1, "mineland": 1}}
+  },
+  "town_names": ["Greyhallow", "Marrowgate", "Cindermere", "Vigil's Rest", "Hollowmark", "Dunmoor", "Saltgrave", "Ravensward", "Blackfen Hold", "Emberwatch", "Thornkeep", "Gallowmere"],
+  "factions": {
+    "darkelf": {"hero_class": "de_dreadmarshal", "hero_names": ["Vael Soryn", "Nyra Veyl", "Keth Ardan"], "army": [["de_gloam_spear", 24], ["de_shardbow", 14], ["de_knifedancer", 6], ["de_cave_lancer", 3]]},
+    "fishmen": {"hero_class": "fm_tidemarshal", "hero_names": ["Thal of the Reef", "Oru Deepvoice", "Keth Brineclaw"], "army": [["fm_brine_spear", 24], ["fm_hookcaster", 14], ["fm_shellback", 6], ["fm_mire_crab", 3]]},
+
+    "concord": {"hero_class": "knight", "hero_names": ["Aldous Wren", "Maren Holt", "Edric Vane"],
+                "army": [["pike_militia", 24], ["longbowman", 14], ["shieldwarden", 6], ["lancer", 3]]},
+    "ashen":   {"hero_class": "warlord", "hero_names": ["Vharr the Kindled", "Sesk Ashtongue", "Moloq Grieve"],
+                "army": [["cinderling", 32], ["scorchhound", 12], ["brimstone_hurler", 9], ["flayer", 2]]}
+  },
+  "profiles": {
+    "start": {
+      "terrain": "native", "patches": ["forest", "rough"], "patch_density": 0.10, "obstacle_density": 0.035,
+      "town": "owner",
+      "mines": [
+        {"resource": "wood", "band": "near", "guard": "none"},
+        {"resource": "ore", "band": "near", "guard": "none"},
+        {"resource": "faction_rare", "band": "mid", "guard": "weak"},
+        {"resource": "gold", "band": "far", "guard": "medium"}
+      ],
+      "piles": [
+        {"resource": "gold", "band": "near"}, {"resource": "wood", "band": "near"}, {"resource": "ore", "band": "mid"},
+        {"resource": "rare", "band": "mid"}, {"resource": "gold", "band": "far"}
+      ],
+      "treasures": [],
+      "encounters": [{"risk": "low", "band": "mid"}, {"risk": "low", "band": "far"}],
+      "scatter": {"per_tiles": 120, "max": 4},
+      "wanderers": [{"guard": "weak", "band": "far"}, {"guard": "strong", "band": "mid"}],
+      "hoards": {"per_tiles": 100, "max": 6, "picks": [{"guard": "light", "band": "near", "weight": 2}, {"guard": "weak", "band": "mid", "weight": 3}, {"guard": "medium", "band": "far", "weight": 1}]}
+    },
+    "wild": {
+      "terrain": ["grass", "forest", "snow", "swamp"], "patches": ["forest", "swamp", "rough"], "patch_density": 0.18, "obstacle_density": 0.05,
+      "town": "none",
+      "mines": [
+        {"resource": "wood", "band": "mid", "guard": "weak"},
+        {"resource": "rare", "band": "far", "guard": "medium"}
+      ],
+      "piles": [{"resource": "rare", "band": "mid"}, {"resource": "gold", "band": "mid"}, {"resource": "ore", "band": "far"}],
+      "treasures": [{"guard": "medium", "band": "far"}],
+      "encounters": [{"risk": "low", "band": "mid"}, {"risk": "low", "band": "far"}],
+      "wanderers": [{"guard": "weak", "band": "mid"}],
+      "scatter": {"per_tiles": 100, "max": 5},
+      "hoards": {"per_tiles": 100, "max": 8, "picks": [{"guard": "weak", "band": "mid", "weight": 2}, {"guard": "medium", "band": "far", "weight": 3}, {"guard": "strong", "band": "far", "weight": 1}]}
+    },
+    "flank": {
+      "terrain": ["rough", "desert", "snow", "swamp"], "patches": ["rough", "forest", "desert"], "patch_density": 0.15, "obstacle_density": 0.06,
+      "town": "neutral", "garrison": "medium",
+      "mines": [
+        {"resource": "ore", "band": "near", "guard": "weak"},
+        {"resource": "rare", "band": "mid", "guard": "medium"},
+        {"resource": "rare", "band": "far", "guard": "medium"}
+      ],
+      "piles": [{"resource": "gold", "band": "mid"}, {"resource": "rare", "band": "far"}],
+      "treasures": [{"guard": "medium", "band": "mid"}, {"guard": "strong", "band": "far"}],
+      "encounters": [{"risk": "high", "band": "far"}, {"risk": "high", "band": "mid"}],
+      "wanderers": [{"guard": "medium", "band": "mid"}],
+      "scatter": {"per_tiles": 110, "max": 5},
+      "hoards": {"per_tiles": 100, "max": 8, "picks": [{"guard": "weak", "band": "near", "weight": 1}, {"guard": "medium", "band": "mid", "weight": 3}, {"guard": "strong", "band": "far", "weight": 2}]}
+    },
+    "center": {
+      "terrain": ["infernal", "rough", "desert"], "patches": ["rough", "desert", "infernal"], "patch_density": 0.15, "obstacle_density": 0.05,
+      "town": "neutral", "garrison": "strong", "river": true,
+      "mines": [
+        {"resource": "gold", "band": "near", "guard": "strong"},
+        {"resource": "rare", "band": "mid", "guard": "strong"}
+      ],
+      "piles": [{"resource": "gold", "band": "mid"}, {"resource": "rare", "band": "mid"}, {"resource": "gold", "band": "far"}],
+      "treasures": [{"guard": "strong", "band": "mid"}, {"guard": "deadly", "band": "far"}],
+      "encounters": [{"risk": "high", "band": "near"}, {"risk": "high", "band": "mid"}, {"risk": "high", "band": "far"}],
+      "scatter": {"per_tiles": 110, "max": 6},
+      "wanderers": [{"guard": "strong", "band": "mid"}, {"guard": "deadly", "band": "far"}],
+      "hoards": {"per_tiles": 100, "max": 12, "picks": [{"guard": "strong", "band": "near", "weight": 1}, {"guard": "strong", "band": "mid", "weight": 3}, {"guard": "deadly", "band": "far", "weight": 1}]}
+    },
+    "valley": {
+      "_doc": "Optional treasure valley of the random-map families: rich, well guarded, out of the way.",
+      "terrain": ["grass", "forest", "swamp", "snow"], "patches": ["forest", "swamp", "grass"], "patch_density": 0.16, "obstacle_density": 0.04,
+      "town": "none",
+      "mines": [{"resource": "gold", "band": "far", "guard": "medium"}],
+      "piles": [{"resource": "gold", "band": "mid"}, {"resource": "rare", "band": "mid"}, {"resource": "rare", "band": "far"}],
+      "treasures": [{"guard": "medium", "band": "mid"}, {"guard": "strong", "band": "far"}],
+      "encounters": [{"risk": "low", "band": "mid"}, {"risk": "low", "band": "far"}],
+      "wanderers": [{"guard": "weak", "band": "near"}],
+      "scatter": {"per_tiles": 90, "max": 6},
+      "hoards": {"per_tiles": 80, "max": 9, "picks": [{"guard": "weak", "band": "near", "weight": 1}, {"guard": "medium", "band": "mid", "weight": 3}, {"guard": "strong", "band": "far", "weight": 2}]}
+    },
+    "mineland": {
+      "_doc": "Optional mine land of the random-map families: a cluster of guarded mines worth a second week of expansion.",
+      "terrain": ["rough", "snow", "desert", "grass"], "patches": ["rough", "desert"], "patch_density": 0.14, "obstacle_density": 0.05,
+      "town": "none",
+      "mines": [
+        {"resource": "wood", "band": "near", "guard": "weak"},
+        {"resource": "ore", "band": "mid", "guard": "weak"},
+        {"resource": "rare", "band": "mid", "guard": "medium"},
+        {"resource": "rare", "band": "far", "guard": "medium"},
+        {"resource": "gold", "band": "far", "guard": "strong"}
+      ],
+      "piles": [{"resource": "ore", "band": "near"}, {"resource": "wood", "band": "mid"}],
+      "treasures": [],
+      "encounters": [{"risk": "high", "band": "mid"}],
+      "wanderers": [{"guard": "medium", "band": "mid"}],
+      "scatter": {"per_tiles": 140, "max": 3},
+      "hoards": {"per_tiles": 140, "max": 4, "picks": [{"guard": "weak", "band": "mid", "weight": 2}, {"guard": "medium", "band": "far", "weight": 2}]}
+    },
+    "ruins": {
+      "_doc": "Optional ruins of the random-map families: rare sites and encounters to explore (site_picks sites of their own).",
+      "terrain": ["swamp", "rough", "forest", "infernal"], "patches": ["rough", "swamp", "forest"], "patch_density": 0.2, "obstacle_density": 0.06,
+      "town": "none", "site_picks": 2, "site_band": "far",
+      "mines": [{"resource": "rare", "band": "far", "guard": "medium"}],
+      "piles": [{"resource": "gold", "band": "near"}, {"resource": "rare", "band": "mid"}],
+      "treasures": [{"guard": "strong", "band": "far"}],
+      "encounters": [{"risk": "low", "band": "mid"}, {"risk": "high", "band": "mid"}, {"risk": "high", "band": "far"}],
+      "wanderers": [{"guard": "medium", "band": "mid"}],
+      "scatter": {"per_tiles": 120, "max": 4},
+      "hoards": {"per_tiles": 120, "max": 5, "picks": [{"guard": "medium", "band": "mid", "weight": 2}, {"guard": "strong", "band": "far", "weight": 1}]}
+    }
+  },
+  "templates": {
+    "fair_frontiers_v1": {"guard_pockets": "open", 
+      "name": "Branching Frontiers — Fair",
+      "width": 100,
+      "height": 100,
+      "symmetry": "rotate180",
+      "jitter": 0.012,
+      "warp": 1.8,
+      "policy": "fair",
+      "layout_family": "frontiers",
+      "recipe_version": 1,
+      "graph": "spatial",
+      "loop_chance": 0.18,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        }
+      ],
+      "zones": [
+        {
+          "id": "region_0",
+          "profile": "start",
+          "group": "pair_0",
+          "anchor": [
+            0.13,
+            0.5
+          ],
+          "size": 1.0,
+          "player": 0
+        },
+        {
+          "id": "region_1",
+          "profile": "wild",
+          "group": "pair_1",
+          "anchor": [
+            0.25,
+            0.2
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "region_2",
+          "profile": "flank",
+          "group": "pair_2",
+          "anchor": [
+            0.5,
+            0.12
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "region_3",
+          "profile": "wild",
+          "group": "pair_3",
+          "anchor": [
+            0.75,
+            0.2
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "region_4",
+          "profile": "start",
+          "group": "pair_0",
+          "anchor": [
+            0.87,
+            0.5
+          ],
+          "size": 1.0,
+          "player": 1,
+          "mirror": "region_0"
+        },
+        {
+          "id": "region_5",
+          "profile": "wild",
+          "group": "pair_1",
+          "anchor": [
+            0.75,
+            0.8
+          ],
+          "size": 1.0,
+          "mirror": "region_1"
+        },
+        {
+          "id": "region_6",
+          "profile": "flank",
+          "group": "pair_2",
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "size": 1.0,
+          "mirror": "region_2"
+        },
+        {
+          "id": "region_7",
+          "profile": "wild",
+          "group": "pair_3",
+          "anchor": [
+            0.25,
+            0.8
+          ],
+          "size": 1.0,
+          "mirror": "region_3"
+        }
+      ],
+      "connections": [],
+      "ring_order": [
+        "region_0",
+        "region_1",
+        "region_2",
+        "region_3",
+        "region_4",
+        "region_5",
+        "region_6",
+        "region_7"
+      ]
+    },
+    "fair_ringlands_v1": {"guard_pockets": "open", 
+      "name": "Ringlands — Fair",
+      "width": 100,
+      "height": 100,
+      "symmetry": "rotate180",
+      "jitter": 0.012,
+      "warp": 1.8,
+      "policy": "fair",
+      "layout_family": "ringlands",
+      "recipe_version": 1,
+      "graph": "spatial",
+      "loop_chance": 0.32,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        }
+      ],
+      "zones": [
+        {
+          "id": "region_0",
+          "profile": "start",
+          "group": "pair_0",
+          "anchor": [
+            0.13,
+            0.5
+          ],
+          "size": 1.0,
+          "player": 0
+        },
+        {
+          "id": "region_1",
+          "profile": "wild",
+          "group": "pair_1",
+          "anchor": [
+            0.25,
+            0.2
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "region_2",
+          "profile": "flank",
+          "group": "pair_2",
+          "anchor": [
+            0.5,
+            0.12
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "region_3",
+          "profile": "wild",
+          "group": "pair_3",
+          "anchor": [
+            0.75,
+            0.2
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "region_4",
+          "profile": "start",
+          "group": "pair_0",
+          "anchor": [
+            0.87,
+            0.5
+          ],
+          "size": 1.0,
+          "player": 1,
+          "mirror": "region_0"
+        },
+        {
+          "id": "region_5",
+          "profile": "wild",
+          "group": "pair_1",
+          "anchor": [
+            0.75,
+            0.8
+          ],
+          "size": 1.0,
+          "mirror": "region_1"
+        },
+        {
+          "id": "region_6",
+          "profile": "flank",
+          "group": "pair_2",
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "size": 1.0,
+          "mirror": "region_2"
+        },
+        {
+          "id": "region_7",
+          "profile": "wild",
+          "group": "pair_3",
+          "anchor": [
+            0.25,
+            0.8
+          ],
+          "size": 1.0,
+          "mirror": "region_3"
+        }
+      ],
+      "connections": [],
+      "ring_order": [
+        "region_0",
+        "region_1",
+        "region_2",
+        "region_3",
+        "region_4",
+        "region_5",
+        "region_6",
+        "region_7"
+      ]
+    },
+    "adventure_frontiers_v1": {"guard_pockets": "open", 
+      "name": "Branching Frontiers — Adventure",
+      "width": 100,
+      "height": 100,
+      "symmetry": "none",
+      "jitter": 0.035,
+      "warp": 1.8,
+      "policy": "adventure",
+      "layout_family": "frontiers",
+      "recipe_version": 1,
+      "graph": "spatial",
+      "loop_chance": 0.18,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        }
+      ],
+      "zones": [
+        {
+          "id": "region_0",
+          "profile": "start",
+          "group": "region_0",
+          "anchor": [
+            0.13,
+            0.5
+          ],
+          "size": 1.25,
+          "player": 0
+        },
+        {
+          "id": "region_1",
+          "profile": "wild",
+          "group": "region_1",
+          "anchor": [
+            0.25,
+            0.2
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "region_2",
+          "profile": "flank",
+          "group": "region_2",
+          "anchor": [
+            0.5,
+            0.12
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "region_3",
+          "profile": "wild",
+          "group": "region_3",
+          "anchor": [
+            0.75,
+            0.2
+          ],
+          "size": 1.25
+        },
+        {
+          "id": "region_4",
+          "profile": "start",
+          "group": "region_4",
+          "anchor": [
+            0.87,
+            0.5
+          ],
+          "size": 0.9,
+          "player": 1
+        },
+        {
+          "id": "region_5",
+          "profile": "wild",
+          "group": "region_5",
+          "anchor": [
+            0.75,
+            0.8
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "region_6",
+          "profile": "flank",
+          "group": "region_6",
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "size": 1.25
+        },
+        {
+          "id": "region_7",
+          "profile": "wild",
+          "group": "region_7",
+          "anchor": [
+            0.25,
+            0.8
+          ],
+          "size": 0.9
+        }
+      ],
+      "connections": [],
+      "ring_order": [
+        "region_0",
+        "region_1",
+        "region_2",
+        "region_3",
+        "region_4",
+        "region_5",
+        "region_6",
+        "region_7"
+      ]
+    },
+    "adventure_ringlands_v1": {"guard_pockets": "open", 
+      "name": "Ringlands — Adventure",
+      "width": 100,
+      "height": 100,
+      "symmetry": "none",
+      "jitter": 0.035,
+      "warp": 1.8,
+      "policy": "adventure",
+      "layout_family": "ringlands",
+      "recipe_version": 1,
+      "graph": "spatial",
+      "loop_chance": 0.32,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        }
+      ],
+      "zones": [
+        {
+          "id": "region_0",
+          "profile": "start",
+          "group": "region_0",
+          "anchor": [
+            0.13,
+            0.5
+          ],
+          "size": 1.25,
+          "player": 0
+        },
+        {
+          "id": "region_1",
+          "profile": "wild",
+          "group": "region_1",
+          "anchor": [
+            0.25,
+            0.2
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "region_2",
+          "profile": "flank",
+          "group": "region_2",
+          "anchor": [
+            0.5,
+            0.12
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "region_3",
+          "profile": "wild",
+          "group": "region_3",
+          "anchor": [
+            0.75,
+            0.2
+          ],
+          "size": 1.25
+        },
+        {
+          "id": "region_4",
+          "profile": "start",
+          "group": "region_4",
+          "anchor": [
+            0.87,
+            0.5
+          ],
+          "size": 0.9,
+          "player": 1
+        },
+        {
+          "id": "region_5",
+          "profile": "wild",
+          "group": "region_5",
+          "anchor": [
+            0.75,
+            0.8
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "region_6",
+          "profile": "flank",
+          "group": "region_6",
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "size": 1.25
+        },
+        {
+          "id": "region_7",
+          "profile": "wild",
+          "group": "region_7",
+          "anchor": [
+            0.25,
+            0.8
+          ],
+          "size": 0.9
+        }
+      ],
+      "connections": [],
+      "ring_order": [
+        "region_0",
+        "region_1",
+        "region_2",
+        "region_3",
+        "region_4",
+        "region_5",
+        "region_6",
+        "region_7"
+      ]
+    },
+    "adventure_marches_3_v1": {"guard_pockets": "open", 
+      "name": "Broken Marches — Adventure (3 realms)",
+      "description": "4 rival realms surround a dangerous, treasure-rich heartland.",
+      "width": 110,
+      "height": 110,
+      "symmetry": "none",
+      "jitter": 0.02,
+      "warp": 1.0,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#52a76a"
+        }
+      ],
+      "zones": [
+        {
+          "id": "start_0",
+          "player": 0,
+          "profile": "start",
+          "group": "start_0",
+          "anchor": [
+            0.5,
+            0.13
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "start_1",
+          "player": 1,
+          "profile": "start",
+          "group": "start_1",
+          "anchor": [
+            0.8204293994002423,
+            0.6849999999999999
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "start_2",
+          "player": 2,
+          "profile": "start",
+          "group": "start_2",
+          "anchor": [
+            0.17957060059975777,
+            0.685
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "heart",
+          "profile": "center",
+          "group": "heart",
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "size": 0.9
+        }
+      ],
+      "connections": [],
+      "policy": "adventure",
+      "layout_family": "broken_marches",
+      "recipe_version": 1,
+      "graph": "spatial",
+      "loop_chance": 0.3
+    },
+    "adventure_marches_4_v1": {"guard_pockets": "open", 
+      "name": "Broken Marches — Adventure (4 realms)",
+      "description": "4 rival realms surround a dangerous, treasure-rich heartland.",
+      "width": 110,
+      "height": 110,
+      "symmetry": "none",
+      "jitter": 0.02,
+      "warp": 1.0,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#52a76a"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#c7a142"
+        }
+      ],
+      "zones": [
+        {
+          "id": "start_0",
+          "profile": "start",
+          "player": 0,
+          "group": "start_0",
+          "anchor": [
+            0.5,
+            0.13
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "start_1",
+          "profile": "start",
+          "player": 1,
+          "group": "start_1",
+          "anchor": [
+            0.87,
+            0.5
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "start_2",
+          "profile": "start",
+          "player": 2,
+          "group": "start_2",
+          "anchor": [
+            0.5,
+            0.87
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "start_3",
+          "profile": "start",
+          "player": 3,
+          "group": "start_3",
+          "anchor": [
+            0.13,
+            0.5
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "heart",
+          "profile": "center",
+          "group": "heart",
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "size": 1.2
+        }
+      ],
+      "connections": [],
+      "policy": "adventure",
+      "layout_family": "broken_marches",
+      "recipe_version": 1,
+      "graph": "spatial",
+      "loop_chance": 0.3
+    },
+    "adventure_marches_5_v1": {"guard_pockets": "open", 
+      "name": "Broken Marches — Adventure (5 realms)",
+      "description": "5 rival realms surround a dangerous, treasure-rich heartland.",
+      "width": 150,
+      "height": 150,
+      "symmetry": "none",
+      "jitter": 0.02,
+      "warp": 1.0,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#52a76a"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#c7a142"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#945bb4"
+        }
+      ],
+      "zones": [
+        {
+          "id": "start_0",
+          "profile": "start",
+          "player": 0,
+          "group": "start_0",
+          "anchor": [
+            0.5,
+            0.13
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "start_1",
+          "profile": "start",
+          "player": 1,
+          "group": "start_1",
+          "anchor": [
+            0.8519,
+            0.3857
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "start_2",
+          "profile": "start",
+          "player": 2,
+          "group": "start_2",
+          "anchor": [
+            0.7175,
+            0.7993
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "start_3",
+          "profile": "start",
+          "player": 3,
+          "group": "start_3",
+          "anchor": [
+            0.2825,
+            0.7993
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "start_4",
+          "profile": "start",
+          "player": 4,
+          "group": "start_4",
+          "anchor": [
+            0.1481,
+            0.3857
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "heart",
+          "profile": "center",
+          "group": "heart",
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "size": 0.9
+        }
+      ],
+      "connections": [],
+      "policy": "adventure",
+      "layout_family": "broken_marches",
+      "recipe_version": 1,
+      "graph": "spatial",
+      "loop_chance": 0.3
+    },
+    "adventure_marches_6_v1": {"guard_pockets": "open", 
+      "name": "Broken Marches — Adventure (6 realms)",
+      "description": "6 rival realms surround a dangerous, treasure-rich heartland.",
+      "width": 200,
+      "height": 200,
+      "symmetry": "none",
+      "jitter": 0.02,
+      "warp": 1.0,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#52a76a"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#c7a142"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#945bb4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#3aa4a6"
+        }
+      ],
+      "zones": [
+        {
+          "id": "start_0",
+          "profile": "start",
+          "player": 0,
+          "group": "start_0",
+          "anchor": [
+            0.5,
+            0.13
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "start_1",
+          "profile": "start",
+          "player": 1,
+          "group": "start_1",
+          "anchor": [
+            0.8204,
+            0.315
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "start_2",
+          "profile": "start",
+          "player": 2,
+          "group": "start_2",
+          "anchor": [
+            0.8204,
+            0.685
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "start_3",
+          "profile": "start",
+          "player": 3,
+          "group": "start_3",
+          "anchor": [
+            0.5,
+            0.87
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "start_4",
+          "profile": "start",
+          "player": 4,
+          "group": "start_4",
+          "anchor": [
+            0.1796,
+            0.685
+          ],
+          "size": 1.2
+        },
+        {
+          "id": "start_5",
+          "profile": "start",
+          "player": 5,
+          "group": "start_5",
+          "anchor": [
+            0.1796,
+            0.315
+          ],
+          "size": 0.9
+        },
+        {
+          "id": "heart",
+          "profile": "center",
+          "group": "heart",
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "size": 1.2
+        }
+      ],
+      "connections": [],
+      "policy": "adventure",
+      "layout_family": "broken_marches",
+      "recipe_version": 1,
+      "graph": "spatial",
+      "loop_chance": 0.3
+    },
+
+    "crown_of_4": {"guard_pockets": "open", 
+      "name": "Crown of 4",
+      "description": "4 rival realms surround a dangerous, treasure-rich heartland.",
+      "width": 110,
+      "height": 110,
+      "symmetry": "none",
+      "jitter": 0.005,
+      "warp": 1.0,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#52a76a"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#c7a142"
+        }
+      ],
+      "zones": [
+        {
+          "id": "start_0",
+          "profile": "start",
+          "player": 0,
+          "group": "start",
+          "anchor": [
+            0.5,
+            0.13
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_1",
+          "profile": "start",
+          "player": 1,
+          "group": "start",
+          "anchor": [
+            0.87,
+            0.5
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_2",
+          "profile": "start",
+          "player": 2,
+          "group": "start",
+          "anchor": [
+            0.5,
+            0.87
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_3",
+          "profile": "start",
+          "player": 3,
+          "group": "start",
+          "anchor": [
+            0.13,
+            0.5
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "heart",
+          "profile": "center",
+          "group": "heart",
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "size": 1.8
+        }
+      ],
+      "connections": [
+        {
+          "a": "start_0",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_1",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_2",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_3",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        }
+      ]
+    },
+    "crown_of_5": {"guard_pockets": "open", 
+      "name": "Crown of 5",
+      "description": "5 rival realms surround a dangerous, treasure-rich heartland.",
+      "width": 150,
+      "height": 150,
+      "symmetry": "none",
+      "jitter": 0.005,
+      "warp": 1.0,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#52a76a"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#c7a142"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#945bb4"
+        }
+      ],
+      "zones": [
+        {
+          "id": "start_0",
+          "profile": "start",
+          "player": 0,
+          "group": "start",
+          "anchor": [
+            0.5,
+            0.13
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_1",
+          "profile": "start",
+          "player": 1,
+          "group": "start",
+          "anchor": [
+            0.8519,
+            0.3857
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_2",
+          "profile": "start",
+          "player": 2,
+          "group": "start",
+          "anchor": [
+            0.7175,
+            0.7993
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_3",
+          "profile": "start",
+          "player": 3,
+          "group": "start",
+          "anchor": [
+            0.2825,
+            0.7993
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_4",
+          "profile": "start",
+          "player": 4,
+          "group": "start",
+          "anchor": [
+            0.1481,
+            0.3857
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "heart",
+          "profile": "center",
+          "group": "heart",
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "size": 1.8
+        }
+      ],
+      "connections": [
+        {
+          "a": "start_0",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_1",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_2",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_3",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_4",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        }
+      ]
+    },
+    "crown_of_6": {"guard_pockets": "open", 
+      "name": "Crown of 6",
+      "description": "6 rival realms surround a dangerous, treasure-rich heartland.",
+      "width": 200,
+      "height": 200,
+      "symmetry": "none",
+      "jitter": 0.005,
+      "warp": 1.0,
+      "players": [
+        {
+          "faction": "concord",
+          "is_human": true,
+          "color": "#3d6fc4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#b8402c"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#52a76a"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#c7a142"
+        },
+        {
+          "faction": "concord",
+          "is_human": false,
+          "color": "#945bb4"
+        },
+        {
+          "faction": "ashen",
+          "is_human": false,
+          "color": "#3aa4a6"
+        }
+      ],
+      "zones": [
+        {
+          "id": "start_0",
+          "profile": "start",
+          "player": 0,
+          "group": "start",
+          "anchor": [
+            0.5,
+            0.13
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_1",
+          "profile": "start",
+          "player": 1,
+          "group": "start",
+          "anchor": [
+            0.8204,
+            0.315
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_2",
+          "profile": "start",
+          "player": 2,
+          "group": "start",
+          "anchor": [
+            0.8204,
+            0.685
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_3",
+          "profile": "start",
+          "player": 3,
+          "group": "start",
+          "anchor": [
+            0.5,
+            0.87
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_4",
+          "profile": "start",
+          "player": 4,
+          "group": "start",
+          "anchor": [
+            0.1796,
+            0.685
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "start_5",
+          "profile": "start",
+          "player": 5,
+          "group": "start",
+          "anchor": [
+            0.1796,
+            0.315
+          ],
+          "size": 1.0
+        },
+        {
+          "id": "heart",
+          "profile": "center",
+          "group": "heart",
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "size": 1.8
+        }
+      ],
+      "connections": [
+        {
+          "a": "start_0",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_1",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_2",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_3",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_4",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        },
+        {
+          "a": "start_5",
+          "b": "heart",
+          "width": 1,
+          "guard": "strong",
+          "road": true,
+          "group": "pass"
+        }
+      ]
+    },
+    "twin_marches": {"guard_pockets": "open", 
+      "name": "Twin Marches",
+      "description": "Two lords in opposite corners. Each has a quiet backwater, a contested flank and a guarded pass into a rich, river-split heartland.",
+      "width": 90, "height": 90, "symmetry": "rotate180", "jitter": 0.04, "warp": 2.5,
+      "players": [
+        {"faction": "concord", "is_human": true, "color": "#3d6fc4"},
+        {"faction": "ashen", "is_human": false, "color": "#b8402c"}
+      ],
+      "zones": [
+        {"id": "start_0", "profile": "start", "player": 0, "group": "start", "anchor": [0.2, 0.8], "size": 1.3},
+        {"id": "start_1", "profile": "start", "player": 1, "group": "start", "anchor": [0.8, 0.2], "size": 1.3, "mirror": "start_0"},
+        {"id": "wild_0", "profile": "wild", "group": "wild", "anchor": [0.5, 0.88], "size": 0.8},
+        {"id": "wild_1", "profile": "wild", "group": "wild", "anchor": [0.5, 0.12], "size": 0.8, "mirror": "wild_0"},
+        {"id": "flank_0", "profile": "flank", "group": "flank", "anchor": [0.16, 0.3], "size": 1.0},
+        {"id": "flank_1", "profile": "flank", "group": "flank", "anchor": [0.84, 0.7], "size": 1.0, "mirror": "flank_0"},
+        {"id": "heart", "profile": "center", "group": "heart", "anchor": [0.5, 0.5], "size": 1.4, "mirror": "self"}
+      ],
+      "connections": [
+        {"a": "start_0", "b": "wild_0", "width": 2, "guard": "none", "road": false, "group": "back"},
+        {"a": "start_1", "b": "wild_1", "width": 2, "guard": "none", "road": false, "group": "back"},
+        {"a": "start_0", "b": "flank_0", "width": 1, "guard": "weak", "road": true, "group": "flank"},
+        {"a": "start_1", "b": "flank_1", "width": 1, "guard": "weak", "road": true, "group": "flank"},
+        {"a": "wild_0", "b": "flank_1", "width": 1, "guard": "medium", "road": false, "group": "cross"},
+        {"a": "wild_1", "b": "flank_0", "width": 1, "guard": "medium", "road": false, "group": "cross"},
+        {"a": "start_0", "b": "heart", "width": 1, "guard": "strong", "road": true, "group": "pass"},
+        {"a": "start_1", "b": "heart", "width": 1, "guard": "strong", "road": true, "group": "pass"},
+        {"a": "flank_0", "b": "heart", "width": 1, "guard": "medium", "road": false, "group": "flank_heart"},
+        {"a": "flank_1", "b": "heart", "width": 1, "guard": "medium", "road": false, "group": "flank_heart"}
+      ]
+    },
+    "crossing": {"guard_pockets": "open", 
+      "name": "The Crossing",
+      "description": "A small duel: two starts facing each other across one contested valley.",
+      "width": 70, "height": 70, "symmetry": "rotate180", "jitter": 0.03, "warp": 2.0,
+      "players": [
+        {"faction": "concord", "is_human": true, "color": "#3d6fc4"},
+        {"faction": "ashen", "is_human": false, "color": "#b8402c"}
+      ],
+      "zones": [
+        {"id": "start_0", "profile": "start", "player": 0, "group": "start", "anchor": [0.17, 0.5], "size": 1.0},
+        {"id": "start_1", "profile": "start", "player": 1, "group": "start", "anchor": [0.83, 0.5], "size": 1.0, "mirror": "start_0"},
+        {"id": "valley", "profile": "center", "group": "valley", "anchor": [0.5, 0.5], "size": 1.0, "mirror": "self"}
+      ],
+      "connections": [
+        {"a": "start_0", "b": "valley", "width": 1, "guard": "medium", "road": true, "group": "pass"},
+        {"a": "start_1", "b": "valley", "width": 1, "guard": "medium", "road": true, "group": "pass"}
+      ]
+    },
+    "broad_crossing": {"guard_pockets": "open", 
+      "name": "The Broad Crossing",
+      "description": "A larger duel for campaign chapters: two starts across a contested valley, each with a quiet backwater behind it and a neutral town on its flank.",
+      "width": 90, "height": 90, "symmetry": "rotate180", "jitter": 0.03, "warp": 2.5,
+      "players": [
+        {"faction": "concord", "is_human": true, "color": "#3d6fc4"},
+        {"faction": "ashen", "is_human": false, "color": "#b8402c"}
+      ],
+      "zones": [
+        {"id": "start_0", "profile": "start", "player": 0, "group": "start", "anchor": [0.14, 0.5], "size": 1.2},
+        {"id": "start_1", "profile": "start", "player": 1, "group": "start", "anchor": [0.86, 0.5], "size": 1.2, "mirror": "start_0"},
+        {"id": "wild_0", "profile": "wild", "group": "wild", "anchor": [0.2, 0.13], "size": 0.8},
+        {"id": "wild_1", "profile": "wild", "group": "wild", "anchor": [0.8, 0.87], "size": 0.8, "mirror": "wild_0"},
+        {"id": "flank_0", "profile": "flank", "group": "flank", "anchor": [0.3, 0.86], "size": 0.9},
+        {"id": "flank_1", "profile": "flank", "group": "flank", "anchor": [0.7, 0.14], "size": 0.9, "mirror": "flank_0"},
+        {"id": "valley", "profile": "center", "group": "valley", "anchor": [0.5, 0.5], "size": 1.2, "mirror": "self"}
+      ],
+      "connections": [
+        {"a": "start_0", "b": "wild_0", "width": 2, "guard": "none", "road": false, "group": "back"},
+        {"a": "start_1", "b": "wild_1", "width": 2, "guard": "none", "road": false, "group": "back"},
+        {"a": "start_0", "b": "flank_0", "width": 1, "guard": "weak", "road": true, "group": "flank"},
+        {"a": "start_1", "b": "flank_1", "width": 1, "guard": "weak", "road": true, "group": "flank"},
+        {"a": "start_0", "b": "valley", "width": 1, "guard": "medium", "road": true, "group": "pass"},
+        {"a": "start_1", "b": "valley", "width": 1, "guard": "medium", "road": true, "group": "pass"},
+        {"a": "flank_0", "b": "valley", "width": 1, "guard": "medium", "road": false, "group": "flank_heart"},
+        {"a": "flank_1", "b": "valley", "width": 1, "guard": "medium", "road": false, "group": "flank_heart"}
+      ]
+    },
+    "great_marches": {"guard_pockets": "open", 
+      "name": "The Great Marches",
+      "description": "Twin Marches drawn large for campaign chapters: two lords in opposite corners, backwaters, flanks with neutral towns, wild corners beyond the flanks and a rich heartland.",
+      "width": 110, "height": 110, "symmetry": "rotate180", "jitter": 0.04, "warp": 3.0,
+      "players": [
+        {"faction": "concord", "is_human": true, "color": "#3d6fc4"},
+        {"faction": "ashen", "is_human": false, "color": "#b8402c"}
+      ],
+      "zones": [
+        {"id": "start_0", "profile": "start", "player": 0, "group": "start", "anchor": [0.2, 0.8], "size": 1.3},
+        {"id": "start_1", "profile": "start", "player": 1, "group": "start", "anchor": [0.8, 0.2], "size": 1.3, "mirror": "start_0"},
+        {"id": "wild_0", "profile": "wild", "group": "wild", "anchor": [0.5, 0.88], "size": 0.8},
+        {"id": "wild_1", "profile": "wild", "group": "wild", "anchor": [0.5, 0.12], "size": 0.8, "mirror": "wild_0"},
+        {"id": "flank_0", "profile": "flank", "group": "flank", "anchor": [0.16, 0.36], "size": 1.0},
+        {"id": "flank_1", "profile": "flank", "group": "flank", "anchor": [0.84, 0.64], "size": 1.0, "mirror": "flank_0"},
+        {"id": "corner_0", "profile": "wild", "group": "corner", "anchor": [0.1, 0.08], "size": 0.8},
+        {"id": "corner_1", "profile": "wild", "group": "corner", "anchor": [0.9, 0.92], "size": 0.8, "mirror": "corner_0"},
+        {"id": "heart", "profile": "center", "group": "heart", "anchor": [0.5, 0.5], "size": 1.4, "mirror": "self"}
+      ],
+      "connections": [
+        {"a": "start_0", "b": "wild_0", "width": 2, "guard": "none", "road": false, "group": "back"},
+        {"a": "start_1", "b": "wild_1", "width": 2, "guard": "none", "road": false, "group": "back"},
+        {"a": "start_0", "b": "flank_0", "width": 1, "guard": "weak", "road": true, "group": "flank"},
+        {"a": "start_1", "b": "flank_1", "width": 1, "guard": "weak", "road": true, "group": "flank"},
+        {"a": "flank_0", "b": "corner_0", "width": 1, "guard": "medium", "road": false, "group": "corner"},
+        {"a": "flank_1", "b": "corner_1", "width": 1, "guard": "medium", "road": false, "group": "corner"},
+        {"a": "start_0", "b": "heart", "width": 1, "guard": "strong", "road": true, "group": "pass"},
+        {"a": "start_1", "b": "heart", "width": 1, "guard": "strong", "road": true, "group": "pass"},
+        {"a": "flank_0", "b": "heart", "width": 1, "guard": "medium", "road": false, "group": "flank_heart"},
+        {"a": "flank_1", "b": "heart", "width": 1, "guard": "medium", "road": false, "group": "flank_heart"}
+      ]
+    }
+  }
+}

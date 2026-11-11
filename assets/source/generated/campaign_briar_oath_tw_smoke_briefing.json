@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_briar_oath_tw_smoke_briefing",
+  "campaign": "briar_oath",
+  "chapter": "tw_smoke",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_briar_oath_tw_smoke_briefing.txt",
+  "prompt_sha256": "ef969118abb561bb5fa58ddb5bbf6312d10c0a3b2f18548fe8ad20b5ace94725",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "02e795a682814a5bb2f4f15a96b7a760c23ffca14fefe05f3e920a6dab12e500",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

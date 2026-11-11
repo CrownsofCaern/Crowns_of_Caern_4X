@@ -1,0 +1,577 @@
+{
+  "_doc": "Eight tiers of base and upgraded creatures for The Umbral Court.",
+  "creatures": {
+    "de_gloam_spear": {
+      "name": "Gloam Spear",
+      "faction": "darkelf",
+      "tier": 1,
+      "role": "infantry",
+      "hp": 9,
+      "attack": 5,
+      "defense": 5,
+      "damage": [
+        1,
+        3
+      ],
+      "speed": 4,
+      "initiative": 5,
+      "growth": 14,
+      "cost": {
+        "gold": 75
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "brace"
+        }
+      ],
+      "terrain": {},
+      "desc": "lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield.",
+      "upgrade": "de_dusk_sentinel"
+    },
+    "de_dusk_sentinel": {
+      "name": "Dusk Sentinel",
+      "faction": "darkelf",
+      "tier": 1,
+      "role": "infantry",
+      "hp": 10,
+      "attack": 6,
+      "defense": 6,
+      "damage": [
+        1,
+        4
+      ],
+      "speed": 4,
+      "initiative": 6,
+      "growth": 14,
+      "cost": {
+        "gold": 90
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "brace"
+        },
+        {
+          "id": "first_strike"
+        }
+      ],
+      "terrain": {},
+      "desc": "lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield.",
+      "upgrade_of": "de_gloam_spear"
+    },
+    "de_shardbow": {
+      "name": "Shardbow",
+      "faction": "darkelf",
+      "tier": 2,
+      "role": "ranged",
+      "hp": 9,
+      "attack": 7,
+      "defense": 2,
+      "damage": [
+        2,
+        4
+      ],
+      "speed": 4,
+      "initiative": 7,
+      "growth": 9,
+      "cost": {
+        "gold": 125
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "ranged"
+        }
+      ],
+      "terrain": {},
+      "desc": "grim elf crossbowman in violet hood and black leather, compact two-handed crossbow.",
+      "upgrade": "de_venom_arbalist"
+    },
+    "de_venom_arbalist": {
+      "name": "Venom Arbalist",
+      "faction": "darkelf",
+      "tier": 2,
+      "role": "ranged",
+      "hp": 10,
+      "attack": 8,
+      "defense": 3,
+      "damage": [
+        2,
+        5
+      ],
+      "speed": 4,
+      "initiative": 8,
+      "growth": 9,
+      "cost": {
+        "gold": 190
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "ranged"
+        },
+        {
+          "id": "poison",
+          "fraction": 0.2
+        }
+      ],
+      "terrain": {},
+      "desc": "grim elf crossbowman in violet hood and black leather, compact two-handed crossbow.",
+      "upgrade_of": "de_shardbow"
+    },
+    "de_knifedancer": {
+      "name": "Knifedancer",
+      "faction": "darkelf",
+      "tier": 3,
+      "role": "infantry",
+      "hp": 19,
+      "attack": 8,
+      "defense": 3,
+      "damage": [
+        3,
+        5
+      ],
+      "speed": 6,
+      "initiative": 8,
+      "growth": 7,
+      "cost": {
+        "gold": 205
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "relentless"
+        }
+      ],
+      "terrain": {},
+      "desc": "athletic masked elf assassin in fitted black armour holding two curved daggers.",
+      "upgrade": "de_blood_scythe"
+    },
+    "de_blood_scythe": {
+      "name": "Blood Scythe",
+      "faction": "darkelf",
+      "tier": 3,
+      "role": "infantry",
+      "hp": 22,
+      "attack": 9,
+      "defense": 4,
+      "damage": [
+        3,
+        6
+      ],
+      "speed": 6,
+      "initiative": 9,
+      "growth": 7,
+      "cost": {
+        "gold": 305
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "relentless"
+        },
+        {
+          "id": "life_drain",
+          "fraction": 0.2
+        }
+      ],
+      "terrain": {},
+      "desc": "athletic masked elf assassin in fitted black armour holding two curved daggers.",
+      "upgrade_of": "de_knifedancer"
+    },
+    "de_cave_lancer": {
+      "name": "Cave Lancer",
+      "faction": "darkelf",
+      "tier": 4,
+      "role": "cavalry",
+      "hp": 31,
+      "attack": 12,
+      "defense": 7,
+      "damage": [
+        5,
+        9
+      ],
+      "speed": 8,
+      "initiative": 9,
+      "growth": 4,
+      "cost": {
+        "gold": 365
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "charge",
+          "bonus": 0.4
+        }
+      ],
+      "terrain": {},
+      "desc": "elf lancer astride a lean six-legged black cave lizard, violet saddlecloth.",
+      "upgrade": "de_dread_rider"
+    },
+    "de_dread_rider": {
+      "name": "Dread Rider",
+      "faction": "darkelf",
+      "tier": 4,
+      "role": "cavalry",
+      "hp": 34,
+      "attack": 13,
+      "defense": 8,
+      "damage": [
+        6,
+        10
+      ],
+      "speed": 8,
+      "initiative": 10,
+      "growth": 4,
+      "cost": {
+        "gold": 505
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "charge",
+          "bonus": 0.4
+        },
+        {
+          "id": "sunder",
+          "amount": 2,
+          "cap": 6
+        }
+      ],
+      "terrain": {},
+      "desc": "elf lancer astride a lean six-legged black cave lizard, violet saddlecloth.",
+      "upgrade_of": "de_cave_lancer"
+    },
+    "de_veil_adept": {
+      "name": "Veil Adept",
+      "faction": "darkelf",
+      "tier": 5,
+      "role": "support",
+      "hp": 25,
+      "attack": 10,
+      "defense": 6,
+      "damage": [
+        4,
+        6
+      ],
+      "speed": 5,
+      "initiative": 9,
+      "growth": 3,
+      "cost": {
+        "gold": 345,
+        "gems": 1
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "ranged"
+        },
+        {
+          "id": "curse",
+          "damage_mult": 0.75
+        }
+      ],
+      "terrain": {},
+      "desc": "severe grey-skinned elf sorceress in layered violet robes with single amethyst staff.",
+      "upgrade": "de_mirror_witch"
+    },
+    "de_mirror_witch": {
+      "name": "Mirror Witch",
+      "faction": "darkelf",
+      "tier": 5,
+      "role": "support",
+      "hp": 27,
+      "attack": 11,
+      "defense": 7,
+      "damage": [
+        4,
+        7
+      ],
+      "speed": 5,
+      "initiative": 10,
+      "growth": 3,
+      "cost": {
+        "gold": 605,
+        "gems": 1
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "ranged"
+        },
+        {
+          "id": "curse",
+          "damage_mult": 0.75
+        },
+        {
+          "id": "fear",
+          "morale": 1
+        }
+      ],
+      "terrain": {},
+      "desc": "severe grey-skinned elf sorceress in layered violet robes with single amethyst staff.",
+      "upgrade_of": "de_veil_adept"
+    },
+    "de_silk_stalker": {
+      "name": "Silk Stalker",
+      "faction": "darkelf",
+      "tier": 6,
+      "role": "heavy",
+      "hp": 76,
+      "attack": 15,
+      "defense": 14,
+      "damage": [
+        11,
+        16
+      ],
+      "speed": 4,
+      "initiative": 5,
+      "growth": 3,
+      "cost": {
+        "gold": 760,
+        "gems": 1
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "poison",
+          "fraction": 0.2
+        }
+      ],
+      "terrain": {},
+      "desc": "large threatening black cave spider with eight clearly separated legs, purple abdominal markings.",
+      "upgrade": "de_widow_matriarch"
+    },
+    "de_widow_matriarch": {
+      "name": "Widow Matriarch",
+      "faction": "darkelf",
+      "tier": 6,
+      "role": "heavy",
+      "hp": 84,
+      "attack": 17,
+      "defense": 16,
+      "damage": [
+        12,
+        18
+      ],
+      "speed": 4,
+      "initiative": 6,
+      "growth": 3,
+      "cost": {
+        "gold": 1035,
+        "gems": 1
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "poison",
+          "fraction": 0.2
+        },
+        {
+          "id": "life_drain",
+          "fraction": 0.3
+        }
+      ],
+      "terrain": {},
+      "desc": "large threatening black cave spider with eight clearly separated legs, purple abdominal markings.",
+      "upgrade_of": "de_silk_stalker"
+    },
+    "de_obsidian_guard": {
+      "name": "Obsidian Guard",
+      "faction": "darkelf",
+      "tier": 7,
+      "role": "heavy",
+      "hp": 185,
+      "attack": 19,
+      "defense": 16,
+      "damage": [
+        20,
+        32
+      ],
+      "speed": 5,
+      "initiative": 6,
+      "growth": 1,
+      "cost": {
+        "gold": 2105,
+        "gems": 2
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "unwavering"
+        }
+      ],
+      "terrain": {},
+      "desc": "towering elf executioner in broad black plate with a heavy two-handed axe.",
+      "upgrade": "de_onyx_executioner"
+    },
+    "de_onyx_executioner": {
+      "name": "Onyx Executioner",
+      "faction": "darkelf",
+      "tier": 7,
+      "role": "heavy",
+      "hp": 207,
+      "attack": 21,
+      "defense": 18,
+      "damage": [
+        22,
+        35
+      ],
+      "speed": 5,
+      "initiative": 7,
+      "growth": 1,
+      "cost": {
+        "gold": 2325,
+        "gems": 2
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "reach"
+        },
+        {
+          "id": "unwavering"
+        },
+        {
+          "id": "taunt",
+          "chance": 0.5
+        },
+        {
+          "id": "riposte"
+        },
+        {
+          "id": "aura",
+          "defense": 2,
+          "attack": 1
+        }
+      ],
+      "terrain": {},
+      "desc": "towering elf executioner in broad black plate with a heavy two-handed axe.",
+      "upgrade_of": "de_obsidian_guard"
+    },
+    "de_gloam_drake": {
+      "name": "Gloam Drake",
+      "faction": "darkelf",
+      "tier": 8,
+      "role": "flyer",
+      "hp": 143,
+      "attack": 24,
+      "defense": 17,
+      "damage": [
+        26,
+        42
+      ],
+      "speed": 9,
+      "initiative": 10,
+      "growth": 1,
+      "cost": {
+        "gold": 2400,
+        "gems": 2
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "flying"
+        }
+      ],
+      "terrain": {},
+      "desc": "four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings.",
+      "upgrade": "de_eclipse_dragon"
+    },
+    "de_eclipse_dragon": {
+      "name": "Eclipse Dragon",
+      "faction": "darkelf",
+      "tier": 8,
+      "role": "flyer",
+      "hp": 159,
+      "attack": 26,
+      "defense": 19,
+      "damage": [
+        29,
+        46
+      ],
+      "speed": 9,
+      "initiative": 11,
+      "growth": 1,
+      "cost": {
+        "gold": 2820,
+        "gems": 2
+      },
+      "morale": 0,
+      "tags": [
+        "darkelf"
+      ],
+      "abilities": [
+        {
+          "id": "flying"
+        },
+        {
+          "id": "life_drain",
+          "fraction": 0.4
+        },
+        {
+          "id": "fear",
+          "morale": 2
+        }
+      ],
+      "terrain": {},
+      "desc": "four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings.",
+      "upgrade_of": "de_gloam_drake"
+    }
+  }
+}

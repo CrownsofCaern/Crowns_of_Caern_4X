@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/darkelf-creatures.png",
+  "source_sheet_sha256": "1e763406818c8e4c62c764cb79fc560c92098617f1ac064fa8835edae9699600",
+  "size": [
+    1261,
+    1247
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-creatures.txt",
+  "prompt_sha256": "6affe4e1b4533bfa61d3fe6b864ba6b9c701f4f1eca7ffb578b683dd833d78a2",
+  "conditioning": [
+    "assets/source/batches/hollow-001/source.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/hollow-001/source.png": "c0a65504208fe13a5820f9e42439ee1d7ebaa5009c5ead6d0d49e9f4d65e03d1"
+  },
+  "asset_id": "creature_de_blood_scythe",
+  "row": 1,
+  "column": 1,
+  "extraction": {
+    "row_bounds": [
+      312,
+      617
+    ],
+    "column_cuts": [
+      0,
+      312,
+      600,
+      910,
+      1261
+    ],
+    "bent_seams": {
+      "3": {
+        "runs": [
+          [
+            0,
+            106,
+            946
+          ],
+          [
+            106,
+            108,
+            945
+          ],
+          [
+            108,
+            111,
+            944
+          ],
+          [
+            111,
+            151,
+            946
+          ],
+          [
+            151,
+            152,
+            945
+          ],
+          [
+            152,
+            153,
+            943
+          ],
+          [
+            153,
+            154,
+            942
+          ],
+          [
+            154,
+            155,
+            940
+          ],
+          [
+            155,
+            163,
+            939
+          ],
+          [
+            163,
+            164,
+            937
+          ],
+          [
+            164,
+            165,
+            935
+          ],
+          [
+            165,
+            166,
+            933
+          ],
+          [
+            166,
+            167,
+            931
+          ],
+          [
+            167,
+            168,
+            929
+          ],
+          [
+            168,
+            169,
+            928
+          ],
+          [
+            169,
+            170,
+            927
+          ],
+          [
+            170,
+            171,
+            926
+          ],
+          [
+            171,
+            172,
+            925
+          ],
+          [
+            172,
+            173,
+            924
+          ],
+          [
+            173,
+            174,
+            923
+          ],
+          [
+            174,
+            175,
+            922
+          ],
+          [
+            175,
+            176,
+            921
+          ],
+          [
+            176,
+            177,
+            920
+          ],
+          [
+            177,
+            178,
+            919
+          ],
+          [
+            178,
+            180,
+            918
+          ],
+          [
+            180,
+            181,
+            917
+          ],
+          [
+            181,
+            182,
+            916
+          ],
+          [
+            182,
+            184,
+            915
+          ],
+          [
+            184,
+            185,
+            914
+          ],
+          [
+            185,
+            188,
+            913
+          ],
+          [
+            188,
+            192,
+            912
+          ],
+          [
+            192,
+            193,
+            914
+          ],
+          [
+            193,
+            216,
+            915
+          ],
+          [
+            216,
+            236,
+            913
+          ],
+          [
+            236,
+            240,
+            914
+          ],
+          [
+            240,
+            242,
+            915
+          ],
+          [
+            242,
+            244,
+            916
+          ],
+          [
+            244,
+            269,
+            917
+          ],
+          [
+            269,
+            276,
+            916
+          ],
+          [
+            276,
+            277,
+            915
+          ],
+          [
+            277,
+            278,
+            914
+          ],
+          [
+            278,
+            279,
+            913
+          ],
+          [
+            279,
+            281,
+            912
+          ],
+          [
+            281,
+            284,
+            911
+          ],
+          [
+            284,
+            292,
+            910
+          ],
+          [
+            292,
+            293,
+            911
+          ],
+          [
+            293,
+            294,
+            913
+          ],
+          [
+            294,
+            295,
+            915
+          ],
+          [
+            295,
+            305,
+            916
+          ]
+        ]
+      }
+    },
+    "warnings": [],
+    "row_extraction": {
+      "bounds": [
+        312,
+        617
+      ],
+      "top_seam": 312,
+      "bottom_seam": 617
+    }
+  },
+  "source_sha256": "9e21cd024af342c49a6bee3166ddbbb68824090ade0f85cb20aa0e1293749d87",
+  "native_size": [
+    128,
+    128
+  ],
+  "processing": "Adaptive transparent gutters; alpha below 64 cleared; palette preserved",
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

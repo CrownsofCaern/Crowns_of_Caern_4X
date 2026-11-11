@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1536,
+    1024
+  ],
+  "review": "Mechanical grid extraction; design, silhouette and engine review pending",
+  "assets": [
+    {
+      "id": "encounter_ashen_saint_shrine",
+      "prompt": "Shrine of the Ash-Choked Saint: A soot-blackened reliquary leans against a dead oak. Inside, a saint's skull still wears a crown of tarnished silver, and the air tastes of old smoke.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_dispossessed_column",
+      "prompt": "Column of the Dispossessed: Carts piled with bedding, grandmothers, a goat. Burned-out villagers trudge west, away from the red sky. Their eyes go to your banners, then to the ground.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        384,
+        0,
+        768,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_overturned_wagon",
+      "prompt": "Overturned Supply Wagon: A quartermaster's wagon lies on its side, axle snapped, oxen gone. Crates are still lashed to the bed. The mud around it is churned by too many paws.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        768,
+        0,
+        1152,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_blind_cartographer",
+      "prompt": "The Blind Cartographer: An old man with milk-white eyes sits among rolled maps, inking coastlines by touch. 'I remember every road,' he says, 'for a price.'",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        1152,
+        0,
+        1536,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_free_company_camp",
+      "prompt": "Free Company Encampment: Tents patched with captured banners. Slingers dice around a fire while their captain, a scarred woman with one ear, sizes up your army.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        256,
+        384,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_drowned_chapel",
+      "prompt": "The Drowned Chapel: Only the bell tower rises from the black water. Something silver glints in the drowned nave, and the reeds whisper with no wind.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        384,
+        256,
+        768,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_barrow_field",
+      "prompt": "Field of Unquiet Barrows: Grave mounds in rows too straight to be natural, each capped with a rusted helm. The ground is cold even under the sun.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        768,
+        256,
+        1152,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_ash_pit_champion",
+      "prompt": "Champion of the Ash Pit: A fighting pit ringed with spikes and cheering wretches. Its champion, a hulking brute in a branded iron mask, beats his chest at you.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        1152,
+        256,
+        1536,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_ember_rift",
+      "prompt": "Ember Rift: The ground splits into a glowing seam. Things with too many joints crawl at its lip, and the brimstone stink makes the horses scream.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        512,
+        384,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_thornwolf_den",
+      "prompt": "Thornwolf Den: Bones and bramble mark the mouth of a hollow under the roots. Yellow eyes watch from the dark; the pack has not decided what you are.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        384,
+        512,
+        768,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_brigand_toll",
+      "prompt": "Brigand Toll: A chain across the bridge, a brazier and a dozen slingers on the far bank. 'Road's ours,' their leader calls. 'Pay up or swim.'",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        768,
+        512,
+        1152,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_dying_courier",
+      "prompt": "The Dying Courier: A rider slumped against a milestone, an arrow through his side and a sealed satchel clutched to his chest. 'The pass at Harrowgate,' he whispers. 'They must know.'",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        1152,
+        512,
+        1536,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_hall_of_echoes",
+      "prompt": "Hall of Echoes: A roofless hall where every carved word is repeated back a heartbeat late. Generations of commanders have cut their lessons into its walls.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        768,
+        384,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "place_lockstone",
+      "prompt": "The Lockstone: ancient massive metal-bound stone seal with dwarf-forged brass clamps and huge severed root braces, an ominous thin ember crack, compact monument",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        384,
+        768,
+        768,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "place_saint_orrins_rest",
+      "prompt": "Saint Orrin's Rest: ruined Concord chapel yard with Wren tower heraldry, a hanging iron cage and cold green grave lights, half sunken flagstones",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        768,
+        768,
+        1152,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "place_elderwold_stumps",
+      "prompt": "Elderwold: cluster of gigantic felled ancient tree stumps and cut root buttresses, dead thorn and moss, hollow roots faintly glowing",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        1152,
+        768,
+        1536,
+        1024
+      ],
+      "keep_components": true
+    }
+  ]
+}

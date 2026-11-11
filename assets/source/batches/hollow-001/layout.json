@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1261,
+    1247
+  ],
+  "assets": [
+    {
+      "id": "creature_shambler",
+      "crop_xyxy": [
+        44,
+        54,
+        271,
+        297
+      ]
+    },
+    {
+      "id": "creature_rotting_shambler",
+      "crop_xyxy": [
+        340,
+        19,
+        604,
+        298
+      ]
+    },
+    {
+      "id": "creature_marrow_archer",
+      "crop_xyxy": [
+        678,
+        26,
+        908,
+        299
+      ]
+    },
+    {
+      "id": "creature_marrow_deadeye",
+      "crop_xyxy": [
+        977,
+        13,
+        1236,
+        299
+      ]
+    },
+    {
+      "id": "creature_gravecrawler",
+      "crop_xyxy": [
+        21,
+        387,
+        293,
+        568
+      ]
+    },
+    {
+      "id": "creature_gravecrawler_brood",
+      "crop_xyxy": [
+        323,
+        352,
+        617,
+        583
+      ]
+    },
+    {
+      "id": "creature_wailing_shade",
+      "crop_xyxy": [
+        648,
+        339,
+        906,
+        597
+      ]
+    },
+    {
+      "id": "creature_dirge_shade",
+      "crop_xyxy": [
+        950,
+        319,
+        1244,
+        610
+      ]
+    },
+    {
+      "id": "creature_corpse_weaver",
+      "crop_xyxy": [
+        20,
+        623,
+        249,
+        891
+      ]
+    },
+    {
+      "id": "creature_charnel_weaver",
+      "crop_xyxy": [
+        327,
+        610,
+        589,
+        894
+      ]
+    },
+    {
+      "id": "creature_gibbet_knight",
+      "crop_xyxy": [
+        645,
+        614,
+        886,
+        893
+      ]
+    },
+    {
+      "id": "creature_gibbet_lord",
+      "crop_xyxy": [
+        939,
+        608,
+        1230,
+        899
+      ]
+    },
+    {
+      "id": "creature_charnel_hulk",
+      "crop_xyxy": [
+        10,
+        948,
+        283,
+        1219
+      ]
+    },
+    {
+      "id": "creature_charnel_behemoth",
+      "crop_xyxy": [
+        306,
+        923,
+        610,
+        1222
+      ]
+    },
+    {
+      "id": "creature_rotwing_leviathan",
+      "crop_xyxy": [
+        611,
+        942,
+        890,
+        1223
+      ]
+    },
+    {
+      "id": "creature_rotwing_sovereign",
+      "crop_xyxy": [
+        909,
+        917,
+        1248,
+        1237
+      ]
+    }
+  ],
+  "review": "Automatically staged isolated silhouettes; visual review pending"
+}

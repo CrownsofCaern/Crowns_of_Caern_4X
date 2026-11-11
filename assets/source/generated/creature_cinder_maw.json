@@ -1,0 +1,11 @@
+{
+  "batch": "ashen-maw-remake-001",
+  "source_sheet": "assets/source/batches/ashen-maw-remake-001/source.png",
+  "source_sheet_sha256": "3a3376578a3aa8abdda44d812dcfacbbf611cf9a79980f06b81be922c9294e9e",
+  "provider": "built-in image_gen",
+  "quality_status": "reviewed",
+  "crop": "equal half then alpha bounding box",
+  "source_sha256": "4b10b327294ee5b50dd6f9c06e3776af6bc513ba4ad72f625fe19123792b3a14",
+  "prompt_file": "assets/source/batches/ashen-maw-remake-001/prompt-still.txt",
+  "conditioning": "assets/source/batches/ashen-001/source.png"
+}

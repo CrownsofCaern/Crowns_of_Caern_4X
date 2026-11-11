@@ -1,0 +1,13 @@
+{
+  "_doc": "Shared prompt text for AI image generation (tools/assets/pipeline.py generate). Every prompt is: preamble + category line + the spec's own prompt + constraints. Keep it in sync with docs/ART_BIBLE.md.",
+  "preamble": "Original dark gothic fantasy pixel art sprite, slightly pixelated with strong dark outlines, detailed but readable at small size, ominous low-key lighting from the top left, muted desaturated palette with blood-red and ember accents. Dark fantasy, not cute and not cartoon horror.",
+  "categories": {
+    "creature": "Single full-body creature, three-quarter view facing right, standing on the ground, centred, whole silhouette visible.",
+    "hero": "Single mounted hero on the adventure map, three-quarter view facing right, centred.",
+    "object": "Single adventure-map object seen from a high three-quarter angle, centred.",
+    "structure": "Single fortified settlement seen from a high three-quarter angle, compact footprint, centred.",
+    "icon": "Single small inventory icon, centred, bold silhouette.",
+    "ui": "Flat UI frame texture, front view, no text."
+  },
+  "constraints": "Plain flat solid magenta (#ff00ff) background, no scenery, no text, no watermark, no border. Original design: do not imitate any existing game, franchise, logo or heraldry."
+}

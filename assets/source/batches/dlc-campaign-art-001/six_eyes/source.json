@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "journey_six_eyes",
+  "campaign": "six_eyes",
+  "chapter": "",
+  "usage": "journey",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/prompt.txt",
+  "prompt_sha256": "8872d980df66e6f54dd9de221fc1ec244060256d4a5e8dee5c567de27845e14f",
+  "conditioning": [
+    "assets/source/batches/world-atlas-001/source.png"
+  ],
+  "source_sha256": "49bbf46e74236b3690cca130444a3ec0939786d4a2a218b87dc35832a5a11a0e",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "engine_reviewed",
+  "processing": "Full resolution; no palette quantization or atlas downsampling",
+  "review_screenshot": "docs/art/production/dlc-campaign-art/six_eyes-journey.png"
+}

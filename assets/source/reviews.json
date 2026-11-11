@@ -1,0 +1,1406 @@
+{
+  "creature_shambler": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rotting_shambler": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_marrow_archer": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_marrow_deadeye": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_gravecrawler": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_gravecrawler_brood": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_wailing_shade": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_dirge_shade": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_corpse_weaver": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_charnel_weaver": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_gibbet_knight": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_gibbet_lord": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_charnel_hulk": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_charnel_behemoth": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rotwing_leviathan": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rotwing_sovereign": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_cinderling": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_seared_cinderling": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_scorchhound": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_hellmaw_hound": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_brimstone_hurler": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_brimstone_bombardier": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_flayer": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_flayer_exalted": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_ash_witch": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_ash_matriarch": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_gorgewing": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_gorgewing_matron": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_pyre_titan": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_pyre_sovereign": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_cinder_maw": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_maw_of_ruin": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_pike_militia": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_pike_veteran": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_longbowman": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_warbow_sergeant": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_shieldwarden": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_bulwark_sworn": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_lancer": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_oathbound_lancer": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_lightbearer": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_dawn_confessor": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_sunhawk_rider": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_sunhawk_paladin": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_bastion_colossus": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_citadel_colossus": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_iron_margrave": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_iron_sovereign": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_thorn_skulker": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_thorn_stalker": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_barkhide_warden": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_barkhide_sentinel": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_briar_huntress": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_briar_deadshot": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rootbinder": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rootbinder_elder": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_gloomwing_strix": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_gloomwing_shrike": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_spore_lobber": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_plague_lobber": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rootbound_ancient": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rootbound_patriarch": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_wyrdthorn_mother": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_wyrdthorn_matriarch": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_forge_thrall": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_ironclad_thrall": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rivet_crossbowman": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rivet_arbalist": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_anvil_guard": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_anvil_sworn": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_slag_golem": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_furnace_golem": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_cinder_engineer": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_master_engineer": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_ironhoof_charger": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_ironhoof_warboar": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_thunder_bombard": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_doom_bombard": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_molten_engine": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_worldforge_engine": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_clan_raider": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_blooded_raider": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rimefang_hound": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rimefang_packleader": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_oathless_berserker": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_bloodfrenzy_berserker": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_tusk_rider": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_tusk_chieftain": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_frost_shaman": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_storm_shaman": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rimeback_aurochs": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_rimeback_stampede": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_cairn_giant": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_cairn_warlord": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_winter_wyrm": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "creature_winter_wyrm_ancient": {
+    "status": "design_approved_pending_engine_qc",
+    "approved_by": "user",
+    "approval_date": "2026-11-07",
+    "scope": "User approved all six source sheets; native and engine QC remain pending."
+  },
+  "cursor_default": {
+    "status": "validated_native_and_hotspot",
+    "source": "tools/assets/crowns_of_cinder_assets/ui_art.py:cursor",
+    "checks": [
+      "40x40 native size",
+      "fixed 2,2 hotspot",
+      "native atlas contact sheet"
+    ]
+  },
+  "cursor_move": {
+    "status": "validated_native_and_hotspot",
+    "source": "tools/assets/crowns_of_cinder_assets/ui_art.py:cursor",
+    "checks": [
+      "40x40 native size",
+      "fixed 2,2 hotspot",
+      "native atlas contact sheet"
+    ]
+  },
+  "cursor_town": {
+    "status": "validated_native_and_hotspot",
+    "source": "tools/assets/crowns_of_cinder_assets/ui_art.py:cursor",
+    "checks": [
+      "40x40 native size",
+      "fixed 2,2 hotspot",
+      "native atlas contact sheet"
+    ]
+  },
+  "cursor_attack": {
+    "status": "validated_native_and_hotspot",
+    "source": "tools/assets/crowns_of_cinder_assets/ui_art.py:cursor",
+    "checks": [
+      "40x40 native size",
+      "fixed 2,2 hotspot",
+      "native atlas contact sheet"
+    ]
+  },
+  "cursor_pickup": {
+    "status": "validated_native_and_hotspot",
+    "source": "tools/assets/crowns_of_cinder_assets/ui_art.py:cursor",
+    "checks": [
+      "40x40 native size",
+      "fixed 2,2 hotspot",
+      "native atlas contact sheet"
+    ]
+  },
+  "cursor_encounter": {
+    "status": "validated_native_and_hotspot",
+    "source": "tools/assets/crowns_of_cinder_assets/ui_art.py:cursor",
+    "checks": [
+      "40x40 native size",
+      "fixed 2,2 hotspot",
+      "native atlas contact sheet"
+    ]
+  },
+  "cursor_select": {
+    "status": "validated_native_and_hotspot",
+    "source": "tools/assets/crowns_of_cinder_assets/ui_art.py:cursor",
+    "checks": [
+      "40x40 native size",
+      "fixed 2,2 hotspot",
+      "native atlas contact sheet"
+    ]
+  },
+  "cursor_blocked": {
+    "status": "validated_native_and_hotspot",
+    "source": "tools/assets/crowns_of_cinder_assets/ui_art.py:cursor",
+    "checks": [
+      "40x40 native size",
+      "fixed 2,2 hotspot",
+      "native atlas contact sheet"
+    ]
+  },
+  "cursor_wait": {
+    "status": "validated_native_and_hotspot",
+    "source": "tools/assets/crowns_of_cinder_assets/ui_art.py:cursor",
+    "checks": [
+      "40x40 native size",
+      "fixed 2,2 hotspot",
+      "native atlas contact sheet"
+    ]
+  },
+  "ui_panel_concord": {
+    "status": "validated_in_godot",
+    "checks": [
+      "native source and nine-slice review",
+      "HUD and hero-screen rendering",
+      "accent contrast >= 4.5"
+    ],
+    "screenshots": [
+      "docs/art/production/ui/concord-hud.png",
+      "docs/art/production/ui/concord-hero.png"
+    ]
+  },
+  "ui_panel_ashen": {
+    "status": "validated_in_godot",
+    "checks": [
+      "native source and nine-slice review",
+      "HUD and hero-screen rendering",
+      "accent contrast >= 4.5"
+    ],
+    "screenshots": [
+      "docs/art/production/ui/ashen-hud.png",
+      "docs/art/production/ui/ashen-hero.png"
+    ]
+  },
+  "ui_panel_hollow": {
+    "status": "validated_in_godot",
+    "checks": [
+      "native source and nine-slice review",
+      "HUD and hero-screen rendering",
+      "accent contrast >= 4.5"
+    ],
+    "screenshots": [
+      "docs/art/production/ui/hollow-hud.png",
+      "docs/art/production/ui/hollow-hero.png"
+    ]
+  },
+  "ui_panel_thornwood": {
+    "status": "validated_in_godot",
+    "checks": [
+      "native source and nine-slice review",
+      "HUD and hero-screen rendering",
+      "accent contrast >= 4.5"
+    ],
+    "screenshots": [
+      "docs/art/production/ui/thornwood-hud.png",
+      "docs/art/production/ui/thornwood-hero.png"
+    ]
+  },
+  "ui_panel_forge": {
+    "status": "validated_in_godot",
+    "checks": [
+      "native source and nine-slice review",
+      "HUD and hero-screen rendering",
+      "accent contrast >= 4.5"
+    ],
+    "screenshots": [
+      "docs/art/production/ui/forge-hud.png",
+      "docs/art/production/ui/forge-hero.png"
+    ]
+  },
+  "ui_panel_frostmarch": {
+    "status": "validated_in_godot",
+    "checks": [
+      "native source and nine-slice review",
+      "HUD and hero-screen rendering",
+      "accent contrast >= 4.5"
+    ],
+    "screenshots": [
+      "docs/art/production/ui/frostmarch-hud.png",
+      "docs/art/production/ui/frostmarch-hero.png"
+    ]
+  },
+  "resource_gold": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "resource_wood": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "resource_ore": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "resource_mercury": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "resource_sulfur": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "resource_crystal": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "resource_gems": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "object_chest": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "ui_resource_gold": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "ui_resource_wood": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "ui_resource_ore": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "ui_resource_mercury": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "ui_resource_sulfur": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "ui_resource_crystal": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "ui_resource_gems": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/resource-pickups/README.md",
+    "scope": "Native, map scale, HUD/cost sizes and real Godot review; pending human artistic approval"
+  },
+  "creature_de_gloam_spear": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_dusk_sentinel": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_shardbow": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_venom_arbalist": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_knifedancer": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_blood_scythe": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_cave_lancer": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_dread_rider": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_veil_adept": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_mirror_witch": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_silk_stalker": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_widow_matriarch": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_obsidian_guard": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_onyx_executioner": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_gloam_drake": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_de_eclipse_dragon": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "hero_de_dreadmarshal": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "hero_de_veilseer": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "hero_de_nightstalker": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "town_darkelf_1": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "town_darkelf_2": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "town_darkelf_3": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "town_darkelf": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_hall": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_market": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_yard": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_tavern": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_masons": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_palisade": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_keep": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_bastion": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_dw1": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_dw2": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_dw3": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_dw4": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_dw5": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_dw6": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_dw7": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_dw8": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_up1": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_up2": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_up3": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_up4": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_up5": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_up6": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_up7": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_up8": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_court": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_assembly": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_exchequer": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_drill": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_fletchers": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_de_remount": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_darkelf_crest": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_darkelf_artifact": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_darkelf_ability": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_darkelf_cursor": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_darkelf_obelisk": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_darkelf_portal": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_darkelf_shrine": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_brine_spear": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_reef_guard": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_hookcaster": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_abyss_harpooner": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_shellback": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_barnacle_bulwark": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_mire_crab": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_siege_carapace": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_lantern_acolyte": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_drowned_oracle": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_tide_mauler": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_trench_reaver": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_coil_serpent": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_storm_leviathan": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_trench_titan": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "creature_fm_abyss_sovereign": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "hero_fm_tidemarshal": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "hero_fm_deep_oracle": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "hero_fm_reef_hunter": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "town_fishmen_1": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "town_fishmen_2": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "town_fishmen_3": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "town_fishmen": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_hall": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_market": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_yard": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_tavern": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_masons": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_palisade": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_keep": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_bastion": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_dw1": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_dw2": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_dw3": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_dw4": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_dw5": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_dw6": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_dw7": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_dw8": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_up1": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_up2": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_up3": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_up4": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_up5": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_up6": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_up7": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_up8": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_court": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_assembly": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_exchequer": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_drill": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_fletchers": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "building_fm_remount": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_fishmen_crest": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_fishmen_artifact": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_fishmen_ability": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_fishmen_cursor": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_fishmen_obelisk": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_fishmen_portal": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  },
+  "dlc_fishmen_shrine": {
+    "status": "rendered_candidate",
+    "review": "docs/art/production/dlc-factions/README.md",
+    "note": "Native atlas and real Godot render checked; human artistic approval pending"
+  }
+}

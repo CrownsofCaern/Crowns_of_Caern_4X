@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "assets": [
+    {
+      "id": "creature_pike_militia",
+      "crop_xyxy": [
+        94,
+        12,
+        232,
+        306
+      ]
+    },
+    {
+      "id": "creature_pike_veteran",
+      "crop_xyxy": [
+        403,
+        11,
+        563,
+        306
+      ]
+    },
+    {
+      "id": "creature_longbowman",
+      "crop_xyxy": [
+        695,
+        47,
+        890,
+        306
+      ]
+    },
+    {
+      "id": "creature_warbow_sergeant",
+      "crop_xyxy": [
+        998,
+        37,
+        1221,
+        306
+      ]
+    },
+    {
+      "id": "creature_shieldwarden",
+      "crop_xyxy": [
+        81,
+        377,
+        243,
+        604
+      ]
+    },
+    {
+      "id": "creature_bulwark_sworn",
+      "crop_xyxy": [
+        373,
+        366,
+        570,
+        604
+      ]
+    },
+    {
+      "id": "creature_lancer",
+      "crop_xyxy": [
+        661,
+        334,
+        874,
+        604
+      ]
+    },
+    {
+      "id": "creature_oathbound_lancer",
+      "crop_xyxy": [
+        966,
+        328,
+        1204,
+        604
+      ]
+    },
+    {
+      "id": "creature_lightbearer",
+      "crop_xyxy": [
+        85,
+        660,
+        231,
+        897
+      ]
+    },
+    {
+      "id": "creature_dawn_confessor",
+      "crop_xyxy": [
+        370,
+        630,
+        560,
+        897
+      ]
+    },
+    {
+      "id": "creature_sunhawk_rider",
+      "crop_xyxy": [
+        637,
+        654,
+        894,
+        899
+      ]
+    },
+    {
+      "id": "creature_sunhawk_paladin",
+      "crop_xyxy": [
+        930,
+        634,
+        1233,
+        900
+      ]
+    },
+    {
+      "id": "creature_bastion_colossus",
+      "crop_xyxy": [
+        43,
+        948,
+        273,
+        1221
+      ]
+    },
+    {
+      "id": "creature_citadel_colossus",
+      "crop_xyxy": [
+        344,
+        936,
+        604,
+        1221
+      ]
+    },
+    {
+      "id": "creature_iron_margrave",
+      "crop_xyxy": [
+        650,
+        972,
+        874,
+        1220
+      ]
+    },
+    {
+      "id": "creature_iron_sovereign",
+      "crop_xyxy": [
+        935,
+        923,
+        1216,
+        1222
+      ]
+    }
+  ],
+  "source_dimensions": [
+    1261,
+    1247
+  ],
+  "native_size": [
+    128,
+    128
+  ],
+  "review": "Bounds reviewed against full-sheet opaque components; includes full wings, pikes and banners."
+}

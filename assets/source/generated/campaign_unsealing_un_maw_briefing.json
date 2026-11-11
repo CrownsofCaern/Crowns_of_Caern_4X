@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_unsealing_un_maw_briefing",
+  "campaign": "unsealing",
+  "chapter": "un_maw",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_unsealing_un_maw_briefing.txt",
+  "prompt_sha256": "ccdca02ba9c260681c984cdb1f3e63233562103a2bc900108ddd2f16360f3beb",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "48e04307d0667e39ed4dc8a29a74a2f5563f86208c092d4cfd0d40a872051b7b",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "grid": [
+    3,
+    3
+  ],
+  "source_dimensions": [
+    1265,
+    1243
+  ],
+  "assets": [
+    {
+      "id": "ui_icon_day",
+      "crop_xyxy": [
+        105,
+        5,
+        332,
+        380
+      ]
+    },
+    {
+      "id": "ui_icon_town",
+      "crop_xyxy": [
+        430,
+        9,
+        832,
+        365
+      ]
+    },
+    {
+      "id": "ui_icon_hero",
+      "crop_xyxy": [
+        882,
+        17,
+        1214,
+        375
+      ]
+    },
+    {
+      "id": "ui_icon_attack",
+      "crop_xyxy": [
+        123,
+        403,
+        309,
+        809
+      ]
+    },
+    {
+      "id": "ui_icon_armor",
+      "crop_xyxy": [
+        450,
+        416,
+        813,
+        809
+      ]
+    },
+    {
+      "id": "ui_icon_defense",
+      "crop_xyxy": [
+        898,
+        406,
+        1194,
+        797
+      ]
+    },
+    {
+      "id": "ui_icon_move",
+      "crop_xyxy": [
+        66,
+        860,
+        382,
+        1219
+      ]
+    },
+    {
+      "id": "ui_icon_charm",
+      "crop_xyxy": [
+        489,
+        840,
+        767,
+        1227
+      ]
+    },
+    {
+      "id": "ui_icon_banner",
+      "crop_xyxy": [
+        885,
+        820,
+        1215,
+        1239
+      ]
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "generator": "ChatGPT image_gen (built-in)",
+  "date": "2026-11-07",
+  "assets": [
+    {
+      "path": "buildings/ashen-sheet-2.png",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "sha256": "5917797b5b1069133b8a411852eaf0ca682b23c9735bfdfe544c4a9903ae6806",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "buildings/ashen-sheet.png",
+      "size": [
+        1263,
+        1246
+      ],
+      "mode": "RGBA",
+      "sha256": "35cc23605941532973f935a547c0688fe68677318746113417a1516ad536c42d",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "buildings/forge-sheet-2.png",
+      "size": [
+        1285,
+        1224
+      ],
+      "mode": "RGBA",
+      "sha256": "66a80000765e2c12123b671169d121b2606fa20b55e40969e22c2c3b846f5bde",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "buildings/forge-sheet.png",
+      "size": [
+        1289,
+        1220
+      ],
+      "mode": "RGBA",
+      "sha256": "7f75cd8a8c11518a10e525d47258d0cff998a6d553a5e513a840ba22646f4db3",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "buildings/frostmarch-sheet-2.png",
+      "size": [
+        1261,
+        1247
+      ],
+      "mode": "RGBA",
+      "sha256": "0bee6684e32c7d7215b4738af62f67eb3008e65f6aee4745e1b4b4fc0381ff7a",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "buildings/frostmarch-sheet.png",
+      "size": [
+        1263,
+        1246
+      ],
+      "mode": "RGBA",
+      "sha256": "3368982a76581cc79531a5ee4036a6c1af5c106174bd22a032d45d9ff4b71b42",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "buildings/hollow-sheet-2.png",
+      "size": [
+        1278,
+        1230
+      ],
+      "mode": "RGBA",
+      "sha256": "e1e10e4a7338159b46a98e88e0dcf4098de531880c9947e968a8c0ac39aa62a6",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "buildings/hollow-sheet.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "65c66a8f51ebeef57a649c7a77159371b15371da0ccbaeed3b80888a7c59ef53",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "buildings/thornwood-sheet-2.png",
+      "size": [
+        1261,
+        1247
+      ],
+      "mode": "RGBA",
+      "sha256": "95b04e80ec3260fb138102a2708ebd89cf859aaa2d966cb2a57715cb7a266b48",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "buildings/thornwood-sheet.png",
+      "size": [
+        1263,
+        1245
+      ],
+      "mode": "RGBA",
+      "sha256": "b1eb9a7167ec1eb50ea4f71ee2c2b7c965ee9b7cc77c3027356d0a4200530c7c",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/ashwinter-opening.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "c31f582c811c1818cba177d0342dcf1230ef28614d2781f441ac707b38ad7338",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/ashwinter-storyboard.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "7ef2eb23242cde826c5404b6eb1f11f0f779ee906a82d3fcb29f963afd9ed653",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/briar_oath-opening.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "7975c8cad8195fc359822b1caffd327d7f736c7a9ba862cb67efc5426e1fd74a",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/briar_oath-storyboard.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "fe744f6929222954a860c085a9bace58f6b2cca9b14290edb0a4baf3e72c394a",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/pale_inheritance-opening.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "2ffcc4002031967fa9a4c975b5e1989eb0615752aa144c7b53697675e6553e2e",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/pale_inheritance-storyboard.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "55a100d1fb0729d883ea84321fb1b47c296e09b7a5d8d32bcc5c297f2ff7b0a1",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/shuttered_halls-opening.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "da7d5a472cd5458e71e4ad3443b7820dbe915b0d6013eaa210a7fec3518d11b2",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/shuttered_halls-storyboard.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "0020850be0609532584de99ee1f357897481ba188f2c8ddea2a0feb82124d505",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/unsealing-opening.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "6d34b8d81b3b243066fc5dba7de02a2e95457b566e379db63c91d204391acf40",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "campaigns/unsealing-storyboard.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "516c52bbb20690b25a009d7651ea2efed5f28482df3ade6649ac33b438251abf",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "palettes/equipment.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "39f5d84adff63e24c9bc47460b635d729b221771c91833c6e39a3af292193837",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "palettes/ground.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "9e41110d3d50fbfff1431a4eefddb8d4c8655c0c6170d27c50f176be3be6c41e",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "palettes/sites.png",
+      "size": [
+        1292,
+        1218
+      ],
+      "mode": "RGBA",
+      "sha256": "3815c30aca2500d557e75ddd5121e431c79b2fefbdd94001ae51fb9c479aefaf",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "towns/ashen-foundation.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "c6a648c6b70b1270682def868fc58b87b4a9bd50d3e020afde12601aef96ee23",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "towns/forge-foundation.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "183cc855c005a5ea2bed014534909c6ba9285397cc6c7dcc2f0dc31256e387ee",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "towns/frostmarch-foundation.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "73ec9b2b897d505f1a3916c79adf3be52c5b88d195f0104abbe31510e4c1009d",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "towns/hollow-foundation.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "5cdf528f8d10557113e19e93ae9dfdd03e55e22041cc735f79cfedc9e3114572",
+      "status": "source_concept_pending_review"
+    },
+    {
+      "path": "towns/thornwood-foundation.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "50f9aea7a6214044297906fbdcaf360097e86850c2981c7cf976c5b5c994f913",
+      "status": "source_concept_pending_review"
+    }
+  ]
+}

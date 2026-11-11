@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_drowned_oath_do_one_shoal_briefing",
+  "campaign": "drowned_oath",
+  "chapter": "do_one_shoal",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.drowned_oath",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_one_shoal-prompt.txt",
+  "prompt_sha256": "4ce163a2c35511454205f842895a2e4f13f7de11d4447b3ac1265b42bcbb018e",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "96d28b96ce2bf56b686b7813592b552887b18d005d35bfeb1b9d8bbdec53c4ee",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

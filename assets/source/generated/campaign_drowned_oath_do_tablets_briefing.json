@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen (dlc-factions-001 foundation painting, reused)",
+  "id": "campaign_drowned_oath_do_tablets_briefing",
+  "usage": "briefing",
+  "source_of_copy": "assets/source/batches/dlc-factions-001/fishmen-foundation.png",
+  "source_sha256": "86a7777fb6f099aa814ea852336fd85f2cdbdee606bb4a223fb3b6e207b491ff",
+  "prompt_file": "assets/source/batches/six-eyes-story-001/campaign_drowned_oath_do_tablets_briefing.txt",
+  "quality_status": "interim_reused_pending_generation",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-animation-001",
+  "source": "assets/source/batches/dlc-animation-001/dlc-fishmen-heroes-source.png",
+  "source_sha256": "5cd7abd385517693a2cb771113fc6fe78431e85a507e604c546b2dee024f41aa",
+  "size": [
+    1448,
+    1086
+  ],
+  "prompt_file": "assets/source/batches/dlc-animation-001/dlc-fishmen-heroes-prompt.txt",
+  "prompt_sha256": "d6d432338076510f0a5bd0d44bc33864da1953703531ef9ed67fb3a1f17cb976",
+  "conditioning": [
+    "assets/source/batches/dlc-animation-001/dlc-fishmen-heroes-reference.png"
+  ],
+  "reference_sha256": "f015caa00223a479b3fbbe00dbdef88090b15585c988faf81d87ab2ffb03615c",
+  "units": [
+    "fm_tidemarshal",
+    "fm_deep_oracle",
+    "fm_reef_hunter"
+  ],
+  "grid": [
+    4,
+    3
+  ],
+  "processing": "Existing animation extraction and registration; native 128px reference; 320x256 action canvas",
+  "quality_status": "animation_candidate"
+}

@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/thornwood-02-source.png",
+  "source_sha256": "290089db3eefeb127ee5cadd402cbc23883dbe0570bf1f3db998be2dbc030741",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/thornwood-02-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/thornwood-02-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "briar_huntress",
+    "briar_deadshot",
+    "rootbinder",
+    "rootbinder_elder"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "briar_huntress",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_briar_huntress.png",
+      "reference_sha256": "471d43adeb3bd343c48c5d79f9cc6a3cd62565f2fb69ee67edfadc6a6fb4a49a"
+    },
+    {
+      "id": "briar_deadshot",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_briar_deadshot.png",
+      "reference_sha256": "8f728e3e6c1959a2d5fe90c98378686c8569223075b0f43ac35ef1416aa52d67"
+    },
+    {
+      "id": "rootbinder",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbinder.png",
+      "reference_sha256": "05194b1098662885cd1b3c8ac6295b096c8bf47e5e11301afe34905049350efd"
+    },
+    {
+      "id": "rootbinder_elder",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbinder_elder.png",
+      "reference_sha256": "3fe906075dee40de77f230987f451509ff76449878fb3301e9f2b5fdaf239d69"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

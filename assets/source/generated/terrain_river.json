@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "landscape-ground-001",
+  "source_sheet": "assets/source/batches/landscape-ground-001/source.png",
+  "source_sheet_sha256": "1cc1b385f465ded0b84c5f78bd144ea13884a411e5440433aa542639343beb6f",
+  "source_sha256": "5a7138c8f1c5502ba73dff6ba3ea22bd3a12368a8a30c2ca25fe56e54eefbd86",
+  "crop_xyxy": [
+    397,
+    0,
+    793,
+    396
+  ],
+  "prompt_file": "assets/source/batches/landscape-ground-001/prompt.txt",
+  "conditioning": "Approved Reignem Concord sheet; neutral sheets also conditioned on approved Hollow sheet",
+  "native_size": [
+    40,
+    40
+  ],
+  "quality_status": "pending_visual_review",
+  "isolation": "Full grid cell retained, including groups and disconnected effects"
+}

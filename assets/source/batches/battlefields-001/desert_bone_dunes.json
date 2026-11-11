@@ -1,0 +1,23 @@
+{
+  "id": "desert_bone_dunes",
+  "terrain": "desert",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/desert_bone_dunes.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "f3df0ca2535374a828c9e1ecf304305e9db2d9854919f9149259f45930b131e1",
+  "prompt_file": "assets/source/batches/battlefields-001/desert_bone_dunes.txt",
+  "prompt_sha256": "ddeb86a14b90a79c28e0a0d88a72fac28d5646f5dd5ec34d3c83aa07922f1f60",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/desert_bone_dunes-live.png",
+    "forecast": "docs/art/production/battlefields/desert_bone_dunes-forecast.png"
+  }
+}

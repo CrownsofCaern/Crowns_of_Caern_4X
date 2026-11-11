@@ -1,0 +1,2586 @@
+{
+  "_doc": "Creature sprites (map figures and portraits). One entry per creature in data/creatures.json. size is the native pixel grid; drawn 1:1 on the 40 px map (map_scale 1). source.kind 'pixel' = hand-authored grid in assets/specs/pixel/ (placeholder until a generated source exists in assets/source/generated/<id>.png); prompt feeds AI generation.",
+  "defaults": {
+    "category": "creature",
+    "atlas": "units",
+    "size": [
+      64,
+      64
+    ],
+    "palette": "master",
+    "outline": true,
+    "outline_weight": 1,
+    "anchor": "bottom_center",
+    "pose": "three-quarter view facing right, full body",
+    "export_scale": 1,
+    "map_scale": 1
+  },
+  "assets": [
+    {
+      "id": "creature_pike_militia",
+      "data": {
+        "type": "creature",
+        "id": "pike_militia"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/pike_militia.txt"
+      },
+      "prompt": "scarred human militiaman in a dented kettle helmet and padded navy gambeson, bracing a tall pike",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_longbowman",
+      "data": {
+        "type": "creature",
+        "id": "longbowman"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/longbowman.txt"
+      },
+      "prompt": "hooded human archer in a worn navy tabard drawing a tall yew longbow, quiver on the back",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_shieldwarden",
+      "data": {
+        "type": "creature",
+        "id": "shieldwarden"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/shieldwarden.txt"
+      },
+      "prompt": "heavily armoured human veteran in a great helm, behind a tall rectangular navy tower shield with a tarnished gold tower sign, sword raised",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_lancer",
+      "data": {
+        "type": "creature",
+        "id": "lancer"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/lancer.txt"
+      },
+      "prompt": "grim armoured knight on a barded warhorse with navy caparison, couched lance with a pennant",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_lightbearer",
+      "data": {
+        "type": "creature",
+        "id": "lightbearer"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/lightbearer.txt"
+      },
+      "prompt": "stern hooded priest in ivory robes with navy trim carrying a lantern staff that burns with pale light",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_sunhawk_rider",
+      "data": {
+        "type": "creature",
+        "id": "sunhawk_rider"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/sunhawk_rider.txt"
+      },
+      "prompt": "armoured rider on a giant tawny hawk with spread wings and hooked beak",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_bastion_colossus",
+      "data": {
+        "type": "creature",
+        "id": "bastion_colossus"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/bastion_colossus.txt"
+      },
+      "prompt": "massive stone-and-iron guardian construct with a slit visor glowing like a forge, rune cracks across its chest",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_cinderling",
+      "data": {
+        "type": "creature",
+        "id": "cinderling"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/cinderling.txt"
+      },
+      "prompt": "small hunched demon with charcoal skin split by glowing lava seams, a crown of flame, jagged maw and too-thin limbs",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_scorchhound",
+      "data": {
+        "type": "creature",
+        "id": "scorchhound"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/scorchhound.txt"
+      },
+      "prompt": "skinless demonic canine hunting hound with long wolf muzzle, pointed ears, deep ribcage, high shoulders, tucked waist, digitigrade hocks and four normal dog paws; red sinew, blackened hide and a localized burning neck mane; molten jaws; one head and a long whip tail",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_brimstone_hurler",
+      "data": {
+        "type": "creature",
+        "id": "brimstone_hurler"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/brimstone_hurler.txt"
+      },
+      "prompt": "hulking blood-red demon heaving a burning boulder above its horned head",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_flayer",
+      "data": {
+        "type": "creature",
+        "id": "flayer"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/flayer.txt"
+      },
+      "prompt": "gaunt flayed demon with an elongated eyeless skull and scythe-like bone blades instead of forearms",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_ash_witch",
+      "data": {
+        "type": "creature",
+        "id": "ash_witch"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/ash_witch.txt"
+      },
+      "prompt": "hunched demonic witch in ragged ash-grey robes, horned bone mask with burning eyes, staff topped with an ember",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_gorgewing",
+      "data": {
+        "type": "creature",
+        "id": "gorgewing"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/gorgewing.txt"
+      },
+      "prompt": "bat-winged demon that is mostly a vertical toothed maw with a cluster of yellow eyes, small dangling claws",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_pyre_titan",
+      "data": {
+        "type": "creature",
+        "id": "pyre_titan"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/pyre_titan.txt"
+      },
+      "prompt": "towering giant of cracked obsidian and magma with curled horns and molten fists",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_thornwolf",
+      "data": {
+        "type": "creature",
+        "id": "thornwolf"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/thornwolf.txt"
+      },
+      "prompt": "gaunt grey wolf with brambles and thorns growing from its spine, snarling",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_bog_lurker",
+      "data": {
+        "type": "creature",
+        "id": "bog_lurker"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/bog_lurker.txt"
+      },
+      "prompt": "hunched amphibian swamp brute covered in moss with a wide toothy mouth and long webbed arms",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_crag_slinger",
+      "data": {
+        "type": "creature",
+        "id": "crag_slinger"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/crag_slinger.txt"
+      },
+      "prompt": "wiry grey-skinned crag dweller in patched hides whirling a sling",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_anvil_guard",
+      "data": {
+        "type": "creature",
+        "id": "anvil_guard"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/anvil_guard.txt"
+      },
+      "prompt": "Hammer-and-slab warriors who fight like the forge itself.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_barkhide_warden",
+      "data": {
+        "type": "creature",
+        "id": "barkhide_warden"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/barkhide_warden.txt"
+      },
+      "prompt": "Wardens whose skin has grown into armour; they hold the treeline for the archers.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_briar_huntress",
+      "data": {
+        "type": "creature",
+        "id": "briar_huntress"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/briar_huntress.txt"
+      },
+      "prompt": "Hunters of the deep wood with horn bows and thorn-tipped arrows.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_cairn_giant",
+      "data": {
+        "type": "creature",
+        "id": "cairn_giant"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/cairn_giant.txt"
+      },
+      "prompt": "Grey giants who sleep under burial cairns and wake hungry.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_charnel_hulk",
+      "data": {
+        "type": "creature",
+        "id": "charnel_hulk"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/charnel_hulk.txt"
+      },
+      "prompt": "A mountain of stitched corpses that keeps knitting itself together.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_cinder_engineer",
+      "data": {
+        "type": "creature",
+        "id": "cinder_engineer"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/cinder_engineer.txt"
+      },
+      "prompt": "Artificers with smoking toolkits who patch flesh and iron alike.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_clan_raider",
+      "data": {
+        "type": "creature",
+        "id": "clan_raider"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/clan_raider.txt"
+      },
+      "prompt": "Fur-cloaked raiders with axes and round shields. Cheap and eager.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_corpse_weaver",
+      "data": {
+        "type": "creature",
+        "id": "corpse_weaver"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/corpse_weaver.txt"
+      },
+      "prompt": "Hunched surgeons of the dead who sew fallen undead back into the line.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_forge_thrall",
+      "data": {
+        "type": "creature",
+        "id": "forge_thrall"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/forge_thrall.txt"
+      },
+      "prompt": "Soot-black bondsmen in riveted aprons. Slow, stubborn, hard to kill.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_frost_shaman",
+      "data": {
+        "type": "creature",
+        "id": "frost_shaman"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/frost_shaman.txt"
+      },
+      "prompt": "Bone-masked shamans who call the cold into the enemy's limbs.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_gibbet_knight",
+      "data": {
+        "type": "creature",
+        "id": "gibbet_knight"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/gibbet_knight.txt"
+      },
+      "prompt": "A hanged knight still in his cage-armour, chains trailing like a cloak.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_gloomwing_strix",
+      "data": {
+        "type": "creature",
+        "id": "gloomwing_strix"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/gloomwing_strix.txt"
+      },
+      "prompt": "Silent owl-things with human faces that hunt by moonlight.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_gravecrawler",
+      "data": {
+        "type": "creature",
+        "id": "gravecrawler"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/gravecrawler.txt"
+      },
+      "prompt": "Low, many-jointed horrors that scuttle on hands sewn where feet should be.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_ironhoof_charger",
+      "data": {
+        "type": "creature",
+        "id": "ironhoof_charger"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/ironhoof_charger.txt"
+      },
+      "prompt": "Riders on clockwork boars that rumble out of the tunnels.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_marrow_archer",
+      "data": {
+        "type": "creature",
+        "id": "marrow_archer"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/marrow_archer.txt"
+      },
+      "prompt": "Skeletal bowmen strung with their own sinew; they never tire and never miss a cadence.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_molten_engine",
+      "data": {
+        "type": "creature",
+        "id": "molten_engine"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/molten_engine.txt"
+      },
+      "prompt": "A walking foundry with a furnace for a heart, crewed by the deep clans' best.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_oathless_berserker",
+      "data": {
+        "type": "creature",
+        "id": "oathless_berserker"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/oathless_berserker.txt"
+      },
+      "prompt": "Exiles who fight half-naked in the snow and feel nothing.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_rimeback_aurochs",
+      "data": {
+        "type": "creature",
+        "id": "rimeback_aurochs"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rimeback_aurochs.txt"
+      },
+      "prompt": "Ice-crusted giant cattle ridden by the clans' bravest.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_rimefang_hound",
+      "data": {
+        "type": "creature",
+        "id": "rimefang_hound"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rimefang_hound.txt"
+      },
+      "prompt": "Shaggy white war-dogs bred for the drifts.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_rivet_crossbowman",
+      "data": {
+        "type": "creature",
+        "id": "rivet_crossbowman"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rivet_crossbowman.txt"
+      },
+      "prompt": "Squat crossbowmen with windlass bows that punch through mail.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_rootbinder",
+      "data": {
+        "type": "creature",
+        "id": "rootbinder"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rootbinder.txt"
+      },
+      "prompt": "Druids who mend wounds with moss and sap and bind the earth to their will.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_rootbound_ancient",
+      "data": {
+        "type": "creature",
+        "id": "rootbound_ancient"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rootbound_ancient.txt"
+      },
+      "prompt": "A walking oak, hollow and furious, that steps between its kin and harm.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_rotwing_leviathan",
+      "data": {
+        "type": "creature",
+        "id": "rotwing_leviathan"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rotwing_leviathan.txt"
+      },
+      "prompt": "A carcass of something vast, held aloft on wings of flayed skin.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_shambler",
+      "data": {
+        "type": "creature",
+        "id": "shambler"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/shambler.txt"
+      },
+      "prompt": "Bloated corpses with too many teeth, dragged forward by something that is not hunger.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_slag_golem",
+      "data": {
+        "type": "creature",
+        "id": "slag_golem"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/slag_golem.txt"
+      },
+      "prompt": "A smelter's mistake given legs: slow, heavy, glowing at the seams.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_spore_lobber",
+      "data": {
+        "type": "creature",
+        "id": "spore_lobber"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/spore_lobber.txt"
+      },
+      "prompt": "Bloated fungal bearers hurling choking spore-sacs over the battle line.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_thorn_skulker",
+      "data": {
+        "type": "creature",
+        "id": "thorn_skulker"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/thorn_skulker.txt"
+      },
+      "prompt": "Gaunt, bark-skinned hunters with blowpipes; weak alone, deadly in numbers.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_thunder_bombard",
+      "data": {
+        "type": "creature",
+        "id": "thunder_bombard"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/thunder_bombard.txt"
+      },
+      "prompt": "A crewed black-powder bombard; every shot shakes the earth.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_tusk_rider",
+      "data": {
+        "type": "creature",
+        "id": "tusk_rider"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/tusk_rider.txt"
+      },
+      "prompt": "Raiders on shaggy war-boars, crashing through shield walls.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_wailing_shade",
+      "data": {
+        "type": "creature",
+        "id": "wailing_shade"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/wailing_shade.txt"
+      },
+      "prompt": "A grief that learned to fly. Blades pass through it one time in five.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_winter_wyrm",
+      "data": {
+        "type": "creature",
+        "id": "winter_wyrm"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/winter_wyrm.txt"
+      },
+      "prompt": "A wingless ice-serpent that bores through glaciers and swallows war-bands whole.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_wyrdthorn_mother",
+      "data": {
+        "type": "creature",
+        "id": "wyrdthorn_mother"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/wyrdthorn_mother.txt"
+      },
+      "prompt": "A towering hag-tree that flings thorn-volleys like hail.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_ashscale_basilisk",
+      "data": {
+        "type": "creature",
+        "id": "ashscale_basilisk"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/ashscale_basilisk.txt"
+      },
+      "prompt": "A grey lizard whose gaze stiffens muscle like ash.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_barrow_revenant",
+      "data": {
+        "type": "creature",
+        "id": "barrow_revenant"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/barrow_revenant.txt"
+      },
+      "prompt": "An old king in rusted mail, guarding a barrow nobody remembers.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_bog_serpent",
+      "data": {
+        "type": "creature",
+        "id": "bog_serpent"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/bog_serpent.txt"
+      },
+      "prompt": "A coiled marsh-serpent that strikes at anything that comes close.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_carrion_flock",
+      "data": {
+        "type": "creature",
+        "id": "carrion_flock"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/carrion_flock.txt"
+      },
+      "prompt": "A storm of crows that peck the dying.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_cave_stalker",
+      "data": {
+        "type": "creature",
+        "id": "cave_stalker"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/cave_stalker.txt"
+      },
+      "prompt": "Blind ambush-hunters with hooked forelimbs.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_cinder_maw",
+      "data": {
+        "type": "creature",
+        "id": "cinder_maw"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/cinder_maw.txt"
+      },
+      "prompt": "A crawling furnace-mouth wider than a gatehouse, ringed with molten teeth; armies are fed to it.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_cinder_wraith",
+      "data": {
+        "type": "creature",
+        "id": "cinder_wraith"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/cinder_wraith.txt"
+      },
+      "prompt": "Ghosts of the burned, trailing smoke and embers.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_corpse_light",
+      "data": {
+        "type": "creature",
+        "id": "corpse_light"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/corpse_light.txt"
+      },
+      "prompt": "Pale lights over the marsh that lure travellers into the mire.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_deserter_crossbows",
+      "data": {
+        "type": "creature",
+        "id": "deserter_crossbows"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/deserter_crossbows.txt"
+      },
+      "prompt": "Turncoat crossbowmen holding a ruined toll-keep.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_dune_scuttler",
+      "data": {
+        "type": "creature",
+        "id": "dune_scuttler"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/dune_scuttler.txt"
+      },
+      "prompt": "Dog-sized beetles that burst from the sand.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_dune_wurm",
+      "data": {
+        "type": "creature",
+        "id": "dune_wurm"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/dune_wurm.txt"
+      },
+      "prompt": "A sand-swimming worm the length of a caravan.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_frost_drake",
+      "data": {
+        "type": "creature",
+        "id": "frost_drake"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/frost_drake.txt"
+      },
+      "prompt": "Lean blue-white drakes that breathe sleet.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_gloom_panther",
+      "data": {
+        "type": "creature",
+        "id": "gloom_panther"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/gloom_panther.txt"
+      },
+      "prompt": "Shadow-coloured cats that only show themselves to strike.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_hill_giant",
+      "data": {
+        "type": "creature",
+        "id": "hill_giant"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/hill_giant.txt"
+      },
+      "prompt": "Club-wielding giants that smash shields like crockery.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_hill_troll",
+      "data": {
+        "type": "creature",
+        "id": "hill_troll"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/hill_troll.txt"
+      },
+      "prompt": "Warty brutes whose wounds close faster than you can cut.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_iron_margrave",
+      "data": {
+        "type": "creature",
+        "id": "iron_margrave"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/iron_margrave.txt"
+      },
+      "prompt": "A scarred warlord-knight in black siege plate on a barded destrier the size of a bull; the Concord's last argument.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_lost_pilgrims",
+      "data": {
+        "type": "creature",
+        "id": "lost_pilgrims"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/lost_pilgrims.txt"
+      },
+      "prompt": "Starving zealots wandering the roads with cudgels and prayers.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_marsh_hag",
+      "data": {
+        "type": "creature",
+        "id": "marsh_hag"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/marsh_hag.txt"
+      },
+      "prompt": "Crone-things who curse from the reeds.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_moss_creeper",
+      "data": {
+        "type": "creature",
+        "id": "moss_creeper"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/moss_creeper.txt"
+      },
+      "prompt": "Crawling mats of moss that close their wounds as you watch.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_ogre_mauler",
+      "data": {
+        "type": "creature",
+        "id": "ogre_mauler"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/ogre_mauler.txt"
+      },
+      "prompt": "Gut-heavy ogres swinging tree-trunk clubs.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_plague_rats",
+      "data": {
+        "type": "creature",
+        "id": "plague_rats"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/plague_rats.txt"
+      },
+      "prompt": "A carpet of diseased rats. Individually pathetic.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_primordial_wyrm",
+      "data": {
+        "type": "creature",
+        "id": "primordial_wyrm"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/primordial_wyrm.txt"
+      },
+      "prompt": "Something that was old when the mountains were young. Rarely seen; never forgotten.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_rime_wight",
+      "data": {
+        "type": "creature",
+        "id": "rime_wight"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rime_wight.txt"
+      },
+      "prompt": "Frozen dead that walk the passes, sucking warmth from the living.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_road_cutthroat",
+      "data": {
+        "type": "creature",
+        "id": "road_cutthroat"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/road_cutthroat.txt"
+      },
+      "prompt": "Deserters and murderers who prey on caravans.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_ruin_sentinel",
+      "data": {
+        "type": "creature",
+        "id": "ruin_sentinel"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/ruin_sentinel.txt"
+      },
+      "prompt": "Stone guardians of a fallen empire, still obeying dead orders.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_salt_witch",
+      "data": {
+        "type": "creature",
+        "id": "salt_witch"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/salt_witch.txt"
+      },
+      "prompt": "Hermit healers of the salt flats who travel with bandit bands.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_sand_reaver",
+      "data": {
+        "type": "creature",
+        "id": "sand_reaver"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/sand_reaver.txt"
+      },
+      "prompt": "Veiled raiders on lean desert horses.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_shrieking_harpy",
+      "data": {
+        "type": "creature",
+        "id": "shrieking_harpy"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/shrieking_harpy.txt"
+      },
+      "prompt": "Filthy winged scavengers that strike and are gone.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_steppe_centaur",
+      "data": {
+        "type": "creature",
+        "id": "steppe_centaur"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/steppe_centaur.txt"
+      },
+      "prompt": "Horse-bodied archers who shoot just as well when cornered.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_tomb_scarabs",
+      "data": {
+        "type": "creature",
+        "id": "tomb_scarabs"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/tomb_scarabs.txt"
+      },
+      "prompt": "Black beetles that swarm from looted tombs.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_venom_wyvern",
+      "data": {
+        "type": "creature",
+        "id": "venom_wyvern"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/venom_wyvern.txt"
+      },
+      "prompt": "Two-legged drakes with a stinger on the tail.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_cairn_warlord",
+      "data": {
+        "type": "creature",
+        "id": "cairn_warlord"
+      },
+      "upgrade_of": "cairn_giant",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/cairn_warlord.txt"
+      },
+      "prompt": "Boulder-sweeps hit a second stack (30%) with a 20% chance to stun.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_charnel_behemoth",
+      "data": {
+        "type": "creature",
+        "id": "charnel_behemoth"
+      },
+      "upgrade_of": "charnel_hulk",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/charnel_behemoth.txt"
+      },
+      "prompt": "Its flailing limbs strike two stacks at once (40% to the second).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_citadel_colossus",
+      "data": {
+        "type": "creature",
+        "id": "citadel_colossus"
+      },
+      "upgrade_of": "bastion_colossus",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/citadel_colossus.txt"
+      },
+      "prompt": "Draws enemy blows, retaliates against every attack, and its shadow gives the army +1 attack/+2 defense.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_doom_bombard",
+      "data": {
+        "type": "creature",
+        "id": "doom_bombard"
+      },
+      "upgrade_of": "thunder_bombard",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/doom_bombard.txt"
+      },
+      "prompt": "Shells stun: 25% chance per hit that the target loses its next action.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_gibbet_lord",
+      "data": {
+        "type": "creature",
+        "id": "gibbet_lord"
+      },
+      "upgrade_of": "gibbet_knight",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/gibbet_lord.txt"
+      },
+      "prompt": "Feeds on the living: heals 30% of damage dealt, raising its fallen.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_gorgewing_matron",
+      "data": {
+        "type": "creature",
+        "id": "gorgewing_matron"
+      },
+      "upgrade_of": "gorgewing",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/gorgewing_matron.txt"
+      },
+      "prompt": "Vomits fire over two stacks (40% to the second) and its shriek costs the enemy 1 morale.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_iron_sovereign",
+      "data": {
+        "type": "creature",
+        "id": "iron_sovereign"
+      },
+      "upgrade_of": "iron_margrave",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/iron_sovereign.txt"
+      },
+      "prompt": "Game changer: strikes first, every blow strips 4 defense (max 12), and riding at the head of the host gives every stack +2 attack.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_ironhoof_warboar",
+      "data": {
+        "type": "creature",
+        "id": "ironhoof_warboar"
+      },
+      "upgrade_of": "ironhoof_charger",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/ironhoof_warboar.txt"
+      },
+      "prompt": "Iron tusks crack armour: -3 defense on the target (max 9).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_maw_of_ruin",
+      "data": {
+        "type": "creature",
+        "id": "maw_of_ruin"
+      },
+      "upgrade_of": "cinder_maw",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/maw_of_ruin.txt"
+      },
+      "prompt": "Game changer: swallows two stacks at once (60% to the second), heals 30% of what it devours and its presence costs the enemy 2 morale.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_plague_lobber",
+      "data": {
+        "type": "creature",
+        "id": "plague_lobber"
+      },
+      "upgrade_of": "spore_lobber",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/plague_lobber.txt"
+      },
+      "prompt": "The spores take root: 30% of damage dealt strikes again next round.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_pyre_sovereign",
+      "data": {
+        "type": "creature",
+        "id": "pyre_sovereign"
+      },
+      "upgrade_of": "pyre_titan",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/pyre_sovereign.txt"
+      },
+      "prompt": "The first time it is destroyed, half its number rise again from the ashes; its blows engulf a second stack.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_rimeback_stampede",
+      "data": {
+        "type": "creature",
+        "id": "rimeback_stampede"
+      },
+      "upgrade_of": "rimeback_aurochs",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rimeback_stampede.txt"
+      },
+      "prompt": "Tramples through: each attack also hits a second stack (40%).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_rootbound_patriarch",
+      "data": {
+        "type": "creature",
+        "id": "rootbound_patriarch"
+      },
+      "upgrade_of": "rootbound_ancient",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rootbound_patriarch.txt"
+      },
+      "prompt": "Lashes back at every attacker and regrows 50 hit points each round.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_rotwing_sovereign",
+      "data": {
+        "type": "creature",
+        "id": "rotwing_sovereign"
+      },
+      "upgrade_of": "rotwing_leviathan",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rotwing_sovereign.txt"
+      },
+      "prompt": "Game changer: drains 40% of the damage it deals back into itself and its presence costs the enemy 2 morale.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_sunhawk_paladin",
+      "data": {
+        "type": "creature",
+        "id": "sunhawk_paladin"
+      },
+      "upgrade_of": "sunhawk_rider",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/sunhawk_paladin.txt"
+      },
+      "prompt": "Strikes first, and each blow has a 20% chance to dazzle the target into losing its next action.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_winter_wyrm_ancient",
+      "data": {
+        "type": "creature",
+        "id": "winter_wyrm_ancient"
+      },
+      "upgrade_of": "winter_wyrm",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/winter_wyrm_ancient.txt"
+      },
+      "prompt": "Game changer: freezing breath engulfs two stacks (60% to the second), 25% stun per hit, and its roar costs the enemy 1 morale.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_worldforge_engine",
+      "data": {
+        "type": "creature",
+        "id": "worldforge_engine"
+      },
+      "upgrade_of": "molten_engine",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/worldforge_engine.txt"
+      },
+      "prompt": "Game changer: hammer-blows smash two stacks (60% to the second), strip 4 defense per hit and ignore 30% of armour.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_wyrdthorn_matriarch",
+      "data": {
+        "type": "creature",
+        "id": "wyrdthorn_matriarch"
+      },
+      "upgrade_of": "wyrdthorn_mother",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/wyrdthorn_matriarch.txt"
+      },
+      "prompt": "Game changer: two volleys per turn (second at 70%), each with a 20% chance to pin the target in thorns (loses its next action).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_seared_cinderling",
+      "data": {
+        "type": "creature",
+        "id": "seared_cinderling"
+      },
+      "upgrade_of": "cinderling",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/seared_cinderling.txt"
+      },
+      "prompt": "Their touch keeps burning: 20% of damage dealt burns again next round.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_hellmaw_hound",
+      "data": {
+        "type": "creature",
+        "id": "hellmaw_hound"
+      },
+      "upgrade_of": "scorchhound",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/hellmaw_hound.txt"
+      },
+      "prompt": "skinless demonic canine hunting hound with long wolf muzzle, pointed ears, deep ribcage, high shoulders, tucked waist, digitigrade hocks and four normal dog paws; red sinew, blackened hide and a localized burning neck mane; molten jaws; two distinct heads and necks on one heavier four-legged body",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_brimstone_bombardier",
+      "data": {
+        "type": "creature",
+        "id": "brimstone_bombardier"
+      },
+      "upgrade_of": "brimstone_hurler",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/brimstone_bombardier.txt"
+      },
+      "prompt": "Bursting shells: each shot also scorches a second enemy stack (30%).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_flayer_exalted",
+      "data": {
+        "type": "creature",
+        "id": "flayer_exalted"
+      },
+      "upgrade_of": "flayer",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/flayer_exalted.txt"
+      },
+      "prompt": "Drinks what it tears: heals 25% of damage dealt, even raising its fallen.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_ash_matriarch",
+      "data": {
+        "type": "creature",
+        "id": "ash_matriarch"
+      },
+      "upgrade_of": "ash_witch",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/ash_matriarch.txt"
+      },
+      "prompt": "Her presence is dread itself: the enemy army suffers -1 morale.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "ashen"
+    },
+    {
+      "id": "creature_pike_veteran",
+      "data": {
+        "type": "creature",
+        "id": "pike_veteran"
+      },
+      "upgrade_of": "pike_militia",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/pike_veteran.txt"
+      },
+      "prompt": "Survivors of a dozen musters. Strike first when attacked in melee.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_warbow_sergeant",
+      "data": {
+        "type": "creature",
+        "id": "warbow_sergeant"
+      },
+      "upgrade_of": "longbowman",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/warbow_sergeant.txt"
+      },
+      "prompt": "Looses a hasty second arrow each turn (40% damage).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_bulwark_sworn",
+      "data": {
+        "type": "creature",
+        "id": "bulwark_sworn"
+      },
+      "upgrade_of": "shieldwarden",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/bulwark_sworn.txt"
+      },
+      "prompt": "Bangs shields and bellows challenges: enemy melee is drawn onto them.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_oathbound_lancer",
+      "data": {
+        "type": "creature",
+        "id": "oathbound_lancer"
+      },
+      "upgrade_of": "lancer",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/oathbound_lancer.txt"
+      },
+      "prompt": "Lance-heads of cold iron: every hit strips 2 defense from the target (max 6).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_dawn_confessor",
+      "data": {
+        "type": "creature",
+        "id": "dawn_confessor"
+      },
+      "upgrade_of": "lightbearer",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/dawn_confessor.txt"
+      },
+      "prompt": "Their litanies harden the whole army: +1 defense to every allied stack.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "concord"
+    },
+    {
+      "id": "creature_ironclad_thrall",
+      "data": {
+        "type": "creature",
+        "id": "ironclad_thrall"
+      },
+      "upgrade_of": "forge_thrall",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/ironclad_thrall.txt"
+      },
+      "prompt": "Riveted plates turn arrows: -20% ranged damage taken.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_rivet_arbalist",
+      "data": {
+        "type": "creature",
+        "id": "rivet_arbalist"
+      },
+      "upgrade_of": "rivet_crossbowman",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rivet_arbalist.txt"
+      },
+      "prompt": "Steel bolts: ignore 30% of the target's defense.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_anvil_sworn",
+      "data": {
+        "type": "creature",
+        "id": "anvil_sworn"
+      },
+      "upgrade_of": "anvil_guard",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/anvil_sworn.txt"
+      },
+      "prompt": "Hammer-back: retaliates against every attack each round.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_furnace_golem",
+      "data": {
+        "type": "creature",
+        "id": "furnace_golem"
+      },
+      "upgrade_of": "slag_golem",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/furnace_golem.txt"
+      },
+      "prompt": "Roaring heat draws the enemy's blows onto it.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_master_engineer",
+      "data": {
+        "type": "creature",
+        "id": "master_engineer"
+      },
+      "upgrade_of": "cinder_engineer",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/master_engineer.txt"
+      },
+      "prompt": "Field-tunes every weapon: +1 attack to every allied stack.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "forge"
+    },
+    {
+      "id": "creature_blooded_raider",
+      "data": {
+        "type": "creature",
+        "id": "blooded_raider"
+      },
+      "upgrade_of": "clan_raider",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/blooded_raider.txt"
+      },
+      "prompt": "Gets angrier as the fight goes on: +4% damage per round (max +20%).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_rimefang_packleader",
+      "data": {
+        "type": "creature",
+        "id": "rimefang_packleader"
+      },
+      "upgrade_of": "rimefang_hound",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rimefang_packleader.txt"
+      },
+      "prompt": "Hunts like a pack: a second bite each attack (35% damage).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_bloodfrenzy_berserker",
+      "data": {
+        "type": "creature",
+        "id": "bloodfrenzy_berserker"
+      },
+      "upgrade_of": "oathless_berserker",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/bloodfrenzy_berserker.txt"
+      },
+      "prompt": "Blood-drunk: heals 20% of damage dealt.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_tusk_chieftain",
+      "data": {
+        "type": "creature",
+        "id": "tusk_chieftain"
+      },
+      "upgrade_of": "tusk_rider",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/tusk_chieftain.txt"
+      },
+      "prompt": "Goring tusks: -2 defense on the target per hit (max 6).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_storm_shaman",
+      "data": {
+        "type": "creature",
+        "id": "storm_shaman"
+      },
+      "upgrade_of": "frost_shaman",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/storm_shaman.txt"
+      },
+      "prompt": "Hail-hexes: 15% stun per hit, and the gale at the army's back gives +1 initiative.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "frostmarch"
+    },
+    {
+      "id": "creature_rotting_shambler",
+      "data": {
+        "type": "creature",
+        "id": "rotting_shambler"
+      },
+      "upgrade_of": "shambler",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rotting_shambler.txt"
+      },
+      "prompt": "Wounds it leaves fester: 20% of damage dealt rots again next round.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_marrow_deadeye",
+      "data": {
+        "type": "creature",
+        "id": "marrow_deadeye"
+      },
+      "upgrade_of": "marrow_archer",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/marrow_deadeye.txt"
+      },
+      "prompt": "Bone arrowheads slip between plates: ignore 30% of the target's defense.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_gravecrawler_brood",
+      "data": {
+        "type": "creature",
+        "id": "gravecrawler_brood"
+      },
+      "upgrade_of": "gravecrawler",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/gravecrawler_brood.txt"
+      },
+      "prompt": "Paralytic bite: 15% chance per hit that the target loses its next action.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_dirge_shade",
+      "data": {
+        "type": "creature",
+        "id": "dirge_shade"
+      },
+      "upgrade_of": "wailing_shade",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/dirge_shade.txt"
+      },
+      "prompt": "Its dirge saps courage: the enemy army suffers -1 morale.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_charnel_weaver",
+      "data": {
+        "type": "creature",
+        "id": "charnel_weaver"
+      },
+      "upgrade_of": "corpse_weaver",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/charnel_weaver.txt"
+      },
+      "prompt": "Puppeteers the dead: +1 initiative to every allied stack.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "hollow"
+    },
+    {
+      "id": "creature_thorn_stalker",
+      "data": {
+        "type": "creature",
+        "id": "thorn_stalker"
+      },
+      "upgrade_of": "thorn_skulker",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/thorn_stalker.txt"
+      },
+      "prompt": "Venom darts: 25% of damage dealt strikes again next round.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_barkhide_sentinel",
+      "data": {
+        "type": "creature",
+        "id": "barkhide_sentinel"
+      },
+      "upgrade_of": "barkhide_warden",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/barkhide_sentinel.txt"
+      },
+      "prompt": "Sap-blood: the top creature recovers 6 hit points each round.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_briar_deadshot",
+      "data": {
+        "type": "creature",
+        "id": "briar_deadshot"
+      },
+      "upgrade_of": "briar_huntress",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/briar_deadshot.txt"
+      },
+      "prompt": "Nocks two arrows at once (second at 50% damage).",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_rootbinder_elder",
+      "data": {
+        "type": "creature",
+        "id": "rootbinder_elder"
+      },
+      "upgrade_of": "rootbinder",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/rootbinder_elder.txt"
+      },
+      "prompt": "Roots rise around the army: +1 defense to every allied stack.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_gloomwing_shrike",
+      "data": {
+        "type": "creature",
+        "id": "gloomwing_shrike"
+      },
+      "upgrade_of": "gloomwing_strix",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/gloomwing_shrike.txt"
+      },
+      "prompt": "Strikes first and slips 15% of blows.",
+      "size": [
+        128,
+        128
+      ],
+      "generated_palette": "preserve",
+      "map_scale": 0.5,
+      "faction": "thornwood"
+    },
+    {
+      "id": "creature_ancient_dragon",
+      "data": {
+        "type": "creature",
+        "id": "ancient_dragon"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/creatures64/ancient_dragon.txt"
+      },
+      "prompt": "Karzhaloth, the eyeless ancient dragon under the world: a colossal obsidian-scaled dragon, wings like torn black silk veined with dim ember light, six empty eye sockets sealed with tarnished silver, ash drifting from its jaws, cracked magma glow in the seams of its scales. Boss creature for the Six Eyes finale.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_cobolt_pack_runner",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/cobolts/creature_cobolt_pack_runner.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Pack Runner: lean fast cobolt infantry with bulging weathered merchant backpack, strapped rolled blankets, hooked knife held downward, digitigrade legs and low trailing tail. Neutral combat-ready stance, full body three-quarter view facing RIGHT.",
+      "generate": true,
+      "data": {
+        "type": "creature",
+        "id": "cobolt_pack_runner"
+      },
+      "faction": "cobolts",
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_cobolt_caravan_spear",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/cobolts/creature_cobolt_caravan_spear.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Caravan Spear: wiry cobolt guard with upright spear and compact battered wooden shield with brass rim, leather and small pieces of worn iron armour. Full body neutral combat-ready stance, three-quarter view facing RIGHT.",
+      "generate": true,
+      "data": {
+        "type": "creature",
+        "id": "cobolt_caravan_spear"
+      },
+      "faction": "cobolts",
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_cobolt_bolt_broker",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/cobolts/creature_cobolt_bolt_broker.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Bolt Broker: lean cobolt crossbow guard, carrying a worn compact wooden crossbow pointed toward the right, visible quiver of bolts and leather merchant pouches. Full body neutral combat-ready stance, three-quarter view facing RIGHT.",
+      "generate": true,
+      "data": {
+        "type": "creature",
+        "id": "cobolt_bolt_broker"
+      },
+      "faction": "cobolts",
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_cobolt_cinder_alchemist",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/cobolts/creature_cobolt_cinder_alchemist.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Cinder Alchemist: wiry cobolt support fighter wearing scorched long leather apron over dark patched merchant cloth, holding a sealed ceramic fire pot with brass wire cage in one hand, spare pots on belt. No magic flames or particle effects. Full body neutral combat-ready stance, three-quarter view facing RIGHT.",
+      "generate": true,
+      "data": {
+        "type": "creature",
+        "id": "cobolt_cinder_alchemist"
+      },
+      "faction": "cobolts",
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "creature_cobolt_vault_warden",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/cobolts/creature_cobolt_vault_warden.txt"
+      },
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Vault Warden: heavily armoured cobolt shield infantry, same reptilian species and modest stature as other cobolts, broad dented iron shield with understated brass balance-scale emblem, short war pick, layered worn dark plate. Full body neutral combat-ready stance, three-quarter view facing RIGHT. Powerful but never gigantic.",
+      "generate": true,
+      "data": {
+        "type": "creature",
+        "id": "cobolt_vault_warden"
+      },
+      "faction": "cobolts",
+      "generated_palette": "preserve"
+    }
+  ]
+}

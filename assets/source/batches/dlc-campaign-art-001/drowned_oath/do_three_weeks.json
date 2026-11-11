@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_drowned_oath_do_three_weeks_briefing",
+  "campaign": "drowned_oath",
+  "chapter": "do_three_weeks",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.drowned_oath",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_three_weeks-prompt.txt",
+  "prompt_sha256": "6a51b5ad972085952b97365a10767de2c163817c08996f0e55ae4819f042c75e",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "eeae56241ed292e7dc08d8f75382676c9227a817772fea97f53e568eba0634f6",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

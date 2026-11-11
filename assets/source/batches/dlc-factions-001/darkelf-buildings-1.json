@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/darkelf-buildings-1.png",
+  "source_sheet_sha256": "fe9ba29f9fcb1fb94dcf057862ce5c17efab95b22af1621a5c0af14627d750b4",
+  "size": [
+    1448,
+    1086
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-buildings-1.txt",
+  "prompt_sha256": "2d114976d2d8a05aff0660e789801bac0f27765121734d33994eff2922d8d50f",
+  "conditioning": [
+    "assets/source/batches/concord-town-001/foundation.png",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/concord-town-001/foundation.png": "a1ceda73d6122e5f2d303fac933b53142fc351e4e5022243341ae7ea82d0669b",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png": "1e763406818c8e4c62c764cb79fc560c92098617f1ac064fa8835edae9699600"
+  },
+  "extraction": [
+    {
+      "id": "building_de_hall",
+      "row": 0,
+      "column": 0,
+      "size": [
+        311,
+        256
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_market",
+      "row": 0,
+      "column": 1,
+      "size": [
+        307,
+        255
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_yard",
+      "row": 0,
+      "column": 2,
+      "size": [
+        310,
+        253
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_tavern",
+      "row": 0,
+      "column": 3,
+      "size": [
+        313,
+        254
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_masons",
+      "row": 1,
+      "column": 0,
+      "size": [
+        319,
+        257
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_palisade",
+      "row": 1,
+      "column": 1,
+      "size": [
+        301,
+        243
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_keep",
+      "row": 1,
+      "column": 2,
+      "size": [
+        310,
+        253
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_bastion",
+      "row": 1,
+      "column": 3,
+      "size": [
+        320,
+        257
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_dw1",
+      "row": 2,
+      "column": 0,
+      "size": [
+        308,
+        254
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_dw2",
+      "row": 2,
+      "column": 1,
+      "size": [
+        304,
+        253
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_dw3",
+      "row": 2,
+      "column": 2,
+      "size": [
+        307,
+        252
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_dw4",
+      "row": 2,
+      "column": 3,
+      "size": [
+        313,
+        252
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_dw5",
+      "row": 3,
+      "column": 0,
+      "size": [
+        306,
+        263
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_dw6",
+      "row": 3,
+      "column": 1,
+      "size": [
+        299,
+        261
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_dw7",
+      "row": 3,
+      "column": 2,
+      "size": [
+        324,
+        266
+      ],
+      "warnings": []
+    },
+    {
+      "id": "dlc_darkelf_obelisk",
+      "row": 3,
+      "column": 3,
+      "size": [
+        281,
+        269
+      ],
+      "warnings": []
+    }
+  ],
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

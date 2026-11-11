@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_six_eyes_se_thorn_mirror_briefing",
+  "campaign": "six_eyes",
+  "chapter": "se_thorn_mirror",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_thorn_mirror-prompt.txt",
+  "prompt_sha256": "37c1adb015b6107e05cb54b109071088229aa40f650ebc530d96dddad6fc2b31",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "45cf4b5db37c10bcc85f8c2847b1e2333ed61c08fe3862ec719f032e8242a1ee",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "snow_frozen_pass",
+  "terrain": "snow",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/snow_frozen_pass.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "9f4104132266ccca8e3111ffaa71e83d9f70a2845a95951d094678a3e928d3be",
+  "prompt_file": "assets/source/batches/battlefields-001/snow_frozen_pass.txt",
+  "prompt_sha256": "2fcdcf7dbbba474395aff68bc3bb9600ae68e93bd3aed5c84f89812b51f38def",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/snow_frozen_pass-live.png",
+    "forecast": "docs/art/production/battlefields/snow_frozen_pass-forecast.png"
+  }
+}

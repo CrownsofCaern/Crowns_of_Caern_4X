@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_last_light_ll_embers_briefing",
+  "campaign": "last_light",
+  "chapter": "ll_embers",
+  "usage": "briefing",
+  "story_source": {
+    "pull_request": 45,
+    "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/last-light-story-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/last-light-story-001/campaign_last_light_ll_embers_briefing.txt",
+  "prompt_sha256": "ce984d40657f39f09890cc3576cc3e8b296edc0347691267c7eb9b4d59d7bd67",
+  "conditioning": [
+    "assets/source/batches/heroes-001/source.png",
+    "assets/source/batches/towns-001/source.png"
+  ],
+  "source_sha256": "441aae1bfd82ffd1e1abdbf652e1b98aaa15528db8a0f1c99b762bba083c39a9",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

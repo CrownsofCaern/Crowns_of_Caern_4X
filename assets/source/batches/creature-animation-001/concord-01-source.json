@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/concord-01-source.png",
+  "source_sha256": "c1fe6df38ff0b16531d5331ca6d6e8933503361c052e90280d5e04b2dc041264",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/concord-01-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/concord-01-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "pike_militia",
+    "pike_veteran",
+    "longbowman",
+    "warbow_sergeant"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "pike_militia",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_pike_militia.png",
+      "reference_sha256": "94112b129e745fd48334a40e5dc299c1288dad0f03bf7a6b85b9ea76900bdca0"
+    },
+    {
+      "id": "pike_veteran",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_pike_veteran.png",
+      "reference_sha256": "944a1670de291517a29fd1dfe3f5ee5362480f64792eea51d78de689ac3d0cab"
+    },
+    {
+      "id": "longbowman",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_longbowman.png",
+      "reference_sha256": "c92f453aa118f3ecdbe7ca2a14eefac7d9453bcbadd8c79b88b662d3d014ace1"
+    },
+    {
+      "id": "warbow_sergeant",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_warbow_sergeant.png",
+      "reference_sha256": "7e871e81d965fbdc92d6bd15b22205a959235e3a46149b68defb59b5e6c0f9a8"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

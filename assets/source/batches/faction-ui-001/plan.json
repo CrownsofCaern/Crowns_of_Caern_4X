@@ -1,0 +1,65 @@
+{
+  "name": "faction-ui-001",
+  "grid": [
+    3,
+    2
+  ],
+  "category": "ui",
+  "spec_file": "ui.json",
+  "assets": [
+    {
+      "id": "ui_panel_concord",
+      "prompt": "concord faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_ashen",
+      "prompt": "ashen faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_hollow",
+      "prompt": "hollow faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_thornwood",
+      "prompt": "thornwood faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_forge",
+      "prompt": "forge faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_frostmarch",
+      "prompt": "frostmarch faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1
+    }
+  ]
+}

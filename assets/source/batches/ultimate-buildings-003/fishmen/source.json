@@ -1,0 +1,16 @@
+{
+  "provider": "ChatGPT image_gen",
+  "source_sha256": "746afa870c35c47a58b37e359c3b874d6aa134b920db6d8926d79e985af6ff4d",
+  "size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/ultimate-buildings-003/fishmen/prompt.txt",
+  "prompt_sha256": "156a09055f8b6db954e0b2b68a32e5c599507039860a907fd8aa38c675b59164",
+  "conditioning": {
+    "assets/source/batches/ultimate-concord-001/source.png": "61a41437d38cf7b896ddfec20e99f1dd082ceac97a54a444e16d680f4865f1d9",
+    "assets/source/batches/dlc-factions-001/fishmen-foundation.png": "86a7777fb6f099aa814ea852336fd85f2cdbdee606bb4a223fb3b6e207b491ff"
+  },
+  "quality_status": "rendered_candidate",
+  "human_approval": "pending"
+}

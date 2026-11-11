@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "provider": "derived",
+  "batch": "six-eyes-story-001",
+  "derived_from": "assets/source/generated/creature_primordial_wyrm.png",
+  "derived_from_sha256": "3b0751d14c6f578c6915cf58ddfac76e93523d0b3d8d10aafa60f93542ec27f3",
+  "method": "tools/story/derive_ancient_dragon.py (hue remap, sealed eye, 1.2x)",
+  "prompt_file": "assets/source/batches/six-eyes-story-001/creature_ancient_dragon.txt",
+  "native_size": [
+    128,
+    128
+  ],
+  "quality_status": "interim_derived_pending_generation",
+  "note": "Interim art until a generated Karzhaloth exists. Replace this file with the generated sprite; the spec entry stays."
+}

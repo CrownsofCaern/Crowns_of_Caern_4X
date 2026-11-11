@@ -1,0 +1,4 @@
+Pending animation production. No animation frames are supplied in this PR.
+Group: cobolts-01; seven columns and 3 rows, one row per unit.
+Units in row order: cobolt_pack_runner, cobolt_caravan_spear, cobolt_bolt_broker.
+Use production still sprites as identity/style references; preserve anatomy, equipment, palette, right facing and foot registration. Finalize idle/walk/attack specifications in the animation pass.

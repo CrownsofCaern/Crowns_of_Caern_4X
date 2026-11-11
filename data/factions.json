@@ -1,0 +1,22 @@
+{
+  "_doc": "Factions. native_terrain grants native_bonus to every creature of the faction fighting there (see combat_config.native_terrain_bonus). hostile_terrain applies the hostile penalty. economy: curve (early|steady|late: when the faction's army peaks) and key_resources (rare resources its creature costs and buildings lean on; creature costs may only use gold, wood, ore and these). roster: one-line identity, see docs/FACTIONS.md. starting_heroes (optional): a faction trait, the heroes its players start a standard game with instead of game_rules starting_heroes.",
+  "factions": {
+    "darkelf": {"name": "The Umbral Court", "adjective": "Umbral", "color": "#b48ce0", "native_terrain": ["rough"], "hostile_terrain": ["grass"], "tags": ["darkelf"], "economy": {"curve": "steady", "key_resources": ["crystal", "gems"]}, "roster": "Swift assassins, crossbows, cave riders and dragons, backed by veil magic."},
+    "fishmen": {"name": "The Abyssal Shoal", "adjective": "Abyssal", "color": "#5cc9bd", "native_terrain": ["swamp"], "hostile_terrain": ["snow"], "tags": ["fishmen"], "economy": {"curve": "steady", "key_resources": ["crystal", "gems"]}, "roster": "Armoured reef warriors, harpoons, sea beasts and tide magic."},
+
+    "cobolts": {"name": "Cobolt Trading Houses", "adjective": "Cobolt", "color": "#846b3b", "native_terrain": [], "hostile_terrain": [], "tags": ["cobolt"], "neutral": true},
+    "concord":    {"name": "The Aldmere Concord",     "adjective": "Concordant", "color": "#3d6fc4", "native_terrain": ["grass"],    "hostile_terrain": ["infernal"], "tags": ["human"],
+                   "economy": {"curve": "steady", "key_resources": ["crystal", "gems"]}, "roster": "Disciplined combined arms: pikes, shields, bows, heavy horse, healers."},
+    "ashen":      {"name": "The Ashen Host",          "adjective": "Ashen",      "color": "#b8402c", "native_terrain": ["infernal"], "hostile_terrain": ["snow"],     "tags": ["demon"],
+                   "economy": {"curve": "early", "key_resources": ["sulfur", "mercury"]}, "roster": "Fast, fragile, aggressive melee swarms; few ranged units."},
+    "hollow":     {"name": "The Hollow Dominion",     "adjective": "Hollow",     "color": "#6f8a5a", "native_terrain": ["swamp"],    "hostile_terrain": ["grass"] ,   "tags": ["undead"],
+                   "economy": {"curve": "steady", "key_resources": ["mercury", "gems"]}, "roster": "Slow, mindless attrition: no morale, raise the fallen, drain life."},
+    "thornwood":  {"name": "The Thornwood Covenant",  "adjective": "Thornwood",  "color": "#3f7a3a", "native_terrain": ["forest"],   "hostile_terrain": ["infernal"],   "tags": ["sylvan"],
+                   "economy": {"curve": "steady", "key_resources": ["wood", "gems"]}, "roster": "Mostly ranged, guarded by living trees; no cavalry."},
+    "forge":      {"name": "The Sunken Forge",        "adjective": "Forgeborn",  "color": "#a8743a", "native_terrain": ["rough"],    "hostile_terrain": ["swamp"],    "tags": ["deepfolk"],
+                   "economy": {"curve": "late", "key_resources": ["mercury", "crystal", "sulfur"]}, "roster": "Slow, armoured and expensive; constructs and siege guns; no flyers."},
+    "frostmarch": {"name": "The Frostmarch Clans",    "adjective": "Frostmarch", "color": "#9fc4d8", "native_terrain": ["snow"],     "hostile_terrain": ["infernal"], "tags": ["human"],
+                   "economy": {"curve": "early", "key_resources": ["crystal"]}, "starting_heroes": 2, "roster": "Cheap, numerous raiders and beast cavalry; no archers, no flyers."},
+    "wilds":      {"name": "Untamed Wilds",           "adjective": "Wild",       "color": "#7a7a50", "native_terrain": [],           "hostile_terrain": [],           "tags": ["beast"], "neutral": true}
+  }
+}

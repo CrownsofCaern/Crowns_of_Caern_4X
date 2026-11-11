@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "game_title": "Crowns of Cinder",
+  "assets": [
+    {
+      "id": "title",
+      "source": "assets/source/generated/menu_title.png",
+      "output": "assets/menus/menu_title.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "crop_alpha": false,
+      "transparent": false,
+      "source_sha256": "6f0e3c84cd3fd3bd17fdc50b771569ee4ec6e1f0c9cb3976bd2b655cf1ae67ed"
+    },
+    {
+      "id": "campaign",
+      "source": "assets/source/generated/menu_campaign.png",
+      "output": "assets/menus/menu_campaign.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "crop_alpha": false,
+      "transparent": false,
+      "source_sha256": "a54ed52231021150874ad00d4969d4d19f59560c7e209ff8b3d78417256087ef"
+    },
+    {
+      "id": "setup",
+      "source": "assets/source/generated/menu_setup.png",
+      "output": "assets/menus/menu_setup.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "crop_alpha": false,
+      "transparent": false,
+      "source_sha256": "0d6a2c8af0deca16374389452bf11a3b145ac696cb8385a5e67f06b839e52cd5"
+    },
+    {
+      "id": "archive",
+      "source": "assets/source/generated/menu_archive.png",
+      "output": "assets/menus/menu_archive.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "crop_alpha": false,
+      "transparent": false,
+      "source_sha256": "2aa7ffcc795a825e1c73c30e7b4cb0345e22a05fca73f150df9461347a86869d"
+    },
+    {
+      "id": "emblem",
+      "source": "assets/source/generated/menu_emblem.png",
+      "output": "assets/menus/menu_emblem.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "crop_alpha": true,
+      "transparent": true,
+      "source_sha256": "4e56764f713bfed583637d346bc90d52903cf4b9df201310007cc825c7655a67"
+    },
+    {
+      "id": "wordmark",
+      "source": "assets/source/generated/menu_wordmark.png",
+      "output": "assets/menus/menu_wordmark.png",
+      "size": [
+        2172,
+        724
+      ],
+      "crop_alpha": true,
+      "transparent": true,
+      "source_sha256": "e17cc973e66c5c37d7ed0ede387e56b0070b5dd3e532fc91fb65e735990789a7"
+    }
+  ],
+  "decision": "User selected Crowns of Cinder in conversation, 2026-11-07",
+  "status": "generated_and_integrated_pending_ci"
+}

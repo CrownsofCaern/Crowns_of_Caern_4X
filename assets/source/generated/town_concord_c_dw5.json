@@ -1,0 +1,25 @@
+{
+  "id": "c_dw5",
+  "provider": "image_gen",
+  "source_sheet": "assets/source/batches/concord-town-001/base.png",
+  "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+  "crop_xyxy": [
+    0,
+    875,
+    315,
+    1247
+  ],
+  "alpha_trim_xyxy": [
+    24,
+    7,
+    283,
+    352
+  ],
+  "source_sha256": "b31ac1ad129e9acc8e9656dd90efbed4237d7f3d728b2bb9905ff4aec3569b68",
+  "conditioning": [
+    "foundation.png"
+  ],
+  "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+  "quality_status": "rendered_candidate",
+  "review": "docs/art/production/living-world/"
+}

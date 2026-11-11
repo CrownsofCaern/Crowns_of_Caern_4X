@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_briar_oath_tw_ambush_briefing",
+  "campaign": "briar_oath",
+  "chapter": "tw_ambush",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_briar_oath_tw_ambush_briefing.txt",
+  "prompt_sha256": "848eb39f00cb8ee7fcaefec45133ed9309bf4a002e096cab04adc993b6b3bf74",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "0b6a9596f6f80f370692f534b13f98e3820a249e2089fa280a71440843bb6e2b",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

@@ -1,0 +1,915 @@
+{
+ "_doc": "Hand-made four-player map for hot-seat and computer opponents. Four mirrored quadrants (meadow, snowfield, fen, cinder wastes) around a walled neutral town; guarded passes link neighbouring quadrants. Close slots in the new-game menu for two or three players.",
+ "id": "mournfield",
+ "name": "Mournfield Crossroads",
+ "width": 30,
+ "height": 22,
+ "terrain": [
+  "^^..........^^^^^^ssssssssss^^",
+  "^.............^^sssssssssssss^",
+  "........ff....^^ssssrrssssssss",
+  "........f.....^^sssssrssssssss",
+  "................ssssssssssssss",
+  "..............^^ssssssssssssss",
+  "...........f..^^ssrsssssssssss",
+  "....f.....f...^^sssrsssssrssss",
+  "^...ff.....rrr~~rrrsssssrrsss^",
+  "^..........r......rssssssssss^",
+  "^^^^^.^^^^^r......r^^^^^.^^^^^",
+  "^^^^^.^^^^^r......r^^^^^.^^^^^",
+  "^wwwwwwwwwwr......riiiiiiiiii^",
+  "^wwwffwwwwwrrr~~rrriiiiirriii^",
+  "wwwwfwwwwwfwww^^iiiriiiiiriiii",
+  "wwwwwwwwwwwfww^^iiriiiiiiiiiii",
+  "wwwwwwwwwwwwww^^iiiiiiiiiiiiii",
+  "wwwwwwwwwwwwww..iiiiiiiiiiiiii",
+  "wwwwwwwwfwwwww^^iiiiiriiiiiiii",
+  "wwwwwwwwffwwww^^iiiirriiiiiiii",
+  "^wwwwwwwwwwwww^^iiiiiiiiiiiii^",
+  "^^wwwwwwwwww^^^^^^iiiiiiiiii^^"
+ ],
+ "roads": [
+  {
+   "from": [
+    2,
+    4
+   ],
+   "to": [
+    27,
+    4
+   ]
+  },
+  {
+   "from": [
+    2,
+    17
+   ],
+   "to": [
+    27,
+    17
+   ]
+  },
+  {
+   "from": [
+    5,
+    4
+   ],
+   "to": [
+    5,
+    17
+   ]
+  },
+  {
+   "from": [
+    24,
+    4
+   ],
+   "to": [
+    24,
+    17
+   ]
+  },
+  {
+   "from": [
+    5,
+    7
+   ],
+   "to": [
+    11,
+    7
+   ]
+  },
+  {
+   "from": [
+    24,
+    7
+   ],
+   "to": [
+    18,
+    7
+   ]
+  },
+  {
+   "from": [
+    5,
+    14
+   ],
+   "to": [
+    11,
+    14
+   ]
+  },
+  {
+   "from": [
+    24,
+    14
+   ],
+   "to": [
+    18,
+    14
+   ]
+  },
+  {
+   "from": [
+    11,
+    7
+   ],
+   "to": [
+    11,
+    14
+   ]
+  },
+  {
+   "from": [
+    18,
+    7
+   ],
+   "to": [
+    18,
+    14
+   ]
+  }
+ ],
+ "players": [
+  {
+   "id": 0,
+   "name": "Player",
+   "faction": "concord",
+   "color": "#3d6fc4",
+   "is_human": true
+  },
+  {
+   "id": 1,
+   "name": "The Ashen Host",
+   "faction": "ashen",
+   "color": "#b8402c",
+   "is_human": false
+  },
+  {
+   "id": 2,
+   "name": "Ashen Warband",
+   "faction": "ashen",
+   "color": "#c4872c",
+   "is_human": false
+  },
+  {
+   "id": 3,
+   "name": "Concord Remnant",
+   "faction": "concord",
+   "color": "#4f9a5a",
+   "is_human": false
+  }
+ ],
+ "heroes": [
+  {
+   "id": "hero_osric",
+   "name": "Osric Vell",
+   "class": "knight",
+   "owner": 0,
+   "pos": [
+    3,
+    4
+   ],
+   "army": [
+    [
+     "pike_militia",
+     24
+    ],
+    [
+     "longbowman",
+     14
+    ],
+    [
+     "shieldwarden",
+     6
+    ],
+    [
+     "lancer",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "hero_ishra",
+   "name": "Ishra Vex",
+   "class": "warlord",
+   "owner": 2,
+   "pos": [
+    26,
+    4
+   ],
+   "army": [
+    [
+     "cinderling",
+     32
+    ],
+    [
+     "scorchhound",
+     12
+    ],
+    [
+     "brimstone_hurler",
+     9
+    ],
+    [
+     "flayer",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "hero_hester",
+   "name": "Hester Marrow",
+   "class": "knight",
+   "owner": 3,
+   "pos": [
+    3,
+    17
+   ],
+   "army": [
+    [
+     "pike_militia",
+     24
+    ],
+    [
+     "longbowman",
+     14
+    ],
+    [
+     "shieldwarden",
+     6
+    ],
+    [
+     "lancer",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "hero_gaul",
+   "name": "Gaul Cindermouth",
+   "class": "warlord",
+   "owner": 1,
+   "pos": [
+    26,
+    17
+   ],
+   "army": [
+    [
+     "cinderling",
+     32
+    ],
+    [
+     "scorchhound",
+     12
+    ],
+    [
+     "brimstone_hurler",
+     9
+    ],
+    [
+     "flayer",
+     2
+    ]
+   ]
+  }
+ ],
+ "objects": [
+  {
+   "id": "town_lanternholm",
+   "type": "town",
+   "pos": [
+    2,
+    4
+   ],
+   "town_type": "concord",
+   "name": "Lanternholm",
+   "owner": 0
+  },
+  {
+   "id": "mine_wood_0",
+   "type": "mine",
+   "pos": [
+    3,
+    2
+   ],
+   "resource": "wood",
+   "owner": -1
+  },
+  {
+   "id": "mine_ore_0",
+   "type": "mine",
+   "pos": [
+    2,
+    7
+   ],
+   "resource": "ore",
+   "owner": -1
+  },
+  {
+   "id": "mine_crystal_0",
+   "type": "mine",
+   "pos": [
+    9,
+    3
+   ],
+   "resource": "crystal",
+   "owner": -1,
+   "guard": [
+    [
+     "thornwolf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "res_0_0",
+   "type": "resource",
+   "pos": [
+    7,
+    2
+   ],
+   "resource": "gold",
+   "amount": 750
+  },
+  {
+   "id": "res_0_1",
+   "type": "resource",
+   "pos": [
+    3,
+    8
+   ],
+   "resource": "wood",
+   "amount": 5
+  },
+  {
+   "id": "res_0_2",
+   "type": "resource",
+   "pos": [
+    9,
+    5
+   ],
+   "resource": "ore",
+   "amount": 5
+  },
+  {
+   "id": "res_0_3",
+   "type": "resource",
+   "pos": [
+    12,
+    2
+   ],
+   "resource": "gold",
+   "amount": 500
+  },
+  {
+   "id": "res_0_4",
+   "type": "resource",
+   "pos": [
+    8,
+    9
+   ],
+   "resource": "crystal",
+   "amount": 3
+  },
+  {
+   "id": "town_rimecairn",
+   "type": "town",
+   "pos": [
+    27,
+    4
+   ],
+   "town_type": "ashen",
+   "name": "Rimecairn",
+   "owner": 2
+  },
+  {
+   "id": "mine_wood_1",
+   "type": "mine",
+   "pos": [
+    26,
+    2
+   ],
+   "resource": "wood",
+   "owner": -1
+  },
+  {
+   "id": "mine_ore_1",
+   "type": "mine",
+   "pos": [
+    27,
+    7
+   ],
+   "resource": "ore",
+   "owner": -1
+  },
+  {
+   "id": "mine_mercury_1",
+   "type": "mine",
+   "pos": [
+    20,
+    3
+   ],
+   "resource": "mercury",
+   "owner": -1,
+   "guard": [
+    [
+     "thornwolf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "res_1_0",
+   "type": "resource",
+   "pos": [
+    22,
+    2
+   ],
+   "resource": "gold",
+   "amount": 750
+  },
+  {
+   "id": "res_1_1",
+   "type": "resource",
+   "pos": [
+    26,
+    8
+   ],
+   "resource": "wood",
+   "amount": 5
+  },
+  {
+   "id": "res_1_2",
+   "type": "resource",
+   "pos": [
+    20,
+    5
+   ],
+   "resource": "ore",
+   "amount": 5
+  },
+  {
+   "id": "res_1_3",
+   "type": "resource",
+   "pos": [
+    17,
+    2
+   ],
+   "resource": "gold",
+   "amount": 500
+  },
+  {
+   "id": "res_1_4",
+   "type": "resource",
+   "pos": [
+    21,
+    9
+   ],
+   "resource": "mercury",
+   "amount": 3
+  },
+  {
+   "id": "town_sallowmoor",
+   "type": "town",
+   "pos": [
+    2,
+    17
+   ],
+   "town_type": "concord",
+   "name": "Sallowmoor",
+   "owner": 3
+  },
+  {
+   "id": "mine_wood_2",
+   "type": "mine",
+   "pos": [
+    3,
+    19
+   ],
+   "resource": "wood",
+   "owner": -1
+  },
+  {
+   "id": "mine_ore_2",
+   "type": "mine",
+   "pos": [
+    2,
+    14
+   ],
+   "resource": "ore",
+   "owner": -1
+  },
+  {
+   "id": "mine_gems_2",
+   "type": "mine",
+   "pos": [
+    9,
+    18
+   ],
+   "resource": "gems",
+   "owner": -1,
+   "guard": [
+    [
+     "thornwolf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "res_2_0",
+   "type": "resource",
+   "pos": [
+    7,
+    19
+   ],
+   "resource": "gold",
+   "amount": 750
+  },
+  {
+   "id": "res_2_1",
+   "type": "resource",
+   "pos": [
+    3,
+    13
+   ],
+   "resource": "wood",
+   "amount": 5
+  },
+  {
+   "id": "res_2_2",
+   "type": "resource",
+   "pos": [
+    9,
+    16
+   ],
+   "resource": "ore",
+   "amount": 5
+  },
+  {
+   "id": "res_2_3",
+   "type": "resource",
+   "pos": [
+    12,
+    19
+   ],
+   "resource": "gold",
+   "amount": 500
+  },
+  {
+   "id": "res_2_4",
+   "type": "resource",
+   "pos": [
+    8,
+    12
+   ],
+   "resource": "gems",
+   "amount": 3
+  },
+  {
+   "id": "town_pyrewatch",
+   "type": "town",
+   "pos": [
+    27,
+    17
+   ],
+   "town_type": "ashen",
+   "name": "Pyrewatch",
+   "owner": 1
+  },
+  {
+   "id": "mine_wood_3",
+   "type": "mine",
+   "pos": [
+    26,
+    19
+   ],
+   "resource": "wood",
+   "owner": -1
+  },
+  {
+   "id": "mine_ore_3",
+   "type": "mine",
+   "pos": [
+    27,
+    14
+   ],
+   "resource": "ore",
+   "owner": -1
+  },
+  {
+   "id": "mine_sulfur_3",
+   "type": "mine",
+   "pos": [
+    20,
+    18
+   ],
+   "resource": "sulfur",
+   "owner": -1,
+   "guard": [
+    [
+     "thornwolf",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "res_3_0",
+   "type": "resource",
+   "pos": [
+    22,
+    19
+   ],
+   "resource": "gold",
+   "amount": 750
+  },
+  {
+   "id": "res_3_1",
+   "type": "resource",
+   "pos": [
+    26,
+    13
+   ],
+   "resource": "wood",
+   "amount": 5
+  },
+  {
+   "id": "res_3_2",
+   "type": "resource",
+   "pos": [
+    20,
+    16
+   ],
+   "resource": "ore",
+   "amount": 5
+  },
+  {
+   "id": "res_3_3",
+   "type": "resource",
+   "pos": [
+    17,
+    19
+   ],
+   "resource": "gold",
+   "amount": 500
+  },
+  {
+   "id": "res_3_4",
+   "type": "resource",
+   "pos": [
+    21,
+    12
+   ],
+   "resource": "sulfur",
+   "amount": 3
+  },
+  {
+   "id": "neutral_north",
+   "type": "neutral_army",
+   "pos": [
+    14,
+    4
+   ],
+   "name": "Crag slinger band",
+   "stacks": [
+    [
+     "crag_slinger",
+     24
+    ],
+    [
+     "thornwolf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "neutral_south",
+   "type": "neutral_army",
+   "pos": [
+    15,
+    17
+   ],
+   "name": "Crag slinger band",
+   "stacks": [
+    [
+     "crag_slinger",
+     24
+    ],
+    [
+     "thornwolf",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "neutral_west",
+   "type": "neutral_army",
+   "pos": [
+    5,
+    10
+   ],
+   "name": "Bog lurkers",
+   "stacks": [
+    [
+     "bog_lurker",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "neutral_east",
+   "type": "neutral_army",
+   "pos": [
+    24,
+    11
+   ],
+   "name": "Bog lurkers",
+   "stacks": [
+    [
+     "bog_lurker",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "town_mournfield",
+   "type": "town",
+   "pos": [
+    14,
+    10
+   ],
+   "town_type": "concord",
+   "name": "Mournfield",
+   "owner": -1,
+   "built": [
+    "c_hall",
+    "c_tavern",
+    "c_dw1",
+    "c_dw2",
+    "c_dw3",
+    "c_palisade"
+   ],
+   "garrison": [
+    [
+     "pike_militia",
+     40
+    ],
+    [
+     "longbowman",
+     20
+    ],
+    [
+     "shieldwarden",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "mine_gold_center",
+   "type": "mine",
+   "pos": [
+    15,
+    11
+   ],
+   "resource": "gold",
+   "guard": [
+    [
+     "bog_lurker",
+     6
+    ],
+    [
+     "thornwolf",
+     12
+    ]
+   ]
+  },
+  {
+   "id": "res_center_1",
+   "type": "resource",
+   "pos": [
+    12,
+    9
+   ],
+   "resource": "gold",
+   "amount": 1500
+  },
+  {
+   "id": "res_center_2",
+   "type": "resource",
+   "pos": [
+    17,
+    12
+   ],
+   "resource": "gold",
+   "amount": 1500
+  },
+  {
+   "id": "enc_wagon_nw",
+   "type": "encounter",
+   "pos": [
+    7,
+    6
+   ],
+   "encounter": "overturned_wagon"
+  },
+  {
+   "id": "enc_den_ne",
+   "type": "encounter",
+   "pos": [
+    20,
+    6
+   ],
+   "encounter": "thornwolf_den"
+  },
+  {
+   "id": "enc_barrow_sw",
+   "type": "encounter",
+   "pos": [
+    9,
+    15
+   ],
+   "encounter": "barrow_field"
+  },
+  {
+   "id": "enc_pit_se",
+   "type": "encounter",
+   "pos": [
+    20,
+    15
+   ],
+   "encounter": "ash_pit_champion"
+  },
+  {
+   "id": "enc_camp",
+   "type": "encounter",
+   "pos": [
+    12,
+    12
+   ],
+   "encounter": "free_company_camp"
+  },
+  {
+   "id": "enc_chapel",
+   "type": "encounter",
+   "pos": [
+    17,
+    9
+   ],
+   "encounter": "drowned_chapel"
+  },
+  {
+   "id": "art_boots_nw",
+   "type": "artifact",
+   "pos": [
+    11,
+    5
+   ],
+   "artifact": "hobnailed_boots"
+  },
+  {
+   "id": "art_boots_ne",
+   "type": "artifact",
+   "pos": [
+    18,
+    5
+   ],
+   "artifact": "hobnailed_boots"
+  },
+  {
+   "id": "art_boots_sw",
+   "type": "artifact",
+   "pos": [
+    11,
+    16
+   ],
+   "artifact": "hobnailed_boots"
+  },
+  {
+   "id": "art_boots_se",
+   "type": "artifact",
+   "pos": [
+    18,
+    16
+   ],
+   "artifact": "hobnailed_boots"
+  },
+  {
+   "id": "art_tower_mid",
+   "type": "artifact",
+   "pos": [
+    14,
+    9
+   ],
+   "artifact": "gatewardens_tower"
+  },
+  {
+   "id": "art_coif_mid",
+   "type": "artifact",
+   "pos": [
+    15,
+    12
+   ],
+   "artifact": "bonewright_coif"
+  }
+ ]
+}

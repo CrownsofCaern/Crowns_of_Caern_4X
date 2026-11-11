@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "journey_shuttered_halls",
+  "campaign": "shuttered_halls",
+  "chapter": "",
+  "usage": "journey",
+  "story_source": "data/campaigns.json#campaigns.shuttered_halls",
+  "story_snapshot": "assets/source/batches/campaign-journeys-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/campaign-journeys-001/shuttered_halls/prompt.txt",
+  "prompt_sha256": "261a991753c1de3629e8b57485cd9f3f6b15dfad2491ddb9cad5d3e92351463b",
+  "conditioning": [
+    "assets/source/batches/world-atlas-001/source.png"
+  ],
+  "previous_source": null,
+  "source_sha256": "767b0a6daba3d689e9257d6f6e5cf433536ed61503515f0fa9a77a7983fa2292",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "engine_reviewed",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling",
+  "conditioning_sha256": {
+    "assets/source/batches/world-atlas-001/source.png": "5d0f559fd7f7871aa66beb53a5b77c66b309931a9fc9c4e7e30fc92638f8b077"
+  },
+  "story_snapshot_sha256": "8607c073f54c8d69faecd59db9fa20dbc54c8a633ff548786a3548ac3dc4ac22",
+  "review_screenshot": "docs/art/production/campaign-journeys/shuttered_halls.png",
+  "review_checks": [
+    "Full-resolution source retained; runtime RGB pixels match source",
+    "Distinct mission destinations and coherent regional atmosphere inspected",
+    "Native Godot menu markers, chapter descriptions and underground/surface presentation reviewed"
+  ]
+}

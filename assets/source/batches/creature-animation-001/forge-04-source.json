@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/forge-04-source.png",
+  "source_sha256": "144c4d87c4b9c21d066e91f89a6b957bd1d0e42bf4d2a206d42df05b12e087a4",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/forge-04-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/forge-04-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "thunder_bombard",
+    "doom_bombard",
+    "molten_engine",
+    "worldforge_engine"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "thunder_bombard",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_thunder_bombard.png",
+      "reference_sha256": "3cb304a2844b4ed19111d44441125fdedd82bb9a28ba88f3dd153748a8932628"
+    },
+    {
+      "id": "doom_bombard",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_doom_bombard.png",
+      "reference_sha256": "b8c6a206249596ae52ce558d946d3753c81bde1bb9a773315190e1fff05bc92d"
+    },
+    {
+      "id": "molten_engine",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_molten_engine.png",
+      "reference_sha256": "87bdfd5d40fd4691062f6ef80045d6b565cb6b43c22b89dcadb7c49adca5e4d0"
+    },
+    {
+      "id": "worldforge_engine",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_worldforge_engine.png",
+      "reference_sha256": "0a6b4db4f849525211bc19f8c4b1d401e12db0d63906b3c17701a58aee7d6a70"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

@@ -1,0 +1,20 @@
+{
+  "batch": "thornwood-001",
+  "source_sheet": "assets/source/batches/thornwood-001/source.png",
+  "source_sheet_sha256": "d0073cf01d54e84982e3929b8e699103f82a904b652347394b311175394fc0f6",
+  "crop_xyxy": [
+    675,
+    650,
+    898,
+    884
+  ],
+  "isolation": "largest 4-connected alpha>=128 component",
+  "source_sha256": "7d8bcf324aa59e2f79445af0da1c68b71de222a7f9d82b3a544fcc36dcf70b67",
+  "provider": "ChatGPT image_gen",
+  "quality_status": "pending_visual_review",
+  "native_size": [
+    128,
+    128
+  ],
+  "conditioning": "Approved Concord rendering; faction-specific repository definitions"
+}

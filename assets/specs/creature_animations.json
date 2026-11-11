@@ -1,0 +1,4102 @@
+{
+  "schema_version": 1,
+  "status": "generated_candidates",
+  "groups": [
+    {
+      "id": "concord-01",
+      "faction": "concord",
+      "reference": "assets/source/batches/creature-animation-001/concord-01-reference.png",
+      "source": "assets/source/batches/creature-animation-001/concord-01-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "pike_militia",
+          "name": "Pike Militia",
+          "description": "Conscripts with ash-wood pikes and dented kettle helms; they set their pikes against horses.",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "polearm"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "94112b129e745fd48334a40e5dc299c1288dad0f03bf7a6b85b9ea76900bdca0",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_pike_militia.png"
+        },
+        {
+          "id": "pike_veteran",
+          "name": "Pike Veteran",
+          "description": "Survivors of a dozen musters. Strike first when attacked in melee.",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "polearm"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "944a1670de291517a29fd1dfe3f5ee5362480f64792eea51d78de689ac3d0cab",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_pike_veteran.png"
+        },
+        {
+          "id": "longbowman",
+          "name": "Longbowman",
+          "description": "Yeomen archers in boiled leather, quivers of grey-fletched arrows.",
+          "role": "ranged",
+          "tags": [
+            "human",
+            "archer"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "c92f453aa118f3ecdbe7ca2a14eefac7d9453bcbadd8c79b88b662d3d014ace1",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_longbowman.png"
+        },
+        {
+          "id": "warbow_sergeant",
+          "name": "Warbow Sergeant",
+          "description": "Looses a hasty second arrow each turn (40% damage).",
+          "role": "ranged",
+          "tags": [
+            "human",
+            "archer"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "7e871e81d965fbdc92d6bd15b22205a959235e3a46149b68defb59b5e6c0f9a8",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_warbow_sergeant.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/concord-01-prompt.txt",
+      "source_sha256": "c1fe6df38ff0b16531d5331ca6d6e8933503361c052e90280d5e04b2dc041264",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "concord-02",
+      "faction": "concord",
+      "reference": "assets/source/batches/creature-animation-001/concord-02-reference.png",
+      "source": "assets/source/batches/creature-animation-001/concord-02-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "shieldwarden",
+          "name": "Shieldwarden",
+          "description": "Tower-shield wall of scarred veterans; arrows rattle off, flankers find no gap.",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "shield"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "fc7e242567745debd35a147671283d4c06140f0d417b7787b0305525b8e42680",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_shieldwarden.png"
+        },
+        {
+          "id": "bulwark_sworn",
+          "name": "Bulwark Sworn",
+          "description": "Bangs shields and bellows challenges: enemy melee is drawn onto them.",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "shield"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "88d025629879ae61843c3501d983262d62dd66f582e8a8a308e4aac5aa1424e8",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bulwark_sworn.png"
+        },
+        {
+          "id": "lancer",
+          "name": "Lancer",
+          "description": "Heavy horse in blackened plate. Devastating on the first charge.",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "695bf2b005684d97077c2fe5609ff6754337b48fe4f8ba544356f94caf9c05b2",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_lancer.png"
+        },
+        {
+          "id": "oathbound_lancer",
+          "name": "Oathbound Lancer",
+          "description": "Lance-heads of cold iron: every hit strips 2 defense from the target (max 6).",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "5dc42c3f82b0a9eb140caadfea743c4b982ca65db7eea5128f16b275083017d3",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_oathbound_lancer.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/concord-02-prompt.txt",
+      "source_sha256": "52da262d4b49f85becbcdeb3292503ad17ccfa019c3e8e420266e79dfe56d09f",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "concord-03",
+      "faction": "concord",
+      "reference": "assets/source/batches/creature-animation-001/concord-03-reference.png",
+      "source": "assets/source/batches/creature-animation-001/concord-03-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "lightbearer",
+          "name": "Lightbearer",
+          "description": "Lantern-priests who stitch wounds by candlelight and keep the line from breaking.",
+          "role": "support",
+          "tags": [
+            "human",
+            "holy"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "417ee173b6e3dee15cb8ef7e3f202206e812a5c9d7a1ac7f2577f830b8a702f9",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_lightbearer.png"
+        },
+        {
+          "id": "dawn_confessor",
+          "name": "Dawn Confessor",
+          "description": "Their litanies harden the whole army: +1 defense to every allied stack.",
+          "role": "support",
+          "tags": [
+            "human",
+            "holy"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "028ac7ca31d4a1ab0df6a4ad86516b3bfc69692fae653163cd5e9129ffa89dd6",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_dawn_confessor.png"
+        },
+        {
+          "id": "sunhawk_rider",
+          "name": "Sunhawk Rider",
+          "description": "Knights on great bronze-feathered raptors, diving out of the blood-red sky.",
+          "role": "flyer",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "b4ee8a435475c17e80d92c168d20c293d9bc2841ccea1447f8333b9ca276a93f",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_sunhawk_rider.png"
+        },
+        {
+          "id": "sunhawk_paladin",
+          "name": "Sunhawk Paladin",
+          "description": "Strikes first, and each blow has a 20% chance to dazzle the target into losing its next action.",
+          "role": "flyer",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "ccf733ee6be035c4bae972cb17977b52a50335a97306be2d98ce95d73474e1bb",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_sunhawk_paladin.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/concord-03-prompt.txt",
+      "source_sha256": "d0818a97bd821dff0d9ea72c69e55e5377195a64a506810a37769b62b78783d1",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "concord-04",
+      "faction": "concord",
+      "reference": "assets/source/batches/creature-animation-001/concord-04-reference.png",
+      "source": "assets/source/batches/creature-animation-001/concord-04-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "bastion_colossus",
+          "name": "Bastion Colossus",
+          "description": "A walking siege tower of riveted plate, crewed from within, older than the Concord itself.",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "799c9ccb45491dec3970ab940fda88708c132a0081334b60e5c693049cc00daa",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bastion_colossus.png"
+        },
+        {
+          "id": "citadel_colossus",
+          "name": "Citadel Colossus",
+          "description": "Draws enemy blows, retaliates against every attack, and its shadow gives the army +1 attack/+2 defense.",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "83d4d6099b340ee7b4138f14301b81fca41aa466e6533a2737d5a609bf72da7f",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_citadel_colossus.png"
+        },
+        {
+          "id": "iron_margrave",
+          "name": "Iron Margrave",
+          "description": "A scarred warlord-knight in black siege plate on a barded destrier the size of a bull; the Concord's last argument.",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "0fb1dce655e5eb1e7a905e1aef8ecb15dd6d48d938bcebf81679e43beaa4be6c",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_iron_margrave.png"
+        },
+        {
+          "id": "iron_sovereign",
+          "name": "Iron Sovereign",
+          "description": "Game changer: strikes first, every blow strips 4 defense (max 12), and riding at the head of the host gives every stack +2 attack.",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "f39610e032756c7248c143ad88dece4d81b946dbd554cdfbff8b60f418dfa34c",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_iron_sovereign.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/concord-04-prompt.txt",
+      "source_sha256": "99379049396c8a1b769a802cec448d7da3fe4ead7b9819fe42b345f18967dcb2",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "ashen-01",
+      "faction": "ashen",
+      "reference": "assets/source/batches/ashen-hounds-remake-001/ashen-01-reference.png",
+      "source": "assets/source/batches/ashen-hounds-remake-001/move-attack-fallback.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "cinderling",
+          "name": "Cinderling",
+          "description": "Skittering, half-formed things of cracked slag. Cheap, quick and endless.",
+          "role": "infantry",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "a0b57ef23f553d60b649ec91d5e63c5428c3624ad0800e923897e4ab96d53e4e",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinderling.png"
+        },
+        {
+          "id": "seared_cinderling",
+          "name": "Seared Cinderling",
+          "description": "Their touch keeps burning: 20% of damage dealt burns again next round.",
+          "role": "infantry",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "3ccc6b0b54d0e68f383b6a321b47877357bd60e6d5b9cf7d1e5cdd78f76715ff",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_seared_cinderling.png"
+        },
+        {
+          "id": "scorchhound",
+          "name": "Scorchhound",
+          "description": "Skinless hounds with molten jaws, hunting in loping packs.",
+          "role": "cavalry",
+          "tags": [
+            "demon",
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "cb507d572d561e4040c77cb60799f757b056f36e31b2d801e402206d5cab4098",
+          "reference_source": "assets/source/batches/ashen-hounds-remake-001/references/creature_scorchhound.png"
+        },
+        {
+          "id": "hellmaw_hound",
+          "name": "Hellmaw Hound",
+          "description": "Two-headed: snaps a second time each attack (40% damage).",
+          "role": "cavalry",
+          "tags": [
+            "demon",
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "9e819f40bb604ed27d5b9c0591dac90dc26859b40fdc1ea7ad600629e37fd8a2",
+          "reference_source": "assets/source/batches/ashen-hounds-remake-001/references/creature_hellmaw_hound.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/ashen-hounds-remake-001/README.md",
+      "source_sha256": "56f20df5995e35b2388bc2316337015d348624dc153a888d40d4f7f7a2e60b20",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "ashen-02",
+      "faction": "ashen",
+      "reference": "assets/source/batches/creature-animation-001/ashen-02-reference.png",
+      "source": "assets/source/batches/creature-animation-001/ashen-02-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "brimstone_hurler",
+          "name": "Brimstone Hurler",
+          "description": "Hunched fiends lobbing balls of burning brimstone.",
+          "role": "ranged",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "5ac3cdb8ec446825c60bf3533822f9c039089f6cdbb335db5fdf2430b75bf67a",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_brimstone_hurler.png"
+        },
+        {
+          "id": "brimstone_bombardier",
+          "name": "Brimstone Bombardier",
+          "description": "Bursting shells: each shot also scorches a second enemy stack (30%).",
+          "role": "ranged",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "95a50c4d18cbc4fcb88c007880a7066ec3e1dbf3306f0d1e522a04de30dff539",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_brimstone_bombardier.png"
+        },
+        {
+          "id": "flayer",
+          "name": "Flayer",
+          "description": "Hook-armed butchers; nothing they strike gets the chance to strike back.",
+          "role": "infantry",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "a350c2043e330f74b1519bcd71ea84990a109010e780c764a0b37a5d01e7844a",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_flayer.png"
+        },
+        {
+          "id": "flayer_exalted",
+          "name": "Exalted Flayer",
+          "description": "Drinks what it tears: heals 25% of damage dealt, even raising its fallen.",
+          "role": "infantry",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "fb9eebf6a705a1007a273fec7d5dc5fb1b2ffe4cc4927d89dd7469dc483503db",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_flayer_exalted.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/ashen-02-prompt.txt",
+      "source_sha256": "fdd1f476ab0fde4732bcf2d9dc18c7205b24ab3917f186bf8bfe5d8ae03c0f35",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "ashen-03",
+      "faction": "ashen",
+      "reference": "assets/source/batches/creature-animation-001/ashen-03-reference.png",
+      "source": "assets/source/batches/creature-animation-001/ashen-03-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "ash_witch",
+          "name": "Ash Witch",
+          "description": "Hags of the cinder pits whose hexes wither the enemy's arms.",
+          "role": "support",
+          "tags": [
+            "demon",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "8a9a909852014a60777514502d98cfb639c4b9323dea38d0c7ac63aa832dce70",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ash_witch.png"
+        },
+        {
+          "id": "ash_matriarch",
+          "name": "Ash Matriarch",
+          "description": "Her presence is dread itself: the enemy army suffers -1 morale.",
+          "role": "support",
+          "tags": [
+            "demon",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "bd4cdfbd8f8dc02b66e74be196cd74a4cc8260f9987e8f747a11b31704b397a1",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ash_matriarch.png"
+        },
+        {
+          "id": "gorgewing",
+          "name": "Gorgewing",
+          "description": "A bat-winged maw the size of a barn, all teeth and appetite.",
+          "role": "flyer",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "a001030a832117a5b20f63d8c3aabc513953cebc929a075ab4f96fbff2c2a371",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gorgewing.png"
+        },
+        {
+          "id": "gorgewing_matron",
+          "name": "Gorgewing Matron",
+          "description": "Vomits fire over two stacks (40% to the second) and its shriek costs the enemy 1 morale.",
+          "role": "flyer",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "12b8e4108bc5494679b875e3931708d988ebc857299f4229537d5a3d5ceec3b8",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gorgewing_matron.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/ashen-03-prompt.txt",
+      "source_sha256": "891b55888c6183c3cb9f5bdfaa445d4c2bc3d9e2890b5b5c706f83c6d9c4b202",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "ashen-04",
+      "faction": "ashen",
+      "reference": "assets/source/batches/ashen-maw-remake-001/ashen-04-reference.png",
+      "source": "assets/source/batches/ashen-maw-remake-001/move-attack-fallback.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "pyre_titan",
+          "name": "Pyre Titan",
+          "description": "A burning giant whose footsteps leave glass. Snow makes it hiss and slow.",
+          "role": "heavy",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "8d7634fd3032617ef752749972d15cbbac3699b54ba149699e93690159aab21d",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_pyre_titan.png"
+        },
+        {
+          "id": "pyre_sovereign",
+          "name": "Pyre Sovereign",
+          "description": "The first time it is destroyed, half its number rise again from the ashes; its blows engulf a second stack.",
+          "role": "heavy",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "2e10bb100a6e23ead3a276cf60746872d8bafe2facf52efc14e738b30b551070",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_pyre_sovereign.png"
+        },
+        {
+          "id": "cinder_maw",
+          "name": "Cinder Maw",
+          "description": "A crawling furnace-mouth wider than a gatehouse, ringed with molten teeth; armies are fed to it.",
+          "role": "heavy",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "f13ac9e1443afba294771127290ab7fbe496a57ba85b5e7271080ef12c283cf6",
+          "reference_source": "assets/source/batches/ashen-maw-remake-001/references/creature_cinder_maw.png"
+        },
+        {
+          "id": "maw_of_ruin",
+          "name": "Maw of Ruin",
+          "description": "Game changer: swallows two stacks at once (60% to the second), heals 30% of what it devours and its presence costs the enemy 2 morale.",
+          "role": "heavy",
+          "tags": [
+            "demon"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "a0bc81ccf1e5c92c92ba28b6233207b052b7c696787a9e9d0ab40bf35c291c43",
+          "reference_source": "assets/source/batches/ashen-maw-remake-001/references/creature_maw_of_ruin.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/ashen-maw-remake-001/README.md",
+      "source_sha256": "3ed7332d4d61f8c95a4a04c8fc7eecba9fdf1c82191479402e807a29ba987d66",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "hollow-01",
+      "faction": "hollow",
+      "reference": "assets/source/batches/creature-animation-001/hollow-01-reference.png",
+      "source": "assets/source/batches/creature-animation-001/hollow-01-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "shambler",
+          "name": "Shambler",
+          "description": "Bloated corpses with too many teeth, dragged forward by something that is not hunger.",
+          "role": "infantry",
+          "tags": [
+            "undead"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "dc432f1d99b3681f887d4d27e6a8d64240eeae8dd547dfc57f593bd45426fa31",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_shambler.png"
+        },
+        {
+          "id": "rotting_shambler",
+          "name": "Rotting Shambler",
+          "description": "Wounds it leaves fester: 20% of damage dealt rots again next round.",
+          "role": "infantry",
+          "tags": [
+            "undead"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "c8f3a5f5f4718bcea6bf705ded0ce08ec19482bdb69ac858eb644b82a6c6f26c",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rotting_shambler.png"
+        },
+        {
+          "id": "marrow_archer",
+          "name": "Marrow Archer",
+          "description": "Skeletal bowmen strung with their own sinew; they never tire and never miss a cadence.",
+          "role": "ranged",
+          "tags": [
+            "undead"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "9ba7931ed28cab94202129edc73d645b7f7dbcac2452d44ba77fa5ded1349126",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_marrow_archer.png"
+        },
+        {
+          "id": "marrow_deadeye",
+          "name": "Marrow Deadeye",
+          "description": "Bone arrowheads slip between plates: ignore 30% of the target's defense.",
+          "role": "ranged",
+          "tags": [
+            "undead"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "99ff1e86071b7f5d130b68f10e5d66450e7934291ed1231bc0c562e6e065d6da",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_marrow_deadeye.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/hollow-01-prompt.txt",
+      "source_sha256": "5fd6994e027fe5fa16cecd968f8de784ff1c48ed82a070ef91c2eb68672cddce",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "hollow-02",
+      "faction": "hollow",
+      "reference": "assets/source/batches/creature-animation-001/hollow-02-reference.png",
+      "source": "assets/source/batches/creature-animation-001/hollow-02-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "gravecrawler",
+          "name": "Gravecrawler",
+          "description": "Low, many-jointed horrors that scuttle on hands sewn where feet should be.",
+          "role": "cavalry",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "ad038dda024fdc91c343c04ba3c0bf8326f8a17cbbb44d9a59c5844940ebac99",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gravecrawler.png"
+        },
+        {
+          "id": "gravecrawler_brood",
+          "name": "Gravecrawler Brood",
+          "description": "Paralytic bite: 15% chance per hit that the target loses its next action.",
+          "role": "cavalry",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "995ab912e22eed51f1474b3fbd4749cd3c9b8c2979d7192ecbfc8ad6e4a323f6",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gravecrawler_brood.png"
+        },
+        {
+          "id": "wailing_shade",
+          "name": "Wailing Shade",
+          "description": "A grief that learned to fly. Blades pass through it one time in five.",
+          "role": "flyer",
+          "tags": [
+            "undead",
+            "spirit"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "bdddbb7c952cb19be6d04c58d6511f321406dc95951f4e9a768f4c62dfb97365",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_wailing_shade.png"
+        },
+        {
+          "id": "dirge_shade",
+          "name": "Dirge Shade",
+          "description": "Its dirge saps courage: the enemy army suffers -1 morale.",
+          "role": "flyer",
+          "tags": [
+            "undead",
+            "spirit"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "c7d7ae4995c047d62a3df1ea2f8c414d2c704b8180c7fe17fdc79c55822dd99e",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_dirge_shade.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/hollow-02-prompt.txt",
+      "source_sha256": "b2fad026b04303233dfeed29cc80e1d68e9f9cdde0fd8b46fbabe3c26b2c23c9",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "hollow-03",
+      "faction": "hollow",
+      "reference": "assets/source/batches/creature-animation-001/hollow-03-reference.png",
+      "source": "assets/source/batches/creature-animation-001/hollow-03-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "corpse_weaver",
+          "name": "Corpse Weaver",
+          "description": "Hunched surgeons of the dead who sew fallen undead back into the line.",
+          "role": "support",
+          "tags": [
+            "undead",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "bd36322de5e67bbeae9796e980e3181b412b22eb7f45b7a4d3ebb0b34113393b",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_corpse_weaver.png"
+        },
+        {
+          "id": "charnel_weaver",
+          "name": "Charnel Weaver",
+          "description": "Puppeteers the dead: +1 initiative to every allied stack.",
+          "role": "support",
+          "tags": [
+            "undead",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "fddaa7abcdedcfe7f6c1d5d28e024bff2ab2b3b78b4cb06d5dac21ac8e61aba3",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_charnel_weaver.png"
+        },
+        {
+          "id": "gibbet_knight",
+          "name": "Gibbet Knight",
+          "description": "A hanged knight still in his cage-armour, chains trailing like a cloak.",
+          "role": "heavy",
+          "tags": [
+            "undead"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "2533bd894eb316c010944caa6c76fc9bab751911922a6e4aa0ea1caae0fc2bc7",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gibbet_knight.png"
+        },
+        {
+          "id": "gibbet_lord",
+          "name": "Gibbet Lord",
+          "description": "Feeds on the living: heals 30% of damage dealt, raising its fallen.",
+          "role": "heavy",
+          "tags": [
+            "undead"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "36682db1d78ddf94897c7b84c3e57bd1e72c41ce3d61ebdff8e136a9669ef84c",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gibbet_lord.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/hollow-03-prompt.txt",
+      "source_sha256": "72c4a87de59c6cda3236563ae0fddcad295126453260603d96cf06fede4e7bda",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "hollow-04",
+      "faction": "hollow",
+      "reference": "assets/source/batches/creature-animation-001/hollow-04-reference.png",
+      "source": "assets/source/batches/creature-animation-001/hollow-04-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "charnel_hulk",
+          "name": "Charnel Hulk",
+          "description": "A mountain of stitched corpses that keeps knitting itself together.",
+          "role": "heavy",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "74efb68ed199fb5739262b5b0a32808fac00deb7f3d1e6d1dab9ad09c7b2adc3",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_charnel_hulk.png"
+        },
+        {
+          "id": "charnel_behemoth",
+          "name": "Charnel Behemoth",
+          "description": "Its flailing limbs strike two stacks at once (40% to the second).",
+          "role": "heavy",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "aa7d5d6e8b735020612e7909d6f7a3ff8850280f160e0e3b8a722bd61a7d13f9",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_charnel_behemoth.png"
+        },
+        {
+          "id": "rotwing_leviathan",
+          "name": "Rotwing Leviathan",
+          "description": "A carcass of something vast, held aloft on wings of flayed skin.",
+          "role": "flyer",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "1c904d0ad0d327fbe5a8f6e8319bf0fdb9b0c12811f92992cf62ca143ebe1126",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rotwing_leviathan.png"
+        },
+        {
+          "id": "rotwing_sovereign",
+          "name": "Rotwing Sovereign",
+          "description": "Game changer: drains 40% of the damage it deals back into itself and its presence costs the enemy 2 morale.",
+          "role": "flyer",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "fa2c926f3f573158af19fccdfe0761d5a225f00e40d9727e527b25f30ca04532",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rotwing_sovereign.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/hollow-04-prompt.txt",
+      "source_sha256": "b77b4f03e7a9698486d3a2d3c2ca52d587d8024b36dec8409fa75b742b1af9c1",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "refinement_prompt": "assets/source/batches/creature-animation-001/hollow-04-transparency-prompt.txt"
+    },
+    {
+      "id": "thornwood-01",
+      "faction": "thornwood",
+      "reference": "assets/source/batches/creature-animation-001/thornwood-01-reference.png",
+      "source": "assets/source/batches/creature-animation-001/thornwood-01-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "thorn_skulker",
+          "name": "Thorn Skulker",
+          "description": "Gaunt, bark-skinned hunters with blowpipes; weak alone, deadly in numbers.",
+          "role": "ranged",
+          "tags": [
+            "sylvan"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "298320d230ace416322a733b6503fb48f200dd298909cfa571de36f80606860d",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_thorn_skulker.png"
+        },
+        {
+          "id": "thorn_stalker",
+          "name": "Thorn Stalker",
+          "description": "Venom darts: 25% of damage dealt strikes again next round.",
+          "role": "ranged",
+          "tags": [
+            "sylvan"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "cc8f411d3e338d8a22b19bbc5ec55c4649b9aa8b076a07324a3d14a0c4989530",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_thorn_stalker.png"
+        },
+        {
+          "id": "barkhide_warden",
+          "name": "Barkhide Warden",
+          "description": "Wardens whose skin has grown into armour; they hold the treeline for the archers.",
+          "role": "infantry",
+          "tags": [
+            "sylvan"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "b55d03d6eac7d66b833e600f9c57cb34b02eb970b915736d0648b65501fa7b23",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_barkhide_warden.png"
+        },
+        {
+          "id": "barkhide_sentinel",
+          "name": "Barkhide Sentinel",
+          "description": "Sap-blood: the top creature recovers 6 hit points each round.",
+          "role": "infantry",
+          "tags": [
+            "sylvan"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "42607aa5e61bd3db7d363f8ba870863ce01552a91b0900a11216bd5476a1712c",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_barkhide_sentinel.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/thornwood-01-prompt.txt",
+      "source_sha256": "46eeafd04158fde806735c7af3d54e26425707a36c758343722c4831fe61c18e",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "thornwood-02",
+      "faction": "thornwood",
+      "reference": "assets/source/batches/creature-animation-001/thornwood-02-reference.png",
+      "source": "assets/source/batches/creature-animation-001/thornwood-02-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "briar_huntress",
+          "name": "Briar Huntress",
+          "description": "Hunters of the deep wood with horn bows and thorn-tipped arrows.",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "archer"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "471d43adeb3bd343c48c5d79f9cc6a3cd62565f2fb69ee67edfadc6a6fb4a49a",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_briar_huntress.png"
+        },
+        {
+          "id": "briar_deadshot",
+          "name": "Briar Deadshot",
+          "description": "Nocks two arrows at once (second at 50% damage).",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "archer"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "8f728e3e6c1959a2d5fe90c98378686c8569223075b0f43ac35ef1416aa52d67",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_briar_deadshot.png"
+        },
+        {
+          "id": "rootbinder",
+          "name": "Rootbinder",
+          "description": "Druids who mend wounds with moss and sap and bind the earth to their will.",
+          "role": "support",
+          "tags": [
+            "sylvan",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "05194b1098662885cd1b3c8ac6295b096c8bf47e5e11301afe34905049350efd",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbinder.png"
+        },
+        {
+          "id": "rootbinder_elder",
+          "name": "Rootbinder Elder",
+          "description": "Roots rise around the army: +1 defense to every allied stack.",
+          "role": "support",
+          "tags": [
+            "sylvan",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "3fe906075dee40de77f230987f451509ff76449878fb3301e9f2b5fdaf239d69",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbinder_elder.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/thornwood-02-prompt.txt",
+      "source_sha256": "290089db3eefeb127ee5cadd402cbc23883dbe0570bf1f3db998be2dbc030741",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "thornwood-03",
+      "faction": "thornwood",
+      "reference": "assets/source/batches/creature-animation-001/thornwood-03-reference.png",
+      "source": "assets/source/batches/creature-animation-001/thornwood-03-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "gloomwing_strix",
+          "name": "Gloomwing Strix",
+          "description": "Silent owl-things with human faces that hunt by moonlight.",
+          "role": "flyer",
+          "tags": [
+            "sylvan",
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "41cc0b9a53b65b747786397d93cadfc68584eb61017fef860bf9ec9e50e533fe",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gloomwing_strix.png"
+        },
+        {
+          "id": "gloomwing_shrike",
+          "name": "Gloomwing Shrike",
+          "description": "Strikes first and slips 15% of blows.",
+          "role": "flyer",
+          "tags": [
+            "sylvan",
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "03958a854aa20bb4f7b31e037b0eaa97a7b902d08363a1bff17510c5349bd576",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gloomwing_shrike.png"
+        },
+        {
+          "id": "spore_lobber",
+          "name": "Spore Lobber",
+          "description": "Bloated fungal bearers hurling choking spore-sacs over the battle line.",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "fungus"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "df6a75787d55db30adad986f50eb2244744e0b2a1e9fcfd15fe3a8952a5fd2f3",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_spore_lobber.png"
+        },
+        {
+          "id": "plague_lobber",
+          "name": "Plague Lobber",
+          "description": "The spores take root: 30% of damage dealt strikes again next round.",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "fungus"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "5f166a5b8a9fab632c0a86b72cb945b2c4512eb37862f1e66a5c5e41b6c96d11",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_plague_lobber.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/thornwood-03-prompt.txt",
+      "source_sha256": "94bfeedc7956e49d3b9cc5d4feaca9455a31c0941fe650bcc7d54b7f28184414",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "thornwood-04",
+      "faction": "thornwood",
+      "reference": "assets/source/batches/creature-animation-001/thornwood-04-reference.png",
+      "source": "assets/source/batches/creature-animation-001/thornwood-04-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "rootbound_ancient",
+          "name": "Rootbound Ancient",
+          "description": "A walking oak, hollow and furious, that steps between its kin and harm.",
+          "role": "heavy",
+          "tags": [
+            "sylvan",
+            "treant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "eac6fefe6b8ff4868a2ecb431de7df95f1d973bff2ebac2319fb78e19e6d0d08",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbound_ancient.png"
+        },
+        {
+          "id": "rootbound_patriarch",
+          "name": "Rootbound Patriarch",
+          "description": "Lashes back at every attacker and regrows 50 hit points each round.",
+          "role": "heavy",
+          "tags": [
+            "sylvan",
+            "treant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "35d43de22ffae395dda58dd2b09de557a720e5944c39f739c50fb57351f25e85",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbound_patriarch.png"
+        },
+        {
+          "id": "wyrdthorn_mother",
+          "name": "Wyrdthorn Mother",
+          "description": "A towering hag-tree that flings thorn-volleys like hail.",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "treant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "2950d46f957da3137a0765ad4990acfe08e7073af33814d60fd635540784f524",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_wyrdthorn_mother.png"
+        },
+        {
+          "id": "wyrdthorn_matriarch",
+          "name": "Wyrdthorn Matriarch",
+          "description": "Game changer: two volleys per turn (second at 70%), each with a 20% chance to pin the target in thorns (loses its next action).",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "treant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "7b2d596612dc26108aa3af5bd2d511cde08e4aed7f06a7058e8d920f62116399",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_wyrdthorn_matriarch.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/thornwood-04-prompt.txt",
+      "source_sha256": "90e7d36da26cb2cd368fff1d8071eb05848c242e08b243173f15d30938859840",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "forge-01",
+      "faction": "forge",
+      "reference": "assets/source/batches/creature-animation-001/forge-01-reference.png",
+      "source": "assets/source/batches/creature-animation-001/forge-01-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "forge_thrall",
+          "name": "Forge Thrall",
+          "description": "Soot-black bondsmen in riveted aprons. Slow, stubborn, hard to kill.",
+          "role": "infantry",
+          "tags": [
+            "deepfolk"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "5380b8095351b9a31658566bb2268a1a0602a42a7ee13d4a43812005131b67b8",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_forge_thrall.png"
+        },
+        {
+          "id": "ironclad_thrall",
+          "name": "Ironclad Thrall",
+          "description": "Riveted plates turn arrows: -20% ranged damage taken.",
+          "role": "infantry",
+          "tags": [
+            "deepfolk"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "d86bb4b32ecf632347c94ed6a818f843ddc05eda4adfcd14a453f5a99201f920",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ironclad_thrall.png"
+        },
+        {
+          "id": "rivet_crossbowman",
+          "name": "Rivet Crossbowman",
+          "description": "Squat crossbowmen with windlass bows that punch through mail.",
+          "role": "ranged",
+          "tags": [
+            "deepfolk"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "bd51f727131c8df824964299c48b4da5a150417c51a1a075dc4a6cf150f0eedc",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rivet_crossbowman.png"
+        },
+        {
+          "id": "rivet_arbalist",
+          "name": "Rivet Arbalist",
+          "description": "Steel bolts: ignore 30% of the target's defense.",
+          "role": "ranged",
+          "tags": [
+            "deepfolk"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "a2ceeb078fcaa846fba0f1fbe40f347199efb5fccec9bf24b4f6767ad0e039b4",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rivet_arbalist.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/forge-01-prompt.txt",
+      "source_sha256": "76398fcabe51e091b0ca57d719e00ee2896883661dded2608f0f67749a1235ab",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "forge-02",
+      "faction": "forge",
+      "reference": "assets/source/batches/creature-animation-001/forge-02-reference.png",
+      "source": "assets/source/batches/creature-animation-001/forge-02-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "anvil_guard",
+          "name": "Anvil Guard",
+          "description": "Hammer-and-slab warriors who fight like the forge itself.",
+          "role": "infantry",
+          "tags": [
+            "deepfolk",
+            "shield"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "73c8b86ece8e178f917fb25c34836067842ffd345024fa80a745b5d55efc3bb3",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_anvil_guard.png"
+        },
+        {
+          "id": "anvil_sworn",
+          "name": "Anvil Sworn",
+          "description": "Hammer-back: retaliates against every attack each round.",
+          "role": "infantry",
+          "tags": [
+            "deepfolk",
+            "shield"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "e9d9318f44970233825acd00a0019f6ad25f4734d074bb584eb6c63dcc9349dd",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_anvil_sworn.png"
+        },
+        {
+          "id": "slag_golem",
+          "name": "Slag Golem",
+          "description": "A smelter's mistake given legs: slow, heavy, glowing at the seams.",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "598e568274bf7b4238eff379d9d0e9b29550eb332498b4b1fd49728e09c1c496",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_slag_golem.png"
+        },
+        {
+          "id": "furnace_golem",
+          "name": "Furnace Golem",
+          "description": "Roaring heat draws the enemy's blows onto it.",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "3f699117ce04f94d71531331e8cd4d442a07dbb485fb386c7d44fed05dc8e9ec",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_furnace_golem.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/forge-02-prompt.txt",
+      "source_sha256": "c10109b45459fc4ff20e878457f2abc182015588cd8a277ef4c3ae5810901568",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "forge-03",
+      "faction": "forge",
+      "reference": "assets/source/batches/creature-animation-001/forge-03-reference.png",
+      "source": "assets/source/batches/creature-animation-001/forge-03-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "cinder_engineer",
+          "name": "Cinder Engineer",
+          "description": "Artificers with smoking toolkits who patch flesh and iron alike.",
+          "role": "support",
+          "tags": [
+            "deepfolk",
+            "artificer"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "6d393e7008eb207da5325334cc2cf30190042dcdb0ac565f078193e555cf626d",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinder_engineer.png"
+        },
+        {
+          "id": "master_engineer",
+          "name": "Master Engineer",
+          "description": "Field-tunes every weapon: +1 attack to every allied stack.",
+          "role": "support",
+          "tags": [
+            "deepfolk",
+            "artificer"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "4eb740a18ddd71fe03247f7e223d9c27c86e44fe20a0698e24f279f0c802f4a6",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_master_engineer.png"
+        },
+        {
+          "id": "ironhoof_charger",
+          "name": "Ironhoof Charger",
+          "description": "Riders on clockwork boars that rumble out of the tunnels.",
+          "role": "cavalry",
+          "tags": [
+            "deepfolk",
+            "construct"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "c99424711a68fa3e8c1ce4700a16f281547c6b1aae663b94ddbe100db588dcdd",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ironhoof_charger.png"
+        },
+        {
+          "id": "ironhoof_warboar",
+          "name": "Ironhoof Warboar",
+          "description": "Iron tusks crack armour: -3 defense on the target (max 9).",
+          "role": "cavalry",
+          "tags": [
+            "deepfolk",
+            "construct"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "0df3790ea80b0425d6ffe12be49a1fe7b3bb9533e55b0ad9c6a625799293d428",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ironhoof_warboar.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/forge-03-prompt.txt",
+      "source_sha256": "d6fcc85193be6ef237fb207dd62b2368e2820fa312d4daea568b1e96c6b5b713",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "forge-04",
+      "faction": "forge",
+      "reference": "assets/source/batches/creature-animation-001/forge-04-reference.png",
+      "source": "assets/source/batches/creature-animation-001/forge-04-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "thunder_bombard",
+          "name": "Thunder Bombard",
+          "description": "A crewed black-powder bombard; every shot shakes the earth.",
+          "role": "ranged",
+          "tags": [
+            "deepfolk",
+            "siege"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "3cb304a2844b4ed19111d44441125fdedd82bb9a28ba88f3dd153748a8932628",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_thunder_bombard.png"
+        },
+        {
+          "id": "doom_bombard",
+          "name": "Doom Bombard",
+          "description": "Shells stun: 25% chance per hit that the target loses its next action.",
+          "role": "ranged",
+          "tags": [
+            "deepfolk",
+            "siege"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "b8c6a206249596ae52ce558d946d3753c81bde1bb9a773315190e1fff05bc92d",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_doom_bombard.png"
+        },
+        {
+          "id": "molten_engine",
+          "name": "Molten Engine",
+          "description": "A walking foundry with a furnace for a heart, crewed by the deep clans' best.",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "87bdfd5d40fd4691062f6ef80045d6b565cb6b43c22b89dcadb7c49adca5e4d0",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_molten_engine.png"
+        },
+        {
+          "id": "worldforge_engine",
+          "name": "Worldforge Engine",
+          "description": "Game changer: hammer-blows smash two stacks (60% to the second), strip 4 defense per hit and ignore 30% of armour.",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "0a6b4db4f849525211bc19f8c4b1d401e12db0d63906b3c17701a58aee7d6a70",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_worldforge_engine.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/forge-04-prompt.txt",
+      "source_sha256": "144c4d87c4b9c21d066e91f89a6b957bd1d0e42bf4d2a206d42df05b12e087a4",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "frostmarch-01",
+      "faction": "frostmarch",
+      "reference": "assets/source/batches/creature-animation-001/frostmarch-01-reference.png",
+      "source": "assets/source/batches/creature-animation-001/frostmarch-01-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "clan_raider",
+          "name": "Clan Raider",
+          "description": "Fur-cloaked raiders with axes and round shields. Cheap and eager.",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "northman"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "579c962a755011809ee384f15ed0cfd108ec7f7705d7068eb9782aeb5b96c23e",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_clan_raider.png"
+        },
+        {
+          "id": "blooded_raider",
+          "name": "Blooded Raider",
+          "description": "Gets angrier as the fight goes on: +4% damage per round (max +20%).",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "northman"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "fe46ebc538c0ece0c45adba66326bc136569eae74ac3013dab697eefff5ed80a",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_blooded_raider.png"
+        },
+        {
+          "id": "rimefang_hound",
+          "name": "Rimefang Hound",
+          "description": "Shaggy white war-dogs bred for the drifts.",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "2b0dd0fe63c72af92bedbc0a93bc5e5d12e8aab7802b6df248d4623be7c9766a",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimefang_hound.png"
+        },
+        {
+          "id": "rimefang_packleader",
+          "name": "Rimefang Packleader",
+          "description": "Hunts like a pack: a second bite each attack (35% damage).",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "e78b5ad621683db800f3007ee16e76b379f61e888ba23597373db7a354f76195",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimefang_packleader.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/frostmarch-01-prompt.txt",
+      "source_sha256": "fee4dbb5cc958f91a6daf89a56b59cda9ed9181da0422f3d6e00351e8fc86878",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "frostmarch-02",
+      "faction": "frostmarch",
+      "reference": "assets/source/batches/creature-animation-001/frostmarch-02-reference.png",
+      "source": "assets/source/batches/creature-animation-001/frostmarch-02-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "oathless_berserker",
+          "name": "Oathless Berserker",
+          "description": "Exiles who fight half-naked in the snow and feel nothing.",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "northman"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "050c795f2cfd1f357aef20da80c400baa0662b89364ec38d4d62912ed64ceafc",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_oathless_berserker.png"
+        },
+        {
+          "id": "bloodfrenzy_berserker",
+          "name": "Bloodfrenzy Berserker",
+          "description": "Blood-drunk: heals 20% of damage dealt.",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "northman"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "8a9f565d5e64a1f5c94eaf5fe5d56d158feff66e68609bc19be05e7a92fde829",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bloodfrenzy_berserker.png"
+        },
+        {
+          "id": "tusk_rider",
+          "name": "Tusk Rider",
+          "description": "Raiders on shaggy war-boars, crashing through shield walls.",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "66c87f60ddd182b0be372836c6980070dd18be07bdee23edd7f6676a9fdcd51f",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_tusk_rider.png"
+        },
+        {
+          "id": "tusk_chieftain",
+          "name": "Tusk Chieftain",
+          "description": "Goring tusks: -2 defense on the target per hit (max 6).",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "f970310a594220d96ef281a4c0114a959286426d4c3d10c90313c123531ba7a0",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_tusk_chieftain.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/frostmarch-02-prompt.txt",
+      "source_sha256": "945096c0ba2a8e79ac8d8ecd946541f232168c7ef9ad43e7790776f42e9418cf",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "frostmarch-03",
+      "faction": "frostmarch",
+      "reference": "assets/source/batches/creature-animation-001/frostmarch-03-reference.png",
+      "source": "assets/source/batches/creature-animation-001/frostmarch-03-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "frost_shaman",
+          "name": "Frost Shaman",
+          "description": "Bone-masked shamans who call the cold into the enemy's limbs.",
+          "role": "support",
+          "tags": [
+            "human",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "1666a1d44711a61e0cf4c5654079268ccb85a9af236593baa8b009aa0f6a5bd0",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_frost_shaman.png"
+        },
+        {
+          "id": "storm_shaman",
+          "name": "Storm Shaman",
+          "description": "Hail-hexes: 15% stun per hit, and the gale at the army's back gives +1 initiative.",
+          "role": "support",
+          "tags": [
+            "human",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "f9aeab91ecccd899f15500d1b029b44e7e444ef667b93310b23395ce2474be22",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_storm_shaman.png"
+        },
+        {
+          "id": "rimeback_aurochs",
+          "name": "Rimeback Aurochs",
+          "description": "Ice-crusted giant cattle ridden by the clans' bravest.",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "8f87f0b74a7d1854b4af2ab7714db37056f3b79117d3236bdc08a470e66902fb",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimeback_aurochs.png"
+        },
+        {
+          "id": "rimeback_stampede",
+          "name": "Rimeback Stampede",
+          "description": "Tramples through: each attack also hits a second stack (40%).",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "74096458d941172df84266661bdc3af76be19703797fd89bbae33060bef6d296",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimeback_stampede.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/frostmarch-03-prompt.txt",
+      "source_sha256": "01dc7d574b266663cec93094adee86c132c170491e34d117fe25ac936fa13f0e",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "frostmarch-04",
+      "faction": "frostmarch",
+      "reference": "assets/source/batches/creature-animation-001/frostmarch-04-reference.png",
+      "source": "assets/source/batches/creature-animation-001/frostmarch-04-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "cairn_giant",
+          "name": "Cairn Giant",
+          "description": "Grey giants who sleep under burial cairns and wake hungry.",
+          "role": "heavy",
+          "tags": [
+            "giant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "de5b181d89e7db59764ab6a90d48e823facf4cd0fa3b3bb9a928ce004e297dd1",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cairn_giant.png"
+        },
+        {
+          "id": "cairn_warlord",
+          "name": "Cairn Warlord",
+          "description": "Boulder-sweeps hit a second stack (30%) with a 20% chance to stun.",
+          "role": "heavy",
+          "tags": [
+            "giant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "95197a9bfff6fc9fdb3fc989c90673158fbba7ba30fa0add0a4013a22c67d590",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cairn_warlord.png"
+        },
+        {
+          "id": "winter_wyrm",
+          "name": "Winter Wyrm",
+          "description": "A wingless ice-serpent that bores through glaciers and swallows war-bands whole.",
+          "role": "heavy",
+          "tags": [
+            "beast",
+            "wyrm"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "d366f8366d2c6a825ba02a673b657317b0248d61c680304222140c849ae8981d",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_winter_wyrm.png"
+        },
+        {
+          "id": "winter_wyrm_ancient",
+          "name": "Ancient Winter Wyrm",
+          "description": "Game changer: freezing breath engulfs two stacks (60% to the second), 25% stun per hit, and its roar costs the enemy 1 morale.",
+          "role": "heavy",
+          "tags": [
+            "beast",
+            "wyrm"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "604e29216f06d942380911a91eb2d27974d6df0f6090aa84a4f8f5883701e43d",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_winter_wyrm_ancient.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/frostmarch-04-prompt.txt",
+      "source_sha256": "d53046b6ec705b65041c199dff62cfdebc7a1f7eade870fdd4ed3299febba957",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "wilds-01",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-01-reference.png",
+      "source": "assets/source/batches/creature-animation-001/wilds-01-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "plague_rats",
+          "name": "Plague Rats",
+          "description": "A carpet of diseased rats. Individually pathetic.",
+          "role": "infantry",
+          "tags": [
+            "beast",
+            "vermin"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "4c568aba1c1756aaba9f31bed85a2aaa938ebe7d8d15db4ec1121988dda033c8",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_plague_rats.png"
+        },
+        {
+          "id": "dune_scuttler",
+          "name": "Dune Scuttler",
+          "description": "Dog-sized beetles that burst from the sand.",
+          "role": "cavalry",
+          "tags": [
+            "beast",
+            "insect"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "2a2b8c47ae6f601697426cfa986a892777a5e3e4a252b6c3cf9fdee5e63bbf0f",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_dune_scuttler.png"
+        },
+        {
+          "id": "lost_pilgrims",
+          "name": "Lost Pilgrims",
+          "description": "Starving zealots wandering the roads with cudgels and prayers.",
+          "role": "infantry",
+          "tags": [
+            "human"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "e6547d6960eabe5711fe54e4262c56efc2d5eb858242369c043ff830cf7be680",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_lost_pilgrims.png"
+        },
+        {
+          "id": "moss_creeper",
+          "name": "Moss Creeper",
+          "description": "Crawling mats of moss that close their wounds as you watch.",
+          "role": "infantry",
+          "tags": [
+            "plant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "dd67e98f92a3de0d7abe3bbcc212fa5d974cf4b31939638959c17227f303afe9",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_moss_creeper.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/wilds-01-prompt.txt",
+      "source_sha256": "1d09c084af4f65a8962f0013224cb377dfea2a99ecac9ea2079f2c6b5d08188e",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "wilds-02",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-02-reference.png",
+      "source": "assets/source/batches/creature-animation-001/wilds-02-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "crag_slinger",
+          "name": "Crag Slinger",
+          "description": "Wiry hill-folk with slings, ambushing from the rocks.",
+          "role": "ranged",
+          "tags": [
+            "goblinoid"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "b57ef87f1937dc66f36668f0ea20bee459b24a6436920e37ecab46e741591759",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_crag_slinger.png"
+        },
+        {
+          "id": "thornwolf",
+          "name": "Thornwolf",
+          "description": "Wolves with bramble growing through their hides.",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "c784721d59ebbd53ebbf1d5918e1e476f6f937010319361b8cd9542917099c71",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_thornwolf.png"
+        },
+        {
+          "id": "road_cutthroat",
+          "name": "Road Cutthroat",
+          "description": "Deserters and murderers who prey on caravans.",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "outlaw"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "113b27916ebdd20ff89d511f06cb18edc75ad2a94a22733b2589356521b9820f",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_road_cutthroat.png"
+        },
+        {
+          "id": "carrion_flock",
+          "name": "Carrion Flock",
+          "description": "A storm of crows that peck the dying.",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "bird"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "940d67a545ea72b29e1a3631d83a5bb62a5684df360858136e6bb19f614e9ba8",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_carrion_flock.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/wilds-02-prompt.txt",
+      "source_sha256": "e294ff456a61f60932b6a273301d387bf3087637846b27ab89769aa5088083fa",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "wilds-03",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-03-reference.png",
+      "source": "assets/source/batches/creature-animation-001/wilds-03-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "corpse_light",
+          "name": "Corpse Light",
+          "description": "Pale lights over the marsh that lure travellers into the mire.",
+          "role": "flyer",
+          "tags": [
+            "spirit"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "70b0b5c367124ee71b5f5c6e1b950dfdf8dbab69eb25b796a40330330ca1c3dd",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_corpse_light.png"
+        },
+        {
+          "id": "marsh_hag",
+          "name": "Marsh Hag",
+          "description": "Crone-things who curse from the reeds.",
+          "role": "support",
+          "tags": [
+            "hag",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "5d12d732b870f77fb37d3432a32b1ed4734026ffe53d7238e36673d4abef9e17",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_marsh_hag.png"
+        },
+        {
+          "id": "sand_reaver",
+          "name": "Sand Reaver",
+          "description": "Veiled raiders on lean desert horses.",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "outlaw",
+            "mounted"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "920c45764a4dea24d73e1106a0fe4cc6a69d645c1c28c54ead3cb93cb9023a3d",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_sand_reaver.png"
+        },
+        {
+          "id": "rime_wight",
+          "name": "Rime Wight",
+          "description": "Frozen dead that walk the passes, sucking warmth from the living.",
+          "role": "infantry",
+          "tags": [
+            "undead"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "a482b6ae26dfbcdcca431330800b6ffc79c6289318cdb1ada53eb3fd9f1cdbc7",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rime_wight.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/wilds-03-prompt.txt",
+      "source_sha256": "8037e64a159ddca6f9a38ef87a56d005529d4916ef3d196da83f914239b499a7",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "wilds-04",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-04-reference.png",
+      "source": "assets/source/batches/creature-animation-001/wilds-04-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "deserter_crossbows",
+          "name": "Deserter Crossbows",
+          "description": "Turncoat crossbowmen holding a ruined toll-keep.",
+          "role": "ranged",
+          "tags": [
+            "human",
+            "outlaw"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "274bfd335031be69f42f623ce585c53a945667a784c1a228cae2706a38c08f20",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_deserter_crossbows.png"
+        },
+        {
+          "id": "shrieking_harpy",
+          "name": "Shrieking Harpy",
+          "description": "Filthy winged scavengers that strike and are gone.",
+          "role": "flyer",
+          "tags": [
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "ffb85587589ec08562a8324290ba1a2ab792eeb83f1376adb97040b8bfdf283b",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_shrieking_harpy.png"
+        },
+        {
+          "id": "tomb_scarabs",
+          "name": "Tomb Scarabs",
+          "description": "Black beetles that swarm from looted tombs.",
+          "role": "infantry",
+          "tags": [
+            "insect"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "52983d912f4660e64b852dcf360ea07900465f718a317ba382e05948dbf5e821",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_tomb_scarabs.png"
+        },
+        {
+          "id": "gloom_panther",
+          "name": "Gloom Panther",
+          "description": "Shadow-coloured cats that only show themselves to strike.",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "389f4bf0f7dab8433c4e0f2421939cf5d00ebdd6edfb22690c65f35bd6c6b12f",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gloom_panther.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/wilds-04-prompt.txt",
+      "source_sha256": "b57a07609df49ca5e779402b2228839a12876594d59676682ab44747bd3515d6",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "wilds-05",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-05-reference.png",
+      "source": "assets/source/batches/creature-animation-001/wilds-05-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "bog_lurker",
+          "name": "Bog Lurker",
+          "description": "Armoured swamp-things that wait under the water for weeks.",
+          "role": "infantry",
+          "tags": [
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "d51aeb21604a37878d85f0c20703d224a680586ba49dd71120d66d22dda2efda",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bog_lurker.png"
+        },
+        {
+          "id": "ashscale_basilisk",
+          "name": "Ashscale Basilisk",
+          "description": "A grey lizard whose gaze stiffens muscle like ash.",
+          "role": "infantry",
+          "tags": [
+            "beast",
+            "reptile"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "df44f17cf1840ace320bbb6a82ad635250619338810d9a234d97aaf6f88a28f2",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ashscale_basilisk.png"
+        },
+        {
+          "id": "salt_witch",
+          "name": "Salt Witch",
+          "description": "Hermit healers of the salt flats who travel with bandit bands.",
+          "role": "support",
+          "tags": [
+            "human",
+            "caster"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "275ac89c769015b3dac225ba82b48fff3391b7426ef84b274678219a07c93365",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_salt_witch.png"
+        },
+        {
+          "id": "steppe_centaur",
+          "name": "Steppe Centaur",
+          "description": "Horse-bodied archers who shoot just as well when cornered.",
+          "role": "ranged",
+          "tags": [
+            "beast",
+            "nomad"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "12caa2ae163e9aa1b5852bdb0196057f2c9aaadee725af3044184c29dfbbe48b",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_steppe_centaur.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/wilds-05-prompt.txt",
+      "source_sha256": "f0769adbb6417ec81a95cd3081665933f084fe97b67511c3eeed5973bd8d5370",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "wilds-06",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-06-reference.png",
+      "source": "assets/source/batches/creature-animation-001/wilds-06-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "cave_stalker",
+          "name": "Cave Stalker",
+          "description": "Blind ambush-hunters with hooked forelimbs.",
+          "role": "infantry",
+          "tags": [
+            "beast"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "24d425d748188afbbd36ba2e18260af34cd3e4594015123adbbe21686d96a77a",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cave_stalker.png"
+        },
+        {
+          "id": "hill_troll",
+          "name": "Hill Troll",
+          "description": "Warty brutes whose wounds close faster than you can cut.",
+          "role": "heavy",
+          "tags": [
+            "giant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "f76a0537e5b8c6258182dd2da815553d0ba60c29a9d4a4560364e70b9375736e",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_hill_troll.png"
+        },
+        {
+          "id": "ogre_mauler",
+          "name": "Ogre Mauler",
+          "description": "Gut-heavy ogres swinging tree-trunk clubs.",
+          "role": "infantry",
+          "tags": [
+            "giant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "752a2e4793aae8565ecf7196759c69a0c7a2f10c918da03ac65d69ff888099c5",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ogre_mauler.png"
+        },
+        {
+          "id": "ruin_sentinel",
+          "name": "Ruin Sentinel",
+          "description": "Stone guardians of a fallen empire, still obeying dead orders.",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "d937b88967421c744d244316cf6441090de29e3d0b52ada37d81bd9617307250",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ruin_sentinel.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/wilds-06-prompt.txt",
+      "source_sha256": "e7e2caadb3cfc46b4a9062bafa4ea6cb13745684b504c65f22797e5d1e89f1f0",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "wilds-07",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-07-reference.png",
+      "source": "assets/source/batches/creature-animation-001/wilds-07-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "cinder_wraith",
+          "name": "Cinder Wraith",
+          "description": "Ghosts of the burned, trailing smoke and embers.",
+          "role": "flyer",
+          "tags": [
+            "spirit"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "3ea546318ba5d020a9ebb463fbf905cb0e19f2d8641a53cc60fbb8490890fafb",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinder_wraith.png"
+        },
+        {
+          "id": "barrow_revenant",
+          "name": "Barrow Revenant",
+          "description": "An old king in rusted mail, guarding a barrow nobody remembers.",
+          "role": "infantry",
+          "tags": [
+            "undead"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "133cba2e1c94ae645eaa3e1ae5c3d23ffadc6a64acc8d2428c3aa76bac0783a3",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_barrow_revenant.png"
+        },
+        {
+          "id": "venom_wyvern",
+          "name": "Venom Wyvern",
+          "description": "Two-legged drakes with a stinger on the tail.",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "reptile"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "e4e6048fe2af3542ca17643d43ce5e2dc0ebad7cce4ad9317c4c2ecc162a5fc7",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_venom_wyvern.png"
+        },
+        {
+          "id": "frost_drake",
+          "name": "Frost Drake",
+          "description": "Lean blue-white drakes that breathe sleet.",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "reptile"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "0b7ce520f21fc1ec7f40c89e0f4558fdaf14d2b92744d75852181c002270e69f",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_frost_drake.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/wilds-07-prompt.txt",
+      "source_sha256": "ea5942d9b3ca166edd7c7523c8331cced19a20a61526af0f78996dccbfcd27be",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "wilds-08",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-08-reference.png",
+      "source": "assets/source/batches/creature-animation-001/wilds-08-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "bog_serpent",
+          "name": "Bog Serpent",
+          "description": "A coiled marsh-serpent that strikes at anything that comes close.",
+          "role": "heavy",
+          "tags": [
+            "beast",
+            "reptile"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "6f859c4fb69ebe148b75cb5d2c0edbd624c8d25e20d59f30d355ff43891d00b8",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bog_serpent.png"
+        },
+        {
+          "id": "dune_wurm",
+          "name": "Dune Wurm",
+          "description": "A sand-swimming worm the length of a caravan.",
+          "role": "heavy",
+          "tags": [
+            "beast",
+            "wyrm"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "f83af5642abde60ad12b99fec0ecc3626e1121f86cb4c006e4739ed79a1c2523",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_dune_wurm.png"
+        },
+        {
+          "id": "hill_giant",
+          "name": "Hill Giant",
+          "description": "Club-wielding giants that smash shields like crockery.",
+          "role": "heavy",
+          "tags": [
+            "giant"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "ada24cb7be51f6354226591a96cfe6abf25e482dc6dce61fb91e104bd3dd0ae4",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_hill_giant.png"
+        },
+        {
+          "id": "primordial_wyrm",
+          "name": "Primordial Wyrm",
+          "description": "Something that was old when the mountains were young. Rarely seen; never forgotten.",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "wyrm"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "1d23f7a65030bd570d1435d5f06c977952044a3a8d3b794dd22c2cd24d8b223e",
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_primordial_wyrm.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/creature-animation-001/wilds-08-prompt.txt",
+      "source_sha256": "7233e84bdd30753f9e6bc688565f080fc4e69d59526ab1948885e6236ad7ed78",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "dlc-darkelf-01",
+      "faction": "darkelf",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-darkelf-01-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-darkelf-01-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "de_gloam_spear",
+          "name": "Gloam Spear",
+          "faction": "darkelf",
+          "tier": 1,
+          "role": "infantry",
+          "desc": "lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield",
+          "upgrade": "de_dusk_sentinel",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_gloam_spear.png",
+          "reference_sha256": "fe2d8d2fa84c08c392e8d7d09da48e62ef52155ed9954a0c89211dc527baa992"
+        },
+        {
+          "id": "de_dusk_sentinel",
+          "name": "Dusk Sentinel",
+          "faction": "darkelf",
+          "tier": 1,
+          "role": "infantry",
+          "desc": "lean ash-grey elf in battered black lamellar, pointed steel helm, one long spear and small crescent shield; upgraded with closed silver-edged plate and large hooked shield, longer serrated spear",
+          "upgrade_of": "de_gloam_spear",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_dusk_sentinel.png",
+          "reference_sha256": "223555fc903494bc4fd45b3c215064d14146caba536e0fd57f4db7d807b98b92"
+        },
+        {
+          "id": "de_shardbow",
+          "name": "Shardbow",
+          "faction": "darkelf",
+          "tier": 2,
+          "role": "ranged",
+          "desc": "grim elf crossbowman in violet hood and black leather, compact two-handed crossbow",
+          "upgrade": "de_venom_arbalist",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_shardbow.png",
+          "reference_sha256": "116c402f8383077a712e89e6ac43bc8af617ac5a00a19ceacb96980182aecd96"
+        },
+        {
+          "id": "de_venom_arbalist",
+          "name": "Venom Arbalist",
+          "faction": "darkelf",
+          "tier": 2,
+          "role": "ranged",
+          "desc": "grim elf crossbowman in violet hood and black leather, compact two-handed crossbow; upgraded with armoured high-collared veteran with heavy recurved arbalest and small poison vial",
+          "upgrade_of": "de_shardbow",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_venom_arbalist.png",
+          "reference_sha256": "a6a1ad4afa25bc135d3b33158fe9e954cd0b5ec0a56c49d5324d2218025a5f03"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-darkelf-01-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "17c911bf16b67dbd0174aeb042d1208b7ad2e99240d57bff1fc40d9b3f08dd82"
+    },
+    {
+      "id": "dlc-darkelf-02",
+      "faction": "darkelf",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-darkelf-02-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-darkelf-02-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "de_knifedancer",
+          "name": "Knifedancer",
+          "faction": "darkelf",
+          "tier": 3,
+          "role": "infantry",
+          "desc": "athletic masked elf assassin in fitted black armour holding two curved daggers",
+          "upgrade": "de_blood_scythe",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_knifedancer.png",
+          "reference_sha256": "e49ecb893c963a55dbe84b321493795e17eb2399f6eb61a6f7de8909b7122777"
+        },
+        {
+          "id": "de_blood_scythe",
+          "name": "Blood Scythe",
+          "faction": "darkelf",
+          "tier": 3,
+          "role": "infantry",
+          "desc": "athletic masked elf assassin in fitted black armour holding two curved daggers; upgraded with severe silver death mask, layered spiked shoulder armour, two long sickle blades",
+          "upgrade_of": "de_knifedancer",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_blood_scythe.png",
+          "reference_sha256": "fc1f264884b22c8ac38b46fa492f21d38e6642a1d30fc2359a847c743e5db9a1"
+        },
+        {
+          "id": "de_cave_lancer",
+          "name": "Cave Lancer",
+          "faction": "darkelf",
+          "tier": 4,
+          "role": "cavalry",
+          "desc": "elf lancer astride a lean six-legged black cave lizard, violet saddlecloth",
+          "upgrade": "de_dread_rider",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_cave_lancer.png",
+          "reference_sha256": "28c6719e8d9fbe6418786eb6e826d93c2b919b35a734b6b6e724bafe43b38b8a"
+        },
+        {
+          "id": "de_dread_rider",
+          "name": "Dread Rider",
+          "faction": "darkelf",
+          "tier": 4,
+          "role": "cavalry",
+          "desc": "elf lancer astride a lean six-legged black cave lizard, violet saddlecloth; upgraded with heavily armoured lancer and silver-plated six-legged lizard with larger spined crest",
+          "upgrade_of": "de_cave_lancer",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_dread_rider.png",
+          "reference_sha256": "893f3008031f8028af934111c3c4882d5ec82a1e1bab75d8c8837cb6c9d5037f"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-darkelf-02-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "4f656aee6f7b80d8f0c7746dabe2af2b839948f4108befddc2fc35bb659b4eb5"
+    },
+    {
+      "id": "dlc-darkelf-03",
+      "faction": "darkelf",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-darkelf-03-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-darkelf-03-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "de_veil_adept",
+          "name": "Veil Adept",
+          "faction": "darkelf",
+          "tier": 5,
+          "role": "support",
+          "desc": "severe grey-skinned elf sorceress in layered violet robes with single amethyst staff",
+          "upgrade": "de_mirror_witch",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_veil_adept.png",
+          "reference_sha256": "09279c5dc82b863bec6d2d5fa8dfcaa9bdd42ed4c271012fb4d884f47002e3fc"
+        },
+        {
+          "id": "de_mirror_witch",
+          "name": "Mirror Witch",
+          "faction": "darkelf",
+          "tier": 5,
+          "role": "support",
+          "desc": "severe grey-skinned elf sorceress in layered violet robes with single amethyst staff; upgraded with tall silver headdress, floating intact mirror-shard halo joined to staff, deeper layered robes",
+          "upgrade_of": "de_veil_adept",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_mirror_witch.png",
+          "reference_sha256": "4c43d046b01635133e94ceac474cde878f5fc851337a84f4aeb5623f39566a68"
+        },
+        {
+          "id": "de_silk_stalker",
+          "name": "Silk Stalker",
+          "faction": "darkelf",
+          "tier": 6,
+          "role": "heavy",
+          "desc": "large threatening black cave spider with eight clearly separated legs, purple abdominal markings",
+          "upgrade": "de_widow_matriarch",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_silk_stalker.png",
+          "reference_sha256": "03d2aa97c4818ebd47f9226c64263e8e5fbe629d7b5ff3497150624a332b50ca"
+        },
+        {
+          "id": "de_widow_matriarch",
+          "name": "Widow Matriarch",
+          "faction": "darkelf",
+          "tier": 6,
+          "role": "heavy",
+          "desc": "large threatening black cave spider with eight clearly separated legs, purple abdominal markings; upgraded with massive black widow spider, silver carapace plates and enlarged violet-marked abdomen",
+          "upgrade_of": "de_silk_stalker",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_widow_matriarch.png",
+          "reference_sha256": "1c77e40faf7f54c5d8b957f9caef984752a834fa696f324dc78bf145e49d7e94"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-darkelf-03-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "91f10c6f755bf79a428d5bfcafcc559b40683fc9e891ff664bb0280bbcc2f085"
+    },
+    {
+      "id": "dlc-darkelf-04",
+      "faction": "darkelf",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-darkelf-04-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-darkelf-04-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "de_obsidian_guard",
+          "name": "Obsidian Guard",
+          "faction": "darkelf",
+          "tier": 7,
+          "role": "heavy",
+          "desc": "towering elf executioner in broad black plate with a heavy two-handed axe",
+          "upgrade": "de_onyx_executioner",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_obsidian_guard.png",
+          "reference_sha256": "6454aa4a96369cb4a636908c9154609656e421962d2225820c52d6b9f272dd4d"
+        },
+        {
+          "id": "de_onyx_executioner",
+          "name": "Onyx Executioner",
+          "faction": "darkelf",
+          "tier": 7,
+          "role": "heavy",
+          "desc": "towering elf executioner in broad black plate with a heavy two-handed axe; upgraded with larger black-silver armour, high spined gorget, enormous crescent execution axe",
+          "upgrade_of": "de_obsidian_guard",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_onyx_executioner.png",
+          "reference_sha256": "d4472f490dd618df4d1f9717eb8dca5207b0836c056237b61782d30f35f5bc3f"
+        },
+        {
+          "id": "de_gloam_drake",
+          "name": "Gloam Drake",
+          "faction": "darkelf",
+          "tier": 8,
+          "role": "flyer",
+          "desc": "four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings",
+          "upgrade": "de_eclipse_dragon",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_gloam_drake.png",
+          "reference_sha256": "4593beb1dfe2a70b3dc6f02d52e9a2da310293984d1bb5fc21c6d4b930849461"
+        },
+        {
+          "id": "de_eclipse_dragon",
+          "name": "Eclipse Dragon",
+          "faction": "darkelf",
+          "tier": 8,
+          "role": "flyer",
+          "desc": "four-limbed black cave wyvern with two hind legs and two wing arms, folded violet membrane wings; upgraded with large regal obsidian wyvern, silver horn crown and sweeping violet membrane wings with luminous amethyst seams",
+          "upgrade_of": "de_gloam_drake",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_eclipse_dragon.png",
+          "reference_sha256": "89c5e25469a8effc348822cff49eb322eb66716a39015d2251b7fbc85922daf9"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-darkelf-04-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "ffb431283055e6fde244833c0af52748af1fb77ed5227a13656af89b868362b2"
+    },
+    {
+      "id": "dlc-fishmen-01",
+      "faction": "fishmen",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-fishmen-01-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-fishmen-01-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "fm_brine_spear",
+          "name": "Brine Spear",
+          "faction": "fishmen",
+          "tier": 1,
+          "role": "infantry",
+          "desc": "lean gilled fish man with webbed feet, bone spear, small shell buckler",
+          "upgrade": "fm_reef_guard",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_brine_spear.png",
+          "reference_sha256": "27cae88163c03f109dbe89786dec185c89623a7d5d245fa42a6cdd94086ad3e6"
+        },
+        {
+          "id": "fm_reef_guard",
+          "name": "Reef Guard",
+          "faction": "fishmen",
+          "tier": 1,
+          "role": "infantry",
+          "desc": "lean gilled fish man with webbed feet, bone spear, small shell buckler; upgraded with heavier ivory shell armour, coral-spiked crest, bronze trident and larger shell shield",
+          "upgrade_of": "fm_brine_spear",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_reef_guard.png",
+          "reference_sha256": "4ebeca7e940646d2eb1ce7a8d809f454d573e751cff3a4a2ff3b4be9df2a37e0"
+        },
+        {
+          "id": "fm_hookcaster",
+          "name": "Hookcaster",
+          "faction": "fishmen",
+          "tier": 2,
+          "role": "ranged",
+          "desc": "hunched fish man holding a two-handed bronze harpoon launcher, spare barbed shafts on back",
+          "upgrade": "fm_abyss_harpooner",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_hookcaster.png",
+          "reference_sha256": "c1c2aa55ce9fc77b4372aadf0c28760d7f307b4f91229ac7a8c2562a3b6b813a"
+        },
+        {
+          "id": "fm_abyss_harpooner",
+          "name": "Abyss Harpooner",
+          "faction": "fishmen",
+          "tier": 2,
+          "role": "ranged",
+          "desc": "hunched fish man holding a two-handed bronze harpoon launcher, spare barbed shafts on back; upgraded with larger eelbone launcher, deep-sea helm, multiple barbed shafts and bronze shoulder plates",
+          "upgrade_of": "fm_hookcaster",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_abyss_harpooner.png",
+          "reference_sha256": "37bf1caa5bef7ffdf0a3d81240824cf7fb3ae648bee1976ad160812a83cbb8d2"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-fishmen-01-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "4d72e046bc482c34a5abc3c6feca49e4f70e2fdadcd1e8327072b4b525b28d5c"
+    },
+    {
+      "id": "dlc-fishmen-02",
+      "faction": "fishmen",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-fishmen-02-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-fishmen-02-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "fm_shellback",
+          "name": "Shellback",
+          "faction": "fishmen",
+          "tier": 3,
+          "role": "heavy",
+          "desc": "stocky armoured fish man behind a huge weathered shell shield holding short cleaver",
+          "upgrade": "fm_barnacle_bulwark",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_shellback.png",
+          "reference_sha256": "24649c0f6d5f5cbf0e72341690df3d33aaf889abdc0d41763317b93d1fe8b213"
+        },
+        {
+          "id": "fm_barnacle_bulwark",
+          "name": "Barnacle Bulwark",
+          "faction": "fishmen",
+          "tier": 3,
+          "role": "heavy",
+          "desc": "stocky armoured fish man behind a huge weathered shell shield holding short cleaver; upgraded with hulking barnacle-encrusted shell armour with enormous layered shell shield and bronze hooked blade",
+          "upgrade_of": "fm_shellback",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_barnacle_bulwark.png",
+          "reference_sha256": "06f7e99f243d44a5886a02ab940283a2ebcb3b31082987db623a6c732c046707"
+        },
+        {
+          "id": "fm_mire_crab",
+          "name": "Mire Crab",
+          "faction": "fishmen",
+          "tier": 4,
+          "role": "heavy",
+          "desc": "large low six-legged dark teal crab with two heavy front claws, coral shell nodules",
+          "upgrade": "fm_siege_carapace",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_mire_crab.png",
+          "reference_sha256": "c363566b5c075940b5319e9678436e9a42a6b16167d904753655e44752356665"
+        },
+        {
+          "id": "fm_siege_carapace",
+          "name": "Siege Carapace",
+          "faction": "fishmen",
+          "tier": 4,
+          "role": "heavy",
+          "desc": "large low six-legged dark teal crab with two heavy front claws, coral shell nodules; upgraded with enormous crab with thick bronze-banded shell, serrated enlarged claws and shell siege spikes",
+          "upgrade_of": "fm_mire_crab",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_siege_carapace.png",
+          "reference_sha256": "92072d50842d6f0a90c4198a5b40bf882ae85337c9dcc61057c94c233ff0b3bf"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-fishmen-02-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "b24f0f9da828b9fc35512e2f88dca161ac4064e73acf31b6ce7a554838e630b4"
+    },
+    {
+      "id": "dlc-fishmen-03",
+      "faction": "fishmen",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-fishmen-03-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-fishmen-03-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "fm_lantern_acolyte",
+          "name": "Lantern Acolyte",
+          "faction": "fishmen",
+          "tier": 5,
+          "role": "support",
+          "desc": "thin anglerfish humanoid in ragged teal robes, head lure and pearl-topped staff",
+          "upgrade": "fm_drowned_oracle",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_lantern_acolyte.png",
+          "reference_sha256": "79388d68907bdd266260aa755ba33ca12c04ffd36c349ae7dcd27080c5a78c46"
+        },
+        {
+          "id": "fm_drowned_oracle",
+          "name": "Drowned Oracle",
+          "faction": "fishmen",
+          "tier": 5,
+          "role": "support",
+          "desc": "thin anglerfish humanoid in ragged teal robes, head lure and pearl-topped staff; upgraded with tall abyssal priest with shell headdress, brighter head lure, ornate staff and heavy layered robes",
+          "upgrade_of": "fm_lantern_acolyte",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_drowned_oracle.png",
+          "reference_sha256": "9c92c10ffa6cae4e80aa471cc9ce4192bfad4efbf10bfd4206d01bfaa9b81665"
+        },
+        {
+          "id": "fm_tide_mauler",
+          "name": "Tide Mauler",
+          "faction": "fishmen",
+          "tier": 6,
+          "role": "infantry",
+          "desc": "broad muscular shark-headed amphibious brute with scarred teal skin and two-handed anchor axe",
+          "upgrade": "fm_trench_reaver",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_tide_mauler.png",
+          "reference_sha256": "17123e26aedca42a6ae2f22d99a0a6624c9b137bdaddc81ed55ea93952ed7580"
+        },
+        {
+          "id": "fm_trench_reaver",
+          "name": "Trench Reaver",
+          "faction": "fishmen",
+          "tier": 6,
+          "role": "infantry",
+          "desc": "broad muscular shark-headed amphibious brute with scarred teal skin and two-handed anchor axe; upgraded with larger heavily scarred shark brute, bronze-and-shell shoulder armour and massive serrated anchor axe",
+          "upgrade_of": "fm_tide_mauler",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_trench_reaver.png",
+          "reference_sha256": "7b6530479e05322f6c4f39c8934b02ef9c9ebcc3ef0eab44d1ec1d14cf4e51d7"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-fishmen-03-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "98e1ff582768b8623243fa5f9a09fb7096b2a41f21c5c445e739bee3fca0f520"
+    },
+    {
+      "id": "dlc-fishmen-04",
+      "faction": "fishmen",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-fishmen-04-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-fishmen-04-source.png",
+      "grid": [
+        7,
+        4
+      ],
+      "units": [
+        {
+          "id": "fm_coil_serpent",
+          "name": "Coil Serpent",
+          "faction": "fishmen",
+          "tier": 7,
+          "role": "heavy",
+          "desc": "coiled amphibious sea serpent with two visible clawed forelimbs, dorsal fins and broad jaws",
+          "upgrade": "fm_storm_leviathan",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_coil_serpent.png",
+          "reference_sha256": "0b481d9a8d4875a27151262f67d67a740d8ff225210c09cd1619c6e8c2c8d258"
+        },
+        {
+          "id": "fm_storm_leviathan",
+          "name": "Storm Leviathan",
+          "faction": "fishmen",
+          "tier": 7,
+          "role": "heavy",
+          "desc": "coiled amphibious sea serpent with two visible clawed forelimbs, dorsal fins and broad jaws; upgraded with massive royal coiled leviathan, ivory crown spines, armoured scale ridges and cyan-lit throat",
+          "upgrade_of": "fm_coil_serpent",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_storm_leviathan.png",
+          "reference_sha256": "35f9bf48cfd00da32963fd11114d6db027ed11342f77dce355595ae35180a8fa"
+        },
+        {
+          "id": "fm_trench_titan",
+          "name": "Trench Titan",
+          "faction": "fishmen",
+          "tier": 8,
+          "role": "heavy",
+          "desc": "towering bipedal deep-sea angler monster, two massive arms, lure, toothy jaws, coral back growths",
+          "upgrade": "fm_abyss_sovereign",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_trench_titan.png",
+          "reference_sha256": "363b7c52506ba8d40c5e7e86fd1efa04fd4ceab67d40d4c1097b9bd18307ae11"
+        },
+        {
+          "id": "fm_abyss_sovereign",
+          "name": "Abyss Sovereign",
+          "faction": "fishmen",
+          "tier": 8,
+          "role": "heavy",
+          "desc": "towering bipedal deep-sea angler monster, two massive arms, lure, toothy jaws, coral back growths; upgraded with colossal abyssal king with enormous shell crown, corroded bronze armour, stronger cyan lure and a huge coral-headed sceptre",
+          "upgrade_of": "fm_trench_titan",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_abyss_sovereign.png",
+          "reference_sha256": "1631f9bf1a9e0b404df426936d2356e71196737daa80959e48ea3062042edfce"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-fishmen-04-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "36cb215a8561a523beff5609b23c85125c9d59b079f278c18a11af930ba445f5"
+    },
+    {
+      "id": "six-eyes-story-01",
+      "faction": "wilds",
+      "reference": "assets/source/batches/six-eyes-story-001/six-eyes-story-01-reference.png",
+      "source": "assets/source/batches/six-eyes-story-001/six-eyes-story-01-source.png",
+      "grid": [
+        7,
+        1
+      ],
+      "units": [
+        {
+          "id": "ancient_dragon",
+          "name": "Ancient Dragon",
+          "description": "Karzhaloth, the eyeless dragon under the world, sealed behind the Nightgate. Interim: the primordial wyrm's poses recoloured to obsidian, ember and silver.",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "dragon",
+            "boss"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_sha256": "bf7e27b960198a145a0593796d4b0314fb9ae2f5c988dde4e3e9b7a41bf575f5",
+          "reference_source": "assets/source/batches/six-eyes-story-001/creature_ancient_dragon.png"
+        }
+      ],
+      "prompt_file": "assets/source/batches/six-eyes-story-001/creature_ancient_dragon.txt",
+      "source_sha256": "fbe3fb03c37fe8fd4643f8a58b2feeb825f1140165f9de673658e8c401d95aa1",
+      "generation_status": "derived_interim",
+      "quality_status": "animation_candidate",
+      "derived_by": "tools/story/derive_ancient_dragon_animation.py",
+      "derived_from": "wilds-08 / primordial_wyrm"
+    },
+    {
+      "id": "cobolts-01",
+      "faction": "cobolts",
+      "reference": "assets/source/concepts/cobolts/cobolts-concept-v1.png",
+      "source": "assets/source/batches/cobolt-animation-001/cobolts-01-source.png",
+      "grid": [
+        7,
+        3
+      ],
+      "generation_status": "planned",
+      "quality_status": "pending",
+      "units": [
+        {
+          "id": "cobolt_pack_runner",
+          "name": "Pack Runner",
+          "description": "A hired defender of the cobolt trading houses.",
+          "role": "infantry",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_pack_runner.png",
+          "reference_sha256": "408e95e3b4f2a4877819c71a36f005ee4ea690990c0c6a2e3b5b33ccd2ad16a9"
+        },
+        {
+          "id": "cobolt_caravan_spear",
+          "name": "Caravan Spear",
+          "description": "A hired defender of the cobolt trading houses.",
+          "role": "infantry",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_caravan_spear.png",
+          "reference_sha256": "e25506845eb9c335c10386eb88a0a93f81829fb6432e3d02dff9cf7f45d0201a"
+        },
+        {
+          "id": "cobolt_bolt_broker",
+          "name": "Bolt Broker",
+          "description": "A hired defender of the cobolt trading houses.",
+          "role": "ranged",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_bolt_broker.png",
+          "reference_sha256": "ddd277fe6953cecf2c4a5d18f241612d657e3d20ae3cec91bcb21b740ba6efc1"
+        }
+      ],
+      "prompt_file": "assets/source/concepts/cobolts/cobolts-01-animation-plan.txt"
+    },
+    {
+      "id": "cobolts-02",
+      "faction": "cobolts",
+      "reference": "assets/source/concepts/cobolts/cobolts-concept-v1.png",
+      "source": "assets/source/batches/cobolt-animation-001/cobolts-02-source.png",
+      "grid": [
+        7,
+        2
+      ],
+      "generation_status": "planned",
+      "quality_status": "pending",
+      "units": [
+        {
+          "id": "cobolt_cinder_alchemist",
+          "name": "Cinder Alchemist",
+          "description": "A hired defender of the cobolt trading houses.",
+          "role": "support",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_cinder_alchemist.png",
+          "reference_sha256": "9641d5c018e2a8bcb857c6dd84f3f74a5970e2f43137cb0cf2fef45497cadcd0"
+        },
+        {
+          "id": "cobolt_vault_warden",
+          "name": "Vault Warden",
+          "description": "A hired defender of the cobolt trading houses.",
+          "role": "heavy",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_vault_warden.png",
+          "reference_sha256": "8af906890921498d31782d6ce72518b5dc4dfcaf9824a17aaf121979a379844b"
+        }
+      ],
+      "prompt_file": "assets/source/concepts/cobolts/cobolts-02-animation-plan.txt"
+    }
+  ],
+  "hero_groups": [
+    {
+      "id": "hero-knight-01",
+      "category": "hero",
+      "source": "assets/source/batches/hero-gait-001/source.png",
+      "source_sha256": "3b8880909fe86615e872a404324efbbb05b3e16edd776ce762d92efe0b1a5747",
+      "reference": "assets/build/hero/hero_knight.png",
+      "prompt_file": "assets/source/batches/hero-gait-001/prompt.txt",
+      "grid": [
+        4,
+        1
+      ],
+      "units": [
+        {
+          "id": "knight",
+          "reference_sha256": "3c8f0288a248e1ecbe1118e1a0cfa06008df15732c1392ebce2357944d4a8b32",
+          "reference_source": "assets/source/batches/creature-animation-001/references/hero_knight.png"
+        }
+      ],
+      "generation_status": "generated",
+      "quality_status": "animation_candidate"
+    },
+    {
+      "id": "dlc-darkelf-heroes",
+      "faction": "darkelf",
+      "category": "hero",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-darkelf-heroes-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-darkelf-heroes-source.png",
+      "grid": [
+        4,
+        3
+      ],
+      "units": [
+        {
+          "id": "de_dreadmarshal",
+          "name": "Dreadmarshal",
+          "faction": "darkelf",
+          "desc": "armoured dark elf commander with glaive riding a lean six-legged black cave lizard",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/hero_de_dreadmarshal.png",
+          "reference_sha256": "414acccd0fe3b079099e41377b538f0202787b8c598fdb10c545dcd9f99bb3d3"
+        },
+        {
+          "id": "de_veilseer",
+          "name": "Veilseer",
+          "faction": "darkelf",
+          "desc": "hooded dark elf sorceress with violet staff riding a sleek black cave lizard",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/hero_de_veilseer.png",
+          "reference_sha256": "d100e62843f572656fc61beefdd9114d970007a2ba093677a5fa77c068b1cf51"
+        },
+        {
+          "id": "de_nightstalker",
+          "name": "Nightstalker",
+          "faction": "darkelf",
+          "desc": "masked dark elf scout with compact crossbow riding a low six-legged cave lizard",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/hero_de_nightstalker.png",
+          "reference_sha256": "190c3c10234b7a1f6aedf8abc0dc8daed8d5a8016f169c48a6a7cd5cf6b6e332"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-darkelf-heroes-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "0a9cfa41ecbfbe965e6efe42f309f17815634d4e374d9d23f172072791b37272"
+    },
+    {
+      "id": "dlc-fishmen-heroes",
+      "faction": "fishmen",
+      "category": "hero",
+      "dlc": true,
+      "reference": "assets/source/batches/dlc-animation-001/dlc-fishmen-heroes-reference.png",
+      "source": "assets/source/batches/dlc-animation-001/dlc-fishmen-heroes-source.png",
+      "grid": [
+        4,
+        3
+      ],
+      "units": [
+        {
+          "id": "fm_tidemarshal",
+          "name": "Tidemarshal",
+          "faction": "fishmen",
+          "desc": "gilled fish man commander with coral trident riding a huge armoured six-legged shore crab",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/hero_fm_tidemarshal.png",
+          "reference_sha256": "799e54b1346abd4839a44c392e15f32099f5421a560fb7034b2ea8f9b09ec328"
+        },
+        {
+          "id": "fm_deep_oracle",
+          "name": "Deep Oracle",
+          "faction": "fishmen",
+          "desc": "robed anglerfish oracle with pearl staff riding a broad six-legged shore crab",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/hero_fm_deep_oracle.png",
+          "reference_sha256": "5323f542e6919bfcc5d39f8d8714a16c24aa92d2e2434cd999f30a768f95bbf4"
+        },
+        {
+          "id": "fm_reef_hunter",
+          "name": "Reef Hunter",
+          "faction": "fishmen",
+          "desc": "lean fish man harpoon scout riding a swift low six-legged shore crab",
+          "size": [
+            128,
+            128
+          ],
+          "anchor": [
+            64,
+            127
+          ],
+          "reference_source": "assets/source/batches/dlc-animation-001/hero_fm_reef_hunter.png",
+          "reference_sha256": "43b106643177faf5c3c2fe15541c7c3eb3021d2b0e0910dfb2b93d5c8684d897"
+        }
+      ],
+      "prompt_file": "assets/source/batches/dlc-animation-001/dlc-fishmen-heroes-prompt.txt",
+      "generation_status": "generated",
+      "quality_status": "animation_candidate",
+      "source_sha256": "5cd7abd385517693a2cb771113fc6fe78431e85a507e604c546b2dee024f41aa"
+    }
+  ],
+  "frame_size": [
+    320,
+    256
+  ],
+  "anchor": [
+    160,
+    207
+  ],
+  "alpha_floor": 64
+}

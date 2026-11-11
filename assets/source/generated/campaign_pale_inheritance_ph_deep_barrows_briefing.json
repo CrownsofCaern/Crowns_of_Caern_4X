@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_pale_inheritance_ph_deep_barrows_briefing",
+  "campaign": "pale_inheritance",
+  "chapter": "ph_deep_barrows",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_pale_inheritance_ph_deep_barrows_briefing.txt",
+  "prompt_sha256": "fe7528a67c0bc4625d6e2a553c62eb13cd22a48bc937c5f10f594cbba8a09a84",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "b4481f88b518261b412d5e04e284658cfedf532340bcd93d9da20aaea7b6b479",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

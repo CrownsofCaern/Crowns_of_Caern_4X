@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "landscape-deco-002",
+  "source_sheet": "assets/source/batches/landscape-deco-002/source.png",
+  "source_sheet_sha256": "faa815943151938b719b9375114780160b2a9e92549570562122016832f5c8bd",
+  "source_sha256": "5e2cbd0c3c29fd35e8b3a20cd52c2759d7c40b06fc75e3068f813a9dc5726082",
+  "crop_xyxy": [
+    0,
+    836,
+    418,
+    1254
+  ],
+  "prompt_file": "assets/source/batches/landscape-deco-002/prompt.txt",
+  "native_size": [
+    48,
+    64
+  ],
+  "quality_status": "pending_visual_review",
+  "isolation": "Full grid cell retained"
+}

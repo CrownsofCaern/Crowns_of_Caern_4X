@@ -1,0 +1,1851 @@
+{
+  "schema_version": 1,
+  "_doc": "Generated from assets/specs/campaign_illustrations.json; full-resolution images are not sprite-atlased or palette-quantized.",
+  "illustrations": [
+    {
+      "id": "campaign_last_light_ll_harvest_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_harvest",
+      "chapter_number": 1,
+      "chapter_name": "Greyhold Harvest",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_harvest_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_harvest_briefing.png",
+      "source_sha256": "1b1a72144c3cc18360523f0a6b83cb1aa1da837b0c2e41c5d7f913f11b9a7b34",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_last_light_ll_barrow_roads_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_barrow_roads",
+      "chapter_number": 2,
+      "chapter_name": "The Barrow Roads",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_barrow_roads_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_barrow_roads_briefing.png",
+      "source_sha256": "d7d2f104fa8096b4a9c4c801b5a43d06e6279d1545632bd3e49d9a8fc894f6ba",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_last_light_ll_lanterns_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_lanterns",
+      "chapter_number": 3,
+      "chapter_name": "Lanterns in the Fen",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_lanterns_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_lanterns_briefing.png",
+      "source_sha256": "3df8e3413d459982a203b6951dc9bdffd76d4d67c807ea506767b514a083f8f0",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_last_light_ll_knight_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_knight",
+      "chapter_number": 4,
+      "chapter_name": "The Knight Who Came Back",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_knight_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_knight_briefing.png",
+      "source_sha256": "761c9e3cc45b4c1b43b7352fcb8144b3a780e812ded159dae8a90a5951022f93",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_last_light_ll_doors_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_doors",
+      "chapter_number": 5,
+      "chapter_name": "Doors of Stone",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_doors_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_doors_briefing.png",
+      "source_sha256": "3bf7e88e9001e99d5a6ea22c4323cb0fcb81e9a58db23d84b803453fc99ab243",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_last_light_ll_stumps_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_stumps",
+      "chapter_number": 6,
+      "chapter_name": "The Stumps of Elderwold",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_stumps_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_stumps_briefing.png",
+      "source_sha256": "835c8d8a6b9fa9c313ef5165f732656b480c25530f57c35414b2f227c1ad51f1",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_last_light_ll_red_sky_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_red_sky",
+      "chapter_number": 7,
+      "chapter_name": "Raiders under a Red Sky",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_red_sky_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_red_sky_briefing.png",
+      "source_sha256": "d9d3a2bb8810efcfdabc84e8079f74b988eef2c1ce77a49ca0d65c5649bbae09",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_last_light_ll_ford_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_ford",
+      "chapter_number": 8,
+      "chapter_name": "The Burning Ford",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_ford_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_ford_briefing.png",
+      "source_sha256": "065424179d7d608f66750617e11d2035b72df22e2ed42232e4087e43ed20d320",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_last_light_ll_ashes_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_ashes",
+      "chapter_number": 9,
+      "chapter_name": "Ashes Return",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_ashes_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_ashes_briefing.png",
+      "source_sha256": "c208d081a2f900f3b0a2ce834e95a45a9729bc334d9ef434f3caf7f90be7e6d0",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_last_light_ll_embers_briefing",
+      "campaign": "last_light",
+      "chapter": "ll_embers",
+      "chapter_number": 10,
+      "chapter_name": "Into the Embers",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 45,
+        "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/last_light/ll_embers_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_last_light_ll_embers_briefing.png",
+      "source_sha256": "441aae1bfd82ffd1e1abdbf652e1b98aaa15528db8a0f1c99b762bba083c39a9",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_warm_earth_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_warm_earth",
+      "chapter_number": 1,
+      "chapter_name": "The Warm Earth",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 76,
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_warm_earth_briefing.png",
+      "size": [
+        1672,
+        941
+      ],
+      "source": "assets/source/concept-library-2026-11/campaigns/pale_inheritance-opening.png",
+      "source_sha256": "2ffcc4002031967fa9a4c975b5e1989eb0615752aa144c7b53697675e6553e2e",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_barrow_lords_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_barrow_lords",
+      "chapter_number": 2,
+      "chapter_name": "Barrow-Lords",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_barrow_lords_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_barrow_lords_briefing.png",
+      "source_sha256": "eeaf8cd5afa8b70138c05a3582768e059877ff7d9244538f533ce6e19c6e5180",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_living_shore_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_living_shore",
+      "chapter_number": 3,
+      "chapter_name": "The Living Shore",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_living_shore_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_living_shore_briefing.png",
+      "source_sha256": "ff84bb932f91797458f7dde73777cbca3385082cffd3321b2bfc2f2a6f7be147",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_rot_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_rot",
+      "chapter_number": 4,
+      "chapter_name": "Rot in the Roots",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_rot_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_rot_briefing.png",
+      "source_sha256": "1889672f1fb595c3e6c75f36f958e4eb82ad7a2c70df229372bdf5fcf88b3662",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_twice_dead_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_twice_dead",
+      "chapter_number": 5,
+      "chapter_name": "Twice Dead",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_twice_dead_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_twice_dead_briefing.png",
+      "source_sha256": "0963851e45785bf51fac7be14ed7d4257c1c74fe1ac372da5c784005442a6e24",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_lantern_siege_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_lantern_siege",
+      "chapter_number": 6,
+      "chapter_name": "The Lantern Siege",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_lantern_siege_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_lantern_siege_briefing.png",
+      "source_sha256": "18705962f044d5c7680cdb3c15c2b0c28b4ef8b025344c3efe9220853e3ab2b3",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_deep_barrows_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_deep_barrows",
+      "chapter_number": 7,
+      "chapter_name": "Down the Deep Barrows",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_deep_barrows_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_deep_barrows_briefing.png",
+      "source_sha256": "b4481f88b518261b412d5e04e284658cfedf532340bcd93d9da20aaea7b6b479",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_hungry_fire_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_hungry_fire",
+      "chapter_number": 8,
+      "chapter_name": "The Hungry Fire",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_hungry_fire_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_hungry_fire_briefing.png",
+      "source_sha256": "d2b6ba8172c85c6a886a110f6c4ddebe7b311b87dca17b78cda1d037e80c59ee",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_leviathan_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_leviathan",
+      "chapter_number": 9,
+      "chapter_name": "The Leviathan Stirs",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_leviathan_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_leviathan_briefing.png",
+      "source_sha256": "877a0a24299df7d1871b4e33e775593d238787464bcd7eb9378bfb5d25e0187f",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_pale_inheritance_ph_pale_crown_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_pale_crown",
+      "chapter_number": 10,
+      "chapter_name": "The Pale Crown",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/pale_inheritance/ph_pale_crown_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_pale_crown_briefing.png",
+      "source_sha256": "976e5423885c68dd342ce45594cddf980de24d656fbbc406786cbeb40fc92e0e",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_pit_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_pit",
+      "chapter_number": 1,
+      "chapter_name": "The Pit Below",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 76,
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_pit_briefing.png",
+      "size": [
+        1672,
+        941
+      ],
+      "source": "assets/source/concept-library-2026-11/campaigns/unsealing-opening.png",
+      "source_sha256": "6d34b8d81b3b243066fc5dba7de02a2e95457b566e379db63c91d204391acf40",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_brood_war_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_brood_war",
+      "chapter_number": 2,
+      "chapter_name": "Brood War",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_brood_war_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_unsealing_un_brood_war_briefing.png",
+      "source_sha256": "2c767362bcb7a5f18f0734001d918c489a266545dd731319ed23fc0b8827d25d",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_wardens_keep_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_wardens_keep",
+      "chapter_number": 3,
+      "chapter_name": "The Wardens' Keep",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_wardens_keep_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_unsealing_un_wardens_keep_briefing.png",
+      "source_sha256": "8ef6e284a06aa457f8c61880bcef7170313ceab23f8eb4a776546ceac2634f7a",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_under_barrows_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_under_barrows",
+      "chapter_number": 4,
+      "chapter_name": "Under the Barrows",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_under_barrows_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_unsealing_un_under_barrows_briefing.png",
+      "source_sha256": "7909e2bc5d2aa8bd71118e8ee62cb8e1b847daecbeaee1029236986ca82ce211",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_lockstone_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_lockstone",
+      "chapter_number": 5,
+      "chapter_name": "Breaking the Lockstone",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_lockstone_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_unsealing_un_lockstone_briefing.png",
+      "source_sha256": "7107d53f400b94c14177d467cf8c09d9c3bcac4db76d77a3871ef39da1561a6a",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_kindling_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_kindling",
+      "chapter_number": 6,
+      "chapter_name": "Kindling the Elderwold",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_kindling_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_unsealing_un_kindling_briefing.png",
+      "source_sha256": "096edfa9b22ec191894df63427d80a69bd6c590e6a73671f790975bc8f15bc34",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_ford_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_ford",
+      "chapter_number": 7,
+      "chapter_name": "The Ford",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_ford_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_unsealing_un_ford_briefing.png",
+      "source_sha256": "8119e26dcc2b3ac1aa8f0a2060235bed26bbd7061df2161698526fb0269b4ee3",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_ash_snow_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_ash_snow",
+      "chapter_number": 8,
+      "chapter_name": "Ash on the Snow",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_ash_snow_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_unsealing_un_ash_snow_briefing.png",
+      "source_sha256": "85f5358a2de790c73bebd28160ecb47ec9e15624354cb0a77056649084b7884d",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_maw_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_maw",
+      "chapter_number": 9,
+      "chapter_name": "The Maw Wakes",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_maw_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_unsealing_un_maw_briefing.png",
+      "source_sha256": "48e04307d0667e39ed4dc8a29a74a2f5563f86208c092d4cfd0d40a872051b7b",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_unsealing_un_throne_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_throne",
+      "chapter_number": 10,
+      "chapter_name": "The Red Sky Throne",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/unsealing/un_throne_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_unsealing_un_throne_briefing.png",
+      "source_sha256": "966eccce9b8532c531e9d6f13f6cac8e3c44557570aab1eb59927f50b8602160",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_axe_line_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_axe_line",
+      "chapter_number": 1,
+      "chapter_name": "The Axe Line",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 76,
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_axe_line_briefing.png",
+      "size": [
+        1672,
+        941
+      ],
+      "source": "assets/source/concept-library-2026-11/campaigns/briar_oath-opening.png",
+      "source_sha256": "7975c8cad8195fc359822b1caffd327d7f736c7a9ba862cb67efc5426e1fd74a",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_smoke_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_smoke",
+      "chapter_number": 2,
+      "chapter_name": "Smoke over Elderwold",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_smoke_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_briar_oath_tw_smoke_briefing.png",
+      "source_sha256": "02e795a682814a5bb2f4f15a96b7a760c23ffca14fefe05f3e920a6dab12e500",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_ambush_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_ambush",
+      "chapter_number": 3,
+      "chapter_name": "Ambush at the Stumps",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_ambush_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_briar_oath_tw_ambush_briefing.png",
+      "source_sha256": "0b6a9596f6f80f370692f534b13f98e3820a249e2089fa280a71440843bb6e2b",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_hunters_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_hunters",
+      "chapter_number": 4,
+      "chapter_name": "Hunters in the Snow",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_hunters_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_briar_oath_tw_hunters_briefing.png",
+      "source_sha256": "c252c4f781a2d1a0c2d62ff40bb65c549bf8eace23128d077c90dd88e70eac67",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_fens_edge_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_fens_edge",
+      "chapter_number": 5,
+      "chapter_name": "The Fen's Edge",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_fens_edge_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_briar_oath_tw_fens_edge_briefing.png",
+      "source_sha256": "08852ffe3afc2de3f5756963c4b236266d64582c898d6f34ace2ac7c3e5f0ed9",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_roots_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_roots",
+      "chapter_number": 6,
+      "chapter_name": "What the Roots Remember",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_roots_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_briar_oath_tw_roots_briefing.png",
+      "source_sha256": "0ca97b6fc8b27bb7b2c23f0bec27b93f23c18db82f43866cb1a387c16a395a00",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_kindling_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_kindling",
+      "chapter_number": 7,
+      "chapter_name": "Kindling",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_kindling_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_briar_oath_tw_kindling_briefing.png",
+      "source_sha256": "111544497ca1dedbb39499e5abf09daa4708343e94a64c9171dc155c4cbb2cbe",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_last_grove_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_last_grove",
+      "chapter_number": 8,
+      "chapter_name": "The Last Grove",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_last_grove_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_briar_oath_tw_last_grove_briefing.png",
+      "source_sha256": "271cedd2a710e65ab4d315b2f5a0b9a4f81801caa8f20e7828800bbfc7a082c8",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_seed_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_seed",
+      "chapter_number": 9,
+      "chapter_name": "Seed of the Mother",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_seed_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_briar_oath_tw_seed_briefing.png",
+      "source_sha256": "6ec6592b724fad5f4ced6f04a5a6c0ed27606ed93db1138a04d051a739dfe883",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_briar_oath_tw_briar_seal_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_briar_seal",
+      "chapter_number": 10,
+      "chapter_name": "The Briar Seal",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/briar_oath/tw_briar_seal_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_briar_oath_tw_briar_seal_briefing.png",
+      "source_sha256": "2b816286e346db8c629107ee8599f2b1a3fb558a7a22e8c48654872e9e24108d",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_deep_shift_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_deep_shift",
+      "chapter_number": 1,
+      "chapter_name": "Deep Shift",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 76,
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_deep_shift_briefing.png",
+      "size": [
+        1672,
+        941
+      ],
+      "source": "assets/source/concept-library-2026-11/campaigns/shuttered_halls-opening.png",
+      "source_sha256": "da7d5a472cd5458e71e4ad3443b7820dbe915b0d6013eaa210a7fec3518d11b2",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_bones_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_bones",
+      "chapter_number": 2,
+      "chapter_name": "Bones in the Seams",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_bones_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_bones_briefing.png",
+      "source_sha256": "8fa09e769ece54221aa7cd663567868676dd7bf292c085891455b53846b2f612",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_debtors_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_debtors",
+      "chapter_number": 3,
+      "chapter_name": "The Debtors' Road",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_debtors_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_debtors_briefing.png",
+      "source_sha256": "884088f364ff54d043005e24a1af22fbe9527e5f96b0ffe58d25c408f98f3e2d",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_iron_bread_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_iron_bread",
+      "chapter_number": 4,
+      "chapter_name": "Iron for Bread",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_iron_bread_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_iron_bread_briefing.png",
+      "source_sha256": "6c26865687e8e0883fa2e682be54dc3117b86492f5fce9dc46df4999b9e1fc10",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_heat_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_heat",
+      "chapter_number": 5,
+      "chapter_name": "Heat from Below",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_heat_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_heat_briefing.png",
+      "source_sha256": "f17a2c22bd6650cb5a1797e402caa8a574810e5998bd9cb3f42a3c930fa62427",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_fallen_hold_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_fallen_hold",
+      "chapter_number": 6,
+      "chapter_name": "The Fallen Hold",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_fallen_hold_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_fallen_hold_briefing.png",
+      "source_sha256": "1983e5d235711849bf30bc77fbdb700473d4ce059d69d415ad1f14e52538f23a",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_wardens_keep_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_wardens_keep",
+      "chapter_number": 7,
+      "chapter_name": "The Wardens' Keep",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_wardens_keep_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_wardens_keep_briefing.png",
+      "source_sha256": "c3da5521000d1ccd5e5ce7fb350952ede874da251aed051a4a8d25ab8126a8c3",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_ore_ember_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_ore_ember",
+      "chapter_number": 8,
+      "chapter_name": "Ore and Ember",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_ore_ember_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_ore_ember_briefing.png",
+      "source_sha256": "b61a17e370c69529fd6743016a09294b2069da5ea3003a2fb8179d1dee33b254",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_engine_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_engine",
+      "chapter_number": 9,
+      "chapter_name": "The Molten Engine",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_engine_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_engine_briefing.png",
+      "source_sha256": "da2b3f3303c3fddd4f7807b13c6efe933d2203d849472ead352b2363ef7562b0",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_shuttered_halls_fg_second_lockstone_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_second_lockstone",
+      "chapter_number": 10,
+      "chapter_name": "The Second Lockstone",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/shuttered_halls/fg_second_lockstone_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_second_lockstone_briefing.png",
+      "source_sha256": "9d710cc05a028d626c2ec9aeb31c90568243acdb1ffb6f7fd63b0321f42e2323",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_sun_out_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_sun_out",
+      "chapter_number": 1,
+      "chapter_name": "The Sun Goes Out",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 76,
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_sun_out_briefing.png",
+      "size": [
+        1672,
+        941
+      ],
+      "source": "assets/source/concept-library-2026-11/campaigns/ashwinter-opening.png",
+      "source_sha256": "c31f582c811c1818cba177d0342dcf1230ef28614d2781f441ac707b38ad7338",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_one_hall_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_one_hall",
+      "chapter_number": 2,
+      "chapter_name": "One Hall",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_one_hall_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_ashwinter_fm_one_hall_briefing.png",
+      "source_sha256": "fe60c0e6ec54b069ac3f6c35a14f0f9ee8b4a4fc29ef594b4be3d859739ff2ee",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_south_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_south",
+      "chapter_number": 3,
+      "chapter_name": "South for Bread",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_south_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_ashwinter_fm_south_briefing.png",
+      "source_sha256": "dfc3bdbbbd2ce97aedcd2aa513f6acac865159d167c8ee3e93a150ca7eb7ee01",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_iron_pass_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_iron_pass",
+      "chapter_number": 4,
+      "chapter_name": "The Iron Pass",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_iron_pass_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_ashwinter_fm_iron_pass_briefing.png",
+      "source_sha256": "5a05991ccdec6d13502c3adf0bb10d1eb444e6a78bdc22c62499f0f59244404d",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_highmere_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_highmere",
+      "chapter_number": 5,
+      "chapter_name": "The Granary of Highmere",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_highmere_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_ashwinter_fm_highmere_briefing.png",
+      "source_sha256": "4d6dc2b303f48046692d05b7cb20967ab7b424f30b73434afa40ffaae59b5f8e",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_deer_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_deer",
+      "chapter_number": 6,
+      "chapter_name": "Deer of the Old Wood",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_deer_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_ashwinter_fm_deer_briefing.png",
+      "source_sha256": "2a844a99932cfdc28716177ff1a820afba3ee461ef375d3ba7d322dd06440715",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_cold_bones_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_cold_bones",
+      "chapter_number": 7,
+      "chapter_name": "Cold Bones",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_cold_bones_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_ashwinter_fm_cold_bones_briefing.png",
+      "source_sha256": "8d19f8ad29323625e62f4b4b170763341009abf69c6c36ead5b4cf670fe50c26",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_source_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_source",
+      "chapter_number": 8,
+      "chapter_name": "The Source of Winter",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_source_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_ashwinter_fm_source_briefing.png",
+      "source_sha256": "bc8020f44402ee46da11e660c3ab6986ed50775afcf14c142a493423cedf4a33",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_wyrm_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_wyrm",
+      "chapter_number": 9,
+      "chapter_name": "Wyrm-Wake",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_wyrm_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_ashwinter_fm_wyrm_briefing.png",
+      "source_sha256": "90ecd6ece44172cd872c4d7198a19335753ba7ed542f561eb1286fc503ba1426",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_ashwinter_fm_bring_winter_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_bring_winter",
+      "chapter_number": 10,
+      "chapter_name": "Bring the Winter",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/ashwinter/fm_bring_winter_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_ashwinter_fm_bring_winter_briefing.png",
+      "source_sha256": "fc2c2d72f00568cf145b196d1b8548252d36747dc4c558ffc4061677ebd241c6",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_long_watch_watch_last_briefing",
+      "campaign": "long_watch",
+      "chapter": "watch_last",
+      "chapter_number": 1,
+      "chapter_name": "The Last Watch",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/long_watch/watch_last_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_long_watch_watch_last_briefing.png",
+      "source_sha256": "bb0b291eeaa3aabb23e8577ee0dc8e1a0f98139a404f41e750b2db8f593c150a",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_long_watch_watch_bells_briefing",
+      "campaign": "long_watch",
+      "chapter": "watch_bells",
+      "chapter_number": 2,
+      "chapter_name": "Three Bells",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/long_watch/watch_bells_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_long_watch_watch_bells_briefing.png",
+      "source_sha256": "8dda24216eaf101c5347aeb31a79065e117c0e387ef0a83018377c0a69a27b11",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_long_watch_watch_heart_briefing",
+      "campaign": "long_watch",
+      "chapter": "watch_heart",
+      "chapter_number": 3,
+      "chapter_name": "The Stone Heart",
+      "usage": "briefing",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/long_watch/watch_heart_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_long_watch_watch_heart_briefing.png",
+      "source_sha256": "8b4f8888dc2b82ba74cb87066e8ba5eb3166b98bfb862eecf87f859e71425aee",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_below_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_below",
+      "chapter_number": 1,
+      "chapter_name": "Below the Sky",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 0,
+        "ref": "",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_below_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_six_eyes_se_below_briefing.png",
+      "source_sha256": "3c22ea9911bca46db6792da1d0449470c6d964ae43ae4bc5015f47b189efe777",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_stair_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_stair",
+      "chapter_number": 2,
+      "chapter_name": "The Stair Goes Up",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_stair_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_stair.png",
+      "source_sha256": "a2ec9c0fdd9fe5f02aaabcffce3e1767afcc0695a0bb6a53c2ace73efe17603d",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_under_sky_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_under_sky",
+      "chapter_number": 3,
+      "chapter_name": "Under the Sky",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_under_sky_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_under_sky.png",
+      "source_sha256": "5ffe23e85812eac00fa36ed595c8cfc4fb1dde1bb11a1902b350377349562eb5",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_saints_eye_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_saints_eye",
+      "chapter_number": 4,
+      "chapter_name": "The Saint's Eye",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_saints_eye_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_saints_eye.png",
+      "source_sha256": "b2183e4ce2ce2091bf15ebe756f26f851a6e93955e83062e6440461215422e63",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_thorn_mirror_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_thorn_mirror",
+      "chapter_number": 5,
+      "chapter_name": "Thorn and Mirror",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_thorn_mirror_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_thorn_mirror.png",
+      "source_sha256": "45cf4b5db37c10bcc85f8c2847b1e2333ed61c08fe3862ec719f032e8242a1ee",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_regents_price_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_regents_price",
+      "chapter_number": 6,
+      "chapter_name": "The Regent's Price",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_regents_price_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_regents_price.png",
+      "source_sha256": "77a58b368586c59b742d88f72a6907c3117e3cfe6e78091c2360a4e04f7bc1ba",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_red_sky_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_red_sky",
+      "chapter_number": 7,
+      "chapter_name": "Red Sky, Black Teeth",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_red_sky_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_red_sky.png",
+      "source_sha256": "112bdc4f1bea7400926de1535b0dd5a211d245c03ec943b30774220ed469cbb3",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_winters_eye_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_winters_eye",
+      "chapter_number": 8,
+      "chapter_name": "The Winter's Eye",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_winters_eye_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_winters_eye.png",
+      "source_sha256": "2f6fd082dcf879296c4352b97cb72e166c6e4f518717a3e01c1c2f0ec1fb09f9",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_long_stair_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_long_stair",
+      "chapter_number": 9,
+      "chapter_name": "The Long Stair Down",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_long_stair_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_long_stair.png",
+      "source_sha256": "09cd843f1df26ed0a58772220f32b6d405863f1dbbeccf1327cb584e2113e74e",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_six_eyes_se_nightgate_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_nightgate",
+      "chapter_number": 10,
+      "chapter_name": "The Nightgate",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/six_eyes/se_nightgate_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_nightgate.png",
+      "source_sha256": "3955edaed8227a98059d4ee186eed8646d1e60c5cbb3579ffb68d0434d8f6f24",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_tablets_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_tablets",
+      "chapter_number": 1,
+      "chapter_name": "The Tablets of Sarranth",
+      "usage": "briefing",
+      "story_source": {
+        "pull_request": 0,
+        "ref": "",
+        "path": "data/campaigns.json"
+      },
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_tablets_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/generated/campaign_drowned_oath_do_tablets_briefing.png",
+      "source_sha256": "86a7777fb6f099aa814ea852336fd85f2cdbdee606bb4a223fb3b6e207b491ff",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_one_shoal_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_one_shoal",
+      "chapter_number": 2,
+      "chapter_name": "One Shoal",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_one_shoal_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_one_shoal.png",
+      "source_sha256": "96d28b96ce2bf56b686b7813592b552887b18d005d35bfeb1b9d8bbdec53c4ee",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_landfall_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_landfall",
+      "chapter_number": 3,
+      "chapter_name": "Landfall",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_landfall_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_landfall.png",
+      "source_sha256": "12e53a6db28430bd030a1a086fdb89a4a9619114cc0fa070ac4a521a917e30e8",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_last_brood_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_last_brood",
+      "chapter_number": 4,
+      "chapter_name": "The Last Brood",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_last_brood_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_last_brood.png",
+      "source_sha256": "d1c0169ffcaa952e479562ce4c9f1778d41aacd99fc01d282b9c2ac2be989a3c",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_price_of_iron_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_price_of_iron",
+      "chapter_number": 5,
+      "chapter_name": "The Price of Iron",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_price_of_iron_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_price_of_iron.png",
+      "source_sha256": "f0ef49918a76acb87ee74c55c0458543f3e0b63c298390cd940e45fb8bea57e7",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_three_weeks_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_three_weeks",
+      "chapter_number": 6,
+      "chapter_name": "Three Weeks of Fire",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_three_weeks_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_three_weeks.png",
+      "source_sha256": "eeae56241ed292e7dc08d8f75382676c9227a817772fea97f53e568eba0634f6",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_cold_road_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_cold_road",
+      "chapter_number": 7,
+      "chapter_name": "The Cold Road",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_cold_road_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cold_road.png",
+      "source_sha256": "883b74cef65c57017f3616fe864ac209d35de7f48bd67754eb9e3151916d69b1",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_who_pays_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_who_pays",
+      "chapter_number": 8,
+      "chapter_name": "Who Pays the Clans",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_who_pays_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_who_pays.png",
+      "source_sha256": "cb54cf080fa48933c114e944d843d64f0bc0b9a25b6db0bd0f713a119d03064e",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_cairn_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_cairn",
+      "chapter_number": 9,
+      "chapter_name": "The Whaleroad Cairn",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_cairn_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cairn.png",
+      "source_sha256": "9e3e2d6ce1b1b3052117d6b47afaa22be96b398d30b6af75bade459564cb90ca",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "campaign_drowned_oath_do_cold_first_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_cold_first",
+      "chapter_number": 10,
+      "chapter_name": "Who Was Cold First",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/drowned_oath/do_cold_first_briefing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cold_first.png",
+      "source_sha256": "4f6d9b89ab53742fccdd3582191dcd201265002a7818982dee5b08bd66adc15b",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "journey_last_light",
+      "campaign": "last_light",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Last Light \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.last_light",
+      "generated": true,
+      "path": "res://assets/illustrations/journeys/last_light.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/campaign-journeys-001/last_light/source.png",
+      "source_sha256": "a4bc180a16bc6bd0c98ba26726e2c2d95e9146fb7450989d7fd28eee63362f39",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "journey_pale_inheritance",
+      "campaign": "pale_inheritance",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Pale Inheritance \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.pale_inheritance",
+      "generated": true,
+      "path": "res://assets/illustrations/journeys/pale_inheritance.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/campaign-journeys-001/pale_inheritance/source.png",
+      "source_sha256": "f6df47489a45cebf01d095ec2858109f1b8359de643bb050b0f7c7228543a710",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "journey_unsealing",
+      "campaign": "unsealing",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Unsealing \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.unsealing",
+      "generated": true,
+      "path": "res://assets/illustrations/journeys/unsealing.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/campaign-journeys-001/unsealing/source.png",
+      "source_sha256": "4210670c16bd34f55ff49a2f9dbf8b5ba45ece9f8c3f4429788173d17e713f2b",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "journey_briar_oath",
+      "campaign": "briar_oath",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Briar Oath \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.briar_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/journeys/briar_oath.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/campaign-journeys-001/briar_oath/source.png",
+      "source_sha256": "7b79601954da413556da6d8f13de044d5d62f45ed56b5a96f2e81ff01a63e768",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "journey_shuttered_halls",
+      "campaign": "shuttered_halls",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Shuttered Halls \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.shuttered_halls",
+      "generated": true,
+      "path": "res://assets/illustrations/journeys/shuttered_halls.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/campaign-journeys-001/shuttered_halls/source.png",
+      "source_sha256": "767b0a6daba3d689e9257d6f6e5cf433536ed61503515f0fa9a77a7983fa2292",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "journey_ashwinter",
+      "campaign": "ashwinter",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Ashwinter \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.ashwinter",
+      "generated": true,
+      "path": "res://assets/illustrations/journeys/ashwinter.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/campaign-journeys-001/ashwinter/source.png",
+      "source_sha256": "e1ac62cf015c81fd16c9bb7e9526857cce54b51f6f297132d9003dd5fa312268",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "journey_six_eyes",
+      "campaign": "six_eyes",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Six Eyes \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "generated": true,
+      "path": "res://assets/illustrations/journeys/six_eyes.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/source.png",
+      "source_sha256": "49bbf46e74236b3690cca130444a3ec0939786d4a2a218b87dc35832a5a11a0e",
+      "quality_status": "pending_visual_review"
+    },
+    {
+      "id": "journey_drowned_oath",
+      "campaign": "drowned_oath",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Drowned Oath \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "generated": true,
+      "path": "res://assets/illustrations/journeys/drowned_oath.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/source.png",
+      "source_sha256": "7df77e82ca6b8325e0b4c2a6bb0a0abecd89c9922a18a4d60bb287d525d74e6d",
+      "quality_status": "pending_visual_review"
+    }
+  ]
+}

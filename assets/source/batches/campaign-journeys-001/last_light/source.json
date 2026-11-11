@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "journey_last_light",
+  "campaign": "last_light",
+  "chapter": "",
+  "usage": "journey",
+  "story_source": "data/campaigns.json#campaigns.last_light",
+  "story_snapshot": "assets/source/batches/campaign-journeys-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/campaign-journeys-001/last_light/prompt.txt",
+  "prompt_sha256": "67f1ab9b85f499d13ea5b89033c2191138d2045211f314f15cac739b5b5b9cd3",
+  "conditioning": [
+    "assets/source/batches/world-atlas-001/source.png"
+  ],
+  "previous_source": null,
+  "source_sha256": "a4bc180a16bc6bd0c98ba26726e2c2d95e9146fb7450989d7fd28eee63362f39",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "engine_reviewed",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling",
+  "conditioning_sha256": {
+    "assets/source/batches/world-atlas-001/source.png": "5d0f559fd7f7871aa66beb53a5b77c66b309931a9fc9c4e7e30fc92638f8b077"
+  },
+  "story_snapshot_sha256": "8607c073f54c8d69faecd59db9fa20dbc54c8a633ff548786a3548ac3dc4ac22",
+  "review_screenshot": "docs/art/production/campaign-journeys/last_light.png",
+  "review_checks": [
+    "Full-resolution source retained; runtime RGB pixels match source",
+    "Distinct mission destinations and coherent regional atmosphere inspected",
+    "Native Godot menu markers, chapter descriptions and underground/surface presentation reviewed"
+  ]
+}

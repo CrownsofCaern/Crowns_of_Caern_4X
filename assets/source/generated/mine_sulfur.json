@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "resource-places-001",
+  "source_sheet": "assets/source/batches/resource-places-001/source.png",
+  "source_sheet_sha256": "35212b5db0aab58ed292423c2acee64de22a7c6c1ebc6a40b22f483d843eaaab",
+  "source_sha256": "eccfbaf387bff6b62055d0096b7423f0ab28403e4cca0d72f7cc37ad549a8f6d",
+  "crop_xyxy": [
+    0,
+    341,
+    384,
+    683
+  ],
+  "prompt_file": "assets/source/batches/resource-places-001/prompt.txt",
+  "conditioning": "Approved Reignem Concord sheet; neutral sheets also conditioned on approved Hollow sheet",
+  "native_size": [
+    128,
+    112
+  ],
+  "quality_status": "pending_visual_review",
+  "isolation": "Full grid cell retained, including groups and disconnected effects"
+}

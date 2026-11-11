@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/wilds-06-source.png",
+  "source_sha256": "e7e2caadb3cfc46b4a9062bafa4ea6cb13745684b504c65f22797e5d1e89f1f0",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/wilds-06-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/wilds-06-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "cave_stalker",
+    "hill_troll",
+    "ogre_mauler",
+    "ruin_sentinel"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "cave_stalker",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_cave_stalker.png",
+      "reference_sha256": "24d425d748188afbbd36ba2e18260af34cd3e4594015123adbbe21686d96a77a"
+    },
+    {
+      "id": "hill_troll",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_hill_troll.png",
+      "reference_sha256": "f76a0537e5b8c6258182dd2da815553d0ba60c29a9d4a4560364e70b9375736e"
+    },
+    {
+      "id": "ogre_mauler",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_ogre_mauler.png",
+      "reference_sha256": "752a2e4793aae8565ecf7196759c69a0c7a2f10c918da03ac65d69ff888099c5"
+    },
+    {
+      "id": "ruin_sentinel",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_ruin_sentinel.png",
+      "reference_sha256": "d937b88967421c744d244316cf6441090de29e3d0b52ada37d81bd9617307250"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

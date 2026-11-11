@@ -1,0 +1,25 @@
+{
+  "id": "c_up7",
+  "provider": "image_gen",
+  "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+  "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+  "crop_xyxy": [
+    613,
+    312,
+    940,
+    628
+  ],
+  "alpha_trim_xyxy": [
+    1,
+    33,
+    313,
+    303
+  ],
+  "source_sha256": "2f0c1331ea5907a2edbceadbf392cca4ed19a36e37b17c111ceabaff73907d8a",
+  "conditioning": [
+    "base.png"
+  ],
+  "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+  "quality_status": "rendered_candidate",
+  "review": "docs/art/production/living-world/"
+}

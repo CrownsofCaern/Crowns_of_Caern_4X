@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "grid": [
+    3,
+    2
+  ],
+  "source_dimensions": [
+    1536,
+    1024
+  ],
+  "review": "Mechanical grid extraction; design, silhouette and engine review pending",
+  "assets": [
+    {
+      "id": "ui_panel_concord",
+      "prompt": "concord faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1,
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "ui_panel_ashen",
+      "prompt": "ashen faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1,
+      "crop_xyxy": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "ui_panel_hollow",
+      "prompt": "hollow faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1,
+      "crop_xyxy": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "ui_panel_thornwood",
+      "prompt": "thornwood faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1,
+      "crop_xyxy": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "ui_panel_forge",
+      "prompt": "forge faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1,
+      "crop_xyxy": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "ui_panel_frostmarch",
+      "prompt": "frostmarch faction UI frame",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 1,
+      "crop_xyxy": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "keep_components": true
+    }
+  ]
+}

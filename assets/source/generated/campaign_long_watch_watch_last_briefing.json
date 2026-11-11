@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_long_watch_watch_last_briefing",
+  "campaign": "long_watch",
+  "chapter": "watch_last",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_long_watch_watch_last_briefing.txt",
+  "prompt_sha256": "3a9f820ff310b81c2a3a58fc596d6e10c7100b08c9dcb1611e6870dd9abc41be",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "bb0b291eeaa3aabb23e8577ee0dc8e1a0f98139a404f41e750b2db8f593c150a",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

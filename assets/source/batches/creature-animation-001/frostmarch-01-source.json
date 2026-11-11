@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/frostmarch-01-source.png",
+  "source_sha256": "fee4dbb5cc958f91a6daf89a56b59cda9ed9181da0422f3d6e00351e8fc86878",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/frostmarch-01-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/frostmarch-01-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "clan_raider",
+    "blooded_raider",
+    "rimefang_hound",
+    "rimefang_packleader"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "clan_raider",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_clan_raider.png",
+      "reference_sha256": "579c962a755011809ee384f15ed0cfd108ec7f7705d7068eb9782aeb5b96c23e"
+    },
+    {
+      "id": "blooded_raider",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_blooded_raider.png",
+      "reference_sha256": "fe46ebc538c0ece0c45adba66326bc136569eae74ac3013dab697eefff5ed80a"
+    },
+    {
+      "id": "rimefang_hound",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimefang_hound.png",
+      "reference_sha256": "2b0dd0fe63c72af92bedbc0a93bc5e5d12e8aab7802b6df248d4623be7c9766a"
+    },
+    {
+      "id": "rimefang_packleader",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimefang_packleader.png",
+      "reference_sha256": "e78b5ad621683db800f3007ee16e76b379f61e888ba23597373db7a354f76195"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

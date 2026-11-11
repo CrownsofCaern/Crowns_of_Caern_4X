@@ -1,0 +1,966 @@
+{
+  "id": "last_watch",
+  "name": "The Last Watch \u2014 Survival",
+  "width": 52,
+  "height": 37,
+  "terrain": [
+    "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+    "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+    "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+    "^^^fffffff^^^^^^^^^^.......^^^^^^^^^^^^^^^^iiiiiii^^",
+    "^^^fffffff^^^^^^^^^^.......^^^^^^^^^^^^^^^^iiiiiii^^",
+    "^^^fffffff^^^^^^^^^^.......^^^^^^^^^^^^^^^^iiiiiii^^",
+    "^^^fffffff^^^^^^^^^^.......................iiiiiii^^",
+    "^^^fffffff^^^^^^^^^^.......^^^^^.^^^^^^^.^^iiiiiii^^",
+    "^^^fffffff^^^^^^^^^^.......^^^^^.^^^^^^^.^^iiiiiii^^",
+    "^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^fffff^^^^^.^^iiiiiii^^",
+    "^^^^^^.^^rrrrrr^^^rrrr^.^^^^^^fffff^^^^^.^^^^^^^^^^^",
+    "^^^^^^.^^rrrrrr^^^rrrr^.^^^^^^fffff^^^^^.^^^^^^^^^^^",
+    "^^^^^^...rrrrrr^^^rrrr^.^^^^^^fffff^^^^^.^^^^^^^^^^^",
+    "^^^^^^.^^rrrrrr^^^rrrr^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^.........^^^^^^^^^.^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^.........^^^^^^^^^.^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^.........^^^^^^^^^.^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^.........^^^^^^^^^.^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^......................^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^.........^^^^^^^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^.........^^^^^^^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^.........^^^^^^^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^.........^^^^^^^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^^^^^^",
+    "^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^iiiii^^^^^.^^^^^^^^^^^",
+    "^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^iiiii^^^^^.^^^^^^^^^^^",
+    "^^^^^^.^^^^^^^^^^^^^^^^.^^^^^^iiiii^^^^^.^^^^^^^^^^^",
+    "^^^wwwwwww^^^^^^^^^^rrrrrrr^^^iiiii^^^^^.^^iiiiiii^^",
+    "^^^wwwwwww^^^^^^^^^^rrrrrrr^^^^^.^^^^^^^.^^iiiiiii^^",
+    "^^^wwwwwwwwwwwww^^^^rrrrrrr^^^^^.^^^^^^^.^^iiiiiii^^",
+    "^^^wwwwwwwwwwwww^^^^rrrrrrr................iiiiiii^^",
+    "^^^wwwwwwwwwwwww^^^^rrrrrrr^^^^^^^^^^^^^^^^iiiiiii^^",
+    "^^^wwwwwww^^^^^^^^^^rrrrrrr^^^^^^^^^^^^^^^^iiiiiii^^",
+    "^^^wwwwwww^^^^^^^^^^rrrrrrr^^^^^^^^^^^^^^^^iiiiiii^^",
+    "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+    "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+    "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+  ],
+  "roads": [
+    {
+      "from": [
+        6,
+        6
+      ],
+      "to": [
+        6,
+        30
+      ]
+    },
+    {
+      "from": [
+        6,
+        18
+      ],
+      "to": [
+        23,
+        18
+      ]
+    },
+    {
+      "from": [
+        23,
+        6
+      ],
+      "to": [
+        23,
+        30
+      ]
+    },
+    {
+      "from": [
+        23,
+        6
+      ],
+      "to": [
+        47,
+        6
+      ]
+    },
+    {
+      "from": [
+        23,
+        30
+      ],
+      "to": [
+        47,
+        30
+      ]
+    },
+    {
+      "from": [
+        40,
+        6
+      ],
+      "to": [
+        40,
+        30
+      ]
+    },
+    {
+      "from": [
+        20,
+        11
+      ],
+      "to": [
+        20,
+        18
+      ]
+    },
+    {
+      "from": [
+        6,
+        30
+      ],
+      "to": [
+        13,
+        30
+      ]
+    },
+    {
+      "from": [
+        32,
+        6
+      ],
+      "to": [
+        32,
+        11
+      ]
+    },
+    {
+      "from": [
+        32,
+        30
+      ],
+      "to": [
+        32,
+        25
+      ]
+    },
+    {
+      "from": [
+        6,
+        12
+      ],
+      "to": [
+        12,
+        12
+      ]
+    }
+  ],
+  "players": [
+    {
+      "id": 0,
+      "name": "The Last Watch",
+      "faction": "concord",
+      "color": "#4488d0",
+      "is_human": true
+    },
+    {
+      "id": 1,
+      "name": "The Encircling Host",
+      "faction": "ashen",
+      "color": "#c94040",
+      "is_human": false
+    },
+    {
+      "id": 2,
+      "name": "Reedhaven",
+      "faction": "concord",
+      "color": "#49a85a",
+      "is_human": false
+    }
+  ],
+  "heroes": [
+    {
+      "id": "hero_watch",
+      "name": "Aldous Wren",
+      "class": "knight",
+      "owner": 0,
+      "pos": [
+        6,
+        18
+      ],
+      "army": [
+        [
+          "pike_militia",
+          24
+        ],
+        [
+          "longbowman",
+          14
+        ],
+        [
+          "shieldwarden",
+          8
+        ]
+      ]
+    },
+    {
+      "id": "hero_scout",
+      "name": "Maelis Thorne",
+      "class": "ranger",
+      "owner": 0,
+      "pos": [
+        7,
+        18
+      ],
+      "army": [
+        [
+          "longbowman",
+          10
+        ],
+        [
+          "pike_militia",
+          12
+        ]
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "town_last_watch",
+      "type": "town",
+      "pos": [
+        6,
+        18
+      ],
+      "name": "Last Watch",
+      "town_type": "concord",
+      "owner": 0,
+      "built": [
+        "c_hall",
+        "c_tavern",
+        "c_market",
+        "c_dw1",
+        "c_dw2",
+        "c_dw3",
+        "c_palisade"
+      ],
+      "garrison": [
+        [
+          "pike_militia",
+          12
+        ],
+        [
+          "longbowman",
+          8
+        ]
+      ]
+    },
+    {
+      "id": "town_northwatch",
+      "type": "town",
+      "pos": [
+        23,
+        6
+      ],
+      "name": "Northwatch",
+      "town_type": "concord",
+      "owner": 0,
+      "built": [
+        "c_hall",
+        "c_tavern",
+        "c_dw1"
+      ],
+      "garrison": [
+        [
+          "pike_militia",
+          12
+        ]
+      ]
+    },
+    {
+      "id": "town_crossing",
+      "type": "town",
+      "pos": [
+        13,
+        18
+      ],
+      "name": "Crossingstead",
+      "town_type": "concord",
+      "owner": 0,
+      "built": [
+        "c_hall",
+        "c_tavern",
+        "c_dw1"
+      ],
+      "garrison": [
+        [
+          "pike_militia",
+          10
+        ]
+      ]
+    },
+    {
+      "id": "town_reedhaven",
+      "type": "town",
+      "pos": [
+        6,
+        6
+      ],
+      "name": "Reedhaven",
+      "town_type": "concord",
+      "owner": -1,
+      "built": [
+        "c_hall",
+        "c_tavern",
+        "c_dw1"
+      ],
+      "garrison": [],
+      "requires_quest": "reedhaven_pact"
+    },
+    {
+      "id": "tunnel_north",
+      "type": "gate",
+      "pos": [
+        23,
+        12
+      ],
+      "name": "North Tunnel",
+      "closed": false,
+      "sprite": "place_cindermaw_gate"
+    },
+    {
+      "id": "site_nest",
+      "type": "scenario_site",
+      "pos": [
+        20,
+        11
+      ],
+      "name": "The Hollow Nest",
+      "kind": "nest",
+      "gate": "tunnel_north",
+      "owner": -1,
+      "sprite": "encounter_thornwolf_den",
+      "guard": [
+        [
+          "crag_slinger",
+          16
+        ],
+        [
+          "hill_giant",
+          2
+        ]
+      ],
+      "text": "Clear this nest, then seal its tunnel. Northern invaders must march around the eastern ridge."
+    },
+    {
+      "id": "site_pact",
+      "type": "scenario_site",
+      "pos": [
+        8,
+        6
+      ],
+      "name": "Reedhaven Envoy",
+      "kind": "quest",
+      "quest": "reedhaven_pact",
+      "unlock_day": 9,
+      "sprite": "encounter_free_company_camp",
+      "text": "The people of Reedhaven will stand with you if you return their stolen oath relic. Their envoy arrives on day 9."
+    },
+    {
+      "id": "guardian_oath",
+      "type": "neutral_army",
+      "pos": [
+        12,
+        30
+      ],
+      "name": "Keeper of the Drowned Oath",
+      "stacks": [
+        [
+          "bog_lurker",
+          26
+        ],
+        [
+          "marsh_hag",
+          13
+        ]
+      ]
+    },
+    {
+      "id": "relic_oath",
+      "type": "quest_item",
+      "pos": [
+        13,
+        30
+      ],
+      "name": "The Reed Oathstone",
+      "item": "reed_oathstone",
+      "guarded_by": "guardian_oath",
+      "sprite": "object_chest"
+    },
+    {
+      "id": "site_watch",
+      "type": "scenario_site",
+      "pos": [
+        32,
+        11
+      ],
+      "name": "The Broken Watch",
+      "kind": "watchtower",
+      "owner": -1,
+      "sprite": "place_fenwick_dike",
+      "guard": [
+        [
+          "road_cutthroat",
+          14
+        ]
+      ],
+      "unlock_day": 8,
+      "text": "Restore this watch for earlier invasion warnings and a view of the entry roads. Its keepers return on day 8."
+    },
+    {
+      "id": "site_camp",
+      "type": "scenario_site",
+      "pos": [
+        32,
+        25
+      ],
+      "name": "Ashen Supply Camp",
+      "kind": "siege_camp",
+      "owner": -1,
+      "sprite": "encounter_ash_pit_champion",
+      "guard": [
+        [
+          "cinderling",
+          84
+        ],
+        [
+          "brimstone_hurler",
+          34
+        ]
+      ],
+      "text": "Destroy the supplies to reduce every future invasion army by one fifth."
+    },
+    {
+      "id": "site_forge",
+      "type": "scenario_site",
+      "pos": [
+        12,
+        12
+      ],
+      "name": "The Abandoned Forge",
+      "kind": "forge",
+      "owner": -1,
+      "sprite": "mine_ore",
+      "guard": [
+        [
+          "crag_slinger",
+          12
+        ]
+      ],
+      "unlock_day": 8,
+      "text": "Secure the workshops to send eight pike militia to Last Watch every week. The smiths return on day 8."
+    },
+    {
+      "id": "mine_watch_wood",
+      "type": "mine",
+      "pos": [
+        4,
+        15
+      ],
+      "resource": "wood",
+      "owner": 0,
+      "amount": 2
+    },
+    {
+      "id": "mine_watch_ore",
+      "type": "mine",
+      "pos": [
+        9,
+        21
+      ],
+      "resource": "ore",
+      "owner": 0,
+      "amount": 2
+    },
+    {
+      "id": "mine_watch_gold",
+      "type": "mine",
+      "pos": [
+        23,
+        29
+      ],
+      "resource": "gold",
+      "owner": 0,
+      "amount": 500
+    },
+    {
+      "id": "supply_west",
+      "type": "resource",
+      "pos": [
+        6,
+        25
+      ],
+      "resource": "gold",
+      "amount": 1200
+    },
+    {
+      "id": "supply_north",
+      "type": "resource",
+      "pos": [
+        18,
+        18
+      ],
+      "resource": "wood",
+      "amount": 8
+    },
+    {
+      "id": "supply_east",
+      "type": "resource",
+      "pos": [
+        35,
+        6
+      ],
+      "resource": "ore",
+      "amount": 8
+    }
+  ],
+  "scenario": {
+    "name": "The Last Watch",
+    "mode": "survival",
+    "player": 0,
+    "castle": "town_last_watch",
+    "briefing": "Hold Last Watch through the final siege. Armies approach along the north and south roads. Leave the walls to win Reedhaven, seal the north tunnel, restore the watch, or destroy the siege supplies.",
+    "protected_towns": [
+      "town_last_watch"
+    ],
+    "invasion_players": [
+      1
+    ],
+    "dormant_players": [
+      2
+    ],
+    "max_active_invaders": 6,
+    "random_events": false,
+    "wave_strength": {
+      "easy": 0.75,
+      "normal": 1.0,
+      "hard": 1.25
+    },
+    "objectives": [
+      {
+        "id": "hold",
+        "type": "survive",
+        "through_day": 35,
+        "text": "Hold Last Watch through day 35."
+      },
+      {
+        "id": "siege",
+        "type": "clear_waves",
+        "text": "Defeat every invasion commander, including the final siege."
+      }
+    ],
+    "waves": [
+      {
+        "id": "watch_wave_0",
+        "day": 7,
+        "warning_days": 3,
+        "owner": 1,
+        "spawn": [
+          47,
+          6
+        ],
+        "entry_tiles": [
+          [
+            47,
+            6
+          ],
+          [
+            48,
+            6
+          ],
+          [
+            49,
+            6
+          ]
+        ],
+        "entry_name": "the North Road",
+        "target": "town_northwatch",
+        "targets": [
+          "town_northwatch",
+          "town_last_watch",
+          "town_crossing",
+          "town_northwatch"
+        ],
+        "order": "assault",
+        "hero": {
+          "id": "watch_commander_0",
+          "name": "The Ember Scout",
+          "class": "warlord",
+          "army": [
+            [
+              "cinderling",
+              16
+            ],
+            [
+              "scorchhound",
+              5
+            ]
+          ]
+        }
+      },
+      {
+        "id": "watch_wave_1",
+        "day": 14,
+        "warning_days": 3,
+        "owner": 1,
+        "spawn": [
+          47,
+          30
+        ],
+        "entry_tiles": [
+          [
+            47,
+            30
+          ],
+          [
+            48,
+            30
+          ],
+          [
+            49,
+            30
+          ]
+        ],
+        "entry_name": "the South Road",
+        "target": "town_last_watch",
+        "targets": [
+          "town_last_watch",
+          "town_last_watch",
+          "town_crossing",
+          "town_northwatch"
+        ],
+        "order": "assault",
+        "hero": {
+          "id": "watch_commander_1",
+          "name": "The Ashen Hunter",
+          "class": "warlord",
+          "army": [
+            [
+              "cinderling",
+              28
+            ],
+            [
+              "scorchhound",
+              9
+            ],
+            [
+              "brimstone_hurler",
+              7
+            ]
+          ]
+        }
+      },
+      {
+        "id": "watch_wave_2",
+        "day": 21,
+        "warning_days": 3,
+        "owner": 1,
+        "spawn": [
+          47,
+          6
+        ],
+        "entry_tiles": [
+          [
+            47,
+            6
+          ],
+          [
+            48,
+            6
+          ],
+          [
+            49,
+            6
+          ]
+        ],
+        "entry_name": "the North Road",
+        "target": "town_northwatch",
+        "targets": [
+          "town_northwatch",
+          "town_last_watch",
+          "town_crossing",
+          "town_northwatch"
+        ],
+        "order": "assault",
+        "hero": {
+          "id": "watch_commander_2",
+          "name": "The Cinder Marshal",
+          "class": "warlord",
+          "army": [
+            [
+              "flayer",
+              15
+            ],
+            [
+              "brimstone_hurler",
+              14
+            ],
+            [
+              "scorchhound",
+              15
+            ]
+          ]
+        }
+      },
+      {
+        "id": "watch_wave_3",
+        "day": 28,
+        "warning_days": 3,
+        "owner": 1,
+        "spawn": [
+          47,
+          6
+        ],
+        "entry_tiles": [
+          [
+            47,
+            6
+          ],
+          [
+            48,
+            6
+          ],
+          [
+            49,
+            6
+          ]
+        ],
+        "entry_name": "the North Road",
+        "target": "town_northwatch",
+        "targets": [
+          "town_northwatch",
+          "town_last_watch",
+          "town_crossing",
+          "town_northwatch"
+        ],
+        "order": "assault",
+        "hero": {
+          "id": "watch_commander_3",
+          "name": "The Northern Hammer",
+          "class": "warlord",
+          "army": [
+            [
+              "flayer",
+              25
+            ],
+            [
+              "brimstone_hurler",
+              25
+            ],
+            [
+              "gorgewing",
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "id": "watch_wave_4",
+        "day": 28,
+        "warning_days": 3,
+        "owner": 1,
+        "spawn": [
+          47,
+          30
+        ],
+        "entry_tiles": [
+          [
+            47,
+            30
+          ],
+          [
+            48,
+            30
+          ],
+          [
+            49,
+            30
+          ]
+        ],
+        "entry_name": "the South Road",
+        "target": "town_last_watch",
+        "targets": [
+          "town_last_watch",
+          "town_last_watch",
+          "town_crossing",
+          "town_northwatch"
+        ],
+        "order": "assault",
+        "hero": {
+          "id": "watch_commander_4",
+          "name": "The Southern Flame",
+          "class": "warlord",
+          "army": [
+            [
+              "cinderling",
+              70
+            ],
+            [
+              "scorchhound",
+              28
+            ],
+            [
+              "ash_witch",
+              8
+            ]
+          ]
+        }
+      },
+      {
+        "id": "watch_wave_5",
+        "day": 35,
+        "warning_days": 3,
+        "owner": 1,
+        "spawn": [
+          47,
+          6
+        ],
+        "entry_tiles": [
+          [
+            47,
+            6
+          ],
+          [
+            48,
+            6
+          ],
+          [
+            49,
+            6
+          ]
+        ],
+        "entry_name": "the North Road",
+        "target": "town_last_watch",
+        "targets": [
+          "town_last_watch",
+          "town_last_watch",
+          "town_crossing",
+          "town_northwatch"
+        ],
+        "order": "assault",
+        "hero": {
+          "id": "watch_commander_5",
+          "name": "The Last Pyre",
+          "class": "warlord",
+          "army": [
+            [
+              "flayer",
+              28
+            ],
+            [
+              "brimstone_hurler",
+              24
+            ],
+            [
+              "pyre_titan",
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "id": "watch_wave_6",
+        "day": 35,
+        "warning_days": 3,
+        "owner": 1,
+        "spawn": [
+          47,
+          30
+        ],
+        "entry_tiles": [
+          [
+            47,
+            30
+          ],
+          [
+            48,
+            30
+          ],
+          [
+            49,
+            30
+          ]
+        ],
+        "entry_name": "the South Road",
+        "target": "town_crossing",
+        "targets": [
+          "town_crossing",
+          "town_last_watch",
+          "town_crossing",
+          "town_northwatch"
+        ],
+        "order": "assault",
+        "hero": {
+          "id": "watch_commander_6",
+          "name": "The Red Hand",
+          "class": "warlord",
+          "army": [
+            [
+              "scorchhound",
+              32
+            ],
+            [
+              "ash_witch",
+              9
+            ],
+            [
+              "gorgewing",
+              6
+            ]
+          ]
+        }
+      }
+    ],
+    "forge_support": {
+      "town": "town_last_watch",
+      "creature": "pike_militia",
+      "count": 8
+    },
+    "quests": [
+      {
+        "id": "reedhaven_pact",
+        "giver": "site_pact",
+        "item": "reed_oathstone",
+        "text": "Defeat the Keeper in the southern marsh, recover the Reed Oathstone from the chest behind it, and return it here.",
+        "reward": {
+          "town": "town_reedhaven",
+          "ally_player": 2,
+          "defend_target": "town_northwatch",
+          "resources": {
+            "gold": 1200
+          },
+          "hero": {
+            "id": "hero_reedwarden",
+            "name": "Cerrid Reedwarden",
+            "class": "knight",
+            "army": [
+              [
+                "pike_militia",
+                24
+              ],
+              [
+                "longbowman",
+                12
+              ]
+            ]
+          },
+          "weekly": {
+            "town": "town_last_watch",
+            "creature": "longbowman",
+            "count": 8
+          }
+        },
+        "completion_text": "Reedhaven joins your cause. Its warden defends Northwatch, and eight longbowmen reinforce Last Watch each week."
+      }
+    ]
+  }
+}

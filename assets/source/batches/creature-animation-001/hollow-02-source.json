@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/hollow-02-source.png",
+  "source_sha256": "b2fad026b04303233dfeed29cc80e1d68e9f9cdde0fd8b46fbabe3c26b2c23c9",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/hollow-02-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/hollow-02-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "gravecrawler",
+    "gravecrawler_brood",
+    "wailing_shade",
+    "dirge_shade"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "gravecrawler",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_gravecrawler.png",
+      "reference_sha256": "ad038dda024fdc91c343c04ba3c0bf8326f8a17cbbb44d9a59c5844940ebac99"
+    },
+    {
+      "id": "gravecrawler_brood",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_gravecrawler_brood.png",
+      "reference_sha256": "995ab912e22eed51f1474b3fbd4749cd3c9b8c2979d7192ecbfc8ad6e4a323f6"
+    },
+    {
+      "id": "wailing_shade",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_wailing_shade.png",
+      "reference_sha256": "bdddbb7c952cb19be6d04c58d6511f321406dc95951f4e9a768f4c62dfb97365"
+    },
+    {
+      "id": "dirge_shade",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_dirge_shade.png",
+      "reference_sha256": "c7d7ae4995c047d62a3df1ea2f8c414d2c704b8180c7fe17fdc79c55822dd99e"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

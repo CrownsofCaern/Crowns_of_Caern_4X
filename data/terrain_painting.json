@@ -1,0 +1,78 @@
+{
+  "_doc": "Terrain painter (src/world/generation/terrain_painter.gd): the map generator's biome pass and the decoration pass. Biomes: every zone keeps its main biome (the profile's terrain) and gets 1-2 secondary biomes as noise-shaped patches that cover `coverage` of its tiles, drawn by `affinity` of the main biome (plus `patch_hint_weight` for each terrain the template profile lists under `patches`). Patch edges are dithered and smoothed so they look soft; zones joined by a pass bleed into each other for `gate_blend` tiles. Rivers (passable fords) cross a zone from wall to wall; lakes (deep water) never cut a zone apart, and `shores` turn some tiles around a lake into another biome. Zones of one template group share one plan, and rotate180 templates are painted point-symmetrically, so starts stay fair. `profiles` are keyed by map_templates.json profile id, `default` fills missing keys. Decoration: placed per tile from the biome's weighted `pool`, at the biome's `density`, thinned into clusters and clearings by value noise; no tile shares kind and variant with a neighbour. Kinds must exist in the decoration atlas (assets/manifest.json terrain.deco), so new scenery kinds plug in by adding them to pools.",
+  "patch_hint_weight": 1.5,
+  "dither": 0.14,
+  "keep_home_radius": 2,
+  "gate_blend": 3,
+  "noise_cell": [5, 9],
+  "affinity": {
+    "grass":    {"forest": 4, "rough": 2, "swamp": 2, "desert": 1},
+    "forest":   {"grass": 4, "swamp": 2, "rough": 1, "snow": 1},
+    "desert":   {"rough": 4, "infernal": 1, "grass": 1},
+    "snow":     {"rough": 3, "forest": 3, "swamp": 1},
+    "swamp":    {"forest": 3, "grass": 3, "rough": 1},
+    "infernal": {"rough": 4, "desert": 2, "swamp": 1},
+    "rough":    {"grass": 2, "desert": 2, "forest": 2, "snow": 1, "infernal": 1}
+  },
+  "shores": {"grass": "swamp", "forest": "swamp", "desert": "grass", "rough": "grass", "snow": "rough", "infernal": "rough"},
+  "shore_chance": 0.45,
+  "profiles": {
+    "default": {"secondaries": [1, 2], "coverage": [0.2, 0.32], "river_chance": 0.3, "lakes": [0, 1], "lake_size": [6, 14]},
+    "start":   {"secondaries": [1, 2], "coverage": [0.14, 0.22], "river_chance": 0.35, "lakes": [0, 1], "lake_size": [5, 10]},
+    "wild":    {"secondaries": [1, 2], "coverage": [0.26, 0.38], "river_chance": 0.45, "lakes": [1, 2], "lake_size": [6, 16]},
+    "flank":   {"secondaries": [1, 2], "coverage": [0.22, 0.34], "river_chance": 0.3, "lakes": [0, 2], "lake_size": [6, 14]},
+    "center":  {"secondaries": [1, 2], "coverage": [0.2, 0.3], "river_chance": 1.0, "lakes": [0, 1], "lake_size": [6, 12]}
+  },
+  "decoration": {
+    "_doc": "variants must match the atlas (assets/manifest.json terrain.deco.variants). cluster_cell is the noise lattice size in tiles; noise below `clearing` leaves a clearing. Towns keep `town_clearing` tiles free, other objects and heroes `object_margin`. With `border_mix`, a tile next to another biome may draw from that biome's pool, and with `grove` it repeats a neighbour's kind (in another variant) so groves form.",
+    "variants": 10,
+    "cluster_cell": 5,
+    "clearing": -0.3,
+    "town_clearing": 2,
+    "object_margin": 1,
+    "border_mix": 0.3,
+    "grove": 0.45,
+    "biomes": {
+      "grass":    {"density": 0.16, "pool": {"pines": 3, "boulders": 2, "autumn_pines": 1, "mossy_boulders": 1, "gravestone": 1, "dead_tree": 1}},
+      "forest":   {"density": 0.72, "pool": {"pines": 10, "autumn_pines": 3, "dead_tree": 2, "blighted_pines": 1, "mossy_boulders": 1}},
+      "desert":   {"density": 0.14, "pool": {"bones": 4, "boulders": 3, "obsidian": 1, "charred_tree": 1, "dead_tree": 1}},
+      "snow":     {"density": 0.2,  "pool": {"snow_pine": 6, "frost_tree": 3, "frost_boulders": 3, "bones": 1}},
+      "swamp":    {"density": 0.32, "pool": {"dead_tree": 6, "blighted_pines": 2, "mossy_boulders": 2, "bones": 1, "gravestone": 1}},
+      "infernal": {"density": 0.26, "pool": {"obsidian": 5, "charred_tree": 3, "bones": 3}},
+      "rough":    {"density": 0.3,  "pool": {"boulders": 6, "mossy_boulders": 1, "blighted_pines": 1, "dead_tree": 1, "bones": 1, "pines": 1}}
+    }
+  },
+  "surfaces": {
+    "_doc": "Cosmetic ground variants from the map scenery library (assets/map_scenery, category terrain), painted as noise patches over `coverage` of a terrain's open tiles. They never change the terrain or its rules; the map view draws them over the ground with feathered edges.",
+    "cell": 7,
+    "kinds": {
+      "grass":    {"kind": "terrain_moss_heath", "coverage": 0.2},
+      "forest":   {"kind": "terrain_autumn_loam", "coverage": 0.22},
+      "desert":   {"kind": "terrain_salt_flat", "coverage": 0.16},
+      "infernal": {"kind": "terrain_cooled_lava", "coverage": 0.2}
+    }
+  },
+  "scenery": {
+    "_doc": "Single-tile scenery pieces from the map scenery library (category decoration): one per `per_tiles` open tiles of a biome, at least `spacing` tiles apart, clear of roads and objects like decorations. Purely visual.",
+    "per_tiles": 220,
+    "spacing": 5,
+    "biomes": {
+      "swamp": {"scenery_weeping_willow": 2, "scenery_reed_pool": 2},
+      "grass": {"scenery_oath_stones": 1, "scenery_broken_cart": 1},
+      "rough": {"scenery_broken_cart": 1, "scenery_oath_stones": 1},
+      "forest": {"scenery_oath_stones": 1}
+    }
+  },
+  "landmarks": {
+    "_doc": "Large impassable set pieces from the map scenery library (category landmark), placed during terrain painting: each zone whose profile is listed gets one with `chance`, from the landmarks whose biome is its main biome (`any` biomes fit every zone), at most `max` per map and each landmark once (mirrored zones of rotate180 maps get a twin). The footprint becomes impassable ground and never cuts a zone apart.",
+    "chance": 0.7,
+    "max": 4,
+    "profiles": ["wild", "flank", "center"],
+    "biomes": {
+      "infernal": ["landmark_cinder_volcano"],
+      "snow": ["landmark_frozen_cascade"],
+      "forest": ["landmark_elder_grove"],
+      "any": ["landmark_shattered_citadel"]
+    }
+  }
+}

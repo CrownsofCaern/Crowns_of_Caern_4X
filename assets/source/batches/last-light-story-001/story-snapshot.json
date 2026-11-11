@@ -1,0 +1,653 @@
+{
+  "_doc": "Campaigns: an ordered list of chapters (maps). Heroes listed in 'heroes' are the campaign's veterans: they are matched by id to the heroes of each chapter map and keep level, XP, primaries, skills, unspent points, marks and their artifacts between chapters: with carry.keep_worn everything worn plus up to carry.max_artifacts from the pack, otherwise up to carry.max_artifacts in all (armies and resources do not carry over). Each chapter's level_cap holds hero levels back on that map (XP keeps accruing and pays out when a later chapter raises the cap), which paces a campaign at roughly 1-3 levels per map. start_resources are added to the human player at the start of the chapter. rewards are granted on victory: xp to every veteran, artifact to the first veteran listed. Optional per chapter: max_tier (the highest creature tier any town on the map may build or recruit; must not fall from chapter to chapter; 0 or absent = no limit), ai (StrategicAI setting overrides for every computer player, e.g. {\"passive\": true} for a tutorial opponent that never attacks the player), setup (GameSetup players: faction and human/computer per map slot), cast (heroes placed on the map: [{id, name, class, owner, army, replaces?}]; how a generated map, \"gen:<template>:<seed>\", gets the campaign veterans: \"replaces\" takes a generated hero's place, others stand next to their owner's first hero), intro (the briefing story; paragraphs separated by a blank line; falls back to text) and outro (story shown on victory). See src/game/campaign.gd.",
+  "campaigns": {
+    "last_light": {
+      "name": "The Last Light",
+      "faction": "concord",
+      "text": "The dead rise in the south, the sky turns red and a hundred-year-old seal is breaking. Sir Aldous Wren of Greyhold learns why no one comes when the Concord calls. Chapter 1 is the tutorial; chapters 8 to 10 are the old Ember Chronicle.",
+      "heroes": [
+        "hero_wren",
+        "hero_maelis",
+        "hero_edda"
+      ],
+      "carry": {
+        "keep_worn": true,
+        "max_artifacts": 4
+      },
+      "chapters": [
+        {
+          "id": "ll_harvest",
+          "name": "Greyhold Harvest",
+          "map": "greyhold_harvest",
+          "level_cap": 3,
+          "max_tier": 2,
+          "ai": {
+            "passive": true,
+            "builds": false,
+            "recruits": false
+          },
+          "text": "The dead are crawling out of the barrow fields at harvest. Clear them from Greyhold's land.",
+          "intro": "Harvest in the southern marches, and the barrow fields are moving. Shamblers have dug themselves out of the old graves east of Greyhold and made a camp in the fen. Sir Aldous Wren, the town's lord, rides out with what men he has.\n\nHow to play: click a tile to plan Aldous's route, then click it again to march. Walk onto the sawmill and the ore pit to claim them, and pick up the piles on the way. Open Greyhold (T) to build and recruit. Each building costs resources and you can build once a day. Your towns can raise creatures up to tier 2 here. When you are ready, attack the rats in the grain: the forecast shows your odds before you commit. Then take Barrow Camp. Press E to end the day.\n\nThe dead here will not come to you. Take your time.",
+          "outro": "The barrow camp burns. The dead it held were fresh: farmers buried this summer, and others that no one in Greyhold remembers burying at all. The ground in the barrow fields is warm to the touch.",
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 300
+            }
+          ]
+        },
+        {
+          "id": "ll_barrow_roads",
+          "name": "The Barrow Roads",
+          "map": "gen:crossing:311",
+          "level_cap": 4,
+          "max_tier": 3,
+          "setup": {
+            "players": [
+              {
+                "type": "human",
+                "faction": "concord",
+                "name": "Aldmere Concord"
+              },
+              {
+                "type": "computer",
+                "faction": "hollow"
+              }
+            ]
+          },
+          "cast": [
+            {
+              "id": "hero_wren",
+              "name": "Aldous Wren",
+              "class": "knight",
+              "owner": 0,
+              "replaces": "hero_p0",
+              "army": [
+                [
+                  "pike_militia",
+                  24
+                ],
+                [
+                  "longbowman",
+                  12
+                ],
+                [
+                  "shieldwarden",
+                  4
+                ]
+              ]
+            },
+            {
+              "id": "hero_maelis",
+              "name": "Maelis Thorne",
+              "class": "ranger",
+              "owner": 0,
+              "army": [
+                [
+                  "longbowman",
+                  10
+                ],
+                [
+                  "pike_militia",
+                  8
+                ]
+              ]
+            }
+          ],
+          "text": "The dead march up the old roads in columns. Burn the barrows that send them.",
+          "intro": "Every barrow along the south road has opened. The dead march north in columns, too orderly for corpses. Maelis Thorne, Wren's ranger captain, has tracked them to a single grave-town.\n\nYour towns can raise creatures up to tier 3. Break the dead and take their town.",
+          "outro": "The grave-town falls, but the columns came from somewhere further south, where the fens begin.",
+          "start_resources": {
+            "gold": 1000
+          },
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 500
+            }
+          ]
+        },
+        {
+          "id": "ll_lanterns",
+          "name": "Lanterns in the Fen",
+          "map": "gen:crossing:827",
+          "level_cap": 5,
+          "max_tier": 3,
+          "setup": {
+            "players": [
+              {
+                "type": "human",
+                "faction": "concord",
+                "name": "Aldmere Concord"
+              },
+              {
+                "type": "computer",
+                "faction": "hollow"
+              }
+            ]
+          },
+          "cast": [
+            {
+              "id": "hero_wren",
+              "name": "Aldous Wren",
+              "class": "knight",
+              "owner": 0,
+              "replaces": "hero_p0",
+              "army": [
+                [
+                  "pike_militia",
+                  28
+                ],
+                [
+                  "longbowman",
+                  14
+                ],
+                [
+                  "shieldwarden",
+                  6
+                ]
+              ]
+            },
+            {
+              "id": "hero_maelis",
+              "name": "Maelis Thorne",
+              "class": "ranger",
+              "owner": 0,
+              "army": [
+                [
+                  "longbowman",
+                  12
+                ],
+                [
+                  "pike_militia",
+                  10
+                ]
+              ]
+            },
+            {
+              "id": "hero_edda",
+              "name": "Edda Vey",
+              "class": "oracle",
+              "owner": 0,
+              "army": [
+                [
+                  "pike_militia",
+                  12
+                ],
+                [
+                  "longbowman",
+                  6
+                ]
+              ]
+            }
+          ],
+          "text": "A lantern-priest joins the march and says the ground itself is warm.",
+          "intro": "Sister Edda Vey of the lantern temples joins the march with a lamp that burns blue near the dead. She says the warmth in the ground is not the summer. Something deep below is waking, and the dead are only the first to feel it.\n\nEdda is an Oracle: she sees far and learns fast. Hold the fen road and take the Hollow town that guards it.",
+          "outro": "Edda reads the ash in the lamp and goes pale. \"Not something waking,\" she says. \"Something leaking.\"",
+          "start_resources": {
+            "gold": 1500,
+            "wood": 5
+          },
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 700
+            }
+          ]
+        },
+        {
+          "id": "ll_knight",
+          "name": "The Knight Who Came Back",
+          "map": "knight_who_came_back",
+          "level_cap": 6,
+          "max_tier": 4,
+          "text": "The dead are led by a knight in the colours of House Wren.",
+          "intro": "Scouts come back from the fens with a name no one wants to say. The dead are led by a knight on a gibbet-horse, in the faded colours of House Wren. Sir Orrin Wren died a hundred years ago holding the gate shut against the Ashen Host. His great-grandson now has to cut him down.\n\nOrrin rides with gibbet knights, which are far stronger than anything you can raise yet (tier 4). Retake Fenwick, cross the dikes and break Saint Orrin's Rest.",
+          "outro": "Orrin falls in the chapel yard. Before the light leaves his eyes he grips Aldous's wrist. \"The stone is cracking, boy. They will not tell you. Go to the mountain.\"",
+          "start_resources": {
+            "gold": 2000,
+            "wood": 5,
+            "ore": 5
+          },
+          "rewards": [
+            {
+              "type": "artifact",
+              "artifact": "standard_of_the_hold"
+            },
+            {
+              "type": "xp",
+              "amount": 900
+            }
+          ]
+        },
+        {
+          "id": "ll_doors",
+          "name": "Doors of Stone",
+          "map": "gen:crossing:1409",
+          "level_cap": 7,
+          "max_tier": 5,
+          "setup": {
+            "players": [
+              {
+                "type": "human",
+                "faction": "concord",
+                "name": "Aldmere Concord"
+              },
+              {
+                "type": "computer",
+                "faction": "forge"
+              }
+            ]
+          },
+          "cast": [
+            {
+              "id": "hero_wren",
+              "name": "Aldous Wren",
+              "class": "knight",
+              "owner": 0,
+              "replaces": "hero_p0",
+              "army": [
+                [
+                  "pike_militia",
+                  30
+                ],
+                [
+                  "longbowman",
+                  16
+                ],
+                [
+                  "shieldwarden",
+                  8
+                ],
+                [
+                  "lancer",
+                  4
+                ]
+              ]
+            },
+            {
+              "id": "hero_maelis",
+              "name": "Maelis Thorne",
+              "class": "ranger",
+              "owner": 0,
+              "army": [
+                [
+                  "longbowman",
+                  14
+                ],
+                [
+                  "pike_militia",
+                  10
+                ]
+              ]
+            },
+            {
+              "id": "hero_edda",
+              "name": "Edda Vey",
+              "class": "oracle",
+              "owner": 0,
+              "army": [
+                [
+                  "pike_militia",
+                  14
+                ],
+                [
+                  "lightbearer",
+                  2
+                ]
+              ]
+            }
+          ],
+          "text": "The Forge cast the Lockstone. Wren rides to its gates for help.",
+          "intro": "The Lockstone, the seal on the Wound, was cast by the Sunken Forge, and the Concord stopped paying for its upkeep forty years ago. Aldous rides to the mountain gates with Orrin's warning. The gates stay shut. Then the border wardens march out to drive off the \"debtors\".\n\nTier 5 is open: lantern priests heal your army. Break the wardens' hold.",
+          "outro": "The wardens fall back behind the rock. From the walls a runesmith shouts down: \"You owe us forty years. Pay it in your own blood.\" The gates do not open.",
+          "start_resources": {
+            "gold": 2500,
+            "wood": 5,
+            "ore": 5,
+            "crystal": 3
+          },
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 1200
+            }
+          ]
+        },
+        {
+          "id": "ll_stumps",
+          "name": "The Stumps of Elderwold",
+          "map": "gen:twin_marches:2203",
+          "level_cap": 8,
+          "max_tier": 5,
+          "setup": {
+            "players": [
+              {
+                "type": "human",
+                "faction": "concord",
+                "name": "Aldmere Concord"
+              },
+              {
+                "type": "computer",
+                "faction": "thornwood"
+              }
+            ]
+          },
+          "cast": [
+            {
+              "id": "hero_wren",
+              "name": "Aldous Wren",
+              "class": "knight",
+              "owner": 0,
+              "replaces": "hero_p0",
+              "army": [
+                [
+                  "pike_militia",
+                  34
+                ],
+                [
+                  "longbowman",
+                  18
+                ],
+                [
+                  "shieldwarden",
+                  8
+                ],
+                [
+                  "lancer",
+                  6
+                ],
+                [
+                  "lightbearer",
+                  2
+                ]
+              ]
+            },
+            {
+              "id": "hero_maelis",
+              "name": "Maelis Thorne",
+              "class": "ranger",
+              "owner": 0,
+              "army": [
+                [
+                  "longbowman",
+                  16
+                ],
+                [
+                  "pike_militia",
+                  12
+                ]
+              ]
+            },
+            {
+              "id": "hero_edda",
+              "name": "Edda Vey",
+              "class": "oracle",
+              "owner": 0,
+              "army": [
+                [
+                  "pike_militia",
+                  16
+                ],
+                [
+                  "lightbearer",
+                  3
+                ]
+              ]
+            }
+          ],
+          "text": "The road to the Wound runs through the forest the Concord cut down.",
+          "intro": "The short road to the Wound runs through Elderwold, the forest the Concord felled to feed its foundries. Nothing grows there now but stumps and thorn. The Thornwood Covenant has not forgotten.\n\nMaelis was born in this forest. She is quiet the whole way in. Take the Covenant's towns before their archers take your army apart.",
+          "outro": "A dying druid tells Maelis what the forest knew: the great roots of Elderwold held the Lockstone in place. When the Concord cut the trees, it cut the seal. Maelis does not tell Aldous for a day.",
+          "start_resources": {
+            "gold": 3000,
+            "wood": 10,
+            "ore": 5,
+            "gems": 3
+          },
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 1500
+            }
+          ]
+        },
+        {
+          "id": "ll_red_sky",
+          "name": "Raiders under a Red Sky",
+          "map": "gen:twin_marches:3517",
+          "level_cap": 9,
+          "max_tier": 6,
+          "setup": {
+            "players": [
+              {
+                "type": "human",
+                "faction": "concord",
+                "name": "Aldmere Concord"
+              },
+              {
+                "type": "computer",
+                "faction": "frostmarch"
+              }
+            ]
+          },
+          "cast": [
+            {
+              "id": "hero_wren",
+              "name": "Aldous Wren",
+              "class": "knight",
+              "owner": 0,
+              "replaces": "hero_p0",
+              "army": [
+                [
+                  "pike_militia",
+                  36
+                ],
+                [
+                  "longbowman",
+                  20
+                ],
+                [
+                  "shieldwarden",
+                  10
+                ],
+                [
+                  "lancer",
+                  6
+                ],
+                [
+                  "lightbearer",
+                  3
+                ]
+              ]
+            },
+            {
+              "id": "hero_maelis",
+              "name": "Maelis Thorne",
+              "class": "ranger",
+              "owner": 0,
+              "army": [
+                [
+                  "longbowman",
+                  18
+                ],
+                [
+                  "pike_militia",
+                  14
+                ]
+              ]
+            },
+            {
+              "id": "hero_edda",
+              "name": "Edda Vey",
+              "class": "oracle",
+              "owner": 0,
+              "army": [
+                [
+                  "pike_militia",
+                  18
+                ],
+                [
+                  "lightbearer",
+                  3
+                ],
+                [
+                  "shieldwarden",
+                  4
+                ]
+              ]
+            }
+          ],
+          "text": "The sky turns red. Starving clans raid the north while the army is away.",
+          "intro": "One morning the sky is red and stays red. Ash falls like snow. Word comes from the north: the Frostmarch clans are over the border, burning granaries. Their summer never came, and the Concord stopped sending grain long ago.\n\nTier 6 is open: sunhawk riders. The clans are fast and many. Drive them back over the border.",
+          "outro": "The last raider dies laughing. \"Your sky did this,\" he says. \"Your fire. We are only hungry.\" To the south-east, beyond the ash, the horizon glows.",
+          "start_resources": {
+            "gold": 3500,
+            "wood": 10,
+            "ore": 10,
+            "crystal": 4
+          },
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 1800
+            }
+          ]
+        },
+        {
+          "id": "ll_ford",
+          "name": "The Burning Ford",
+          "map": "burning_ford",
+          "level_cap": 10,
+          "max_tier": 7,
+          "cast": [
+            {
+              "id": "hero_edda",
+              "name": "Edda Vey",
+              "class": "oracle",
+              "owner": 0,
+              "army": [
+                [
+                  "pike_militia",
+                  20
+                ],
+                [
+                  "lightbearer",
+                  4
+                ],
+                [
+                  "shieldwarden",
+                  6
+                ]
+              ]
+            }
+          ],
+          "text": "The Lockstone breaks. The first Ashen army in a hundred years crosses the river.",
+          "intro": "The Lockstone has broken. For the first time in a hundred years the Ashen Host walks under the sky: slag-spawn, skinless hounds and things with hooks for arms. Its vanguard has already crossed the river at Greyhold's eastern ford.\n\nTier 7 is open: the bastion colossus. Hold the ford and break the vanguard.",
+          "outro": "The vanguard is broken but it was only meant to bleed you. Behind it, the whole Host is coming out of the Wound.",
+          "start_resources": {
+            "gold": 3000,
+            "wood": 10,
+            "ore": 10,
+            "crystal": 5
+          },
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 2200
+            }
+          ]
+        },
+        {
+          "id": "ll_ashes",
+          "name": "Ashes Return",
+          "map": "ashes_return",
+          "level_cap": 11,
+          "max_tier": 8,
+          "cast": [
+            {
+              "id": "hero_edda",
+              "name": "Edda Vey",
+              "class": "oracle",
+              "owner": 0,
+              "army": [
+                [
+                  "pike_militia",
+                  20
+                ],
+                [
+                  "lightbearer",
+                  4
+                ],
+                [
+                  "shieldwarden",
+                  6
+                ]
+              ]
+            }
+          ],
+          "text": "The Host comes back in force. The Iron Margrave rides out of the last reserve.",
+          "intro": "The Host comes back across the wastes in force, and the Concord's capital sends its last reserve: the Iron Margraves, warlord-knights on barded destriers, who have not ridden to war since the Sealing.\n\nTier 8 is open. Every unit the Concord has is yours. Two war-leaders hold the wastes beyond the river. Break the Host's march and take both its towns.",
+          "outro": "The Host breaks and falls back to its pit. Cindermaw, the fortress on the lip of the Wound, is the last thing between the Concord and the gate.",
+          "start_resources": {
+            "gold": 5000,
+            "wood": 10,
+            "ore": 10,
+            "crystal": 6,
+            "gems": 4
+          },
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 2600
+            }
+          ]
+        },
+        {
+          "id": "ll_embers",
+          "name": "Into the Embers",
+          "map": "into_the_embers",
+          "level_cap": 12,
+          "max_tier": 8,
+          "cast": [
+            {
+              "id": "hero_edda",
+              "name": "Edda Vey",
+              "class": "oracle",
+              "owner": 0,
+              "army": [
+                [
+                  "pike_militia",
+                  24
+                ],
+                [
+                  "lightbearer",
+                  6
+                ],
+                [
+                  "shieldwarden",
+                  8
+                ]
+              ]
+            }
+          ],
+          "text": "Carry the war to Cindermaw and hold the gate as Orrin did.",
+          "intro": "Cindermaw sits on the lip of the Wound, behind a ridge with two passes. Skarn Ashborn holds it with everything the Host has left. Beyond it, the gate stands open.\n\nTake Cindermaw and Pyrehold. Hold the gate as your great-grandfather did.",
+          "outro": "Aldous Wren stands where Orrin stood a hundred years ago, and the gate does not close. It cannot be closed by soldiers alone. The Concord will have to ask the peoples it wronged, and this time it will have to pay.",
+          "start_resources": {
+            "gold": 6000,
+            "ore": 10,
+            "crystal": 6,
+            "gems": 4
+          },
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 3000
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

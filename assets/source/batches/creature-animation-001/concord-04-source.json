@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/concord-04-source.png",
+  "source_sha256": "99379049396c8a1b769a802cec448d7da3fe4ead7b9819fe42b345f18967dcb2",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/concord-04-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/concord-04-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "bastion_colossus",
+    "citadel_colossus",
+    "iron_margrave",
+    "iron_sovereign"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "bastion_colossus",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_bastion_colossus.png",
+      "reference_sha256": "799c9ccb45491dec3970ab940fda88708c132a0081334b60e5c693049cc00daa"
+    },
+    {
+      "id": "citadel_colossus",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_citadel_colossus.png",
+      "reference_sha256": "83d4d6099b340ee7b4138f14301b81fca41aa466e6533a2737d5a609bf72da7f"
+    },
+    {
+      "id": "iron_margrave",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_iron_margrave.png",
+      "reference_sha256": "0fb1dce655e5eb1e7a905e1aef8ecb15dd6d48d938bcebf81679e43beaa4be6c"
+    },
+    {
+      "id": "iron_sovereign",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_iron_sovereign.png",
+      "reference_sha256": "f39610e032756c7248c143ad88dece4d81b946dbd554cdfbff8b60f418dfa34c"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

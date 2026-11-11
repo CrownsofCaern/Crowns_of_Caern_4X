@@ -1,0 +1,18 @@
+{
+  "provider": "built-in image_gen",
+  "runtime_integrated": true,
+  "faction": "ashen",
+  "tier": 2,
+  "sources": {
+    "ashen-01-A.png": "3e084c5ae50fb03c4ee71a6ec15e33356c24181565c98dabc0c36fb0b92423de",
+    "ashen-01-B.png": "bd7054250d0cbd3344501ec556f9f60c44f1f55a3f26b0259e38fbd0bb23d807",
+    "ashen-01-reference.png": "f52a77a673d2ea9e15ba2eba17534100307f9a9bc920081357aa8bc2d810c24b",
+    "hounds-A-source.png": "520b2bc794075f6887ca21e1ddf0b3821c11e8df5deee28e70d2240a6b8d471c",
+    "hounds-B-source.png": "7722e5bc2031af7cd478acb3fc0445eea1587ab307521f4c68ca5364838dee2c",
+    "hounds-reference.png": "0c366bfbc82bc5225419b6389a74915215258c31d4285783993af1edb84992aa",
+    "move-attack-fallback.png": "56f20df5995e35b2388bc2316337015d348624dc153a888d40d4f7f7a2e60b20",
+    "references/creature_hellmaw_hound.png": "9e819f40bb604ed27d5b9c0591dac90dc26859b40fdc1ea7ad600629e37fd8a2",
+    "references/creature_scorchhound.png": "cb507d572d561e4040c77cb60799f757b056f36e31b2d801e402206d5cab4098",
+    "source.png": "14551878102166bf96a9fb12f4faae45c96ad575cfa7e2cfa8c4a1d513dcc5b1"
+  }
+}

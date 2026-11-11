@@ -1,0 +1,23 @@
+{
+  "id": "infernal_obsidian_wastes",
+  "terrain": "infernal",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/infernal_obsidian_wastes.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "be3a40c4bac90323cb88cf14875ba654c0756466f9f15fa84c9cf15df6f00680",
+  "prompt_file": "assets/source/batches/battlefields-001/infernal_obsidian_wastes.txt",
+  "prompt_sha256": "a109bb81488f7d376cdb95776d567311cab8bea40777e43db848a5fc0075046e",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/infernal_obsidian_wastes-live.png",
+    "forecast": "docs/art/production/battlefields/infernal_obsidian_wastes-forecast.png"
+  }
+}

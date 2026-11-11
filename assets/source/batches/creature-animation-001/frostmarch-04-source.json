@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/frostmarch-04-source.png",
+  "source_sha256": "d53046b6ec705b65041c199dff62cfdebc7a1f7eade870fdd4ed3299febba957",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/frostmarch-04-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/frostmarch-04-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "cairn_giant",
+    "cairn_warlord",
+    "winter_wyrm",
+    "winter_wyrm_ancient"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "cairn_giant",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_cairn_giant.png",
+      "reference_sha256": "de5b181d89e7db59764ab6a90d48e823facf4cd0fa3b3bb9a928ce004e297dd1"
+    },
+    {
+      "id": "cairn_warlord",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_cairn_warlord.png",
+      "reference_sha256": "95197a9bfff6fc9fdb3fc989c90673158fbba7ba30fa0add0a4013a22c67d590"
+    },
+    {
+      "id": "winter_wyrm",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_winter_wyrm.png",
+      "reference_sha256": "d366f8366d2c6a825ba02a673b657317b0248d61c680304222140c849ae8981d"
+    },
+    {
+      "id": "winter_wyrm_ancient",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_winter_wyrm_ancient.png",
+      "reference_sha256": "604e29216f06d942380911a91eb2d27974d6df0f6090aa84a4f8f5883701e43d"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

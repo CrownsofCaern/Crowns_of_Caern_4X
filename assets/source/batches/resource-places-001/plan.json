@@ -1,0 +1,119 @@
+{
+  "name": "resource-places-001",
+  "grid": [
+    4,
+    3
+  ],
+  "category": "structure",
+  "spec_file": "objects.json",
+  "assets": [
+    {
+      "id": "mine_gold",
+      "prompt": "Gilded Shaft: timber mine headframe, rocky entrance and cart heaped with gold ore",
+      "size": [
+        128,
+        112
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "mine_wood",
+      "prompt": "Lumber Camp: working sawmill shed, log stockpiles, toothed saw and timber trestles; no underground mine",
+      "size": [
+        128,
+        112
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "mine_ore",
+      "prompt": "Ore Pit: stepped open iron quarry, winch and ore cart with rusty rocks",
+      "size": [
+        128,
+        112
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "mine_mercury",
+      "prompt": "Quicksilver Seep: alchemical retort house over silver mineral pools, sealed flasks and iron pipes",
+      "size": [
+        128,
+        112
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "mine_sulfur",
+      "prompt": "Brimstone Vent: smoking sulfur extraction works, black vent yellow crystals and protective timber shelter",
+      "size": [
+        128,
+        112
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "mine_crystal",
+      "prompt": "Crystal Grotto: rocky cavern entrance filled with angular blood-red crystals and a small haul cart",
+      "size": [
+        128,
+        112
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "mine_gems",
+      "prompt": "Gem Hollow: rocky excavation with cold cyan gems in the face and a workbench",
+      "size": [
+        128,
+        112
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "place_fenwick_dike",
+      "prompt": "Fenwick dike: short raised medieval stone and timber causeway, reeds and shallow water at its feet, ruined watch gate",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "place_barrow_camp",
+      "prompt": "Barrow Camp: opened burial mounds, ragged funeral tents, bone palisade and dim green corpse-fire",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "place_cindermaw_gate",
+      "prompt": "Cindermaw: imposing obsidian gate fortress at a volcanic ridge pass, iron teeth, crimson flags, ember fissures, compact isolated gate",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "place_pyrehold",
+      "prompt": "Pyrehold: demonic basalt war keep with orange furnace mouths and spiked towers on a small rock footprint",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "place_wound",
+      "prompt": "The Wound: gaping molten fissure crowned by a shattered colossal gate and broken Lockstone fragments, crooked scorched roots at the lip",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    }
+  ]
+}

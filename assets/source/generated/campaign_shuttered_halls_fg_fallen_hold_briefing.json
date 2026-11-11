@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_shuttered_halls_fg_fallen_hold_briefing",
+  "campaign": "shuttered_halls",
+  "chapter": "fg_fallen_hold",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_shuttered_halls_fg_fallen_hold_briefing.txt",
+  "prompt_sha256": "5ec34b95aa2be3d21e682294ded801574ced2a67bec177e8712b80559b4aa8f2",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "1983e5d235711849bf30bc77fbdb700473d4ce059d69d415ad1f14e52538f23a",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

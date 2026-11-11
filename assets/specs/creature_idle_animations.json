@@ -1,0 +1,2649 @@
+{
+  "schema_version": 1,
+  "_doc": "Idle, walk and double-strike attack clips: two generated sheets per group, A (idle + walk, 7 columns) and B (attack, 6 columns); see tools/assets/crowns_of_cinder_assets/idle_animations.py. A sheet without source_sha256 is pending.",
+  "alpha_floor": 64,
+  "groups": [
+    {
+      "id": "concord-01",
+      "faction": "concord",
+      "reference": "assets/source/batches/creature-animation-001/concord-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/concord-01-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/concord-01-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "pike_militia",
+          "name": "Pike Militia",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "polearm"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_pike_militia.png",
+          "reference_sha256": "94112b129e745fd48334a40e5dc299c1288dad0f03bf7a6b85b9ea76900bdca0"
+        },
+        {
+          "id": "pike_veteran",
+          "name": "Pike Veteran",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "polearm"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_pike_veteran.png",
+          "reference_sha256": "944a1670de291517a29fd1dfe3f5ee5362480f64792eea51d78de689ac3d0cab"
+        },
+        {
+          "id": "longbowman",
+          "name": "Longbowman",
+          "role": "ranged",
+          "tags": [
+            "human",
+            "archer"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_longbowman.png",
+          "reference_sha256": "c92f453aa118f3ecdbe7ca2a14eefac7d9453bcbadd8c79b88b662d3d014ace1"
+        },
+        {
+          "id": "warbow_sergeant",
+          "name": "Warbow Sergeant",
+          "role": "ranged",
+          "tags": [
+            "human",
+            "archer"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_warbow_sergeant.png",
+          "reference_sha256": "7e871e81d965fbdc92d6bd15b22205a959235e3a46149b68defb59b5e6c0f9a8"
+        }
+      ]
+    },
+    {
+      "id": "concord-02",
+      "faction": "concord",
+      "reference": "assets/source/batches/creature-animation-001/concord-02-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/concord-02-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/concord-02-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "shieldwarden",
+          "name": "Shieldwarden",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "shield"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_shieldwarden.png",
+          "reference_sha256": "fc7e242567745debd35a147671283d4c06140f0d417b7787b0305525b8e42680"
+        },
+        {
+          "id": "bulwark_sworn",
+          "name": "Bulwark Sworn",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "shield"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bulwark_sworn.png",
+          "reference_sha256": "88d025629879ae61843c3501d983262d62dd66f582e8a8a308e4aac5aa1424e8"
+        },
+        {
+          "id": "lancer",
+          "name": "Lancer",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_lancer.png",
+          "reference_sha256": "695bf2b005684d97077c2fe5609ff6754337b48fe4f8ba544356f94caf9c05b2"
+        },
+        {
+          "id": "oathbound_lancer",
+          "name": "Oathbound Lancer",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_oathbound_lancer.png",
+          "reference_sha256": "5dc42c3f82b0a9eb140caadfea743c4b982ca65db7eea5128f16b275083017d3"
+        }
+      ]
+    },
+    {
+      "id": "concord-03",
+      "faction": "concord",
+      "reference": "assets/source/batches/creature-animation-001/concord-03-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/concord-03-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/concord-03-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "lightbearer",
+          "name": "Lightbearer",
+          "role": "support",
+          "tags": [
+            "human",
+            "holy"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_lightbearer.png",
+          "reference_sha256": "417ee173b6e3dee15cb8ef7e3f202206e812a5c9d7a1ac7f2577f830b8a702f9"
+        },
+        {
+          "id": "dawn_confessor",
+          "name": "Dawn Confessor",
+          "role": "support",
+          "tags": [
+            "human",
+            "holy"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_dawn_confessor.png",
+          "reference_sha256": "028ac7ca31d4a1ab0df6a4ad86516b3bfc69692fae653163cd5e9129ffa89dd6"
+        },
+        {
+          "id": "sunhawk_rider",
+          "name": "Sunhawk Rider",
+          "role": "flyer",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_sunhawk_rider.png",
+          "reference_sha256": "b4ee8a435475c17e80d92c168d20c293d9bc2841ccea1447f8333b9ca276a93f"
+        },
+        {
+          "id": "sunhawk_paladin",
+          "name": "Sunhawk Paladin",
+          "role": "flyer",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_sunhawk_paladin.png",
+          "reference_sha256": "ccf733ee6be035c4bae972cb17977b52a50335a97306be2d98ce95d73474e1bb"
+        }
+      ]
+    },
+    {
+      "id": "concord-04",
+      "faction": "concord",
+      "reference": "assets/source/batches/creature-animation-001/concord-04-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/concord-04-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/concord-04-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "bastion_colossus",
+          "name": "Bastion Colossus",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bastion_colossus.png",
+          "reference_sha256": "799c9ccb45491dec3970ab940fda88708c132a0081334b60e5c693049cc00daa"
+        },
+        {
+          "id": "citadel_colossus",
+          "name": "Citadel Colossus",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_citadel_colossus.png",
+          "reference_sha256": "83d4d6099b340ee7b4138f14301b81fca41aa466e6533a2737d5a609bf72da7f"
+        },
+        {
+          "id": "iron_margrave",
+          "name": "Iron Margrave",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_iron_margrave.png",
+          "reference_sha256": "0fb1dce655e5eb1e7a905e1aef8ecb15dd6d48d938bcebf81679e43beaa4be6c"
+        },
+        {
+          "id": "iron_sovereign",
+          "name": "Iron Sovereign",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_iron_sovereign.png",
+          "reference_sha256": "f39610e032756c7248c143ad88dece4d81b946dbd554cdfbff8b60f418dfa34c"
+        }
+      ]
+    },
+    {
+      "id": "ashen-01",
+      "faction": "ashen",
+      "reference": "assets/source/batches/ashen-hounds-remake-001/ashen-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/ashen-hounds-remake-001/ashen-01-A.png",
+          "grid": [
+            7,
+            4
+          ],
+          "source_sha256": "3e084c5ae50fb03c4ee71a6ec15e33356c24181565c98dabc0c36fb0b92423de"
+        },
+        "B": {
+          "source": "assets/source/batches/ashen-hounds-remake-001/ashen-01-B.png",
+          "grid": [
+            6,
+            4
+          ],
+          "source_sha256": "bd7054250d0cbd3344501ec556f9f60c44f1f55a3f26b0259e38fbd0bb23d807"
+        }
+      },
+      "units": [
+        {
+          "id": "cinderling",
+          "name": "Cinderling",
+          "role": "infantry",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinderling.png",
+          "reference_sha256": "a0b57ef23f553d60b649ec91d5e63c5428c3624ad0800e923897e4ab96d53e4e"
+        },
+        {
+          "id": "seared_cinderling",
+          "name": "Seared Cinderling",
+          "role": "infantry",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_seared_cinderling.png",
+          "reference_sha256": "3ccc6b0b54d0e68f383b6a321b47877357bd60e6d5b9cf7d1e5cdd78f76715ff"
+        },
+        {
+          "id": "scorchhound",
+          "name": "Scorchhound",
+          "role": "cavalry",
+          "tags": [
+            "demon",
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/ashen-hounds-remake-001/references/creature_scorchhound.png",
+          "reference_sha256": "cb507d572d561e4040c77cb60799f757b056f36e31b2d801e402206d5cab4098"
+        },
+        {
+          "id": "hellmaw_hound",
+          "name": "Hellmaw Hound",
+          "role": "cavalry",
+          "tags": [
+            "demon",
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/ashen-hounds-remake-001/references/creature_hellmaw_hound.png",
+          "reference_sha256": "9e819f40bb604ed27d5b9c0591dac90dc26859b40fdc1ea7ad600629e37fd8a2"
+        }
+      ]
+    },
+    {
+      "id": "ashen-02",
+      "faction": "ashen",
+      "reference": "assets/source/batches/creature-animation-001/ashen-02-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/ashen-idle-review-001/ashen-02-A-draft.png",
+          "grid": [
+            7,
+            4
+          ],
+          "source_sha256": "c16ba9391a202d453c9cba108895eda54905eb96863da6beffc1c784b406ee55"
+        },
+        "B": {
+          "source": "assets/source/batches/ashen-idle-review-001/ashen-02-B-draft.png",
+          "grid": [
+            6,
+            4
+          ],
+          "source_sha256": "a1ea045eaf2254c8e5fab243d81e2e9389c23bb55f75315facece535f45b4239"
+        }
+      },
+      "units": [
+        {
+          "id": "brimstone_hurler",
+          "name": "Brimstone Hurler",
+          "role": "ranged",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_brimstone_hurler.png",
+          "reference_sha256": "5ac3cdb8ec446825c60bf3533822f9c039089f6cdbb335db5fdf2430b75bf67a"
+        },
+        {
+          "id": "brimstone_bombardier",
+          "name": "Brimstone Bombardier",
+          "role": "ranged",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_brimstone_bombardier.png",
+          "reference_sha256": "95a50c4d18cbc4fcb88c007880a7066ec3e1dbf3306f0d1e522a04de30dff539"
+        },
+        {
+          "id": "flayer",
+          "name": "Flayer",
+          "role": "infantry",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_flayer.png",
+          "reference_sha256": "a350c2043e330f74b1519bcd71ea84990a109010e780c764a0b37a5d01e7844a"
+        },
+        {
+          "id": "flayer_exalted",
+          "name": "Exalted Flayer",
+          "role": "infantry",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_flayer_exalted.png",
+          "reference_sha256": "fb9eebf6a705a1007a273fec7d5dc5fb1b2ffe4cc4927d89dd7469dc483503db"
+        }
+      ]
+    },
+    {
+      "id": "ashen-03",
+      "faction": "ashen",
+      "reference": "assets/source/batches/creature-animation-001/ashen-03-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/ashen-idle-review-001/ashen-03-A-draft.png",
+          "grid": [
+            7,
+            4
+          ],
+          "source_sha256": "e7cdc1f0d77b016d1d98e2b223a3ac3c98c0496d0502fd69841c220296836602"
+        },
+        "B": {
+          "source": "assets/source/batches/ashen-idle-review-001/ashen-03-B-draft.png",
+          "grid": [
+            6,
+            4
+          ],
+          "source_sha256": "78d173abbb4e330445ac8bcd05cddb5a3f986f3e9f75141cf826969728f9d4a3"
+        }
+      },
+      "units": [
+        {
+          "id": "ash_witch",
+          "name": "Ash Witch",
+          "role": "support",
+          "tags": [
+            "demon",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ash_witch.png",
+          "reference_sha256": "8a9a909852014a60777514502d98cfb639c4b9323dea38d0c7ac63aa832dce70"
+        },
+        {
+          "id": "ash_matriarch",
+          "name": "Ash Matriarch",
+          "role": "support",
+          "tags": [
+            "demon",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ash_matriarch.png",
+          "reference_sha256": "bd4cdfbd8f8dc02b66e74be196cd74a4cc8260f9987e8f747a11b31704b397a1"
+        },
+        {
+          "id": "gorgewing",
+          "name": "Gorgewing",
+          "role": "flyer",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gorgewing.png",
+          "reference_sha256": "a001030a832117a5b20f63d8c3aabc513953cebc929a075ab4f96fbff2c2a371"
+        },
+        {
+          "id": "gorgewing_matron",
+          "name": "Gorgewing Matron",
+          "role": "flyer",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gorgewing_matron.png",
+          "reference_sha256": "12b8e4108bc5494679b875e3931708d988ebc857299f4229537d5a3d5ceec3b8"
+        }
+      ]
+    },
+    {
+      "id": "ashen-04",
+      "faction": "ashen",
+      "reference": "assets/source/batches/ashen-maw-remake-001/ashen-04-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/ashen-maw-remake-001/ashen-04-A.png",
+          "grid": [
+            7,
+            4
+          ],
+          "source_sha256": "4aa9be655ae2e213b25bacf98cade0b76d9cd2d552105c4b27a87a02bfd0e6d6"
+        },
+        "B": {
+          "source": "assets/source/batches/ashen-maw-remake-001/ashen-04-B.png",
+          "grid": [
+            6,
+            4
+          ],
+          "source_sha256": "3d233d678965390157ca750af041f6698cb9d386acf565e9648e8b1fa8d69d51"
+        }
+      },
+      "units": [
+        {
+          "id": "pyre_titan",
+          "name": "Pyre Titan",
+          "role": "heavy",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_pyre_titan.png",
+          "reference_sha256": "8d7634fd3032617ef752749972d15cbbac3699b54ba149699e93690159aab21d"
+        },
+        {
+          "id": "pyre_sovereign",
+          "name": "Pyre Sovereign",
+          "role": "heavy",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_pyre_sovereign.png",
+          "reference_sha256": "2e10bb100a6e23ead3a276cf60746872d8bafe2facf52efc14e738b30b551070"
+        },
+        {
+          "id": "cinder_maw",
+          "name": "Cinder Maw",
+          "role": "heavy",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/ashen-maw-remake-001/references/creature_cinder_maw.png",
+          "reference_sha256": "f13ac9e1443afba294771127290ab7fbe496a57ba85b5e7271080ef12c283cf6"
+        },
+        {
+          "id": "maw_of_ruin",
+          "name": "Maw of Ruin",
+          "role": "heavy",
+          "tags": [
+            "demon"
+          ],
+          "reference_source": "assets/source/batches/ashen-maw-remake-001/references/creature_maw_of_ruin.png",
+          "reference_sha256": "a0bc81ccf1e5c92c92ba28b6233207b052b7c696787a9e9d0ab40bf35c291c43"
+        }
+      ]
+    },
+    {
+      "id": "hollow-01",
+      "faction": "hollow",
+      "reference": "assets/source/batches/creature-animation-001/hollow-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/hollow-01-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/hollow-01-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "shambler",
+          "name": "Shambler",
+          "role": "infantry",
+          "tags": [
+            "undead"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_shambler.png",
+          "reference_sha256": "dc432f1d99b3681f887d4d27e6a8d64240eeae8dd547dfc57f593bd45426fa31"
+        },
+        {
+          "id": "rotting_shambler",
+          "name": "Rotting Shambler",
+          "role": "infantry",
+          "tags": [
+            "undead"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rotting_shambler.png",
+          "reference_sha256": "c8f3a5f5f4718bcea6bf705ded0ce08ec19482bdb69ac858eb644b82a6c6f26c"
+        },
+        {
+          "id": "marrow_archer",
+          "name": "Marrow Archer",
+          "role": "ranged",
+          "tags": [
+            "undead"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_marrow_archer.png",
+          "reference_sha256": "9ba7931ed28cab94202129edc73d645b7f7dbcac2452d44ba77fa5ded1349126"
+        },
+        {
+          "id": "marrow_deadeye",
+          "name": "Marrow Deadeye",
+          "role": "ranged",
+          "tags": [
+            "undead"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_marrow_deadeye.png",
+          "reference_sha256": "99ff1e86071b7f5d130b68f10e5d66450e7934291ed1231bc0c562e6e065d6da"
+        }
+      ]
+    },
+    {
+      "id": "hollow-02",
+      "faction": "hollow",
+      "reference": "assets/source/batches/creature-animation-001/hollow-02-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/hollow-02-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/hollow-02-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "gravecrawler",
+          "name": "Gravecrawler",
+          "role": "cavalry",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gravecrawler.png",
+          "reference_sha256": "ad038dda024fdc91c343c04ba3c0bf8326f8a17cbbb44d9a59c5844940ebac99"
+        },
+        {
+          "id": "gravecrawler_brood",
+          "name": "Gravecrawler Brood",
+          "role": "cavalry",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gravecrawler_brood.png",
+          "reference_sha256": "995ab912e22eed51f1474b3fbd4749cd3c9b8c2979d7192ecbfc8ad6e4a323f6"
+        },
+        {
+          "id": "wailing_shade",
+          "name": "Wailing Shade",
+          "role": "flyer",
+          "tags": [
+            "undead",
+            "spirit"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_wailing_shade.png",
+          "reference_sha256": "bdddbb7c952cb19be6d04c58d6511f321406dc95951f4e9a768f4c62dfb97365"
+        },
+        {
+          "id": "dirge_shade",
+          "name": "Dirge Shade",
+          "role": "flyer",
+          "tags": [
+            "undead",
+            "spirit"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_dirge_shade.png",
+          "reference_sha256": "c7d7ae4995c047d62a3df1ea2f8c414d2c704b8180c7fe17fdc79c55822dd99e"
+        }
+      ]
+    },
+    {
+      "id": "hollow-03",
+      "faction": "hollow",
+      "reference": "assets/source/batches/creature-animation-001/hollow-03-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/hollow-03-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/hollow-03-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "corpse_weaver",
+          "name": "Corpse Weaver",
+          "role": "support",
+          "tags": [
+            "undead",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_corpse_weaver.png",
+          "reference_sha256": "bd36322de5e67bbeae9796e980e3181b412b22eb7f45b7a4d3ebb0b34113393b"
+        },
+        {
+          "id": "charnel_weaver",
+          "name": "Charnel Weaver",
+          "role": "support",
+          "tags": [
+            "undead",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_charnel_weaver.png",
+          "reference_sha256": "fddaa7abcdedcfe7f6c1d5d28e024bff2ab2b3b78b4cb06d5dac21ac8e61aba3"
+        },
+        {
+          "id": "gibbet_knight",
+          "name": "Gibbet Knight",
+          "role": "heavy",
+          "tags": [
+            "undead"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gibbet_knight.png",
+          "reference_sha256": "2533bd894eb316c010944caa6c76fc9bab751911922a6e4aa0ea1caae0fc2bc7"
+        },
+        {
+          "id": "gibbet_lord",
+          "name": "Gibbet Lord",
+          "role": "heavy",
+          "tags": [
+            "undead"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gibbet_lord.png",
+          "reference_sha256": "36682db1d78ddf94897c7b84c3e57bd1e72c41ce3d61ebdff8e136a9669ef84c"
+        }
+      ]
+    },
+    {
+      "id": "hollow-04",
+      "faction": "hollow",
+      "reference": "assets/source/batches/creature-animation-001/hollow-04-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/hollow-04-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/hollow-04-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "charnel_hulk",
+          "name": "Charnel Hulk",
+          "role": "heavy",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_charnel_hulk.png",
+          "reference_sha256": "74efb68ed199fb5739262b5b0a32808fac00deb7f3d1e6d1dab9ad09c7b2adc3"
+        },
+        {
+          "id": "charnel_behemoth",
+          "name": "Charnel Behemoth",
+          "role": "heavy",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_charnel_behemoth.png",
+          "reference_sha256": "aa7d5d6e8b735020612e7909d6f7a3ff8850280f160e0e3b8a722bd61a7d13f9"
+        },
+        {
+          "id": "rotwing_leviathan",
+          "name": "Rotwing Leviathan",
+          "role": "flyer",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rotwing_leviathan.png",
+          "reference_sha256": "1c904d0ad0d327fbe5a8f6e8319bf0fdb9b0c12811f92992cf62ca143ebe1126"
+        },
+        {
+          "id": "rotwing_sovereign",
+          "name": "Rotwing Sovereign",
+          "role": "flyer",
+          "tags": [
+            "undead",
+            "abomination"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rotwing_sovereign.png",
+          "reference_sha256": "fa2c926f3f573158af19fccdfe0761d5a225f00e40d9727e527b25f30ca04532"
+        }
+      ]
+    },
+    {
+      "id": "thornwood-01",
+      "faction": "thornwood",
+      "reference": "assets/source/batches/creature-animation-001/thornwood-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/thornwood-01-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/thornwood-01-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "thorn_skulker",
+          "name": "Thorn Skulker",
+          "role": "ranged",
+          "tags": [
+            "sylvan"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_thorn_skulker.png",
+          "reference_sha256": "298320d230ace416322a733b6503fb48f200dd298909cfa571de36f80606860d"
+        },
+        {
+          "id": "thorn_stalker",
+          "name": "Thorn Stalker",
+          "role": "ranged",
+          "tags": [
+            "sylvan"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_thorn_stalker.png",
+          "reference_sha256": "cc8f411d3e338d8a22b19bbc5ec55c4649b9aa8b076a07324a3d14a0c4989530"
+        },
+        {
+          "id": "barkhide_warden",
+          "name": "Barkhide Warden",
+          "role": "infantry",
+          "tags": [
+            "sylvan"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_barkhide_warden.png",
+          "reference_sha256": "b55d03d6eac7d66b833e600f9c57cb34b02eb970b915736d0648b65501fa7b23"
+        },
+        {
+          "id": "barkhide_sentinel",
+          "name": "Barkhide Sentinel",
+          "role": "infantry",
+          "tags": [
+            "sylvan"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_barkhide_sentinel.png",
+          "reference_sha256": "42607aa5e61bd3db7d363f8ba870863ce01552a91b0900a11216bd5476a1712c"
+        }
+      ]
+    },
+    {
+      "id": "thornwood-02",
+      "faction": "thornwood",
+      "reference": "assets/source/batches/creature-animation-001/thornwood-02-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/thornwood-02-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/thornwood-02-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "briar_huntress",
+          "name": "Briar Huntress",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "archer"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_briar_huntress.png",
+          "reference_sha256": "471d43adeb3bd343c48c5d79f9cc6a3cd62565f2fb69ee67edfadc6a6fb4a49a"
+        },
+        {
+          "id": "briar_deadshot",
+          "name": "Briar Deadshot",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "archer"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_briar_deadshot.png",
+          "reference_sha256": "8f728e3e6c1959a2d5fe90c98378686c8569223075b0f43ac35ef1416aa52d67"
+        },
+        {
+          "id": "rootbinder",
+          "name": "Rootbinder",
+          "role": "support",
+          "tags": [
+            "sylvan",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbinder.png",
+          "reference_sha256": "05194b1098662885cd1b3c8ac6295b096c8bf47e5e11301afe34905049350efd"
+        },
+        {
+          "id": "rootbinder_elder",
+          "name": "Rootbinder Elder",
+          "role": "support",
+          "tags": [
+            "sylvan",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbinder_elder.png",
+          "reference_sha256": "3fe906075dee40de77f230987f451509ff76449878fb3301e9f2b5fdaf239d69"
+        }
+      ]
+    },
+    {
+      "id": "thornwood-03",
+      "faction": "thornwood",
+      "reference": "assets/source/batches/creature-animation-001/thornwood-03-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/thornwood-03-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/thornwood-03-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "gloomwing_strix",
+          "name": "Gloomwing Strix",
+          "role": "flyer",
+          "tags": [
+            "sylvan",
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gloomwing_strix.png",
+          "reference_sha256": "41cc0b9a53b65b747786397d93cadfc68584eb61017fef860bf9ec9e50e533fe"
+        },
+        {
+          "id": "gloomwing_shrike",
+          "name": "Gloomwing Shrike",
+          "role": "flyer",
+          "tags": [
+            "sylvan",
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gloomwing_shrike.png",
+          "reference_sha256": "03958a854aa20bb4f7b31e037b0eaa97a7b902d08363a1bff17510c5349bd576"
+        },
+        {
+          "id": "spore_lobber",
+          "name": "Spore Lobber",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "fungus"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_spore_lobber.png",
+          "reference_sha256": "df6a75787d55db30adad986f50eb2244744e0b2a1e9fcfd15fe3a8952a5fd2f3"
+        },
+        {
+          "id": "plague_lobber",
+          "name": "Plague Lobber",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "fungus"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_plague_lobber.png",
+          "reference_sha256": "5f166a5b8a9fab632c0a86b72cb945b2c4512eb37862f1e66a5c5e41b6c96d11"
+        }
+      ]
+    },
+    {
+      "id": "thornwood-04",
+      "faction": "thornwood",
+      "reference": "assets/source/batches/creature-animation-001/thornwood-04-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/thornwood-04-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/thornwood-04-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "rootbound_ancient",
+          "name": "Rootbound Ancient",
+          "role": "heavy",
+          "tags": [
+            "sylvan",
+            "treant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbound_ancient.png",
+          "reference_sha256": "eac6fefe6b8ff4868a2ecb431de7df95f1d973bff2ebac2319fb78e19e6d0d08"
+        },
+        {
+          "id": "rootbound_patriarch",
+          "name": "Rootbound Patriarch",
+          "role": "heavy",
+          "tags": [
+            "sylvan",
+            "treant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbound_patriarch.png",
+          "reference_sha256": "35d43de22ffae395dda58dd2b09de557a720e5944c39f739c50fb57351f25e85"
+        },
+        {
+          "id": "wyrdthorn_mother",
+          "name": "Wyrdthorn Mother",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "treant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_wyrdthorn_mother.png",
+          "reference_sha256": "2950d46f957da3137a0765ad4990acfe08e7073af33814d60fd635540784f524"
+        },
+        {
+          "id": "wyrdthorn_matriarch",
+          "name": "Wyrdthorn Matriarch",
+          "role": "ranged",
+          "tags": [
+            "sylvan",
+            "treant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_wyrdthorn_matriarch.png",
+          "reference_sha256": "7b2d596612dc26108aa3af5bd2d511cde08e4aed7f06a7058e8d920f62116399"
+        }
+      ]
+    },
+    {
+      "id": "forge-01",
+      "faction": "forge",
+      "reference": "assets/source/batches/creature-animation-001/forge-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/forge-01-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/forge-01-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "forge_thrall",
+          "name": "Forge Thrall",
+          "role": "infantry",
+          "tags": [
+            "deepfolk"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_forge_thrall.png",
+          "reference_sha256": "5380b8095351b9a31658566bb2268a1a0602a42a7ee13d4a43812005131b67b8"
+        },
+        {
+          "id": "ironclad_thrall",
+          "name": "Ironclad Thrall",
+          "role": "infantry",
+          "tags": [
+            "deepfolk"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ironclad_thrall.png",
+          "reference_sha256": "d86bb4b32ecf632347c94ed6a818f843ddc05eda4adfcd14a453f5a99201f920"
+        },
+        {
+          "id": "rivet_crossbowman",
+          "name": "Rivet Crossbowman",
+          "role": "ranged",
+          "tags": [
+            "deepfolk"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rivet_crossbowman.png",
+          "reference_sha256": "bd51f727131c8df824964299c48b4da5a150417c51a1a075dc4a6cf150f0eedc"
+        },
+        {
+          "id": "rivet_arbalist",
+          "name": "Rivet Arbalist",
+          "role": "ranged",
+          "tags": [
+            "deepfolk"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rivet_arbalist.png",
+          "reference_sha256": "a2ceeb078fcaa846fba0f1fbe40f347199efb5fccec9bf24b4f6767ad0e039b4"
+        }
+      ]
+    },
+    {
+      "id": "forge-02",
+      "faction": "forge",
+      "reference": "assets/source/batches/creature-animation-001/forge-02-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/forge-02-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/forge-02-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "anvil_guard",
+          "name": "Anvil Guard",
+          "role": "infantry",
+          "tags": [
+            "deepfolk",
+            "shield"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_anvil_guard.png",
+          "reference_sha256": "73c8b86ece8e178f917fb25c34836067842ffd345024fa80a745b5d55efc3bb3"
+        },
+        {
+          "id": "anvil_sworn",
+          "name": "Anvil Sworn",
+          "role": "infantry",
+          "tags": [
+            "deepfolk",
+            "shield"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_anvil_sworn.png",
+          "reference_sha256": "e9d9318f44970233825acd00a0019f6ad25f4734d074bb584eb6c63dcc9349dd"
+        },
+        {
+          "id": "slag_golem",
+          "name": "Slag Golem",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_slag_golem.png",
+          "reference_sha256": "598e568274bf7b4238eff379d9d0e9b29550eb332498b4b1fd49728e09c1c496"
+        },
+        {
+          "id": "furnace_golem",
+          "name": "Furnace Golem",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_furnace_golem.png",
+          "reference_sha256": "3f699117ce04f94d71531331e8cd4d442a07dbb485fb386c7d44fed05dc8e9ec"
+        }
+      ]
+    },
+    {
+      "id": "forge-03",
+      "faction": "forge",
+      "reference": "assets/source/batches/creature-animation-001/forge-03-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/forge-03-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/forge-03-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "cinder_engineer",
+          "name": "Cinder Engineer",
+          "role": "support",
+          "tags": [
+            "deepfolk",
+            "artificer"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinder_engineer.png",
+          "reference_sha256": "6d393e7008eb207da5325334cc2cf30190042dcdb0ac565f078193e555cf626d"
+        },
+        {
+          "id": "master_engineer",
+          "name": "Master Engineer",
+          "role": "support",
+          "tags": [
+            "deepfolk",
+            "artificer"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_master_engineer.png",
+          "reference_sha256": "4eb740a18ddd71fe03247f7e223d9c27c86e44fe20a0698e24f279f0c802f4a6"
+        },
+        {
+          "id": "ironhoof_charger",
+          "name": "Ironhoof Charger",
+          "role": "cavalry",
+          "tags": [
+            "deepfolk",
+            "construct"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ironhoof_charger.png",
+          "reference_sha256": "c99424711a68fa3e8c1ce4700a16f281547c6b1aae663b94ddbe100db588dcdd"
+        },
+        {
+          "id": "ironhoof_warboar",
+          "name": "Ironhoof Warboar",
+          "role": "cavalry",
+          "tags": [
+            "deepfolk",
+            "construct"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ironhoof_warboar.png",
+          "reference_sha256": "0df3790ea80b0425d6ffe12be49a1fe7b3bb9533e55b0ad9c6a625799293d428"
+        }
+      ]
+    },
+    {
+      "id": "forge-04",
+      "faction": "forge",
+      "reference": "assets/source/batches/creature-animation-001/forge-04-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/forge-04-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/forge-04-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "thunder_bombard",
+          "name": "Thunder Bombard",
+          "role": "ranged",
+          "tags": [
+            "deepfolk",
+            "siege"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_thunder_bombard.png",
+          "reference_sha256": "3cb304a2844b4ed19111d44441125fdedd82bb9a28ba88f3dd153748a8932628"
+        },
+        {
+          "id": "doom_bombard",
+          "name": "Doom Bombard",
+          "role": "ranged",
+          "tags": [
+            "deepfolk",
+            "siege"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_doom_bombard.png",
+          "reference_sha256": "b8c6a206249596ae52ce558d946d3753c81bde1bb9a773315190e1fff05bc92d"
+        },
+        {
+          "id": "molten_engine",
+          "name": "Molten Engine",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_molten_engine.png",
+          "reference_sha256": "87bdfd5d40fd4691062f6ef80045d6b565cb6b43c22b89dcadb7c49adca5e4d0"
+        },
+        {
+          "id": "worldforge_engine",
+          "name": "Worldforge Engine",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_worldforge_engine.png",
+          "reference_sha256": "0a6b4db4f849525211bc19f8c4b1d401e12db0d63906b3c17701a58aee7d6a70"
+        }
+      ]
+    },
+    {
+      "id": "frostmarch-01",
+      "faction": "frostmarch",
+      "reference": "assets/source/batches/creature-animation-001/frostmarch-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/frostmarch-01-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/frostmarch-01-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "clan_raider",
+          "name": "Clan Raider",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "northman"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_clan_raider.png",
+          "reference_sha256": "579c962a755011809ee384f15ed0cfd108ec7f7705d7068eb9782aeb5b96c23e"
+        },
+        {
+          "id": "blooded_raider",
+          "name": "Blooded Raider",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "northman"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_blooded_raider.png",
+          "reference_sha256": "fe46ebc538c0ece0c45adba66326bc136569eae74ac3013dab697eefff5ed80a"
+        },
+        {
+          "id": "rimefang_hound",
+          "name": "Rimefang Hound",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimefang_hound.png",
+          "reference_sha256": "2b0dd0fe63c72af92bedbc0a93bc5e5d12e8aab7802b6df248d4623be7c9766a"
+        },
+        {
+          "id": "rimefang_packleader",
+          "name": "Rimefang Packleader",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimefang_packleader.png",
+          "reference_sha256": "e78b5ad621683db800f3007ee16e76b379f61e888ba23597373db7a354f76195"
+        }
+      ]
+    },
+    {
+      "id": "frostmarch-02",
+      "faction": "frostmarch",
+      "reference": "assets/source/batches/creature-animation-001/frostmarch-02-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/frostmarch-02-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/frostmarch-02-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "oathless_berserker",
+          "name": "Oathless Berserker",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "northman"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_oathless_berserker.png",
+          "reference_sha256": "050c795f2cfd1f357aef20da80c400baa0662b89364ec38d4d62912ed64ceafc"
+        },
+        {
+          "id": "bloodfrenzy_berserker",
+          "name": "Bloodfrenzy Berserker",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "northman"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bloodfrenzy_berserker.png",
+          "reference_sha256": "8a9f565d5e64a1f5c94eaf5fe5d56d158feff66e68609bc19be05e7a92fde829"
+        },
+        {
+          "id": "tusk_rider",
+          "name": "Tusk Rider",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_tusk_rider.png",
+          "reference_sha256": "66c87f60ddd182b0be372836c6980070dd18be07bdee23edd7f6676a9fdcd51f"
+        },
+        {
+          "id": "tusk_chieftain",
+          "name": "Tusk Chieftain",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "mounted"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_tusk_chieftain.png",
+          "reference_sha256": "f970310a594220d96ef281a4c0114a959286426d4c3d10c90313c123531ba7a0"
+        }
+      ]
+    },
+    {
+      "id": "frostmarch-03",
+      "faction": "frostmarch",
+      "reference": "assets/source/batches/creature-animation-001/frostmarch-03-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/frostmarch-03-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/frostmarch-03-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "frost_shaman",
+          "name": "Frost Shaman",
+          "role": "support",
+          "tags": [
+            "human",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_frost_shaman.png",
+          "reference_sha256": "1666a1d44711a61e0cf4c5654079268ccb85a9af236593baa8b009aa0f6a5bd0"
+        },
+        {
+          "id": "storm_shaman",
+          "name": "Storm Shaman",
+          "role": "support",
+          "tags": [
+            "human",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_storm_shaman.png",
+          "reference_sha256": "f9aeab91ecccd899f15500d1b029b44e7e444ef667b93310b23395ce2474be22"
+        },
+        {
+          "id": "rimeback_aurochs",
+          "name": "Rimeback Aurochs",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimeback_aurochs.png",
+          "reference_sha256": "8f87f0b74a7d1854b4af2ab7714db37056f3b79117d3236bdc08a470e66902fb"
+        },
+        {
+          "id": "rimeback_stampede",
+          "name": "Rimeback Stampede",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimeback_stampede.png",
+          "reference_sha256": "74096458d941172df84266661bdc3af76be19703797fd89bbae33060bef6d296"
+        }
+      ]
+    },
+    {
+      "id": "frostmarch-04",
+      "faction": "frostmarch",
+      "reference": "assets/source/batches/creature-animation-001/frostmarch-04-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/frostmarch-04-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/frostmarch-04-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "cairn_giant",
+          "name": "Cairn Giant",
+          "role": "heavy",
+          "tags": [
+            "giant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cairn_giant.png",
+          "reference_sha256": "de5b181d89e7db59764ab6a90d48e823facf4cd0fa3b3bb9a928ce004e297dd1"
+        },
+        {
+          "id": "cairn_warlord",
+          "name": "Cairn Warlord",
+          "role": "heavy",
+          "tags": [
+            "giant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cairn_warlord.png",
+          "reference_sha256": "95197a9bfff6fc9fdb3fc989c90673158fbba7ba30fa0add0a4013a22c67d590"
+        },
+        {
+          "id": "winter_wyrm",
+          "name": "Winter Wyrm",
+          "role": "heavy",
+          "tags": [
+            "beast",
+            "wyrm"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_winter_wyrm.png",
+          "reference_sha256": "d366f8366d2c6a825ba02a673b657317b0248d61c680304222140c849ae8981d"
+        },
+        {
+          "id": "winter_wyrm_ancient",
+          "name": "Ancient Winter Wyrm",
+          "role": "heavy",
+          "tags": [
+            "beast",
+            "wyrm"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_winter_wyrm_ancient.png",
+          "reference_sha256": "604e29216f06d942380911a91eb2d27974d6df0f6090aa84a4f8f5883701e43d"
+        }
+      ]
+    },
+    {
+      "id": "wilds-01",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/wilds-01-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/wilds-01-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "plague_rats",
+          "name": "Plague Rats",
+          "role": "infantry",
+          "tags": [
+            "beast",
+            "vermin"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_plague_rats.png",
+          "reference_sha256": "4c568aba1c1756aaba9f31bed85a2aaa938ebe7d8d15db4ec1121988dda033c8"
+        },
+        {
+          "id": "dune_scuttler",
+          "name": "Dune Scuttler",
+          "role": "cavalry",
+          "tags": [
+            "beast",
+            "insect"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_dune_scuttler.png",
+          "reference_sha256": "2a2b8c47ae6f601697426cfa986a892777a5e3e4a252b6c3cf9fdee5e63bbf0f"
+        },
+        {
+          "id": "lost_pilgrims",
+          "name": "Lost Pilgrims",
+          "role": "infantry",
+          "tags": [
+            "human"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_lost_pilgrims.png",
+          "reference_sha256": "e6547d6960eabe5711fe54e4262c56efc2d5eb858242369c043ff830cf7be680"
+        },
+        {
+          "id": "moss_creeper",
+          "name": "Moss Creeper",
+          "role": "infantry",
+          "tags": [
+            "plant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_moss_creeper.png",
+          "reference_sha256": "dd67e98f92a3de0d7abe3bbcc212fa5d974cf4b31939638959c17227f303afe9"
+        }
+      ]
+    },
+    {
+      "id": "wilds-02",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-02-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/wilds-02-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/wilds-02-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "crag_slinger",
+          "name": "Crag Slinger",
+          "role": "ranged",
+          "tags": [
+            "goblinoid"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_crag_slinger.png",
+          "reference_sha256": "b57ef87f1937dc66f36668f0ea20bee459b24a6436920e37ecab46e741591759"
+        },
+        {
+          "id": "thornwolf",
+          "name": "Thornwolf",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_thornwolf.png",
+          "reference_sha256": "c784721d59ebbd53ebbf1d5918e1e476f6f937010319361b8cd9542917099c71"
+        },
+        {
+          "id": "road_cutthroat",
+          "name": "Road Cutthroat",
+          "role": "infantry",
+          "tags": [
+            "human",
+            "outlaw"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_road_cutthroat.png",
+          "reference_sha256": "113b27916ebdd20ff89d511f06cb18edc75ad2a94a22733b2589356521b9820f"
+        },
+        {
+          "id": "carrion_flock",
+          "name": "Carrion Flock",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "bird"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_carrion_flock.png",
+          "reference_sha256": "940d67a545ea72b29e1a3631d83a5bb62a5684df360858136e6bb19f614e9ba8"
+        }
+      ]
+    },
+    {
+      "id": "wilds-03",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-03-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/wilds-03-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/wilds-03-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "corpse_light",
+          "name": "Corpse Light",
+          "role": "flyer",
+          "tags": [
+            "spirit"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_corpse_light.png",
+          "reference_sha256": "70b0b5c367124ee71b5f5c6e1b950dfdf8dbab69eb25b796a40330330ca1c3dd"
+        },
+        {
+          "id": "marsh_hag",
+          "name": "Marsh Hag",
+          "role": "support",
+          "tags": [
+            "hag",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_marsh_hag.png",
+          "reference_sha256": "5d12d732b870f77fb37d3432a32b1ed4734026ffe53d7238e36673d4abef9e17"
+        },
+        {
+          "id": "sand_reaver",
+          "name": "Sand Reaver",
+          "role": "cavalry",
+          "tags": [
+            "human",
+            "outlaw",
+            "mounted"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_sand_reaver.png",
+          "reference_sha256": "920c45764a4dea24d73e1106a0fe4cc6a69d645c1c28c54ead3cb93cb9023a3d"
+        },
+        {
+          "id": "rime_wight",
+          "name": "Rime Wight",
+          "role": "infantry",
+          "tags": [
+            "undead"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_rime_wight.png",
+          "reference_sha256": "a482b6ae26dfbcdcca431330800b6ffc79c6289318cdb1ada53eb3fd9f1cdbc7"
+        }
+      ]
+    },
+    {
+      "id": "wilds-04",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-04-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/wilds-04-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/wilds-04-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "deserter_crossbows",
+          "name": "Deserter Crossbows",
+          "role": "ranged",
+          "tags": [
+            "human",
+            "outlaw"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_deserter_crossbows.png",
+          "reference_sha256": "274bfd335031be69f42f623ce585c53a945667a784c1a228cae2706a38c08f20"
+        },
+        {
+          "id": "shrieking_harpy",
+          "name": "Shrieking Harpy",
+          "role": "flyer",
+          "tags": [
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_shrieking_harpy.png",
+          "reference_sha256": "ffb85587589ec08562a8324290ba1a2ab792eeb83f1376adb97040b8bfdf283b"
+        },
+        {
+          "id": "tomb_scarabs",
+          "name": "Tomb Scarabs",
+          "role": "infantry",
+          "tags": [
+            "insect"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_tomb_scarabs.png",
+          "reference_sha256": "52983d912f4660e64b852dcf360ea07900465f718a317ba382e05948dbf5e821"
+        },
+        {
+          "id": "gloom_panther",
+          "name": "Gloom Panther",
+          "role": "cavalry",
+          "tags": [
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_gloom_panther.png",
+          "reference_sha256": "389f4bf0f7dab8433c4e0f2421939cf5d00ebdd6edfb22690c65f35bd6c6b12f"
+        }
+      ]
+    },
+    {
+      "id": "wilds-05",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-05-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/wilds-05-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/wilds-05-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "bog_lurker",
+          "name": "Bog Lurker",
+          "role": "infantry",
+          "tags": [
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bog_lurker.png",
+          "reference_sha256": "d51aeb21604a37878d85f0c20703d224a680586ba49dd71120d66d22dda2efda"
+        },
+        {
+          "id": "ashscale_basilisk",
+          "name": "Ashscale Basilisk",
+          "role": "infantry",
+          "tags": [
+            "beast",
+            "reptile"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ashscale_basilisk.png",
+          "reference_sha256": "df44f17cf1840ace320bbb6a82ad635250619338810d9a234d97aaf6f88a28f2"
+        },
+        {
+          "id": "salt_witch",
+          "name": "Salt Witch",
+          "role": "support",
+          "tags": [
+            "human",
+            "caster"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_salt_witch.png",
+          "reference_sha256": "275ac89c769015b3dac225ba82b48fff3391b7426ef84b274678219a07c93365"
+        },
+        {
+          "id": "steppe_centaur",
+          "name": "Steppe Centaur",
+          "role": "ranged",
+          "tags": [
+            "beast",
+            "nomad"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_steppe_centaur.png",
+          "reference_sha256": "12caa2ae163e9aa1b5852bdb0196057f2c9aaadee725af3044184c29dfbbe48b"
+        }
+      ]
+    },
+    {
+      "id": "wilds-06",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-06-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/wilds-06-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/wilds-06-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "cave_stalker",
+          "name": "Cave Stalker",
+          "role": "infantry",
+          "tags": [
+            "beast"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cave_stalker.png",
+          "reference_sha256": "24d425d748188afbbd36ba2e18260af34cd3e4594015123adbbe21686d96a77a"
+        },
+        {
+          "id": "hill_troll",
+          "name": "Hill Troll",
+          "role": "heavy",
+          "tags": [
+            "giant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_hill_troll.png",
+          "reference_sha256": "f76a0537e5b8c6258182dd2da815553d0ba60c29a9d4a4560364e70b9375736e"
+        },
+        {
+          "id": "ogre_mauler",
+          "name": "Ogre Mauler",
+          "role": "infantry",
+          "tags": [
+            "giant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ogre_mauler.png",
+          "reference_sha256": "752a2e4793aae8565ecf7196759c69a0c7a2f10c918da03ac65d69ff888099c5"
+        },
+        {
+          "id": "ruin_sentinel",
+          "name": "Ruin Sentinel",
+          "role": "heavy",
+          "tags": [
+            "construct"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_ruin_sentinel.png",
+          "reference_sha256": "d937b88967421c744d244316cf6441090de29e3d0b52ada37d81bd9617307250"
+        }
+      ]
+    },
+    {
+      "id": "wilds-07",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-07-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/wilds-07-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/wilds-07-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "cinder_wraith",
+          "name": "Cinder Wraith",
+          "role": "flyer",
+          "tags": [
+            "spirit"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinder_wraith.png",
+          "reference_sha256": "3ea546318ba5d020a9ebb463fbf905cb0e19f2d8641a53cc60fbb8490890fafb"
+        },
+        {
+          "id": "barrow_revenant",
+          "name": "Barrow Revenant",
+          "role": "infantry",
+          "tags": [
+            "undead"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_barrow_revenant.png",
+          "reference_sha256": "133cba2e1c94ae645eaa3e1ae5c3d23ffadc6a64acc8d2428c3aa76bac0783a3"
+        },
+        {
+          "id": "venom_wyvern",
+          "name": "Venom Wyvern",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "reptile"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_venom_wyvern.png",
+          "reference_sha256": "e4e6048fe2af3542ca17643d43ce5e2dc0ebad7cce4ad9317c4c2ecc162a5fc7"
+        },
+        {
+          "id": "frost_drake",
+          "name": "Frost Drake",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "reptile"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_frost_drake.png",
+          "reference_sha256": "0b7ce520f21fc1ec7f40c89e0f4558fdaf14d2b92744d75852181c002270e69f"
+        }
+      ]
+    },
+    {
+      "id": "wilds-08",
+      "faction": "wilds",
+      "reference": "assets/source/batches/creature-animation-001/wilds-08-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/wilds-08-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/wilds-08-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "bog_serpent",
+          "name": "Bog Serpent",
+          "role": "heavy",
+          "tags": [
+            "beast",
+            "reptile"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_bog_serpent.png",
+          "reference_sha256": "6f859c4fb69ebe148b75cb5d2c0edbd624c8d25e20d59f30d355ff43891d00b8"
+        },
+        {
+          "id": "dune_wurm",
+          "name": "Dune Wurm",
+          "role": "heavy",
+          "tags": [
+            "beast",
+            "wyrm"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_dune_wurm.png",
+          "reference_sha256": "f83af5642abde60ad12b99fec0ecc3626e1121f86cb4c006e4739ed79a1c2523"
+        },
+        {
+          "id": "hill_giant",
+          "name": "Hill Giant",
+          "role": "heavy",
+          "tags": [
+            "giant"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_hill_giant.png",
+          "reference_sha256": "ada24cb7be51f6354226591a96cfe6abf25e482dc6dce61fb91e104bd3dd0ae4"
+        },
+        {
+          "id": "primordial_wyrm",
+          "name": "Primordial Wyrm",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "wyrm"
+          ],
+          "reference_source": "assets/source/batches/creature-animation-001/references/creature_primordial_wyrm.png",
+          "reference_sha256": "1d23f7a65030bd570d1435d5f06c977952044a3a8d3b794dd22c2cd24d8b223e"
+        }
+      ]
+    },
+    {
+      "id": "dlc-darkelf-01",
+      "faction": "darkelf",
+      "reference": "assets/source/batches/dlc-animation-001/dlc-darkelf-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/dlc-darkelf-01-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/dlc-darkelf-01-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "de_gloam_spear",
+          "name": "Gloam Spear",
+          "role": "infantry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_gloam_spear.png",
+          "reference_sha256": "fe2d8d2fa84c08c392e8d7d09da48e62ef52155ed9954a0c89211dc527baa992"
+        },
+        {
+          "id": "de_dusk_sentinel",
+          "name": "Dusk Sentinel",
+          "role": "infantry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_dusk_sentinel.png",
+          "reference_sha256": "223555fc903494bc4fd45b3c215064d14146caba536e0fd57f4db7d807b98b92"
+        },
+        {
+          "id": "de_shardbow",
+          "name": "Shardbow",
+          "role": "ranged",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_shardbow.png",
+          "reference_sha256": "116c402f8383077a712e89e6ac43bc8af617ac5a00a19ceacb96980182aecd96"
+        },
+        {
+          "id": "de_venom_arbalist",
+          "name": "Venom Arbalist",
+          "role": "ranged",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_venom_arbalist.png",
+          "reference_sha256": "a6a1ad4afa25bc135d3b33158fe9e954cd0b5ec0a56c49d5324d2218025a5f03"
+        }
+      ]
+    },
+    {
+      "id": "dlc-darkelf-02",
+      "faction": "darkelf",
+      "reference": "assets/source/batches/dlc-animation-001/dlc-darkelf-02-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/dlc-darkelf-02-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/dlc-darkelf-02-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "de_knifedancer",
+          "name": "Knifedancer",
+          "role": "infantry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_knifedancer.png",
+          "reference_sha256": "e49ecb893c963a55dbe84b321493795e17eb2399f6eb61a6f7de8909b7122777"
+        },
+        {
+          "id": "de_blood_scythe",
+          "name": "Blood Scythe",
+          "role": "infantry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_blood_scythe.png",
+          "reference_sha256": "fc1f264884b22c8ac38b46fa492f21d38e6642a1d30fc2359a847c743e5db9a1"
+        },
+        {
+          "id": "de_cave_lancer",
+          "name": "Cave Lancer",
+          "role": "cavalry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_cave_lancer.png",
+          "reference_sha256": "28c6719e8d9fbe6418786eb6e826d93c2b919b35a734b6b6e724bafe43b38b8a"
+        },
+        {
+          "id": "de_dread_rider",
+          "name": "Dread Rider",
+          "role": "cavalry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_dread_rider.png",
+          "reference_sha256": "893f3008031f8028af934111c3c4882d5ec82a1e1bab75d8c8837cb6c9d5037f"
+        }
+      ]
+    },
+    {
+      "id": "dlc-darkelf-03",
+      "faction": "darkelf",
+      "reference": "assets/source/batches/dlc-animation-001/dlc-darkelf-03-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/dlc-darkelf-03-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/dlc-darkelf-03-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "de_veil_adept",
+          "name": "Veil Adept",
+          "role": "support",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_veil_adept.png",
+          "reference_sha256": "09279c5dc82b863bec6d2d5fa8dfcaa9bdd42ed4c271012fb4d884f47002e3fc"
+        },
+        {
+          "id": "de_mirror_witch",
+          "name": "Mirror Witch",
+          "role": "support",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_mirror_witch.png",
+          "reference_sha256": "4c43d046b01635133e94ceac474cde878f5fc851337a84f4aeb5623f39566a68"
+        },
+        {
+          "id": "de_silk_stalker",
+          "name": "Silk Stalker",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_silk_stalker.png",
+          "reference_sha256": "03d2aa97c4818ebd47f9226c64263e8e5fbe629d7b5ff3497150624a332b50ca"
+        },
+        {
+          "id": "de_widow_matriarch",
+          "name": "Widow Matriarch",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_widow_matriarch.png",
+          "reference_sha256": "1c77e40faf7f54c5d8b957f9caef984752a834fa696f324dc78bf145e49d7e94"
+        }
+      ]
+    },
+    {
+      "id": "dlc-darkelf-04",
+      "faction": "darkelf",
+      "reference": "assets/source/batches/dlc-animation-001/dlc-darkelf-04-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/dlc-darkelf-04-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/dlc-darkelf-04-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "de_obsidian_guard",
+          "name": "Obsidian Guard",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_obsidian_guard.png",
+          "reference_sha256": "6454aa4a96369cb4a636908c9154609656e421962d2225820c52d6b9f272dd4d"
+        },
+        {
+          "id": "de_onyx_executioner",
+          "name": "Onyx Executioner",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_onyx_executioner.png",
+          "reference_sha256": "d4472f490dd618df4d1f9717eb8dca5207b0836c056237b61782d30f35f5bc3f"
+        },
+        {
+          "id": "de_gloam_drake",
+          "name": "Gloam Drake",
+          "role": "flyer",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_gloam_drake.png",
+          "reference_sha256": "4593beb1dfe2a70b3dc6f02d52e9a2da310293984d1bb5fc21c6d4b930849461"
+        },
+        {
+          "id": "de_eclipse_dragon",
+          "name": "Eclipse Dragon",
+          "role": "flyer",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_de_eclipse_dragon.png",
+          "reference_sha256": "89c5e25469a8effc348822cff49eb322eb66716a39015d2251b7fbc85922daf9"
+        }
+      ]
+    },
+    {
+      "id": "dlc-fishmen-01",
+      "faction": "fishmen",
+      "reference": "assets/source/batches/dlc-animation-001/dlc-fishmen-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/dlc-fishmen-01-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/dlc-fishmen-01-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "fm_brine_spear",
+          "name": "Brine Spear",
+          "role": "infantry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_brine_spear.png",
+          "reference_sha256": "27cae88163c03f109dbe89786dec185c89623a7d5d245fa42a6cdd94086ad3e6"
+        },
+        {
+          "id": "fm_reef_guard",
+          "name": "Reef Guard",
+          "role": "infantry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_reef_guard.png",
+          "reference_sha256": "4ebeca7e940646d2eb1ce7a8d809f454d573e751cff3a4a2ff3b4be9df2a37e0"
+        },
+        {
+          "id": "fm_hookcaster",
+          "name": "Hookcaster",
+          "role": "ranged",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_hookcaster.png",
+          "reference_sha256": "c1c2aa55ce9fc77b4372aadf0c28760d7f307b4f91229ac7a8c2562a3b6b813a"
+        },
+        {
+          "id": "fm_abyss_harpooner",
+          "name": "Abyss Harpooner",
+          "role": "ranged",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_abyss_harpooner.png",
+          "reference_sha256": "37bf1caa5bef7ffdf0a3d81240824cf7fb3ae648bee1976ad160812a83cbb8d2"
+        }
+      ]
+    },
+    {
+      "id": "dlc-fishmen-02",
+      "faction": "fishmen",
+      "reference": "assets/source/batches/dlc-animation-001/dlc-fishmen-02-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/dlc-fishmen-02-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/dlc-fishmen-02-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "fm_shellback",
+          "name": "Shellback",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_shellback.png",
+          "reference_sha256": "24649c0f6d5f5cbf0e72341690df3d33aaf889abdc0d41763317b93d1fe8b213"
+        },
+        {
+          "id": "fm_barnacle_bulwark",
+          "name": "Barnacle Bulwark",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_barnacle_bulwark.png",
+          "reference_sha256": "06f7e99f243d44a5886a02ab940283a2ebcb3b31082987db623a6c732c046707"
+        },
+        {
+          "id": "fm_mire_crab",
+          "name": "Mire Crab",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_mire_crab.png",
+          "reference_sha256": "c363566b5c075940b5319e9678436e9a42a6b16167d904753655e44752356665"
+        },
+        {
+          "id": "fm_siege_carapace",
+          "name": "Siege Carapace",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_siege_carapace.png",
+          "reference_sha256": "92072d50842d6f0a90c4198a5b40bf882ae85337c9dcc61057c94c233ff0b3bf"
+        }
+      ]
+    },
+    {
+      "id": "dlc-fishmen-03",
+      "faction": "fishmen",
+      "reference": "assets/source/batches/dlc-animation-001/dlc-fishmen-03-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/dlc-fishmen-03-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/dlc-fishmen-03-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "fm_lantern_acolyte",
+          "name": "Lantern Acolyte",
+          "role": "support",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_lantern_acolyte.png",
+          "reference_sha256": "79388d68907bdd266260aa755ba33ca12c04ffd36c349ae7dcd27080c5a78c46"
+        },
+        {
+          "id": "fm_drowned_oracle",
+          "name": "Drowned Oracle",
+          "role": "support",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_drowned_oracle.png",
+          "reference_sha256": "9c92c10ffa6cae4e80aa471cc9ce4192bfad4efbf10bfd4206d01bfaa9b81665"
+        },
+        {
+          "id": "fm_tide_mauler",
+          "name": "Tide Mauler",
+          "role": "infantry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_tide_mauler.png",
+          "reference_sha256": "17123e26aedca42a6ae2f22d99a0a6624c9b137bdaddc81ed55ea93952ed7580"
+        },
+        {
+          "id": "fm_trench_reaver",
+          "name": "Trench Reaver",
+          "role": "infantry",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_trench_reaver.png",
+          "reference_sha256": "7b6530479e05322f6c4f39c8934b02ef9c9ebcc3ef0eab44d1ec1d14cf4e51d7"
+        }
+      ]
+    },
+    {
+      "id": "dlc-fishmen-04",
+      "faction": "fishmen",
+      "reference": "assets/source/batches/dlc-animation-001/dlc-fishmen-04-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/dlc-fishmen-04-a-source.png",
+          "grid": [
+            7,
+            4
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/dlc-fishmen-04-b-source.png",
+          "grid": [
+            6,
+            4
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "fm_coil_serpent",
+          "name": "Coil Serpent",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_coil_serpent.png",
+          "reference_sha256": "0b481d9a8d4875a27151262f67d67a740d8ff225210c09cd1619c6e8c2c8d258"
+        },
+        {
+          "id": "fm_storm_leviathan",
+          "name": "Storm Leviathan",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_storm_leviathan.png",
+          "reference_sha256": "35f9bf48cfd00da32963fd11114d6db027ed11342f77dce355595ae35180a8fa"
+        },
+        {
+          "id": "fm_trench_titan",
+          "name": "Trench Titan",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_trench_titan.png",
+          "reference_sha256": "363b7c52506ba8d40c5e7e86fd1efa04fd4ceab67d40d4c1097b9bd18307ae11"
+        },
+        {
+          "id": "fm_abyss_sovereign",
+          "name": "Abyss Sovereign",
+          "role": "heavy",
+          "reference_source": "assets/source/batches/dlc-animation-001/creature_fm_abyss_sovereign.png",
+          "reference_sha256": "1631f9bf1a9e0b404df426936d2356e71196737daa80959e48ea3062042edfce"
+        }
+      ]
+    },
+    {
+      "id": "six-eyes-story-01",
+      "faction": "wilds",
+      "reference": "assets/source/batches/six-eyes-story-001/six-eyes-story-01-reference.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/six-eyes-story-01-a-source.png",
+          "grid": [
+            7,
+            1
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/six-eyes-story-01-b-source.png",
+          "grid": [
+            6,
+            1
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "ancient_dragon",
+          "name": "Ancient Dragon",
+          "role": "flyer",
+          "tags": [
+            "beast",
+            "dragon",
+            "boss"
+          ],
+          "reference_source": "assets/source/batches/six-eyes-story-001/creature_ancient_dragon.png",
+          "reference_sha256": "bf7e27b960198a145a0593796d4b0314fb9ae2f5c988dde4e3e9b7a41bf575f5"
+        }
+      ]
+    },
+    {
+      "id": "cobolts-01",
+      "faction": "cobolts",
+      "reference": "assets/source/concepts/cobolts/cobolts-concept-v1.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/cobolts-01-a-source.png",
+          "grid": [
+            7,
+            3
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/cobolts-01-b-source.png",
+          "grid": [
+            6,
+            3
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "cobolt_pack_runner",
+          "name": "Pack Runner",
+          "role": "infantry",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_pack_runner.png",
+          "reference_sha256": "408e95e3b4f2a4877819c71a36f005ee4ea690990c0c6a2e3b5b33ccd2ad16a9"
+        },
+        {
+          "id": "cobolt_caravan_spear",
+          "name": "Caravan Spear",
+          "role": "infantry",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_caravan_spear.png",
+          "reference_sha256": "e25506845eb9c335c10386eb88a0a93f81829fb6432e3d02dff9cf7f45d0201a"
+        },
+        {
+          "id": "cobolt_bolt_broker",
+          "name": "Bolt Broker",
+          "role": "ranged",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_bolt_broker.png",
+          "reference_sha256": "ddd277fe6953cecf2c4a5d18f241612d657e3d20ae3cec91bcb21b740ba6efc1"
+        }
+      ]
+    },
+    {
+      "id": "cobolts-02",
+      "faction": "cobolts",
+      "reference": "assets/source/concepts/cobolts/cobolts-concept-v1.png",
+      "sheets": {
+        "A": {
+          "source": "assets/source/batches/creature-idle-001/cobolts-02-a-source.png",
+          "grid": [
+            7,
+            2
+          ]
+        },
+        "B": {
+          "source": "assets/source/batches/creature-idle-001/cobolts-02-b-source.png",
+          "grid": [
+            6,
+            2
+          ]
+        }
+      },
+      "units": [
+        {
+          "id": "cobolt_cinder_alchemist",
+          "name": "Cinder Alchemist",
+          "role": "support",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_cinder_alchemist.png",
+          "reference_sha256": "9641d5c018e2a8bcb857c6dd84f3f74a5970e2f43137cb0cf2fef45497cadcd0"
+        },
+        {
+          "id": "cobolt_vault_warden",
+          "name": "Vault Warden",
+          "role": "heavy",
+          "tags": [
+            "cobolt",
+            "reptile"
+          ],
+          "reference_source": "assets/build/creature/creature_cobolt_vault_warden.png",
+          "reference_sha256": "8af906890921498d31782d6ce72518b5dc4dfcaf9824a17aaf121979a379844b"
+        }
+      ]
+    }
+  ]
+}

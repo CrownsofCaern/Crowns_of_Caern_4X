@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/thornwood-04-source.png",
+  "source_sha256": "90e7d36da26cb2cd368fff1d8071eb05848c242e08b243173f15d30938859840",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/thornwood-04-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/thornwood-04-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "rootbound_ancient",
+    "rootbound_patriarch",
+    "wyrdthorn_mother",
+    "wyrdthorn_matriarch"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "rootbound_ancient",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbound_ancient.png",
+      "reference_sha256": "eac6fefe6b8ff4868a2ecb431de7df95f1d973bff2ebac2319fb78e19e6d0d08"
+    },
+    {
+      "id": "rootbound_patriarch",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rootbound_patriarch.png",
+      "reference_sha256": "35d43de22ffae395dda58dd2b09de557a720e5944c39f739c50fb57351f25e85"
+    },
+    {
+      "id": "wyrdthorn_mother",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_wyrdthorn_mother.png",
+      "reference_sha256": "2950d46f957da3137a0765ad4990acfe08e7073af33814d60fd635540784f524"
+    },
+    {
+      "id": "wyrdthorn_matriarch",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_wyrdthorn_matriarch.png",
+      "reference_sha256": "7b2d596612dc26108aa3af5bd2d511cde08e4aed7f06a7058e8d920f62116399"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

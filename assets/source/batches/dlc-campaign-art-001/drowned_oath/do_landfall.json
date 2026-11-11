@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_drowned_oath_do_landfall_briefing",
+  "campaign": "drowned_oath",
+  "chapter": "do_landfall",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.drowned_oath",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_landfall-prompt.txt",
+  "prompt_sha256": "12179eee3c60a0b34ab1c983bbc1f03fa2303675a7e005843c2bb92247298ac8",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "12e53a6db28430bd030a1a086fdb89a4a9619114cc0fa070ac4a521a917e30e8",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

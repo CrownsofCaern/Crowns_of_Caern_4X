@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_last_light_ll_doors_briefing",
+  "campaign": "last_light",
+  "chapter": "ll_doors",
+  "usage": "briefing",
+  "story_source": {
+    "pull_request": 45,
+    "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/last-light-story-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/last-light-story-001/campaign_last_light_ll_doors_briefing.txt",
+  "prompt_sha256": "25fbe305bdb8393a7c2ace410105565e73ab962af5b96c71a4c34c1d1e34da53",
+  "conditioning": [
+    "assets/source/batches/heroes-001/source.png",
+    "assets/source/batches/towns-001/source.png"
+  ],
+  "source_sha256": "3bf7e88e9001e99d5a6ea22c4323cb0fcb81e9a58db23d84b803453fc99ab243",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

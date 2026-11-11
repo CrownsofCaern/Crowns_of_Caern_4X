@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_six_eyes_se_red_sky_briefing",
+  "campaign": "six_eyes",
+  "chapter": "se_red_sky",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_red_sky-prompt.txt",
+  "prompt_sha256": "ca00a1e15a21f00f0b6dc23862f055916db4fd819b12175c614332af8aa0c6c2",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "112bdc4f1bea7400926de1535b0dd5a211d245c03ec943b30774220ed469cbb3",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

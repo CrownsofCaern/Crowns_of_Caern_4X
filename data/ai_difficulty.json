@@ -1,0 +1,66 @@
+{
+  "_doc": "Computer-player difficulty levels (src/ai/strategic_ai.gd, src/game/game_setup.gd). Each player has a difficulty (GameState player 'difficulty', set per slot in the new-game setup or a campaign chapter's setup.players[i].difficulty). order: the levels as the menus list them. default: the level of a slot that names none (and of saves before v9). Per level: name and description for the menus; income_percent scales a computer player's daily income from towns, mines and heroes (humans always get 100); ai: StrategicAI setting overrides. A game's rules.ai (a campaign chapter's 'ai') still applies on top of the level.",
+  "order": ["passive", "easy", "normal", "hard", "very_hard"],
+  "default": "normal",
+  "levels": {
+    "passive": {
+      "name": "Passive",
+      "description": "Builds and grows, but never goes after your heroes, towns or mines.",
+      "income_percent": 100,
+      "ai": {"passive": true, "max_heroes": 2, "battle_orders": false}
+    },
+    "easy": {
+      "name": "Easy",
+      "description": "Cautious: fights only sure battles, keeps fewer heroes and earns a little less.",
+      "income_percent": 85,
+      "ai": {
+        "min_win_probability": 0.92,
+        "battle_orders": false,
+        "max_loss_fraction": 0.3,
+        "forecasts_per_decision": 2,
+        "max_heroes": 2,
+        "enemy_bonus": 1.0,
+        "hero_kill_value": 1500,
+        "town_value": 6000
+      }
+    },
+    "normal": {
+      "name": "Normal",
+      "description": "The standard opponent.",
+      "income_percent": 100,
+      "ai": {}
+    },
+    "hard": {
+      "name": "Hard",
+      "description": "Aggressive: takes riskier battles, hunts your towns and heroes, keeps more heroes and earns a quarter more.",
+      "income_percent": 125,
+      "ai": {
+        "min_win_probability": 0.72,
+        "max_loss_fraction": 0.55,
+        "forecasts_per_decision": 6,
+        "max_heroes": 4,
+        "enemy_bonus": 1.8,
+        "hero_kill_value": 6000,
+        "town_value": 11000
+      }
+    },
+    "very_hard": {
+      "name": "Very hard",
+      "description": "Ruthless: weighs more battles before choosing, sees armies coming from further away, keeps up to five heroes and earns half again as much.",
+      "income_percent": 150,
+      "ai": {
+        "min_win_probability": 0.7,
+        "max_loss_fraction": 0.55,
+        "forecast_simulations": 64,
+        "forecasts_per_decision": 10,
+        "max_heroes": 5,
+        "enemy_bonus": 2.0,
+        "hero_kill_value": 8000,
+        "town_value": 12000,
+        "danger_days": 3.0,
+        "chase_rate": 0.35,
+        "screen_width": 2.0
+      }
+    }
+  }
+}

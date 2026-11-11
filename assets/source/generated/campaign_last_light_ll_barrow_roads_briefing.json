@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_last_light_ll_barrow_roads_briefing",
+  "campaign": "last_light",
+  "chapter": "ll_barrow_roads",
+  "usage": "briefing",
+  "story_source": {
+    "pull_request": 45,
+    "ref": "a9f18611546bebce9f1edad3cd9bb7cc398a0246",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/last-light-story-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/last-light-story-001/campaign_last_light_ll_barrow_roads_briefing-revision-1.txt",
+  "prompt_sha256": "1d2dda37f938f884b0ef0ef08244807f159c91ea8ef6f178d775ab32efef6c22",
+  "conditioning": [
+    "assets/source/batches/last-light-story-001/revisions/campaign_last_light_ll_barrow_roads_briefing-v1.png"
+  ],
+  "previous_source": "assets/source/batches/last-light-story-001/revisions/campaign_last_light_ll_barrow_roads_briefing-v1.png",
+  "source_sha256": "d7d2f104fa8096b4a9c4c801b5a43d06e6279d1545632bd3e49d9a8fc894f6ba",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

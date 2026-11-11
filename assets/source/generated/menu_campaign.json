@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "game_title": "Crowns of Cinder",
+  "id": "campaign",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "a54ed52231021150874ad00d4969d4d19f59560c7e209ff8b3d78417256087ef",
+  "git_blob_sha": "90279f0c6a9ca3da9c20bf8054ce3eb6dae64a40",
+  "prompt_file": "assets/source/batches/crowns-menu-001/menu_campaign.txt",
+  "conditioning": [],
+  "quality_status": "pending_godot_render",
+  "processing": "Full-resolution source preserved; game export is an exact byte copy",
+  "note": "Produced while the execution workspace was unavailable. PNG dimensions and SHA-256 checked in orchestration; engine validation delegated to CI."
+}

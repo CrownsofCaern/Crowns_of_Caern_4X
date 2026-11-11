@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/frostmarch-03-source.png",
+  "source_sha256": "01dc7d574b266663cec93094adee86c132c170491e34d117fe25ac936fa13f0e",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/frostmarch-03-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/frostmarch-03-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "frost_shaman",
+    "storm_shaman",
+    "rimeback_aurochs",
+    "rimeback_stampede"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "frost_shaman",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_frost_shaman.png",
+      "reference_sha256": "1666a1d44711a61e0cf4c5654079268ccb85a9af236593baa8b009aa0f6a5bd0"
+    },
+    {
+      "id": "storm_shaman",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_storm_shaman.png",
+      "reference_sha256": "f9aeab91ecccd899f15500d1b029b44e7e444ef667b93310b23395ce2474be22"
+    },
+    {
+      "id": "rimeback_aurochs",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimeback_aurochs.png",
+      "reference_sha256": "8f87f0b74a7d1854b4af2ab7714db37056f3b79117d3236bdc08a470e66902fb"
+    },
+    {
+      "id": "rimeback_stampede",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rimeback_stampede.png",
+      "reference_sha256": "74096458d941172df84266661bdc3af76be19703797fd89bbae33060bef6d296"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

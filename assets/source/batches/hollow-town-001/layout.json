@@ -1,0 +1,36 @@
+{
+  "faction": "hollow",
+  "note": "Cells are row-major (0-8). Cut and cleaned by tools/assets/crowns_of_cinder_assets/town_sheets.py; the painting is unchanged.",
+  "sheets": [
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/hollow-sheet.png",
+      "sha256": "65c66a8f51ebeef57a649c7a77159371b15371da0ccbaeed3b80888a7c59ef53",
+      "cells": [
+        "h_hall",
+        "h_market",
+        "h_fort2",
+        "h_dw1",
+        "h_dw3",
+        "h_dw4",
+        "h_dw6",
+        "h_dw7",
+        "h_dw8"
+      ]
+    },
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/hollow-sheet-2.png",
+      "sha256": "e1e10e4a7338159b46a98e88e0dcf4098de531880c9947e968a8c0ac39aa62a6",
+      "cells": [
+        "h_court",
+        "h_assembly",
+        "h_exchequer",
+        "h_yard",
+        "h_tavern",
+        "h_fort1",
+        "h_fort3",
+        "h_dw2",
+        "h_dw5"
+      ]
+    }
+  ]
+}

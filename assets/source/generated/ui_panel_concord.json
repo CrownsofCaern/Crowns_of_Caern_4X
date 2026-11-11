@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "faction-ui-001",
+  "source_sheet": "assets/source/batches/faction-ui-001/source.png",
+  "source_sheet_sha256": "ddba3811b7c73e612c8a54e476f540795f31b3b92b97675d6e534ab6ff4ceab3",
+  "source_sha256": "e1393b16f93da27fc43dd8e6f1eb07c6cdb971d424a38b24b2cd30da7ad17567",
+  "crop_xyxy": [
+    0,
+    0,
+    512,
+    512
+  ],
+  "prompt_file": "assets/source/batches/faction-ui-001/prompt.txt",
+  "conditioning": [
+    "assets/source/batches/towns-001/source.png"
+  ],
+  "native_size": [
+    128,
+    128
+  ],
+  "quality_status": "pending_visual_review",
+  "isolation": "Full grid cell retained, including groups and disconnected effects",
+  "faction": "concord"
+}

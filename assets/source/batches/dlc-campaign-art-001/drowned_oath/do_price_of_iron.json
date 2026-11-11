@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_drowned_oath_do_price_of_iron_briefing",
+  "campaign": "drowned_oath",
+  "chapter": "do_price_of_iron",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.drowned_oath",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_price_of_iron-prompt.txt",
+  "prompt_sha256": "3a565d8f47fde4a10b7e606c581bbd0cc682381919e2def7351d6b71d282fc9f",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "f0ef49918a76acb87ee74c55c0458543f3e0b63c298390cd940e45fb8bea57e7",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

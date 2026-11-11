@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "batch": "dlc-factions-001",
+  "related_animation_batch": "dlc-animation-001",
+  "quality_status": "rendered_candidate",
+  "human_approval": "pending",
+  "activation": "art_only_optional_pack",
+  "factions": [
+    "darkelf",
+    "fishmen"
+  ],
+  "static_atlas_sprites": 120,
+  "town_foundations": 2,
+  "creature_sprites": 32,
+  "hero_sprites": 6,
+  "building_layers": 60,
+  "creature_clips": 64,
+  "hero_gait_clips": 6,
+  "new_action_poses": 248,
+  "original_generation_images": 20,
+  "engine_screenshots": 22,
+  "review": "docs/art/production/dlc-factions/README.md",
+  "developer_report": "docs/art/DLC_FACTIONS_REPORT.md",
+  "validation": {
+    "python_suite": 49,
+    "final_dlc_python_tests": 5,
+    "godot_tests": 26,
+    "asset_check": "passed",
+    "asset_validation": "passed",
+    "real_godot_render": "passed",
+    "godot_version": "4.6.3",
+    "integrated_main": "4d3f3b3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_doc": "The seven resources. Ids are stable save-file keys; names are display text.",
+  "order": ["gold", "wood", "ore", "mercury", "sulfur", "crystal", "gems"],
+  "resources": {
+    "gold":    {"name": "Gold",        "color": "#e8c547"},
+    "wood":    {"name": "Timber",      "color": "#8a5a2b"},
+    "ore":     {"name": "Ore",         "color": "#8d8d8d"},
+    "mercury": {"name": "Quicksilver", "color": "#c7d0d8"},
+    "sulfur":  {"name": "Brimstone",   "color": "#e3d04a"},
+    "crystal": {"name": "Crystal",     "color": "#e06a8a"},
+    "gems":    {"name": "Gems",        "color": "#5ac8c8"}
+  },
+  "starting": {"gold": 7500, "wood": 15, "ore": 15, "mercury": 4, "sulfur": 4, "crystal": 4, "gems": 4}
+}

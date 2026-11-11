@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/darkelf-creatures.png",
+  "source_sheet_sha256": "1e763406818c8e4c62c764cb79fc560c92098617f1ac064fa8835edae9699600",
+  "size": [
+    1261,
+    1247
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-creatures.txt",
+  "prompt_sha256": "6affe4e1b4533bfa61d3fe6b864ba6b9c701f4f1eca7ffb578b683dd833d78a2",
+  "conditioning": [
+    "assets/source/batches/hollow-001/source.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/hollow-001/source.png": "c0a65504208fe13a5820f9e42439ee1d7ebaa5009c5ead6d0d49e9f4d65e03d1"
+  },
+  "extraction": [
+    {
+      "id": "creature_de_gloam_spear",
+      "row": 0,
+      "column": 0,
+      "size": [
+        226,
+        290
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_dusk_sentinel",
+      "row": 0,
+      "column": 1,
+      "size": [
+        282,
+        304
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_shardbow",
+      "row": 0,
+      "column": 2,
+      "size": [
+        238,
+        242
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_venom_arbalist",
+      "row": 0,
+      "column": 3,
+      "size": [
+        279,
+        252
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_knifedancer",
+      "row": 1,
+      "column": 0,
+      "size": [
+        236,
+        245
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_blood_scythe",
+      "row": 1,
+      "column": 1,
+      "size": [
+        254,
+        249
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_cave_lancer",
+      "row": 1,
+      "column": 2,
+      "size": [
+        345,
+        262
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_dread_rider",
+      "row": 1,
+      "column": 3,
+      "size": [
+        338,
+        271
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_veil_adept",
+      "row": 2,
+      "column": 0,
+      "size": [
+        203,
+        272
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_mirror_witch",
+      "row": 2,
+      "column": 1,
+      "size": [
+        284,
+        289
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_silk_stalker",
+      "row": 2,
+      "column": 2,
+      "size": [
+        281,
+        212
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_widow_matriarch",
+      "row": 2,
+      "column": 3,
+      "size": [
+        335,
+        262
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_obsidian_guard",
+      "row": 3,
+      "column": 0,
+      "size": [
+        248,
+        284
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_onyx_executioner",
+      "row": 3,
+      "column": 1,
+      "size": [
+        318,
+        308
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_gloam_drake",
+      "row": 3,
+      "column": 2,
+      "size": [
+        282,
+        273
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_de_eclipse_dragon",
+      "row": 3,
+      "column": 3,
+      "size": [
+        359,
+        309
+      ],
+      "warnings": []
+    }
+  ],
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

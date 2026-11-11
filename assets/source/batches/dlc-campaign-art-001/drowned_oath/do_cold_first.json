@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_drowned_oath_do_cold_first_briefing",
+  "campaign": "drowned_oath",
+  "chapter": "do_cold_first",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.drowned_oath",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cold_first-prompt.txt",
+  "prompt_sha256": "90b9a5298c55b5394b7b45795b109f0bd86635fd92d542b40049cb7e89a3ac94",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "4f6d9b89ab53742fccdd3582191dcd201265002a7818982dee5b08bd66adc15b",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

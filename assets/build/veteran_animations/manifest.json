@@ -1,0 +1,4689 @@
+{
+  "schema_version": 1,
+  "veteran_level": 5,
+  "quality_status": "runtime_enabled",
+  "runtime_enabled": true,
+  "frame_size": [
+    320,
+    256
+  ],
+  "anchor": [
+    160,
+    207
+  ],
+  "units": {
+    "seared_cinderling": {
+      "id": "seared_cinderling",
+      "name": "Seared Cinderling",
+      "tier": 1,
+      "faction": "ashen",
+      "source": "assets/source/batches/veteran-animation-001/ashen-1-revised.png",
+      "source_sha256": "2897ceda84f78e65fd123656bfca4c200b3f1eb78b383297ff97d2977bb415c0",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/seared_cinderling/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/seared_cinderling/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.6253521126760564,
+        "baseline": 212.5,
+        "offsets": [
+          [
+            85,
+            73
+          ],
+          [
+            88,
+            73
+          ],
+          [
+            88,
+            73
+          ],
+          [
+            86,
+            73
+          ],
+          [
+            77,
+            73
+          ],
+          [
+            53,
+            73
+          ],
+          [
+            101,
+            73
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "hellmaw_hound": {
+      "id": "hellmaw_hound",
+      "name": "Hellmaw Hound",
+      "tier": 2,
+      "faction": "ashen",
+      "source": "assets/source/batches/veteran-animation-001/ashen-1-revised.png",
+      "source_sha256": "2897ceda84f78e65fd123656bfca4c200b3f1eb78b383297ff97d2977bb415c0",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/hellmaw_hound/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/hellmaw_hound/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5316455696202531,
+        "baseline": 188.5,
+        "offsets": [
+          [
+            93,
+            106
+          ],
+          [
+            92,
+            106
+          ],
+          [
+            94,
+            106
+          ],
+          [
+            93,
+            106
+          ],
+          [
+            106,
+            106
+          ],
+          [
+            88,
+            106
+          ],
+          [
+            98,
+            106
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "brimstone_bombardier": {
+      "id": "brimstone_bombardier",
+      "name": "Brimstone Bombardier",
+      "tier": 3,
+      "faction": "ashen",
+      "source": "assets/source/batches/veteran-animation-001/ashen-1-revised.png",
+      "source_sha256": "2897ceda84f78e65fd123656bfca4c200b3f1eb78b383297ff97d2977bb415c0",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/brimstone_bombardier/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/brimstone_bombardier/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5544554455445545,
+        "baseline": 204.0,
+        "offsets": [
+          [
+            88,
+            93
+          ],
+          [
+            87,
+            93
+          ],
+          [
+            91,
+            93
+          ],
+          [
+            89,
+            93
+          ],
+          [
+            101,
+            93
+          ],
+          [
+            104,
+            93
+          ],
+          [
+            102,
+            93
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "flayer_exalted": {
+      "id": "flayer_exalted",
+      "name": "Exalted Flayer",
+      "tier": 4,
+      "faction": "ashen",
+      "source": "assets/source/batches/veteran-animation-001/ashen-1-revised.png",
+      "source_sha256": "2897ceda84f78e65fd123656bfca4c200b3f1eb78b383297ff97d2977bb415c0",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/flayer_exalted/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/flayer_exalted/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5333333333333333,
+        "baseline": 213.5,
+        "offsets": [
+          [
+            95,
+            92
+          ],
+          [
+            94,
+            92
+          ],
+          [
+            96,
+            92
+          ],
+          [
+            102,
+            92
+          ],
+          [
+            109,
+            92
+          ],
+          [
+            107,
+            92
+          ],
+          [
+            98,
+            92
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "ash_matriarch": {
+      "id": "ash_matriarch",
+      "name": "Ash Matriarch",
+      "tier": 5,
+      "faction": "ashen",
+      "source": "assets/source/batches/veteran-animation-001/ashen-2-source.png",
+      "source_sha256": "0933130509224078b3569c3a4e91ed296f5c679bd8c7d8d9f18fa0603f4512d8",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/ash_matriarch/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/ash_matriarch/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.49448123620309054,
+        "baseline": 233.5,
+        "offsets": [
+          [
+            108,
+            91
+          ],
+          [
+            102,
+            91
+          ],
+          [
+            103,
+            91
+          ],
+          [
+            107,
+            91
+          ],
+          [
+            113,
+            91
+          ],
+          [
+            112,
+            91
+          ],
+          [
+            110,
+            91
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "gorgewing_matron": {
+      "id": "gorgewing_matron",
+      "name": "Gorgewing Matron",
+      "tier": 6,
+      "faction": "ashen",
+      "source": "assets/source/batches/veteran-animation-001/ashen-2-source.png",
+      "source_sha256": "0933130509224078b3569c3a4e91ed296f5c679bd8c7d8d9f18fa0603f4512d8",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/gorgewing_matron/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/gorgewing_matron/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.49714285714285716,
+        "baseline": 209.5,
+        "offsets": [
+          [
+            100,
+            102
+          ],
+          [
+            102,
+            102
+          ],
+          [
+            107,
+            102
+          ],
+          [
+            101,
+            102
+          ],
+          [
+            94,
+            102
+          ],
+          [
+            90,
+            102
+          ],
+          [
+            99,
+            102
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "pyre_sovereign": {
+      "id": "pyre_sovereign",
+      "name": "Pyre Sovereign",
+      "tier": 7,
+      "faction": "ashen",
+      "source": "assets/source/batches/veteran-animation-001/ashen-2-source.png",
+      "source_sha256": "0933130509224078b3569c3a4e91ed296f5c679bd8c7d8d9f18fa0603f4512d8",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/pyre_sovereign/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/pyre_sovereign/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5022421524663677,
+        "baseline": 227.5,
+        "offsets": [
+          [
+            99,
+            92
+          ],
+          [
+            101,
+            92
+          ],
+          [
+            101,
+            92
+          ],
+          [
+            103,
+            92
+          ],
+          [
+            112,
+            92
+          ],
+          [
+            115,
+            92
+          ],
+          [
+            103,
+            92
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "maw_of_ruin": {
+      "id": "maw_of_ruin",
+      "name": "Maw of Ruin",
+      "tier": 8,
+      "faction": "ashen",
+      "source": "assets/source/batches/veteran-animation-001/ashen-2-source.png",
+      "source_sha256": "0933130509224078b3569c3a4e91ed296f5c679bd8c7d8d9f18fa0603f4512d8",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/maw_of_ruin/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/maw_of_ruin/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5295950155763239,
+        "baseline": 199.0,
+        "offsets": [
+          [
+            93,
+            101
+          ],
+          [
+            94,
+            101
+          ],
+          [
+            99,
+            101
+          ],
+          [
+            96,
+            101
+          ],
+          [
+            113,
+            101
+          ],
+          [
+            102,
+            101
+          ],
+          [
+            100,
+            101
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "pike_veteran": {
+      "id": "pike_veteran",
+      "name": "Pike Veteran",
+      "tier": 1,
+      "faction": "concord",
+      "source": "assets/source/batches/veteran-animation-001/concord-1-source.png",
+      "source_sha256": "5da18f79eec72c7dd710bbf0ce928c9aa85bec24d13573ed0f9890cb5cb4a634",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/pike_veteran/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/pike_veteran/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5,
+        "baseline": 226.0,
+        "offsets": [
+          [
+            112,
+            93
+          ],
+          [
+            107,
+            93
+          ],
+          [
+            109,
+            93
+          ],
+          [
+            118,
+            93
+          ],
+          [
+            114,
+            93
+          ],
+          [
+            113,
+            93
+          ],
+          [
+            112,
+            93
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "warbow_sergeant": {
+      "id": "warbow_sergeant",
+      "name": "Warbow Sergeant",
+      "tier": 2,
+      "faction": "concord",
+      "source": "assets/source/batches/veteran-animation-001/concord-1-source.png",
+      "source_sha256": "5da18f79eec72c7dd710bbf0ce928c9aa85bec24d13573ed0f9890cb5cb4a634",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/warbow_sergeant/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/warbow_sergeant/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5283018867924528,
+        "baseline": 220.0,
+        "offsets": [
+          [
+            99,
+            90
+          ],
+          [
+            101,
+            90
+          ],
+          [
+            103,
+            90
+          ],
+          [
+            102,
+            90
+          ],
+          [
+            103,
+            90
+          ],
+          [
+            100,
+            90
+          ],
+          [
+            102,
+            90
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "bulwark_sworn": {
+      "id": "bulwark_sworn",
+      "name": "Bulwark Sworn",
+      "tier": 3,
+      "faction": "concord",
+      "source": "assets/source/batches/veteran-animation-001/concord-1-source.png",
+      "source_sha256": "5da18f79eec72c7dd710bbf0ce928c9aa85bec24d13573ed0f9890cb5cb4a634",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/bulwark_sworn/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/bulwark_sworn/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5745257452574526,
+        "baseline": 196.5,
+        "offsets": [
+          [
+            102,
+            93
+          ],
+          [
+            107,
+            93
+          ],
+          [
+            107,
+            93
+          ],
+          [
+            105,
+            93
+          ],
+          [
+            98,
+            93
+          ],
+          [
+            89,
+            93
+          ],
+          [
+            100,
+            93
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "oathbound_lancer": {
+      "id": "oathbound_lancer",
+      "name": "Oathbound Lancer",
+      "tier": 4,
+      "faction": "concord",
+      "source": "assets/source/batches/veteran-animation-001/concord-1-source.png",
+      "source_sha256": "5da18f79eec72c7dd710bbf0ce928c9aa85bec24d13573ed0f9890cb5cb4a634",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/oathbound_lancer/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/oathbound_lancer/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.49667405764966743,
+        "baseline": 227.0,
+        "offsets": [
+          [
+            110,
+            93
+          ],
+          [
+            112,
+            93
+          ],
+          [
+            113,
+            93
+          ],
+          [
+            110,
+            93
+          ],
+          [
+            106,
+            93
+          ],
+          [
+            107,
+            93
+          ],
+          [
+            105,
+            93
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "dawn_confessor": {
+      "id": "dawn_confessor",
+      "name": "Dawn Confessor",
+      "tier": 5,
+      "faction": "concord",
+      "source": "assets/source/batches/veteran-animation-001/concord-2-source.png",
+      "source_sha256": "5acd80f1b5051bfd5223630526bcd71d63eae4c91436f6d2730f07ecff0a6c2a",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/dawn_confessor/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/dawn_confessor/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5149425287356322,
+        "baseline": 224.0,
+        "offsets": [
+          [
+            98,
+            91
+          ],
+          [
+            106,
+            91
+          ],
+          [
+            100,
+            91
+          ],
+          [
+            101,
+            91
+          ],
+          [
+            107,
+            91
+          ],
+          [
+            106,
+            91
+          ],
+          [
+            106,
+            91
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "sunhawk_paladin": {
+      "id": "sunhawk_paladin",
+      "name": "Sunhawk Paladin",
+      "tier": 6,
+      "faction": "concord",
+      "source": "assets/source/batches/veteran-animation-001/concord-2-source.png",
+      "source_sha256": "5acd80f1b5051bfd5223630526bcd71d63eae4c91436f6d2730f07ecff0a6c2a",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/sunhawk_paladin/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/sunhawk_paladin/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.513317191283293,
+        "baseline": 216.0,
+        "offsets": [
+          [
+            91,
+            95
+          ],
+          [
+            96,
+            95
+          ],
+          [
+            103,
+            95
+          ],
+          [
+            105,
+            95
+          ],
+          [
+            107,
+            95
+          ],
+          [
+            104,
+            95
+          ],
+          [
+            108,
+            95
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "citadel_colossus": {
+      "id": "citadel_colossus",
+      "name": "Citadel Colossus",
+      "tier": 7,
+      "faction": "concord",
+      "source": "assets/source/batches/veteran-animation-001/concord-2-source.png",
+      "source_sha256": "5acd80f1b5051bfd5223630526bcd71d63eae4c91436f6d2730f07ecff0a6c2a",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/citadel_colossus/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/citadel_colossus/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5283018867924528,
+        "baseline": 216.0,
+        "offsets": [
+          [
+            94,
+            92
+          ],
+          [
+            96,
+            92
+          ],
+          [
+            97,
+            92
+          ],
+          [
+            99,
+            92
+          ],
+          [
+            103,
+            92
+          ],
+          [
+            107,
+            92
+          ],
+          [
+            100,
+            92
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "iron_sovereign": {
+      "id": "iron_sovereign",
+      "name": "Iron Sovereign",
+      "tier": 8,
+      "faction": "concord",
+      "source": "assets/source/batches/veteran-animation-001/concord-2-source.png",
+      "source_sha256": "5acd80f1b5051bfd5223630526bcd71d63eae4c91436f6d2730f07ecff0a6c2a",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/iron_sovereign/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/iron_sovereign/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5162790697674419,
+        "baseline": 225.0,
+        "offsets": [
+          [
+            97,
+            90
+          ],
+          [
+            95,
+            90
+          ],
+          [
+            98,
+            90
+          ],
+          [
+            98,
+            90
+          ],
+          [
+            128,
+            90
+          ],
+          [
+            126,
+            90
+          ],
+          [
+            102,
+            90
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "rotting_shambler": {
+      "id": "rotting_shambler",
+      "name": "Rotting Shambler",
+      "tier": 1,
+      "faction": "hollow",
+      "source": "assets/source/batches/veteran-animation-001/hollow-1-revised.png",
+      "source_sha256": "6aa94aed9dbff4d92db86e39e89152a3b1451f486c5bc08b87e0a848178e2af4",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/rotting_shambler/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/rotting_shambler/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5436893203883495,
+        "baseline": 220.0,
+        "offsets": [
+          [
+            90,
+            86
+          ],
+          [
+            91,
+            86
+          ],
+          [
+            95,
+            86
+          ],
+          [
+            91,
+            86
+          ],
+          [
+            102,
+            86
+          ],
+          [
+            98,
+            86
+          ],
+          [
+            86,
+            86
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "marrow_deadeye": {
+      "id": "marrow_deadeye",
+      "name": "Marrow Deadeye",
+      "tier": 2,
+      "faction": "hollow",
+      "source": "assets/source/batches/veteran-animation-001/hollow-1-revised.png",
+      "source_sha256": "6aa94aed9dbff4d92db86e39e89152a3b1451f486c5bc08b87e0a848178e2af4",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/marrow_deadeye/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/marrow_deadeye/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5211267605633803,
+        "baseline": 230.5,
+        "offsets": [
+          [
+            100,
+            86
+          ],
+          [
+            99,
+            86
+          ],
+          [
+            99,
+            86
+          ],
+          [
+            103,
+            86
+          ],
+          [
+            100,
+            86
+          ],
+          [
+            100,
+            86
+          ],
+          [
+            98,
+            86
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "gravecrawler_brood": {
+      "id": "gravecrawler_brood",
+      "name": "Gravecrawler Brood",
+      "tier": 3,
+      "faction": "hollow",
+      "source": "assets/source/batches/veteran-animation-001/hollow-1-revised.png",
+      "source_sha256": "6aa94aed9dbff4d92db86e39e89152a3b1451f486c5bc08b87e0a848178e2af4",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/gravecrawler_brood/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/gravecrawler_brood/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5277777777777778,
+        "baseline": 201.0,
+        "offsets": [
+          [
+            105,
+            100
+          ],
+          [
+            105,
+            100
+          ],
+          [
+            106,
+            100
+          ],
+          [
+            107,
+            100
+          ],
+          [
+            113,
+            100
+          ],
+          [
+            107,
+            100
+          ],
+          [
+            107,
+            100
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "dirge_shade": {
+      "id": "dirge_shade",
+      "name": "Dirge Shade",
+      "tier": 4,
+      "faction": "hollow",
+      "source": "assets/source/batches/veteran-animation-001/hollow-1-revised.png",
+      "source_sha256": "6aa94aed9dbff4d92db86e39e89152a3b1451f486c5bc08b87e0a848178e2af4",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/dirge_shade/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/dirge_shade/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.4622222222222222,
+        "baseline": 227.5,
+        "offsets": [
+          [
+            102,
+            101
+          ],
+          [
+            103,
+            101
+          ],
+          [
+            107,
+            101
+          ],
+          [
+            109,
+            101
+          ],
+          [
+            110,
+            101
+          ],
+          [
+            115,
+            101
+          ],
+          [
+            104,
+            101
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "charnel_weaver": {
+      "id": "charnel_weaver",
+      "name": "Charnel Weaver",
+      "tier": 5,
+      "faction": "hollow",
+      "source": "assets/source/batches/veteran-animation-001/hollow-2-source.png",
+      "source_sha256": "141e7d88b313e2da3a15e7b296c97767821bcb15d92a4c6fd124127646477b6c",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/charnel_weaver/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/charnel_weaver/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5045045045045045,
+        "baseline": 227.5,
+        "offsets": [
+          [
+            95,
+            91
+          ],
+          [
+            89,
+            91
+          ],
+          [
+            88,
+            91
+          ],
+          [
+            88,
+            91
+          ],
+          [
+            102,
+            91
+          ],
+          [
+            104,
+            91
+          ],
+          [
+            105,
+            91
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "gibbet_lord": {
+      "id": "gibbet_lord",
+      "name": "Gibbet Lord",
+      "tier": 6,
+      "faction": "hollow",
+      "source": "assets/source/batches/veteran-animation-001/hollow-2-source.png",
+      "source_sha256": "141e7d88b313e2da3a15e7b296c97767821bcb15d92a4c6fd124127646477b6c",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/gibbet_lord/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/gibbet_lord/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5346062052505967,
+        "baseline": 218.5,
+        "offsets": [
+          [
+            84,
+            89
+          ],
+          [
+            87,
+            89
+          ],
+          [
+            92,
+            89
+          ],
+          [
+            98,
+            89
+          ],
+          [
+            104,
+            89
+          ],
+          [
+            93,
+            89
+          ],
+          [
+            94,
+            89
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "charnel_behemoth": {
+      "id": "charnel_behemoth",
+      "name": "Charnel Behemoth",
+      "tier": 7,
+      "faction": "hollow",
+      "source": "assets/source/batches/veteran-animation-001/hollow-2-source.png",
+      "source_sha256": "141e7d88b313e2da3a15e7b296c97767821bcb15d92a4c6fd124127646477b6c",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/charnel_behemoth/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/charnel_behemoth/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.498812351543943,
+        "baseline": 221.0,
+        "offsets": [
+          [
+            95,
+            96
+          ],
+          [
+            97,
+            96
+          ],
+          [
+            103,
+            96
+          ],
+          [
+            106,
+            96
+          ],
+          [
+            103,
+            96
+          ],
+          [
+            91,
+            96
+          ],
+          [
+            96,
+            96
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "rotwing_sovereign": {
+      "id": "rotwing_sovereign",
+      "name": "Rotwing Sovereign",
+      "tier": 8,
+      "faction": "hollow",
+      "source": "assets/source/batches/veteran-animation-001/hollow-2-source.png",
+      "source_sha256": "141e7d88b313e2da3a15e7b296c97767821bcb15d92a4c6fd124127646477b6c",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/rotwing_sovereign/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/rotwing_sovereign/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.47783251231527096,
+        "baseline": 213.0,
+        "offsets": [
+          [
+            100,
+            103
+          ],
+          [
+            106,
+            103
+          ],
+          [
+            107,
+            103
+          ],
+          [
+            108,
+            103
+          ],
+          [
+            97,
+            103
+          ],
+          [
+            90,
+            103
+          ],
+          [
+            103,
+            103
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "thorn_stalker": {
+      "id": "thorn_stalker",
+      "name": "Thorn Stalker",
+      "tier": 1,
+      "faction": "thornwood",
+      "source": "assets/source/batches/veteran-animation-001/thornwood-1-source.png",
+      "source_sha256": "0007577f7241ae9a4caec50fb12edbab7859fcc3eed62f70f363c1f1fec2d56e",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/thorn_stalker/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/thorn_stalker/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5685279187817259,
+        "baseline": 211.5,
+        "offsets": [
+          [
+            89,
+            86
+          ],
+          [
+            84,
+            86
+          ],
+          [
+            78,
+            86
+          ],
+          [
+            81,
+            86
+          ],
+          [
+            82,
+            86
+          ],
+          [
+            90,
+            86
+          ],
+          [
+            86,
+            86
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "barkhide_sentinel": {
+      "id": "barkhide_sentinel",
+      "name": "Barkhide Sentinel",
+      "tier": 2,
+      "faction": "thornwood",
+      "source": "assets/source/batches/veteran-animation-001/thornwood-1-source.png",
+      "source_sha256": "0007577f7241ae9a4caec50fb12edbab7859fcc3eed62f70f363c1f1fec2d56e",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/barkhide_sentinel/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/barkhide_sentinel/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5173210161662818,
+        "baseline": 222.5,
+        "offsets": [
+          [
+            100,
+            91
+          ],
+          [
+            91,
+            91
+          ],
+          [
+            92,
+            91
+          ],
+          [
+            87,
+            91
+          ],
+          [
+            106,
+            91
+          ],
+          [
+            83,
+            91
+          ],
+          [
+            106,
+            91
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "briar_deadshot": {
+      "id": "briar_deadshot",
+      "name": "Briar Deadshot",
+      "tier": 3,
+      "faction": "thornwood",
+      "source": "assets/source/batches/veteran-animation-001/thornwood-1-source.png",
+      "source_sha256": "0007577f7241ae9a4caec50fb12edbab7859fcc3eed62f70f363c1f1fec2d56e",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/briar_deadshot/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/briar_deadshot/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5197215777262181,
+        "baseline": 227.0,
+        "offsets": [
+          [
+            103,
+            88
+          ],
+          [
+            100,
+            88
+          ],
+          [
+            97,
+            88
+          ],
+          [
+            98,
+            88
+          ],
+          [
+            97,
+            88
+          ],
+          [
+            103,
+            88
+          ],
+          [
+            107,
+            88
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "rootbinder_elder": {
+      "id": "rootbinder_elder",
+      "name": "Rootbinder Elder",
+      "tier": 4,
+      "faction": "thornwood",
+      "source": "assets/source/batches/veteran-animation-001/thornwood-1-source.png",
+      "source_sha256": "0007577f7241ae9a4caec50fb12edbab7859fcc3eed62f70f363c1f1fec2d56e",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/rootbinder_elder/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/rootbinder_elder/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5173210161662818,
+        "baseline": 223.0,
+        "offsets": [
+          [
+            104,
+            91
+          ],
+          [
+            99,
+            91
+          ],
+          [
+            99,
+            91
+          ],
+          [
+            101,
+            91
+          ],
+          [
+            108,
+            91
+          ],
+          [
+            103,
+            91
+          ],
+          [
+            103,
+            91
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "gloomwing_shrike": {
+      "id": "gloomwing_shrike",
+      "name": "Gloomwing Shrike",
+      "tier": 5,
+      "faction": "thornwood",
+      "source": "assets/source/batches/veteran-animation-001/thornwood-2-source.png",
+      "source_sha256": "6add0f94d1122d81c67b7f2ba0aea00888326e1880494cbda8e905df5bff7eba",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/gloomwing_shrike/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/gloomwing_shrike/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5510204081632653,
+        "baseline": 210.0,
+        "offsets": [
+          [
+            87,
+            90
+          ],
+          [
+            83,
+            90
+          ],
+          [
+            84,
+            90
+          ],
+          [
+            90,
+            90
+          ],
+          [
+            104,
+            90
+          ],
+          [
+            107,
+            90
+          ],
+          [
+            98,
+            90
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "plague_lobber": {
+      "id": "plague_lobber",
+      "name": "Plague Lobber",
+      "tier": 6,
+      "faction": "thornwood",
+      "source": "assets/source/batches/veteran-animation-001/thornwood-2-source.png",
+      "source_sha256": "6add0f94d1122d81c67b7f2ba0aea00888326e1880494cbda8e905df5bff7eba",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/plague_lobber/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/plague_lobber/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5320665083135392,
+        "baseline": 222.0,
+        "offsets": [
+          [
+            94,
+            88
+          ],
+          [
+            94,
+            88
+          ],
+          [
+            97,
+            88
+          ],
+          [
+            97,
+            88
+          ],
+          [
+            105,
+            88
+          ],
+          [
+            101,
+            88
+          ],
+          [
+            97,
+            88
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "rootbound_patriarch": {
+      "id": "rootbound_patriarch",
+      "name": "Rootbound Patriarch",
+      "tier": 7,
+      "faction": "thornwood",
+      "source": "assets/source/batches/veteran-animation-001/thornwood-2-source.png",
+      "source_sha256": "6add0f94d1122d81c67b7f2ba0aea00888326e1880494cbda8e905df5bff7eba",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/rootbound_patriarch/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/rootbound_patriarch/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5476772616136919,
+        "baseline": 212.0,
+        "offsets": [
+          [
+            93,
+            90
+          ],
+          [
+            95,
+            90
+          ],
+          [
+            97,
+            90
+          ],
+          [
+            95,
+            90
+          ],
+          [
+            109,
+            90
+          ],
+          [
+            107,
+            90
+          ],
+          [
+            98,
+            90
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "wyrdthorn_matriarch": {
+      "id": "wyrdthorn_matriarch",
+      "name": "Wyrdthorn Matriarch",
+      "tier": 8,
+      "faction": "thornwood",
+      "source": "assets/source/batches/veteran-animation-001/thornwood-2-source.png",
+      "source_sha256": "6add0f94d1122d81c67b7f2ba0aea00888326e1880494cbda8e905df5bff7eba",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/wyrdthorn_matriarch/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/wyrdthorn_matriarch/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.47297297297297297,
+        "baseline": 225.5,
+        "offsets": [
+          [
+            104,
+            99
+          ],
+          [
+            102,
+            99
+          ],
+          [
+            104,
+            99
+          ],
+          [
+            105,
+            99
+          ],
+          [
+            113,
+            99
+          ],
+          [
+            105,
+            99
+          ],
+          [
+            106,
+            99
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "ironclad_thrall": {
+      "id": "ironclad_thrall",
+      "name": "Ironclad Thrall",
+      "tier": 1,
+      "faction": "forge",
+      "source": "assets/source/batches/veteran-animation-001/forge-1-source.png",
+      "source_sha256": "20b2cd893e38dd0a93c517573d7e40555e579cd9d8e7e317a2eaf31ce878a07f",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/ironclad_thrall/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/ironclad_thrall/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.49557522123893805,
+        "baseline": 233.0,
+        "offsets": [
+          [
+            97,
+            91
+          ],
+          [
+            95,
+            91
+          ],
+          [
+            94,
+            91
+          ],
+          [
+            98,
+            91
+          ],
+          [
+            107,
+            91
+          ],
+          [
+            105,
+            91
+          ],
+          [
+            110,
+            91
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "rivet_arbalist": {
+      "id": "rivet_arbalist",
+      "name": "Rivet Arbalist",
+      "tier": 2,
+      "faction": "forge",
+      "source": "assets/source/batches/veteran-animation-001/forge-1-source.png",
+      "source_sha256": "20b2cd893e38dd0a93c517573d7e40555e579cd9d8e7e317a2eaf31ce878a07f",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/rivet_arbalist/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/rivet_arbalist/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5714285714285714,
+        "baseline": 210.0,
+        "offsets": [
+          [
+            88,
+            86
+          ],
+          [
+            85,
+            86
+          ],
+          [
+            90,
+            86
+          ],
+          [
+            97,
+            86
+          ],
+          [
+            93,
+            86
+          ],
+          [
+            103,
+            86
+          ],
+          [
+            93,
+            86
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "anvil_sworn": {
+      "id": "anvil_sworn",
+      "name": "Anvil Sworn",
+      "tier": 3,
+      "faction": "forge",
+      "source": "assets/source/batches/veteran-animation-001/forge-1-source.png",
+      "source_sha256": "20b2cd893e38dd0a93c517573d7e40555e579cd9d8e7e317a2eaf31ce878a07f",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/anvil_sworn/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/anvil_sworn/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5628140703517588,
+        "baseline": 200.0,
+        "offsets": [
+          [
+            99,
+            93
+          ],
+          [
+            100,
+            93
+          ],
+          [
+            102,
+            93
+          ],
+          [
+            105,
+            93
+          ],
+          [
+            103,
+            93
+          ],
+          [
+            103,
+            93
+          ],
+          [
+            99,
+            93
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "furnace_golem": {
+      "id": "furnace_golem",
+      "name": "Furnace Golem",
+      "tier": 4,
+      "faction": "forge",
+      "source": "assets/source/batches/veteran-animation-001/forge-1-source.png",
+      "source_sha256": "20b2cd893e38dd0a93c517573d7e40555e579cd9d8e7e317a2eaf31ce878a07f",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/furnace_golem/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/furnace_golem/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5114155251141552,
+        "baseline": 222.0,
+        "offsets": [
+          [
+            99,
+            92
+          ],
+          [
+            101,
+            92
+          ],
+          [
+            105,
+            92
+          ],
+          [
+            108,
+            92
+          ],
+          [
+            109,
+            92
+          ],
+          [
+            120,
+            92
+          ],
+          [
+            107,
+            92
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "master_engineer": {
+      "id": "master_engineer",
+      "name": "Master Engineer",
+      "tier": 5,
+      "faction": "forge",
+      "source": "assets/source/batches/veteran-animation-001/forge-2-source.png",
+      "source_sha256": "c7f16d10facf1e6cb4f71165a590f764a692f3b43c2fecceb818bc6e9a52ea0f",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/master_engineer/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/master_engineer/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5209302325581395,
+        "baseline": 224.5,
+        "offsets": [
+          [
+            103,
+            89
+          ],
+          [
+            100,
+            89
+          ],
+          [
+            99,
+            89
+          ],
+          [
+            98,
+            89
+          ],
+          [
+            105,
+            89
+          ],
+          [
+            104,
+            89
+          ],
+          [
+            106,
+            89
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "ironhoof_warboar": {
+      "id": "ironhoof_warboar",
+      "name": "Ironhoof Warboar",
+      "tier": 6,
+      "faction": "forge",
+      "source": "assets/source/batches/veteran-animation-001/forge-2-source.png",
+      "source_sha256": "c7f16d10facf1e6cb4f71165a590f764a692f3b43c2fecceb818bc6e9a52ea0f",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/ironhoof_warboar/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/ironhoof_warboar/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5356125356125356,
+        "baseline": 197.0,
+        "offsets": [
+          [
+            98,
+            100
+          ],
+          [
+            98,
+            100
+          ],
+          [
+            97,
+            100
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            113,
+            100
+          ],
+          [
+            106,
+            100
+          ],
+          [
+            98,
+            100
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "doom_bombard": {
+      "id": "doom_bombard",
+      "name": "Doom Bombard",
+      "tier": 7,
+      "faction": "forge",
+      "source": "assets/source/batches/veteran-animation-001/forge-2-source.png",
+      "source_sha256": "c7f16d10facf1e6cb4f71165a590f764a692f3b43c2fecceb818bc6e9a52ea0f",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/doom_bombard/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/doom_bombard/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5384615384615384,
+        "baseline": 200.0,
+        "offsets": [
+          [
+            95,
+            98
+          ],
+          [
+            100,
+            98
+          ],
+          [
+            106,
+            98
+          ],
+          [
+            106,
+            98
+          ],
+          [
+            102,
+            98
+          ],
+          [
+            102,
+            98
+          ],
+          [
+            96,
+            98
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "worldforge_engine": {
+      "id": "worldforge_engine",
+      "name": "Worldforge Engine",
+      "tier": 8,
+      "faction": "forge",
+      "source": "assets/source/batches/veteran-animation-001/forge-2-source.png",
+      "source_sha256": "c7f16d10facf1e6cb4f71165a590f764a692f3b43c2fecceb818bc6e9a52ea0f",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/worldforge_engine/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/worldforge_engine/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.46021505376344085,
+        "baseline": 241.5,
+        "offsets": [
+          [
+            103,
+            95
+          ],
+          [
+            104,
+            95
+          ],
+          [
+            105,
+            95
+          ],
+          [
+            104,
+            95
+          ],
+          [
+            101,
+            95
+          ],
+          [
+            91,
+            95
+          ],
+          [
+            104,
+            95
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "blooded_raider": {
+      "id": "blooded_raider",
+      "name": "Blooded Raider",
+      "tier": 1,
+      "faction": "frostmarch",
+      "source": "assets/source/batches/veteran-animation-001/frostmarch-1-revised.png",
+      "source_sha256": "7346f0b9d980c0d7afb072eff041a17f26e9ace376c5af121b393cdc5c6d96de",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/blooded_raider/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/blooded_raider/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5011185682326622,
+        "baseline": 245.0,
+        "offsets": [
+          [
+            93,
+            83
+          ],
+          [
+            94,
+            83
+          ],
+          [
+            95,
+            83
+          ],
+          [
+            92,
+            83
+          ],
+          [
+            103,
+            83
+          ],
+          [
+            89,
+            83
+          ],
+          [
+            93,
+            83
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "rimefang_packleader": {
+      "id": "rimefang_packleader",
+      "name": "Rimefang Packleader",
+      "tier": 2,
+      "faction": "frostmarch",
+      "source": "assets/source/batches/veteran-animation-001/frostmarch-1-revised.png",
+      "source_sha256": "7346f0b9d980c0d7afb072eff041a17f26e9ace376c5af121b393cdc5c6d96de",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/rimefang_packleader/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/rimefang_packleader/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5733333333333334,
+        "baseline": 196.5,
+        "offsets": [
+          [
+            88,
+            93
+          ],
+          [
+            91,
+            93
+          ],
+          [
+            96,
+            93
+          ],
+          [
+            99,
+            93
+          ],
+          [
+            93,
+            93
+          ],
+          [
+            88,
+            93
+          ],
+          [
+            92,
+            93
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "bloodfrenzy_berserker": {
+      "id": "bloodfrenzy_berserker",
+      "name": "Bloodfrenzy Berserker",
+      "tier": 3,
+      "faction": "frostmarch",
+      "source": "assets/source/batches/veteran-animation-001/frostmarch-1-revised.png",
+      "source_sha256": "7346f0b9d980c0d7afb072eff041a17f26e9ace376c5af121b393cdc5c6d96de",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/bloodfrenzy_berserker/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/bloodfrenzy_berserker/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.54,
+        "baseline": 225.0,
+        "offsets": [
+          [
+            88,
+            84
+          ],
+          [
+            92,
+            84
+          ],
+          [
+            92,
+            84
+          ],
+          [
+            95,
+            84
+          ],
+          [
+            104,
+            84
+          ],
+          [
+            97,
+            84
+          ],
+          [
+            93,
+            84
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "tusk_chieftain": {
+      "id": "tusk_chieftain",
+      "name": "Tusk Chieftain",
+      "tier": 4,
+      "faction": "frostmarch",
+      "source": "assets/source/batches/veteran-animation-001/frostmarch-1-revised.png",
+      "source_sha256": "7346f0b9d980c0d7afb072eff041a17f26e9ace376c5af121b393cdc5c6d96de",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/tusk_chieftain/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/tusk_chieftain/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5061425061425061,
+        "baseline": 222.0,
+        "offsets": [
+          [
+            97,
+            94
+          ],
+          [
+            98,
+            94
+          ],
+          [
+            101,
+            94
+          ],
+          [
+            102,
+            94
+          ],
+          [
+            108,
+            94
+          ],
+          [
+            107,
+            94
+          ],
+          [
+            106,
+            94
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "storm_shaman": {
+      "id": "storm_shaman",
+      "name": "Storm Shaman",
+      "tier": 5,
+      "faction": "frostmarch",
+      "source": "assets/source/batches/veteran-animation-001/frostmarch-2-revised.png",
+      "source_sha256": "5816afbf63301d2fb8b7067033a0447fe38107e98d2e6be8114246978f6a5657",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/storm_shaman/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/storm_shaman/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5125858123569794,
+        "baseline": 227.0,
+        "offsets": [
+          [
+            87,
+            90
+          ],
+          [
+            79,
+            90
+          ],
+          [
+            89,
+            90
+          ],
+          [
+            89,
+            90
+          ],
+          [
+            98,
+            90
+          ],
+          [
+            102,
+            90
+          ],
+          [
+            103,
+            90
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "rimeback_stampede": {
+      "id": "rimeback_stampede",
+      "name": "Rimeback Stampede",
+      "tier": 6,
+      "faction": "frostmarch",
+      "source": "assets/source/batches/veteran-animation-001/frostmarch-2-revised.png",
+      "source_sha256": "5816afbf63301d2fb8b7067033a0447fe38107e98d2e6be8114246978f6a5657",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/rimeback_stampede/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/rimeback_stampede/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5305039787798409,
+        "baseline": 207.5,
+        "offsets": [
+          [
+            96,
+            96
+          ],
+          [
+            96,
+            96
+          ],
+          [
+            96,
+            96
+          ],
+          [
+            99,
+            96
+          ],
+          [
+            109,
+            96
+          ],
+          [
+            92,
+            96
+          ],
+          [
+            105,
+            96
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "cairn_warlord": {
+      "id": "cairn_warlord",
+      "name": "Cairn Warlord",
+      "tier": 7,
+      "faction": "frostmarch",
+      "source": "assets/source/batches/veteran-animation-001/frostmarch-2-revised.png",
+      "source_sha256": "5816afbf63301d2fb8b7067033a0447fe38107e98d2e6be8114246978f6a5657",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/cairn_warlord/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/cairn_warlord/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5384615384615384,
+        "baseline": 209.5,
+        "offsets": [
+          [
+            92,
+            93
+          ],
+          [
+            93,
+            93
+          ],
+          [
+            95,
+            93
+          ],
+          [
+            100,
+            93
+          ],
+          [
+            100,
+            93
+          ],
+          [
+            108,
+            93
+          ],
+          [
+            95,
+            93
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "winter_wyrm_ancient": {
+      "id": "winter_wyrm_ancient",
+      "name": "Ancient Winter Wyrm",
+      "tier": 8,
+      "faction": "frostmarch",
+      "source": "assets/source/batches/veteran-animation-001/frostmarch-2-revised.png",
+      "source_sha256": "5816afbf63301d2fb8b7067033a0447fe38107e98d2e6be8114246978f6a5657",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/winter_wyrm_ancient/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/winter_wyrm_ancient/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.4782608695652174,
+        "baseline": 208.5,
+        "offsets": [
+          [
+            97,
+            106
+          ],
+          [
+            94,
+            106
+          ],
+          [
+            95,
+            106
+          ],
+          [
+            105,
+            106
+          ],
+          [
+            110,
+            106
+          ],
+          [
+            109,
+            106
+          ],
+          [
+            105,
+            106
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "fm_reef_guard": {
+      "id": "fm_reef_guard",
+      "name": "Reef Guard",
+      "tier": 1,
+      "faction": "fishmen",
+      "source": "assets/source/batches/veteran-animation-001/fishmen-1-source.png",
+      "source_sha256": "39498efbc001534bb4366842cfdf32bad4c40bee9653d38fb2f66a14a1e60048",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/fm_reef_guard/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/fm_reef_guard/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.4900990099009901,
+        "baseline": 221.0,
+        "offsets": [
+          [
+            95,
+            98
+          ],
+          [
+            94,
+            98
+          ],
+          [
+            96,
+            98
+          ],
+          [
+            98,
+            98
+          ],
+          [
+            103,
+            98
+          ],
+          [
+            106,
+            98
+          ],
+          [
+            98,
+            98
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "fm_abyss_harpooner": {
+      "id": "fm_abyss_harpooner",
+      "name": "Abyss Harpooner",
+      "tier": 2,
+      "faction": "fishmen",
+      "source": "assets/source/batches/veteran-animation-001/fishmen-1-source.png",
+      "source_sha256": "39498efbc001534bb4366842cfdf32bad4c40bee9653d38fb2f66a14a1e60048",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/fm_abyss_harpooner/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/fm_abyss_harpooner/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.47738693467336685,
+        "baseline": 212.5,
+        "offsets": [
+          [
+            92,
+            105
+          ],
+          [
+            100,
+            105
+          ],
+          [
+            100,
+            105
+          ],
+          [
+            101,
+            105
+          ],
+          [
+            105,
+            105
+          ],
+          [
+            103,
+            105
+          ],
+          [
+            106,
+            105
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "fm_barnacle_bulwark": {
+      "id": "fm_barnacle_bulwark",
+      "name": "Barnacle Bulwark",
+      "tier": 3,
+      "faction": "fishmen",
+      "source": "assets/source/batches/veteran-animation-001/fishmen-1-source.png",
+      "source_sha256": "39498efbc001534bb4366842cfdf32bad4c40bee9653d38fb2f66a14a1e60048",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/fm_barnacle_bulwark/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/fm_barnacle_bulwark/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.4844124700239808,
+        "baseline": 230.5,
+        "offsets": [
+          [
+            104,
+            94
+          ],
+          [
+            103,
+            94
+          ],
+          [
+            106,
+            94
+          ],
+          [
+            104,
+            94
+          ],
+          [
+            109,
+            94
+          ],
+          [
+            99,
+            94
+          ],
+          [
+            103,
+            94
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "fm_siege_carapace": {
+      "id": "fm_siege_carapace",
+      "name": "Siege Carapace",
+      "tier": 4,
+      "faction": "fishmen",
+      "source": "assets/source/batches/veteran-animation-001/fishmen-1-source.png",
+      "source_sha256": "39498efbc001534bb4366842cfdf32bad4c40bee9653d38fb2f66a14a1e60048",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/fm_siege_carapace/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/fm_siege_carapace/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5057471264367817,
+        "baseline": 199.0,
+        "offsets": [
+          [
+            100,
+            105
+          ],
+          [
+            102,
+            105
+          ],
+          [
+            102,
+            105
+          ],
+          [
+            105,
+            105
+          ],
+          [
+            132,
+            105
+          ],
+          [
+            124,
+            105
+          ],
+          [
+            104,
+            105
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "fm_drowned_oracle": {
+      "id": "fm_drowned_oracle",
+      "name": "Drowned Oracle",
+      "tier": 5,
+      "faction": "fishmen",
+      "source": "assets/source/batches/veteran-animation-001/fishmen-2-source.png",
+      "source_sha256": "659eab37f1bf875308017ddbb5dab13d38be3ea7d84fb091fe9077a4052551d9",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/fm_drowned_oracle/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/fm_drowned_oracle/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5346062052505967,
+        "baseline": 227.0,
+        "offsets": [
+          [
+            96,
+            85
+          ],
+          [
+            94,
+            85
+          ],
+          [
+            91,
+            85
+          ],
+          [
+            91,
+            85
+          ],
+          [
+            109,
+            85
+          ],
+          [
+            100,
+            85
+          ],
+          [
+            98,
+            85
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "fm_trench_reaver": {
+      "id": "fm_trench_reaver",
+      "name": "Trench Reaver",
+      "tier": 6,
+      "faction": "fishmen",
+      "source": "assets/source/batches/veteran-animation-001/fishmen-2-source.png",
+      "source_sha256": "659eab37f1bf875308017ddbb5dab13d38be3ea7d84fb091fe9077a4052551d9",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/fm_trench_reaver/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/fm_trench_reaver/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5012787723785166,
+        "baseline": 217.0,
+        "offsets": [
+          [
+            101,
+            97
+          ],
+          [
+            104,
+            97
+          ],
+          [
+            108,
+            97
+          ],
+          [
+            110,
+            97
+          ],
+          [
+            100,
+            97
+          ],
+          [
+            90,
+            97
+          ],
+          [
+            98,
+            97
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "fm_storm_leviathan": {
+      "id": "fm_storm_leviathan",
+      "name": "Storm Leviathan",
+      "tier": 7,
+      "faction": "fishmen",
+      "source": "assets/source/batches/veteran-animation-001/fishmen-2-source.png",
+      "source_sha256": "659eab37f1bf875308017ddbb5dab13d38be3ea7d84fb091fe9077a4052551d9",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/fm_storm_leviathan/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/fm_storm_leviathan/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5957446808510638,
+        "baseline": 202.5,
+        "offsets": [
+          [
+            85,
+            85
+          ],
+          [
+            84,
+            85
+          ],
+          [
+            88,
+            85
+          ],
+          [
+            89,
+            85
+          ],
+          [
+            104,
+            85
+          ],
+          [
+            102,
+            85
+          ],
+          [
+            100,
+            85
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "fm_abyss_sovereign": {
+      "id": "fm_abyss_sovereign",
+      "name": "Abyss Sovereign",
+      "tier": 8,
+      "faction": "fishmen",
+      "source": "assets/source/batches/veteran-animation-001/fishmen-2-source.png",
+      "source_sha256": "659eab37f1bf875308017ddbb5dab13d38be3ea7d84fb091fe9077a4052551d9",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/fm_abyss_sovereign/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/fm_abyss_sovereign/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.4646017699115044,
+        "baseline": 234.0,
+        "offsets": [
+          [
+            105,
+            97
+          ],
+          [
+            105,
+            97
+          ],
+          [
+            108,
+            97
+          ],
+          [
+            112,
+            97
+          ],
+          [
+            110,
+            97
+          ],
+          [
+            104,
+            97
+          ],
+          [
+            107,
+            97
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "de_dusk_sentinel": {
+      "id": "de_dusk_sentinel",
+      "name": "Dusk Sentinel",
+      "tier": 1,
+      "faction": "darkelf",
+      "source": "assets/source/batches/veteran-animation-001/darkelf-1-source.png",
+      "source_sha256": "12d904015bd085086df51b8b1f29e351af4256f704e3a4a4406426a143c527ef",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/de_dusk_sentinel/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/de_dusk_sentinel/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.503370786516854,
+        "baseline": 229.0,
+        "offsets": [
+          [
+            100,
+            91
+          ],
+          [
+            95,
+            91
+          ],
+          [
+            97,
+            91
+          ],
+          [
+            103,
+            91
+          ],
+          [
+            108,
+            91
+          ],
+          [
+            102,
+            91
+          ],
+          [
+            112,
+            91
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "de_venom_arbalist": {
+      "id": "de_venom_arbalist",
+      "name": "Venom Arbalist",
+      "tier": 2,
+      "faction": "darkelf",
+      "source": "assets/source/batches/veteran-animation-001/darkelf-1-source.png",
+      "source_sha256": "12d904015bd085086df51b8b1f29e351af4256f704e3a4a4406426a143c527ef",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/de_venom_arbalist/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/de_venom_arbalist/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5244215938303342,
+        "baseline": 217.0,
+        "offsets": [
+          [
+            97,
+            92
+          ],
+          [
+            100,
+            92
+          ],
+          [
+            99,
+            92
+          ],
+          [
+            104,
+            92
+          ],
+          [
+            101,
+            92
+          ],
+          [
+            96,
+            92
+          ],
+          [
+            90,
+            92
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "de_blood_scythe": {
+      "id": "de_blood_scythe",
+      "name": "Blood Scythe",
+      "tier": 3,
+      "faction": "darkelf",
+      "source": "assets/source/batches/veteran-animation-001/darkelf-1-source.png",
+      "source_sha256": "12d904015bd085086df51b8b1f29e351af4256f704e3a4a4406426a143c527ef",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/de_blood_scythe/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/de_blood_scythe/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5684210526315789,
+        "baseline": 204.5,
+        "offsets": [
+          [
+            92,
+            90
+          ],
+          [
+            90,
+            90
+          ],
+          [
+            92,
+            90
+          ],
+          [
+            94,
+            90
+          ],
+          [
+            95,
+            90
+          ],
+          [
+            105,
+            90
+          ],
+          [
+            89,
+            90
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "de_dread_rider": {
+      "id": "de_dread_rider",
+      "name": "Dread Rider",
+      "tier": 4,
+      "faction": "darkelf",
+      "source": "assets/source/batches/veteran-animation-001/darkelf-1-source.png",
+      "source_sha256": "12d904015bd085086df51b8b1f29e351af4256f704e3a4a4406426a143c527ef",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/de_dread_rider/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/de_dread_rider/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5067385444743935,
+        "baseline": 193.5,
+        "offsets": [
+          [
+            98,
+            108
+          ],
+          [
+            96,
+            108
+          ],
+          [
+            97,
+            108
+          ],
+          [
+            105,
+            108
+          ],
+          [
+            107,
+            108
+          ],
+          [
+            90,
+            108
+          ],
+          [
+            94,
+            108
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "de_mirror_witch": {
+      "id": "de_mirror_witch",
+      "name": "Mirror Witch",
+      "tier": 5,
+      "faction": "darkelf",
+      "source": "assets/source/batches/veteran-animation-001/darkelf-2-source.png",
+      "source_sha256": "9c0811d93338dedf0eda752238328eb2b013432b4ffd0f18c6757ce992fec2f3",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/de_mirror_witch/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/de_mirror_witch/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.448,
+        "baseline": 257.0,
+        "offsets": [
+          [
+            110,
+            91
+          ],
+          [
+            105,
+            91
+          ],
+          [
+            97,
+            91
+          ],
+          [
+            97,
+            91
+          ],
+          [
+            119,
+            91
+          ],
+          [
+            110,
+            91
+          ],
+          [
+            111,
+            91
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "de_widow_matriarch": {
+      "id": "de_widow_matriarch",
+      "name": "Widow Matriarch",
+      "tier": 6,
+      "faction": "darkelf",
+      "source": "assets/source/batches/veteran-animation-001/darkelf-2-source.png",
+      "source_sha256": "9c0811d93338dedf0eda752238328eb2b013432b4ffd0f18c6757ce992fec2f3",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/de_widow_matriarch/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/de_widow_matriarch/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5655172413793104,
+        "baseline": 202.0,
+        "offsets": [
+          [
+            92,
+            91
+          ],
+          [
+            87,
+            91
+          ],
+          [
+            91,
+            91
+          ],
+          [
+            90,
+            91
+          ],
+          [
+            97,
+            91
+          ],
+          [
+            85,
+            91
+          ],
+          [
+            92,
+            91
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "de_onyx_executioner": {
+      "id": "de_onyx_executioner",
+      "name": "Onyx Executioner",
+      "tier": 7,
+      "faction": "darkelf",
+      "source": "assets/source/batches/veteran-animation-001/darkelf-2-source.png",
+      "source_sha256": "9c0811d93338dedf0eda752238328eb2b013432b4ffd0f18c6757ce992fec2f3",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/de_onyx_executioner/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/de_onyx_executioner/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5743589743589743,
+        "baseline": 230.0,
+        "offsets": [
+          [
+            87,
+            74
+          ],
+          [
+            87,
+            74
+          ],
+          [
+            89,
+            74
+          ],
+          [
+            87,
+            74
+          ],
+          [
+            101,
+            74
+          ],
+          [
+            65,
+            74
+          ],
+          [
+            96,
+            74
+          ]
+        ],
+        "warnings": []
+      }
+    },
+    "de_eclipse_dragon": {
+      "id": "de_eclipse_dragon",
+      "name": "Eclipse Dragon",
+      "tier": 8,
+      "faction": "darkelf",
+      "source": "assets/source/batches/veteran-animation-001/darkelf-2-source.png",
+      "source_sha256": "9c0811d93338dedf0eda752238328eb2b013432b4ffd0f18c6757ce992fec2f3",
+      "actions": {
+        "move": {
+          "path": "assets/build/veteran_animations/de_eclipse_dragon/move.png",
+          "frame_count": 4,
+          "durations_ms": [
+            150,
+            150,
+            150,
+            150
+          ],
+          "loop": true
+        },
+        "attack": {
+          "path": "assets/build/veteran_animations/de_eclipse_dragon/attack.png",
+          "frame_count": 4,
+          "durations_ms": [
+            180,
+            120,
+            180,
+            120
+          ],
+          "loop": false,
+          "events": [
+            {
+              "time_ms": 180,
+              "name": "impact"
+            }
+          ]
+        }
+      },
+      "qc": {
+        "scale": 0.5118733509234829,
+        "baseline": 212.0,
+        "offsets": [
+          [
+            99,
+            97
+          ],
+          [
+            101,
+            97
+          ],
+          [
+            104,
+            97
+          ],
+          [
+            103,
+            97
+          ],
+          [
+            117,
+            97
+          ],
+          [
+            111,
+            97
+          ],
+          [
+            100,
+            97
+          ]
+        ],
+        "warnings": []
+      }
+    }
+  },
+  "warnings": []
+}

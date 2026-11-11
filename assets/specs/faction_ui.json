@@ -1,0 +1,58 @@
+{
+  "concord": {
+    "background": "#080c14",
+    "panel": "#111b2a",
+    "raised": "#1d2c40",
+    "accent": "#c9a24a",
+    "material": "navy leather, slate, steel and tarnished brass"
+  },
+  "ashen": {
+    "background": "#100507",
+    "panel": "#240a10",
+    "raised": "#3b121b",
+    "accent": "#e65249",
+    "material": "blood-red lacquer, black iron and ember seams"
+  },
+  "hollow": {
+    "background": "#090e0d",
+    "panel": "#191e20",
+    "raised": "#293133",
+    "accent": "#8aee78",
+    "material": "charcoal stone, blackened bone and neon grave green"
+  },
+  "thornwood": {
+    "background": "#090e09",
+    "panel": "#172016",
+    "raised": "#293624",
+    "accent": "#a2ba66",
+    "material": "dark bark, twisted roots and moss"
+  },
+  "forge": {
+    "background": "#100c09",
+    "panel": "#211c18",
+    "raised": "#393027",
+    "accent": "#efa65b",
+    "material": "soot-black iron, rivets, aged bronze and furnace orange"
+  },
+  "frostmarch": {
+    "background": "#080f16",
+    "panel": "#14222f",
+    "raised": "#263b4b",
+    "accent": "#a5d9ee",
+    "material": "cold leather, carved bone, weathered iron and ice blue"
+  },
+  "darkelf": {
+    "background": "#0c0912",
+    "panel": "#1b1427",
+    "raised": "#32233f",
+    "accent": "#b48ce0",
+    "material": "blackened silver, obsidian, dark silk and amethyst"
+  },
+  "fishmen": {
+    "background": "#071110",
+    "panel": "#102524",
+    "raised": "#1e3e3a",
+    "accent": "#5cc9bd",
+    "material": "sea-dark basalt, corroded bronze, pearl shell and cyan light"
+  }
+}

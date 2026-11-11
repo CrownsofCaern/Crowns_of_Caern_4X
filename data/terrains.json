@@ -1,0 +1,16 @@
+{
+  "_doc": "Terrain definitions. move_cost is in movement points (a hero has ~1500/day). passable=false blocks movement. vision_mod adds to hero scouting radius while standing on the tile. combat_terrain is the terrain id used for combat modifiers (roads/rivers resolve to their base).",
+  "terrains": {
+    "grass":    {"name": "Grassland",      "char": ".", "color": "#5f8f3e", "move_cost": 100, "passable": true,  "vision_mod": 0,  "combat_terrain": "grass"},
+    "forest":   {"name": "Forest",         "char": "f", "color": "#2f5a2a", "move_cost": 150, "passable": true,  "vision_mod": -1, "combat_terrain": "forest"},
+    "desert":   {"name": "Desert",         "char": "d", "color": "#c9b06a", "move_cost": 150, "passable": true,  "vision_mod": 1,  "combat_terrain": "desert"},
+    "snow":     {"name": "Snowfield",      "char": "s", "color": "#dfe7ee", "move_cost": 150, "passable": true,  "vision_mod": 0,  "combat_terrain": "snow"},
+    "swamp":    {"name": "Swamp",          "char": "w", "color": "#4a5a3a", "move_cost": 175, "passable": true,  "vision_mod": -1, "combat_terrain": "swamp"},
+    "infernal": {"name": "Cinder Wastes",  "char": "i", "color": "#7a2f22", "move_cost": 125, "passable": true,  "vision_mod": 0,  "combat_terrain": "infernal"},
+    "rough":    {"name": "Rocky Highland", "char": "r", "color": "#7d7468", "move_cost": 125, "passable": true,  "vision_mod": 1,  "combat_terrain": "rough"},
+    "river":    {"name": "River Ford",     "char": "~", "color": "#3f74a8", "move_cost": 200, "passable": true,  "vision_mod": 0,  "combat_terrain": "grass"},
+    "mountain": {"name": "Mountains",      "char": "^", "color": "#4d4640", "move_cost": 0,   "passable": false, "vision_mod": 0,  "combat_terrain": "rough"},
+    "water":    {"name": "Deep Water",     "char": "#", "color": "#24476e", "move_cost": 0,   "passable": false, "vision_mod": 0,  "combat_terrain": "grass"}
+  },
+  "road": {"char": "=", "move_cost": 60, "color": "#a8916a"}
+}

@@ -1,0 +1,629 @@
+{
+  "_doc": "Two-player duel map for AI-versus-AI runs and human-versus-AI play. Mirror-symmetric around column 13; the middle town, gold mine and crossing are contested.",
+  "id": "twin_marches",
+  "name": "The Twin Marches",
+  "width": 27,
+  "height": 20,
+  "terrain": [
+    "^^^^...^^^^^...^^^^^.ii^^^^",
+    "^.....ff...^^.^^...ffiiiii^",
+    "......ff...........ffiiiiii",
+    "..ff.....rr.....rr...iiffii",
+    ".ffff....rr.....rr...iffffi",
+    "..ff......^^...^^....iiffii",
+    "..........^^...^^....iiiiii",
+    "...ww................iwwiii",
+    "..www.....^.....^....iwwwii",
+    "..........^.....^....iiiiii",
+    ".....................iiiiii",
+    "..........^.....^....iiiiii",
+    "...dd.....^.....^....iddiii",
+    "..ddd................idddii",
+    "...d......^^...^^....iidiii",
+    "..ff......^^...^^....iiffii",
+    ".fff.....ww.....ww...iifffi",
+    "..ff.....ww.....ww...iiffii",
+    "^.....ff...^^.^^...ffiiiii^",
+    "^^^^...^^^^^^.^^^^^^.ii^^^^"
+  ],
+  "roads": [
+    {
+      "from": [
+        2,
+        10
+      ],
+      "to": [
+        24,
+        10
+      ]
+    },
+    {
+      "from": [
+        4,
+        6
+      ],
+      "to": [
+        4,
+        14
+      ]
+    },
+    {
+      "from": [
+        22,
+        6
+      ],
+      "to": [
+        22,
+        14
+      ]
+    }
+  ],
+  "players": [
+    {
+      "id": 0,
+      "name": "Concord",
+      "faction": "concord",
+      "color": "#3d6fc4",
+      "is_human": true
+    },
+    {
+      "id": 1,
+      "name": "Ashen Host",
+      "faction": "ashen",
+      "color": "#b8402c",
+      "is_human": false
+    }
+  ],
+  "heroes": [
+    {
+      "id": "hero_west",
+      "name": "Odric Vane",
+      "class": "knight",
+      "owner": 0,
+      "pos": [
+        2,
+        10
+      ],
+      "army": [
+        [
+          "pike_militia",
+          24
+        ],
+        [
+          "longbowman",
+          14
+        ],
+        [
+          "shieldwarden",
+          6
+        ],
+        [
+          "lancer",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "hero_east",
+      "name": "Grisk Hollowbrand",
+      "class": "warlord",
+      "owner": 1,
+      "pos": [
+        24,
+        10
+      ],
+      "army": [
+        [
+          "cinderling",
+          30
+        ],
+        [
+          "scorchhound",
+          10
+        ],
+        [
+          "brimstone_hurler",
+          8
+        ],
+        [
+          "flayer",
+          3
+        ]
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "town_greywatch",
+      "type": "town",
+      "pos": [
+        2,
+        10
+      ],
+      "town_type": "concord",
+      "name": "Greywatch",
+      "owner": 0
+    },
+    {
+      "id": "town_emberkeep",
+      "type": "town",
+      "pos": [
+        24,
+        10
+      ],
+      "town_type": "ashen",
+      "name": "Emberkeep",
+      "owner": 1
+    },
+    {
+      "id": "town_hollowmere",
+      "type": "town",
+      "pos": [
+        13,
+        3
+      ],
+      "town_type": "concord",
+      "name": "Hollowmere",
+      "owner": -1,
+      "built": [
+        "c_hall",
+        "c_tavern",
+        "c_dw1",
+        "c_dw2",
+        "c_palisade"
+      ],
+      "garrison": [
+        [
+          "pike_militia",
+          30
+        ],
+        [
+          "longbowman",
+          16
+        ],
+        [
+          "shieldwarden",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "mine_wood_west",
+      "pos": [
+        4,
+        6
+      ],
+      "type": "mine",
+      "resource": "wood"
+    },
+    {
+      "id": "mine_wood_east",
+      "pos": [
+        22,
+        6
+      ],
+      "type": "mine",
+      "resource": "wood"
+    },
+    {
+      "id": "mine_ore_west",
+      "pos": [
+        4,
+        14
+      ],
+      "type": "mine",
+      "resource": "ore"
+    },
+    {
+      "id": "mine_ore_east",
+      "pos": [
+        22,
+        14
+      ],
+      "type": "mine",
+      "resource": "ore"
+    },
+    {
+      "id": "mine_crystal",
+      "type": "mine",
+      "pos": [
+        8,
+        3
+      ],
+      "resource": "crystal",
+      "guard": [
+        [
+          "thornwolf",
+          10
+        ]
+      ]
+    },
+    {
+      "id": "mine_mercury",
+      "type": "mine",
+      "pos": [
+        18,
+        3
+      ],
+      "resource": "mercury",
+      "guard": [
+        [
+          "thornwolf",
+          10
+        ]
+      ]
+    },
+    {
+      "id": "mine_gems",
+      "type": "mine",
+      "pos": [
+        8,
+        16
+      ],
+      "resource": "gems",
+      "guard": [
+        [
+          "bog_lurker",
+          5
+        ]
+      ]
+    },
+    {
+      "id": "mine_sulfur",
+      "type": "mine",
+      "pos": [
+        18,
+        16
+      ],
+      "resource": "sulfur",
+      "guard": [
+        [
+          "bog_lurker",
+          5
+        ]
+      ]
+    },
+    {
+      "id": "mine_gold",
+      "type": "mine",
+      "pos": [
+        13,
+        17
+      ],
+      "resource": "gold",
+      "guard": [
+        [
+          "crag_slinger",
+          24
+        ],
+        [
+          "thornwolf",
+          10
+        ]
+      ]
+    },
+    {
+      "id": "res_0w",
+      "type": "resource",
+      "pos": [
+        5,
+        2
+      ],
+      "resource": "gold",
+      "amount": 500
+    },
+    {
+      "id": "res_0e",
+      "type": "resource",
+      "pos": [
+        21,
+        2
+      ],
+      "resource": "gold",
+      "amount": 500
+    },
+    {
+      "id": "res_1w",
+      "type": "resource",
+      "pos": [
+        3,
+        8
+      ],
+      "resource": "wood",
+      "amount": 5
+    },
+    {
+      "id": "res_1e",
+      "type": "resource",
+      "pos": [
+        23,
+        8
+      ],
+      "resource": "wood",
+      "amount": 5
+    },
+    {
+      "id": "res_2w",
+      "type": "resource",
+      "pos": [
+        6,
+        13
+      ],
+      "resource": "ore",
+      "amount": 5
+    },
+    {
+      "id": "res_2e",
+      "type": "resource",
+      "pos": [
+        20,
+        13
+      ],
+      "resource": "ore",
+      "amount": 5
+    },
+    {
+      "id": "res_3w",
+      "type": "resource",
+      "pos": [
+        9,
+        7
+      ],
+      "resource": "gold",
+      "amount": 750
+    },
+    {
+      "id": "res_3e",
+      "type": "resource",
+      "pos": [
+        17,
+        7
+      ],
+      "resource": "gold",
+      "amount": 750
+    },
+    {
+      "id": "res_4w",
+      "type": "resource",
+      "pos": [
+        9,
+        12
+      ],
+      "resource": "crystal",
+      "amount": 2
+    },
+    {
+      "id": "res_4e",
+      "type": "resource",
+      "pos": [
+        17,
+        12
+      ],
+      "resource": "crystal",
+      "amount": 2
+    },
+    {
+      "id": "res_5w",
+      "type": "resource",
+      "pos": [
+        7,
+        18
+      ],
+      "resource": "gems",
+      "amount": 2
+    },
+    {
+      "id": "res_5e",
+      "type": "resource",
+      "pos": [
+        19,
+        18
+      ],
+      "resource": "gems",
+      "amount": 2
+    },
+    {
+      "id": "res_6w",
+      "type": "resource",
+      "pos": [
+        9,
+        1
+      ],
+      "resource": "sulfur",
+      "amount": 2
+    },
+    {
+      "id": "res_6e",
+      "type": "resource",
+      "pos": [
+        17,
+        1
+      ],
+      "resource": "sulfur",
+      "amount": 2
+    },
+    {
+      "id": "res_mid",
+      "type": "resource",
+      "pos": [
+        13,
+        6
+      ],
+      "resource": "gold",
+      "amount": 1000
+    },
+    {
+      "id": "neutral_thornwolf_w",
+      "type": "neutral_army",
+      "pos": [
+        7,
+        9
+      ],
+      "name": "Thornwolf pack",
+      "stacks": [
+        [
+          "thornwolf",
+          12
+        ]
+      ]
+    },
+    {
+      "id": "neutral_thornwolf_e",
+      "type": "neutral_army",
+      "pos": [
+        19,
+        9
+      ],
+      "name": "Thornwolf pack",
+      "stacks": [
+        [
+          "thornwolf",
+          12
+        ]
+      ]
+    },
+    {
+      "id": "neutral_bog_w",
+      "type": "neutral_army",
+      "pos": [
+        5,
+        16
+      ],
+      "name": "Bog lurkers",
+      "stacks": [
+        [
+          "bog_lurker",
+          6
+        ]
+      ]
+    },
+    {
+      "id": "neutral_bog_e",
+      "type": "neutral_army",
+      "pos": [
+        21,
+        16
+      ],
+      "name": "Bog lurkers",
+      "stacks": [
+        [
+          "bog_lurker",
+          6
+        ]
+      ]
+    },
+    {
+      "id": "enc_wagon_w",
+      "type": "encounter",
+      "pos": [
+        6,
+        7
+      ],
+      "encounter": "overturned_wagon"
+    },
+    {
+      "id": "enc_wagon_e",
+      "type": "encounter",
+      "pos": [
+        20,
+        7
+      ],
+      "encounter": "overturned_wagon"
+    },
+    {
+      "id": "enc_courier_w",
+      "type": "encounter",
+      "pos": [
+        8,
+        13
+      ],
+      "encounter": "dying_courier"
+    },
+    {
+      "id": "enc_courier_e",
+      "type": "encounter",
+      "pos": [
+        18,
+        13
+      ],
+      "encounter": "dying_courier"
+    },
+    {
+      "id": "enc_den_w",
+      "type": "encounter",
+      "pos": [
+        3,
+        17
+      ],
+      "encounter": "thornwolf_den"
+    },
+    {
+      "id": "enc_den_e",
+      "type": "encounter",
+      "pos": [
+        23,
+        17
+      ],
+      "encounter": "thornwolf_den"
+    },
+    {
+      "id": "enc_echoes",
+      "type": "encounter",
+      "pos": [
+        13,
+        14
+      ],
+      "encounter": "hall_of_echoes"
+    },
+    {
+      "id": "neutral_crossing",
+      "type": "neutral_army",
+      "pos": [
+        13,
+        10
+      ],
+      "name": "Crossing wardens",
+      "stacks": [
+        [
+          "crag_slinger",
+          30
+        ],
+        [
+          "thornwolf",
+          12
+        ],
+        [
+          "bog_lurker",
+          5
+        ]
+      ]
+    },
+    {
+      "id": "art_sallet_w",
+      "type": "artifact",
+      "pos": [
+        8,
+        5
+      ],
+      "artifact": "dented_sallet"
+    },
+    {
+      "id": "art_sallet_e",
+      "type": "artifact",
+      "pos": [
+        18,
+        5
+      ],
+      "artifact": "dented_sallet"
+    },
+    {
+      "id": "art_pavise_mid",
+      "type": "artifact",
+      "pos": [
+        13,
+        12
+      ],
+      "artifact": "vigil_pavise"
+    }
+  ]
+}

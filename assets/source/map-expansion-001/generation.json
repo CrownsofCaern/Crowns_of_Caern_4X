@@ -1,0 +1,90 @@
+{
+  "provider": "built-in image_gen",
+  "style_references": [
+    "assets/source/batches/towns-001/source.png",
+    "docs/art/production/landscape-deco-001-contact.png",
+    "docs/art/production/landscape-ground-001-contact.png"
+  ],
+  "assets": [
+    {
+      "id": "terrain_moss_heath",
+      "path": "exec-b4ac6b96-e0ef-4a1a-bdbe-36984eba83be.png"
+    },
+    {
+      "id": "terrain_autumn_loam",
+      "path": "exec-606c64f8-8ad8-4940-9534-6733a72d8ada.png"
+    },
+    {
+      "id": "terrain_salt_flat",
+      "path": "exec-f3047bde-1912-4194-9b63-f79f1e44068a.png"
+    },
+    {
+      "id": "terrain_cooled_lava",
+      "path": "exec-e8f04535-a0f1-43c8-a036-69824150a56e.png"
+    },
+    {
+      "id": "scenery_weeping_willow",
+      "path": "exec-f05e1583-0ef1-46cd-aff2-31500b1c4304.png"
+    },
+    {
+      "id": "scenery_reed_pool",
+      "path": "exec-bbfa75df-5156-4bbd-bdba-b8afd6344fbc.png"
+    },
+    {
+      "id": "scenery_oath_stones",
+      "path": "exec-4a993367-bb60-4d94-bbd9-80e6c856c502.png"
+    },
+    {
+      "id": "scenery_broken_cart",
+      "path": "exec-adf2e778-8c88-4eff-bc04-fedfd32b08e7.png"
+    },
+    {
+      "id": "settlement_concord_hamlet",
+      "path": "exec-8535e9fb-397f-4381-8657-e4a3fa42a1d6.png"
+    },
+    {
+      "id": "settlement_frost_fishers",
+      "path": "exec-d0d37020-36a3-4c19-803b-0c382ebbef0d.png"
+    },
+    {
+      "id": "settlement_thornwood_hamlet",
+      "path": "exec-b60fa41d-dffe-4427-990c-9d722a2646c4.png"
+    },
+    {
+      "id": "settlement_cinder_miners",
+      "path": "exec-f6f9d92f-4a15-435f-aa19-138aa714ccca.png"
+    },
+    {
+      "id": "dwelling_wayside_abbey",
+      "path": "exec-176da23a-8513-4e49-a44f-985a90aa904b.png"
+    },
+    {
+      "id": "dwelling_windmill",
+      "path": "exec-e629d779-7833-4a7c-9c63-539945885aa2.png"
+    },
+    {
+      "id": "dwelling_marsh_hermit",
+      "path": "exec-9145771b-188a-4262-a1c3-ecd11db642f5.png"
+    },
+    {
+      "id": "dwelling_border_watch",
+      "path": "exec-8ecb9d16-62ae-43e4-8dab-990983cdd349.png"
+    },
+    {
+      "id": "landmark_cinder_volcano",
+      "path": "exec-8daaf937-b002-4812-aaa4-011352969502.png"
+    },
+    {
+      "id": "landmark_frozen_cascade",
+      "path": "exec-c0ba54be-c644-4fb3-9625-bccae21a7f80.png"
+    },
+    {
+      "id": "landmark_shattered_citadel",
+      "path": "exec-32b6b9a5-5eb8-467d-8cab-f7825283e02c.png"
+    },
+    {
+      "id": "landmark_elder_grove",
+      "path": "exec-e3b15c30-247f-4c99-95b6-f07d964fd923.png"
+    }
+  ]
+}

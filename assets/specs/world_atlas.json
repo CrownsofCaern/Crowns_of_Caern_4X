@@ -1,0 +1,1683 @@
+{
+  "schema_version": 2,
+  "status": "geography_approved_world_scale_revision",
+  "purpose": "Approved shared geography, expanded to empire scale. Regional campaign paintings use authored, non-scale journey compositions within this world; review routes are geographic indexes, not final campaign artwork.",
+  "coordinates": "normalized [x,y], north at top; shared locations have one coordinate across every campaign",
+  "source": "assets/source/batches/world-atlas-002/source.png",
+  "prompt_file": "assets/source/batches/world-atlas-002/prompt.txt",
+  "reference": "assets/source/batches/world-atlas-001/source.png",
+  "regions": {
+    "frostmarch": {
+      "name": "Frostmarch",
+      "center": [
+        0.4436,
+        0.2296
+      ],
+      "bounds": [
+        0.3566,
+        0.1528,
+        0.5364,
+        0.2936
+      ],
+      "faction": "frostmarch",
+      "terrain": "northern snowfields and ancient glacier"
+    },
+    "forge": {
+      "name": "The Sunken Forge",
+      "center": [
+        0.3566,
+        0.3704
+      ],
+      "bounds": [
+        0.258,
+        0.2808,
+        0.4262,
+        0.4536
+      ],
+      "faction": "forge",
+      "terrain": "western mountain spine, enclosed holds and underground galleries"
+    },
+    "concord": {
+      "name": "Concord Marches",
+      "center": [
+        0.4958,
+        0.3832
+      ],
+      "bounds": [
+        0.4088,
+        0.2936,
+        0.6118,
+        0.5048
+      ],
+      "faction": "concord",
+      "terrain": "central farmlands, river roads and fortified settlements"
+    },
+    "elderwold": {
+      "name": "Elderwold",
+      "center": [
+        0.3798,
+        0.5048
+      ],
+      "bounds": [
+        0.2986,
+        0.4344,
+        0.4842,
+        0.5816
+      ],
+      "faction": "thornwood",
+      "terrain": "last living grove in the west, felled forest and heartroots to the east"
+    },
+    "sallowmere": {
+      "name": "Sallowmere",
+      "center": [
+        0.4726,
+        0.62
+      ],
+      "bounds": [
+        0.3914,
+        0.5368,
+        0.5422,
+        0.6968
+      ],
+      "faction": "hollow",
+      "terrain": "southern fens, dikes, grave-towns and barrows"
+    },
+    "wound": {
+      "name": "The Wound",
+      "center": [
+        0.606,
+        0.524
+      ],
+      "bounds": [
+        0.5364,
+        0.4472,
+        0.6524,
+        0.6136
+      ],
+      "faction": "ashen",
+      "terrain": "eastern black-rock ring, broken seal, two passes and deep chasm"
+    },
+    "atlantean_shelf": {
+      "name": "The Drowned Shelf",
+      "center": [
+        0.92,
+        0.71
+      ],
+      "bounds": [
+        0.84,
+        0.46,
+        0.995,
+        0.96
+      ],
+      "faction": "fishmen",
+      "terrain": "sea shelf, reefs and submerged ruins of Sarranth"
+    }
+  },
+  "landmarks": {
+    "greyhold": {
+      "name": "Greyhold",
+      "at": [
+        0.4784,
+        0.4536
+      ],
+      "layer": "surface",
+      "region": "concord",
+      "regional_reference_at": [
+        0.48,
+        0.49
+      ]
+    },
+    "eastern_barrow_fields": {
+      "name": "Greyhold Barrow Fields",
+      "at": [
+        0.5306,
+        0.5432
+      ],
+      "layer": "surface",
+      "region": "sallowmere",
+      "regional_reference_at": [
+        0.57,
+        0.63
+      ]
+    },
+    "barrow_roads": {
+      "name": "The Barrow Roads",
+      "at": [
+        0.5074,
+        0.588
+      ],
+      "layer": "surface",
+      "region": "sallowmere",
+      "regional_reference_at": [
+        0.53,
+        0.7
+      ]
+    },
+    "fen_lanterns": {
+      "name": "Fen Road",
+      "at": [
+        0.4784,
+        0.5816
+      ],
+      "layer": "surface",
+      "region": "sallowmere",
+      "regional_reference_at": [
+        0.48,
+        0.69
+      ]
+    },
+    "saint_orrins_rest": {
+      "name": "Saint Orrin's Rest",
+      "at": [
+        0.4784,
+        0.5432
+      ],
+      "layer": "surface",
+      "region": "sallowmere",
+      "regional_reference_at": [
+        0.48,
+        0.63
+      ]
+    },
+    "mountain_gates": {
+      "name": "Mountain Gates",
+      "at": [
+        0.38676,
+        0.38
+      ],
+      "layer": "surface",
+      "region": "forge",
+      "regional_reference_at": [
+        0.322,
+        0.375
+      ]
+    },
+    "elderwold_stumps": {
+      "name": "Elderwold Stumps",
+      "at": [
+        0.4204,
+        0.4664
+      ],
+      "layer": "surface",
+      "region": "elderwold",
+      "regional_reference_at": [
+        0.38,
+        0.51
+      ]
+    },
+    "northern_granaries": {
+      "name": "Northern Granaries",
+      "at": [
+        0.4958,
+        0.3256
+      ],
+      "layer": "surface",
+      "region": "concord",
+      "regional_reference_at": [
+        0.51,
+        0.29
+      ]
+    },
+    "burning_ford": {
+      "name": "Greyhold's Eastern Ford",
+      "at": [
+        0.5161,
+        0.4728
+      ],
+      "layer": "surface",
+      "region": "concord",
+      "regional_reference_at": [
+        0.545,
+        0.52
+      ]
+    },
+    "ashen_wastes": {
+      "name": "Ashen Wastes",
+      "at": [
+        0.577,
+        0.5112
+      ],
+      "layer": "surface",
+      "region": "wound",
+      "regional_reference_at": [
+        0.65,
+        0.58
+      ]
+    },
+    "cindermaw": {
+      "name": "Cindermaw",
+      "at": [
+        0.5886,
+        0.4536
+      ],
+      "layer": "surface",
+      "region": "wound",
+      "regional_reference_at": [
+        0.67,
+        0.49
+      ]
+    },
+    "pyrehold": {
+      "name": "Pyrehold",
+      "at": [
+        0.6205,
+        0.524
+      ],
+      "layer": "surface",
+      "region": "wound",
+      "regional_reference_at": [
+        0.725,
+        0.6
+      ]
+    },
+    "sallowmere_court": {
+      "name": "Sallowmere Court",
+      "at": [
+        0.4494,
+        0.6072
+      ],
+      "layer": "surface",
+      "region": "sallowmere",
+      "regional_reference_at": [
+        0.43,
+        0.73
+      ]
+    },
+    "deep_fen": {
+      "name": "Deep Fen",
+      "at": [
+        0.49,
+        0.6712
+      ],
+      "layer": "surface",
+      "region": "sallowmere",
+      "regional_reference_at": [
+        0.5,
+        0.83
+      ]
+    },
+    "living_shore": {
+      "name": "The Living Shore",
+      "at": [
+        0.49,
+        0.556
+      ],
+      "layer": "surface",
+      "region": "concord",
+      "regional_reference_at": [
+        0.5,
+        0.65
+      ]
+    },
+    "fens_edge": {
+      "name": "The Fen's Edge",
+      "at": [
+        0.4378,
+        0.5624
+      ],
+      "layer": "surface",
+      "region": "elderwold",
+      "regional_reference_at": [
+        0.41,
+        0.66
+      ]
+    },
+    "lantern_fortress": {
+      "name": "Lantern Fortress",
+      "at": [
+        0.5306,
+        0.524
+      ],
+      "layer": "surface",
+      "region": "concord",
+      "regional_reference_at": [
+        0.57,
+        0.6
+      ]
+    },
+    "barrow_below": {
+      "name": "The Barrow Below",
+      "at": [
+        0.4842,
+        0.6264
+      ],
+      "layer": "underways",
+      "region": "sallowmere",
+      "regional_reference_at": [
+        0.49,
+        0.76
+      ]
+    },
+    "burning_tunnels": {
+      "name": "Burning Tunnels",
+      "at": [
+        0.5306,
+        0.6072
+      ],
+      "layer": "underways",
+      "region": "wound",
+      "regional_reference_at": [
+        0.57,
+        0.73
+      ]
+    },
+    "leviathan_mire": {
+      "name": "Leviathan Mire",
+      "at": [
+        0.4436,
+        0.6648
+      ],
+      "layer": "surface",
+      "region": "sallowmere",
+      "regional_reference_at": [
+        0.42,
+        0.82
+      ]
+    },
+    "barrow_gate": {
+      "name": "The Barrow Gate",
+      "at": [
+        0.548,
+        0.588
+      ],
+      "layer": "underways",
+      "region": "wound",
+      "regional_reference_at": [
+        0.6,
+        0.7
+      ]
+    },
+    "skarns_pit": {
+      "name": "Skarn's Pit",
+      "at": [
+        0.6118,
+        0.556
+      ],
+      "layer": "underways",
+      "region": "wound",
+      "regional_reference_at": [
+        0.71,
+        0.65
+      ]
+    },
+    "brood_pits": {
+      "name": "Brood Pits",
+      "at": [
+        0.6292,
+        0.5816
+      ],
+      "layer": "underways",
+      "region": "wound",
+      "regional_reference_at": [
+        0.74,
+        0.69
+      ]
+    },
+    "wardens_keep": {
+      "name": "Wardens' Keep",
+      "at": [
+        0.5422,
+        0.4536
+      ],
+      "layer": "surface",
+      "region": "wound",
+      "regional_reference_at": [
+        0.59,
+        0.49
+      ]
+    },
+    "lockstone": {
+      "name": "The Lockstone",
+      "at": [
+        0.5509,
+        0.4472
+      ],
+      "layer": "surface",
+      "region": "wound",
+      "regional_reference_at": [
+        0.605,
+        0.48
+      ]
+    },
+    "northern_host_flank": {
+      "name": "Northern Host Flank",
+      "at": [
+        0.577,
+        0.428
+      ],
+      "layer": "surface",
+      "region": "concord",
+      "regional_reference_at": [
+        0.65,
+        0.45
+      ]
+    },
+    "maws_depths": {
+      "name": "Depths of the Wound",
+      "at": [
+        0.606,
+        0.5816
+      ],
+      "layer": "underways",
+      "region": "wound",
+      "regional_reference_at": [
+        0.7,
+        0.69
+      ]
+    },
+    "highmere": {
+      "name": "Highmere",
+      "at": [
+        0.5712,
+        0.332
+      ],
+      "layer": "surface",
+      "region": "concord",
+      "regional_reference_at": [
+        0.64,
+        0.3
+      ]
+    },
+    "axe_line": {
+      "name": "The Axe Line",
+      "at": [
+        0.3566,
+        0.4984
+      ],
+      "layer": "surface",
+      "region": "elderwold",
+      "regional_reference_at": [
+        0.27,
+        0.56
+      ]
+    },
+    "western_stumps": {
+      "name": "Western Stumps",
+      "at": [
+        0.374,
+        0.5176
+      ],
+      "layer": "surface",
+      "region": "elderwold",
+      "regional_reference_at": [
+        0.3,
+        0.59
+      ]
+    },
+    "oldwood_hunting_grounds": {
+      "name": "Old Wood Hunting Grounds",
+      "at": [
+        0.4204,
+        0.4536
+      ],
+      "layer": "surface",
+      "region": "elderwold",
+      "regional_reference_at": [
+        0.38,
+        0.49
+      ]
+    },
+    "heartroots": {
+      "name": "The Heartroots",
+      "at": [
+        0.4117,
+        0.4984
+      ],
+      "layer": "surface",
+      "region": "elderwold",
+      "regional_reference_at": [
+        0.365,
+        0.56
+      ]
+    },
+    "last_grove": {
+      "name": "The Last Grove",
+      "at": [
+        0.3131,
+        0.46
+      ],
+      "layer": "surface",
+      "region": "elderwold",
+      "regional_reference_at": [
+        0.195,
+        0.5
+      ]
+    },
+    "mother_seed": {
+      "name": "Mother-Tree Ash Ground",
+      "at": [
+        0.3566,
+        0.5432
+      ],
+      "layer": "surface",
+      "region": "elderwold",
+      "regional_reference_at": [
+        0.27,
+        0.63
+      ]
+    },
+    "wound_gate": {
+      "name": "The Wound Gate",
+      "at": [
+        0.6118,
+        0.5112
+      ],
+      "layer": "surface",
+      "region": "wound",
+      "regional_reference_at": [
+        0.71,
+        0.58
+      ]
+    },
+    "stonevow": {
+      "name": "Stonevow Hold",
+      "at": [
+        0.3102,
+        0.3448
+      ],
+      "layer": "underways",
+      "region": "forge",
+      "regional_reference_at": [
+        0.19,
+        0.32
+      ]
+    },
+    "old_galleries": {
+      "name": "Old Galleries",
+      "at": [
+        0.3508,
+        0.4152
+      ],
+      "layer": "underways",
+      "region": "forge",
+      "regional_reference_at": [
+        0.26,
+        0.43
+      ]
+    },
+    "iron_pass": {
+      "name": "The Iron Pass",
+      "at": [
+        0.38676,
+        0.2872
+      ],
+      "layer": "surface",
+      "region": "forge",
+      "regional_reference_at": [
+        0.322,
+        0.23
+      ]
+    },
+    "deepest_hall": {
+      "name": "The Deepest Hall",
+      "at": [
+        0.3682,
+        0.4408
+      ],
+      "layer": "underways",
+      "region": "forge",
+      "regional_reference_at": [
+        0.29,
+        0.47
+      ]
+    },
+    "kharrak": {
+      "name": "Kharrak Hold",
+      "at": [
+        0.3972,
+        0.4472
+      ],
+      "layer": "surface",
+      "region": "forge",
+      "regional_reference_at": [
+        0.34,
+        0.48
+      ]
+    },
+    "ore_roads": {
+      "name": "Ore Roads",
+      "at": [
+        0.432,
+        0.4152
+      ],
+      "layer": "surface",
+      "region": "forge",
+      "regional_reference_at": [
+        0.4,
+        0.43
+      ]
+    },
+    "tobbins_workshop": {
+      "name": "Tobbin's Workshop",
+      "at": [
+        0.3798,
+        0.4024
+      ],
+      "layer": "surface",
+      "region": "forge",
+      "regional_reference_at": [
+        0.31,
+        0.41
+      ]
+    },
+    "worldforge": {
+      "name": "The Worldforge",
+      "at": [
+        0.3189,
+        0.3576
+      ],
+      "layer": "underways",
+      "region": "forge",
+      "regional_reference_at": [
+        0.205,
+        0.34
+      ]
+    },
+    "grimfell": {
+      "name": "Grimfell Grazing",
+      "at": [
+        0.4262,
+        0.2424
+      ],
+      "layer": "surface",
+      "region": "frostmarch",
+      "regional_reference_at": [
+        0.39,
+        0.16
+      ]
+    },
+    "last_clan_hall": {
+      "name": "Last Clan Hall",
+      "at": [
+        0.4784,
+        0.2488
+      ],
+      "layer": "surface",
+      "region": "frostmarch",
+      "regional_reference_at": [
+        0.48,
+        0.17
+      ]
+    },
+    "frozen_fens": {
+      "name": "Frozen Fens",
+      "at": [
+        0.5016,
+        0.6136
+      ],
+      "layer": "surface",
+      "region": "sallowmere",
+      "regional_reference_at": [
+        0.52,
+        0.74
+      ]
+    },
+    "wyrm_glacier": {
+      "name": "The Ancient Glacier",
+      "at": [
+        0.4436,
+        0.1848
+      ],
+      "layer": "surface",
+      "region": "frostmarch",
+      "regional_reference_at": [
+        0.42,
+        0.07
+      ]
+    },
+    "nightgate_caverns": {
+      "name": "The Nightgate Caverns",
+      "at": [
+        0.2116,
+        0.4984
+      ],
+      "layer": "deep_underworld",
+      "region": "forge",
+      "regional_reference_at": [
+        0.02,
+        0.56
+      ]
+    },
+    "long_stair": {
+      "name": "The Long Stair",
+      "at": [
+        0.2696,
+        0.4728
+      ],
+      "layer": "deep_underworld",
+      "region": "forge",
+      "regional_reference_at": [
+        0.12,
+        0.52
+      ]
+    },
+    "stair_hold": {
+      "name": "The Stair-Hold",
+      "at": [
+        0.2464,
+        0.46
+      ],
+      "layer": "surface",
+      "region": "forge",
+      "regional_reference_at": [
+        0.08,
+        0.5
+      ]
+    },
+    "nightgate": {
+      "name": "The Nightgate",
+      "at": [
+        0.2,
+        0.6008
+      ],
+      "layer": "deep_underworld",
+      "region": "forge",
+      "regional_reference_at": [
+        0.0,
+        0.72
+      ]
+    },
+    "sarranth_vaults": {
+      "name": "The Drowned Vaults of Sarranth",
+      "at": [
+        0.9018,
+        0.6008
+      ],
+      "layer": "drowned_shelf",
+      "region": "atlantean_shelf",
+      "regional_reference_at": [
+        1.21,
+        0.72
+      ]
+    },
+    "urrh_reef": {
+      "name": "Mother Urrh's Reef",
+      "at": [
+        0.954,
+        0.684
+      ],
+      "layer": "drowned_shelf",
+      "region": "atlantean_shelf",
+      "regional_reference_at": [
+        1.3,
+        0.85
+      ]
+    },
+    "whaleroad_cairn": {
+      "name": "The Whaleroad Cairn",
+      "at": [
+        0.49,
+        0.1592
+      ],
+      "layer": "surface",
+      "region": "frostmarch",
+      "regional_reference_at": [
+        0.5,
+        0.03
+      ]
+    }
+  },
+  "campaign_routes": {
+    "last_light": [
+      "greyhold",
+      "barrow_roads",
+      "fen_lanterns",
+      "saint_orrins_rest",
+      "mountain_gates",
+      "elderwold_stumps",
+      "northern_granaries",
+      "burning_ford",
+      "ashen_wastes",
+      "cindermaw"
+    ],
+    "pale_inheritance": [
+      "sallowmere_court",
+      "deep_fen",
+      "living_shore",
+      "fens_edge",
+      "greyhold",
+      "lantern_fortress",
+      "barrow_below",
+      "burning_tunnels",
+      "leviathan_mire",
+      "barrow_gate"
+    ],
+    "unsealing": [
+      "skarns_pit",
+      "brood_pits",
+      "wardens_keep",
+      "barrow_below",
+      "lockstone",
+      "heartroots",
+      "burning_ford",
+      "northern_host_flank",
+      "maws_depths",
+      "highmere"
+    ],
+    "briar_oath": [
+      "axe_line",
+      "western_stumps",
+      "elderwold_stumps",
+      "oldwood_hunting_grounds",
+      "fens_edge",
+      "heartroots",
+      "elderwold_stumps",
+      "last_grove",
+      "mother_seed",
+      "wound_gate"
+    ],
+    "shuttered_halls": [
+      "stonevow",
+      "old_galleries",
+      "mountain_gates",
+      "iron_pass",
+      "deepest_hall",
+      "kharrak",
+      "wardens_keep",
+      "ore_roads",
+      "tobbins_workshop",
+      "worldforge"
+    ],
+    "ashwinter": [
+      "grimfell",
+      "last_clan_hall",
+      "northern_granaries",
+      "iron_pass",
+      "highmere",
+      "oldwood_hunting_grounds",
+      "frozen_fens",
+      "northern_host_flank",
+      "wyrm_glacier",
+      "wound_gate"
+    ],
+    "six_eyes": [
+      "nightgate_caverns",
+      "long_stair",
+      "kharrak",
+      "greyhold",
+      "heartroots",
+      "barrow_below",
+      "cindermaw",
+      "wyrm_glacier",
+      "stair_hold",
+      "nightgate"
+    ],
+    "drowned_oath": [
+      "sarranth_vaults",
+      "urrh_reef",
+      "living_shore",
+      "barrow_roads",
+      "ore_roads",
+      "kharrak",
+      "iron_pass",
+      "last_clan_hall",
+      "whaleroad_cairn",
+      "grimfell"
+    ]
+  },
+  "layers": {
+    "surface": {
+      "description": "Expanded empire-scale atlas; core campaign locations occupy part of the continent, with surrounding imperial hinterlands."
+    },
+    "underways": {
+      "description": "Existing Forge galleries, Barrow Below and Wound pits. Routes here are tunnels, not surface roads."
+    },
+    "deep_underworld": {
+      "description": "Separate, deeper reserved layer for the dark elves; not the Hollow's barrows or the Ashen pits.",
+      "future_faction": "darkelf",
+      "projected_bounds": [
+        0.1,
+        0.25,
+        0.44,
+        0.73
+      ],
+      "surface_gateways": [
+        [
+          0.167,
+          0.491
+        ],
+        [
+          0.136,
+          0.636
+        ]
+      ],
+      "status": "expansion_six_eyes"
+    },
+    "drowned_shelf": {
+      "description": "The Abyssal Shoal's sea shelf east of the Living Shore (the atlantean_shelf reserve): reefs and the drowned city's vaults. Routes here are currents, not roads.",
+      "future_faction": "fishmen",
+      "status": "expansion_drowned_oath"
+    }
+  },
+  "expansion_reserves": {
+    "atlantean_shelf": {
+      "proposed_name": "Atlantis",
+      "future_faction": "fishmen",
+      "bounds": [
+        0.84,
+        0.46,
+        0.995,
+        0.96
+      ],
+      "terrain": "broad eastern/southeastern sea shelf, distant reefs and barely hinted submerged ruins",
+      "status": "reserved_unexplored"
+    },
+    "western_reaches": {
+      "bounds": [
+        0.01,
+        0.2,
+        0.1,
+        0.85
+      ],
+      "terrain": "lightly mapped foothills and hazy lands",
+      "status": "open_for_later_expansions"
+    },
+    "far_north": {
+      "bounds": [
+        0.05,
+        0.01,
+        0.25,
+        0.17
+      ],
+      "terrain": "unmapped ice and mountain ranges",
+      "status": "open_for_later_expansions"
+    }
+  },
+  "story_constraints": [
+    "Frostmarch and the glacier are north of the Concord's granaries.",
+    "Sallowmere lies south of the Concord; its northern rot reaches Elderwold.",
+    "The Last Grove survives in western Elderwold; the felled forest and Heartroots lie east of it.",
+    "Greyhold's ford is east of Greyhold and west of the Wound.",
+    "The Host tunnels west from the Wound into the Barrow Below.",
+    "The mountain gates connect the Forge to the marches; the Iron Pass links the northern approach.",
+    "Highmere is the Concord's eastern fortress, north of old woodland.",
+    "The same named place retains the same coordinates in all campaigns.",
+    "Campaign geography is not chronological travel time: summons, return journeys and underground passages are preserved explicitly.",
+    "DLC lands are reserved subtly; the surface does not reveal the dark elves' full subterranean kingdom or a completed Atlantis city."
+  ],
+  "prompt_sha256": "cb8b6cb65e825b6b24fd5e12377aed97ba9a940bd1b894bbab53c3f8784cfd00",
+  "reference_sha256": "5d0f559fd7f7871aa66beb53a5b77c66b309931a9fc9c4e7e30fc92638f8b077",
+  "chapter_locations": {
+    "last_light": {
+      "ll_harvest": "greyhold",
+      "ll_barrow_roads": "barrow_roads",
+      "ll_lanterns": "fen_lanterns",
+      "ll_knight": "saint_orrins_rest",
+      "ll_doors": "mountain_gates",
+      "ll_stumps": "elderwold_stumps",
+      "ll_red_sky": "northern_granaries",
+      "ll_ford": "burning_ford",
+      "ll_ashes": "ashen_wastes",
+      "ll_embers": "cindermaw"
+    },
+    "pale_inheritance": {
+      "ph_warm_earth": "sallowmere_court",
+      "ph_barrow_lords": "deep_fen",
+      "ph_living_shore": "living_shore",
+      "ph_rot": "fens_edge",
+      "ph_twice_dead": "greyhold",
+      "ph_lantern_siege": "lantern_fortress",
+      "ph_deep_barrows": "barrow_below",
+      "ph_hungry_fire": "burning_tunnels",
+      "ph_leviathan": "leviathan_mire",
+      "ph_pale_crown": "barrow_gate"
+    },
+    "unsealing": {
+      "un_pit": "skarns_pit",
+      "un_brood_war": "brood_pits",
+      "un_wardens_keep": "wardens_keep",
+      "un_under_barrows": "barrow_below",
+      "un_lockstone": "lockstone",
+      "un_kindling": "heartroots",
+      "un_ford": "burning_ford",
+      "un_ash_snow": "northern_host_flank",
+      "un_maw": "maws_depths",
+      "un_throne": "highmere"
+    },
+    "briar_oath": {
+      "tw_axe_line": "axe_line",
+      "tw_smoke": "western_stumps",
+      "tw_ambush": "elderwold_stumps",
+      "tw_hunters": "oldwood_hunting_grounds",
+      "tw_fens_edge": "fens_edge",
+      "tw_roots": "heartroots",
+      "tw_kindling": "elderwold_stumps",
+      "tw_last_grove": "last_grove",
+      "tw_seed": "mother_seed",
+      "tw_briar_seal": "wound_gate"
+    },
+    "shuttered_halls": {
+      "fg_deep_shift": "stonevow",
+      "fg_bones": "old_galleries",
+      "fg_debtors": "mountain_gates",
+      "fg_iron_bread": "iron_pass",
+      "fg_heat": "deepest_hall",
+      "fg_fallen_hold": "kharrak",
+      "fg_wardens_keep": "wardens_keep",
+      "fg_ore_ember": "ore_roads",
+      "fg_engine": "tobbins_workshop",
+      "fg_second_lockstone": "worldforge"
+    },
+    "ashwinter": {
+      "fm_sun_out": "grimfell",
+      "fm_one_hall": "last_clan_hall",
+      "fm_south": "northern_granaries",
+      "fm_iron_pass": "iron_pass",
+      "fm_highmere": "highmere",
+      "fm_deer": "oldwood_hunting_grounds",
+      "fm_cold_bones": "frozen_fens",
+      "fm_source": "northern_host_flank",
+      "fm_wyrm": "wyrm_glacier",
+      "fm_bring_winter": "wound_gate"
+    },
+    "six_eyes": {
+      "se_below": "nightgate_caverns",
+      "se_stair": "long_stair",
+      "se_under_sky": "kharrak",
+      "se_saints_eye": "greyhold",
+      "se_thorn_mirror": "heartroots",
+      "se_regents_price": "barrow_below",
+      "se_red_sky": "cindermaw",
+      "se_winters_eye": "wyrm_glacier",
+      "se_long_stair": "stair_hold",
+      "se_nightgate": "nightgate"
+    },
+    "drowned_oath": {
+      "do_tablets": "sarranth_vaults",
+      "do_one_shoal": "urrh_reef",
+      "do_landfall": "living_shore",
+      "do_last_brood": "barrow_roads",
+      "do_price_of_iron": "ore_roads",
+      "do_three_weeks": "kharrak",
+      "do_cold_road": "iron_pass",
+      "do_who_pays": "last_clan_hall",
+      "do_cairn": "whaleroad_cairn",
+      "do_cold_first": "grimfell"
+    }
+  },
+  "approval": {
+    "geography": "approved by user 2026-11-08",
+    "regional_art_style": "approved by user 2026-11-08",
+    "world_revision": "User requested a much larger, more schematic atlas showing empires with many settlements; revised world artwork remains reviewable."
+  },
+  "regional_reference": {
+    "source": "assets/source/batches/world-atlas-001/source.png",
+    "source_sha256": "5d0f559fd7f7871aa66beb53a5b77c66b309931a9fc9c4e7e30fc92638f8b077",
+    "role": "Approved painterly style for close campaign maps; earlier regional concept, superseded as the full-world atlas.",
+    "world_transform": {
+      "offset": [
+        0.2,
+        0.14
+      ],
+      "scale": [
+        0.58,
+        0.64
+      ]
+    },
+    "coordinates": "Original regional reference coordinates; transform is a geographic planning relation, not a pixel-perfect image projection."
+  },
+  "empires": {
+    "frostmarch": {
+      "name": "Frostmarch Clans",
+      "faction": "frostmarch",
+      "influence_polygon": [
+        [
+          0.25,
+          0.08
+        ],
+        [
+          0.58,
+          0.07
+        ],
+        [
+          0.72,
+          0.2
+        ],
+        [
+          0.66,
+          0.29
+        ],
+        [
+          0.47,
+          0.31
+        ],
+        [
+          0.28,
+          0.26
+        ]
+      ],
+      "label_at": [
+        0.48,
+        0.16
+      ],
+      "boundary_status": "schematic sphere of influence, not a newly canonical legal border",
+      "hinterland_settlements": [
+        {
+          "id": "frostmarch_atlas_settlement_01",
+          "at": [
+            0.31,
+            0.19
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "frostmarch_atlas_settlement_02",
+          "at": [
+            0.37,
+            0.24
+          ],
+          "kind": "hold",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "frostmarch_atlas_settlement_03",
+          "at": [
+            0.48,
+            0.25
+          ],
+          "kind": "hold",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "frostmarch_atlas_settlement_04",
+          "at": [
+            0.56,
+            0.2
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "frostmarch_atlas_settlement_05",
+          "at": [
+            0.63,
+            0.23
+          ],
+          "kind": "hold",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "frostmarch_atlas_settlement_06",
+          "at": [
+            0.65,
+            0.13
+          ],
+          "kind": "hold",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        }
+      ]
+    },
+    "forge": {
+      "name": "The Sunken Forge",
+      "faction": "forge",
+      "influence_polygon": [
+        [
+          0.12,
+          0.26
+        ],
+        [
+          0.28,
+          0.24
+        ],
+        [
+          0.39,
+          0.3
+        ],
+        [
+          0.4,
+          0.43
+        ],
+        [
+          0.31,
+          0.51
+        ],
+        [
+          0.12,
+          0.49
+        ]
+      ],
+      "label_at": [
+        0.22,
+        0.34
+      ],
+      "boundary_status": "schematic sphere of influence, not a newly canonical legal border",
+      "hinterland_settlements": [
+        {
+          "id": "forge_atlas_settlement_01",
+          "at": [
+            0.16,
+            0.32
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "forge_atlas_settlement_02",
+          "at": [
+            0.23,
+            0.29
+          ],
+          "kind": "hold",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "forge_atlas_settlement_03",
+          "at": [
+            0.28,
+            0.39
+          ],
+          "kind": "hold",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "forge_atlas_settlement_04",
+          "at": [
+            0.18,
+            0.44
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "forge_atlas_settlement_05",
+          "at": [
+            0.25,
+            0.47
+          ],
+          "kind": "hold",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "forge_atlas_settlement_06",
+          "at": [
+            0.33,
+            0.32
+          ],
+          "kind": "hold",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        }
+      ]
+    },
+    "concord": {
+      "name": "Aldmere Concord",
+      "faction": "concord",
+      "influence_polygon": [
+        [
+          0.4,
+          0.3
+        ],
+        [
+          0.64,
+          0.28
+        ],
+        [
+          0.77,
+          0.32
+        ],
+        [
+          0.78,
+          0.46
+        ],
+        [
+          0.64,
+          0.51
+        ],
+        [
+          0.53,
+          0.45
+        ],
+        [
+          0.4,
+          0.46
+        ]
+      ],
+      "label_at": [
+        0.63,
+        0.38
+      ],
+      "boundary_status": "schematic sphere of influence, not a newly canonical legal border",
+      "hinterland_settlements": [
+        {
+          "id": "concord_atlas_settlement_01",
+          "at": [
+            0.43,
+            0.34
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "concord_atlas_settlement_02",
+          "at": [
+            0.5,
+            0.32
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "concord_atlas_settlement_03",
+          "at": [
+            0.68,
+            0.33
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "concord_atlas_settlement_04",
+          "at": [
+            0.72,
+            0.4
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "concord_atlas_settlement_05",
+          "at": [
+            0.62,
+            0.44
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "concord_atlas_settlement_06",
+          "at": [
+            0.69,
+            0.47
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        }
+      ]
+    },
+    "thornwood": {
+      "name": "Thornwood Covenant",
+      "faction": "thornwood",
+      "influence_polygon": [
+        [
+          0.12,
+          0.5
+        ],
+        [
+          0.32,
+          0.46
+        ],
+        [
+          0.45,
+          0.48
+        ],
+        [
+          0.44,
+          0.59
+        ],
+        [
+          0.32,
+          0.71
+        ],
+        [
+          0.14,
+          0.68
+        ]
+      ],
+      "label_at": [
+        0.24,
+        0.59
+      ],
+      "boundary_status": "schematic sphere of influence, not a newly canonical legal border",
+      "hinterland_settlements": [
+        {
+          "id": "thornwood_atlas_settlement_01",
+          "at": [
+            0.17,
+            0.54
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "thornwood_atlas_settlement_02",
+          "at": [
+            0.22,
+            0.49
+          ],
+          "kind": "sanctuary",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "thornwood_atlas_settlement_03",
+          "at": [
+            0.18,
+            0.63
+          ],
+          "kind": "sanctuary",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "thornwood_atlas_settlement_04",
+          "at": [
+            0.29,
+            0.66
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "thornwood_atlas_settlement_05",
+          "at": [
+            0.35,
+            0.61
+          ],
+          "kind": "sanctuary",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "thornwood_atlas_settlement_06",
+          "at": [
+            0.39,
+            0.56
+          ],
+          "kind": "sanctuary",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        }
+      ]
+    },
+    "hollow": {
+      "name": "Hollow Dominion",
+      "faction": "hollow",
+      "influence_polygon": [
+        [
+          0.36,
+          0.56
+        ],
+        [
+          0.54,
+          0.55
+        ],
+        [
+          0.66,
+          0.65
+        ],
+        [
+          0.63,
+          0.81
+        ],
+        [
+          0.45,
+          0.83
+        ],
+        [
+          0.33,
+          0.73
+        ]
+      ],
+      "label_at": [
+        0.5,
+        0.73
+      ],
+      "boundary_status": "schematic sphere of influence, not a newly canonical legal border",
+      "hinterland_settlements": [
+        {
+          "id": "hollow_atlas_settlement_01",
+          "at": [
+            0.36,
+            0.65
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "hollow_atlas_settlement_02",
+          "at": [
+            0.39,
+            0.72
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "hollow_atlas_settlement_03",
+          "at": [
+            0.46,
+            0.77
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "hollow_atlas_settlement_04",
+          "at": [
+            0.55,
+            0.69
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "hollow_atlas_settlement_05",
+          "at": [
+            0.59,
+            0.76
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "hollow_atlas_settlement_06",
+          "at": [
+            0.6,
+            0.65
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        }
+      ]
+    },
+    "ashen": {
+      "name": "Ashen Host",
+      "faction": "ashen",
+      "influence_polygon": [
+        [
+          0.58,
+          0.49
+        ],
+        [
+          0.77,
+          0.47
+        ],
+        [
+          0.84,
+          0.56
+        ],
+        [
+          0.82,
+          0.72
+        ],
+        [
+          0.68,
+          0.76
+        ],
+        [
+          0.64,
+          0.62
+        ]
+      ],
+      "label_at": [
+        0.73,
+        0.58
+      ],
+      "boundary_status": "schematic sphere of influence, not a newly canonical legal border",
+      "hinterland_settlements": [
+        {
+          "id": "ashen_atlas_settlement_01",
+          "at": [
+            0.68,
+            0.52
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "ashen_atlas_settlement_02",
+          "at": [
+            0.76,
+            0.51
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "ashen_atlas_settlement_03",
+          "at": [
+            0.79,
+            0.6
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "ashen_atlas_settlement_04",
+          "at": [
+            0.73,
+            0.67
+          ],
+          "kind": "city",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "ashen_atlas_settlement_05",
+          "at": [
+            0.79,
+            0.7
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        },
+        {
+          "id": "ashen_atlas_settlement_06",
+          "at": [
+            0.68,
+            0.71
+          ],
+          "kind": "town",
+          "lore_status": "unnamed cartographic context, not a campaign chapter or gameplay settlement"
+        }
+      ]
+    }
+  },
+  "campaign_presentation": {
+    "reference": "assets/source/batches/world-atlas-001/source.png",
+    "style": "Painterly regional journey: half map, half painting, matching approved first concept.",
+    "projection": "Authored local composition; not to scale. Retain north/south/east/west relations and identity of shared places.",
+    "world_role": "Empire atlas is the schematic geographic reference; never stretch this atlas into all six final campaign screens.",
+    "destination_role": "Every actual chapter gets its appropriate town, ruin, forest, pass, battlefield or underground destination, based on its text. Revisited places retain identity and show multiple chapter stops.",
+    "chapter_nodes": "Separate interactive overlay, never baked into source painting.",
+    "hero_motion": "Animated UI hero travels chapter-to-chapter along authored paths; game progress remains authoritative.",
+    "surface_and_depths": "Use inset or clearly separated underground areas where story requires; dark-elf DLC deep realm stays distinct.",
+    "status": "Six regional journey paintings and interactive campaign selector integrated; see assets/specs/campaign_journeys.json and docs/art/CAMPAIGN_JOURNEYS_REPORT.md"
+  },
+  "source_sha256": "84bd69b543c8c96b1cf58a05e7abcbc888c06f0ea75780a4bcc6d625c01c420c"
+}

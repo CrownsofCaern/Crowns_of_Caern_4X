@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1261,
+    1247
+  ],
+  "assets": [
+    {
+      "id": "creature_clan_raider",
+      "crop_xyxy": [
+        93,
+        55,
+        264,
+        290
+      ]
+    },
+    {
+      "id": "creature_blooded_raider",
+      "crop_xyxy": [
+        346,
+        40,
+        563,
+        291
+      ]
+    },
+    {
+      "id": "creature_rimefang_hound",
+      "crop_xyxy": [
+        648,
+        107,
+        873,
+        267
+      ]
+    },
+    {
+      "id": "creature_rimefang_packleader",
+      "crop_xyxy": [
+        947,
+        87,
+        1194,
+        272
+      ]
+    },
+    {
+      "id": "creature_oathless_berserker",
+      "crop_xyxy": [
+        86,
+        338,
+        279,
+        613
+      ]
+    },
+    {
+      "id": "creature_bloodfrenzy_berserker",
+      "crop_xyxy": [
+        351,
+        330,
+        598,
+        609
+      ]
+    },
+    {
+      "id": "creature_tusk_rider",
+      "crop_xyxy": [
+        627,
+        315,
+        896,
+        604
+      ]
+    },
+    {
+      "id": "creature_tusk_chieftain",
+      "crop_xyxy": [
+        935,
+        306,
+        1232,
+        609
+      ]
+    },
+    {
+      "id": "creature_frost_shaman",
+      "crop_xyxy": [
+        67,
+        635,
+        242,
+        895
+      ]
+    },
+    {
+      "id": "creature_storm_shaman",
+      "crop_xyxy": [
+        318,
+        620,
+        582,
+        894
+      ]
+    },
+    {
+      "id": "creature_rimeback_aurochs",
+      "crop_xyxy": [
+        609,
+        627,
+        901,
+        885
+      ]
+    },
+    {
+      "id": "creature_rimeback_stampede",
+      "crop_xyxy": [
+        920,
+        622,
+        1246,
+        893
+      ]
+    },
+    {
+      "id": "creature_cairn_giant",
+      "crop_xyxy": [
+        47,
+        918,
+        274,
+        1219
+      ]
+    },
+    {
+      "id": "creature_cairn_warlord",
+      "crop_xyxy": [
+        287,
+        911,
+        583,
+        1221
+      ]
+    },
+    {
+      "id": "creature_winter_wyrm",
+      "crop_xyxy": [
+        602,
+        943,
+        873,
+        1210
+      ]
+    },
+    {
+      "id": "creature_winter_wyrm_ancient",
+      "crop_xyxy": [
+        889,
+        914,
+        1254,
+        1219
+      ]
+    }
+  ],
+  "review": "Automatically staged isolated silhouettes; visual review pending"
+}

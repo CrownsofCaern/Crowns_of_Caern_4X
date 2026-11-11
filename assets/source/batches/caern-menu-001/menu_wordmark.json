@@ -1,0 +1,14 @@
+{
+  "provider": "ChatGPT image_gen (built-in)",
+  "game_title": "Crowns of Caern",
+  "prompt_file": "assets/source/batches/caern-menu-001/menu_wordmark.txt",
+  "conditioning": [
+    "assets/source/generated/menu_wordmark.png"
+  ],
+  "source_size": [
+    2172,
+    724
+  ],
+  "source_sha256": "26a4c8558d3e50ec7c805ffe49e2c267b9366590e7f1cd80f8c6db18de32ec68",
+  "processing": "Full-resolution source preserved; game export is an exact byte copy."
+}

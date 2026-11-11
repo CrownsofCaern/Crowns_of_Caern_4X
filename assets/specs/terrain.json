@@ -1,0 +1,260 @@
+{
+  "_doc": "Adventure-map terrain tileset. Ground fields repeat at tile_size px. Each terrain has continuous ground artwork plus feathered transition overlays selected by neighbor shape and a stable visual variant. Deco placements are visual only. IDs must match data/terrains.json.",
+  "tile_size": 40,
+  "display_scale": 1,
+  "variants": 4,
+  "transition_variants": 4,
+  "transition_expansion": 6,
+  "detail_variants": 8,
+  "deco_size": [
+    48,
+    64
+  ],
+  "deco_variants": 10,
+  "deco_drawings": 5,
+  "deco_derived": {
+    "_doc": "Decoration kinds recoloured from another kind's drawings (build.recolor_deco): hue in degrees, saturation/value factors, tint + tint_amount, frost whitens lit pixels. Used by the terrain painter's pools (data/terrain_painting.json).",
+    "frost_tree": {"from": "dead_tree", "frost": 0.6, "saturation": 0.55, "value": 1.05},
+    "frost_boulders": {"from": "boulders", "frost": 0.55, "saturation": 0.6},
+    "charred_tree": {"from": "dead_tree", "value": 0.55, "saturation": 0.75, "tint": "#8a2c14", "tint_amount": 0.28},
+    "autumn_pines": {"from": "pines", "hue": -20, "tint": "#b4641c", "tint_amount": 0.45},
+    "blighted_pines": {"from": "pines", "hue": -35, "saturation": 0.35, "value": 0.8},
+    "mossy_boulders": {"from": "boulders", "tint": "#4d6b26", "tint_amount": 0.32, "saturation": 1.1}
+  },
+  "terrains": {
+    "water": {
+      "ground": "water",
+      "base": ")",
+      "priority": 0,
+      "fringe": 8,
+      "rim": "(",
+      "prompt": "deep dark lake water, faint moonlit ripples"
+    },
+    "river": {
+      "ground": "river",
+      "base": "]",
+      "priority": 10,
+      "fringe": 8,
+      "rim": "[",
+      "prompt": "shallow cold river ford, stones under the current"
+    },
+    "swamp": {
+      "ground": "swamp",
+      "base": ",",
+      "priority": 20,
+      "fringe": 10,
+      "rim": ";",
+      "prompt": "rotting bog, black pools, reeds",
+      "deco": {
+        "kinds": [
+          "dead_tree"
+        ],
+        "chance": 0.3
+      }
+    },
+    "grass": {
+      "ground": "grass",
+      "base": "n",
+      "priority": 30,
+      "fringe": 10,
+      "rim": "M",
+      "prompt": "dark withered grassland under a red sky",
+      "deco": {
+        "kinds": [
+          "gravestone"
+        ],
+        "chance": 0.05
+      }
+    },
+    "desert": {
+      "ground": "desert",
+      "base": "d",
+      "priority": 40,
+      "fringe": 10,
+      "rim": "A",
+      "prompt": "pale dust and wind ripples, bleached bones",
+      "deco": {
+        "kinds": [
+          "bones"
+        ],
+        "chance": 0.12
+      }
+    },
+    "rough": {
+      "ground": "rough",
+      "base": "4",
+      "priority": 50,
+      "fringe": 10,
+      "rim": "2",
+      "prompt": "rocky grey highland scree",
+      "deco": {
+        "kinds": [
+          "boulders"
+        ],
+        "chance": 0.3
+      }
+    },
+    "snow": {
+      "ground": "snow",
+      "base": "*",
+      "priority": 60,
+      "fringe": 10,
+      "rim": "=",
+      "prompt": "frozen snowfield with cold blue shadows",
+      "deco": {
+        "kinds": [
+          "snow_pine"
+        ],
+        "chance": 0.12
+      }
+    },
+    "forest": {
+      "ground": "forest",
+      "base": "M",
+      "priority": 70,
+      "fringe": 8,
+      "rim": "m",
+      "prompt": "dense dark pine forest floor",
+      "deco": {
+        "kinds": [
+          "pines"
+        ],
+        "chance": 1.0
+      }
+    },
+    "infernal": {
+      "ground": "infernal",
+      "base": "~",
+      "priority": 80,
+      "fringe": 10,
+      "rim": "^",
+      "prompt": "cinder wastes, ash ground cracked with glowing lava",
+      "deco": {
+        "kinds": [
+          "obsidian"
+        ],
+        "chance": 0.25
+      }
+    },
+    "mountain": {
+      "ground": "mountain",
+      "base": "3",
+      "priority": 90,
+      "fringe": 10,
+      "rim": "1",
+      "prompt": "impassable jagged snow-capped peaks",
+      "deco": {
+        "kinds": [
+          "peaks"
+        ],
+        "chance": 1.0
+      }
+    }
+  },
+  "fog": {
+    "ground": "fog",
+    "base": "^",
+    "fringe": 12
+  },
+  "roads": {
+    "bridge_over": [
+      "river",
+      "water"
+    ]
+  },
+  "connected_fields": {
+    "cells": [
+      12,
+      12
+    ],
+    "terrains": {
+      "grass": {
+        "source": "assets/source/batches/terrain-fine-001/grass-detail.png",
+        "sha256": "ea9c9af27bf821aa785690e17dbc45ea83c800057de2c60847199a7c4a9f6105"
+      },
+      "rough": {
+        "source": "assets/source/batches/terrain-fine-001/rough-detail.png",
+        "sha256": "6a4c8010c38b46c737cfc2517c7e69b2bcf8fa7c38ff10e9736c8a5d3db132d6"
+      },
+      "swamp": {
+        "source": "assets/source/batches/terrain-fine-001/swamp.png",
+        "sha256": "5bf00bed8e256da839022473277996a129d7934d50db1b52c6a51cf5a35e0061"
+      },
+      "snow": {
+        "source": "assets/source/batches/terrain-fine-001/snow.png",
+        "sha256": "dc58ad58c36fdf3dff866261a0cfa09d230888f350f87b519991ba8d3f07ae93"
+      },
+      "desert": {
+        "source": "assets/source/batches/terrain-fine-001/desert.png",
+        "sha256": "64a553ad47277e41bea3bf638e12d55614ff30a1c3a42f62d5b13a5f13f1f3b2"
+      },
+      "infernal": {
+        "source": "assets/source/batches/terrain-fine-001/infernal.png",
+        "sha256": "298cd4c2ef831a182e0d94f45a4e8613bdf5d5787a4976fd7cdc9c0093da6251"
+      },
+      "water": {
+        "source": "assets/source/batches/terrain-fine-001/water.png",
+        "sha256": "fc842f2771328d1d398d804ed0dff90fd735139b4becdc021065125885fdc53c"
+      },
+      "river": {
+        "source": "assets/source/batches/terrain-fine-001/river.png",
+        "sha256": "f2390ec084b12e4a72b85fabf22a7ca116775910cead4b43d68e1a1fcae811d6"
+      },
+      "forest": {
+        "source": "assets/source/batches/terrain-fine-001/forest-detail.png",
+        "sha256": "2feb8995aa976e9eacf8e325f3a214ecc0864e77b4621d1aafed433d55ff62a6"
+      },
+      "mountain": {
+        "source": "assets/source/batches/terrain-fine-001/mountain.png",
+        "sha256": "e1e5f118df195075be8fd37bbcdec19a99f775482b5e0af2ff0d678232426e84"
+      }
+    }
+  },
+  "edge_patterns": {
+    "period": 2,
+    "wave_amplitude": 2,
+    "strip_height": 10,
+    "types": {
+      "cliff": {
+        "base": "grass",
+        "neighbors": [
+          "water"
+        ],
+        "source": "assets/source/batches/terrain-edges-001/cliff.png",
+        "sha256": "bc139329fbaf7eb1c8ae3823a9f2c3bfad4c2542cd06075037cce632212471e8"
+      },
+      "beach": {
+        "base": "desert",
+        "neighbors": [
+          "water"
+        ],
+        "source": "assets/source/batches/terrain-edges-001/shore.png",
+        "sha256": "2046b571d10115cd775819a51d4074396555d24b143c22f4b891d430532b5be5"
+      },
+      "dry_grass": {
+        "base": "grass",
+        "neighbors": [
+          "desert"
+        ],
+        "source": "assets/source/batches/terrain-edges-001/dry_grass.png",
+        "sha256": "7ad425a3c0a803e4c42fdaf05441dcfea8a395398083e817f89f57d0fc55814e"
+      },
+      "cliff_river": {
+        "base": "grass",
+        "neighbors": [
+          "river"
+        ],
+        "source": "assets/source/batches/terrain-edges-001/cliff.png",
+        "sha256": "bc139329fbaf7eb1c8ae3823a9f2c3bfad4c2542cd06075037cce632212471e8"
+      },
+      "beach_river": {
+        "base": "desert",
+        "neighbors": [
+          "river"
+        ],
+        "source": "assets/source/batches/terrain-edges-001/shore.png",
+        "sha256": "2046b571d10115cd775819a51d4074396555d24b143c22f4b891d430532b5be5"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-animation-001",
+  "source": "assets/source/batches/dlc-animation-001/dlc-darkelf-04-source.png",
+  "source_sha256": "ffb431283055e6fde244833c0af52748af1fb77ed5227a13656af89b868362b2",
+  "size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/dlc-animation-001/dlc-darkelf-04-prompt.txt",
+  "prompt_sha256": "d051902841703a52622527d1eaa49246f3c6a8292c4fb25f4be3442adccdd8b4",
+  "conditioning": [
+    "assets/source/batches/dlc-animation-001/dlc-darkelf-04-reference.png"
+  ],
+  "reference_sha256": "55258dba5e5d220716cc77ed55a85ec8c448782c5a7be7a6998a79c9e5473f25",
+  "units": [
+    "de_obsidian_guard",
+    "de_onyx_executioner",
+    "de_gloam_drake",
+    "de_eclipse_dragon"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "processing": "Existing animation extraction and registration; native 128px reference; 320x256 action canvas",
+  "quality_status": "animation_candidate"
+}

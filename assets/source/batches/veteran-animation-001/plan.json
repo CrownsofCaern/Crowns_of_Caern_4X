@@ -1,0 +1,617 @@
+{
+  "schema_version": 1,
+  "groups": [
+    {
+      "id": "ashen-1",
+      "faction": "ashen",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "ashen-1-revised.png",
+      "prompt": "ashen-1-prompt.txt",
+      "reference": "assets/source/concepts/ashen-veteran-v/concept-v4-crimson-shimmer.png",
+      "tier_start": 1,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "original_source": "ashen-1-source.png",
+      "source_sha256": "2897ceda84f78e65fd123656bfca4c200b3f1eb78b383297ff97d2977bb415c0",
+      "units": [
+        {
+          "id": "seared_cinderling",
+          "name": "Seared Cinderling",
+          "tier": 1
+        },
+        {
+          "id": "hellmaw_hound",
+          "name": "Hellmaw Hound",
+          "tier": 2
+        },
+        {
+          "id": "brimstone_bombardier",
+          "name": "Brimstone Bombardier",
+          "tier": 3
+        },
+        {
+          "id": "flayer_exalted",
+          "name": "Exalted Flayer",
+          "tier": 4
+        }
+      ],
+      "transparent_fraction": 0.5199
+    },
+    {
+      "id": "ashen-2",
+      "faction": "ashen",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "ashen-2-source.png",
+      "prompt": "ashen-2-prompt.txt",
+      "reference": "assets/source/concepts/ashen-veteran-v/concept-v4-crimson-shimmer.png",
+      "tier_start": 5,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "0933130509224078b3569c3a4e91ed296f5c679bd8c7d8d9f18fa0603f4512d8",
+      "units": [
+        {
+          "id": "ash_matriarch",
+          "name": "Ash Matriarch",
+          "tier": 5
+        },
+        {
+          "id": "gorgewing_matron",
+          "name": "Gorgewing Matron",
+          "tier": 6
+        },
+        {
+          "id": "pyre_sovereign",
+          "name": "Pyre Sovereign",
+          "tier": 7
+        },
+        {
+          "id": "maw_of_ruin",
+          "name": "Maw of Ruin",
+          "tier": 8
+        }
+      ],
+      "transparent_fraction": 0.2429
+    },
+    {
+      "id": "concord-1",
+      "faction": "concord",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "concord-1-source.png",
+      "prompt": "concord-1-prompt.txt",
+      "reference": "assets/source/concepts/concord-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 1,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "5da18f79eec72c7dd710bbf0ce928c9aa85bec24d13573ed0f9890cb5cb4a634",
+      "units": [
+        {
+          "id": "pike_veteran",
+          "name": "Pike Veteran",
+          "tier": 1
+        },
+        {
+          "id": "warbow_sergeant",
+          "name": "Warbow Sergeant",
+          "tier": 2
+        },
+        {
+          "id": "bulwark_sworn",
+          "name": "Bulwark Sworn",
+          "tier": 3
+        },
+        {
+          "id": "oathbound_lancer",
+          "name": "Oathbound Lancer",
+          "tier": 4
+        }
+      ],
+      "transparent_fraction": 0.4573
+    },
+    {
+      "id": "concord-2",
+      "faction": "concord",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "concord-2-source.png",
+      "prompt": "concord-2-prompt.txt",
+      "reference": "assets/source/concepts/concord-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 5,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "5acd80f1b5051bfd5223630526bcd71d63eae4c91436f6d2730f07ecff0a6c2a",
+      "units": [
+        {
+          "id": "dawn_confessor",
+          "name": "Dawn Confessor",
+          "tier": 5
+        },
+        {
+          "id": "sunhawk_paladin",
+          "name": "Sunhawk Paladin",
+          "tier": 6
+        },
+        {
+          "id": "citadel_colossus",
+          "name": "Citadel Colossus",
+          "tier": 7
+        },
+        {
+          "id": "iron_sovereign",
+          "name": "Iron Sovereign",
+          "tier": 8
+        }
+      ],
+      "transparent_fraction": 0.3313
+    },
+    {
+      "id": "hollow-1",
+      "faction": "hollow",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "hollow-1-revised.png",
+      "prompt": "hollow-1-prompt.txt",
+      "reference": "assets/source/concepts/hollow-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 1,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "original_source": "hollow-1-source.png",
+      "source_sha256": "6aa94aed9dbff4d92db86e39e89152a3b1451f486c5bc08b87e0a848178e2af4",
+      "units": [
+        {
+          "id": "rotting_shambler",
+          "name": "Rotting Shambler",
+          "tier": 1
+        },
+        {
+          "id": "marrow_deadeye",
+          "name": "Marrow Deadeye",
+          "tier": 2
+        },
+        {
+          "id": "gravecrawler_brood",
+          "name": "Gravecrawler Brood",
+          "tier": 3
+        },
+        {
+          "id": "dirge_shade",
+          "name": "Dirge Shade",
+          "tier": 4
+        }
+      ],
+      "transparent_fraction": 0.3896
+    },
+    {
+      "id": "hollow-2",
+      "faction": "hollow",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "hollow-2-source.png",
+      "prompt": "hollow-2-prompt.txt",
+      "reference": "assets/source/concepts/hollow-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 5,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "141e7d88b313e2da3a15e7b296c97767821bcb15d92a4c6fd124127646477b6c",
+      "units": [
+        {
+          "id": "charnel_weaver",
+          "name": "Charnel Weaver",
+          "tier": 5
+        },
+        {
+          "id": "gibbet_lord",
+          "name": "Gibbet Lord",
+          "tier": 6
+        },
+        {
+          "id": "charnel_behemoth",
+          "name": "Charnel Behemoth",
+          "tier": 7
+        },
+        {
+          "id": "rotwing_sovereign",
+          "name": "Rotwing Sovereign",
+          "tier": 8
+        }
+      ],
+      "transparent_fraction": 0.1274
+    },
+    {
+      "id": "thornwood-1",
+      "faction": "thornwood",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "thornwood-1-source.png",
+      "prompt": "thornwood-1-prompt.txt",
+      "reference": "assets/source/concepts/thornwood-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 1,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "0007577f7241ae9a4caec50fb12edbab7859fcc3eed62f70f363c1f1fec2d56e",
+      "units": [
+        {
+          "id": "thorn_stalker",
+          "name": "Thorn Stalker",
+          "tier": 1
+        },
+        {
+          "id": "barkhide_sentinel",
+          "name": "Barkhide Sentinel",
+          "tier": 2
+        },
+        {
+          "id": "briar_deadshot",
+          "name": "Briar Deadshot",
+          "tier": 3
+        },
+        {
+          "id": "rootbinder_elder",
+          "name": "Rootbinder Elder",
+          "tier": 4
+        }
+      ],
+      "transparent_fraction": 0.4056
+    },
+    {
+      "id": "thornwood-2",
+      "faction": "thornwood",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "thornwood-2-source.png",
+      "prompt": "thornwood-2-prompt.txt",
+      "reference": "assets/source/concepts/thornwood-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 5,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "6add0f94d1122d81c67b7f2ba0aea00888326e1880494cbda8e905df5bff7eba",
+      "units": [
+        {
+          "id": "gloomwing_shrike",
+          "name": "Gloomwing Shrike",
+          "tier": 5
+        },
+        {
+          "id": "plague_lobber",
+          "name": "Plague Lobber",
+          "tier": 6
+        },
+        {
+          "id": "rootbound_patriarch",
+          "name": "Rootbound Patriarch",
+          "tier": 7
+        },
+        {
+          "id": "wyrdthorn_matriarch",
+          "name": "Wyrdthorn Matriarch",
+          "tier": 8
+        }
+      ],
+      "transparent_fraction": 0.2402
+    },
+    {
+      "id": "forge-1",
+      "faction": "forge",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "forge-1-source.png",
+      "prompt": "forge-1-prompt.txt",
+      "reference": "assets/source/concepts/forge-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 1,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "20b2cd893e38dd0a93c517573d7e40555e579cd9d8e7e317a2eaf31ce878a07f",
+      "units": [
+        {
+          "id": "ironclad_thrall",
+          "name": "Ironclad Thrall",
+          "tier": 1
+        },
+        {
+          "id": "rivet_arbalist",
+          "name": "Rivet Arbalist",
+          "tier": 2
+        },
+        {
+          "id": "anvil_sworn",
+          "name": "Anvil Sworn",
+          "tier": 3
+        },
+        {
+          "id": "furnace_golem",
+          "name": "Furnace Golem",
+          "tier": 4
+        }
+      ],
+      "transparent_fraction": 0.3561
+    },
+    {
+      "id": "forge-2",
+      "faction": "forge",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "forge-2-source.png",
+      "prompt": "forge-2-prompt.txt",
+      "reference": "assets/source/concepts/forge-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 5,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "c7f16d10facf1e6cb4f71165a590f764a692f3b43c2fecceb818bc6e9a52ea0f",
+      "units": [
+        {
+          "id": "master_engineer",
+          "name": "Master Engineer",
+          "tier": 5
+        },
+        {
+          "id": "ironhoof_warboar",
+          "name": "Ironhoof Warboar",
+          "tier": 6
+        },
+        {
+          "id": "doom_bombard",
+          "name": "Doom Bombard",
+          "tier": 7
+        },
+        {
+          "id": "worldforge_engine",
+          "name": "Worldforge Engine",
+          "tier": 8
+        }
+      ],
+      "transparent_fraction": 0.4165
+    },
+    {
+      "id": "frostmarch-1",
+      "faction": "frostmarch",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "frostmarch-1-revised.png",
+      "prompt": "frostmarch-1-prompt.txt",
+      "reference": "assets/source/concepts/frostmarch-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 1,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "original_source": "frostmarch-1-source.png",
+      "source_sha256": "7346f0b9d980c0d7afb072eff041a17f26e9ace376c5af121b393cdc5c6d96de",
+      "units": [
+        {
+          "id": "blooded_raider",
+          "name": "Blooded Raider",
+          "tier": 1
+        },
+        {
+          "id": "rimefang_packleader",
+          "name": "Rimefang Packleader",
+          "tier": 2
+        },
+        {
+          "id": "bloodfrenzy_berserker",
+          "name": "Bloodfrenzy Berserker",
+          "tier": 3
+        },
+        {
+          "id": "tusk_chieftain",
+          "name": "Tusk Chieftain",
+          "tier": 4
+        }
+      ],
+      "transparent_fraction": 0.3576
+    },
+    {
+      "id": "frostmarch-2",
+      "faction": "frostmarch",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "frostmarch-2-revised.png",
+      "prompt": "frostmarch-2-prompt.txt",
+      "reference": "assets/source/concepts/frostmarch-veteran-v/concept-v2-shimmer.png",
+      "tier_start": 5,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "original_source": "frostmarch-2-source.png",
+      "source_sha256": "5816afbf63301d2fb8b7067033a0447fe38107e98d2e6be8114246978f6a5657",
+      "units": [
+        {
+          "id": "storm_shaman",
+          "name": "Storm Shaman",
+          "tier": 5
+        },
+        {
+          "id": "rimeback_stampede",
+          "name": "Rimeback Stampede",
+          "tier": 6
+        },
+        {
+          "id": "cairn_warlord",
+          "name": "Cairn Warlord",
+          "tier": 7
+        },
+        {
+          "id": "winter_wyrm_ancient",
+          "name": "Ancient Winter Wyrm",
+          "tier": 8
+        }
+      ],
+      "transparent_fraction": 0.3309
+    },
+    {
+      "id": "fishmen-1",
+      "faction": "fishmen",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "fishmen-1-source.png",
+      "prompt": "fishmen-1-prompt.txt",
+      "reference": "assets/source/concepts/fishmen-veteran-v/concept-v1-shimmer.png",
+      "tier_start": 1,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "39498efbc001534bb4366842cfdf32bad4c40bee9653d38fb2f66a14a1e60048",
+      "units": [
+        {
+          "id": "fm_reef_guard",
+          "name": "Reef Guard",
+          "tier": 1
+        },
+        {
+          "id": "fm_abyss_harpooner",
+          "name": "Abyss Harpooner",
+          "tier": 2
+        },
+        {
+          "id": "fm_barnacle_bulwark",
+          "name": "Barnacle Bulwark",
+          "tier": 3
+        },
+        {
+          "id": "fm_siege_carapace",
+          "name": "Siege Carapace",
+          "tier": 4
+        }
+      ],
+      "transparent_fraction": 0.3333
+    },
+    {
+      "id": "fishmen-2",
+      "faction": "fishmen",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "fishmen-2-source.png",
+      "prompt": "fishmen-2-prompt.txt",
+      "reference": "assets/source/concepts/fishmen-veteran-v/concept-v1-shimmer.png",
+      "tier_start": 5,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "659eab37f1bf875308017ddbb5dab13d38be3ea7d84fb091fe9077a4052551d9",
+      "units": [
+        {
+          "id": "fm_drowned_oracle",
+          "name": "Drowned Oracle",
+          "tier": 5
+        },
+        {
+          "id": "fm_trench_reaver",
+          "name": "Trench Reaver",
+          "tier": 6
+        },
+        {
+          "id": "fm_storm_leviathan",
+          "name": "Storm Leviathan",
+          "tier": 7
+        },
+        {
+          "id": "fm_abyss_sovereign",
+          "name": "Abyss Sovereign",
+          "tier": 8
+        }
+      ],
+      "transparent_fraction": 0.1161
+    },
+    {
+      "id": "darkelf-1",
+      "faction": "darkelf",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "darkelf-1-source.png",
+      "prompt": "darkelf-1-prompt.txt",
+      "reference": "assets/source/concepts/darkelf-veteran-v/concept-v1-shimmer.png",
+      "tier_start": 1,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "12d904015bd085086df51b8b1f29e351af4256f704e3a4a4406426a143c527ef",
+      "units": [
+        {
+          "id": "de_dusk_sentinel",
+          "name": "Dusk Sentinel",
+          "tier": 1
+        },
+        {
+          "id": "de_venom_arbalist",
+          "name": "Venom Arbalist",
+          "tier": 2
+        },
+        {
+          "id": "de_blood_scythe",
+          "name": "Blood Scythe",
+          "tier": 3
+        },
+        {
+          "id": "de_dread_rider",
+          "name": "Dread Rider",
+          "tier": 4
+        }
+      ],
+      "transparent_fraction": 0.21
+    },
+    {
+      "id": "darkelf-2",
+      "faction": "darkelf",
+      "grid": [
+        7,
+        4
+      ],
+      "source": "darkelf-2-source.png",
+      "prompt": "darkelf-2-prompt.txt",
+      "reference": "assets/source/concepts/darkelf-veteran-v/concept-v1-shimmer.png",
+      "tier_start": 5,
+      "provider": "built-in image_gen",
+      "quality_status": "pending_animation_review",
+      "source_sha256": "9c0811d93338dedf0eda752238328eb2b013432b4ffd0f18c6757ce992fec2f3",
+      "units": [
+        {
+          "id": "de_mirror_witch",
+          "name": "Mirror Witch",
+          "tier": 5
+        },
+        {
+          "id": "de_widow_matriarch",
+          "name": "Widow Matriarch",
+          "tier": 6
+        },
+        {
+          "id": "de_onyx_executioner",
+          "name": "Onyx Executioner",
+          "tier": 7
+        },
+        {
+          "id": "de_eclipse_dragon",
+          "name": "Eclipse Dragon",
+          "tier": 8
+        }
+      ],
+      "transparent_fraction": 0.2264
+    }
+  ]
+}

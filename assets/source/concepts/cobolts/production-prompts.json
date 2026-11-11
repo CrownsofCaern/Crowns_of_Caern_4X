@@ -1,0 +1,87 @@
+[
+  {
+    "id": "creature_cobolt_pack_runner",
+    "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Pack Runner: lean fast cobolt infantry with bulging weathered merchant backpack, strapped rolled blankets, hooked knife held downward, digitigrade legs and low trailing tail. Neutral combat-ready stance, full body three-quarter view facing RIGHT.",
+    "references": [
+      "assets/build/creature/creature_pike_militia.png",
+      "assets/build/creature/creature_shieldwarden.png",
+      "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+    ],
+    "tool": "built-in imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "creature_cobolt_caravan_spear",
+    "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Caravan Spear: wiry cobolt guard with upright spear and compact battered wooden shield with brass rim, leather and small pieces of worn iron armour. Full body neutral combat-ready stance, three-quarter view facing RIGHT.",
+    "references": [
+      "assets/build/creature/creature_pike_militia.png",
+      "assets/build/creature/creature_shieldwarden.png",
+      "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+    ],
+    "tool": "built-in imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "creature_cobolt_bolt_broker",
+    "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Bolt Broker: lean cobolt crossbow guard, carrying a worn compact wooden crossbow pointed toward the right, visible quiver of bolts and leather merchant pouches. Full body neutral combat-ready stance, three-quarter view facing RIGHT.",
+    "references": [
+      "assets/build/creature/creature_pike_militia.png",
+      "assets/build/creature/creature_shieldwarden.png",
+      "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+    ],
+    "tool": "built-in imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "creature_cobolt_cinder_alchemist",
+    "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Cinder Alchemist: wiry cobolt support fighter wearing scorched long leather apron over dark patched merchant cloth, holding a sealed ceramic fire pot with brass wire cage in one hand, spare pots on belt. No magic flames or particle effects. Full body neutral combat-ready stance, three-quarter view facing RIGHT.",
+    "references": [
+      "assets/build/creature/creature_pike_militia.png",
+      "assets/build/creature/creature_shieldwarden.png",
+      "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+    ],
+    "tool": "built-in imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "creature_cobolt_vault_warden",
+    "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Vault Warden: heavily armoured cobolt shield infantry, same reptilian species and modest stature as other cobolts, broad dented iron shield with understated brass balance-scale emblem, short war pick, layered worn dark plate. Full body neutral combat-ready stance, three-quarter view facing RIGHT. Powerful but never gigantic.",
+    "references": [
+      "assets/build/creature/creature_pike_militia.png",
+      "assets/build/creature/creature_shieldwarden.png",
+      "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+    ],
+    "tool": "built-in imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "site_cobolt_stall",
+    "prompt": "Use case: stylized-concept. Asset type: production adventure-map building sprite for Crowns of Cinder. Reference image 1 is the current road-trader sprite and defines the rendering style: richly detailed painterly pixel art, restrained realistic materials, thin dark outline and warm lantern highlights. Reference image 2 is the approved cobolt concept: retain the cobolt architecture and merchant identity. ONE building, elevated three-quarter overhead adventure-map view with roof and two sides visible, top-left light. Weathered wood, patched muted umber canvas with small desaturated petrol-teal cloth accents, tarnished brass scales, iron-bound chests, amber lantern. Closed awnings, screens and shuttered entrances hide all guards. NO people, creatures or visible troops. Compact readable silhouette and dense hand-painted detail, same world as existing road-trader sprite, not smooth cartoon, not vector, not glossy 3D. Transparent background with clean alpha. No surrounding terrain, roads, scenery, text, labels, borders, numbers, ground plane or shadow oval. Entire building and equipment visible with empty margins.\nSubject: Cobolt Roadside Stall, level one: one small covered wagon beside one weathered canvas shop awning with closed side screens, scales hanging on wooden post, a few brass-bound chests. Humble compact roadside business; no masonry fort.",
+    "references": [
+      "assets/build/object/site_road_trader.png",
+      "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+    ],
+    "tool": "built-in imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "site_cobolt_yard",
+    "prompt": "Use case: stylized-concept. Asset type: production adventure-map building sprite for Crowns of Cinder. Reference image 1 is the current road-trader sprite and defines the rendering style: richly detailed painterly pixel art, restrained realistic materials, thin dark outline and warm lantern highlights. Reference image 2 is the approved cobolt concept: retain the cobolt architecture and merchant identity. ONE building, elevated three-quarter overhead adventure-map view with roof and two sides visible, top-left light. Weathered wood, patched muted umber canvas with small desaturated petrol-teal cloth accents, tarnished brass scales, iron-bound chests, amber lantern. Closed awnings, screens and shuttered entrances hide all guards. NO people, creatures or visible troops. Compact readable silhouette and dense hand-painted detail, same world as existing road-trader sprite, not smooth cartoon, not vector, not glossy 3D. Transparent background with clean alpha. No surrounding terrain, roads, scenery, text, labels, borders, numbers, ground plane or shadow oval. Entire building and equipment visible with empty margins.\nSubject: Cobolt Caravan Yard, level two: a compact fenced enclosure containing two canvas-covered wagons, covered merchant stalls, a closed timber gate with a hanging brass balance sign, concealed rear yard, stacked chests. Clearly richer than a lone stall. Keep canvas roofs and the fence from merging into a single unreadable mass.",
+    "references": [
+      "assets/build/object/site_road_trader.png",
+      "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+    ],
+    "tool": "built-in imagegen",
+    "transparent_background": true
+  },
+  {
+    "id": "site_cobolt_exchange",
+    "prompt": "Use case: stylized-concept. Asset type: production adventure-map building sprite for Crowns of Cinder. Reference image 1 is the current road-trader sprite and defines the rendering style: richly detailed painterly pixel art, restrained realistic materials, thin dark outline and warm lantern highlights. Reference image 2 is the approved cobolt concept: retain the cobolt architecture and merchant identity. ONE building, elevated three-quarter overhead adventure-map view with roof and two sides visible, top-left light. Weathered wood, patched muted umber canvas with small desaturated petrol-teal cloth accents, tarnished brass scales, iron-bound chests, amber lantern. Closed awnings, screens and shuttered entrances hide all guards. NO people, creatures or visible troops. Compact readable silhouette and dense hand-painted detail, same world as existing road-trader sprite, not smooth cartoon, not vector, not glossy 3D. Transparent background with clean alpha. No surrounding terrain, roads, scenery, text, labels, borders, numbers, ground plane or shadow oval. Entire building and equipment visible with empty margins.\nSubject: Cobolt Vault Exchange, level three: small fortified stone counting house with thick shuttered vault door, low weathered slate roof and a single chimney, attached closed canvas-covered caravan yard, brass scales over the entrance, stacked iron-bound chests and amber lanterns. Wealthy trade house, not a castle or huge town.",
+    "references": [
+      "assets/build/object/site_road_trader.png",
+      "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+    ],
+    "tool": "built-in imagegen",
+    "transparent_background": true
+  }
+]

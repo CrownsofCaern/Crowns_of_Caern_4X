@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "source_sha256": "9061e18d830b2835844f2f4b29c2b738620d5fad0ede9f572ab5f9b184fba202",
+  "source_size": [
+    1774,
+    887
+  ],
+  "prompt_file": "assets/source/batches/resource-pickups-001/icons/prompt.txt",
+  "prompt_sha256": "7829c02f2a76c3cf2f3e51a931b89999887e50d204eb01e073c58f6b9f25bca9",
+  "reference": "assets/source/batches/resource-places-001/source.png",
+  "reference_sha256": "35212b5db0aab58ed292423c2acee64de22a7c6c1ebc6a40b22f483d843eaaab",
+  "quality_status": "rendered_candidate",
+  "resource_ids": [
+    "gold",
+    "wood",
+    "ore",
+    "mercury",
+    "sulfur",
+    "crystal",
+    "gems"
+  ],
+  "human_approval": "pending"
+}

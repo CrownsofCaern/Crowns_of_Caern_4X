@@ -1,0 +1,16 @@
+{
+  "faction": "thornwood",
+  "note": "Cells are row-major (0-8). Cut and cleaned by tools/assets/crowns_of_cinder_assets/town_sheets.py; the painting is unchanged.",
+  "sheets": [
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/thornwood-sheet.png",
+      "sha256": "b1eb9a7167ec1eb50ea4f71ee2c2b7c965ee9b7cc77c3027356d0a4200530c7c",
+      "cells": ["t_hall", "t_market", "t_fort3", "t_dw1", "t_dw2", "t_dw3", "t_dw4", "t_dw5", "t_dw8"]
+    },
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/thornwood-sheet-2.png",
+      "sha256": "95b04e80ec3260fb138102a2708ebd89cf859aaa2d966cb2a57715cb7a266b48",
+      "cells": ["t_court", "t_assembly", "t_exchequer", "t_yard", "t_tavern", "t_fort1", "t_dw6", "t_dw7", "t_special"]
+    }
+  ]
+}

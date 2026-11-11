@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/forge-03-source.png",
+  "source_sha256": "d6fcc85193be6ef237fb207dd62b2368e2820fa312d4daea568b1e96c6b5b713",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/forge-03-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/forge-03-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "cinder_engineer",
+    "master_engineer",
+    "ironhoof_charger",
+    "ironhoof_warboar"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "cinder_engineer",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinder_engineer.png",
+      "reference_sha256": "6d393e7008eb207da5325334cc2cf30190042dcdb0ac565f078193e555cf626d"
+    },
+    {
+      "id": "master_engineer",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_master_engineer.png",
+      "reference_sha256": "4eb740a18ddd71fe03247f7e223d9c27c86e44fe20a0698e24f279f0c802f4a6"
+    },
+    {
+      "id": "ironhoof_charger",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_ironhoof_charger.png",
+      "reference_sha256": "c99424711a68fa3e8c1ce4700a16f281547c6b1aae663b94ddbe100db588dcdd"
+    },
+    {
+      "id": "ironhoof_warboar",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_ironhoof_warboar.png",
+      "reference_sha256": "0df3790ea80b0425d6ffe12be49a1fe7b3bb9533e55b0ad9c6a625799293d428"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

@@ -1,0 +1,36 @@
+{
+  "faction": "frostmarch",
+  "note": "Cells are row-major (0-8). Cut and cleaned by tools/assets/crowns_of_cinder_assets/town_sheets.py; the painting is unchanged.",
+  "sheets": [
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/frostmarch-sheet.png",
+      "sha256": "3368982a76581cc79531a5ee4036a6c1af5c106174bd22a032d45d9ff4b71b42",
+      "cells": [
+        "r_hall",
+        "r_market",
+        "r_fort1",
+        "r_dw1",
+        "r_dw2",
+        "r_dw3",
+        "r_dw5",
+        "r_dw7",
+        "r_dw8"
+      ]
+    },
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/frostmarch-sheet-2.png",
+      "sha256": "0bee6684e32c7d7215b4738af62f67eb3008e65f6aee4745e1b4b4fc0381ff7a",
+      "cells": [
+        "r_court",
+        "r_assembly",
+        "r_exchequer",
+        "r_yard",
+        "r_tavern",
+        "r_fort2",
+        "r_fort3",
+        "r_dw4",
+        "r_dw6"
+      ]
+    }
+  ]
+}

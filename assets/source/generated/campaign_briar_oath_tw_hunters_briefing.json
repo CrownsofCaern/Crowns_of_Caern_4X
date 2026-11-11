@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_briar_oath_tw_hunters_briefing",
+  "campaign": "briar_oath",
+  "chapter": "tw_hunters",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_briar_oath_tw_hunters_briefing.txt",
+  "prompt_sha256": "3bf62202cbfa43abb72aef77b4f36438148d64b01bd7571d8e0650ea27a2c404",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "c252c4f781a2d1a0c2d62ff40bb65c549bf8eace23128d077c90dd88e70eac67",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

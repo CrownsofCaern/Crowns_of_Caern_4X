@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_shuttered_halls_fg_iron_bread_briefing",
+  "campaign": "shuttered_halls",
+  "chapter": "fg_iron_bread",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_shuttered_halls_fg_iron_bread_briefing.txt",
+  "prompt_sha256": "c3202b34c8dd8c2104e0c947273d27c86dd0d1ac30f574f5ab3a6efa5dbcc8b6",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "6c26865687e8e0883fa2e682be54dc3117b86492f5fce9dc46df4999b9e1fc10",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

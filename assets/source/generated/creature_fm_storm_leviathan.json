@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/fishmen-creatures.png",
+  "source_sheet_sha256": "5c2b01a428459b5cdff330050ebf414189f02a6154975f6dbd4767a44e99290f",
+  "size": [
+    1261,
+    1247
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/fishmen-creatures.txt",
+  "prompt_sha256": "4b350e7ac1fe0ec96ee92c0f092a1e897335cbf3f38c324705aa95e0eb723928",
+  "conditioning": [
+    "assets/source/batches/hollow-001/source.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/hollow-001/source.png": "c0a65504208fe13a5820f9e42439ee1d7ebaa5009c5ead6d0d49e9f4d65e03d1"
+  },
+  "asset_id": "creature_fm_storm_leviathan",
+  "row": 3,
+  "column": 1,
+  "extraction": {
+    "row_bounds": [
+      931,
+      1247
+    ],
+    "column_cuts": [
+      0,
+      312,
+      627,
+      927,
+      1261
+    ],
+    "bent_seams": {},
+    "warnings": [],
+    "row_extraction": {
+      "bounds": [
+        931,
+        1247
+      ],
+      "top_seam": 931,
+      "bottom_seam": 1247
+    }
+  },
+  "source_sha256": "813577ee80cfaeca0e0cbeddf37ca0ddaf27c39e7085cb6fad4e080906552363",
+  "native_size": [
+    128,
+    128
+  ],
+  "processing": "Adaptive transparent gutters; alpha below 64 cleared; palette preserved",
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

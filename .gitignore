@@ -1,0 +1,8 @@
+.godot/
+export/
+reports/
+*.tmp
+__pycache__/
+
+# 3D battle models are large (5-20 MB per GLB); only their reviewed bake sheets are committed.
+assets/source/models/**/*.glb

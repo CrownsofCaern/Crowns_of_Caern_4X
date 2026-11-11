@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen (dlc-factions-001 foundation painting, reused)",
+  "id": "campaign_six_eyes_se_below_briefing",
+  "usage": "briefing",
+  "source_of_copy": "assets/source/batches/dlc-factions-001/darkelf-foundation.png",
+  "source_sha256": "3c22ea9911bca46db6792da1d0449470c6d964ae43ae4bc5015f47b189efe777",
+  "prompt_file": "assets/source/batches/six-eyes-story-001/campaign_six_eyes_se_below_briefing.txt",
+  "quality_status": "interim_reused_pending_generation",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

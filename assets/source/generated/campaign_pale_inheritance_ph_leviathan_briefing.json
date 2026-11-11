@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_pale_inheritance_ph_leviathan_briefing",
+  "campaign": "pale_inheritance",
+  "chapter": "ph_leviathan",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_pale_inheritance_ph_leviathan_briefing.txt",
+  "prompt_sha256": "c61f2fd87c119a5bf407e15b96203c14926b2feedb803e65fa3a24224581c14d",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "877a0a24299df7d1871b4e33e775593d238787464bcd7eb9378bfb5d25e0187f",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

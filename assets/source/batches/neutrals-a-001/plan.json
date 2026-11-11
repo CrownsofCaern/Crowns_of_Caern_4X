@@ -1,0 +1,171 @@
+{
+  "name": "neutrals-a-001",
+  "grid": [
+    4,
+    4
+  ],
+  "category": "creature",
+  "spec_file": "creatures.json",
+  "assets": [
+    {
+      "id": "creature_plague_rats",
+      "prompt": "A carpet of diseased rats. Individually pathetic.; Plague Rats",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": true
+    },
+    {
+      "id": "creature_dune_scuttler",
+      "prompt": "Dog-sized beetles that burst from the sand.; Dune Scuttler",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_lost_pilgrims",
+      "prompt": "Starving zealots wandering the roads with cudgels and prayers.; Lost Pilgrims",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_moss_creeper",
+      "prompt": "Crawling mats of moss that close their wounds as you watch.; Moss Creeper",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_crag_slinger",
+      "prompt": "Wiry hill-folk with slings, ambushing from the rocks.; Crag Slinger",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_thornwolf",
+      "prompt": "Wolves with bramble growing through their hides.; Thornwolf",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_road_cutthroat",
+      "prompt": "Deserters and murderers who prey on caravans.; Road Cutthroat",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_carrion_flock",
+      "prompt": "A storm of crows that peck the dying.; Carrion Flock",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": true
+    },
+    {
+      "id": "creature_corpse_light",
+      "prompt": "Pale lights over the marsh that lure travellers into the mire.; Corpse Light",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": true
+    },
+    {
+      "id": "creature_marsh_hag",
+      "prompt": "Crone-things who curse from the reeds.; Marsh Hag",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_sand_reaver",
+      "prompt": "Veiled raiders on lean desert horses.; Sand Reaver",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_rime_wight",
+      "prompt": "Frozen dead that walk the passes, sucking warmth from the living.; Rime Wight",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_deserter_crossbows",
+      "prompt": "Turncoat crossbowmen holding a ruined toll-keep.; Deserter Crossbows",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_shrieking_harpy",
+      "prompt": "Filthy winged scavengers that strike and are gone.; Shrieking Harpy",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    },
+    {
+      "id": "creature_tomb_scarabs",
+      "prompt": "Black beetles that swarm from looted tombs.; Tomb Scarabs",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": true
+    },
+    {
+      "id": "creature_gloom_panther",
+      "prompt": "Shadow-coloured cats that only show themselves to strike.; Gloom Panther",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "keep_components": false
+    }
+  ]
+}

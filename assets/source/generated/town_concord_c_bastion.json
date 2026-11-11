@@ -1,0 +1,25 @@
+{
+  "id": "c_bastion",
+  "provider": "image_gen",
+  "source_sheet": "assets/source/batches/concord-town-001/base.png",
+  "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+  "crop_xyxy": [
+    936,
+    282,
+    1261,
+    594
+  ],
+  "alpha_trim_xyxy": [
+    7,
+    43,
+    314,
+    300
+  ],
+  "source_sha256": "aec6692084b7fda3b3c55c35e65721f790622acdaaa8a8854895317a84ec2535",
+  "conditioning": [
+    "foundation.png"
+  ],
+  "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+  "quality_status": "rendered_candidate",
+  "review": "docs/art/production/living-world/"
+}

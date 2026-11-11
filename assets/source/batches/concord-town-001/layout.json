@@ -1,0 +1,722 @@
+[
+  {
+    "id": "c_hall",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      0,
+      0,
+      315,
+      282
+    ],
+    "alpha_trim_xyxy": [
+      25,
+      16,
+      306,
+      278
+    ],
+    "source_sha256": "9b49059bd9d9a787239a56821c1371a3802f26c205399df31aa0e3f7d4e7de36",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_market",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      315,
+      0,
+      630,
+      282
+    ],
+    "alpha_trim_xyxy": [
+      15,
+      18,
+      311,
+      272
+    ],
+    "source_sha256": "d86c4cf3fcb39a69844bd2560a7af92dede4fecc641e1e8286dbb72ec3666315",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_yard",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      630,
+      0,
+      946,
+      282
+    ],
+    "alpha_trim_xyxy": [
+      15,
+      48,
+      305,
+      270
+    ],
+    "source_sha256": "454063b478f9607998a3c3cd3c7617a18c0de147c24b437f16897fd2b6eb73ab",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_tavern",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      946,
+      0,
+      1261,
+      282
+    ],
+    "alpha_trim_xyxy": [
+      12,
+      11,
+      303,
+      276
+    ],
+    "source_sha256": "1489a47fb7285265e0a2f490330eda47aeb36679d9a6e94fb3a906468fdfd033",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_masons",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      0,
+      282,
+      315,
+      594
+    ],
+    "alpha_trim_xyxy": [
+      13,
+      47,
+      302,
+      294
+    ],
+    "source_sha256": "b1daded3c7c30a6e322560c105f9dd566c43767f73e12422a05454ec29818b43",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_palisade",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      315,
+      282,
+      630,
+      594
+    ],
+    "alpha_trim_xyxy": [
+      11,
+      114,
+      291,
+      294
+    ],
+    "source_sha256": "8bb6df5dbc207eb18066da73d280365024b7e6e6691279831ccadd3f4789e11f",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_keep",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      630,
+      282,
+      936,
+      594
+    ],
+    "alpha_trim_xyxy": [
+      21,
+      6,
+      279,
+      305
+    ],
+    "source_sha256": "25ddcc9647015d4ba6ab09e34fc8372ea7fd2241a498e18cc4cfa25d22713754",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_bastion",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      936,
+      282,
+      1261,
+      594
+    ],
+    "alpha_trim_xyxy": [
+      7,
+      43,
+      314,
+      300
+    ],
+    "source_sha256": "aec6692084b7fda3b3c55c35e65721f790622acdaaa8a8854895317a84ec2535",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_dw1",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      0,
+      594,
+      315,
+      875
+    ],
+    "alpha_trim_xyxy": [
+      13,
+      46,
+      306,
+      267
+    ],
+    "source_sha256": "c6ec736f88fe830bed6a442e851b45ffe741b1c2f2589a0252cc63efc20b271f",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_dw2",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      315,
+      594,
+      630,
+      875
+    ],
+    "alpha_trim_xyxy": [
+      11,
+      46,
+      287,
+      271
+    ],
+    "source_sha256": "963f7458a92d39ed51f091da1d87e972f5fe370a8e762859eba745529a8fde74",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_dw3",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      630,
+      594,
+      946,
+      875
+    ],
+    "alpha_trim_xyxy": [
+      0,
+      39,
+      316,
+      266
+    ],
+    "source_sha256": "17b8243c4849ad31b0125ba00284a224c34f14cc1d9a432ac461e3ca1d37d567",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_dw4",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      946,
+      594,
+      1261,
+      875
+    ],
+    "alpha_trim_xyxy": [
+      0,
+      44,
+      305,
+      258
+    ],
+    "source_sha256": "d52af5db50bf38d44ccfa47c5f279801522f5b47fefa1ba7564a292d24e1aa06",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_dw5",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      0,
+      875,
+      315,
+      1247
+    ],
+    "alpha_trim_xyxy": [
+      24,
+      7,
+      283,
+      352
+    ],
+    "source_sha256": "b31ac1ad129e9acc8e9656dd90efbed4237d7f3d728b2bb9905ff4aec3569b68",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_dw6",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      315,
+      875,
+      568,
+      1247
+    ],
+    "alpha_trim_xyxy": [
+      12,
+      14,
+      221,
+      352
+    ],
+    "source_sha256": "88e187c9f59a5ab08de1b183e5d3bb7e7c5b50ad6575e1aa0ebd332e1f6a65f4",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_dw7",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      568,
+      875,
+      945,
+      1247
+    ],
+    "alpha_trim_xyxy": [
+      2,
+      43,
+      353,
+      343
+    ],
+    "source_sha256": "8cd6f6bd8ee0f9a99e7d7097cfc2fe1690c016b475835be9760ee52bf7b2a1b8",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_dw8",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/base.png",
+    "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+    "crop_xyxy": [
+      946,
+      875,
+      1261,
+      1247
+    ],
+    "alpha_trim_xyxy": [
+      0,
+      16,
+      307,
+      350
+    ],
+    "source_sha256": "821568ac509fa61fb1ee517599349c9475dc059bdb3db9b56d0664f90bc25344",
+    "conditioning": [
+      "foundation.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_up1",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      0,
+      0,
+      314,
+      312
+    ],
+    "alpha_trim_xyxy": [
+      16,
+      62,
+      314,
+      294
+    ],
+    "source_sha256": "4af75d02a43a3424579cbc819cb366551648c019b490d39e99a3a4a04777fca6",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_up2",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      314,
+      0,
+      627,
+      312
+    ],
+    "alpha_trim_xyxy": [
+      0,
+      21,
+      297,
+      303
+    ],
+    "source_sha256": "ea9742983bae1d6051a2e401166ccdfbb6879ada8eabc5fd10184687e5f75abe",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_up3",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      627,
+      0,
+      940,
+      312
+    ],
+    "alpha_trim_xyxy": [
+      2,
+      46,
+      313,
+      298
+    ],
+    "source_sha256": "5fb0f56257935d0ad3549e9162a1b7d1c7acf305f4d365350ae2690a0f36f948",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_up4",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      940,
+      0,
+      1254,
+      312
+    ],
+    "alpha_trim_xyxy": [
+      0,
+      35,
+      300,
+      290
+    ],
+    "source_sha256": "0222ce035d4ad469fc5690331d9777df945806fdcafc357c5e8522ab98e31914",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_up5",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      0,
+      312,
+      314,
+      628
+    ],
+    "alpha_trim_xyxy": [
+      32,
+      17,
+      314,
+      302
+    ],
+    "source_sha256": "ec0f5cce2070bc7d4c52e441f2539fa7470c9e85e7368fc1810112dae8f655e6",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_up6",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      314,
+      312,
+      613,
+      628
+    ],
+    "alpha_trim_xyxy": [
+      0,
+      4,
+      261,
+      308
+    ],
+    "source_sha256": "37d7e222602a36c901fb6b36fbc0a3a81228cd2eda75e9aa78e876609e4fba22",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_up7",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      613,
+      312,
+      940,
+      628
+    ],
+    "alpha_trim_xyxy": [
+      1,
+      33,
+      313,
+      303
+    ],
+    "source_sha256": "2f0c1331ea5907a2edbceadbf392cca4ed19a36e37b17c111ceabaff73907d8a",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_up8",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      940,
+      312,
+      1254,
+      628
+    ],
+    "alpha_trim_xyxy": [
+      1,
+      7,
+      300,
+      305
+    ],
+    "source_sha256": "04d8f8e33d2d5baf7939789b9a043fc68145694ae2b18a0283921b7bd00633e6",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_court",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      0,
+      628,
+      314,
+      939
+    ],
+    "alpha_trim_xyxy": [
+      15,
+      37,
+      310,
+      289
+    ],
+    "source_sha256": "a8d06f8c82d26166ae43ae1f61ca37c15ac74a79df1006cd455c7c2c98b1682a",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_assembly",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      314,
+      628,
+      627,
+      939
+    ],
+    "alpha_trim_xyxy": [
+      9,
+      8,
+      312,
+      289
+    ],
+    "source_sha256": "0499ccae1974499fadab97990c6be82f8356be7c3f8770387d4a11c7b618221c",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_exchequer",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      627,
+      628,
+      940,
+      939
+    ],
+    "alpha_trim_xyxy": [
+      9,
+      10,
+      313,
+      287
+    ],
+    "source_sha256": "46937c82e86923c11c61a506233144bfd4582034aaaed9a277c58ba8c1cca6c9",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_drill",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      940,
+      628,
+      1254,
+      939
+    ],
+    "alpha_trim_xyxy": [
+      0,
+      69,
+      301,
+      276
+    ],
+    "source_sha256": "ec3229c40d016a05521e59272c218ee11e98de5a3ea67a9e9ec630b5194e8fb2",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_fletchers",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      0,
+      939,
+      314,
+      1254
+    ],
+    "alpha_trim_xyxy": [
+      20,
+      41,
+      310,
+      270
+    ],
+    "source_sha256": "6b98d6842a0a81086ef7b5dde304117d12660811c6b10e8871092634d80e1c91",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  },
+  {
+    "id": "c_remount",
+    "provider": "image_gen",
+    "source_sheet": "assets/source/batches/concord-town-001/upgrades.png",
+    "source_sheet_sha256": "e09174f1f9fdf476676b9e60119e2812bb174eb86e0a6608c3a25766c7c3e2b5",
+    "crop_xyxy": [
+      314,
+      939,
+      627,
+      1254
+    ],
+    "alpha_trim_xyxy": [
+      12,
+      48,
+      310,
+      267
+    ],
+    "source_sha256": "d8e0ca7160df37fa267f4ee4358a0c888b429b96fcb3b9c787ed9940c501b622",
+    "conditioning": [
+      "base.png"
+    ],
+    "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+    "quality_status": "rendered_candidate"
+  }
+]

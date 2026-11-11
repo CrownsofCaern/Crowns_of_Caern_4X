@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/hollow-01-source.png",
+  "source_sha256": "5fd6994e027fe5fa16cecd968f8de784ff1c48ed82a070ef91c2eb68672cddce",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/hollow-01-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/hollow-01-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "shambler",
+    "rotting_shambler",
+    "marrow_archer",
+    "marrow_deadeye"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "shambler",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_shambler.png",
+      "reference_sha256": "dc432f1d99b3681f887d4d27e6a8d64240eeae8dd547dfc57f593bd45426fa31"
+    },
+    {
+      "id": "rotting_shambler",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rotting_shambler.png",
+      "reference_sha256": "c8f3a5f5f4718bcea6bf705ded0ce08ec19482bdb69ac858eb644b82a6c6f26c"
+    },
+    {
+      "id": "marrow_archer",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_marrow_archer.png",
+      "reference_sha256": "9ba7931ed28cab94202129edc73d645b7f7dbcac2452d44ba77fa5ded1349126"
+    },
+    {
+      "id": "marrow_deadeye",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_marrow_deadeye.png",
+      "reference_sha256": "99ff1e86071b7f5d130b68f10e5d66450e7934291ed1231bc0c562e6e065d6da"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

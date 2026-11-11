@@ -1,0 +1,23 @@
+{
+  "id": "forest_blackpine",
+  "terrain": "forest",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/forest_blackpine.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "f3098c1112661af7112dc85c7e1f892c9295dfa4ca8e744f5b24cfe4fbe43f48",
+  "prompt_file": "assets/source/batches/battlefields-001/forest_blackpine.txt",
+  "prompt_sha256": "447f4f5f673fdde047edc1f2eed7fe658412996952f04ef92c59925e77aa66a0",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/forest_blackpine-live.png",
+    "forecast": "docs/art/production/battlefields/forest_blackpine-forecast.png"
+  }
+}

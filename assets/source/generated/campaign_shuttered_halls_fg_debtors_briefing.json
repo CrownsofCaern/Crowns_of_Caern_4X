@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_shuttered_halls_fg_debtors_briefing",
+  "campaign": "shuttered_halls",
+  "chapter": "fg_debtors",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_shuttered_halls_fg_debtors_briefing.txt",
+  "prompt_sha256": "0afce9ea4fef8daff9e591c69d166215f8b5850483bab4caa0d9fb54f8a3f955",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "884088f364ff54d043005e24a1af22fbe9527e5f96b0ffe58d25c408f98f3e2d",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

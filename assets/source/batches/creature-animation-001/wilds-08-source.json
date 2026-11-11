@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/wilds-08-source.png",
+  "source_sha256": "7233e84bdd30753f9e6bc688565f080fc4e69d59526ab1948885e6236ad7ed78",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/wilds-08-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/wilds-08-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "bog_serpent",
+    "dune_wurm",
+    "hill_giant",
+    "primordial_wyrm"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "bog_serpent",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_bog_serpent.png",
+      "reference_sha256": "6f859c4fb69ebe148b75cb5d2c0edbd624c8d25e20d59f30d355ff43891d00b8"
+    },
+    {
+      "id": "dune_wurm",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_dune_wurm.png",
+      "reference_sha256": "f83af5642abde60ad12b99fec0ecc3626e1121f86cb4c006e4739ed79a1c2523"
+    },
+    {
+      "id": "hill_giant",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_hill_giant.png",
+      "reference_sha256": "ada24cb7be51f6354226591a96cfe6abf25e482dc6dce61fb91e104bd3dd0ae4"
+    },
+    {
+      "id": "primordial_wyrm",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_primordial_wyrm.png",
+      "reference_sha256": "1d23f7a65030bd570d1435d5f06c977952044a3a8d3b794dd22c2cd24d8b223e"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

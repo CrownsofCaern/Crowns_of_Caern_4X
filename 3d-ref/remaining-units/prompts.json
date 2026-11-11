@@ -1,0 +1,102 @@
+[
+  {
+    "id": "deserter_crossbows",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright, NOT crouched: feet apart at shoulder width, legs straight and clearly separated, both arms held down and about 35 degrees away from the torso with a clear gap between each arm and the body. The right hand holds a heavy crossbow by its stock, pointing down and out to the side, clear of the leg.\n\nSubject: Deserter Crossbowman, a hard-bitten human soldier gone outlaw: a torn hood, a stained padded gambeson with a cut-off army tabard, a short brown cloak ending at the waist, a bolt quiver on the hip, wrapped shins and worn boots. Colours: mud brown, faded grey cloth, dull steel.",
+    "reference": "assets/source/generated/creature_deserter_crossbows.png",
+    "file": "../deserter_crossbows.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "105715aee124ec5d3758ccd75b0a111e0ac4b51ede1b2ecb110c5a50b9206ea5"
+  },
+  {
+    "id": "lost_pilgrims",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright, slightly stooped but NOT hunched: feet apart at shoulder width, legs clearly separated, both arms held down and away from the torso with a clear gap. The right hand holds a tall gnarled walking staff vertically at its side, not touching the body.\n\nSubject: Lost Pilgrim, a gaunt hollow-eyed human wanderer in a patched hooded robe that ends above the knees, rope belt with a small reliquary, bandaged hands, ragged leggings and sandals. Colours: dirty bone white, ash grey, faded violet.",
+    "reference": "assets/source/generated/creature_lost_pilgrims.png",
+    "file": "../lost_pilgrims.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "3d42c10d155c2dbeb219687e3ef8ec9dd2724e223d3e0bb1c7ad61c37b8fa82f"
+  },
+  {
+    "id": "doom_bombard",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy siege engine. One object only, whole engine with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no smoke, fire or sparks. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nView: three-quarter side view, barrel pointing right and slightly up. No crew.\n\nSubject: Doom Bombard, a massive short-barrelled mortar of riveted dark iron on a heavy wooden carriage with two big spoked wheels, brass gears and a winch on the side, a stack of iron cannonballs on the carriage. The barrel mouth glows faintly orange inside. Colours: dark iron, oak brown, brass, orange glow.",
+    "reference": "assets/source/generated/creature_doom_bombard.png",
+    "file": "../doom_bombard.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "a4965b7ec8ee0776fcc7af5998718fb3f94abc863af3326feb6341f95526bd33"
+  },
+  {
+    "id": "thunder_bombard",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy siege engine. One object only, whole engine with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no smoke, fire or sparks. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nView: three-quarter side view, barrel pointing right and slightly up. No crew.\n\nSubject: Thunder Bombard, a long-barrelled cannon of dark iron with brass bands on a wooden carriage with two spoked wheels, a gear wheel for aiming and a few iron cannonballs on the carriage. Colours: dark iron, oak brown, brass.",
+    "reference": "assets/source/generated/creature_thunder_bombard.png",
+    "file": "../thunder_bombard.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "48ab6dacb9d7b7a9e66ff2a86fef212902e3a80a0107b6211636f74332113008"
+  },
+  {
+    "id": "carrion_flock",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One bird only, full body with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: side view, facing right, wings spread wide and held out straight from the body (clear gap between wings and body), legs tucked, beak slightly open.\n\nSubject: Carrion Crow, a large ragged black crow with tattered wing feathers, a bare grey neck patch and pale eyes. Colours: black, dark grey, bone.",
+    "reference": "assets/source/generated/creature_carrion_flock.png",
+    "file": "../carrion_flock.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "87906581101694508e96995f4e35e2c3b72364ec8388e76e76868d5a885e9dab"
+  },
+  {
+    "id": "corpse_light",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, whole body with a small margin. Plain flat dark grey background, no ground, no shadow, no text, no scenery, no loose particles or smoke. Even soft lighting, clean readable shapes. Square image, 1024 x 1024.\n\nPose: front view, floating upright.\n\nSubject: Corpse Light, a small ghostly wisp shaped as a solid, smooth teardrop of pale green spirit-stuff with a faint skull face in its head and a short tapering tail below. No loose wisps around it. Colours: pale sickly green, glowing white-green core.",
+    "reference": "assets/source/generated/creature_corpse_light.png",
+    "file": "../corpse_light.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "abade584269fde21948c8e6c0b31308c6c36b25b9fa6771eb191b7ac0568cab2"
+  },
+  {
+    "id": "plague_rats",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One rat only, full body with a small margin, tail tip included. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: strict side view (profile), facing right, standing on four legs clearly apart, tail stretched straight out behind and not touching the ground.\n\nSubject: Plague Rat, a big diseased sewer rat with patchy fur, sores and a scarred snout. Colours: dirty pink-grey, brown fur, yellow teeth.",
+    "reference": "assets/source/generated/creature_plague_rats.png",
+    "file": "../plague_rats.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "7fc5ade846a8ca053d0c73ebaac79c44e82014784daec2c0a2a7f80408649129"
+  },
+  {
+    "id": "tomb_scarabs",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One beetle only, full body with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: three-quarter side view, facing right, standing on six legs spread wide and clearly apart, wing cases closed.\n\nSubject: Tomb Scarab, a dog-sized beetle with a ridged bronze-black shell, horned head and serrated mandibles. Colours: bronze black, dusty brown, dull gold edges.",
+    "reference": "assets/source/generated/creature_tomb_scarabs.png",
+    "file": "../tomb_scarabs.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "4c7f9399d1bee3d2cbc299cc9b3a04f252f079c7bddf0059dd2fa7898a991365"
+  },
+  {
+    "id": "molten_engine",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no smoke or sparks. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright on two thick armoured legs, feet apart, legs clearly separated. Two arms held down and away from the body with a clear gap: the right arm is a riveted crane arm holding a glowing crucible on a short chain, the left arm a thick piston arm with a clamp hand. No crew riding on it.\n\nSubject: Molten Engine, a walking foundry of riveted dark iron and brass plates, with a glowing furnace door in the chest, short chimney stacks on its back (no smoke), and a small armoured head housing between the shoulders. Colours: dark iron, tarnished brass, orange glow.",
+    "reference": "assets/source/generated/creature_molten_engine.png",
+    "file": "../molten_engine.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "51d9d351bafbfb88348b4bb0417d79d35aabf637b30c4ad202c14070f9e346f8"
+  },
+  {
+    "id": "worldforge_engine",
+    "kind": "unit",
+    "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no smoke or sparks. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright on two thick armoured legs, feet apart, legs clearly separated. Two arms held down and away from the body with a clear gap: the right arm ends in a huge glowing forge hammer head, the left arm a thick piston arm with a clamp hand. No crew riding on it.\n\nSubject: Worldforge Engine, a bigger walking foundry: heavier riveted dark iron plates with brass trim, a large glowing furnace door in the chest, short chimney stacks on its back (no smoke), a small armoured head housing between the shoulders, and dark banners as short plates on the hips. Colours: dark iron, brass gold, orange glow.",
+    "reference": "assets/source/generated/creature_worldforge_engine.png",
+    "file": "../worldforge_engine.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "02cbdc3f9bfcc71513e331a7bf5e4c398c7b442af1ca66cd479524d9d03c9c6d"
+  }
+]

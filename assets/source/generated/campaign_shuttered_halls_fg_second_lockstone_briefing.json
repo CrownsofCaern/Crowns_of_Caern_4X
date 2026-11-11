@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_shuttered_halls_fg_second_lockstone_briefing",
+  "campaign": "shuttered_halls",
+  "chapter": "fg_second_lockstone",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_shuttered_halls_fg_second_lockstone_briefing.txt",
+  "prompt_sha256": "584ab5c1bbb8f56438d82e418ca4268bbad5a731a6d92b113c64c5879aae196a",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "9d710cc05a028d626c2ec9aeb31c90568243acdb1ffb6f7fd63b0321f42e2323",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/forge-01-source.png",
+  "source_sha256": "76398fcabe51e091b0ca57d719e00ee2896883661dded2608f0f67749a1235ab",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/forge-01-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/forge-01-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "forge_thrall",
+    "ironclad_thrall",
+    "rivet_crossbowman",
+    "rivet_arbalist"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "forge_thrall",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_forge_thrall.png",
+      "reference_sha256": "5380b8095351b9a31658566bb2268a1a0602a42a7ee13d4a43812005131b67b8"
+    },
+    {
+      "id": "ironclad_thrall",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_ironclad_thrall.png",
+      "reference_sha256": "d86bb4b32ecf632347c94ed6a818f843ddc05eda4adfcd14a453f5a99201f920"
+    },
+    {
+      "id": "rivet_crossbowman",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rivet_crossbowman.png",
+      "reference_sha256": "bd51f727131c8df824964299c48b4da5a150417c51a1a075dc4a6cf150f0eedc"
+    },
+    {
+      "id": "rivet_arbalist",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rivet_arbalist.png",
+      "reference_sha256": "a2ceeb078fcaa846fba0f1fbe40f347199efb5fccec9bf24b4f6767ad0e039b4"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

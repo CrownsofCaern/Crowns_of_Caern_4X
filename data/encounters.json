@@ -1,0 +1,703 @@
+{
+  "_doc": "Adventure-map encounters (choice events). A map object {type: 'encounter', encounter: <id>} triggers one when a hero walks into it. Each choice may have: requires (conditions, all must hold), cost (resources and/or movement), check (success chance) and outcomes success/failure (or just success when there is no check). Conditions: class, not_class, faction, skill {id: min}, attr {id: min}, army_tag, army_role, min_creatures, terrain (encounter tile), mark, no_mark (persistent hero marks), min_level, min_week, any [conditions]. Effects: resources, xp, recruit, casualties, movement, skill_point, mark, reveal, ambush, artifact, boon {mods, days} (HeroModifiers mods on the hero for days), mana {amount} (restored up to the hero's maximum), veteran_xp {amount} (every stack of the army). sprite (optional): atlas sprite drawn for the encounter, default encounter_<id>. Counts scale with the week via per_week. 'leave: true' keeps the encounter on the map. See src/game/encounter_system.gd.",
+  "chance_floor": 0.05,
+  "chance_cap": 0.95,
+  "marks": {
+    "blessed_by_saint":   {"name": "Blessed by the Saint", "text": "Prayed at a saint's shrine and was answered."},
+    "shrine_defiler":     {"name": "Shrine Defiler",       "text": "Robbed a saint's reliquary. Holy places turn cold."},
+    "shelter_giver":      {"name": "Shelter-Giver",        "text": "Fed and protected the dispossessed."},
+    "oppressor":          {"name": "Oppressor",            "text": "Pressed refugees into service."},
+    "friend_of_the_road": {"name": "Friend of the Road",   "text": "Carried a dying courier's message. Sellswords and travellers trust you."},
+    "oathbreaker":        {"name": "Oathbreaker",          "text": "Robbed a dying courier."},
+    "pit_champion":       {"name": "Pit Champion",         "text": "Won a duel in the ash pit. Fighters respect you."},
+    "deathbinder":        {"name": "Deathbinder",          "text": "Bound the restless dead of a barrow field."},
+    "grove_sworn":        {"name": "Grove-Sworn", "text": "Swore to spare a sacred grove. The old woods remember."},
+    "grove_breaker":      {"name": "Grove-Breaker", "text": "Felled the ironwood. No grove will speak to you again."},
+    "tide_sworn":         {"name": "Tide-Sworn", "text": "Prayed at the shrine of the low tide. The drowned places open to you."}
+  },
+  "encounters": {
+    "ashen_saint_shrine": {
+      "name": "Shrine of the Ash-Choked Saint",
+      "text": "A soot-blackened reliquary leans against a dead oak. Inside, a saint's skull still wears a crown of tarnished silver, and the air tastes of old smoke.",
+      "choices": [
+        {"text": "Kneel and pray",
+         "check": {"chance": 0.5, "per_attr": {"knowledge": 0.08}, "mods": [{"when": {"faction": ["concord"]}, "add": 0.2}, {"when": {"mark": "shrine_defiler"}, "add": -0.4}, {"when": {"mark": "oppressor"}, "add": -0.2}]},
+         "success": {"text": "A warmth that is not fire settles over the column. The men march straighter.", "effects": [{"type": "xp", "amount": 250}, {"type": "mark", "mark": "blessed_by_saint"}]},
+         "failure": {"text": "Only silence answers. The skull's empty sockets watch you go.", "effects": [{"type": "xp", "amount": 50}]}},
+        {"text": "Strip the reliquary",
+         "check": {"chance": 0.6, "mods": [{"when": {"faction": ["ashen"]}, "add": 0.25}], "per_skill": {"scouting": 0.05}},
+         "success": {"text": "Silver and saint-glass fill your saddlebags. Somewhere, a bell tolls once.", "effects": [{"type": "resources", "resources": {"gold": 600, "crystal": 2}}, {"type": "mark", "mark": "shrine_defiler"}]},
+         "failure": {"text": "Hooded wardens pour from the ruins, howling the saint's name.", "effects": [{"type": "mark", "mark": "shrine_defiler"}, {"type": "ambush", "name": "Shrine wardens", "stacks": [{"creature": "pike_militia", "count": 16, "per_week": 4}, {"creature": "longbowman", "count": 6, "per_week": 2}]}]}},
+        {"text": "Leave the dead in peace", "leave": true}
+      ]
+    },
+    "dispossessed_column": {
+      "name": "Column of the Dispossessed",
+      "text": "Carts piled with bedding, grandmothers, a goat. Burned-out villagers trudge west, away from the red sky. Their eyes go to your banners, then to the ground.",
+      "choices": [
+        {"text": "Share provisions and offer them service",
+         "requires": {"faction": ["concord"]},
+         "cost": {"gold": 400},
+         "success": {"text": "The strongest take up pikes. 'For bread and a roof,' their elder says.", "effects": [{"type": "recruit", "creature": "pike_militia", "count": 8, "per_week": 2}, {"type": "mark", "mark": "shelter_giver"}]}},
+        {"text": "Press the able-bodied into service",
+         "requires": {"faction": ["ashen"]},
+         "success": {"text": "Chains are cheaper than bread.", "effects": [{"type": "recruit", "creature": "pike_militia", "count": 6, "per_week": 2}, {"type": "mark", "mark": "oppressor"}]}},
+        {"text": "Escort them to the ford",
+         "cost": {"movement": 400},
+         "success": {"text": "You see them across the river before dusk. Word of it travels ahead of you.", "effects": [{"type": "xp", "amount": 150}, {"type": "mark", "mark": "shelter_giver"}]}},
+        {"text": "Let them pass", "leave": true}
+      ]
+    },
+    "overturned_wagon": {
+      "name": "Overturned Supply Wagon",
+      "text": "A quartermaster's wagon lies on its side, axle snapped, oxen gone. Crates are still lashed to the bed. The mud around it is churned by too many paws.",
+      "choices": [
+        {"text": "Search the wreck",
+         "check": {"chance": 0.55, "per_skill": {"scouting": 0.15}},
+         "success": {"text": "Timber, iron and a paymaster's purse, untouched.", "effects": [{"type": "resources", "resources": {"gold": 300, "wood": 5, "ore": 5}}]},
+         "failure": {"text": "The carrion pack that killed the oxen comes back for seconds.", "effects": [{"type": "ambush", "name": "Carrion wolves", "stacks": [{"creature": "thornwolf", "count": 6, "per_week": 2}]}]}},
+        {"text": "Salvage only the timber",
+         "cost": {"movement": 200},
+         "success": {"text": "Your men break up the wagon bed for firewood and stakes.", "effects": [{"type": "resources", "resources": {"wood": 4}}]}},
+        {"text": "Leave it", "leave": true}
+      ]
+    },
+    "blind_cartographer": {
+      "name": "The Blind Cartographer",
+      "text": "An old man with milk-white eyes sits among rolled maps, inking coastlines by touch. 'I remember every road,' he says, 'for a price.'",
+      "choices": [
+        {"text": "Buy his charts",
+         "cost": {"gold": 750},
+         "success": {"text": "His charts are uncannily exact.", "effects": [{"type": "reveal", "radius": 9}]}},
+        {"text": "Trade stories of the road",
+         "requires": {"any": [{"class": ["ranger"]}, {"skill": {"scouting": 2}}]},
+         "success": {"text": "He trades a scout's tale for a scout's tale, and marks the hidden paths for free.", "effects": [{"type": "reveal", "radius": 7}, {"type": "xp", "amount": 80}]}},
+        {"text": "Move on", "leave": true}
+      ]
+    },
+    "free_company_camp": {
+      "name": "Free Company Encampment",
+      "text": "Tents patched with captured banners. Slingers dice around a fire while their captain, a scarred woman with one ear, sizes up your army.",
+      "choices": [
+        {"text": "Hire the slingers",
+         "cost": {"gold": 1100},
+         "success": {"text": "Coin changes hands; the company falls in behind you.", "effects": [{"type": "recruit", "creature": "crag_slinger", "count": 12, "per_week": 2}]}},
+        {"text": "Negotiate as a friend of the road",
+         "requires": {"any": [{"skill": {"leadership": 2}}, {"mark": "friend_of_the_road"}, {"mark": "shelter_giver"}], "no_mark": "oathbreaker"},
+         "cost": {"gold": 600},
+         "success": {"text": "'I've heard of you,' the captain says. 'Half price, and we keep the loot.'", "effects": [{"type": "recruit", "creature": "crag_slinger", "count": 12, "per_week": 2}]}},
+        {"text": "Challenge the captain",
+         "check": {"chance": 0.3, "per_attr": {"attack": 0.06}, "per_skill": {"tactics": 0.08}, "mods": [{"when": {"class": ["warlord"]}, "add": 0.2}, {"when": {"mark": "pit_champion"}, "add": 0.15}]},
+         "success": {"text": "She yields with a bloody grin. Her company follows the stronger blade.", "effects": [{"type": "recruit", "creature": "crag_slinger", "count": 10, "per_week": 2}, {"type": "xp", "amount": 120}]},
+         "failure": {"text": "You are beaten in front of both armies. Some of your own desert in the night.", "effects": [{"type": "casualties", "fraction": 0.1}, {"type": "movement", "amount": -400}]}},
+        {"text": "Ride on", "leave": true}
+      ]
+    },
+    "drowned_chapel": {
+      "name": "The Drowned Chapel",
+      "text": "Only the bell tower rises from the black water. Something silver glints in the drowned nave, and the reeds whisper with no wind.",
+      "choices": [
+        {"text": "Dive for the bell-silver",
+         "check": {"chance": 0.45, "mods": [{"when": {"terrain": ["swamp"], "army_tag": "beast"}, "add": 0.15}, {"when": {"mark": "blessed_by_saint"}, "add": 0.2}, {"when": {"mark": "deathbinder"}, "add": 0.15}, {"when": {"army_role": "support"}, "add": 0.1}]},
+         "success": {"text": "Your divers surface with quicksilver flasks and gem-set chalices.", "effects": [{"type": "resources", "resources": {"mercury": 4, "gems": 2}}]},
+         "failure": {"text": "Something in the black water drags men under. The bell rings, though no one touched it.", "effects": [{"type": "casualties", "fraction": 0.15, "role": "infantry"}]}},
+        {"text": "Burn incense from the shore",
+         "requires": {"mark": "blessed_by_saint"},
+         "success": {"text": "The whispering stops. In the silence you find an offering left on the steps.", "effects": [{"type": "resources", "resources": {"mercury": 2}}, {"type": "xp", "amount": 120}]}},
+        {"text": "Leave it to the reeds", "leave": true}
+      ]
+    },
+    "barrow_field": {
+      "name": "Field of Unquiet Barrows",
+      "text": "Grave mounds in rows too straight to be natural, each capped with a rusted helm. The ground is cold even under the sun.",
+      "choices": [
+        {"text": "Dig among the dead",
+         "check": {"chance": 0.5, "mods": [{"when": {"class": ["necromancer"]}, "add": 0.3}, {"when": {"mark": "deathbinder"}, "add": 0.2}, {"when": {"faction": ["concord"]}, "add": -0.1}]},
+         "success": {"text": "Grave-gold and burial gems, and nothing stirs.", "effects": [{"type": "resources", "resources": {"gold": 1000, "gems": 2}}]},
+         "failure": {"text": "The barrow-cold seeps into the ranks. By morning, some do not wake.", "effects": [{"type": "casualties", "fraction": 0.15}, {"type": "resources", "resources": {"gold": 300}}]}},
+        {"text": "Bind the restless dead",
+         "requires": {"class": ["necromancer"]},
+         "success": {"text": "You speak the old names. The dead grow still and tell you their secrets.", "effects": [{"type": "xp", "amount": 300}, {"type": "resources", "resources": {"gems": 1}}, {"type": "mark", "mark": "deathbinder"}]}},
+        {"text": "Give the field a wide berth", "leave": true}
+      ]
+    },
+    "ash_pit_champion": {
+      "name": "Champion of the Ash Pit",
+      "text": "A fighting pit ringed with spikes and cheering wretches. Its champion, a hulking brute in a branded iron mask, beats his chest at you.",
+      "choices": [
+        {"text": "Step into the pit yourself",
+         "check": {"chance": 0.25, "per_attr": {"attack": 0.05, "defense": 0.04}, "per_skill": {"tactics": 0.08}, "mods": [{"when": {"class": ["warlord", "knight"]}, "add": 0.1}]},
+         "success": {"text": "The mask cracks; the crowd chants your name. Every sellsword between here and the coast will hear of it.", "effects": [{"type": "xp", "amount": 400}, {"type": "mark", "mark": "pit_champion"}]},
+         "failure": {"text": "You are carried out of the pit. Your purse stays behind, and the day is lost.", "effects": [{"type": "resources", "resources": {"gold": -300}}, {"type": "movement", "amount": -2000}]}},
+        {"text": "Pay to watch and learn",
+         "cost": {"gold": 200},
+         "success": {"text": "You study the champion's footwork from the rail.", "effects": [{"type": "xp", "amount": 80}]}},
+        {"text": "Walk away", "leave": true}
+      ]
+    },
+    "ember_rift": {
+      "name": "Ember Rift",
+      "text": "The ground splits into a glowing seam. Things with too many joints crawl at its lip, and the brimstone stink makes the horses scream.",
+      "choices": [
+        {"text": "Call what crawls out",
+         "requires": {"faction": ["ashen"]},
+         "success": {"text": "The rift-spawn bow to the ash-brand on your brow and fall in line.", "effects": [{"type": "recruit", "creature": "cinderling", "count": 10, "per_week": 3}]}},
+        {"text": "Seal the rift",
+         "check": {"chance": 0.45, "per_attr": {"power": 0.08}, "mods": [{"when": {"faction": ["concord"]}, "add": 0.1}, {"when": {"terrain": ["infernal"]}, "add": -0.15}, {"when": {"mark": "blessed_by_saint"}, "add": 0.15}]},
+         "success": {"text": "Rock grinds shut over the glow. Brimstone crusts the seam, yours for the taking.", "effects": [{"type": "xp", "amount": 300}, {"type": "resources", "resources": {"sulfur": 4}}]},
+         "failure": {"text": "The rift vomits its brood before it closes.", "effects": [{"type": "ambush", "name": "Rift-spawn", "stacks": [{"creature": "cinderling", "count": 14, "per_week": 4}, {"creature": "scorchhound", "count": 3, "per_week": 1}]}]}},
+        {"text": "Back away from the glow", "leave": true}
+      ]
+    },
+    "thornwolf_den": {
+      "name": "Thornwolf Den",
+      "text": "Bones and bramble mark the mouth of a hollow under the roots. Yellow eyes watch from the dark; the pack has not decided what you are.",
+      "choices": [
+        {"text": "Try to tame the pack",
+         "requires": {"any": [{"class": ["ranger"]}, {"skill": {"scouting": 2}}, {"army_tag": "beast"}]},
+         "check": {"chance": 0.45, "per_skill": {"scouting": 0.1}, "mods": [{"when": {"terrain": ["forest"]}, "add": 0.15}, {"when": {"army_tag": "beast"}, "add": 0.1}]},
+         "success": {"text": "The pack leader takes meat from your hand. The rest follow it.", "effects": [{"type": "recruit", "creature": "thornwolf", "count": 5, "per_week": 1}]},
+         "failure": {"text": "The pack decides you are prey.", "effects": [{"type": "ambush", "name": "Thornwolf pack", "stacks": [{"creature": "thornwolf", "count": 8, "per_week": 2}]}]}},
+        {"text": "Smoke them out",
+         "success": {"text": "Snarling shapes burst from the smoke.", "effects": [{"type": "ambush", "name": "Thornwolf pack", "stacks": [{"creature": "thornwolf", "count": 7, "per_week": 2}]}]}},
+        {"text": "Leave the den alone", "leave": true}
+      ]
+    },
+    "brigand_toll": {
+      "name": "Brigand Toll",
+      "text": "A chain across the bridge, a brazier and a dozen slingers on the far bank. 'Road's ours,' their leader calls. 'Pay up or swim.'",
+      "choices": [
+        {"text": "Pay the toll",
+         "cost": {"gold": 350},
+         "success": {"text": "The chain drops. The brigands melt into the reeds, counting coins.", "effects": []}},
+        {"text": "Stare them down",
+         "requires": {"any": [{"min_creatures": 30}, {"skill": {"tactics": 2}}, {"mark": "pit_champion"}]},
+         "check": {"chance": 0.6, "per_skill": {"tactics": 0.1, "leadership": 0.05}},
+         "success": {"text": "They take one look at your column and run, leaving their strongbox behind.", "effects": [{"type": "resources", "resources": {"gold": 400}}]},
+         "failure": {"text": "Their leader calls your bluff.", "effects": [{"type": "ambush", "name": "Bridge brigands", "stacks": [{"creature": "crag_slinger", "count": 14, "per_week": 3}]}]}},
+        {"text": "Clear the bridge by force",
+         "success": {"text": "Slingstones rattle off your shields.", "effects": [{"type": "ambush", "name": "Bridge brigands", "stacks": [{"creature": "crag_slinger", "count": 12, "per_week": 3}]}]}}
+      ]
+    },
+    "dying_courier": {
+      "name": "The Dying Courier",
+      "text": "A rider slumped against a milestone, an arrow through his side and a sealed satchel clutched to his chest. 'The pass at Harrowgate,' he whispers. 'They must know.'",
+      "choices": [
+        {"text": "Carry his message on",
+         "cost": {"movement": 300},
+         "success": {"text": "The garrison pays well for the warning, and the road remembers who brought it.", "effects": [{"type": "resources", "resources": {"gold": 500}}, {"type": "xp", "amount": 100}, {"type": "mark", "mark": "friend_of_the_road"}]}},
+        {"text": "Take the satchel and go",
+         "success": {"text": "Coin, a signet ring, and a letter you burn unread.", "effects": [{"type": "resources", "resources": {"gold": 250}}, {"type": "mark", "mark": "oathbreaker"}]}},
+        {"text": "Leave him to the crows", "leave": true}
+      ]
+    },
+    "hall_of_echoes": {
+      "name": "Hall of Echoes",
+      "text": "A roofless hall where every carved word is repeated back a heartbeat late. Generations of commanders have cut their lessons into its walls.",
+      "choices": [
+        {"text": "Study the inscriptions",
+         "requires": {"min_level": 2},
+         "cost": {"gold": 1500, "crystal": 3, "movement": 600},
+         "success": {"text": "Days pass in an afternoon. You leave knowing something you did not before.", "effects": [{"type": "skill_point", "amount": 1}]}},
+        {"text": "Rest in the hall",
+         "success": {"text": "The echoes lull the army to sleep. Your scouts rise early and range far.", "effects": [{"type": "reveal", "radius": 6}]}},
+        {"text": "Leave", "leave": true}
+      ]
+    },
+    "stranded_salt_caravan": {
+      "name": "Stranded Salt Caravan",
+      "sprite": "encounter_overturned_wagon",
+      "text": "Six wagons of rock salt sit axle-deep in a sinkhole. The drovers have eaten their mules and are starting to eye each other.",
+      "choices": [
+        {"text": "Buy their salted stores",
+         "cost": {"gold": 300},
+         "success": {"text": "Salt pork and hard biscuit for the whole column. The men march on full bellies.", "effects": [{"type": "boon", "mods": {"movement_pct": 0.1}, "days": 3}]}},
+        {"text": "Haul the wagons free",
+         "cost": {"movement": 300},
+         "success": {"text": "Your soldiers put their backs into it. The drovers pay what they can and spread your name down the road.", "effects": [{"type": "resources", "resources": {"gold": 200}}, {"type": "xp", "amount": 120}, {"type": "mark", "mark": "friend_of_the_road"}]}},
+        {"text": "Mend the axles with deep-folk craft",
+         "requires": {"faction": ["forge"]},
+         "success": {"text": "Your smiths have the wagons rolling by noon and take their pay in timber and salt-coin.", "effects": [{"type": "resources", "resources": {"gold": 400, "wood": 3}}]}},
+        {"text": "Ride around the sinkhole", "leave": true}
+      ]
+    },
+    "bitter_well": {
+      "name": "The Bitter Well",
+      "sprite": "place_saint_orrins_rest",
+      "text": "A well-house of cracked tile, its rope still wet. The water smells of iron and something older. Someone has scratched 'do not drink' into the lintel, and someone else has scratched it out.",
+      "choices": [
+        {"text": "Draw water for the column",
+         "check": {"chance": 0.6, "mods": [{"when": {"faction": ["fishmen"]}, "add": 0.3}, {"when": {"mark": "tide_sworn"}, "add": 0.2}]},
+         "success": {"text": "Cold, clean and strangely heartening. The men sing on the march.", "effects": [{"type": "boon", "mods": {"morale": 1}, "days": 3}]},
+         "failure": {"text": "By evening the sick are falling out of the line.", "effects": [{"type": "casualties", "fraction": 0.05}]}},
+        {"text": "Bless the water",
+         "requires": {"mark": "blessed_by_saint"},
+         "success": {"text": "The iron smell fades. Your casters drink deep and feel their strength return.", "effects": [{"type": "mana", "amount": 10}, {"type": "xp", "amount": 100}]}},
+        {"text": "Fill no skins here", "leave": true}
+      ]
+    },
+    "hedge_witch_hut": {
+      "name": "Hedge-Witch's Hut",
+      "sprite": "place_barrow_camp",
+      "text": "A turf hut hung with bird skulls and drying nettles. The old woman inside does not look up from her pot. 'Coin first,' she says, 'questions after.'",
+      "choices": [
+        {"text": "Pay for a charm",
+         "cost": {"gold": 500},
+         "success": {"text": "She ties a knot of hair and copper wire to your saddle. Your spells come easier.", "effects": [{"type": "mana", "amount": 15}, {"type": "boon", "mods": {"power": 1}, "days": 7}]}},
+        {"text": "Trade lore, caster to caster",
+         "requires": {"class": ["oracle", "thornspeaker", "frostcaller", "de_veilseer", "fm_deep_oracle", "warlock", "blightcaller"]},
+         "success": {"text": "She trades a cradle-song for a curse, and both of you come away richer.", "effects": [{"type": "xp", "amount": 200}, {"type": "mana", "amount": 10}]}},
+        {"text": "Burn the hut",
+         "success": {"text": "The thatch goes up like paper. Something shrieks inside the smoke and comes out swinging.", "effects": [{"type": "resources", "resources": {"gold": 300}}, {"type": "ambush", "name": "Hedge-witch", "stacks": [{"creature": "marsh_hag", "count": 3, "per_week": 1}]}]}},
+        {"text": "Leave her to her pot", "leave": true}
+      ]
+    },
+    "deserters_fire": {
+      "name": "Deserters' Fire",
+      "sprite": "encounter_free_company_camp",
+      "text": "A dozen crossbowmen in mismatched livery huddle round a fire in a ditch. They have the look of men who ran from the same battle in different directions.",
+      "choices": [
+        {"text": "Offer them amnesty",
+         "requires": {"any": [{"skill": {"leadership": 1}}, {"mark": "shelter_giver"}, {"mark": "friend_of_the_road"}], "no_mark": "oppressor"},
+         "success": {"text": "'No questions?' 'None.' They stamp out the fire and fall in at the rear.", "effects": [{"type": "recruit", "creature": "deserter_crossbows", "count": 6, "per_week": 1}]}},
+        {"text": "Hang them as an example",
+         "success": {"text": "The ranks watch in silence. Nobody will run from your banner this month.", "effects": [{"type": "xp", "amount": 120}, {"type": "mark", "mark": "oppressor"}]}},
+        {"text": "Pretend you did not see them", "leave": true}
+      ]
+    },
+    "lost_pilgrims_band": {
+      "name": "Lost Pilgrims",
+      "sprite": "encounter_dispossessed_column",
+      "text": "Barefoot pilgrims in ash-grey robes, searching for a shrine that burned a generation ago. They ask you the way as if you might know.",
+      "choices": [
+        {"text": "Guide them to the road",
+         "cost": {"movement": 400},
+         "success": {"text": "They bless every man in the column by name. It takes all afternoon.", "effects": [{"type": "xp", "amount": 150}, {"type": "mark", "mark": "shelter_giver"}]}},
+        {"text": "Take them into service",
+         "success": {"text": "Faith is a poor shield, but they will hold a line.", "effects": [{"type": "recruit", "creature": "lost_pilgrims", "count": 12, "per_week": 3}]}},
+        {"text": "Let them walk on after dying",
+         "requires": {"faction": ["hollow"]},
+         "success": {"text": "They find their shrine after all, in a manner of speaking. They do not stop walking.", "effects": [{"type": "recruit", "creature": "shambler", "count": 10, "per_week": 3}, {"type": "mark", "mark": "oppressor"}]}},
+        {"text": "Point them nowhere", "leave": true}
+      ]
+    },
+    "grey_ferryman": {
+      "name": "The Grey Ferryman",
+      "sprite": "place_fenwick_dike",
+      "text": "A flat barge on a rope, and a ferryman with a face like wet clay. 'Across is quicker,' he says. 'Across is always quicker.'",
+      "choices": [
+        {"text": "Pay the fare",
+         "cost": {"gold": 300},
+         "success": {"text": "The barge glides over black water and lands you leagues downstream, fresh as morning.", "effects": [{"type": "movement", "amount": 600}]}},
+        {"text": "Swim beside the barge",
+         "requires": {"faction": ["fishmen"]},
+         "success": {"text": "Your warriors take to the water like coming home. The ferryman nods as if he expected it.", "effects": [{"type": "movement", "amount": 800}, {"type": "xp", "amount": 50}]}},
+        {"text": "Take the barge by force",
+         "check": {"chance": 0.5, "per_attr": {"attack": 0.04}},
+         "success": {"text": "He hands over the fare-box without a word and steps into the river. He does not come up.", "effects": [{"type": "resources", "resources": {"gold": 300}}]},
+         "failure": {"text": "Things rise from under the barge when he whistles.", "effects": [{"type": "ambush", "name": "River lurkers", "stacks": [{"creature": "bog_lurker", "count": 3, "per_week": 1}]}]}},
+        {"text": "Find another crossing", "leave": true}
+      ]
+    },
+    "abandoned_quarry": {
+      "name": "Abandoned Quarry",
+      "sprite": "place_lockstone",
+      "text": "Terraces of cut stone step down into a flooded pit. Rusted picks still lie where the quarrymen dropped them the day the sky turned red.",
+      "choices": [
+        {"text": "Put the men to work",
+         "cost": {"movement": 400},
+         "success": {"text": "A day of hard labour, and carts full of good grey ore.", "effects": [{"type": "resources", "resources": {"ore": 6}}]}},
+        {"text": "Read the old seams",
+         "requires": {"faction": ["forge"]},
+         "success": {"text": "Your deep-folk find the vein the surface men missed, and a pocket of crystal below it.", "effects": [{"type": "resources", "resources": {"ore": 8, "crystal": 2}}]}},
+        {"text": "Search the deep shaft",
+         "check": {"chance": 0.45, "per_skill": {"scouting": 0.1}},
+         "success": {"text": "At the bottom of the shaft, a cache of cut gems the last foreman never came back for.", "effects": [{"type": "resources", "resources": {"gems": 3}}]},
+         "failure": {"text": "Something has been nesting in the shaft.", "effects": [{"type": "ambush", "name": "Shaft stalkers", "stacks": [{"creature": "cave_stalker", "count": 4, "per_week": 1}]}]}},
+        {"text": "Leave the pit to the water", "leave": true}
+      ]
+    },
+    "charcoal_burners": {
+      "name": "Charcoal Burners",
+      "sprite": "place_elderwold_stumps",
+      "text": "Smoke mounds smoulder among fresh stumps. Soot-black families are felling an old wood one tree at a time and selling the char to anyone with a forge.",
+      "choices": [
+        {"text": "Buy charcoal and brimstone",
+         "cost": {"gold": 400},
+         "success": {"text": "Sacks of char and the yellow crust they scrape from the kilns.", "effects": [{"type": "resources", "resources": {"wood": 4, "sulfur": 2}}]}},
+        {"text": "Forbid the felling",
+         "requires": {"faction": ["thornwood"]},
+         "success": {"text": "You make them swear by the roots. The wood breathes easier, and so do you.", "effects": [{"type": "xp", "amount": 200}, {"type": "mark", "mark": "grove_sworn"}]}},
+        {"text": "Swear to spare the wood",
+         "requires": {"not_class": ["warlord", "tormentor"]},
+         "cost": {"gold": 600},
+         "success": {"text": "You pay them to move on. The old wood is quiet, but it noticed.", "effects": [{"type": "mark", "mark": "grove_sworn"}, {"type": "xp", "amount": 80}]}},
+        {"text": "Ride through the smoke", "leave": true}
+      ]
+    },
+    "rune_cairn": {
+      "name": "Rune Cairn",
+      "sprite": "place_lockstone",
+      "text": "A man-high cairn of flat stones, each cut with angular runes that seem to shift when you look away. The grass around it will not grow.",
+      "choices": [
+        {"text": "Read the runes",
+         "requires": {"any": [{"attr": {"knowledge": 3}}, {"class": ["runesmith", "oracle", "de_veilseer"]}]},
+         "success": {"text": "The runes are a soldier's prayer, and a map of where the soldier fell.", "effects": [{"type": "xp", "amount": 250}, {"type": "mana", "amount": 10}]}},
+        {"text": "Topple the cairn",
+         "success": {"text": "Under the stones, a hoard of ore-ingots wrapped in rotten leather. The runes go dark.", "effects": [{"type": "resources", "resources": {"ore": 3, "gold": 200}}, {"type": "mark", "mark": "shrine_defiler"}]}},
+        {"text": "Leave the stones standing", "leave": true}
+      ]
+    },
+    "burned_field_hospital": {
+      "name": "Burned Field Hospital",
+      "sprite": "place_saint_orrins_rest",
+      "text": "Scorched tents and rows of cots. A handful of wounded soldiers from a lost battle still breathe, tended by a single exhausted surgeon.",
+      "choices": [
+        {"text": "Tend the wounded",
+         "cost": {"gold": 300},
+         "success": {"text": "Clean linen and a week's bread. The ones who can walk ask to march with you.", "effects": [{"type": "recruit", "creature": "pike_militia", "count": 6, "per_week": 2}, {"type": "mark", "mark": "shelter_giver"}]}},
+        {"text": "Harvest the dying",
+         "requires": {"faction": ["hollow"]},
+         "success": {"text": "The surgeon flees. You do not stop him. His patients rise and follow you instead.", "effects": [{"type": "recruit", "creature": "shambler", "count": 8, "per_week": 2}, {"type": "mark", "mark": "oppressor"}]}},
+        {"text": "Salvage the supplies",
+         "success": {"text": "Tent poles, coin and bandages. The surgeon curses you as you go.", "effects": [{"type": "resources", "resources": {"gold": 250, "wood": 2}}]}},
+        {"text": "March on", "leave": true}
+      ]
+    },
+    "starving_hounds": {
+      "name": "Starving Hounds",
+      "sprite": "encounter_thornwolf_den",
+      "text": "A pack of frost-furred war dogs, collars still on, circling the frozen body of their handler. Their ribs show through the fur.",
+      "choices": [
+        {"text": "Feed them",
+         "requires": {"any": [{"class": ["ranger", "huntmaster", "reaver", "fm_reef_hunter", "de_nightstalker"]}, {"army_tag": "beast"}]},
+         "cost": {"gold": 200},
+         "success": {"text": "They eat from your hand and then will not leave your side.", "effects": [{"type": "recruit", "creature": "rimefang_hound", "count": 4, "per_week": 1}]}},
+        {"text": "Call them in the clan tongue",
+         "requires": {"faction": ["frostmarch"]},
+         "success": {"text": "Their ears go up at the old words. They know who they belong to now.", "effects": [{"type": "recruit", "creature": "rimefang_hound", "count": 6, "per_week": 1}]}},
+        {"text": "Drive them off",
+         "success": {"text": "Hunger makes them brave.", "effects": [{"type": "ambush", "name": "Starving hounds", "stacks": [{"creature": "rimefang_hound", "count": 6, "per_week": 2}]}]}},
+        {"text": "Give the pack a wide berth", "leave": true}
+      ]
+    },
+    "smugglers_cove": {
+      "name": "Smugglers' Cove",
+      "sprite": "place_fenwick_dike",
+      "text": "Lanterns hooded with sacking, barrels rolled up a shingle beach by night. The smugglers freeze when they see your banners, then decide to smile.",
+      "choices": [
+        {"text": "Buy their contraband",
+         "cost": {"gold": 800},
+         "success": {"text": "Quicksilver in sealed jars and brimstone packed in straw, no questions asked.", "effects": [{"type": "resources", "resources": {"mercury": 3, "sulfur": 3}}]}},
+        {"text": "Trade whispers with them",
+         "requires": {"faction": ["darkelf"]},
+         "success": {"text": "Smugglers know every path that the patrols do not. Your agents buy all of it.", "effects": [{"type": "reveal", "radius": 10}, {"type": "resources", "resources": {"gold": 300}}]}},
+        {"text": "Raid the cove",
+         "check": {"chance": 0.5, "per_skill": {"tactics": 0.08}},
+         "success": {"text": "They scatter into the dark and leave their strongboxes behind.", "effects": [{"type": "resources", "resources": {"gold": 900}}]},
+         "failure": {"text": "They are better armed than they looked.", "effects": [{"type": "ambush", "name": "Smugglers", "stacks": [{"creature": "road_cutthroat", "count": 10, "per_week": 3}]}]}},
+        {"text": "Let them unload in peace", "leave": true}
+      ]
+    },
+    "old_drillmaster": {
+      "name": "The Old Drillmaster",
+      "sprite": "encounter_hall_of_echoes",
+      "text": "A one-legged sergeant on a barrel by the roadside, watching your column march past with open contempt. 'Call that a file?' he says. 'Give me a week.'",
+      "choices": [
+        {"text": "Pay him to drill the ranks",
+         "cost": {"gold": 900, "movement": 300},
+         "success": {"text": "Three days of shouting compressed into one. Your veterans grumble and march better for it.", "effects": [{"type": "veteran_xp", "amount": 800}]}},
+        {"text": "Argue tactics with him",
+         "requires": {"any": [{"skill": {"tactics": 2}}, {"mark": "pit_champion"}]},
+         "success": {"text": "He calls you a fool four times and then teaches you everything he knows.", "effects": [{"type": "veteran_xp", "amount": 1200}, {"type": "xp", "amount": 100}]}},
+        {"text": "Let him sneer", "leave": true}
+      ]
+    },
+    "weeping_spring": {
+      "name": "Weeping Spring",
+      "sprite": "encounter_drowned_chapel",
+      "text": "Water runs down the face of a rock carved into a woman's shape, pooling in a basin worn smooth by centuries of hands. It hums faintly with old magic.",
+      "choices": [
+        {"text": "Drink from the basin",
+         "success": {"text": "The water tastes of rain and lightning. Your mind clears.", "effects": [{"type": "mana", "amount": 20}]}},
+        {"text": "Bottle the water",
+         "cost": {"movement": 300},
+         "success": {"text": "The water settles into quicksilver as it cools in the flasks.", "effects": [{"type": "resources", "resources": {"mercury": 2}}]}},
+        {"text": "Pray at the stone",
+         "requires": {"any": [{"faction": ["fishmen", "concord"]}, {"mark": "tide_sworn"}]},
+         "success": {"text": "The humming rises to a single clear note. Your column marches as if blessed.", "effects": [{"type": "mana", "amount": 10}, {"type": "boon", "mods": {"morale": 1}, "days": 7}]}},
+        {"text": "Leave the stone her tears", "leave": true}
+      ]
+    },
+    "wyrm_carcass": {
+      "name": "Carcass of a Wyrm",
+      "sprite": "place_wound",
+      "text": "A wyrm the length of a village lies dead in a scorched furrow it ploughed when it fell. Carrion birds blacken its back. Something else is feeding at the far end.",
+      "choices": [
+        {"text": "Harvest the scales",
+         "check": {"chance": 0.5, "per_skill": {"scouting": 0.08}},
+         "success": {"text": "Gem-hard scales and crystal from the wyrm's gizzard, before the scavengers notice.", "effects": [{"type": "resources", "resources": {"gems": 4, "crystal": 2}}]},
+         "failure": {"text": "The scavengers notice.", "effects": [{"type": "ambush", "name": "Carrion feeders", "stacks": [{"creature": "carrion_flock", "count": 12, "per_week": 3}, {"creature": "venom_wyvern", "count": 1}]}]}},
+        {"text": "Burn it on a pyre",
+         "requires": {"faction": ["ashen"]},
+         "success": {"text": "Wyrm-fat burns for a day and a night. Your demons dance in the smoke and come out hungry for war.", "effects": [{"type": "boon", "mods": {"attack": 1}, "days": 7}, {"type": "resources", "resources": {"sulfur": 4}}]}},
+        {"text": "Eat the heart",
+         "requires": {"faction": ["frostmarch"]},
+         "success": {"text": "The old custom. Every man takes a mouthful, raw and steaming. They will not forget it.", "effects": [{"type": "boon", "mods": {"attack": 2}, "days": 7}, {"type": "xp", "amount": 150}]}},
+        {"text": "Leave it to the birds", "leave": true}
+      ]
+    },
+    "besieged_hamlet": {
+      "name": "Besieged Hamlet",
+      "sprite": "place_barrow_camp",
+      "text": "Brigands have ringed a walled hamlet and are working a ram on the gate. On the wall, villagers wave torn sheets at your banners.",
+      "choices": [
+        {"text": "Break the siege",
+         "success": {"text": "The villagers throw their savings down from the wall as you charge.", "effects": [{"type": "resources", "resources": {"gold": 600}}, {"type": "mark", "mark": "shelter_giver"}, {"type": "ambush", "name": "Hamlet raiders", "stacks": [{"creature": "road_cutthroat", "count": 16, "per_week": 4}, {"creature": "deserter_crossbows", "count": 6, "per_week": 2}]}]}},
+        {"text": "Buy the brigands off",
+         "cost": {"gold": 1000},
+         "success": {"text": "They take the coin and go. The villagers are grateful, if puzzled.", "effects": [{"type": "xp", "amount": 150}, {"type": "mark", "mark": "shelter_giver"}]}},
+        {"text": "Offer the brigands a better fight",
+         "requires": {"any": [{"mark": "pit_champion"}, {"class": ["warlord", "reaver", "de_dreadmarshal"]}]},
+         "success": {"text": "Their captain knows your name. Half of them change sides on the spot.", "effects": [{"type": "recruit", "creature": "road_cutthroat", "count": 10, "per_week": 3}, {"type": "xp", "amount": 100}]}},
+        {"text": "Not your hamlet", "leave": true}
+      ]
+    },
+    "sunken_reliquary": {
+      "name": "Sunken Reliquary",
+      "sprite": "encounter_drowned_chapel",
+      "text": "A reliquary chapel slid into a flooded quarry long ago. Through the green water you can see gilt glinting on the altar, and pale shapes drifting between the pews.",
+      "choices": [
+        {"text": "Send your divers down",
+         "requires": {"faction": ["fishmen"]},
+         "success": {"text": "Your warriors move through the drowned nave as if it were their own temple. Perhaps it once was.", "effects": [{"type": "resources", "resources": {"gems": 3, "mercury": 3}}, {"type": "xp", "amount": 200}]}},
+        {"text": "Dive for the gilt",
+         "check": {"chance": 0.35, "mods": [{"when": {"mark": "tide_sworn"}, "add": 0.3}, {"when": {"terrain": ["swamp"]}, "add": 0.1}, {"when": {"mark": "shrine_defiler"}, "add": -0.2}]},
+         "success": {"text": "Gold leaf, gem-set candlesticks and a reliquary of crystal.", "effects": [{"type": "resources", "resources": {"gems": 3, "crystal": 2, "gold": 400}}]},
+         "failure": {"text": "The pale shapes are not fish. Not all the divers come up.", "effects": [{"type": "casualties", "fraction": 0.1}]}},
+        {"text": "Leave the drowned their gold", "leave": true}
+      ]
+    },
+    "market_of_bones": {
+      "name": "Market of Bones",
+      "sprite": "place_barrow_camp",
+      "text": "Stalls of bleached bone and lacquered skulls under a canvas of stitched hides. The traders wear masks and accept any coin, any soul.",
+      "choices": [
+        {"text": "Buy fresh stock",
+         "requires": {"faction": ["hollow"]},
+         "cost": {"gold": 600},
+         "success": {"text": "Crates of disassembled dead, packed in salt. Your weavers have them crawling by dusk.", "effects": [{"type": "recruit", "creature": "gravecrawler", "count": 4, "per_week": 1}]}},
+        {"text": "Haggle for grave-gems",
+         "cost": {"gold": 500},
+         "success": {"text": "Gems prised from the eye sockets of kings, they say. They are real enough.", "effects": [{"type": "resources", "resources": {"gems": 3}}]}},
+        {"text": "Burn the market",
+         "check": {"chance": 0.6, "per_attr": {"power": 0.04}, "mods": [{"when": {"faction": ["concord"]}, "add": 0.15}, {"when": {"mark": "blessed_by_saint"}, "add": 0.15}]},
+         "success": {"text": "The canvas burns, and whatever was trading here is gone by morning.", "effects": [{"type": "xp", "amount": 250}, {"type": "resources", "resources": {"gold": 400}}]},
+         "failure": {"text": "The merchandise objects.", "effects": [{"type": "ambush", "name": "Bone-market guards", "stacks": [{"creature": "barrow_revenant", "count": 3, "per_week": 1}]}]}},
+        {"text": "Buy nothing", "leave": true}
+      ]
+    },
+    "ironwood_grove": {
+      "name": "Ironwood Grove",
+      "sprite": "place_elderwold_stumps",
+      "text": "Black-barked trees with leaves like beaten copper, ringing faintly in the wind. Their wood turns axes. The air in the grove is very still, and very watchful.",
+      "choices": [
+        {"text": "Fell the ironwood",
+         "cost": {"movement": 600},
+         "success": {"text": "It takes all day and three broken axes. The timber is worth a fortune. Behind you, the grove goes silent.", "effects": [{"type": "resources", "resources": {"wood": 10, "gold": 300}}, {"type": "mark", "mark": "grove_breaker"}]}},
+        {"text": "Ask the grove for aid",
+         "requires": {"any": [{"faction": ["thornwood"]}, {"mark": "grove_sworn"}], "no_mark": "grove_breaker"},
+         "success": {"text": "The bark splits and wardens step out, stiff with sleep, and fall in beside you.", "effects": [{"type": "recruit", "creature": "barkhide_warden", "count": 6, "per_week": 1}, {"type": "xp", "amount": 100}]}},
+        {"text": "Rest in the shade",
+         "requires": {"no_mark": "grove_breaker"},
+         "success": {"text": "The ringing leaves lull the army. Wounds close overnight.", "effects": [{"type": "boon", "mods": {"recover_pct": 0.1, "morale": 1}, "days": 5}]}},
+        {"text": "Leave the grove", "leave": true}
+      ]
+    },
+    "cold_forge": {
+      "name": "Cold Forge of the Deep",
+      "sprite": "place_pyrehold",
+      "text": "A deep-folk forge-hall cut into the hillside, its great furnace dead for an age. Half-finished constructs stand in rows, waiting for a fire that never came.",
+      "choices": [
+        {"text": "Relight the furnace",
+         "requires": {"faction": ["forge"]},
+         "cost": {"ore": 5},
+         "success": {"text": "Your smiths sing the old waking-song. The constructs lift their heads.", "effects": [{"type": "recruit", "creature": "slag_golem", "count": 2, "per_week": 1}]}},
+        {"text": "Loot the anvils",
+         "success": {"text": "Ingots, tools and flasks of quicksilver sealed with deep-folk wax.", "effects": [{"type": "resources", "resources": {"ore": 6, "mercury": 2}}]}},
+        {"text": "Wake the furnace yourself",
+         "check": {"chance": 0.4, "per_attr": {"power": 0.06, "knowledge": 0.04}, "mods": [{"when": {"class": ["artificer", "runesmith"]}, "add": 0.25}]},
+         "success": {"text": "The fire takes. You temper your army's arms in it before the coal burns out.", "effects": [{"type": "boon", "mods": {"attack": 1, "defense": 1}, "days": 7}]},
+         "failure": {"text": "The furnace takes, and so do the sentinels guarding it.", "effects": [{"type": "ambush", "name": "Forge sentinels", "stacks": [{"creature": "ruin_sentinel", "count": 3, "per_week": 1}]}]}},
+        {"text": "Let the fire stay dead", "leave": true}
+      ]
+    },
+    "masked_envoy": {
+      "name": "The Masked Envoy",
+      "sprite": "place_cindermaw_gate",
+      "text": "A palanquin of black lacquer under a silk awning, guarded by slender figures in mirrored masks. A voice from behind the curtain offers to sell you the truth.",
+      "choices": [
+        {"text": "Accept the Court's courtesy",
+         "requires": {"faction": ["darkelf"]},
+         "success": {"text": "'Cousin.' The curtain parts a finger's width. A company of knife-dancers bows and joins your train.", "effects": [{"type": "recruit", "creature": "de_knifedancer", "count": 5, "per_week": 1}]}},
+        {"text": "Buy the truth",
+         "cost": {"gold": 1200},
+         "success": {"text": "Maps, troop counts, the names of traitors. Most of it is even true.", "effects": [{"type": "reveal", "radius": 12}, {"type": "xp", "amount": 100}]}},
+        {"text": "Seize the envoy",
+         "check": {"chance": 0.4, "per_skill": {"tactics": 0.08}},
+         "success": {"text": "The guards die without a sound. The palanquin is full of gold and sealed letters.", "effects": [{"type": "resources", "resources": {"gold": 1000}}, {"type": "mark", "mark": "oathbreaker"}]},
+         "failure": {"text": "The masks were watching for exactly this.", "effects": [{"type": "ambush", "name": "Envoy's guard", "stacks": [{"creature": "de_knifedancer", "count": 8, "per_week": 2}, {"creature": "de_shardbow", "count": 6, "per_week": 1}]}]}},
+        {"text": "Decline the courtesy", "leave": true}
+      ]
+    },
+    "frozen_warband": {
+      "name": "Frozen Warband",
+      "sprite": "encounter_barrow_field",
+      "text": "A whole raiding party frozen where it camped, rimed men still sitting round a dead fire. One of them blinks.",
+      "choices": [
+        {"text": "Thaw them out",
+         "cost": {"sulfur": 3},
+         "success": {"text": "Brimstone fires all night. By dawn, a dozen raiders who owe you their lives.", "effects": [{"type": "recruit", "creature": "clan_raider", "count": 10, "per_week": 2}]}},
+        {"text": "Sing them home",
+         "requires": {"faction": ["frostmarch"]},
+         "success": {"text": "You sing the long song of the clans. Some wake, some do not, and all are honoured.", "effects": [{"type": "xp", "amount": 300}, {"type": "recruit", "creature": "clan_raider", "count": 8, "per_week": 2}]}},
+        {"text": "Raise them as they are",
+         "requires": {"faction": ["hollow"]},
+         "success": {"text": "They stand, still frozen, and do not feel the cold at all.", "effects": [{"type": "recruit", "creature": "rime_wight", "count": 5, "per_week": 1}]}},
+        {"text": "Leave them to the frost", "leave": true}
+      ]
+    },
+    "low_tide_shrine": {
+      "name": "Shrine of the Low Tide",
+      "sprite": "encounter_drowned_chapel",
+      "text": "When the marsh draws back, a ring of carved stones rises from the mud, each one shaped like a coiled fish. Offerings of shell and bone lie on the central slab.",
+      "choices": [
+        {"text": "Make the old offering",
+         "requires": {"faction": ["fishmen"]},
+         "success": {"text": "The water returns early, warm as blood. Your warriors move like the tide itself.", "effects": [{"type": "boon", "mods": {"morale": 1, "movement_pct": 0.15}, "days": 7}, {"type": "mana", "amount": 10}, {"type": "mark", "mark": "tide_sworn"}]}},
+        {"text": "Pray to whatever listens",
+         "check": {"chance": 0.4, "mods": [{"when": {"terrain": ["swamp"]}, "add": 0.15}, {"when": {"mark": "blessed_by_saint"}, "add": 0.1}]},
+         "success": {"text": "Something answers. The marsh paths open for you.", "effects": [{"type": "boon", "mods": {"movement_pct": 0.1}, "days": 7}, {"type": "mark", "mark": "tide_sworn"}]},
+         "failure": {"text": "Something answers. It is hungry.", "effects": [{"type": "ambush", "name": "Tide-callers", "stacks": [{"creature": "bog_serpent", "count": 1}, {"creature": "fm_hookcaster", "count": 6, "per_week": 2}]}]}},
+        {"text": "Wait for the water to cover it", "leave": true}
+      ]
+    },
+    "brand_sergeant": {
+      "name": "The Brand-Sergeant",
+      "sprite": "encounter_ember_rift",
+      "text": "A horned demon in a sergeant's sash sits on a crate of chains beside a glowing brazier. 'Recruiting,' it says, and grins with too many teeth.",
+      "choices": [
+        {"text": "Take the brand",
+         "requires": {"faction": ["ashen"]},
+         "success": {"text": "It presses the iron to your standard. Flayers crawl out of the smoke to answer.", "effects": [{"type": "recruit", "creature": "flayer", "count": 3, "per_week": 1}]}},
+        {"text": "Hear its offer",
+         "cost": {"gold": 1500},
+         "success": {"text": "Coin buys hounds. The hounds do not ask whose coin.", "effects": [{"type": "recruit", "creature": "scorchhound", "count": 5, "per_week": 1}, {"type": "mark", "mark": "oppressor"}]}},
+        {"text": "Cut it down",
+         "success": {"text": "The sergeant whistles. Its recruits are already here.", "effects": [{"type": "ambush", "name": "Brand-sergeant's levy", "stacks": [{"creature": "flayer", "count": 6, "per_week": 1}, {"creature": "cinderling", "count": 15, "per_week": 4}]}]}},
+        {"text": "Walk past the brazier", "leave": true}
+      ]
+    },
+    "tomb_of_the_unbowed": {
+      "name": "Tomb of the Unbowed",
+      "sprite": "place_saint_orrins_rest",
+      "text": "A knight's tomb on a hill, the effigy's sword still clasped in stone hands. Fresh flowers lie at its feet, though there is no village for leagues.",
+      "choices": [
+        {"text": "Keep vigil",
+         "requires": {"any": [{"faction": ["concord"]}, {"class": ["knight", "ironmarshal", "thane"]}]},
+         "cost": {"movement": 400},
+         "success": {"text": "You kneel through the night. In the morning, the column stands straighter.", "effects": [{"type": "xp", "amount": 400}, {"type": "boon", "mods": {"defense": 2}, "days": 7}]}},
+        {"text": "Wake the knight",
+         "requires": {"faction": ["hollow"]},
+         "success": {"text": "The stone cracks. What climbs out still remembers its oaths, but not to whom.", "effects": [{"type": "recruit", "creature": "gibbet_knight", "count": 1, "per_week": 1}, {"type": "mark", "mark": "shrine_defiler"}]}},
+        {"text": "Rob the tomb",
+         "check": {"chance": 0.5, "mods": [{"when": {"mark": "deathbinder"}, "add": 0.2}, {"when": {"mark": "blessed_by_saint"}, "add": -0.2}]},
+         "success": {"text": "Grave-gold and a jewelled scabbard. The flowers wilt as you leave.", "effects": [{"type": "resources", "resources": {"gold": 1200}}, {"type": "mark", "mark": "shrine_defiler"}]},
+         "failure": {"text": "The knight's sworn dead have not left their post.", "effects": [{"type": "ambush", "name": "Tomb guard", "stacks": [{"creature": "barrow_revenant", "count": 4, "per_week": 1}]}]}},
+        {"text": "Leave flowers of your own", "leave": true}
+      ]
+    },
+    "giants_toll": {
+      "name": "The Giant's Toll",
+      "sprite": "place_lockstone",
+      "text": "A cairn giant sits across the pass with a boulder in its lap, chewing on a tree. 'Toll,' it rumbles. 'Or song. Or fight. Giant is bored.'",
+      "choices": [
+        {"text": "Pay the toll",
+         "cost": {"gold": 600, "movement": 200},
+         "success": {"text": "It shifts aside and points out every path it can see from up there, which is all of them.", "effects": [{"type": "reveal", "radius": 6}]}},
+        {"text": "Share the giant's mead",
+         "requires": {"faction": ["frostmarch"]},
+         "success": {"text": "A night of mead and boasting. In the morning the giant decides to come along.", "effects": [{"type": "recruit", "creature": "cairn_giant", "count": 1}, {"type": "xp", "amount": 200}]}},
+        {"text": "Challenge the giant",
+         "check": {"chance": 0.25, "per_attr": {"attack": 0.05}, "per_skill": {"tactics": 0.06}, "mods": [{"when": {"mark": "pit_champion"}, "add": 0.15}]},
+         "success": {"text": "It laughs so hard when it falls that the boulder rolls away. 'Good fight!' Every pass in the hills will hear of it.", "effects": [{"type": "xp", "amount": 450}, {"type": "mark", "mark": "pit_champion"}]},
+         "failure": {"text": "The giant's cousins were sleeping behind the cairn.", "effects": [{"type": "ambush", "name": "Hill giants", "stacks": [{"creature": "hill_giant", "count": 2, "per_week": 1}]}]}},
+        {"text": "Find another pass", "leave": true}
+      ]
+    },
+    "stargazers_tower": {
+      "name": "Stargazer's Broken Tower",
+      "sprite": "place_pyrehold",
+      "text": "A tower snapped off halfway up, its top storey lying in the field like a fallen crown. Brass instruments still turn in the wind, tracking stars no one has seen since the sky went red.",
+      "choices": [
+        {"text": "Study the instruments",
+         "cost": {"gold": 800, "movement": 400},
+         "success": {"text": "The charts are older than the kingdoms, and the land has not changed as much as people think.", "effects": [{"type": "mana", "amount": 20}, {"type": "reveal", "radius": 10}]}},
+        {"text": "Read the star charts",
+         "requires": {"attr": {"knowledge": 4}},
+         "success": {"text": "You understand, briefly, why the sky turned red. The understanding fades; the lesson stays.", "effects": [{"type": "xp", "amount": 350}, {"type": "reveal", "radius": 12}]}},
+        {"text": "Leave the stars to themselves", "leave": true}
+      ]
+    },
+    "plague_cart": {
+      "name": "The Plague Cart",
+      "sprite": "encounter_overturned_wagon",
+      "text": "A cart heaped with the shrouded dead, its driver slumped over the reins. A bell on the shaft still tolls with every gust of wind.",
+      "choices": [
+        {"text": "Burn the cart",
+         "cost": {"movement": 200},
+         "success": {"text": "The fire burns green. Downwind, a village will never know what you spared it.", "effects": [{"type": "xp", "amount": 100}, {"type": "mark", "mark": "shelter_giver"}]}},
+        {"text": "Search the shrouds",
+         "check": {"chance": 0.5, "mods": [{"when": {"faction": ["hollow"]}, "add": 0.5}]},
+         "success": {"text": "The dead were wealthy, once.", "effects": [{"type": "resources", "resources": {"gold": 700}}]},
+         "failure": {"text": "The sickness was not finished with them, or with you.", "effects": [{"type": "casualties", "fraction": 0.12}]}},
+        {"text": "Take the cart in tow",
+         "requires": {"faction": ["hollow"]},
+         "success": {"text": "The rats were the real cargo. They follow the bell now.", "effects": [{"type": "recruit", "creature": "plague_rats", "count": 20, "per_week": 4}]}},
+        {"text": "Hold your breath and pass", "leave": true}
+      ]
+    },
+    "ember_crucible": {
+      "name": "The Ember Crucible",
+      "sprite": "place_pyrehold",
+      "text": "A ring of slag around a pit of cinders that has not cooled in living memory. A blind tender rakes the coals and says the fire takes one soldier in and gives back what that soldier would have become after a lifetime of war.",
+      "choices": [
+        {"text": "Pay the tender's rites",
+         "cost": {"gold": 2500, "sulfur": 3, "movement": 300},
+         "success": {"text": "One of your companies walks into the fire singing. What walks out does not sing any more, but it does not need to.", "effects": [{"type": "ascend"}]}},
+        {"text": "Drive them through without the rites",
+         "cost": {"movement": 300},
+         "check": {"chance": 0.4, "per_attr": {"power": 0.04}, "mods": [{"when": {"faction": ["ashen"]}, "add": 0.25}, {"when": {"faction": ["forge"]}, "add": 0.15}]},
+         "success": {"text": "The coals roar and part. The fire chose them anyway.", "effects": [{"type": "ascend"}]},
+         "failure": {"text": "The fire takes what it is given and gives nothing back.", "effects": [{"type": "casualties", "fraction": 0.15}]}},
+        {"text": "Leave the tender to the coals", "leave": true}
+      ]
+    },
+    "barrow_of_the_last_rank": {
+      "name": "Barrow of the Last Rank",
+      "sprite": "place_barrow_camp",
+      "text": "A long mound where a whole regiment was buried standing, shields still locked. The shepherds say that whoever keeps the night watch here wakes up with the old regiment's discipline in their bones.",
+      "choices": [
+        {"text": "Keep the night watch",
+         "cost": {"movement": 500},
+         "check": {"chance": 0.5, "per_skill": {"tactics": 0.1}, "mods": [{"when": {"mark": "deathbinder"}, "add": 0.2}, {"when": {"mark": "shrine_defiler"}, "add": -0.25}, {"when": {"faction": ["hollow"]}, "add": 0.15}]},
+         "success": {"text": "At dawn one of your companies stands in a line the dead would have recognised. They no longer flinch.", "effects": [{"type": "ascend"}]},
+         "failure": {"text": "The regiment does not like being watched.", "effects": [{"type": "ambush", "name": "The last rank", "stacks": [{"creature": "barrow_revenant", "count": 5, "per_week": 1}]}]}},
+        {"text": "Pay the grave-keepers' tithe",
+         "cost": {"gold": 3000, "crystal": 2},
+         "success": {"text": "The keepers lead one company down the mound by torchlight. They come back quieter and far more dangerous.", "effects": [{"type": "ascend"}]}},
+        {"text": "Let the dead keep their watch", "leave": true}
+      ]
+    }
+  }
+}

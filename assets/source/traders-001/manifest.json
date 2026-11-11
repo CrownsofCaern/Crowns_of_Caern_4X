@@ -1,0 +1,29 @@
+{
+  "generator": "Built-in image_gen tool",
+  "assets": [
+    {
+      "id": "site_road_trader",
+      "source": "assets/source/generated/site_road_trader.png",
+      "prompt": "Use case: stylized-concept. Asset type: production game map sprite for original dark gothic fantasy strategy game Crowns of Cinder. One isolated roadside trader and compact covered handcart, rolled parchment maps, an iron-bound artifact chest, a hooded weathered merchant, warm amber lantern. Three-quarter overhead view. Detailed pixel art with crisp dark outlines, muted umber, desaturated wine canvas, tarnished brass, cold grey shadows. Clear silhouette readable at 64x64 display. Full subject centered with generous transparent margins, no ground tile, no background, no text, no watermark. Genuine transparent background. Original design, not from an existing franchise."
+    },
+    {
+      "id": "trader_shop",
+      "source": "assets/illustrations/trader_shop.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the edit target: the wide illustrated trader shop. Image 2 is the character reference for its merchant. Change only the hooded merchant in Image 1 to match the weathered older male merchant from Image 2: scarred mature face, short grizzled grey beard, muted wine hood and rugged layered clothing. Preserve Image 1's entire landscape composition, canvas wagon awning, ruined background, lanterns, chest, relics, maps, counter and painterly pixel-art rendering. Keep his head and shoulders in the same position and roughly the same size as the original merchant. No text or watermark. Opaque background.",
+      "references": [
+        "assets/source/traders-001/shop-concept.png",
+        "assets/source/generated/site_road_trader.png"
+      ]
+    },
+    {
+      "id": "trader_chart",
+      "source": "assets/source/generated/trader_chart.png",
+      "prompt": "Use case: stylized-concept. Asset type: 64x64 inventory icon for an original dark gothic fantasy strategy game, drawn large for downscaling. One curled parchment chart with fine ink roads and mountain marks, dark red wax seal and small tarnished brass compass resting on it. No legible lettering. Warm aged ivory, umber shadows, dark charcoal outlines, crisp detailed painterly pixel art. Three-quarter top view, one centered isolated composition, full object visible with generous margins. Genuine transparent background, no background scene, no watermark."
+    },
+    {
+      "id": "trader_shop_concept",
+      "source": "assets/source/traders-001/shop-concept.png",
+      "prompt": "Use case: stylized-concept. Asset type: wide shop illustration for original dark gothic fantasy strategy game Crowns of Cinder. An enigmatic hooded road trader beneath a weathered wine-coloured canvas wagon awning in misty ruins, rolled parchment maps and strange iron relics laid on a wooden counter, iron-bound chest, warm amber lantern against cold moonlit fog. Mature grim atmosphere, detailed painterly pixel art, subdued umber, tarnished brass and desaturated wine palette, strong dark outlines. Landscape wide composition; trader right of center and counter across foreground. No lettering, no UI, no watermark, original design."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "generated_and_rendered_candidates",
+  "creatures": 128,
+  "creature_clips": 256,
+  "hero_clips": 1,
+  "new_drawn_poses": 900,
+  "generated_sheets": 33,
+  "pending_creatures": [],
+  "structural_qc_warnings": {},
+  "runtime": "CreatureAnims -> UnitAnimation atlas clips; existing BattleFigure/BattleViewer",
+  "human_artistic_approval": "pending",
+  "reviews": "docs/art/production/animations/",
+  "handoff": "docs/art/ANIMATION_PRODUCTION_REPORT.md"
+}

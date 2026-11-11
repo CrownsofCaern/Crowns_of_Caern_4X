@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/thornwood-01-source.png",
+  "source_sha256": "46eeafd04158fde806735c7af3d54e26425707a36c758343722c4831fe61c18e",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/thornwood-01-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/thornwood-01-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "thorn_skulker",
+    "thorn_stalker",
+    "barkhide_warden",
+    "barkhide_sentinel"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "thorn_skulker",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_thorn_skulker.png",
+      "reference_sha256": "298320d230ace416322a733b6503fb48f200dd298909cfa571de36f80606860d"
+    },
+    {
+      "id": "thorn_stalker",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_thorn_stalker.png",
+      "reference_sha256": "cc8f411d3e338d8a22b19bbc5ec55c4649b9aa8b076a07324a3d14a0c4989530"
+    },
+    {
+      "id": "barkhide_warden",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_barkhide_warden.png",
+      "reference_sha256": "b55d03d6eac7d66b833e600f9c57cb34b02eb970b915736d0648b65501fa7b23"
+    },
+    {
+      "id": "barkhide_sentinel",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_barkhide_sentinel.png",
+      "reference_sha256": "42607aa5e61bd3db7d363f8ba870863ce01552a91b0900a11216bd5476a1712c"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

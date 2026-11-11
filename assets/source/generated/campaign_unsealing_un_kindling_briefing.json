@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_unsealing_un_kindling_briefing",
+  "campaign": "unsealing",
+  "chapter": "un_kindling",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_unsealing_un_kindling_briefing.txt",
+  "prompt_sha256": "b7a7ce77dea9e8fd99794df4bd8ae5bbd8d01835991017634404992bd8bb32c8",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "096edfa9b22ec191894df63427d80a69bd6c590e6a73671f790975bc8f15bc34",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

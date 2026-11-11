@@ -1,0 +1,25 @@
+{
+  "id": "c_hall",
+  "provider": "image_gen",
+  "source_sheet": "assets/source/batches/concord-town-001/base.png",
+  "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+  "crop_xyxy": [
+    0,
+    0,
+    315,
+    282
+  ],
+  "alpha_trim_xyxy": [
+    25,
+    16,
+    306,
+    278
+  ],
+  "source_sha256": "9b49059bd9d9a787239a56821c1371a3802f26c205399df31aa0e3f7d4e7de36",
+  "conditioning": [
+    "foundation.png"
+  ],
+  "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+  "quality_status": "rendered_candidate",
+  "review": "docs/art/production/living-world/"
+}

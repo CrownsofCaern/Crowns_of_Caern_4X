@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/thornwood-03-source.png",
+  "source_sha256": "94bfeedc7956e49d3b9cc5d4feaca9455a31c0941fe650bcc7d54b7f28184414",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/thornwood-03-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/thornwood-03-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "gloomwing_strix",
+    "gloomwing_shrike",
+    "spore_lobber",
+    "plague_lobber"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "gloomwing_strix",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_gloomwing_strix.png",
+      "reference_sha256": "41cc0b9a53b65b747786397d93cadfc68584eb61017fef860bf9ec9e50e533fe"
+    },
+    {
+      "id": "gloomwing_shrike",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_gloomwing_shrike.png",
+      "reference_sha256": "03958a854aa20bb4f7b31e037b0eaa97a7b902d08363a1bff17510c5349bd576"
+    },
+    {
+      "id": "spore_lobber",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_spore_lobber.png",
+      "reference_sha256": "df6a75787d55db30adad986f50eb2244744e0b2a1e9fcfd15fe3a8952a5fd2f3"
+    },
+    {
+      "id": "plague_lobber",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_plague_lobber.png",
+      "reference_sha256": "5f166a5b8a9fab632c0a86b72cb945b2c4512eb37862f1e66a5c5e41b6c96d11"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

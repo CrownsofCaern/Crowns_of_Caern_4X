@@ -1,0 +1,173 @@
+{
+  "name": "heroes-001",
+  "grid": [
+    3,
+    6
+  ],
+  "category": "hero",
+  "spec_file": "objects.json",
+  "assets": [
+    {
+      "id": "hero_knight",
+      "prompt": "scarred knight in dented plate on a black warhorse with a navy caparison",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_ranger",
+      "prompt": "hooded ranger in leather on a navy-caparisoned warhorse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_oracle",
+      "prompt": "pale-robed oracle with glowing eyes on a navy-caparisoned warhorse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_warlock",
+      "prompt": "horned warlock in ash robes with ember eyes on a horned hellsteed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_warlord",
+      "prompt": "demon warlord in blood-red plate with great horns on a horned hellsteed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_tormentor",
+      "prompt": "masked tormentor in black leather on a horned hellsteed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_necromancer",
+      "prompt": "skull-faced necromancer in purple robes on a bone-headed steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_gravewarden",
+      "prompt": "gravewarden in rusted armour with a bone crown on a bone-headed steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_blightcaller",
+      "prompt": "beak-masked blightcaller in a rot-green cloak on a bone-headed steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_grovewarden",
+      "prompt": "grovewarden in bark armour with an antler helm on an antlered steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_huntmaster",
+      "prompt": "huntmaster under a wolf pelt on an antlered steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_thornspeaker",
+      "prompt": "thorn-crowned thornspeaker in a moss hood on an antlered steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_artificer",
+      "prompt": "goggled artificer in brass-trimmed steel on an iron-faced steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_ironmarshal",
+      "prompt": "ironmarshal in black iron with a brass crest on an iron-faced steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_runesmith",
+      "prompt": "runesmith with glowing ember runes on an iron-faced steed",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_thane",
+      "prompt": "fur-mantled thane in a steel helm on a pale shaggy horse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_reaver",
+      "prompt": "bare-chested war-painted reaver on a pale shaggy horse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "hero_frostcaller",
+      "prompt": "ice-robed frostcaller with cold glowing eyes on a pale shaggy horse",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/concord-03-source.png",
+  "source_sha256": "d0818a97bd821dff0d9ea72c69e55e5377195a64a506810a37769b62b78783d1",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/concord-03-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/concord-03-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "lightbearer",
+    "dawn_confessor",
+    "sunhawk_rider",
+    "sunhawk_paladin"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "lightbearer",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_lightbearer.png",
+      "reference_sha256": "417ee173b6e3dee15cb8ef7e3f202206e812a5c9d7a1ac7f2577f830b8a702f9"
+    },
+    {
+      "id": "dawn_confessor",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_dawn_confessor.png",
+      "reference_sha256": "028ac7ca31d4a1ab0df6a4ad86516b3bfc69692fae653163cd5e9129ffa89dd6"
+    },
+    {
+      "id": "sunhawk_rider",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_sunhawk_rider.png",
+      "reference_sha256": "b4ee8a435475c17e80d92c168d20c293d9bc2841ccea1447f8333b9ca276a93f"
+    },
+    {
+      "id": "sunhawk_paladin",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_sunhawk_paladin.png",
+      "reference_sha256": "ccf733ee6be035c4bae972cb17977b52a50335a97306be2d98ce95d73474e1bb"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

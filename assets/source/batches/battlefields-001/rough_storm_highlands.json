@@ -1,0 +1,23 @@
+{
+  "id": "rough_storm_highlands",
+  "terrain": "rough",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/rough_storm_highlands.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "36cc75c7be30465c47009e10ff8af3fd6b6ac248f0681819592968a2d5599446",
+  "prompt_file": "assets/source/batches/battlefields-001/rough_storm_highlands.txt",
+  "prompt_sha256": "89ba9bf69eb20474a073c384fab7765497f752c123d16f92ab8a457a7c24ab2c",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/rough_storm_highlands-live.png",
+    "forecast": "docs/art/production/battlefields/rough_storm_highlands-forecast.png"
+  }
+}

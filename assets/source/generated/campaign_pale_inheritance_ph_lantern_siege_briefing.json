@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_pale_inheritance_ph_lantern_siege_briefing",
+  "campaign": "pale_inheritance",
+  "chapter": "ph_lantern_siege",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_pale_inheritance_ph_lantern_siege_briefing.txt",
+  "prompt_sha256": "d9e7384448802025e397993295f9f5b101ee8d7769043ab9b9e41024792686c0",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "18705962f044d5c7680cdb3c15c2b0c28b4ef8b025344c3efe9220853e3ab2b3",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

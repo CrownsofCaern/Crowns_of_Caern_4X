@@ -1,0 +1,23 @@
+{
+  "id": "water_storm_shore",
+  "terrain": "water",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/water_storm_shore.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "240867281eb880b354bd6d31ddcd722e7a9240e31dbad4e490992249c1a528b6",
+  "prompt_file": "assets/source/batches/battlefields-001/water_storm_shore.txt",
+  "prompt_sha256": "7cb276770bfd7d702a7a0887813bae0e2aaf769cc96f8583abf2768573e49a24",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/water_storm_shore-live.png",
+    "forecast": "docs/art/production/battlefields/water_storm_shore-forecast.png"
+  }
+}

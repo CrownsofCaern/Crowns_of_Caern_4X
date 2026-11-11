@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "selection": "stable visual seed; independent of game RNG",
+  "assets": [
+    {
+      "id": "grass_windward",
+      "terrain": "grass",
+      "name": "Windward March",
+      "source": "assets/source/batches/battlefields-001/grass_windward.png",
+      "output": "assets/battlefields/grass_windward.png",
+      "prompt_file": "assets/source/batches/battlefields-001/grass_windward.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/concord-town-001/foundation.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a"
+    },
+    {
+      "id": "grass_border_ruins",
+      "terrain": "grass",
+      "name": "The Broken Border",
+      "source": "assets/source/batches/battlefields-001/grass_border_ruins.png",
+      "output": "assets/battlefields/grass_border_ruins.png",
+      "prompt_file": "assets/source/batches/battlefields-001/grass_border_ruins.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "97834347fa7fa0a843cd5669a5ffc4ca739d9a9b5a19ccae30fa5300dd977272"
+    },
+    {
+      "id": "forest_blackpine",
+      "terrain": "forest",
+      "name": "Blackpine Clearing",
+      "source": "assets/source/batches/battlefields-001/forest_blackpine.png",
+      "output": "assets/battlefields/forest_blackpine.png",
+      "prompt_file": "assets/source/batches/battlefields-001/forest_blackpine.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "f3098c1112661af7112dc85c7e1f892c9295dfa4ca8e744f5b24cfe4fbe43f48"
+    },
+    {
+      "id": "forest_elderwood",
+      "terrain": "forest",
+      "name": "Elderwood Hollow",
+      "source": "assets/source/batches/battlefields-001/forest_elderwood.png",
+      "output": "assets/battlefields/forest_elderwood.png",
+      "prompt_file": "assets/source/batches/battlefields-001/forest_elderwood.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "d128065313729d18e4898cddf629569000ab9b62ddb0804af35601da0cee2ba9"
+    },
+    {
+      "id": "desert_bone_dunes",
+      "terrain": "desert",
+      "name": "The Bleached Reach",
+      "source": "assets/source/batches/battlefields-001/desert_bone_dunes.png",
+      "output": "assets/battlefields/desert_bone_dunes.png",
+      "prompt_file": "assets/source/batches/battlefields-001/desert_bone_dunes.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "f3df0ca2535374a828c9e1ecf304305e9db2d9854919f9149259f45930b131e1"
+    },
+    {
+      "id": "desert_fallen_observatory",
+      "terrain": "desert",
+      "name": "Fallen Observatory",
+      "source": "assets/source/batches/battlefields-001/desert_fallen_observatory.png",
+      "output": "assets/battlefields/desert_fallen_observatory.png",
+      "prompt_file": "assets/source/batches/battlefields-001/desert_fallen_observatory.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "85f84ae76ed95cec4ecb6f42d4a9930a80c8f678e03ddd0013465ae5514a3ae4"
+    },
+    {
+      "id": "snow_frozen_pass",
+      "terrain": "snow",
+      "name": "The Frozen Pass",
+      "source": "assets/source/batches/battlefields-001/snow_frozen_pass.png",
+      "output": "assets/battlefields/snow_frozen_pass.png",
+      "prompt_file": "assets/source/batches/battlefields-001/snow_frozen_pass.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "9f4104132266ccca8e3111ffaa71e83d9f70a2845a95951d094678a3e928d3be"
+    },
+    {
+      "id": "snow_white_reach",
+      "terrain": "snow",
+      "name": "White Reach",
+      "source": "assets/source/batches/battlefields-001/snow_white_reach.png",
+      "output": "assets/battlefields/snow_white_reach.png",
+      "prompt_file": "assets/source/batches/battlefields-001/snow_white_reach.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "393918810c44a6b17ef6afcff95710b2368d23751f0a54a6ac46fdab05be5274"
+    },
+    {
+      "id": "swamp_blackfen",
+      "terrain": "swamp",
+      "name": "Blackfen",
+      "source": "assets/source/batches/battlefields-001/swamp_blackfen.png",
+      "output": "assets/battlefields/swamp_blackfen.png",
+      "prompt_file": "assets/source/batches/battlefields-001/swamp_blackfen.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "9b217b0e33c49d8c93ce3ce2d054f11059777d11bd9c03c4da4b676be45a1dde"
+    },
+    {
+      "id": "swamp_sunken_abbey",
+      "terrain": "swamp",
+      "name": "Sunken Abbey",
+      "source": "assets/source/batches/battlefields-001/swamp_sunken_abbey.png",
+      "output": "assets/battlefields/swamp_sunken_abbey.png",
+      "prompt_file": "assets/source/batches/battlefields-001/swamp_sunken_abbey.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "eab815183e2b8a530334928531667730c54ad0631c99833da0812784fba541fc"
+    },
+    {
+      "id": "infernal_cinder_rift",
+      "terrain": "infernal",
+      "name": "Cinder Rift",
+      "source": "assets/source/batches/battlefields-001/infernal_cinder_rift.png",
+      "output": "assets/battlefields/infernal_cinder_rift.png",
+      "prompt_file": "assets/source/batches/battlefields-001/infernal_cinder_rift.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "b88e2aacfe1f1518bee4df789fcad76892988956e67c4a495b08b1e6c086e350"
+    },
+    {
+      "id": "infernal_obsidian_wastes",
+      "terrain": "infernal",
+      "name": "Obsidian Wastes",
+      "source": "assets/source/batches/battlefields-001/infernal_obsidian_wastes.png",
+      "output": "assets/battlefields/infernal_obsidian_wastes.png",
+      "prompt_file": "assets/source/batches/battlefields-001/infernal_obsidian_wastes.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "be3a40c4bac90323cb88cf14875ba654c0756466f9f15fa84c9cf15df6f00680"
+    },
+    {
+      "id": "rough_storm_highlands",
+      "terrain": "rough",
+      "name": "Storm Highlands",
+      "source": "assets/source/batches/battlefields-001/rough_storm_highlands.png",
+      "output": "assets/battlefields/rough_storm_highlands.png",
+      "prompt_file": "assets/source/batches/battlefields-001/rough_storm_highlands.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "36cc75c7be30465c47009e10ff8af3fd6b6ac248f0681819592968a2d5599446"
+    },
+    {
+      "id": "rough_shattered_quarry",
+      "terrain": "rough",
+      "name": "The Shattered Quarry",
+      "source": "assets/source/batches/battlefields-001/rough_shattered_quarry.png",
+      "output": "assets/battlefields/rough_shattered_quarry.png",
+      "prompt_file": "assets/source/batches/battlefields-001/rough_shattered_quarry.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "3172175f7b982d522b26d1439380f8548e5f491216e7d0c954c840ed22bb028d"
+    },
+    {
+      "id": "river_stoneford",
+      "terrain": "river",
+      "name": "Stoneford",
+      "source": "assets/source/batches/battlefields-001/river_stoneford.png",
+      "output": "assets/battlefields/river_stoneford.png",
+      "prompt_file": "assets/source/batches/battlefields-001/river_stoneford.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "e02553142a6f14a89382bed694cc7d7cf4560c5c436669ae3e708311ddae7589"
+    },
+    {
+      "id": "water_storm_shore",
+      "terrain": "water",
+      "name": "Storm Shore",
+      "source": "assets/source/batches/battlefields-001/water_storm_shore.png",
+      "output": "assets/battlefields/water_storm_shore.png",
+      "prompt_file": "assets/source/batches/battlefields-001/water_storm_shore.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "240867281eb880b354bd6d31ddcd722e7a9240e31dbad4e490992249c1a528b6"
+    },
+    {
+      "id": "mountain_glacial_pass",
+      "terrain": "mountain",
+      "name": "Glacial Pass",
+      "source": "assets/source/batches/battlefields-001/mountain_glacial_pass.png",
+      "output": "assets/battlefields/mountain_glacial_pass.png",
+      "prompt_file": "assets/source/batches/battlefields-001/mountain_glacial_pass.txt",
+      "horizon_ratio": 0.3,
+      "reference": "assets/source/batches/battlefields-001/grass_windward.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "source_sha256": "d9d57277f8adc8b83157f2ba64281051863991714a69a017d215ec826759e6d0"
+    }
+  ],
+  "generation_status": "generated_candidates"
+}

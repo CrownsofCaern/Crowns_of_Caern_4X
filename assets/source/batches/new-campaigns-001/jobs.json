@@ -1,0 +1,1380 @@
+[
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_warm_earth_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_warm_earth",
+      "chapter_number": 1,
+      "chapter_name": "The Warm Earth",
+      "map": "warm_earth",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_warm_earth_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_warm_earth_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "For three hundred years Ysmay Vane has ruled the fens of Sallowmere from a throne no one else wanted: a dwindling court of the dead, too few to matter. This autumn the ground is warm, and the dead are waking by the thousand. They crawl up out of the mud as if something below were chasing them.",
+      "story_intro": "For three hundred years Ysmay Vane has ruled the fens of Sallowmere from a throne no one else wanted: a dwindling court of the dead, too few to matter. This autumn the ground is warm, and the dead are waking by the thousand. They crawl up out of the mud as if something below were chasing them.\n\nA court that grows can be a kingdom. Ysmay sends her champion, Sir Orrin Wren, a hundred years in his grave, to tell the barrow-lords of the fen. Vathek of Cairnholt answers that he kneels to no one.\n\nYour towns can raise creatures up to tier 2. Take Cairnholt.",
+      "story_outro": "Vathek's hill falls and his dead turn to the Regent without a word. They were never his; they were only near him. Ysmay counts what she has gained and finds the number is still rising. Every night more of the dead climb out of the fen, and none of them can say what woke them.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one full-bleed landscape 1536x1024 campaign briefing illustration for Reignem, The Pale Inheritance, chapter The Warm Earth. Input image is STYLE REFERENCE ONLY: match its exceptionally fine textured dark fantasy painted/engraved detail, realistic medieval materials, atmospheric depth and muted colors. New scene: Ysmay Vane, the Unburied Regent, an ancient regal female necromancer in weathered purple-black robes and tarnished crown, stands above the fens of Sallowmere as thousands of dead crawl from warm muddy graves, fleeing something unseen beneath. Decayed fen court and barrow mounds recede in green-grey mist; faint warm vapour from earth, no exposed demons yet. Strong narrative foreground, wide layered landscape. No text, border, panels, watermark, modern objects. Not pixel art. One scene."
+  },
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_barrow_lords_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_barrow_lords",
+      "chapter_number": 2,
+      "chapter_name": "Barrow-Lords",
+      "map": "gen:broad_crossing:4127",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_barrow_lords_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_barrow_lords_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Cairnholt was the smallest of the barrow-lords. The others have heard, and they have gathered behind the oldest of them in the deep fen. They would rather go on sleeping than serve.",
+      "story_intro": "Cairnholt was the smallest of the barrow-lords. The others have heard, and they have gathered behind the oldest of them in the deep fen. They would rather go on sleeping than serve.\n\nYour towns can raise creatures up to tier 3: gravecrawlers. Break the barrow-lords and take their town.",
+      "story_outro": "The last barrow-lord kneels with his jaw hanging loose. \"Something is burning below,\" he says. \"Under the fen, under the graves. We are not rising, Regent. We are fleeing.\" Ysmay does not answer. A frightened army still marches.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Pale Inheritance. Chapter 2: Barrow-Lords. Ysmay Vane is an ancient regal female necromancer in purple-black robes and tarnished crown. Orrin is a skeletal medieval knight in decayed armor. Grave green mist and faded purple. Story: Cairnholt was the smallest of the barrow-lords. The others have heard, and they have gathered behind the oldest of them in the deep fen. They would rather go on sleeping than serve."
+  },
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_living_shore_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_living_shore",
+      "chapter_number": 3,
+      "chapter_name": "The Living Shore",
+      "map": "gen:broad_crossing:5381",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_living_shore_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_living_shore_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The fens are full. North of them lie the Concord's marches: farms, mills and warm bodies, and graveyards that have never been asked what they want. Father Corvin Mire, once a lantern-priest of the Concord, now a Blightcaller, comes to the Regent's court with a list of the villages that buried his flock without rites.",
+      "story_intro": "The fens are full. North of them lie the Concord's marches: farms, mills and warm bodies, and graveyards that have never been asked what they want. Father Corvin Mire, once a lantern-priest of the Concord, now a Blightcaller, comes to the Regent's court with a list of the villages that buried his flock without rites.\n\nCorvin is a Blightcaller: rot follows him. Take the Concord town on the shore of the fen.",
+      "story_outro": "The town is yours and its graveyard empties into your ranks. Orrin stands a long time in front of the chapel, reading the names on the wall. One of them is his own.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Pale Inheritance. Chapter 3: The Living Shore. Ysmay Vane is an ancient regal female necromancer in purple-black robes and tarnished crown. Orrin is a skeletal medieval knight in decayed armor. Grave green mist and faded purple. Story: The fens are full. North of them lie the Concord's marches: farms, mills and warm bodies, and graveyards that have never been asked what they want. Father Corvin Mire, once a lantern-priest of the Concord, now a Blightcaller, comes to the Regent's court with a list of the villages that buried his flock without rites."
+  },
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_rot_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_rot",
+      "chapter_number": 4,
+      "chapter_name": "Rot in the Roots",
+      "map": "gen:broad_crossing:6029",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_rot_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_rot_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Where the dead walk, the ground rots, and the rot is creeping north toward what is left of the Elderwold. The Thornwood Covenant has answered the only way it knows: Grovewarden Cerrid Ashbark is burning the edge of the fen, and the court's new graves with it.",
+      "story_intro": "Where the dead walk, the ground rots, and the rot is creeping north toward what is left of the Elderwold. The Thornwood Covenant has answered the only way it knows: Grovewarden Cerrid Ashbark is burning the edge of the fen, and the court's new graves with it.\n\nTier 4 is open: wailing shades. Drive the druids back from the fen.",
+      "story_outro": "Cerrid escapes into the trees with half his warband. Among the ashes of a druid camp Corvin finds old carvings of a great stone held in a net of roots. \"They knew,\" he says. \"The roots held something shut, and the Concord cut them down.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Pale Inheritance. Chapter 4: Rot in the Roots. Ysmay Vane is an ancient regal female necromancer in purple-black robes and tarnished crown. Orrin is a skeletal medieval knight in decayed armor. Grave green mist and faded purple. Story: Where the dead walk, the ground rots, and the rot is creeping north toward what is left of the Elderwold. The Thornwood Covenant has answered the only way it knows: Grovewarden Cerrid Ashbark is burning the edge of the fen, and the court's new graves with it."
+  },
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_twice_dead_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_twice_dead",
+      "chapter_number": 5,
+      "chapter_name": "Twice Dead",
+      "map": "twice_dead",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_twice_dead_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_twice_dead_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Sir Orrin Wren rode to Saint Orrin's Rest to hold it against the Concord, and the Concord sent his own great-grandson. Aldous Wren cut him down at the chapel door and carried the body back to Greyhold to burn it at dawn.",
+      "story_intro": "Sir Orrin Wren rode to Saint Orrin's Rest to hold it against the Concord, and the Concord sent his own great-grandson. Aldous Wren cut him down at the chapel door and carried the body back to Greyhold to burn it at dawn.\n\nThe Regent does not let go of what is hers. Tier 5 is open: corpse weavers. Cross the dike, take Greyhold and recover Orrin's body before the pyre is lit.",
+      "story_outro": "Greyhold burns, but not Orrin. Ysmay finds him laid out in the chapel under a Concord banner, and raises him a second time before the walls have stopped smoking. He opens his eyes and asks only one thing: whether the boy lived. He did.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Pale Inheritance. Chapter 5: Twice Dead. Ysmay Vane is an ancient regal female necromancer in purple-black robes and tarnished crown. Orrin is a skeletal medieval knight in decayed armor. Grave green mist and faded purple. Story: Sir Orrin Wren rode to Saint Orrin's Rest to hold it against the Concord, and the Concord sent his own great-grandson. Aldous Wren cut him down at the chapel door and carried the body back to Greyhold to burn it at dawn."
+  },
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_lantern_siege_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_lantern_siege",
+      "chapter_number": 6,
+      "chapter_name": "The Lantern Siege",
+      "map": "gen:great_marches:7211",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_lantern_siege_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_lantern_siege_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "North of the fens the lantern-priests have built a temple-fortress whose lamps burn the dead at a hundred paces. Every night the court loses whole columns to its light. Corvin served in a temple like it, once. He knows where the oil is kept.",
+      "story_intro": "North of the fens the lantern-priests have built a temple-fortress whose lamps burn the dead at a hundred paces. Every night the court loses whole columns to its light. Corvin served in a temple like it, once. He knows where the oil is kept.\n\nPut out the lanterns. Take the fortress.",
+      "story_outro": "The last lamp goes dark. In the temple vault Orrin finds a hundred years of records, among them the order that sealed the Wound: five peoples, one stone, and the roots of the Elderwold to hold it. He reads it twice, and then he says nothing at all for three days.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Pale Inheritance. Chapter 6: The Lantern Siege. Ysmay Vane is an ancient regal female necromancer in purple-black robes and tarnished crown. Orrin is a skeletal medieval knight in decayed armor. Grave green mist and faded purple. Story: North of the fens the lantern-priests have built a temple-fortress whose lamps burn the dead at a hundred paces. Every night the court loses whole columns to its light. Corvin served in a temple like it, once. He knows where the oil is kept."
+  },
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_deep_barrows_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_deep_barrows",
+      "chapter_number": 7,
+      "chapter_name": "Down the Deep Barrows",
+      "map": "gen:great_marches:7853",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_deep_barrows_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_deep_barrows_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The dead keep fleeing upward, so the Regent goes down. Beneath the oldest barrows lies the Barrow Below, where the dead of the south have slept since before the Concord had a name. It is full of smoke. Something has dug into it from the east: tunnels still hot, walls scored with claws.",
+      "story_intro": "The dead keep fleeing upward, so the Regent goes down. Beneath the oldest barrows lies the Barrow Below, where the dead of the south have slept since before the Concord had a name. It is full of smoke. Something has dug into it from the east: tunnels still hot, walls scored with claws.\n\nTier 6 is open: gibbet knights. Find the diggers and drive them out.",
+      "story_outro": "The diggers are Ashen: burrowers of the Host, tunnelling around the Lockstone through the land of the dead because the stone itself still holds. The dead did not wake because the world was warm. They woke because the Host was walking through their graves.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Pale Inheritance. Chapter 7: Down the Deep Barrows. Ysmay Vane is an ancient regal female necromancer in purple-black robes and tarnished crown. Orrin is a skeletal medieval knight in decayed armor. Grave green mist and faded purple. Story: The dead keep fleeing upward, so the Regent goes down. Beneath the oldest barrows lies the Barrow Below, where the dead of the south have slept since before the Concord had a name. It is full of smoke. Something has dug into it from the east: tunnels still hot, walls scored with claws."
+  },
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_hungry_fire_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_hungry_fire",
+      "chapter_number": 8,
+      "chapter_name": "The Hungry Fire",
+      "map": "gen:great_marches:8467",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_hungry_fire_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_hungry_fire_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Lockstone has broken and the whole Host is coming out. Most of it marches on the Concord. Some of it stays below, and it is burning the Barrow Below tomb by tomb. Morvath the Kindler, who remembers the Sealing, feeds the dead to his fires because he likes the smell.",
+      "story_intro": "The Lockstone has broken and the whole Host is coming out. Most of it marches on the Concord. Some of it stays below, and it is burning the Barrow Below tomb by tomb. Morvath the Kindler, who remembers the Sealing, feeds the dead to his fires because he likes the smell.\n\nTier 7 is open: charnel hulks. Fight for the graves.",
+      "story_outro": "Morvath's fires go out one by one. The dead who were burned do not come back: there is nothing left of them to raise. For the first time in three hundred years Ysmay Vane is afraid of something.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Pale Inheritance. Chapter 8: The Hungry Fire. Ysmay Vane is an ancient regal female necromancer in purple-black robes and tarnished crown. Orrin is a skeletal medieval knight in decayed armor. Grave green mist and faded purple. Story: The Lockstone has broken and the whole Host is coming out. Most of it marches on the Concord. Some of it stays below, and it is burning the Barrow Below tomb by tomb. Morvath the Kindler, who remembers the Sealing, feeds the dead to his fires because he likes the smell."
+  },
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_leviathan_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_leviathan",
+      "chapter_number": 9,
+      "chapter_name": "The Leviathan Stirs",
+      "map": "gen:great_marches:9091",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_leviathan_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_leviathan_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Skarn Ashborn himself has come down into the Barrow Below. The court cannot match the Host fire for fire, so the Regent reaches for the oldest thing in the fen: a winged colossus that drowned in the mire before the five peoples had names, and has been rotting there ever since.",
+      "story_intro": "Skarn Ashborn himself has come down into the Barrow Below. The court cannot match the Host fire for fire, so the Regent reaches for the oldest thing in the fen: a winged colossus that drowned in the mire before the five peoples had names, and has been rotting there ever since.\n\nTier 8 is open: the rotwing leviathan. Raise it and break Skarn's host.",
+      "story_outro": "Skarn pulls back into the deepest tunnels, where the Host has made its own towns out of the old tombs. The leviathan circles above the fen under the red sky. Ysmay watches it and begins to speak of crowns.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Pale Inheritance. Chapter 9: The Leviathan Stirs. Ysmay Vane is an ancient regal female necromancer in purple-black robes and tarnished crown. Orrin is a skeletal medieval knight in decayed armor. Grave green mist and faded purple. Story: Skarn Ashborn himself has come down into the Barrow Below. The court cannot match the Host fire for fire, so the Regent reaches for the oldest thing in the fen: a winged colossus that drowned in the mire before the five peoples had names, and has been rotting there ever since."
+  },
+  {
+    "asset": {
+      "id": "campaign_pale_inheritance_ph_pale_crown_briefing",
+      "campaign": "pale_inheritance",
+      "chapter": "ph_pale_crown",
+      "chapter_number": 10,
+      "chapter_name": "The Pale Crown",
+      "map": "pale_crown",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_pale_inheritance_ph_pale_crown_briefing.png",
+      "output": "assets/illustrations/pale_inheritance/ph_pale_crown_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Two broods of the Host hold the burning tunnels: Skarn Ashborn's Burrow-Host in the north and the brood of Ithra Sootveil, his warlock, in the south. Between them and the Regent lies the Barrow Below and the Barrow Gate, which the Host has taken for its own.",
+      "story_intro": "Two broods of the Host hold the burning tunnels: Skarn Ashborn's Burrow-Host in the north and the brood of Ithra Sootveil, his warlock, in the south. Between them and the Regent lies the Barrow Below and the Barrow Gate, which the Host has taken for its own.\n\nThe broods do not trust each other and will fight each other as readily as you. Take the Barrow Gate, then burn both broods out of the dead's country.",
+      "story_outro": "The last Ashen fire in the Barrow Below goes out. Ysmay Vane climbs her mound in Sallowmere and is crowned under the red sky by the dead of three hundred years, and the living of the south do not come to stop her. The southern marches are a kingdom of the dead now.\n\nOrrin's debt to the Regent is paid. He takes his sword and walks north toward Greyhold, to find his great-grandson. He knows something about how the Lockstone was made, and the boy will need to hear it.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Pale Inheritance. Chapter 10: The Pale Crown. Ysmay Vane is an ancient regal female necromancer in purple-black robes and tarnished crown. Orrin is a skeletal medieval knight in decayed armor. Grave green mist and faded purple. Story: Two broods of the Host hold the burning tunnels: Skarn Ashborn's Burrow-Host in the north and the brood of Ithra Sootveil, his warlock, in the south. Between them and the Regent lies the Barrow Below and the Barrow Gate, which the Host has taken for its own."
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_pit_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_pit",
+      "chapter_number": 1,
+      "chapter_name": "The Pit Below",
+      "map": "pit_below",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_pit_briefing.png",
+      "output": "assets/illustrations/unsealing/un_pit_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "A hundred years in the Wound. The Host that was sealed in here has eaten what there was to eat, and then it began to eat itself. It is broods now, not a Host: packs of cinderlings and hounds, each around a chief who is strong this month.",
+      "story_intro": "A hundred years in the Wound. The Host that was sealed in here has eaten what there was to eat, and then it began to eat itself. It is broods now, not a Host: packs of cinderlings and hounds, each around a chief who is strong this month.\n\nSkarn Ashborn is a pit-chief with one pit and no name worth burning. Next door, Vrask Gutmaw has a bigger pit. Your towns can raise creatures up to tier 2. Take the Gnawing Pit.",
+      "story_outro": "Vrask is eaten, as is the custom. His brood licks the ash from Skarn's claws. Two pits now. Above them, for the first time any of them can remember, the rock is warm.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 1: The Pit Below. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: A hundred years in the Wound. The Host that was sealed in here has eaten what there was to eat, and then it began to eat itself. It is broods now, not a Host: packs of cinderlings and hounds, each around a chief who is strong this month."
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_brood_war_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_brood_war",
+      "chapter_number": 2,
+      "chapter_name": "Brood War",
+      "map": "gen:broad_crossing:2741",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_brood_war_briefing.png",
+      "output": "assets/illustrations/unsealing/un_brood_war_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "A warlock comes to Skarn's pit uninvited. Ithra Sootveil has spent forty years with her face pressed against the Lockstone, reading its cracks the way the living read stars. \"The stone is dying,\" she says. \"Someone up there killed its roots. When it breaks, the Host walks out, and it will want one chief. Be that chief.\"",
+      "story_intro": "A warlock comes to Skarn's pit uninvited. Ithra Sootveil has spent forty years with her face pressed against the Lockstone, reading its cracks the way the living read stars. \"The stone is dying,\" she says. \"Someone up there killed its roots. When it breaks, the Host walks out, and it will want one chief. Be that chief.\"\n\nIthra is a Warlock. Tier 3 is open: brimstone hurlers. Break the strongest brood in the Wound.",
+      "story_outro": "The broods kneel. Ithra leads Skarn up the long shafts to the underside of the Lockstone and lays his hand on it. It is cracked through like a dropped plate, and it is hot.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 2: Brood War. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: A warlock comes to Skarn's pit uninvited. Ithra Sootveil has spent forty years with her face pressed against the Lockstone, reading its cracks the way the living read stars. \"The stone is dying,\" she says. \"Someone up there killed its roots. When it breaks, the Host walks out, and it will want one chief. Be that chief.\""
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_wardens_keep_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_wardens_keep",
+      "chapter_number": 3,
+      "chapter_name": "The Wardens' Keep",
+      "map": "gen:broad_crossing:3389",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_wardens_keep_briefing.png",
+      "output": "assets/illustrations/unsealing/un_wardens_keep_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Sunken Forge built the Lockstone, and for a hundred years its wardens kept a watch-keep on the stone's edge. The Concord stopped paying for the watch. Half the keep stands empty now, and the cracks run right under its walls.",
+      "story_intro": "The Sunken Forge built the Lockstone, and for a hundred years its wardens kept a watch-keep on the stone's edge. The Concord stopped paying for the watch. Half the keep stands empty now, and the cracks run right under its walls.\n\nIthra knows a crack wide enough for a cinderling. Get inside and take the keep.",
+      "story_outro": "The last warden dies at his post. In his ledger are the stone's measurements, written up every week for a hundred years. The last twenty pages say only: \"Wider.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 3: The Wardens' Keep. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: The Sunken Forge built the Lockstone, and for a hundred years its wardens kept a watch-keep on the stone's edge. The Concord stopped paying for the watch. Half the keep stands empty now, and the cracks run right under its walls."
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_under_barrows_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_under_barrows",
+      "chapter_number": 4,
+      "chapter_name": "Under the Barrows",
+      "map": "gen:broad_crossing:4463",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_under_barrows_briefing.png",
+      "output": "assets/illustrations/unsealing/un_under_barrows_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The stone still holds, so the Host goes around it. Skarn's burrowers dig west, into the Barrow Below, where the dead of the south have slept for a thousand years. The dead do not like the heat. They are climbing out of their graves to get away from it, and their Regent has come down to see why.",
+      "story_intro": "The stone still holds, so the Host goes around it. Skarn's burrowers dig west, into the Barrow Below, where the dead of the south have slept for a thousand years. The dead do not like the heat. They are climbing out of their graves to get away from it, and their Regent has come down to see why.\n\nTier 4 is open: flayers. Drive the dead out of the tunnels.",
+      "story_outro": "The dead pull back toward the surface. The tunnels are Skarn's. Ithra laughs for the first time in years: \"Do you hear that, chief? Up there, the living are blaming their own dead for this.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 4: Under the Barrows. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: The stone still holds, so the Host goes around it. Skarn's burrowers dig west, into the Barrow Below, where the dead of the south have slept for a thousand years. The dead do not like the heat. They are climbing out of their graves to get away from it, and their Regent has come down to see why."
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_lockstone_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_lockstone",
+      "chapter_number": 5,
+      "chapter_name": "Breaking the Lockstone",
+      "map": "breaking_the_lockstone",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_lockstone_briefing.png",
+      "output": "assets/illustrations/unsealing/un_lockstone_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Concord has finally noticed. Lantern-priests have marched to the Lockstone to bless it shut again with holy fire, and their Abbess, Maud Lorne, is already singing at the stone.",
+      "story_intro": "The Concord has finally noticed. Lantern-priests have marched to the Lockstone to bless it shut again with holy fire, and their Abbess, Maud Lorne, is already singing at the stone.\n\nMorvath the Kindler, who was there when the stone was laid, has come up from the deepest pit to watch. \"Let them light their fires,\" he says. \"Fire is ours.\" Morvath is a Tormentor. Tier 5 is open: ash witches. Take the Lantern Watch and Brightwater.",
+      "story_outro": "Morvath carries the priests' own lanterns into the cracks, one after another. The Lockstone groans, then breaks in three. For the first time in a hundred years the Ashen Host walks out under the sky, and the sky turns red to greet it.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 5: Breaking the Lockstone. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: The Concord has finally noticed. Lantern-priests have marched to the Lockstone to bless it shut again with holy fire, and their Abbess, Maud Lorne, is already singing at the stone."
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_kindling_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_kindling",
+      "chapter_number": 6,
+      "chapter_name": "Kindling the Elderwold",
+      "map": "gen:great_marches:5519",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_kindling_briefing.png",
+      "output": "assets/illustrations/unsealing/un_kindling_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The roots that held the stone came from the Elderwold. The Concord felled most of it; the stumps and the last groves still live. Ithra will not leave a single root in the ground that could hold anything shut again. The Thornwood druids, led by Cerrid Ashbark, have come to defend what is left.",
+      "story_intro": "The roots that held the stone came from the Elderwold. The Concord felled most of it; the stumps and the last groves still live. Ithra will not leave a single root in the ground that could hold anything shut again. The Thornwood druids, led by Cerrid Ashbark, have come to defend what is left.\n\nBurn the groves.",
+      "story_outro": "The last grove goes up like a torch. Cerrid's druids scatter into the smoke, cursing the Concord as loudly as the Host. Morvath watches the fire with his hands spread toward it, like a man at a hearth.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 6: Kindling the Elderwold. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: The roots that held the stone came from the Elderwold. The Concord felled most of it; the stumps and the last groves still live. Ithra will not leave a single root in the ground that could hold anything shut again. The Thornwood druids, led by Cerrid Ashbark, have come to defend what is left."
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_ford_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_ford",
+      "chapter_number": 7,
+      "chapter_name": "The Ford",
+      "map": "gen:great_marches:6247",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_ford_briefing.png",
+      "output": "assets/illustrations/unsealing/un_ford_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Host's vanguard crosses the river at Greyhold's eastern ford. Skarn does not expect it to win. A vanguard is meant to find out how the living fight, and to bleed them while it does. Aldous Wren of Greyhold holds the far bank.",
+      "story_intro": "The Host's vanguard crosses the river at Greyhold's eastern ford. Skarn does not expect it to win. A vanguard is meant to find out how the living fight, and to bleed them while it does. Aldous Wren of Greyhold holds the far bank.\n\nTier 6 is open: gorgewings. Break Greyhold's knight.",
+      "story_outro": "Wren falls back with his army half gone. Ithra has counted every lance and every lantern he had. \"Now we know what they are,\" she says. \"Fewer than they think.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 7: The Ford. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: The Host's vanguard crosses the river at Greyhold's eastern ford. Skarn does not expect it to win. A vanguard is meant to find out how the living fight, and to bleed them while it does. Aldous Wren of Greyhold holds the far bank."
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_ash_snow_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_ash_snow",
+      "chapter_number": 8,
+      "chapter_name": "Ash on the Snow",
+      "map": "gen:great_marches:6911",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_ash_snow_briefing.png",
+      "output": "assets/illustrations/unsealing/un_ash_snow_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The ash the Host breathes out has blotted out the sun in the north. The Ashwinter has driven the Frostmarch clans south, starving and furious, and they have run straight into the Host's flank. Snow eats fire. The Host hates it here.",
+      "story_intro": "The ash the Host breathes out has blotted out the sun in the north. The Ashwinter has driven the Frostmarch clans south, starving and furious, and they have run straight into the Host's flank. Snow eats fire. The Host hates it here.\n\nTier 7 is open: pyre titans. Break the clans and get off the snow.",
+      "story_outro": "The clans scatter north, but they took a heavy toll. Morvath is still shaking the frost out of his joints when word comes from the deepest pit: something old has heard that the stone is broken, and it is climbing.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 8: Ash on the Snow. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: The ash the Host breathes out has blotted out the sun in the north. The Ashwinter has driven the Frostmarch clans south, starving and furious, and they have run straight into the Host's flank. Snow eats fire. The Host hates it here."
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_maw_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_maw",
+      "chapter_number": 9,
+      "chapter_name": "The Maw Wakes",
+      "map": "gen:great_marches:7603",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_maw_briefing.png",
+      "output": "assets/illustrations/unsealing/un_maw_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "It was old when the Host was sealed. It slept through the hundred years at the bottom of the Wound, and now it has woken hungry: a cinder maw, a mouth the size of a gatehouse. It follows Skarn because Skarn walks toward food.",
+      "story_intro": "It was old when the Host was sealed. It slept through the hundred years at the bottom of the Wound, and now it has woken hungry: a cinder maw, a mouth the size of a gatehouse. It follows Skarn because Skarn walks toward food.\n\nTier 8 is open: the cinder maw. The Concord has gathered a relief army on the road to Highmere. Feed it to the maw.",
+      "story_outro": "The relief army is gone. Only Highmere is left between the Host and the Concord's heartland: the eastern fortress, and behind its walls, the last of the Concord's friends.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 9: The Maw Wakes. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: It was old when the Host was sealed. It slept through the hundred years at the bottom of the Wound, and now it has woken hungry: a cinder maw, a mouth the size of a gatehouse. It follows Skarn because Skarn walks toward food."
+  },
+  {
+    "asset": {
+      "id": "campaign_unsealing_un_throne_briefing",
+      "campaign": "unsealing",
+      "chapter": "un_throne",
+      "chapter_number": 10,
+      "chapter_name": "The Red Sky Throne",
+      "map": "red_sky_throne",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_unsealing_un_throne_briefing.png",
+      "output": "assets/illustrations/unsealing/un_throne_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "At the end of the world, they finally came. The Thornwood Covenant has come out of the burned forest and the Sunken Forge has opened its gates, and both have marched to Highmere, the Concord's eastern fortress. Three peoples who hate each other, standing in one place because of the Host.",
+      "story_intro": "At the end of the world, they finally came. The Thornwood Covenant has come out of the burned forest and the Sunken Forge has opened its gates, and both have marched to Highmere, the Concord's eastern fortress. Three peoples who hate each other, standing in one place because of the Host.\n\nThey are three armies with three masters, and none of them trusts the others. Take Highmere. Break the war-grove and the Forge hold. Every enemy town must fall.",
+      "story_outro": "Highmere burns. Skarn Ashborn climbs its walls and sits down on the battlements under a sky the color of an open wound, and the Host roars its new name for him: the Red Sky King.\n\nBehind him, Ithra Sootveil has turned away from the burning city. She is looking south, at the dead country, where something pale is being crowned too.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Unsealing. Chapter 10: The Red Sky Throne. Skarn Ashborn is a brutal armored demonic pit-chief. Ithra Sootveil is a female ash-dark warlock. Charcoal, ember orange, dark red, scorched bronze; medieval infernal creatures, no futuristic machines. Story: At the end of the world, they finally came. The Thornwood Covenant has come out of the burned forest and the Sunken Forge has opened its gates, and both have marched to Highmere, the Concord's eastern fortress. Three peoples who hate each other, standing in one place because of the Host."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_axe_line_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_axe_line",
+      "chapter_number": 1,
+      "chapter_name": "The Axe Line",
+      "map": "axe_line",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_axe_line_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_axe_line_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "For forty years the Concord has cut the Elderwold for its ships and its roofs, and for forty years the Covenant has buried its trees. The great forest is stumps now, all but one grove in the west. This spring the Axeford Timber Company has built its camp at the grove's edge.",
+      "story_intro": "For forty years the Concord has cut the Elderwold for its ships and its roofs, and for forty years the Covenant has buried its trees. The great forest is stumps now, all but one grove in the west. This spring the Axeford Timber Company has built its camp at the grove's edge.\n\nCerrid Ashbark, Grovewarden, has stopped asking. Your towns can raise creatures up to tier 2. Burn Axeford.",
+      "story_outro": "The camp burns. Among the loggers' things Neve Hollowreed finds an order with the Concord's seal: the last grove, by summer. \"Then they will come with soldiers,\" Cerrid says. \"Let them.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 1: The Axe Line. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: For forty years the Concord has cut the Elderwold for its ships and its roofs, and for forty years the Covenant has buried its trees. The great forest is stumps now, all but one grove in the west. This spring the Axeford Timber Company has built its camp at the grove's edge."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_smoke_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_smoke",
+      "chapter_number": 2,
+      "chapter_name": "Smoke over Elderwold",
+      "map": "gen:broad_crossing:1187",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_smoke_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_smoke_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Concord's answer comes in a week: soldiers, and fire. They mean to burn the grove out rather than cut it. Smoke is rising over the stumps.",
+      "story_intro": "The Concord's answer comes in a week: soldiers, and fire. They mean to burn the grove out rather than cut it. Smoke is rising over the stumps.\n\nTier 3 is open: briar huntresses. Break the Concord's fire-camp.",
+      "story_outro": "The fire-camp is broken, but the smoke is still rising. Somewhere to the south the ground itself is warm, and the druids' oldest songs have started to go wrong in their mouths.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 2: Smoke over Elderwold. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: The Concord's answer comes in a week: soldiers, and fire. They mean to burn the grove out rather than cut it. Smoke is rising over the stumps."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_ambush_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_ambush",
+      "chapter_number": 3,
+      "chapter_name": "Ambush at the Stumps",
+      "map": "gen:broad_crossing:1931",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_ambush_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_ambush_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "A Concord column is marching through the stumps toward the south. Its scouts are led by a ranger captain called Maelis Thorne. Neve has a clean shot at her from the stumps, and Cerrid tells her to wait. He has seen that face before, thirty years ago, on a girl the soldiers carried off from a burning village. His sister.",
+      "story_intro": "A Concord column is marching through the stumps toward the south. Its scouts are led by a ranger captain called Maelis Thorne. Neve has a clean shot at her from the stumps, and Cerrid tells her to wait. He has seen that face before, thirty years ago, on a girl the soldiers carried off from a burning village. His sister.\n\nAmbush the column and take its camp.",
+      "story_outro": "Maelis gets away, as Cerrid meant her to. He does not tell Neve why. That night he carves a name into a living tree, the old way, so the forest will remember it.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 3: Ambush at the Stumps. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: A Concord column is marching through the stumps toward the south. Its scouts are led by a ranger captain called Maelis Thorne. Neve has a clean shot at her from the stumps, and Cerrid tells her to wait. He has seen that face before, thirty years ago, on a girl the soldiers carried off from a burning village. His sister."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_hunters_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_hunters",
+      "chapter_number": 4,
+      "chapter_name": "Hunters in the Snow",
+      "map": "gen:broad_crossing:2657",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_hunters_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_hunters_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Snow in summer. Clans from the Frostmarch have come south through it, so hungry that they eat the deer raw and burn the living trees to keep from freezing. They do not even know whose forest it is.",
+      "story_intro": "Snow in summer. Clans from the Frostmarch have come south through it, so hungry that they eat the deer raw and burn the living trees to keep from freezing. They do not even know whose forest it is.\n\nTier 4 is open: rootbinders. Drive the clans out of the forest.",
+      "story_outro": "The clans go back north into the white. One of their seers, dying, tells Neve that the summer did not fail: it was stolen. The sun went behind ash, and the ash comes from the south.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 4: Hunters in the Snow. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: Snow in summer. Clans from the Frostmarch have come south through it, so hungry that they eat the deer raw and burn the living trees to keep from freezing. They do not even know whose forest it is."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_fens_edge_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_fens_edge",
+      "chapter_number": 5,
+      "chapter_name": "The Fen's Edge",
+      "map": "gen:broad_crossing:3301",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_fens_edge_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_fens_edge_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Where the dead walk, the ground rots, and the rot is creeping north out of the southern fens toward the forest. Old Mother Brakka, the eldest Thornspeaker, has walked out of the deep wood for the first time in fifty years. She says the edge must burn.",
+      "story_intro": "Where the dead walk, the ground rots, and the rot is creeping north out of the southern fens toward the forest. Old Mother Brakka, the eldest Thornspeaker, has walked out of the deep wood for the first time in fifty years. She says the edge must burn.\n\nBrakka is a Thornspeaker. Tier 5 is open: gloomwing strixes. Burn the fen's edge and drive the dead back.",
+      "story_outro": "The edge burns, and the dead pull back into the mist. Brakka does not watch the fire. She is looking past it, at the Wound, and her face is grey. \"It is time,\" she says, \"that I told you what the roots were for.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 5: The Fen's Edge. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: Where the dead walk, the ground rots, and the rot is creeping north out of the southern fens toward the forest. Old Mother Brakka, the eldest Thornspeaker, has walked out of the deep wood for the first time in fifty years. She says the edge must burn."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_roots_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_roots",
+      "chapter_number": 6,
+      "chapter_name": "What the Roots Remember",
+      "map": "roots_remember",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_roots_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_roots_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "In the middle of the felled forest lie the Heartroots, or what is left of them: a ring of dead stumps as wide as castles. Brakka lays her hands on them and reads what they remember. A hundred years ago five peoples sealed the Host in the Wound with a stone, and the roots of the Elderwold grew around it like a fist. When the Concord felled the forest, the fist let go.",
+      "story_intro": "In the middle of the felled forest lie the Heartroots, or what is left of them: a ring of dead stumps as wide as castles. Brakka lays her hands on them and reads what they remember. A hundred years ago five peoples sealed the Host in the Wound with a stone, and the roots of the Elderwold grew around it like a fist. When the Concord felled the forest, the fist let go.\n\n\"We knew,\" Brakka says. \"The druids knew. We could have told them, and we let them cut.\" The first Ashen scouts are already at the clearing. Drive them off.",
+      "story_outro": "The scouts are gone, but they burned the clearing on their way out. Cerrid stands among the ashes of the Heartroots for a long time. The Concord felled the forest. The Covenant let it fall.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 6: What the Roots Remember. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: In the middle of the felled forest lie the Heartroots, or what is left of them: a ring of dead stumps as wide as castles. Brakka lays her hands on them and reads what they remember. A hundred years ago five peoples sealed the Host in the Wound with a stone, and the roots of the Elderwold grew around it like a fist. When the Concord felled the forest, the fist let go."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_kindling_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_kindling",
+      "chapter_number": 7,
+      "chapter_name": "Kindling",
+      "map": "gen:great_marches:4127",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_kindling_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_kindling_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Lockstone has broken. The Host is out, and its warlock, Ithra Sootveil, has come to the forest with one order: burn every root that could hold anything shut again.",
+      "story_intro": "The Lockstone has broken. The Host is out, and its warlock, Ithra Sootveil, has come to the forest with one order: burn every root that could hold anything shut again.\n\nTier 6 is open: spore lobbers. Save what you can.",
+      "story_outro": "Ithra pulls back, but behind her the stumps of the Elderwold are burning from one horizon to the other. What is left of the forest is one valley, the Last Grove, and the Host knows where it is.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 7: Kindling. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: The Lockstone has broken. The Host is out, and its warlock, Ithra Sootveil, has come to the forest with one order: burn every root that could hold anything shut again."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_last_grove_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_last_grove",
+      "chapter_number": 8,
+      "chapter_name": "The Last Grove",
+      "map": "gen:great_marches:4789",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_last_grove_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_last_grove_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Last Grove is a single valley of living trees, the oldest in the world. If it burns there is nothing left to grow back from. The Host is coming for it.",
+      "story_intro": "The Last Grove is a single valley of living trees, the oldest in the world. If it burns there is nothing left to grow back from. The Host is coming for it.\n\nTier 7 is open: rootbound ancients. Hold the Last Grove.",
+      "story_outro": "The grove stands. In its heart, under the oldest tree, Brakka digs up something the size of a fist and wrapped in moss: a seed, black and warm, older than the Covenant. \"The Mother's seed,\" she says. \"We swore never to plant it.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 8: The Last Grove. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: The Last Grove is a single valley of living trees, the oldest in the world. If it burns there is nothing left to grow back from. The Host is coming for it."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_seed_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_seed",
+      "chapter_number": 9,
+      "chapter_name": "Seed of the Mother",
+      "map": "gen:great_marches:5413",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_seed_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_seed_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The seed wakes when it touches ash. Within a night it is a thing of thorns and limbs and hunger that walks on its roots: a wyrdthorn mother, the forest's own ultimate answer, the reason the old druids swore never to plant it.",
+      "story_intro": "The seed wakes when it touches ash. Within a night it is a thing of thorns and limbs and hunger that walks on its roots: a wyrdthorn mother, the forest's own ultimate answer, the reason the old druids swore never to plant it.\n\nTier 8 is open: the wyrdthorn mother. Carry her through the Host's lines.",
+      "story_outro": "The mother walks behind Cerrid like a hound. The road to the Wound is open. Brakka says a mother's roots can bind anything, even a broken seal, if she is planted at its edge.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 9: Seed of the Mother. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: The seed wakes when it touches ash. Within a night it is a thing of thorns and limbs and hunger that walks on its roots: a wyrdthorn mother, the forest's own ultimate answer, the reason the old druids swore never to plant it."
+  },
+  {
+    "asset": {
+      "id": "campaign_briar_oath_tw_briar_seal_briefing",
+      "campaign": "briar_oath",
+      "chapter": "tw_briar_seal",
+      "chapter_number": 10,
+      "chapter_name": "The Briar Seal",
+      "map": "briar_seal",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_briar_oath_tw_briar_seal_briefing.png",
+      "output": "assets/illustrations/briar_oath/tw_briar_seal_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Wound lies behind a ring of black rock, and two broods of the Host guard it: Ithra Sootveil's in the north and Morvath the Kindler's in the south. They are rivals and will fight each other as readily as you, but both will fight you.",
+      "story_intro": "The Wound lies behind a ring of black rock, and two broods of the Host guard it: Ithra Sootveil's in the north and Morvath the Kindler's in the south. They are rivals and will fight each other as readily as you, but both will fight you.\n\nPlant the wyrdthorn at the lip of the Wound so its roots can bind the edge. To do it, every brood town must fall.",
+      "story_outro": "The broods are scattered and the mother is planted at the lip of the Wound. Her roots go down into the fire, and the fire hisses. The forest will grow back over the Wound, too slowly to save anyone this year, but it will grow.\n\nThat night Cerrid writes a letter, the first word between the Covenant and the Concord in forty years. It is addressed to Maelis Thorne, and it begins with her real name.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Briar Oath. Chapter 10: The Briar Seal. Cerrid Ashbark is a male grovewarden druid in bark armor. Neve Hollowreed is a female hooded huntmaster with bow. Old Mother Brakka is an elderly female thornspeaker. Moss green, bark brown and muted autumn gold. Story: The Wound lies behind a ring of black rock, and two broods of the Host guard it: Ithra Sootveil's in the north and Morvath the Kindler's in the south. They are rivals and will fight each other as readily as you, but both will fight you."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_deep_shift_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_deep_shift",
+      "chapter_number": 1,
+      "chapter_name": "Deep Shift",
+      "map": "deep_shift",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_deep_shift_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_deep_shift_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Sunken Forge has kept its gates shut for forty years, since the Concord stopped paying for the Lockstone's upkeep. What happens on the surface stops at the rock: that is what the council says. But the lowest galleries of Stonevow Hold are warm this year, and last night something climbed up the shafts that had been buried.",
+      "story_intro": "The Sunken Forge has kept its gates shut for forty years, since the Concord stopped paying for the Lockstone's upkeep. What happens on the surface stops at the rock: that is what the council says. But the lowest galleries of Stonevow Hold are warm this year, and last night something climbed up the shafts that had been buried.\n\nGunnra Sootmantle, Runesmith, goes down with Ironmarshal Dask Vell and his escort. Your towns can raise creatures up to tier 2. Clear the Lower Shafts.",
+      "story_outro": "The dead in the shafts were Forge dead, miners from the old wars, buried deep. Gunnra lays her hand on the rock. It is warm, and the warmth is coming from the south-east, from the Wound.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 1: Deep Shift. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: The Sunken Forge has kept its gates shut for forty years, since the Concord stopped paying for the Lockstone's upkeep. What happens on the surface stops at the rock: that is what the council says. But the lowest galleries of Stonevow Hold are warm this year, and last night something climbed up the shafts that had been buried."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_bones_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_bones",
+      "chapter_number": 2,
+      "chapter_name": "Bones in the Seams",
+      "map": "gen:broad_crossing:1291",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_bones_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_bones_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The dead are coming up through every old tunnel at once. The council orders the tunnels sealed with the dead still in them. Gunnra would rather know why they are rising.",
+      "story_intro": "The dead are coming up through every old tunnel at once. The council orders the tunnels sealed with the dead still in them. Gunnra would rather know why they are rising.\n\nTier 3 is open: anvil guards. Break the dead's hold on the tunnels.",
+      "story_outro": "The tunnels are sealed. In the last of them Gunnra finds her grandmother's mark cut into the wall, a rune she has only ever seen in one other place: on the drawings of the Lockstone.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 2: Bones in the Seams. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: The dead are coming up through every old tunnel at once. The council orders the tunnels sealed with the dead still in them. Gunnra would rather know why they are rising."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_debtors_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_debtors",
+      "chapter_number": 3,
+      "chapter_name": "The Debtors' Road",
+      "map": "gen:broad_crossing:2083",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_debtors_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_debtors_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "A Concord lord, Aldous Wren of Greyhold, has come to the mountain gates asking for help against the dead. The council's answer is short: forty years of unpaid upkeep first. Wren decides to force the pass instead.",
+      "story_intro": "A Concord lord, Aldous Wren of Greyhold, has come to the mountain gates asking for help against the dead. The council's answer is short: forty years of unpaid upkeep first. Wren decides to force the pass instead.\n\nDrive the debtors off the road.",
+      "story_outro": "Wren retreats down the mountain. From the walls a runesmith shouts after him that the Concord owes forty years. Gunnra is not shouting. She is wondering why a lord would ride all this way for help unless he was very afraid.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 3: The Debtors' Road. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: A Concord lord, Aldous Wren of Greyhold, has come to the mountain gates asking for help against the dead. The council's answer is short: forty years of unpaid upkeep first. Wren decides to force the pass instead."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_iron_bread_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_iron_bread",
+      "chapter_number": 4,
+      "chapter_name": "Iron for Bread",
+      "map": "gen:broad_crossing:2777",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_iron_bread_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_iron_bread_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The northern clans have come down to the high passes with empty carts. They will trade iron for bread, they say, at any price. The Forge has no bread to spare. Thane Ulvra Kettleborn stops asking and starts raiding.",
+      "story_intro": "The northern clans have come down to the high passes with empty carts. They will trade iron for bread, they say, at any price. The Forge has no bread to spare. Thane Ulvra Kettleborn stops asking and starts raiding.\n\nTier 4 is open: slag golems. Clear the passes.",
+      "story_outro": "The clans pull back to the snow. Their thane leaves a message pinned to a gate with an axe: \"Your mountain is warm. Ours is dying. Remember who was cold first.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 4: Iron for Bread. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: The northern clans have come down to the high passes with empty carts. They will trade iron for bread, they say, at any price. The Forge has no bread to spare. Thane Ulvra Kettleborn stops asking and starts raiding."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_heat_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_heat",
+      "chapter_number": 5,
+      "chapter_name": "Heat from Below",
+      "map": "gen:broad_crossing:3517",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_heat_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_heat_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Lockstone has broken. Within a week the Host's burrowers break through the floor of the deepest hall, the one the council said nothing could reach. The mountain is not a wall. It never was.",
+      "story_intro": "The Lockstone has broken. Within a week the Host's burrowers break through the floor of the deepest hall, the one the council said nothing could reach. The mountain is not a wall. It never was.\n\nTier 5 is open: cinder engineers. Drive the burrowers back into their tunnels.",
+      "story_outro": "The burrowers are driven back, but word comes from the east: Kharrak Hold, the Forge's oldest fortress, has fallen. Its gates were opened from the inside, by the heat.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 5: Heat from Below. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: The Lockstone has broken. Within a week the Host's burrowers break through the floor of the deepest hall, the one the council said nothing could reach. The mountain is not a wall. It never was."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_fallen_hold_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_fallen_hold",
+      "chapter_number": 6,
+      "chapter_name": "The Fallen Hold",
+      "map": "fallen_hold",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_fallen_hold_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_fallen_hold_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Kharrak Hold has fallen to the Host. One Forge-master still holds out in the valley: Master Tobbin Greave, an Artificer the council exiled for building an engine it had forbidden. He has been fighting the Host alone from his workshop for a week.",
+      "story_intro": "Kharrak Hold has fallen to the Host. One Forge-master still holds out in the valley: Master Tobbin Greave, an Artificer the council exiled for building an engine it had forbidden. He has been fighting the Host alone from his workshop for a week.\n\nTobbin is an Artificer. Take Kharrak Hold back, and the Host's camp at the Wound's mouth.",
+      "story_outro": "Kharrak is retaken. Tobbin shows Gunnra the plans he was exiled for: an engine of molten iron that walks. \"The council forbade it,\" he says. \"The council is not here.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 6: The Fallen Hold. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: Kharrak Hold has fallen to the Host. One Forge-master still holds out in the valley: Master Tobbin Greave, an Artificer the council exiled for building an engine it had forbidden. He has been fighting the Host alone from his workshop for a week."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_wardens_keep_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_wardens_keep",
+      "chapter_number": 7,
+      "chapter_name": "The Wardens' Keep",
+      "map": "gen:great_marches:4241",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_wardens_keep_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_wardens_keep_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Forge's old watch-keep on the Lockstone fell to the Host before the stone broke. Its last warden kept his ledger to the end. The council says it does not matter now. Gunnra needs to see the pieces of the stone with her own eyes.",
+      "story_intro": "The Forge's old watch-keep on the Lockstone fell to the Host before the stone broke. Its last warden kept his ledger to the end. The council says it does not matter now. Gunnra needs to see the pieces of the stone with her own eyes.\n\nTier 6 is open: ironhoof chargers. Retake the keep.",
+      "story_outro": "The warden's ledger is still on his table: a hundred years of measurements, and the last twenty pages say only \"Wider\". Gunnra looks at the broken stone and sees how it could be made again. It would need the Worldforge, and every master the Forge has.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 7: The Wardens' Keep. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: The Forge's old watch-keep on the Lockstone fell to the Host before the stone broke. Its last warden kept his ledger to the end. The council says it does not matter now. Gunnra needs to see the pieces of the stone with her own eyes."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_ore_ember_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_ore_ember",
+      "chapter_number": 8,
+      "chapter_name": "Ore and Ember",
+      "map": "gen:great_marches:4903",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_ore_ember_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_ore_ember_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Worldforge has been cold for a hundred years. To cast a new Lockstone it must be relit, and it will eat more ore in a month than the Forge mines in a year. The Host has found the ore roads.",
+      "story_intro": "The Worldforge has been cold for a hundred years. To cast a new Lockstone it must be relit, and it will eat more ore in a month than the Forge mines in a year. The Host has found the ore roads.\n\nTier 7 is open: thunder bombards. Hold the ore roads.",
+      "story_outro": "The ore comes through. The Worldforge breathes again, and the whole mountain hums. The council, at last, has stopped saying no.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 8: Ore and Ember. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: The Worldforge has been cold for a hundred years. To cast a new Lockstone it must be relit, and it will eat more ore in a month than the Forge mines in a year. The Host has found the ore roads."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_engine_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_engine",
+      "chapter_number": 9,
+      "chapter_name": "The Molten Engine",
+      "map": "gen:great_marches:5651",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_engine_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_engine_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Morvath the Kindler is leading the Host against the mountain himself. Tobbin's engine is finished: a walking furnace of molten iron, the thing the council exiled him for.",
+      "story_intro": "Morvath the Kindler is leading the Host against the mountain himself. Tobbin's engine is finished: a walking furnace of molten iron, the thing the council exiled him for.\n\nTier 8 is open: the molten engine. Break Morvath's host.",
+      "story_outro": "Morvath falls back. The engine stands steaming in the snow outside the gates, and the dwarves who forbade it come out to look at it. Inside, the new Lockstone is almost cast.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 9: The Molten Engine. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: Morvath the Kindler is leading the Host against the mountain himself. Tobbin's engine is finished: a walking furnace of molten iron, the thing the council exiled him for."
+  },
+  {
+    "asset": {
+      "id": "campaign_shuttered_halls_fg_second_lockstone_briefing",
+      "campaign": "shuttered_halls",
+      "chapter": "fg_second_lockstone",
+      "chapter_number": 10,
+      "chapter_name": "The Second Lockstone",
+      "map": "second_lockstone",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_shuttered_halls_fg_second_lockstone_briefing.png",
+      "output": "assets/illustrations/shuttered_halls/fg_second_lockstone_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The new Lockstone needs three more days in the Worldforge. Skarn Ashborn's Host is camped in the high pass, and the dead have come up the drowned shafts in the south, the Regent Ysmay Vane at their head. The two hate each other, but both want the mountain.",
+      "story_intro": "The new Lockstone needs three more days in the Worldforge. Skarn Ashborn's Host is camped in the high pass, and the dead have come up the drowned shafts in the south, the Regent Ysmay Vane at their head. The two hate each other, but both want the mountain.\n\nHold the Worldforge and break both sieges. Every enemy town must fall.",
+      "story_outro": "The sieges break. The second Lockstone comes out of the Worldforge white-hot and ringing, cut with the same runes Gunnra's grandmother cut a hundred years ago.\n\nIt is too big for the Forge to carry to the Wound alone. For the first time in forty years, Gunnra Sootmantle orders the gates opened.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Shuttered Halls. Chapter 10: The Second Lockstone. Gunnra Sootmantle is a female dwarven runesmith in soot-stained heavy work armor. Dask Vell is a dwarven ironmarshal. Tobbin Greave is a dwarven artificer. Vast stone halls, forged iron, muted bronze and furnace amber. Story: The new Lockstone needs three more days in the Worldforge. Skarn Ashborn's Host is camped in the high pass, and the dead have come up the drowned shafts in the south, the Regent Ysmay Vane at their head. The two hate each other, but both want the mountain."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_sun_out_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_sun_out",
+      "chapter_number": 1,
+      "chapter_name": "The Sun Goes Out",
+      "map": "sun_goes_out",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_sun_out_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_sun_out_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "In the north the summer did not come. The sky went grey, then red, and the snow that falls is the color of rust. The herds are dying on their feet. Clan Grimfell has driven the last good herd onto its own grazing and says it will kill anyone who comes for it.",
+      "story_intro": "In the north the summer did not come. The sky went grey, then red, and the snow that falls is the color of rust. The herds are dying on their feet. Clan Grimfell has driven the last good herd onto its own grazing and says it will kill anyone who comes for it.\n\nUlvra Kettleborn, Thane, comes for it. Your towns can raise creatures up to tier 2. Take Grimfell.",
+      "story_outro": "Grimfell's thane kneels in the red snow. The herd is Ulvra's, and it will feed both clans for a month. After that there is nothing. The clans will have to go south, all of them, under one thane.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 1: The Sun Goes Out. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: In the north the summer did not come. The sky went grey, then red, and the snow that falls is the color of rust. The herds are dying on their feet. Clan Grimfell has driven the last good herd onto its own grazing and says it will kill anyone who comes for it."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_one_hall_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_one_hall",
+      "chapter_number": 2,
+      "chapter_name": "One Hall",
+      "map": "gen:broad_crossing:1453",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_one_hall_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_one_hall_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "One clan still refuses to follow a Kettleborn south. It would rather starve in its own hall than eat in someone else's.",
+      "story_intro": "One clan still refuses to follow a Kettleborn south. It would rather starve in its own hall than eat in someone else's.\n\nTier 3 is open: oathless berserkers. Break the last clan.",
+      "story_outro": "The last clan comes into Ulvra's hall, and the Frostmarch is one people again for the first time since the Sealing. That night the skalds sing the old song of the Sealing, and Ulvra notices that nobody remembers the last verse.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 2: One Hall. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: One clan still refuses to follow a Kettleborn south. It would rather starve in its own hall than eat in someone else's."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_south_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_south",
+      "chapter_number": 3,
+      "chapter_name": "South for Bread",
+      "map": "gen:broad_crossing:2239",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_south_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_south_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The Concord's northern granaries are full, and the Concord stopped sending grain north years ago. A young seer, Iska Rime, joins the war-band. She has been reading the ash in the snow, and she says it did not come from the sky.",
+      "story_intro": "The Concord's northern granaries are full, and the Concord stopped sending grain north years ago. A young seer, Iska Rime, joins the war-band. She has been reading the ash in the snow, and she says it did not come from the sky.\n\nIska is a Frostcaller. Raid the granaries.",
+      "story_outro": "The granaries burn. A Concord knight fights the clans to the last granary, and a raider laughs at him as he dies: \"Your sky did this. Your fire. We are only hungry.\" Iska wonders if that is true.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 3: South for Bread. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: The Concord's northern granaries are full, and the Concord stopped sending grain north years ago. A young seer, Iska Rime, joins the war-band. She has been reading the ash in the snow, and she says it did not come from the sky."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_iron_pass_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_iron_pass",
+      "chapter_number": 4,
+      "chapter_name": "The Iron Pass",
+      "map": "gen:broad_crossing:2903",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_iron_pass_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_iron_pass_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The clans asked the Forge to trade iron for bread, and the Forge shut the high passes on them. Ironmarshal Dask Vell holds them.",
+      "story_intro": "The clans asked the Forge to trade iron for bread, and the Forge shut the high passes on them. Ironmarshal Dask Vell holds them.\n\nTier 4 is open: tusk riders. Force the Iron Pass.",
+      "story_outro": "The pass is open. Ulvra pins a message to the Forge's gate with her axe: \"Your mountain is warm. Ours is dying. Remember who was cold first.\"",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 4: The Iron Pass. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: The clans asked the Forge to trade iron for bread, and the Forge shut the high passes on them. Ironmarshal Dask Vell holds them."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_highmere_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_highmere",
+      "chapter_number": 5,
+      "chapter_name": "The Granary of Highmere",
+      "map": "granary_of_highmere",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_highmere_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_highmere_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Highmere, the Concord's eastern fortress, holds enough grain to feed the clans through any winter. Its castellan, Odo Brack, has two granary towns outside the walls and a river in front of them.",
+      "story_intro": "Highmere, the Concord's eastern fortress, holds enough grain to feed the clans through any winter. Its castellan, Odo Brack, has two granary towns outside the walls and a river in front of them.\n\nTier 5 is open: frost shamans. Take Harrowby, Millstead and Highmere itself.",
+      "story_outro": "The clans eat. For the first time since the sun went out, there is enough. Iska does not eat. She has climbed Highmere's tower and is looking south-east, where a column of ash is rising into the sky like smoke from a chimney.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 5: The Granary of Highmere. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: Highmere, the Concord's eastern fortress, holds enough grain to feed the clans through any winter. Its castellan, Odo Brack, has two granary towns outside the walls and a river in front of them."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_deer_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_deer",
+      "chapter_number": 6,
+      "chapter_name": "Deer of the Old Wood",
+      "map": "gen:great_marches:3671",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_deer_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_deer_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "South of Highmere lies what is left of the old forest, and in it are deer. The clans hunt them, and burn its trees to keep warm. The Thornwood Covenant's huntmaster, Neve Hollowreed, calls it theft.",
+      "story_intro": "South of Highmere lies what is left of the old forest, and in it are deer. The clans hunt them, and burn its trees to keep warm. The Thornwood Covenant's huntmaster, Neve Hollowreed, calls it theft.\n\nWin the hunting grounds.",
+      "story_outro": "Neve's hunters fall back. One of the clan seers, dying of a thorn, tells Neve the summer was stolen. Iska, listening, knows now where she must go.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 6: Deer of the Old Wood. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: South of Highmere lies what is left of the old forest, and in it are deer. The clans hunt them, and burn its trees to keep warm. The Thornwood Covenant's huntmaster, Neve Hollowreed, calls it theft."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_cold_bones_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_cold_bones",
+      "chapter_number": 7,
+      "chapter_name": "Cold Bones",
+      "map": "gen:great_marches:4357",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_cold_bones_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_cold_bones_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Iska's road south runs across the fens, and the fens are frozen. The dead walk on the ice. They are leaving the south as fast as the living are.",
+      "story_intro": "Iska's road south runs across the fens, and the fens are frozen. The dead walk on the ice. They are leaving the south as fast as the living are.\n\nTier 6 is open: rimeback aurochs. Cross the fens.",
+      "story_outro": "The dead are behind the clans now. Ahead, the ash column is a wall, and the snow at its foot is black. Iska finds the last verse of the Sealing song carved on a cairn: the clans gave their winter to the seal. The cold held the fire low.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 7: Cold Bones. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: Iska's road south runs across the fens, and the fens are frozen. The dead walk on the ice. They are leaving the south as fast as the living are."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_source_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_source",
+      "chapter_number": 8,
+      "chapter_name": "The Source of Winter",
+      "map": "gen:great_marches:5023",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_source_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_source_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The ash comes from the Wound, where the Lockstone has broken and the Host has come out. Every breath the Host takes puts the sun out a little further. The Ashwinter is not a winter. It is smoke.",
+      "story_intro": "The ash comes from the Wound, where the Lockstone has broken and the Host has come out. Every breath the Host takes puts the sun out a little further. The Ashwinter is not a winter. It is smoke.\n\nTier 7 is open: cairn giants. Break the Host's northern flank.",
+      "story_outro": "The flank breaks. Iska stands on the scorched plain and says what the old promise means: winter does not come from the north. The clans carry it. A hundred years ago they marched it into the Wound to freeze the fire. They can do it again.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 8: The Source of Winter. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: The ash comes from the Wound, where the Lockstone has broken and the Host has come out. Every breath the Host takes puts the sun out a little further. The Ashwinter is not a winter. It is smoke."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_wyrm_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_wyrm",
+      "chapter_number": 9,
+      "chapter_name": "Wyrm-Wake",
+      "map": "gen:great_marches:5779",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_wyrm_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_wyrm_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "To carry a winter you need the heart of one. In the oldest glacier of the north sleeps a winter wyrm, older than the clans, colder than the sky. The Host has sent a brood to keep it sleeping.",
+      "story_intro": "To carry a winter you need the heart of one. In the oldest glacier of the north sleeps a winter wyrm, older than the clans, colder than the sky. The Host has sent a brood to keep it sleeping.\n\nTier 8 is open: the winter wyrm. Wake it and break the brood.",
+      "story_outro": "The wyrm wakes, and where it breathes the snow comes back. The whole Frostmarch is marching south behind it. Ulvra no longer talks about bread.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 9: Wyrm-Wake. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: To carry a winter you need the heart of one. In the oldest glacier of the north sleeps a winter wyrm, older than the clans, colder than the sky. The Host has sent a brood to keep it sleeping."
+  },
+  {
+    "asset": {
+      "id": "campaign_ashwinter_fm_bring_winter_briefing",
+      "campaign": "ashwinter",
+      "chapter": "fm_bring_winter",
+      "chapter_number": 10,
+      "chapter_name": "Bring the Winter",
+      "map": "bring_the_winter",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_ashwinter_fm_bring_winter_briefing.png",
+      "output": "assets/illustrations/ashwinter/fm_bring_winter_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Two broods of the Host hold the Wound: Morvath the Kindler's Wound-Keepers in the north and the Deep Broods in the south, either side of the burning chasm. They are rivals and will fight each other, but both will fight you.",
+      "story_intro": "Two broods of the Host hold the Wound: Morvath the Kindler's Wound-Keepers in the north and the Deep Broods in the south, either side of the burning chasm. They are rivals and will fight each other, but both will fight you.\n\nMarch the winter into the Wound. Every brood town must fall.",
+      "story_outro": "The broods break, and the winter comes down into the Wound behind them. The fires bank low, as they did a hundred years ago. The clans have kept the old promise.\n\nWhether anyone will pay them for it this time, Ulvra does not know. She sits down at the edge of the Wound in the falling snow and waits to find out.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Ashwinter. Chapter 10: Bring the Winter. Ulvra Kettleborn is a formidable female northern thane in fur and weathered mail with axe. Bjarr Coldhand is a male reaver. Iska Rime is a young female seer. Frost blue, rust-colored ash snow, worn iron and muted fur. Story: Two broods of the Host hold the Wound: Morvath the Kindler's Wound-Keepers in the north and the Deep Broods in the south, either side of the burning chasm. They are rivals and will fight each other, but both will fight you."
+  },
+  {
+    "asset": {
+      "id": "campaign_long_watch_watch_last_briefing",
+      "campaign": "long_watch",
+      "chapter": "watch_last",
+      "chapter_number": 1,
+      "chapter_name": "The Last Watch",
+      "map": "last_watch",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_long_watch_watch_last_briefing.png",
+      "output": "assets/illustrations/long_watch/watch_last_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "The road ends at Last Watch. Beyond the eastern ridge, seven banners gather in the smoke. Reedhaven has shut its gates; its oathstone lies in the drowned marsh. Hold the castle, win their trust, and make the enemy pay for every day.",
+      "story_intro": "The road ends at Last Watch. Beyond the eastern ridge, seven banners gather in the smoke. Reedhaven has shut its gates; its oathstone lies in the drowned marsh. Hold the castle, win their trust, and make the enemy pay for every day.",
+      "story_outro": "The final banner falls. The watch fires burn through the rain, and Reedhaven opens its gates. But two frontier settlements have sent no word. Their bells must still be ringing when the next host arrives.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Long Watch. Chapter 1: The Last Watch. Aldous Wren is the dark-haired bearded knight in navy and gold, Maelis Thorne the female green-hooded ranger, matching the reference characters. Navy, aged gold, grey stone and marsh green. Story: The road ends at Last Watch. Beyond the eastern ridge, seven banners gather in the smoke. Reedhaven has shut its gates; its oathstone lies in the drowned marsh. Hold the castle, win their trust, and make the enemy pay for every day."
+  },
+  {
+    "asset": {
+      "id": "campaign_long_watch_watch_bells_briefing",
+      "campaign": "long_watch",
+      "chapter": "watch_bells",
+      "chapter_number": 2,
+      "chapter_name": "Three Bells",
+      "map": "scenario:defence_v1:19",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_long_watch_watch_bells_briefing.png",
+      "output": "assets/illustrations/long_watch/watch_bells_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Northwatch and Crossingstead guard the only homes still standing along this road. There will be no retreat into the castle this time. Keep every bell sounding. The scouts bring familiar reports, but the commanders and distances have changed.",
+      "story_intro": "Northwatch and Crossingstead guard the only homes still standing along this road. There will be no retreat into the castle this time. Keep every bell sounding. The scouts bring familiar reports, but the commanders and distances have changed.",
+      "story_outro": "Three bells answer across the ridge. Beneath the abandoned forge, the wardens uncover a stair into the old labyrinth. The oathstone points inward. Twenty-one days remain before the passage closes.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Long Watch. Chapter 2: Three Bells. Aldous Wren is the dark-haired bearded knight in navy and gold, Maelis Thorne the female green-hooded ranger, matching the reference characters. Navy, aged gold, grey stone and marsh green. Story: Northwatch and Crossingstead guard the only homes still standing along this road. There will be no retreat into the castle this time. Keep every bell sounding. The scouts bring familiar reports, but the commanders and distances have changed."
+  },
+  {
+    "asset": {
+      "id": "campaign_long_watch_watch_heart_briefing",
+      "campaign": "long_watch",
+      "chapter": "watch_heart",
+      "chapter_number": 3,
+      "chapter_name": "The Stone Heart",
+      "map": "scenario:labyrinth_v1:37",
+      "usage": "briefing",
+      "source": "assets/source/generated/campaign_long_watch_watch_heart_briefing.png",
+      "output": "assets/illustrations/long_watch/watch_heart_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "scene": "Wren takes the oathstone below while Maelis keeps the road. The central chamber lies somewhere inside the turning passages. The patient road is longer; a terrible guardian watches the shorter crossing. Find the survey chambers, gather the lost, and reach the heart before the twenty-first night.",
+      "story_intro": "Wren takes the oathstone below while Maelis keeps the road. The central chamber lies somewhere inside the turning passages. The patient road is longer; a terrible guardian watches the shorter crossing. Find the survey chambers, gather the lost, and reach the heart before the twenty-first night.",
+      "story_outro": "At the centre, the oathstone fits into a scar in the living rock. Far above, the mountain falls silent. The road is still broken, the settlements still scarred, but the next dawn belongs to those who held the watch.",
+      "story_source": {
+        "ref": "30b89766065f67681d885831ae189d35d26376ab",
+        "path": "data/campaigns.json"
+      },
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Asset: Reignem campaign briefing. Generate ONE full-bleed landscape illustration, 1536x1024. Reference images are STYLE REFERENCES: closely match their finely textured dark fantasy painting with engraved detail, realistic weathered medieval materials, intricate foliage and architecture, atmospheric depth, muted colors with selective luminous highlights. Not pixel art, not photorealistic cinema. No text, labels, borders, panels or watermark. Show the opening narrative moment below, not the victory or later revelations. Compose a clear character-led foreground and layered landscape. Campaign: The Long Watch. Chapter 3: The Stone Heart. Aldous Wren is the dark-haired bearded knight in navy and gold, Maelis Thorne the female green-hooded ranger, matching the reference characters. Navy, aged gold, grey stone and marsh green. Story: Wren takes the oathstone below while Maelis keeps the road. The central chamber lies somewhere inside the turning passages. The patient road is longer; a terrible guardian watches the shorter crossing. Find the survey chambers, gather the lost, and reach the heart before the twenty-first night."
+  }
+]

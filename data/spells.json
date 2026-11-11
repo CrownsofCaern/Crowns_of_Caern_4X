@@ -1,0 +1,12 @@
+{
+  "class_level": 2,
+  "class_by_art": {"rally": "marching_spark", "hex": "keen_edge", "mend": "marching_spark", "strike": "keen_edge", "ward": "keen_edge", "storm": "keen_edge"},
+  "spells": {
+    "marching_spark": {"name": "Marching Spark", "description": "Restore 15% of daily movement.", "cost": 4, "effect": "movement", "amount": 0.15, "source": "class"},
+    "keen_edge": {"name": "Keen Edge", "description": "Your army deals 8% more damage in its next battle.", "cost": 4, "effect": "battle_damage", "amount": 0.08, "source": "class"},
+    "homeward": {"name": "Homeward", "description": "Teleport to your home town, if you still hold it.", "cost": 12, "effect": "home", "amount": 1, "source": "rare"},
+    "town_gate": {"name": "Town Gate", "description": "Travel from one of your towns to another.", "cost": 10, "effect": "town_gate", "amount": 1, "source": "rare"},
+    "swiftwind": {"name": "Swiftwind", "description": "Restore 50% of daily movement.", "cost": 10, "effect": "movement", "amount": 0.5, "source": "rare"},
+    "warfire": {"name": "Warfire", "description": "Your army deals 20% more damage in its next battle.", "cost": 10, "effect": "battle_damage", "amount": 0.2, "source": "rare"}
+  }
+}

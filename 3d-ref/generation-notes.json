@@ -1,0 +1,20 @@
+{
+  "generator": "Built-in image_gen",
+  "reference_role": "Original creature sprites define identity, palette and materials; poses replaced according to PROMPTS.md.",
+  "clarifications": [
+    "Right-hand weapons explicitly placed on viewer left for front views; shield on character left.",
+    "Above-knee cloth and visible shins reinforced for upright bipeds.",
+    "Two separated lower robe tails reinforced for floating shades.",
+    "Dragon feet staggered for visibility; wings kept inside frame and head separated from far wing."
+  ],
+  "final_edits": [
+    {
+      "id": "de_knifedancer",
+      "prompt": "Edit this Knifedancer reference image. Change ONLY the length of the violet waist sash and hip rags: shorten ALL waist cloth to end at upper thigh, at least a handspan ABOVE both knees. Remove the long central strip that hangs between legs. Preserve the exact character, face, hair, armour, daggers, pose, framing, lighting and flat grey background. Both thighs and full gap between legs must remain clearly visible. One full-body image, no text."
+    },
+    {
+      "id": "primordial_wyrm",
+      "prompt": "Edit this Primordial Wyrm 3D modeling reference. Preserve exact dragon design, ash grey brown scales, dusky purple wings, four legs, straight tail, full-body framing and flat grey background. Correct ONLY wing placement: sweep the far wing back toward the tail so the entire face, open jaw, horns and front of neck sit against empty grey background with a clear gap between head and far wing. Keep BOTH wings fully extended and distinctly separated, both tips inside image with margin. Keep all four feet separately visible. No ground, shadow, particles, text or extra objects."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_unsealing_un_ash_snow_briefing",
+  "campaign": "unsealing",
+  "chapter": "un_ash_snow",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_unsealing_un_ash_snow_briefing.txt",
+  "prompt_sha256": "39504c94bc42d95df47bf50dc0e564f0d2b4994e3aa7b1b7cb5c8d4e3187bd7e",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "85f5358a2de790c73bebd28160ecb47ec9e15624354cb0a77056649084b7884d",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

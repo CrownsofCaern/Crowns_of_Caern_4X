@@ -1,0 +1,138 @@
+{
+  "name": "landscape-deco-001",
+  "grid": [
+    4,
+    4
+  ],
+  "category": "deco",
+  "assets": [
+    {
+      "id": "deco_pines_0",
+      "prompt": "dense cluster of tall dark green pine trees; variant 1",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_pines_1",
+      "prompt": "dense cluster of tall dark green pine trees; variant 2",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_snow_pine_0",
+      "prompt": "tall dark conifers laden with snow; variant 1",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_snow_pine_1",
+      "prompt": "tall dark conifers laden with snow; variant 2",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_dead_tree_0",
+      "prompt": "skeletal leafless twisted tree with marsh reeds; variant 1",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_dead_tree_1",
+      "prompt": "skeletal leafless twisted tree with marsh reeds; variant 2",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_peaks_0",
+      "prompt": "jagged grey snowy mountain peak formation; variant 1",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_peaks_1",
+      "prompt": "jagged grey snowy mountain peak formation; variant 2",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_boulders_0",
+      "prompt": "weathered grey boulder cluster with moss; variant 1",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_boulders_1",
+      "prompt": "weathered grey boulder cluster with moss; variant 2",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_bones_0",
+      "prompt": "bleached beast ribcage skull and broken bones; variant 1",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_bones_1",
+      "prompt": "bleached beast ribcage skull and broken bones; variant 2",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_gravestone_0",
+      "prompt": "ancient weathered gothic grave marker with dead grass; variant 1",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_gravestone_1",
+      "prompt": "ancient weathered gothic grave marker with dead grass; variant 2",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_obsidian_0",
+      "prompt": "jagged black volcanic spires with orange lava fissures; variant 1",
+      "size": [
+        48,
+        64
+      ]
+    },
+    {
+      "id": "deco_obsidian_1",
+      "prompt": "jagged black volcanic spires with orange lava fissures; variant 2",
+      "size": [
+        48,
+        64
+      ]
+    }
+  ]
+}

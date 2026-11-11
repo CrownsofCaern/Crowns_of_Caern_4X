@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "batch": "map-expansion-001",
+  "tile_size": 40,
+  "status": "production_candidates",
+  "placement_note": "Footprints describe reserved ground tiles; tall sprite art may extend above them. Landmarks are impassable across the entire reserved rectangle. Terrain variants retain the base biome gameplay. Editor integration pending.",
+  "assets": [
+    {
+      "id": "terrain_moss_heath",
+      "category": "terrain",
+      "name": "Moss heath",
+      "size": [
+        40,
+        40
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "grass",
+      "anchor": "top_left",
+      "palette": "preserve material ramps",
+      "outline": 0,
+      "source": "assets/source/map-expansion-001/terrain_moss_heath.png",
+      "output": "assets/map_scenery/terrain_moss_heath.png",
+      "passable": true,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create one square seamless flat terrain texture filling the whole image edge to edge. Uniform scale and illumination across the image, no vignette or central composition, opposite edges tile. Opaque background. dark olive moss and dry ochre heath on packed earth; tiny low scattered gravel; flat overhead ground surface without objects."
+    },
+    {
+      "id": "terrain_autumn_loam",
+      "category": "terrain",
+      "name": "Autumn loam",
+      "size": [
+        40,
+        40
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "forest",
+      "anchor": "top_left",
+      "palette": "preserve material ramps",
+      "outline": 0,
+      "source": "assets/source/map-expansion-001/terrain_autumn_loam.png",
+      "output": "assets/map_scenery/terrain_autumn_loam.png",
+      "passable": true,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create one square seamless flat terrain texture filling the whole image edge to edge. Uniform scale and illumination across the image, no vignette or central composition, opposite edges tile. Opaque background. russet fallen leaf litter and near-black forest loam; restrained muted copper leaves and exposed soil; flat overhead ground surface without objects."
+    },
+    {
+      "id": "terrain_salt_flat",
+      "category": "terrain",
+      "name": "Salt flat",
+      "size": [
+        40,
+        40
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "desert",
+      "anchor": "top_left",
+      "palette": "preserve material ramps",
+      "outline": 0,
+      "source": "assets/source/map-expansion-001/terrain_salt_flat.png",
+      "output": "assets/map_scenery/terrain_salt_flat.png",
+      "passable": true,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create one square seamless flat terrain texture filling the whole image edge to edge. Uniform scale and illumination across the image, no vignette or central composition, opposite edges tile. Opaque background. bleached grey beige salt crust, shallow polygon cracks, pale mineral deposits, flat overhead surface without objects."
+    },
+    {
+      "id": "terrain_cooled_lava",
+      "category": "terrain",
+      "name": "Cooled lava",
+      "size": [
+        40,
+        40
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "infernal",
+      "anchor": "top_left",
+      "palette": "preserve material ramps",
+      "outline": 0,
+      "source": "assets/source/map-expansion-001/terrain_cooled_lava.png",
+      "output": "assets/map_scenery/terrain_cooled_lava.png",
+      "passable": true,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create one square seamless flat terrain texture filling the whole image edge to edge. Uniform scale and illumination across the image, no vignette or central composition, opposite edges tile. Opaque background. dark charcoal cooled basalt with winding rust-red cracks and very sparse dull ember seams; flat overhead surface without objects."
+    },
+    {
+      "id": "scenery_weeping_willow",
+      "category": "decoration",
+      "name": "Weeping willow",
+      "size": [
+        48,
+        64
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "swamp",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/scenery_weeping_willow.png",
+      "output": "assets/map_scenery/scenery_weeping_willow.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. single ancient gnarled weeping willow, sparse drooping olive foliage, twisted bark, mossy roots."
+    },
+    {
+      "id": "scenery_reed_pool",
+      "category": "decoration",
+      "name": "Reed pool",
+      "size": [
+        64,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "swamp",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/scenery_reed_pool.png",
+      "output": "assets/map_scenery/scenery_reed_pool.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. small shallow dark bog pool ringed by withered reeds, cattails and a few flat stones."
+    },
+    {
+      "id": "scenery_oath_stones",
+      "category": "decoration",
+      "name": "Oath stones",
+      "size": [
+        64,
+        64
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "grass",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/scenery_oath_stones.png",
+      "output": "assets/map_scenery/scenery_oath_stones.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. three leaning weathered standing stones in an uneven cluster, faint eroded abstract carvings, lichen at their feet."
+    },
+    {
+      "id": "scenery_broken_cart",
+      "category": "decoration",
+      "name": "Broken cart",
+      "size": [
+        64,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "rough",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/scenery_broken_cart.png",
+      "output": "assets/map_scenery/scenery_broken_cart.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. single abandoned broken wooden ox cart with one collapsed wheel, torn dark canvas, small scatter of barrels."
+    },
+    {
+      "id": "settlement_concord_hamlet",
+      "category": "settlement",
+      "name": "Concord hamlet",
+      "size": [
+        120,
+        100
+      ],
+      "footprint": [
+        3,
+        2
+      ],
+      "biome": "grass",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/settlement_concord_hamlet.png",
+      "output": "assets/map_scenery/settlement_concord_hamlet.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. small human hamlet of five humble plaster-and-dark-timber cottages, weathered slate roofs, a tiny stone well and a low fence, warm windows, no castle."
+    },
+    {
+      "id": "settlement_frost_fishers",
+      "category": "settlement",
+      "name": "Frost fishers",
+      "size": [
+        120,
+        100
+      ],
+      "footprint": [
+        3,
+        2
+      ],
+      "biome": "snow",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/settlement_frost_fishers.png",
+      "output": "assets/map_scenery/settlement_frost_fishers.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. small northern fishing hamlet of four rugged timber cabins with snowy steep roofs, racks for drying fish, a tiny beached rowboat, warm windows; no water backdrop."
+    },
+    {
+      "id": "settlement_thornwood_hamlet",
+      "category": "settlement",
+      "name": "Thornwood hamlet",
+      "size": [
+        120,
+        100
+      ],
+      "footprint": [
+        3,
+        2
+      ],
+      "biome": "forest",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/settlement_thornwood_hamlet.png",
+      "output": "assets/map_scenery/settlement_thornwood_hamlet.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. small woodland hamlet of four crooked bark-and-timber dwellings with moss roofs among two twisted trees, hanging amber lanterns."
+    },
+    {
+      "id": "settlement_cinder_miners",
+      "category": "settlement",
+      "name": "Cinder miners",
+      "size": [
+        120,
+        100
+      ],
+      "footprint": [
+        3,
+        2
+      ],
+      "biome": "infernal",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/settlement_cinder_miners.png",
+      "output": "assets/map_scenery/settlement_cinder_miners.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. small miners settlement of four soot-black stone shacks and corrugated iron roofs, one modest forge chimney, ore bins, amber furnace light, sparse slag ground."
+    },
+    {
+      "id": "dwelling_wayside_abbey",
+      "category": "dwelling",
+      "name": "Wayside abbey",
+      "size": [
+        80,
+        96
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "biome": "grass",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/dwelling_wayside_abbey.png",
+      "output": "assets/map_scenery/dwelling_wayside_abbey.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. small remote gothic stone abbey with a single narrow bell tower, broken cloister wall, weathered slate roof and warm candlelit entrance, humble scale."
+    },
+    {
+      "id": "dwelling_windmill",
+      "category": "dwelling",
+      "name": "Weathered windmill",
+      "size": [
+        80,
+        96
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "biome": "grass",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/dwelling_windmill.png",
+      "output": "assets/map_scenery/dwelling_windmill.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. single old timber-and-stone windmill with four ragged cloth sails, low attached miller's cottage, sacks at the door."
+    },
+    {
+      "id": "dwelling_marsh_hermit",
+      "category": "dwelling",
+      "name": "Marsh hermit",
+      "size": [
+        80,
+        80
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "biome": "swamp",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/dwelling_marsh_hermit.png",
+      "output": "assets/map_scenery/dwelling_marsh_hermit.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. solitary crooked hermit's hut on short wooden stilts with a tiny footbridge, reed roof, amber lantern and two hanging bundles."
+    },
+    {
+      "id": "dwelling_border_watch",
+      "category": "dwelling",
+      "name": "Border watchtower",
+      "size": [
+        80,
+        96
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "biome": "rough",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/dwelling_border_watch.png",
+      "output": "assets/map_scenery/dwelling_border_watch.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. isolated worn square stone watchtower, timber hoarding, navy pennant without emblem, small attached shelter and crumbled boundary wall."
+    },
+    {
+      "id": "landmark_cinder_volcano",
+      "category": "landmark",
+      "name": "Cinder volcano",
+      "size": [
+        160,
+        160
+      ],
+      "footprint": [
+        4,
+        4
+      ],
+      "biome": "infernal",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/landmark_cinder_volcano.png",
+      "output": "assets/map_scenery/landmark_cinder_volcano.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. single large squat volcanic mountain region with a clearly visible open glowing crater, black jagged basalt slopes, two branching lava flows and sparse attached smoke, wide irregular rocky base."
+    },
+    {
+      "id": "landmark_frozen_cascade",
+      "category": "landmark",
+      "name": "Frozen cascade",
+      "size": [
+        160,
+        160
+      ],
+      "footprint": [
+        4,
+        4
+      ],
+      "biome": "snow",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/landmark_frozen_cascade.png",
+      "output": "assets/map_scenery/landmark_frozen_cascade.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. single dramatic impassable rocky escarpment with a half-frozen waterfall dropping into a small dark blue plunge pool, snow shelves and icicles, contained compact natural landmark."
+    },
+    {
+      "id": "landmark_shattered_citadel",
+      "category": "landmark",
+      "name": "Shattered citadel",
+      "size": [
+        160,
+        160
+      ],
+      "footprint": [
+        4,
+        4
+      ],
+      "biome": "mountain",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/landmark_shattered_citadel.png",
+      "output": "assets/map_scenery/landmark_shattered_citadel.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. unreachable ruined gothic citadel on a steep isolated rock outcrop, broken towers, collapsed bridge stub, cold grey weathered stone, no intact inhabited buildings."
+    },
+    {
+      "id": "landmark_elder_grove",
+      "category": "landmark",
+      "name": "Elder grove",
+      "size": [
+        160,
+        160
+      ],
+      "footprint": [
+        4,
+        4
+      ],
+      "biome": "forest",
+      "anchor": "bottom_center",
+      "palette": "preserve material ramps",
+      "outline": 1,
+      "source": "assets/source/map-expansion-001/landmark_elder_grove.png",
+      "output": "assets/map_scenery/landmark_elder_grove.png",
+      "passable": false,
+      "prompt": "Use case: stylized-concept. Asset type: production adventure-map game asset for Crowns of Cinder. Reference images show the established project art style: use them only as STYLE references, create an original new subject. Match their high three-quarter overhead map camera, hand-painted pixel texture, crisp dark brown outlines, detailed weathered materials, muted earthy colours, top-left light and restrained warm highlights. Grim gothic fantasy, readable at small map zoom. No text, labels, UI, logos, watermark, border or characters. Create ONE isolated complete sprite on genuinely transparent background. Entire subject visible, centred with generous transparent margin. No floating tile, diamond platform, scenic backdrop, horizon or detached cast shadow. Compact connected ground footprint. impassable tangled grove dominated by one enormous ancient hollow tree, massive buttress roots around mossy standing stones, sparse dark olive foliage, tiny amber glow in trunk."
+    }
+  ]
+}

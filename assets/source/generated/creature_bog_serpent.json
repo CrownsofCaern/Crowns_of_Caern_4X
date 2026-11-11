@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "neutrals-b-001",
+  "source_sheet": "assets/source/batches/neutrals-b-001/source.png",
+  "source_sheet_sha256": "3b3826b64e950c43541ddc4e09d0e76489d38b9bdcfac3e93874075d4407a75b",
+  "source_sha256": "c5d3dd35216c63d6bf36e5e4a9e3163bb79441c2c940b9e80808abbd89648eb6",
+  "crop_xyxy": [
+    0,
+    935,
+    315,
+    1247
+  ],
+  "prompt_file": "assets/source/batches/neutrals-b-001/prompt.txt",
+  "conditioning": "Approved Reignem Concord sheet; neutral sheets also conditioned on approved Hollow sheet",
+  "native_size": [
+    128,
+    128
+  ],
+  "quality_status": "pending_visual_review",
+  "isolation": "Full grid cell retained, including groups and disconnected effects"
+}

@@ -1,0 +1,10 @@
+{
+  "batch": "ashen-hounds-remake-001",
+  "source_sheet": "assets/source/batches/ashen-hounds-remake-001/source.png",
+  "source_sheet_sha256": "14551878102166bf96a9fb12f4faae45c96ad575cfa7e2cfa8c4a1d513dcc5b1",
+  "provider": "built-in image_gen",
+  "prompt_file": "assets/source/batches/ashen-hounds-remake-001/prompt-still.txt",
+  "quality_status": "reviewed",
+  "crop": "equal half then alpha bounding box",
+  "source_sha256": "cc153248fd592de9aa119c2bc3c2ce2f6aade933e25e38b85e06d4c32c69dcc5"
+}

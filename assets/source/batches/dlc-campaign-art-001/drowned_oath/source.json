@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "journey_drowned_oath",
+  "campaign": "drowned_oath",
+  "chapter": "",
+  "usage": "journey",
+  "story_source": "data/campaigns.json#campaigns.drowned_oath",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/prompt.txt",
+  "prompt_sha256": "f599832c1f0bd66c182b8370e6546e6107a0771e53cc47e4c6cc8b35da5cf7b4",
+  "conditioning": [
+    "assets/source/batches/world-atlas-001/source.png"
+  ],
+  "source_sha256": "7df77e82ca6b8325e0b4c2a6bb0a0abecd89c9922a18a4d60bb287d525d74e6d",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "engine_reviewed",
+  "processing": "Full resolution; no palette quantization or atlas downsampling",
+  "review_screenshot": "docs/art/production/dlc-campaign-art/drowned_oath-journey.png"
+}

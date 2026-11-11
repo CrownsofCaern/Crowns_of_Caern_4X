@@ -1,0 +1,36 @@
+{
+  "faction": "ashen",
+  "note": "Cells are row-major (0-8). Cut and cleaned by tools/assets/crowns_of_cinder_assets/town_sheets.py; the painting is unchanged.",
+  "sheets": [
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/ashen-sheet.png",
+      "sha256": "35cc23605941532973f935a547c0688fe68677318746113417a1516ad536c42d",
+      "cells": [
+        "a_hall",
+        "a_market",
+        "a_trench",
+        "a_dw1",
+        "a_dw2",
+        "a_dw5",
+        "a_dw6",
+        "a_dw7",
+        "a_throne"
+      ]
+    },
+    {
+      "source": "assets/source/concept-library-2026-11/buildings/ashen-sheet-2.png",
+      "sha256": "5917797b5b1069133b8a411852eaf0ca682b23c9735bfdfe544c4a9903ae6806",
+      "cells": [
+        "a_tithe",
+        "a_chains",
+        "a_vents",
+        "a_den",
+        "a_spoils",
+        "a_dw3",
+        "a_dw4",
+        "a_dw8",
+        "a_mire"
+      ]
+    }
+  ]
+}

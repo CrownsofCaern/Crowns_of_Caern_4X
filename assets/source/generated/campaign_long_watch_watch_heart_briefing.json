@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_long_watch_watch_heart_briefing",
+  "campaign": "long_watch",
+  "chapter": "watch_heart",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_long_watch_watch_heart_briefing.txt",
+  "prompt_sha256": "da042cd54aba890cb94cd1f7130654a535d49383ade33243981f68741b9dd24e",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "8b4f8888dc2b82ba74cb87066e8ba5eb3166b98bfb862eecf87f859e71425aee",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

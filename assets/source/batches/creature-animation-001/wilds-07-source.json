@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/wilds-07-source.png",
+  "source_sha256": "ea5942d9b3ca166edd7c7523c8331cced19a20a61526af0f78996dccbfcd27be",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/wilds-07-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/wilds-07-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "cinder_wraith",
+    "barrow_revenant",
+    "venom_wyvern",
+    "frost_drake"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "cinder_wraith",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinder_wraith.png",
+      "reference_sha256": "3ea546318ba5d020a9ebb463fbf905cb0e19f2d8641a53cc60fbb8490890fafb"
+    },
+    {
+      "id": "barrow_revenant",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_barrow_revenant.png",
+      "reference_sha256": "133cba2e1c94ae645eaa3e1ae5c3d23ffadc6a64acc8d2428c3aa76bac0783a3"
+    },
+    {
+      "id": "venom_wyvern",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_venom_wyvern.png",
+      "reference_sha256": "e4e6048fe2af3542ca17643d43ce5e2dc0ebad7cce4ad9317c4c2ecc162a5fc7"
+    },
+    {
+      "id": "frost_drake",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_frost_drake.png",
+      "reference_sha256": "0b7ce520f21fc1ec7f40c89e0f4558fdaf14d2b92744d75852181c002270e69f"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

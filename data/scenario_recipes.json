@@ -1,0 +1,23 @@
+{
+  "recipes": {
+    "survival_v1": {"name": "The Long Siege", "mode": "survival", "base_map": "last_watch", "version": 1, "legacy": true, "width": 66, "height": 45},
+    "defence_v1": {"name": "Three Strongholds", "mode": "defence", "base_map": "last_watch", "version": 1, "legacy": true, "width": 66, "height": 45},
+    "endless_v1": {"name": "Until the Last Ember", "mode": "endless", "base_map": "last_watch", "version": 1, "legacy": true, "width": 66, "height": 45},
+    "labyrinth_v1": {"name": "The Stone Heart", "mode": "labyrinth", "version": 1, "legacy": true, "cells": 13, "deadline_day": 21, "min_travel_cost": 11000, "max_travel_cost": 21000,
+      "army": [["pike_militia", 36], ["longbowman", 24], ["shieldwarden", 12]],
+      "shortcut_budget": 6500, "road_guard_budget": 1600},
+    "survival_v2": {"name": "The Long Siege", "mode": "survival", "version": 2, "template": "random_l_3p_normal_normal", "waves": [[7, 0.25], [14, 0.6], [21, 1.4], [28, 2.6], [28, 1.8], [35, 3.8], [35, 2.0]]},
+    "defence_v2": {"name": "Three Strongholds", "mode": "defence", "version": 2, "template": "random_l_3p_normal_normal", "waves": [[7, 0.25], [14, 0.6], [21, 1.4], [28, 2.6], [28, 1.8], [35, 3.8], [35, 2.0]]},
+    "endless_v2": {"name": "Until the Last Ember", "mode": "endless", "version": 2, "template": "random_l_3p_normal_normal", "waves": [[7, 0.25], [14, 0.6], [21, 1.4], [28, 2.6], [28, 1.8], [35, 3.8], [35, 2.0]], "endless_growth": 0.25},
+    "labyrinth_v2": {"name": "The Stone Heart", "mode": "labyrinth", "version": 2, "cells": 11, "deadline_day": 21, "min_travel_cost": 11000, "max_travel_cost": 21000,
+      "army": [["pike_militia", 36], ["longbowman", 24], ["shieldwarden", 12]],
+      "shortcut_budget": 6500, "road_guard_budget": 1600},
+    "townless_v1": {"name": "Banner Without a Hall", "mode": "townless", "template": "twin_marches", "version": 1, "width": 90, "height": 90,
+      "villages": [3, 5], "village_days": [0.3, 1.4], "town_days": [1.0, 1.6], "town_win": [0.15, 0.45], "stock_share": 0.65, "tiers": [1, 3]}
+  },
+  "invasion_profiles": [
+    {"class": "warlord", "name": "Ember Marshal", "units": [["cinderling", 0.25], ["scorchhound", 0.25], ["brimstone_hurler", 0.3], ["pyre_titan", 0.2]]},
+    {"class": "gravewarden", "name": "Barrow Captain", "units": [["shambler", 0.25], ["marrow_archer", 0.3], ["gravecrawler", 0.25], ["gibbet_knight", 0.2]]},
+    {"class": "knight", "name": "Exiled Banner", "units": [["pike_militia", 0.25], ["longbowman", 0.3], ["shieldwarden", 0.25], ["lancer", 0.2]]}
+  ]
+}

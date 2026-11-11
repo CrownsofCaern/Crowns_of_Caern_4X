@@ -1,0 +1,862 @@
+{
+  "_doc": "UI frames. Drawn at native size and exported at export_scale (2) so their pixels match the 2x map. nine_slice margins are in native pixels; the game multiplies them by export_scale. Original designs only: no layouts or ornaments from existing games.",
+  "defaults": {
+    "category": "ui",
+    "atlas": "ui",
+    "palette": "master",
+    "outline": false,
+    "anchor": "center",
+    "export_scale": 2,
+    "background": "opaque"
+  },
+  "assets": [
+    {
+      "id": "ui_panel",
+      "size": [
+        48,
+        48
+      ],
+      "nine_slice": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/panel.txt"
+      },
+      "prompt": "dark wooden panel framed by an iron band with a tarnished brass inner trim and angular iron corner brackets"
+    },
+    {
+      "id": "ui_button",
+      "size": [
+        24,
+        16
+      ],
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/button.txt"
+      },
+      "prompt": "dark wooden button with a brass rim"
+    },
+    {
+      "id": "ui_button_hover",
+      "size": [
+        24,
+        16
+      ],
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/button_hover.txt"
+      },
+      "prompt": "dark wooden button with a bright brass rim"
+    },
+    {
+      "id": "ui_button_pressed",
+      "size": [
+        24,
+        16
+      ],
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/button_pressed.txt"
+      },
+      "prompt": "pressed dark wooden button, inset"
+    },
+    {
+      "id": "ui_button_disabled",
+      "size": [
+        24,
+        16
+      ],
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/button_disabled.txt"
+      },
+      "prompt": "greyed-out stone button"
+    },
+    {
+      "id": "ui_slot",
+      "size": [
+        20,
+        20
+      ],
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/slot.txt"
+      },
+      "prompt": "recessed dark slot framed in brass for a creature portrait"
+    },
+    {
+      "id": "ui_divider",
+      "size": [
+        48,
+        7
+      ],
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/divider.txt"
+      },
+      "prompt": "thin brass divider with a diamond centre stud",
+      "background": "transparent"
+    },
+    {
+      "id": "ui_icon_attack",
+      "size": [
+        48,
+        48
+      ],
+      "background": "transparent",
+      "outline": false,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/attack.txt"
+      },
+      "prompt": "UI symbol: the project owner's steel dagger with a red-wrapped grip and brass crossguard",
+      "anchor": "center",
+      "generated_palette": "preserve",
+      "export_scale": 1
+    },
+    {
+      "id": "ui_icon_defense",
+      "size": [
+        48,
+        48
+      ],
+      "background": "transparent",
+      "outline": false,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/defense.txt"
+      },
+      "prompt": "UI symbol: the project owner's heater shield, red field with a pale rampant lion and a steel rim",
+      "anchor": "center",
+      "generated_palette": "preserve",
+      "export_scale": 1
+    },
+    {
+      "id": "ui_icon_power",
+      "size": [
+        16,
+        16
+      ],
+      "background": "transparent",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/power.txt"
+      },
+      "prompt": "small UI icon: an ember flame of spell power"
+    },
+    {
+      "id": "ui_icon_knowledge",
+      "size": [
+        16,
+        16
+      ],
+      "background": "transparent",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/knowledge.txt"
+      },
+      "prompt": "small UI icon: an open tome with parchment pages"
+    },
+    {
+      "id": "ui_icon_move",
+      "size": [
+        48,
+        48
+      ],
+      "background": "transparent",
+      "outline": false,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/move.txt"
+      },
+      "prompt": "UI symbol: the project owner's pair of worn brown leather boots with brass buckles",
+      "anchor": "center",
+      "generated_palette": "preserve",
+      "export_scale": 1
+    },
+    {
+      "id": "ui_icon_xp",
+      "size": [
+        16,
+        16
+      ],
+      "background": "transparent",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/xp.txt"
+      },
+      "prompt": "small UI icon: a tarnished gold star of renown"
+    },
+    {
+      "id": "ui_icon_day",
+      "size": [
+        48,
+        48
+      ],
+      "background": "transparent",
+      "outline": false,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/day.txt"
+      },
+      "prompt": "UI symbol: the project owner's hourglass: a brass and bronze frame with blood-red sand",
+      "anchor": "center",
+      "generated_palette": "preserve",
+      "export_scale": 1
+    },
+    {
+      "id": "ui_icon_town",
+      "size": [
+        48,
+        48
+      ],
+      "background": "transparent",
+      "outline": false,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/town.txt"
+      },
+      "prompt": "UI symbol: the project owner's walled town: grey stone keep, red roofs, red banners on the gate",
+      "anchor": "center",
+      "generated_palette": "preserve",
+      "export_scale": 1
+    },
+    {
+      "id": "ui_icon_hero",
+      "size": [
+        48,
+        48
+      ],
+      "background": "transparent",
+      "outline": false,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/hero.txt"
+      },
+      "prompt": "UI symbol: the project owner's closed steel great helm over a torn red mantle",
+      "anchor": "center",
+      "generated_palette": "preserve",
+      "export_scale": 1
+    },
+    {
+      "id": "ui_icon_armor",
+      "size": [
+        48,
+        48
+      ],
+      "background": "transparent",
+      "outline": false,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/armor.txt"
+      },
+      "prompt": "UI symbol: the project owner's steel cuirass with pauldrons, a brass cross and a torn red skirt",
+      "anchor": "center",
+      "generated_palette": "preserve",
+      "export_scale": 1
+    },
+    {
+      "id": "ui_icon_charm",
+      "size": [
+        48,
+        48
+      ],
+      "background": "transparent",
+      "outline": false,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/charm.txt"
+      },
+      "prompt": "UI symbol: the project owner's brass amulet on a chain with a faceted blood-red gem",
+      "anchor": "center",
+      "generated_palette": "preserve",
+      "export_scale": 1
+    },
+    {
+      "id": "ui_icon_banner",
+      "size": [
+        48,
+        48
+      ],
+      "background": "transparent",
+      "outline": false,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/banner.txt"
+      },
+      "prompt": "UI symbol: the project owner's tattered red banner with a pale cross on a brass rod",
+      "anchor": "center",
+      "generated_palette": "preserve",
+      "export_scale": 1
+    },
+    {
+      "id": "ui_icon_pack",
+      "size": [
+        16,
+        16
+      ],
+      "background": "transparent",
+      "outline": true,
+      "outline_weight": 1,
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui_icons/pack.txt"
+      },
+      "prompt": "small UI icon: a worn leather satchel"
+    },
+    {
+      "id": "ui_panel_concord",
+      "size": [
+        128,
+        128
+      ],
+      "nine_slice": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "panel"
+      },
+      "prompt": "concord faction dark fantasy UI panel material and original corner frame",
+      "export_scale": 1,
+      "generated_palette": "preserve",
+      "background": "opaque",
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_ashen",
+      "size": [
+        128,
+        128
+      ],
+      "nine_slice": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "panel"
+      },
+      "prompt": "ashen faction dark fantasy UI panel material and original corner frame",
+      "export_scale": 1,
+      "generated_palette": "preserve",
+      "background": "opaque",
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_hollow",
+      "size": [
+        128,
+        128
+      ],
+      "nine_slice": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "panel"
+      },
+      "prompt": "hollow faction dark fantasy UI panel material and original corner frame",
+      "export_scale": 1,
+      "generated_palette": "preserve",
+      "background": "opaque",
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_thornwood",
+      "size": [
+        128,
+        128
+      ],
+      "nine_slice": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "panel"
+      },
+      "prompt": "thornwood faction dark fantasy UI panel material and original corner frame",
+      "export_scale": 1,
+      "generated_palette": "preserve",
+      "background": "opaque",
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_forge",
+      "size": [
+        128,
+        128
+      ],
+      "nine_slice": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "panel"
+      },
+      "prompt": "forge faction dark fantasy UI panel material and original corner frame",
+      "export_scale": 1,
+      "generated_palette": "preserve",
+      "background": "opaque",
+      "map_scale": 1
+    },
+    {
+      "id": "ui_panel_frostmarch",
+      "size": [
+        128,
+        128
+      ],
+      "nine_slice": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "panel"
+      },
+      "prompt": "frostmarch faction dark fantasy UI panel material and original corner frame",
+      "export_scale": 1,
+      "generated_palette": "preserve",
+      "background": "opaque",
+      "map_scale": 1
+    },
+    {
+      "id": "cursor_default",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "default"
+        }
+      },
+      "prompt": "Functional iron and brass default cursor with fixed top-left hotspot"
+    },
+    {
+      "id": "cursor_move",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "move"
+        }
+      },
+      "prompt": "Functional iron and brass move cursor with fixed top-left hotspot"
+    },
+    {
+      "id": "cursor_town",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "town"
+        }
+      },
+      "prompt": "Functional iron and brass town cursor with fixed top-left hotspot"
+    },
+    {
+      "id": "cursor_attack",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "attack"
+        }
+      },
+      "prompt": "Functional iron and brass attack cursor with fixed top-left hotspot"
+    },
+    {
+      "id": "cursor_pickup",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "pickup"
+        }
+      },
+      "prompt": "Functional iron and brass pickup cursor with fixed top-left hotspot"
+    },
+    {
+      "id": "cursor_encounter",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "encounter"
+        }
+      },
+      "prompt": "Functional iron and brass encounter cursor with fixed top-left hotspot"
+    },
+    {
+      "id": "cursor_select",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "select"
+        }
+      },
+      "prompt": "Functional iron and brass select cursor with fixed top-left hotspot"
+    },
+    {
+      "id": "cursor_blocked",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "blocked"
+        }
+      },
+      "prompt": "Functional iron and brass blocked cursor with fixed top-left hotspot"
+    },
+    {
+      "id": "cursor_wait",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "wait"
+        }
+      },
+      "prompt": "Functional iron and brass wait cursor with fixed top-left hotspot"
+    },
+    {
+      "id": "ui_resource_gold",
+      "category": "icon",
+      "atlas": "objects",
+      "size": [
+        48,
+        48
+      ],
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "outline": true,
+      "generated_palette": "preserve",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/resource_gold.txt"
+      },
+      "prompt": "Dedicated readable resource icon for gold, worn dark fantasy materials, upper-left light and dark outline"
+    },
+    {
+      "id": "ui_resource_wood",
+      "category": "icon",
+      "atlas": "objects",
+      "size": [
+        48,
+        48
+      ],
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "outline": true,
+      "generated_palette": "preserve",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/resource_wood.txt"
+      },
+      "prompt": "Dedicated readable resource icon for wood, worn dark fantasy materials, upper-left light and dark outline"
+    },
+    {
+      "id": "ui_resource_ore",
+      "category": "icon",
+      "atlas": "objects",
+      "size": [
+        48,
+        48
+      ],
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "outline": true,
+      "generated_palette": "preserve",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/resource_ore.txt"
+      },
+      "prompt": "Dedicated readable resource icon for ore, worn dark fantasy materials, upper-left light and dark outline"
+    },
+    {
+      "id": "ui_resource_mercury",
+      "category": "icon",
+      "atlas": "objects",
+      "size": [
+        48,
+        48
+      ],
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "outline": true,
+      "generated_palette": "preserve",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/resource_mercury.txt"
+      },
+      "prompt": "Dedicated readable resource icon for mercury, worn dark fantasy materials, upper-left light and dark outline"
+    },
+    {
+      "id": "ui_resource_sulfur",
+      "category": "icon",
+      "atlas": "objects",
+      "size": [
+        48,
+        48
+      ],
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "outline": true,
+      "generated_palette": "preserve",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/resource_sulfur.txt"
+      },
+      "prompt": "Dedicated readable resource icon for sulfur, worn dark fantasy materials, upper-left light and dark outline"
+    },
+    {
+      "id": "ui_resource_crystal",
+      "category": "icon",
+      "atlas": "objects",
+      "size": [
+        48,
+        48
+      ],
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "outline": true,
+      "generated_palette": "preserve",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/resource_crystal.txt"
+      },
+      "prompt": "Dedicated readable resource icon for crystal, worn dark fantasy materials, upper-left light and dark outline"
+    },
+    {
+      "id": "ui_resource_gems",
+      "category": "icon",
+      "atlas": "objects",
+      "size": [
+        48,
+        48
+      ],
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "outline": true,
+      "generated_palette": "preserve",
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/ui/resource_gems.txt"
+      },
+      "prompt": "Dedicated readable resource icon for gems, worn dark fantasy materials, upper-left light and dark outline"
+    }
+  ]
+}

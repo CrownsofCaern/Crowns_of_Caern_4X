@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/forge-02-source.png",
+  "source_sha256": "c10109b45459fc4ff20e878457f2abc182015588cd8a277ef4c3ae5810901568",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/forge-02-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/forge-02-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "anvil_guard",
+    "anvil_sworn",
+    "slag_golem",
+    "furnace_golem"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "anvil_guard",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_anvil_guard.png",
+      "reference_sha256": "73c8b86ece8e178f917fb25c34836067842ffd345024fa80a745b5d55efc3bb3"
+    },
+    {
+      "id": "anvil_sworn",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_anvil_sworn.png",
+      "reference_sha256": "e9d9318f44970233825acd00a0019f6ad25f4734d074bb584eb6c63dcc9349dd"
+    },
+    {
+      "id": "slag_golem",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_slag_golem.png",
+      "reference_sha256": "598e568274bf7b4238eff379d9d0e9b29550eb332498b4b1fd49728e09c1c496"
+    },
+    {
+      "id": "furnace_golem",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_furnace_golem.png",
+      "reference_sha256": "3f699117ce04f94d71531331e8cd4d442a07dbb485fb386c7d44fed05dc8e9ec"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

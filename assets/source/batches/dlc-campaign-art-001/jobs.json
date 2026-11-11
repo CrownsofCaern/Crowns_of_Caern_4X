@@ -1,0 +1,414 @@
+[
+  {
+    "asset": {
+      "id": "journey_six_eyes",
+      "campaign": "six_eyes",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Six Eyes \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/source.png",
+      "output": "assets/illustrations/journeys/six_eyes.png",
+      "generation_status": "planned"
+    },
+    "prompt": "Create ONE original regional CAMPAIGN JOURNEY MAP PAINTING for Crowns of Cinder: The Six Eyes. Match the supplied approved world map: detailed hand-painted dark fantasy terrain relief, atmospheric top-left lighting, subdued natural palette, tiny original gothic architecture, winding rivers, ruined roads, forest texture, controlled firelight. HALF MAP HALF PAINTING, elevated cartographic three-quarter overhead view, 1536x1024 landscape, no horizon. No text, numbers, lettering, marker circles, portraits, foreground hero, logos, panels, grid or UI. The game adds clickable destinations and routes separately. Leave small clear space beside each destination. Shared geography: clans and glacier north, Forge mountains west, Concord central plains, Elderwold southwest, Sallowmere fens south, Wound east. This campaign specifically: Expansion. The Umbral Court comes up from the deep to free the surface peoples from the six stones that turned them cruel, and carries the stones home. That was always the plan.\n\nAt (15%,78%) show The Nightgate Caverns, Below the Sky, layer deep_underworld. Story: Serane Nhalvor retakes the Wardens' tithe-caverns from House Draal.\nAt (25%,62%) show The Long Stair, The Stair Goes Up, layer deep_underworld. Story: Forge miners gone mad break into the deep; the Wardens follow the breach up.\nAt (24%,33%) show Kharrak Hold, Under the Sky, layer surface. Story: Townless under the sky, the Wardens take the Forge steadings and then Kharrak Hold for the first Eye.\nAt (51%,40%) show Greyhold, The Saint's Eye, layer surface. Story: The Wardens take Greyhold's chapel and the Eye of the Saint from Aldous Wren.\nAt (31%,51%) show The Heartroots, Thorn and Mirror, layer surface. Story: The freed Concord marches with the Court against the Thornwood, then turns at the Heartroots.\nAt (58%,77%) show The Barrow Below, The Regent's Price, layer underways. Story: Two against two: the Court and Ysmay's Hollow break the last Ashen broods for the Eye of the Regent.\nAt (83%,45%) show Cindermaw, Red Sky, Black Teeth, layer surface. Story: The Wardens take Cindermaw and the Eye of Embers from Skarn Ashborn.\nAt (61%,13%) show The Ancient Glacier, The Winter's Eye, layer surface. Story: The Wardens break Kettlehall and take the sixth Eye from the winter wyrm's cairn.\nAt (12%,45%) show The Stair-Hold, The Long Stair Down, layer surface. Story: Survival: the Wardens hold the Stair-Hold against three freed peoples until Ulmarra opens the way down.\nAt (29%,88%) show The Nightgate, The Nightgate, layer deep_underworld. Story: Hero-only finale: Ulmarra is Vexmire; Serane and Rhuvel fight the gate-hold and then the ancient dragon.\nDeep underworld is a natural subterranean cutaway occupying the bottom quarter, with purple-lit dark elf caverns at lower left and the Nightgate with six empty sockets and a silver-bound sleeping dragon at lower center. Long Stair visibly climbs from the caverns to the western mountains. Show Barrow Below as separate shallower burial halls below the fen at lower right of center. Keep distinct underground depths and a coherent surface geography; no rectangular insets.",
+    "reference": "assets/source/batches/world-atlas-001/source.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_six_eyes_se_stair_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_stair",
+      "chapter_number": 2,
+      "chapter_name": "The Stair Goes Up",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_stair.png",
+      "output": "assets/illustrations/six_eyes/se_stair_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Six Eyes, The Stair Goes Up. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Serane Nhalvor is a female dark elf dreadmarshal in black-violet plate, silver hair and pointed ears; Rhuvel Askai is a male dark elf nightstalker in hooded dark leathers; Ulmarra is an older female dark elf veilseer in purple robes. Show the opening story moment, not later victory. Scene: Halfway up the Long Stair the Wardens find the scratching: Forge miners, come down from Kharrak Hold through a shaft they should never have cut, blind with fear and digging deeper to get away from something. Their overseer, Halvar Kett, says there is an eye in the mountain that watches them and will not close. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_stair-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_six_eyes_se_under_sky_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_under_sky",
+      "chapter_number": 3,
+      "chapter_name": "Under the Sky",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_under_sky.png",
+      "output": "assets/illustrations/six_eyes/se_under_sky_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Six Eyes, Under the Sky. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Serane Nhalvor is a female dark elf dreadmarshal in black-violet plate, silver hair and pointed ears; Rhuvel Askai is a male dark elf nightstalker in hooded dark leathers; Ulmarra is an older female dark elf veilseer in purple robes. Show the opening story moment, not later victory. Scene: The Court stands under the sky for the first time in a thousand years and has no town under it. The Forge's outer steadings are the only shelter, and Gunnra Sootmantle holds Kharrak Hold with the Eye of the Anvil in the arch above her, hammering her own miners into armour. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_under_sky-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_six_eyes_se_saints_eye_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_saints_eye",
+      "chapter_number": 4,
+      "chapter_name": "The Saint's Eye",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_saints_eye.png",
+      "output": "assets/illustrations/six_eyes/se_saints_eye_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Six Eyes, The Saint's Eye. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Serane Nhalvor is a female dark elf dreadmarshal in black-violet plate, silver hair and pointed ears; Rhuvel Askai is a male dark elf nightstalker in hooded dark leathers; Ulmarra is an older female dark elf veilseer in purple robes. Show the opening story moment, not later victory. Scene: Greyhold. Aldous Wren has had three of his own villages burned for impurity since the spring, and the lantern-priests bless each fire. The Eye of the Saint sits in Saint Orrin's reliquary in the chapel, where the whole Concord comes to be looked at. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_saints_eye-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_six_eyes_se_thorn_mirror_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_thorn_mirror",
+      "chapter_number": 5,
+      "chapter_name": "Thorn and Mirror",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_thorn_mirror.png",
+      "output": "assets/illustrations/six_eyes/se_thorn_mirror_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Six Eyes, Thorn and Mirror. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Serane Nhalvor is a female dark elf dreadmarshal in black-violet plate, silver hair and pointed ears; Rhuvel Askai is a male dark elf nightstalker in hooded dark leathers; Ulmarra is an older female dark elf veilseer in purple robes. Show the opening story moment, not later victory. Scene: The freed Concord marches with the Court. Aldous Wren says the Thornwood has gone the same way Greyhold went, and worse: Old Mother Brakka has rooted the Last Grove in a stone and the trees walk at night. The Eye of the Root is in the Heartroots, under her. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_thorn_mirror-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_six_eyes_se_regents_price_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_regents_price",
+      "chapter_number": 6,
+      "chapter_name": "The Regent's Price",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_regents_price.png",
+      "output": "assets/illustrations/six_eyes/se_regents_price_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Six Eyes, The Regent's Price. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Serane Nhalvor is a female dark elf dreadmarshal in black-violet plate, silver hair and pointed ears; Rhuvel Askai is a male dark elf nightstalker in hooded dark leathers; Ulmarra is an older female dark elf veilseer in purple robes. Show the opening story moment, not later victory. Scene: Ysmay Vane, Regent of the Pale Inheritance, wears the Eye of the Regent on a chain and is not turned by it, because she says she was never anything but what she is. She will not be freed. She will sell. Her price: the Red Sky King's leftover brood in the Barrow Below, two brood-camps under Garsh Emberclaw and Grisk Hollowbrand that have been eating her dead. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/source/batches/dlc-campaign-art-001/six_eyes/revisions/se_regents_price-v1.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_regents_price-revision.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_six_eyes_se_red_sky_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_red_sky",
+      "chapter_number": 7,
+      "chapter_name": "Red Sky, Black Teeth",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_red_sky.png",
+      "output": "assets/illustrations/six_eyes/se_red_sky_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Six Eyes, Red Sky, Black Teeth. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Serane Nhalvor is a female dark elf dreadmarshal in black-violet plate, silver hair and pointed ears; Rhuvel Askai is a male dark elf nightstalker in hooded dark leathers; Ulmarra is an older female dark elf veilseer in purple robes. Show the opening story moment, not later victory. Scene: Cindermaw. Skarn Ashborn, the Red Sky King, keeps the Eye of Embers on a chain of teeth, a trophy from Highmere's treasury, and laughs when told it has turned him. \"Turned me into what? I was this before I had it.\" He is the only enemy in this war who tells the truth, and he will not give it up. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_red_sky-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_six_eyes_se_winters_eye_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_winters_eye",
+      "chapter_number": 8,
+      "chapter_name": "The Winter's Eye",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_winters_eye.png",
+      "output": "assets/illustrations/six_eyes/se_winters_eye_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Six Eyes, The Winter's Eye. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Serane Nhalvor is a female dark elf dreadmarshal in black-violet plate, silver hair and pointed ears; Rhuvel Askai is a male dark elf nightstalker in hooded dark leathers; Ulmarra is an older female dark elf veilseer in purple robes. Show the opening story moment, not later victory. Scene: The Ancient Glacier. The Eye of Winter is frozen into the cairn of the winter wyrm, and Ulvra Kettleborn, Thane of all the clans, has been feeding her own clans to it, a hall at a time, to keep it asleep. She says the wyrm is the only thing keeping the north alive. She may be right. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_winters_eye-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_six_eyes_se_long_stair_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_long_stair",
+      "chapter_number": 9,
+      "chapter_name": "The Long Stair Down",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_long_stair.png",
+      "output": "assets/illustrations/six_eyes/se_long_stair_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Six Eyes, The Long Stair Down. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Serane Nhalvor is a female dark elf dreadmarshal in black-violet plate, silver hair and pointed ears; Rhuvel Askai is a male dark elf nightstalker in hooded dark leathers; Ulmarra is an older female dark elf veilseer in purple robes. Show the opening story moment, not later victory. Scene: Every freed people is on the Court's heels: the Concord under Wren, the Forge under Gunnra Sootmantle, the clans under Ulvra Kettleborn, allied for the first time in a hundred years and not saying why. The Wardens hold the Stair-Hold at the top of the Long Stair with six Eyes in a box, waiting for Ulmarra's door to open below. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_long_stair-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_six_eyes_se_nightgate_briefing",
+      "campaign": "six_eyes",
+      "chapter": "se_nightgate",
+      "chapter_number": 10,
+      "chapter_name": "The Nightgate",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_nightgate.png",
+      "output": "assets/illustrations/six_eyes/se_nightgate_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Six Eyes, The Nightgate. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Serane Nhalvor is a female dark elf dreadmarshal in black-violet plate, silver hair and pointed ears; Rhuvel Askai is a male dark elf nightstalker in hooded dark leathers; Ulmarra is an older female dark elf veilseer in purple robes. Show the opening story moment, not later victory. Scene: There is no town below the Stair and no way back up it. Ulmarra takes the box with a smile Serane has seen before, in chapter one, on the causeway, and sets the six Eyes into the six sockets of the Nightgate, and says the name of House Vexmire, the house that remembers the sky, which was never extinct, which was a vow, and had members in every house, and has them now in hers. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/source/batches/dlc-campaign-art-001/six_eyes/revisions/se_nightgate-v1.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_nightgate-revision.txt"
+  },
+  {
+    "asset": {
+      "id": "journey_drowned_oath",
+      "campaign": "drowned_oath",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Drowned Oath \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/source.png",
+      "output": "assets/illustrations/journeys/drowned_oath.png",
+      "generation_status": "planned"
+    },
+    "prompt": "Create ONE original regional CAMPAIGN JOURNEY MAP PAINTING for Crowns of Cinder: The Drowned Oath. Match the supplied approved world map: detailed hand-painted dark fantasy terrain relief, atmospheric top-left lighting, subdued natural palette, tiny original gothic architecture, winding rivers, ruined roads, forest texture, controlled firelight. HALF MAP HALF PAINTING, elevated cartographic three-quarter overhead view, 1536x1024 landscape, no horizon. No text, numbers, lettering, marker circles, portraits, foreground hero, logos, panels, grid or UI. The game adds clickable destinations and routes separately. Leave small clear space beside each destination. Shared geography: clans and glacier north, Forge mountains west, Concord central plains, Elderwold southwest, Sallowmere fens south, Wound east. This campaign specifically: Expansion. The fish-folk of the drowned coast learn what they were and who made them what they are, and march north for revenge on a dead man, in borrowed iron, through a land that does not remember them.\n\nAt (82%,79%) show The Drowned Vaults of Sarranth, The Tablets of Sarranth, layer drowned_shelf. Story: Ilo reads the tablets of Sarranth; Chief Gorrok forbids it; the Shoal splits and Ilo's side takes Gorrok's reef.\nAt (91%,63%) show Mother Urrh's Reef, One Shoal, layer drowned_shelf. Story: The last shoal refuses Ilo; Sael Hookhand joins; the Shoal becomes one.\nAt (63%,64%) show The Living Shore, Landfall, layer surface. Story: The Shoal makes landfall on the Living Shore and clears the Ashen stragglers from the coast.\nAt (51%,72%) show The Barrow Roads, The Last Brood, layer surface. Story: Two against two: the Shoal and Aldous Wren break the last Ashen broods on the Barrow Roads.\nAt (30%,44%) show Ore Roads, The Price of Iron, layer surface. Story: The Forge refuses the Shoal furnace-mail; the Shoal takes Kharrak's outer forges.\nAt (24%,33%) show Kharrak Hold, Three Weeks of Fire, layer surface. Story: Survival: hold the Forge's furnaces for three weeks while the Forgewarm Harness is made.\nAt (27%,21%) show The Iron Pass, The Cold Road, layer surface. Story: The Shoal takes the Iron Pass and the first clan hall in the snow.\nAt (50%,18%) show Last Clan Hall, Who Pays the Clans, layer surface. Story: The Concord marches with the Shoal against the clans, then Aldous Wren pays the Concord's old debt and turns.\nAt (60%,7%) show The Whaleroad Cairn, The Whaleroad Cairn, layer surface. Story: Townless on the glacier, the Shoal fights up to Skadric Whalebone's cairn.\nAt (44%,29%) show Grimfell Grazing, Who Was Cold First, layer surface. Story: One against two: the Shoal against the clans and the Concord, for the way home.\nSarranth and Mother Urrh reef lie beneath turquoise water along the southeastern coast, shown through translucent ocean and a natural drowned-shelf cutaway. A river connects the coast route to northern ice; Forge mountains and furnace halls occupy western center. The frozen Whaleroad cairn must be clearly visible on the upper glacier. This is a coastal journey from drowned ruins to the frozen north, with distinct reef, fen, plains, mountain and ice environments.",
+    "reference": "assets/source/batches/world-atlas-001/source.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_drowned_oath_do_one_shoal_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_one_shoal",
+      "chapter_number": 2,
+      "chapter_name": "One Shoal",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_one_shoal.png",
+      "output": "assets/illustrations/drowned_oath/do_one_shoal_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Drowned Oath, One Shoal. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Ilo is a young fish-folk male oracle, Thunn Reefbreaker a powerful fish-folk tideguard, Sael Hookhand a fish-folk harpooner. They are nonhuman amphibious people with green-blue scaled skin, fish heads and fins, shell armor and salvaged maritime gear, never humans in costume. In chapters 7-10 they wear emberglass furnace-mail glowing warm orange against snow. Show the opening story moment, not later victory. Scene: Mother Urrh's shoal is the last that will not follow. She says the mainland is a story, that the Shoal has forgotten for a reason, and that Ilo will get them all killed on dry sand. Sael Hookhand, her best harpooner, has read the tablets too, and comes over with his boat. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_one_shoal-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_drowned_oath_do_landfall_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_landfall",
+      "chapter_number": 3,
+      "chapter_name": "Landfall",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_landfall.png",
+      "output": "assets/illustrations/drowned_oath/do_landfall_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Drowned Oath, Landfall. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Ilo is a young fish-folk male oracle, Thunn Reefbreaker a powerful fish-folk tideguard, Sael Hookhand a fish-folk harpooner. They are nonhuman amphibious people with green-blue scaled skin, fish heads and fins, shell armor and salvaged maritime gear, never humans in costume. In chapters 7-10 they wear emberglass furnace-mail glowing warm orange against snow. Show the opening story moment, not later victory. Scene: The Living Shore. The Red Sky war is nearly over and its leavings are here: Ashen stragglers under the brood chief Garsh Emberclaw hold the coast road, and the dead of the Pale Inheritance watch from the fens and do not interfere. Nobody on the shore knows what the Shoal is. A Concord oracle, Sister Edda Vey, comes down to the surf with a lantern that burns white near the Shoal instead of blue, and goes away again thinking. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_landfall-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_drowned_oath_do_last_brood_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_last_brood",
+      "chapter_number": 4,
+      "chapter_name": "The Last Brood",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_last_brood.png",
+      "output": "assets/illustrations/drowned_oath/do_last_brood_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Drowned Oath, The Last Brood. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Ilo is a young fish-folk male oracle, Thunn Reefbreaker a powerful fish-folk tideguard, Sael Hookhand a fish-folk harpooner. They are nonhuman amphibious people with green-blue scaled skin, fish heads and fins, shell armor and salvaged maritime gear, never humans in costume. In chapters 7-10 they wear emberglass furnace-mail glowing warm orange against snow. Show the opening story moment, not later victory. Scene: Aldous Wren of the Concord has two broods left on the Barrow Roads, under Vrask the Twice-Eaten and Gaul Cindermouth, and not enough lances to finish them. He offers the people of the sea a share of the roads if they will fight beside him. He does not ask what they are. He does not look at them for long. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_last_brood-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_drowned_oath_do_price_of_iron_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_price_of_iron",
+      "chapter_number": 5,
+      "chapter_name": "The Price of Iron",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_price_of_iron.png",
+      "output": "assets/illustrations/drowned_oath/do_price_of_iron_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Drowned Oath, The Price of Iron. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Ilo is a young fish-folk male oracle, Thunn Reefbreaker a powerful fish-folk tideguard, Sael Hookhand a fish-folk harpooner. They are nonhuman amphibious people with green-blue scaled skin, fish heads and fins, shell armor and salvaged maritime gear, never humans in costume. In chapters 7-10 they wear emberglass furnace-mail glowing warm orange against snow. Show the opening story moment, not later victory. Scene: The Shoal cannot bear the cold. On the first frost of the Barrow Roads a hundred brine-spears stiffened and died standing. The Forge makes furnace-mail that keeps a man warm on a glacier, and Ironmarshal Dask Vell, at the gates of Kharrak's outer holds, says the Forge gave the Concord a stone once and was paid a hundred years late. \"We give nothing freely.\" No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_price_of_iron-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_drowned_oath_do_three_weeks_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_three_weeks",
+      "chapter_number": 6,
+      "chapter_name": "Three Weeks of Fire",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_three_weeks.png",
+      "output": "assets/illustrations/drowned_oath/do_three_weeks_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Drowned Oath, Three Weeks of Fire. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Ilo is a young fish-folk male oracle, Thunn Reefbreaker a powerful fish-folk tideguard, Sael Hookhand a fish-folk harpooner. They are nonhuman amphibious people with green-blue scaled skin, fish heads and fins, shell armor and salvaged maritime gear, never humans in costume. In chapters 7-10 they wear emberglass furnace-mail glowing warm orange against snow. Show the opening story moment, not later victory. Scene: Gunnra Sootmantle comes down from Kharrak Hold with the whole Forge behind her to take her furnaces back. The harness is three weeks from ready: visor, mail, greaves, run through with emberglass that holds heat the way the Shoal's blood cannot. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_three_weeks-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_drowned_oath_do_cold_road_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_cold_road",
+      "chapter_number": 7,
+      "chapter_name": "The Cold Road",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cold_road.png",
+      "output": "assets/illustrations/drowned_oath/do_cold_road_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Drowned Oath, The Cold Road. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Ilo is a young fish-folk male oracle, Thunn Reefbreaker a powerful fish-folk tideguard, Sael Hookhand a fish-folk harpooner. They are nonhuman amphibious people with green-blue scaled skin, fish heads and fins, shell armor and salvaged maritime gear, never humans in costume. In chapters 7-10 they wear emberglass furnace-mail glowing warm orange against snow. Show the opening story moment, not later victory. Scene: The Iron Pass and the southern clan halls. The first snow of the year, and the Shoal walks into it in furnace-mail, and the clans under Hrodna Grimfell come out to see what is walking. Nobody in the north has asked what the fish-folk want here. Nobody has had to. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cold_road-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_drowned_oath_do_who_pays_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_who_pays",
+      "chapter_number": 8,
+      "chapter_name": "Who Pays the Clans",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_who_pays.png",
+      "output": "assets/illustrations/drowned_oath/do_who_pays_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Drowned Oath, Who Pays the Clans. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Ilo is a young fish-folk male oracle, Thunn Reefbreaker a powerful fish-folk tideguard, Sael Hookhand a fish-folk harpooner. They are nonhuman amphibious people with green-blue scaled skin, fish heads and fins, shell armor and salvaged maritime gear, never humans in costume. In chapters 7-10 they wear emberglass furnace-mail glowing warm orange against snow. Show the opening story moment, not later victory. Scene: The Concord marches north with the Shoal. Aldous Wren says the clans burned Concord granaries under the red sky and the Concord has a debt to settle, and that debts are what the Concord is made of. Thane Orm Whaleroad of the shaman clan holds the northern halls, and his clan keeps a cairn on the glacier it never speaks of. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_who_pays-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_drowned_oath_do_cairn_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_cairn",
+      "chapter_number": 9,
+      "chapter_name": "The Whaleroad Cairn",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cairn.png",
+      "output": "assets/illustrations/drowned_oath/do_cairn_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Drowned Oath, The Whaleroad Cairn. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Ilo is a young fish-folk male oracle, Thunn Reefbreaker a powerful fish-folk tideguard, Sael Hookhand a fish-folk harpooner. They are nonhuman amphibious people with green-blue scaled skin, fish heads and fins, shell armor and salvaged maritime gear, never humans in costume. In chapters 7-10 they wear emberglass furnace-mail glowing warm orange against snow. Show the opening story moment, not later victory. Scene: Nothing of the Shoal's can live on the glacier. The rivermouth camps are all the shelter there is, and the Shoal holds no town. Seer Iska Rime holds the ice above with the shaman clan's last warbands and the cairn behind her. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cairn-prompt.txt"
+  },
+  {
+    "asset": {
+      "id": "campaign_drowned_oath_do_cold_first_briefing",
+      "campaign": "drowned_oath",
+      "chapter": "do_cold_first",
+      "chapter_number": 10,
+      "chapter_name": "Who Was Cold First",
+      "usage": "briefing",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cold_first.png",
+      "output": "assets/illustrations/drowned_oath/do_cold_first_briefing.png",
+      "requested_size": [
+        1536,
+        1024
+      ],
+      "quality_status": "pending_visual_review"
+    },
+    "prompt": "Use case: illustration-story. Create one 1536x1024 landscape campaign chapter painting for Crowns of Cinder, The Drowned Oath, Who Was Cold First. Reference is style only: match the existing Last Light finely textured dark gothic fantasy painted illustration, intricate realistic materials, atmospheric depth and restrained palette. ONE coherent narrative scene with distinctive composition suited to this chapter. Do not reuse the reference composition or its foreground tree, ruin or heroes. Ilo is a young fish-folk male oracle, Thunn Reefbreaker a powerful fish-folk tideguard, Sael Hookhand a fish-folk harpooner. They are nonhuman amphibious people with green-blue scaled skin, fish heads and fins, shell armor and salvaged maritime gear, never humans in costume. In chapters 7-10 they wear emberglass furnace-mail glowing warm orange against snow. Show the opening story moment, not later victory. Scene: Kettlehall and the Hall of the Endless Feast: Ulvra Kettleborn's clans and Aldous Wren's Concord, allied on the Whaleroad, between the Shoal and the sea. There is no way home that does not go through both. No text, watermark, border, panels, grid, game UI or modern objects. Original dark fantasy, no cartoon proportions.",
+    "reference": "assets/illustrations/last_light/ll_knight_briefing.png",
+    "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_cold_first-prompt.txt"
+  }
+]

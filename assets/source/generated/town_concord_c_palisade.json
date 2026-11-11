@@ -1,0 +1,25 @@
+{
+  "id": "c_palisade",
+  "provider": "image_gen",
+  "source_sheet": "assets/source/batches/concord-town-001/base.png",
+  "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+  "crop_xyxy": [
+    315,
+    282,
+    630,
+    594
+  ],
+  "alpha_trim_xyxy": [
+    11,
+    114,
+    291,
+    294
+  ],
+  "source_sha256": "8bb6df5dbc207eb18066da73d280365024b7e6e6691279831ccadd3f4789e11f",
+  "conditioning": [
+    "foundation.png"
+  ],
+  "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+  "quality_status": "rendered_candidate",
+  "review": "docs/art/production/living-world/"
+}

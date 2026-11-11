@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1265,
+    1243
+  ],
+  "review": "Mechanical grid extraction; design, silhouette and engine review pending",
+  "assets": [
+    {
+      "id": "deco_pines_0",
+      "prompt": "dense cluster of tall dark green pine trees; variant 1",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        316,
+        311
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_pines_1",
+      "prompt": "dense cluster of tall dark green pine trees; variant 2",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        316,
+        0,
+        632,
+        311
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_snow_pine_0",
+      "prompt": "tall dark conifers laden with snow; variant 1",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        632,
+        0,
+        949,
+        311
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_snow_pine_1",
+      "prompt": "tall dark conifers laden with snow; variant 2",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        949,
+        0,
+        1265,
+        311
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_dead_tree_0",
+      "prompt": "skeletal leafless twisted tree with marsh reeds; variant 1",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        0,
+        311,
+        316,
+        622
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_dead_tree_1",
+      "prompt": "skeletal leafless twisted tree with marsh reeds; variant 2",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        316,
+        311,
+        632,
+        622
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_peaks_0",
+      "prompt": "jagged grey snowy mountain peak formation; variant 1",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        632,
+        311,
+        949,
+        622
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_peaks_1",
+      "prompt": "jagged grey snowy mountain peak formation; variant 2",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        949,
+        311,
+        1265,
+        622
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_boulders_0",
+      "prompt": "weathered grey boulder cluster with moss; variant 1",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        0,
+        622,
+        316,
+        932
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_boulders_1",
+      "prompt": "weathered grey boulder cluster with moss; variant 2",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        316,
+        622,
+        632,
+        932
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_bones_0",
+      "prompt": "bleached beast ribcage skull and broken bones; variant 1",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        632,
+        622,
+        949,
+        932
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_bones_1",
+      "prompt": "bleached beast ribcage skull and broken bones; variant 2",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        949,
+        622,
+        1265,
+        932
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_gravestone_0",
+      "prompt": "ancient weathered gothic grave marker with dead grass; variant 1",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        0,
+        932,
+        316,
+        1243
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_gravestone_1",
+      "prompt": "ancient weathered gothic grave marker with dead grass; variant 2",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        316,
+        932,
+        632,
+        1243
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_obsidian_0",
+      "prompt": "jagged black volcanic spires with orange lava fissures; variant 1",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        632,
+        932,
+        949,
+        1243
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "deco_obsidian_1",
+      "prompt": "jagged black volcanic spires with orange lava fissures; variant 2",
+      "size": [
+        48,
+        64
+      ],
+      "crop_xyxy": [
+        949,
+        932,
+        1265,
+        1243
+      ],
+      "keep_components": true
+    }
+  ]
+}

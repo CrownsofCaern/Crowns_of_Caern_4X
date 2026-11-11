@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1448,
+    1086
+  ],
+  "assets": [
+    {
+      "id": "creature_cinderling",
+      "crop_xyxy": [
+        49,
+        65,
+        295,
+        214
+      ]
+    },
+    {
+      "id": "creature_seared_cinderling",
+      "crop_xyxy": [
+        399,
+        36,
+        653,
+        217
+      ]
+    },
+    {
+      "id": "creature_scorchhound",
+      "crop_xyxy": [
+        730,
+        41,
+        1035,
+        216
+      ]
+    },
+    {
+      "id": "creature_hellmaw_hound",
+      "crop_xyxy": [
+        1108,
+        12,
+        1425,
+        217
+      ]
+    },
+    {
+      "id": "creature_brimstone_hurler",
+      "crop_xyxy": [
+        35,
+        252,
+        238,
+        508
+      ]
+    },
+    {
+      "id": "creature_brimstone_bombardier",
+      "crop_xyxy": [
+        389,
+        243,
+        629,
+        510
+      ]
+    },
+    {
+      "id": "creature_flayer",
+      "crop_xyxy": [
+        711,
+        227,
+        986,
+        510
+      ]
+    },
+    {
+      "id": "creature_flayer_exalted",
+      "crop_xyxy": [
+        1053,
+        227,
+        1408,
+        511
+      ]
+    },
+    {
+      "id": "creature_ash_witch",
+      "crop_xyxy": [
+        23,
+        515,
+        275,
+        762
+      ]
+    },
+    {
+      "id": "creature_ash_matriarch",
+      "crop_xyxy": [
+        328,
+        512,
+        648,
+        763
+      ]
+    },
+    {
+      "id": "creature_gorgewing",
+      "crop_xyxy": [
+        674,
+        527,
+        1011,
+        771
+      ]
+    },
+    {
+      "id": "creature_gorgewing_matron",
+      "crop_xyxy": [
+        1025,
+        521,
+        1444,
+        769
+      ]
+    },
+    {
+      "id": "creature_pyre_titan",
+      "crop_xyxy": [
+        15,
+        774,
+        296,
+        1077
+      ]
+    },
+    {
+      "id": "creature_pyre_sovereign",
+      "crop_xyxy": [
+        340,
+        768,
+        648,
+        1076
+      ]
+    },
+    {
+      "id": "creature_cinder_maw",
+      "crop_xyxy": [
+        662,
+        830,
+        998,
+        1068
+      ]
+    },
+    {
+      "id": "creature_maw_of_ruin",
+      "crop_xyxy": [
+        1016,
+        790,
+        1439,
+        1075
+      ]
+    }
+  ],
+  "review": "Automatically staged isolated silhouettes; visual review pending"
+}

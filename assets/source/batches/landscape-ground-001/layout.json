@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "grid": [
+    5,
+    2
+  ],
+  "source_dimensions": [
+    1983,
+    793
+  ],
+  "review": "Mechanical grid extraction; design, silhouette and engine review pending",
+  "assets": [
+    {
+      "id": "terrain_water",
+      "prompt": "deep dark lake water, faint moonlit ripples",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        397,
+        396
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_river",
+      "prompt": "shallow cold river ford, stones under the current",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        397,
+        0,
+        793,
+        396
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_swamp",
+      "prompt": "rotting bog, black pools, reeds",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        793,
+        0,
+        1190,
+        396
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_grass",
+      "prompt": "dark withered grassland under a red sky",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        1190,
+        0,
+        1586,
+        396
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_desert",
+      "prompt": "pale dust and wind ripples, bleached bones",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        1586,
+        0,
+        1983,
+        396
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_rough",
+      "prompt": "rocky grey highland scree",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        0,
+        396,
+        397,
+        793
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_snow",
+      "prompt": "frozen snowfield with cold blue shadows",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        397,
+        396,
+        793,
+        793
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_forest",
+      "prompt": "dense dark pine forest floor",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        793,
+        396,
+        1190,
+        793
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_infernal",
+      "prompt": "cinder wastes, ash ground cracked with glowing lava",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        1190,
+        396,
+        1586,
+        793
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_mountain",
+      "prompt": "impassable jagged snow-capped peaks",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        1586,
+        396,
+        1983,
+        793
+      ],
+      "keep_components": true
+    }
+  ]
+}

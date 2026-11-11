@@ -1,0 +1,13 @@
+{
+  "id": "site_cobolt_exchange",
+  "prompt": "Use case: stylized-concept. Asset type: production adventure-map building sprite for Crowns of Cinder. Reference image 1 is the current road-trader sprite and defines the rendering style: richly detailed painterly pixel art, restrained realistic materials, thin dark outline and warm lantern highlights. Reference image 2 is the approved cobolt concept: retain the cobolt architecture and merchant identity. ONE building, elevated three-quarter overhead adventure-map view with roof and two sides visible, top-left light. Weathered wood, patched muted umber canvas with small desaturated petrol-teal cloth accents, tarnished brass scales, iron-bound chests, amber lantern. Closed awnings, screens and shuttered entrances hide all guards. NO people, creatures or visible troops. Compact readable silhouette and dense hand-painted detail, same world as existing road-trader sprite, not smooth cartoon, not vector, not glossy 3D. Transparent background with clean alpha. No surrounding terrain, roads, scenery, text, labels, borders, numbers, ground plane or shadow oval. Entire building and equipment visible with empty margins.\nSubject: Cobolt Vault Exchange, level three: small fortified stone counting house with thick shuttered vault door, low weathered slate roof and a single chimney, attached closed canvas-covered caravan yard, brass scales over the entrance, stacked iron-bound chests and amber lanterns. Wealthy trade house, not a castle or huge town.",
+  "references": [
+    "assets/build/object/site_road_trader.png",
+    "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+  ],
+  "tool": "built-in imagegen",
+  "transparent_background": true,
+  "sha256": "86aac5195dad83917c2e8111c73850da9aa9c7fc8185f9d3aa864097e705be4d",
+  "date": "2026-11-09",
+  "role": "production still sprite; animations pending"
+}

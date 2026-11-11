@@ -1,0 +1,11 @@
+{
+  "provider": "ChatGPT image_gen",
+  "quality_status": "geography_proposal",
+  "source": "assets/source/batches/world-atlas-001/source.png",
+  "source_sha256": "5d0f559fd7f7871aa66beb53a5b77c66b309931a9fc9c4e7e30fc92638f8b077",
+  "prompt_file": "assets/source/batches/world-atlas-001/prompt.txt",
+  "prompt_sha256": "49668cfcdbaa6ee739cf745aec45aec3fc5550ec828ff6574730851fa56fd0d0",
+  "reference": "assets/source/generated/menu_campaign.png",
+  "reference_sha256": "a54ed52231021150874ad00d4969d4d19f59560c7e209ff8b3d78417256087ef",
+  "processing": "Unmodified full-resolution source; geography labels and routes rendered separately for review"
+}

@@ -1,0 +1,197 @@
+{
+  "generator": "Built-in image_gen",
+  "date": "2026-11-10",
+  "scope": "21 required references; optional retries excluded",
+  "notes": "Sprite identity references with pose clarifications; final targeted edits shorten Knifedancer sash and separate Primordial Wyrm head from wing. References require downstream mesh and rig validation.",
+  "units": [
+    {
+      "id": "winter_wyrm",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, full body, the whole length in frame with a small margin, tail tip included. Plain flat light grey background, no ground, no shadow, no text, no scenery, no snow, breath or particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: side view, facing right. The body is NOT coiled: it lies stretched out along the ground in one long shallow S-curve, about six times longer than it is tall, with no part of the body crossing, touching or overlapping another part. The front third rises gently so the head is held forward at shoulder height, jaws slightly open. The tail tapers to a point at the far left.\n\nSubject: Winter Wyrm, a huge wingless and limbless ice serpent that bores through glaciers. Pale blue-white overlapping scales, a ridge of short frost-crystal spikes along the spine (short, so the silhouette stays clean), a long horned reptile head with icy fangs. Colours: frost white, pale ice blue, grey-blue shadows.",
+      "source": "assets/source/generated/creature_winter_wyrm.png",
+      "file": "winter_wyrm.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "f302b6a1ea98347fe63a4fe85e2e982cbc4868e1880d5a541262759053b0865c"
+    },
+    {
+      "id": "winter_wyrm_ancient",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, full body, the whole length in frame with a small margin, tail tip included. Plain flat light grey background, no ground, no shadow, no text, no scenery, no snow, breath or particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: side view, facing right. The body is NOT coiled: it lies stretched out along the ground in one long shallow S-curve, about six times longer than it is tall, with no part of the body crossing, touching or overlapping another part. The front third rises gently so the head is held forward at shoulder height, jaws open, but no breath coming out. The tail tapers to a point at the far left.\n\nSubject: Ancient Winter Wyrm, an older and larger wingless, limbless ice serpent. Thick armour of jagged glacier-blue ice crystal plates along its back, a crown of ice horns, a heavy jaw with long icy fangs, a faint cold-blue glow inside the open mouth. Crystal plates stay close to the body, no long loose shards. Colours: glacier blue, frost white, deep ice blue.",
+      "source": "assets/source/generated/creature_winter_wyrm_ancient.png",
+      "file": "winter_wyrm_ancient.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1b212d89f944d32bddf344dd249110290af473113fb261e0ce0658d8352d3949"
+    },
+    {
+      "id": "furnace_golem",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no smoke, sparks or flames floating free. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright in a relaxed A-pose: feet apart at shoulder width, legs straight and clearly separated, both arms hanging down and held about 35 degrees away from the torso with a clear gap between each arm and the body, hands as open fists.\n\nSubject: Furnace Golem, a towering walking furnace of riveted bronze-brown iron plates. It must have a clear distinct head: a small armoured helm-like head sitting between the shoulders, with a glowing slit visor. A round furnace grate in the chest glows orange, and glowing orange seams show at the joints. Two short chimney stacks rise from the back of the shoulders (behind the head, not above the arms). Thick armoured arms and legs with plated knees and big fists. Colours: dark iron, tarnished brass rivets, rust brown, orange furnace glow.",
+      "source": "assets/source/generated/creature_furnace_golem.png",
+      "file": "furnace_golem.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "a97fd0baa84b790b31a2fff60dc30bd93411bcdc003e9ce96883f85fdcf41fc2"
+    },
+    {
+      "id": "de_knifedancer",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright and tall, NOT crouched: feet apart at shoulder width, legs straight and clearly separated, both arms held down and about 35 degrees away from the torso with a clear gap between each arm and the body. A curved dagger in each hand, blades pointing down and outward, away from the legs.\n\nSubject: Knifedancer, an athletic slender dark elf assassin with long pale silver-white hair tied back, a violet cloth mask over the lower face, fitted black leather and dark lacquered armour, a short violet sash at the waist that ends above the knees. Colours: black, deep violet, purple accents, pale grey skin, silver blades.",
+      "source": "assets/source/generated/creature_de_knifedancer.png",
+      "file": "de_knifedancer.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "78bc258d0cc5772103c136319b5a302bcf799278b52b4b7ae3493d4b7aebdb3a"
+    },
+    {
+      "id": "de_blood_scythe",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright and tall, NOT crouched: feet apart at shoulder width, legs straight and clearly separated, both arms held down and about 35 degrees away from the torso with a clear gap between each arm and the body. A long curved sickle blade in each hand, blades pointing down and outward, away from the legs.\n\nSubject: Blood Scythe, an elite dark elf assassin with long pale silver-white hair, a severe silver death mask, layered spiked black shoulder armour, fitted dark lacquered armour with violet trim, short violet cloth strips at the waist ending above the knees. Colours: black, deep violet, silver mask and blades, dark red edge on the blades.",
+      "source": "assets/source/generated/creature_de_blood_scythe.png",
+      "file": "de_blood_scythe.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "37ce74b8b68963322da7ff454629929230d7043911bda93a5cb6b223f0009814"
+    },
+    {
+      "id": "fm_coil_serpent",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, full body, the whole length in frame with a small margin, tail tip included. Plain flat light grey background, no ground, no water, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: side view, facing right. The body is NOT coiled: it lies stretched out along the ground in one long shallow S-curve, about five times longer than it is tall, with no part of the body crossing, touching or overlapping another part. The two clawed forelimbs are planted on the ground under the raised front of the body, apart from each other. Head held forward, jaws slightly open. The finned tail tapers out at the far left.\n\nSubject: Coil Serpent, an amphibious sea serpent with broad toothy jaws, webbed dorsal fins along the back, two clawed forelimbs and a long scaly body. Colours: dark sea green and teal scales, pale cream belly, coral-pink fin membranes.",
+      "source": "assets/source/generated/creature_fm_coil_serpent.png",
+      "file": "fm_coil_serpent.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "b0fb81151b702c5596a53ed695f8baf2eb569ecfc81aa342702233dfecdf06ea"
+    },
+    {
+      "id": "fm_storm_leviathan",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, full body, the whole length in frame with a small margin, tail tip included. Plain flat light grey background, no ground, no water, no shadow, no text, no scenery, no lightning or particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: side view, facing right. The body is NOT coiled: it lies stretched out along the ground in one long shallow S-curve, about five times longer than it is tall, with no part of the body crossing, touching or overlapping another part. The two clawed forelimbs are planted on the ground under the raised front of the body, apart from each other. Head held forward, jaws open. The finned tail tapers out at the far left.\n\nSubject: Storm Leviathan, a massive royal sea serpent: crown of ivory spines on the head, armoured scale ridges along the back, short coral growths on the shoulders, a cyan glow inside the throat, two clawed forelimbs. Colours: deep teal and dark green scales, ivory spines, coral red, cyan glow.",
+      "source": "assets/source/generated/creature_fm_storm_leviathan.png",
+      "file": "fm_storm_leviathan.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "d442e573aeea5884cbc613943116ae0aaac1807c963ee1d9bc9cdd6de7a2bcb2"
+    },
+    {
+      "id": "fm_barnacle_bulwark",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright: feet apart at shoulder width, legs straight and clearly separated and fully visible. Left arm holds a large shell shield out to the side, away from the body, so the shield does NOT cover the torso or legs. Right arm hangs down about 35 degrees from the body holding a bronze hooked cleaver pointing down, clear of the leg.\n\nSubject: Barnacle Bulwark, a stocky armoured fish man with a wide toothy fish head and fin crest, hulking barnacle-encrusted shell armour on the shoulders and chest, a big oval ribbed shell shield, webbed clawed feet. Small coral growths on the back. Colours: sea green skin, bone and cream shell, coral red, bronze.",
+      "source": "assets/source/generated/creature_fm_barnacle_bulwark.png",
+      "file": "fm_barnacle_bulwark.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "457bd5f886d9046b83c81439f7c93e59edf675c96890945cb13d94f35a231688"
+    },
+    {
+      "id": "wailing_shade",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no mist, smoke or particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right, hovering upright just above the ground. Head and shoulders upright, both arms held out and down about 40 degrees from the torso with a clear gap between each arm and the body, long bony fingers spread. Below the waist the tattered robe splits into two separate long trailing tails, like two legs, slightly apart and not touching each other.\n\nSubject: Wailing Shade, the ghost of a grieving woman: a deep hood over a dark gaunt face, a tattered shroud of dusky violet fading to moss green at the ragged edges, skeletal grey hands. The rags stay close to the body, no long loose streamers. Colours: dusky violet, grey-green, bone grey.",
+      "source": "assets/source/generated/creature_wailing_shade.png",
+      "file": "wailing_shade.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "29d8be2c83fcd6c9f1a4e9ace0917bb671c7331c09a6ee102b9a06719ccd587a"
+    },
+    {
+      "id": "dirge_shade",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no mist, smoke or particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right, hovering upright just above the ground. Head and shoulders upright, both arms held out and down about 40 degrees from the torso with a clear gap between each arm and the body, long bony fingers spread. Below the waist the tattered robe splits into two separate long trailing tails, like two legs, slightly apart and not touching each other.\n\nSubject: Dirge Shade, a larger mourning spirit: a deep hood crowned with a thorny iron ring halo fixed to the back of the hood, small iron funeral bells hanging from the shoulders on short chains, a tattered shroud of violet and moss green. The rags stay close to the body, no long loose streamers. Colours: violet, moss green, rusted iron, bone grey.",
+      "source": "assets/source/generated/creature_dirge_shade.png",
+      "file": "dirge_shade.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "80a4c1c704751d0e4065a94a16bc539d28bb88bd6770c257e79289da21464c79"
+    },
+    {
+      "id": "crag_slinger",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright, NOT crouched: feet apart at shoulder width, legs straight and clearly separated, both arms held down and about 35 degrees away from the torso with a clear gap between each arm and the body. The right hand holds a leather sling hanging down with a stone in its pouch, clear of the leg.\n\nSubject: Crag Slinger, a wiry, gaunt hill-folk ambusher with a ragged hood, patched hide tunic in rock-grey and moss tones ending above the knee, a stone pouch on the belt, wrapped forearms and worn boots. Colours: stone grey, mossy green, dirty brown leather.",
+      "source": "assets/source/generated/creature_crag_slinger.png",
+      "file": "crag_slinger.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "04d8b0c271c9d03569af1ba24b71726af6f0c0f01d2c34bfb2638f69a333fe7a"
+    },
+    {
+      "id": "road_cutthroat",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright, NOT crouched: feet apart at shoulder width, legs straight and clearly separated, both arms held down and about 35 degrees away from the torso with a clear gap between each arm and the body. The right hand holds a long knife or short sword pointing down and outward, clear of the leg.\n\nSubject: Road Cutthroat, a scarred human deserter turned highway murderer: a ragged dark red hood and short shoulder cape ending at the waist, a stained leather jerkin over old mail, belts and pouches, worn trousers and boots, a stubbled hard face. Colours: dried-blood red, dark brown leather, dull grey mail.",
+      "source": "assets/source/generated/creature_road_cutthroat.png",
+      "file": "road_cutthroat.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "8f33fd7498ef78d73a3da9af25cc7e7f64e4a069b44896d042ae2bc0b7adceb1"
+    },
+    {
+      "id": "marsh_hag",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright, NOT hunched: feet apart at shoulder width, legs straight and clearly separated, both arms held down and about 35 degrees away from the torso with a clear gap between each arm and the body. The right hand holds a gnarled crooked staff vertically at her side, the staff not touching her body. Her ragged skirt ends at the knee so both shins and bare feet show.\n\nSubject: Marsh Hag, a gaunt crone of the reed marshes: long matted grey hair, sickly grey-green skin, a cursing open mouth, a ragged layered shawl of moss and dark violet rags, a small bundle of cattail reeds tied on her back, a little skull charm on the belt and small skulls hanging from the staff head. Colours: muddy violet, moss green, grey skin, brown wood.",
+      "source": "assets/source/generated/creature_marsh_hag.png",
+      "file": "marsh_hag.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "d6c9346a597a901ff099d7d150de78951fcef80fdf98c93fb2ce114f04f846e8"
+    },
+    {
+      "id": "rime_wight",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no mist or particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright, NOT hunched: feet apart at shoulder width, legs straight and clearly separated, both arms held down and about 35 degrees away from the torso with a clear gap between each arm and the body, long clawed fingers spread.\n\nSubject: Rime Wight, a frozen corpse that walks the mountain passes: gaunt skeletal body with shrunken frost-white skin over the ribs, a hooded rag of frozen grey cloth on the head and shoulders, icicles and frost crust on the limbs (short, close to the body), an open screaming skull-like face with pale blue glowing eyes. Colours: frost white, pale blue-grey, bone.",
+      "source": "assets/source/generated/creature_rime_wight.png",
+      "file": "rime_wight.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "dd4949fea64d052929be69584d3bf6888391dc2c69674725807695422a975885"
+    },
+    {
+      "id": "cinder_wraith",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no smoke, embers or particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right, hovering upright just above the ground. Head and shoulders upright, both arms held out and down about 40 degrees from the torso with a clear gap between each arm and the body, clawed charred fingers spread. Below the waist the burnt robe splits into two separate long trailing tails, like two legs, slightly apart and not touching each other.\n\nSubject: Cinder Wraith, the ghost of someone burned alive: a deep charred hood with two glowing orange eyes, a tattered robe of ash-grey and soot-black cloth with glowing orange ember edges, a faint orange glow through the ribs. Glow stays on the body; no loose smoke or flying embers. Colours: soot black, ash grey, ember orange.",
+      "source": "assets/source/generated/creature_cinder_wraith.png",
+      "file": "cinder_wraith.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "64e34f4337b5e9e76408706df5228a3f55bdf93d622af795abacd0c31af8adcc"
+    },
+    {
+      "id": "hill_giant",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game unit. One character only, full body from head to feet with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Square image, 1024 x 1024.\n\nPose: three-quarter front view, facing slightly right. Standing upright: feet apart at shoulder width, legs straight and clearly separated, both arms held down and about 35 degrees away from the torso with a clear gap between each arm and the body. The right hand holds a huge spiked wooden club hanging down and out to the side, the club head next to the right foot and not touching the leg. Left hand empty.\n\nSubject: Hill Giant, a huge brutish giant with a wild tangled brown beard and hair, a heavy brow, a broad bare chest, crude hide wrappings round the waist and legs, a belt hung with small skulls. Any fur on the shoulders is short and lies flat (no big fur cape or hump on the back). Colours: weathered tan skin, brown fur and hide, bone, dark wood club with iron spikes.",
+      "source": "assets/source/generated/creature_hill_giant.png",
+      "file": "hill_giant.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "06d0ce7c7357f62eac1f9cca1ad901f35e8071a027d0cd0e0d585cb68b3484d9"
+    },
+    {
+      "id": "moss_creeper",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, full body with a small margin. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: side view, facing right. A long low creature lying stretched along the ground in a gentle shallow curve, about four times longer than it is tall, no part folded over another. The front end is a blunt raised head with a mouth ringed by small root tendrils; the back end tapers to a narrow tail.\n\nSubject: Moss Creeper, a crawling slug-shaped mound of living moss and tangled roots, with short hanging moss strands on its sides and a few small pale mushrooms growing on its back. Colours: moss green, yellow-green, dark brown roots, cream mushrooms.",
+      "source": "assets/source/generated/creature_moss_creeper.png",
+      "file": "moss_creeper.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "dc1f636e16f02b11e0ea653c1edcebc5146f69f3503c21a1bb2399a35a9829d8"
+    },
+    {
+      "id": "bog_serpent",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, full body, the whole length in frame with a small margin, tail tip included. Plain flat light grey background, no ground, no water, no grass, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: side view, facing right. The body is NOT coiled: it lies stretched out along the ground in one long shallow S-curve, about six times longer than it is tall, with no part of the body crossing, touching or overlapping another part. The front third rises gently so the head is held forward, jaws open showing fangs. The tail tapers to a point at the far left.\n\nSubject: Bog Serpent, a huge legless marsh snake with dull olive and brown scales, ridges of short spines along the back, strands of hanging moss and a few small fungi on its back, a pale banded belly. Colours: olive green, mud brown, pale yellow belly.",
+      "source": "assets/source/generated/creature_bog_serpent.png",
+      "file": "bog_serpent.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "05145f51ecfddb2d87f435f48d8bfb810f0e2d1bfe55b8ad6e0f7cc6f57128da"
+    },
+    {
+      "id": "dune_wurm",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, full body, the whole length in frame with a small margin, tail end included. Plain flat light grey background, no sand, no ground, no shadow, no text, no scenery, no dust or particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: side view, facing right. The whole worm is visible above ground, NOT buried and NOT coiled: it lies stretched out along the ground in one long shallow S-curve, about six times longer than it is tall, with no part crossing or overlapping another. The front end rises gently, and the round mouth faces right, open, ringed with rows of hooked teeth. The back end tapers to a blunt tail at the far left.\n\nSubject: Dune Wurm, a limbless sand worm the length of a caravan, with armoured overlapping segment plates and short backward-pointing spikes along the back. Colours: sand beige, pale ochre, dark brown between the plates, dark red inside the mouth.",
+      "source": "assets/source/generated/creature_dune_wurm.png",
+      "file": "dune_wurm.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9ae7755d697e9f539d955ea98d0e36a80d6da6c444a44c0b3e5227b6a3c2174a"
+    },
+    {
+      "id": "primordial_wyrm",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, full body with a small margin, wing tips and tail tip included. Plain flat light grey background, no ground, no shadow, no text, no scenery, no particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: three-quarter side view, facing right. Standing on four legs, legs straight and clearly apart. Both wings fully spread, raised up and out to the sides, the wing membranes not touching the body, the head or each other. The neck raised forward, head level, jaws slightly open. The tail stretched straight out behind, not curled and not crossing the legs.\n\nSubject: Primordial Wyrm, an immeasurably old dragon: weathered grey-brown spiked scales, a long horned head with a crown of swept-back horns and spines, ragged leathery wings with torn edges, a spiked tail. Spikes are short so the silhouette stays clean. Colours: ash grey-brown, dull bronze, bone horns, dusky purple wing membranes.",
+      "source": "assets/source/generated/creature_primordial_wyrm.png",
+      "file": "primordial_wyrm.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0160ba8f8e16ce1defb535db9efe22cba60f25f3f0a4913b88884df6740201a8"
+    },
+    {
+      "id": "ancient_dragon",
+      "prompt": "Clean 3D-model reference image for a dark fantasy game creature. One creature only, full body with a small margin, wing tips and tail tip included. Plain flat light grey background, no ground, no shadow, no text, no scenery, no ash, smoke or particles. Even soft lighting, matte painted look, clean readable shapes. Wide image, 1536 x 1024.\n\nPose: three-quarter side view, facing right. Standing on four legs, legs straight and clearly apart. Both wings fully spread, raised up and out to the sides, the wing membranes not touching the body, the head or each other. The neck raised forward, head level, jaws half open. The tail stretched straight out behind, not curled and not crossing the legs.\n\nSubject: Karzhaloth, the ancient dragon under the world, a colossal boss: obsidian-black scales cracked with dim ember-orange seams, wings like torn black silk veined with faint violet-grey light, a long low skull with six empty eye sockets sealed with tarnished silver plates, broken silver chain shackles on the forelegs (short chain ends only). Menace and weight. Colours: obsidian black, ember orange seams, violet-grey, tarnished silver.",
+      "source": "assets/source/generated/creature_ancient_dragon.png",
+      "file": "ancient_dragon.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "00af594553034f781063a09a5b580fa0fc64e2abc8730de9b1973545674b0b86"
+    }
+  ]
+}

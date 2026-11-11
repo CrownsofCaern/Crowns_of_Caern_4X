@@ -1,0 +1,4 @@
+{
+  "_doc": "Legacy single-file creature list, merged with every data/creatures/*.json file (sorted by file name; duplicate ids are a validation error). Keep new creatures in the per-faction files. Schema: name, faction, tier (1-8), role (infantry|ranged|cavalry|flyer|support|heavy), hp, attack, defense, damage [min,max], speed, initiative, growth, cost {resource: amount}, morale, tags [], abilities [{id, ...params}] (see docs/FACTIONS.md#abilities), terrain {terrain_id: {attack, defense, initiative, speed}}, optional formation (front|back|flank|support), desc. Upgrades: base has upgrade=<id>, upgraded has upgrade_of=<base id>, same faction, tier and growth.",
+  "creatures": {}
+}

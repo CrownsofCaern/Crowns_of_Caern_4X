@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_pale_inheritance_ph_twice_dead_briefing",
+  "campaign": "pale_inheritance",
+  "chapter": "ph_twice_dead",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_pale_inheritance_ph_twice_dead_briefing.txt",
+  "prompt_sha256": "884aad2ac25e5b7a91a2269456eb19359dd844256a8eed87ac5a8787d9a291f2",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "0963851e45785bf51fac7be14ed7d4257c1c74fe1ac372da5c784005442a6e24",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

@@ -1,0 +1,20 @@
+{
+  "batch": "ashen-001",
+  "source_sheet": "assets/source/batches/ashen-001/source.png",
+  "source_sheet_sha256": "c223252121b6d1e6b1852fa7a5bf70821a00e82d3f3063992d036e3b5c184a83",
+  "crop_xyxy": [
+    328,
+    512,
+    648,
+    763
+  ],
+  "isolation": "largest 4-connected alpha>=128 component",
+  "source_sha256": "517abaf84ef5c3e00dfff79db7710830de89f80040ca826b00a31b21cd596ba8",
+  "provider": "ChatGPT image_gen",
+  "quality_status": "pending_visual_review",
+  "native_size": [
+    128,
+    128
+  ],
+  "conditioning": "Approved Concord rendering; faction-specific repository definitions"
+}

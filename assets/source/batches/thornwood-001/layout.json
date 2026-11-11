@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1261,
+    1247
+  ],
+  "assets": [
+    {
+      "id": "creature_thorn_skulker",
+      "crop_xyxy": [
+        65,
+        75,
+        266,
+        294
+      ]
+    },
+    {
+      "id": "creature_thorn_stalker",
+      "crop_xyxy": [
+        368,
+        64,
+        585,
+        294
+      ]
+    },
+    {
+      "id": "creature_barkhide_warden",
+      "crop_xyxy": [
+        690,
+        11,
+        873,
+        294
+      ]
+    },
+    {
+      "id": "creature_barkhide_sentinel",
+      "crop_xyxy": [
+        991,
+        6,
+        1211,
+        294
+      ]
+    },
+    {
+      "id": "creature_briar_huntress",
+      "crop_xyxy": [
+        57,
+        331,
+        269,
+        597
+      ]
+    },
+    {
+      "id": "creature_briar_deadshot",
+      "crop_xyxy": [
+        354,
+        325,
+        597,
+        597
+      ]
+    },
+    {
+      "id": "creature_rootbinder",
+      "crop_xyxy": [
+        669,
+        319,
+        889,
+        597
+      ]
+    },
+    {
+      "id": "creature_rootbinder_elder",
+      "crop_xyxy": [
+        955,
+        315,
+        1224,
+        598
+      ]
+    },
+    {
+      "id": "creature_gloomwing_strix",
+      "crop_xyxy": [
+        38,
+        649,
+        250,
+        891
+      ]
+    },
+    {
+      "id": "creature_gloomwing_shrike",
+      "crop_xyxy": [
+        317,
+        631,
+        602,
+        891
+      ]
+    },
+    {
+      "id": "creature_spore_lobber",
+      "crop_xyxy": [
+        675,
+        650,
+        898,
+        884
+      ]
+    },
+    {
+      "id": "creature_plague_lobber",
+      "crop_xyxy": [
+        972,
+        620,
+        1232,
+        887
+      ]
+    },
+    {
+      "id": "creature_rootbound_ancient",
+      "crop_xyxy": [
+        32,
+        928,
+        277,
+        1219
+      ]
+    },
+    {
+      "id": "creature_rootbound_patriarch",
+      "crop_xyxy": [
+        325,
+        911,
+        604,
+        1224
+      ]
+    },
+    {
+      "id": "creature_wyrdthorn_mother",
+      "crop_xyxy": [
+        635,
+        921,
+        923,
+        1218
+      ]
+    },
+    {
+      "id": "creature_wyrdthorn_matriarch",
+      "crop_xyxy": [
+        927,
+        908,
+        1251,
+        1227
+      ]
+    }
+  ],
+  "review": "Automatically staged isolated silhouettes; visual review pending"
+}

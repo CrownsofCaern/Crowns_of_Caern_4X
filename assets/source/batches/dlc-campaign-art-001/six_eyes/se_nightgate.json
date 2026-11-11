@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_six_eyes_se_nightgate_briefing",
+  "campaign": "six_eyes",
+  "chapter": "se_nightgate",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_nightgate-revision.txt",
+  "prompt_sha256": "1b0223d5b7e06d0cff453109c1a18571269b48628ed9ba6e6d462bb84a2878ac",
+  "conditioning": [
+    "assets/source/batches/dlc-campaign-art-001/six_eyes/revisions/se_nightgate-v1.png"
+  ],
+  "source_sha256": "3955edaed8227a98059d4ee186eed8646d1e60c5cbb3579ffb68d0434d8f6f24",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

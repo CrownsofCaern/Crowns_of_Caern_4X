@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-animation-001",
+  "source": "assets/source/batches/dlc-animation-001/dlc-darkelf-01-source.png",
+  "source_sha256": "17c911bf16b67dbd0174aeb042d1208b7ad2e99240d57bff1fc40d9b3f08dd82",
+  "size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/dlc-animation-001/dlc-darkelf-01-prompt.txt",
+  "prompt_sha256": "73c9482bef5fc2a5ffee5b406135e74ab0c19c2eaeb1f0cf48f0d0b717cd9d2e",
+  "conditioning": [
+    "assets/source/batches/dlc-animation-001/dlc-darkelf-01-reference.png"
+  ],
+  "reference_sha256": "6b59aed860ef52b8370bac03a7fde6d0a27f4c6b07ba86cbe3089fb67010c755",
+  "units": [
+    "de_gloam_spear",
+    "de_dusk_sentinel",
+    "de_shardbow",
+    "de_venom_arbalist"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "processing": "Existing animation extraction and registration; native 128px reference; 320x256 action canvas",
+  "quality_status": "animation_candidate"
+}

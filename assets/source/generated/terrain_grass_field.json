@@ -1,0 +1,14 @@
+{
+  "id": "terrain_grass_field",
+  "provider": "image_gen",
+  "source": "assets/source/generated/terrain_grass_field.png",
+  "source_sha256": "b25ba0627df33a818ac5ac39d6b14a840d2008762ea8151452c0bc844bdcc46f",
+  "prompt": "Create a square seamless top-down ground texture for Crowns of Cinder, dark medieval fantasy pixel-art strategy game. Entire image is ONE continuous large meadow ground pattern, no panels, no grid, no perspective, no text, no objects or buildings or trees. Overcast neutral light. Rich subdued olive and moss-green short grass interspersed with large irregular connected swaths of brown earth, scattered weathered grey stones, sparse tiny dry tufts. Features occur at multiple scales; major patches each span around one quarter of the image, subtle small pixel details. No dominant circular shape, no paths or roads, no black outlines around patches. All four edges must seamlessly wrap. Painterly carefully pixelled texture, detailed yet quiet to keep overlaid units readable, same gritty sophisticated illustrated pixel art as approved Reignem benchmark. Target native use is 320x320 game pixels representing eight-by-eight 40px map cells, so avoid huge individual blades, stones small. Preserve rich high-resolution source. Square 1024x1024.",
+  "native_size": [
+    320,
+    320
+  ],
+  "quality_status": "rendered_candidate",
+  "processing": "Continuous field, toroidal border blend only; no internal tile edge normalization.",
+  "review": "docs/art/production/living-world/terrain-map.png"
+}

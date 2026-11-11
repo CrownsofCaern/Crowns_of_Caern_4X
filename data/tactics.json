@@ -1,0 +1,234 @@
+{
+  "_doc": "Hero battle orders (CombatSimulator, Hero.orders, GameSession.set_hero_orders). A hero gives one stance and one focus; an option opens at min_level, and every level of the Tactics skill lowers that by tactics_skill_discount. The defaults (balanced, any) have no effects, so a battle under them is exactly the standing combat model. Effect keys (summed over stance and focus): attack, initiative (every stack); front_defense (infantry and heavy stacks); advance (melee reaches the enemy this many rounds sooner, negative = later, never before round 1); screen (enemy cavalry and flyers are this much less likely to slip past the line, negative = more); bypass (own cavalry and flyers this much more likely to slip past); back_target_weight (own shots and slipping flankers weigh enemy ranged and support targets by this); guard_weight (own cavalry and flyers weigh enemies that attack own ranged or support stacks by this); strongest_weight / weakest_weight (every stack weighs the most dangerous / most wounded enemy in reach by this). Since save version 22 a hero also gives a formation, an art timing and a standing retreat order (same shape; kinds formation, art, retreat). Formations may list 'classes' (hero classes that know it by heart: open from level 1 and drilled) and a 'skill' (each level of it lowers min_level like Tactics and drills it). A drilled formation's positive effects grow by drill_pct (formation_drill: class_pct, per_skill_level_pct; a hero specialty may add bonus_pct). Extra effect keys: charge_pct (a stack's first melee blow deals this much more), shot_cover (own ranged and support stacks take this much less damage from shots), volley_pct (own opening volley this much stronger), enemy_delay (enemy melee reaches the line this many rounds later), flank_pct (blows on enemies held by the own line deal this much more), reserve_round (the strongest melee stack waits out of reach until this round, unless it is the last one standing), reserve_attack / reserve_morale (the reserve's bonus when it enters), art_round (the hero's art waits until this round), art_loss (the art waits until the army has lost this share of its hit points), art_power (a held art is this much stronger), withdraw_at (the army falls back once its hit points drop to this share; the hero escapes with the survivors), rear_guard (share of every surviving stack lost covering the retreat).",
+  "tactics_skill_discount": 2,
+  "stances": {
+    "balanced": {
+      "name": "Balanced",
+      "min_level": 1,
+      "desc": "The army fights as it is drilled.",
+      "effects": {}
+    },
+    "defensive": {
+      "name": "Hold the line",
+      "min_level": 2,
+      "desc": "The line stands its ground: +2 defense for infantry and heavy troops, enemy flankers are 15% less likely to slip past, but your melee advances a round later.",
+      "effects": {
+        "front_defense": 2,
+        "screen": 0.15,
+        "advance": -1
+      }
+    },
+    "aggressive": {
+      "name": "All-out attack",
+      "min_level": 4,
+      "desc": "Everyone charges: +1 attack and +1 initiative and melee advances a round sooner, but infantry and heavy troops have -2 defense and enemy flankers slip past 10% more often.",
+      "effects": {
+        "attack": 1,
+        "initiative": 1,
+        "advance": 1,
+        "front_defense": -2,
+        "screen": -0.1
+      }
+    }
+  },
+  "focus": {
+    "any": {
+      "name": "Free fighting",
+      "min_level": 1,
+      "desc": "Each stack picks its own targets.",
+      "effects": {}
+    },
+    "hunt_archers": {
+      "name": "Hunt the archers",
+      "min_level": 3,
+      "desc": "Cavalry and flyers are 25% more likely to slip past the enemy line, and shots and flankers go for enemy archers and supporters first.",
+      "effects": {
+        "bypass": 0.25,
+        "back_target_weight": 2.5
+      }
+    },
+    "protect_archers": {
+      "name": "Guard the archers",
+      "min_level": 5,
+      "desc": "Cavalry and flyers ride to the rescue of your archers and supporters, and enemy flankers are 20% less likely to slip past.",
+      "effects": {
+        "screen": 0.2,
+        "guard_weight": 5.0
+      }
+    },
+    "strongest": {
+      "name": "Strike the strongest",
+      "min_level": 7,
+      "desc": "The whole army concentrates on the most dangerous enemy stack in reach.",
+      "effects": {
+        "strongest_weight": 4.0
+      }
+    },
+    "wounded": {
+      "name": "Finish the wounded",
+      "min_level": 9,
+      "desc": "The whole army closes on the most battered enemy stack in reach to break it.",
+      "effects": {
+        "weakest_weight": 4.0
+      }
+    }
+  },
+  "formation_drill": {
+    "class_pct": 0.3,
+    "per_skill_level_pct": 0.15,
+    "max_pct": 1.0
+  },
+  "formations": {
+    "line": {
+      "name": "Battle line",
+      "min_level": 1,
+      "desc": "The army deploys as drilled: the front line in the middle, flankers on the wings, archers at the back.",
+      "effects": {}
+    },
+    "shield_wall": {
+      "name": "Shield wall",
+      "min_level": 3,
+      "skill": "shieldcraft",
+      "classes": [
+        "knight",
+        "gravewarden",
+        "artificer",
+        "thane"
+      ],
+      "desc": "The front locks shields in one tight wall with the archers right behind it: +3 defense for infantry and heavy troops, archers and supporters take 25% less damage from shots, enemy flankers are 20% less likely to slip past, but the wall advances a round later.",
+      "effects": {
+        "front_defense": 3,
+        "shot_cover": 0.25,
+        "screen": 0.2,
+        "advance": -1
+      }
+    },
+    "wedge": {
+      "name": "Spearhead wedge",
+      "min_level": 4,
+      "skill": "onslaught",
+      "classes": [
+        "warlord",
+        "ironmarshal",
+        "reaver",
+        "de_dreadmarshal"
+      ],
+      "desc": "The army forms an arrowhead and drives into the enemy: melee reaches the line a round sooner, every stack's first melee blow deals 30% more, flankers slip past 10% more often, but the thin sides give -1 defense to the front.",
+      "effects": {
+        "advance": 1,
+        "charge_pct": 0.3,
+        "bypass": 0.1,
+        "front_defense": -1
+      }
+    },
+    "skirmish_screen": {
+      "name": "Skirmish screen",
+      "min_level": 4,
+      "skill": "archery",
+      "classes": [
+        "ranger",
+        "huntmaster",
+        "grovewarden",
+        "de_nightstalker",
+        "fm_reef_hunter"
+      ],
+      "desc": "Archers deploy in front of the line and fall back behind it when the enemy closes: the opening volley hits 50% harder and enemy melee reaches the line a round later, but enemy flankers slip past 15% more often.",
+      "effects": {
+        "volley_pct": 0.5,
+        "enemy_delay": 1,
+        "screen": -0.15
+      }
+    },
+    "crescent": {
+      "name": "Crescent",
+      "min_level": 6,
+      "skill": "tactics",
+      "classes": [
+        "tormentor",
+        "blightcaller",
+        "frostcaller",
+        "de_veilseer",
+        "fm_tidemarshal"
+      ],
+      "desc": "The wings sweep forward around a held centre: blows on enemies already held by your line deal 25% more and your flankers slip past 15% more often, but the thinned centre has -1 defense.",
+      "effects": {
+        "flank_pct": 0.25,
+        "bypass": 0.15,
+        "front_defense": -1
+      }
+    },
+    "reserve": {
+      "name": "Held reserve",
+      "min_level": 5,
+      "skill": "leadership",
+      "classes": [
+        "oracle",
+        "warlock",
+        "necromancer",
+        "thornspeaker",
+        "runesmith",
+        "fm_deep_oracle"
+      ],
+      "desc": "Your strongest melee battalion waits behind the lines, out of reach, and enters fresh in round 3 with +2 attack and +2 morale (at once if it is the last one standing).",
+      "effects": {
+        "reserve_round": 3,
+        "reserve_attack": 2,
+        "reserve_morale": 2
+      }
+    }
+  },
+  "art_timing": {
+    "at_once": {
+      "name": "At once",
+      "min_level": 1,
+      "desc": "The hero uses the battle art from the first round.",
+      "effects": {}
+    },
+    "at_clash": {
+      "name": "When the lines meet",
+      "min_level": 2,
+      "skill": "sorcery",
+      "desc": "The hero prepares the art and looses it from round 2, when the lines meet: 25% stronger.",
+      "effects": {
+        "art_round": 2,
+        "art_power": 0.25
+      }
+    },
+    "in_need": {
+      "name": "When the line bends",
+      "min_level": 5,
+      "skill": "sorcery",
+      "desc": "The hero holds the art until the army has lost 30% of its strength, then looses it 50% stronger (unused if the army never bends).",
+      "effects": {
+        "art_loss": 0.3,
+        "art_power": 0.5
+      }
+    }
+  },
+  "retreat": {
+    "never": {
+      "name": "Fight to the last",
+      "min_level": 1,
+      "desc": "The army never falls back. If it is destroyed, the hero falls.",
+      "effects": {}
+    },
+    "at_half": {
+      "name": "Fall back at half strength",
+      "min_level": 1,
+      "desc": "Once the army is down to half its strength the hero sounds the retreat: the battle is lost, the rear guard (20% of every surviving stack) is cut down, but the hero escapes with the rest. A hero defending a town never falls back.",
+      "effects": {
+        "withdraw_at": 0.5,
+        "rear_guard": 0.2
+      }
+    },
+    "when_broken": {
+      "name": "Fall back when broken",
+      "min_level": 1,
+      "desc": "The army fights on until it is down to a quarter of its strength, then the hero escapes with the survivors (the rear guard, 25% of every stack, is cut down). A hero defending a town never falls back.",
+      "effects": {
+        "withdraw_at": 0.25,
+        "rear_guard": 0.25
+      }
+    }
+  }
+}

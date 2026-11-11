@@ -1,0 +1,230 @@
+{
+  "batch": "ashen-idle-review-001",
+  "faction": "Ashen Host",
+  "runtime_integrated": false,
+  "sheets": [
+    {
+      "group": "ashen-01",
+      "sheet": "A",
+      "file": "ashen-01-A-draft.png",
+      "grid": [
+        7,
+        4
+      ],
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.616198,
+      "soft_alpha_pixel_fraction": 0.383802,
+      "sha256": "a6eedb53a181897ea297993a6ca3ea558ae82facdbbff8179b1b992c8a8bc0d6",
+      "provider": "built-in image_gen",
+      "prompt_file": "prompts/ashen-01-A.txt",
+      "conditioning": "references/ashen-01-reference.png",
+      "generation_status": "generated",
+      "quality_status": "review_candidate",
+      "known_issues": "Subtle idle changes and gait continuity need review, especially two-headed hound neck and limb continuity."
+    },
+    {
+      "group": "ashen-01",
+      "sheet": "B",
+      "file": "ashen-01-B-draft.png",
+      "grid": [
+        6,
+        4
+      ],
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.596629,
+      "soft_alpha_pixel_fraction": 0.403371,
+      "sha256": "8615e440ef12638a34f9c179b752e5ccd00f9e5277ab486277917c32c042de7d",
+      "provider": "built-in image_gen",
+      "prompt_file": "prompts/ashen-01-B.txt",
+      "conditioning": "references/ashen-01-reference.png",
+      "generation_status": "generated",
+      "quality_status": "review_candidate",
+      "known_issues": "Subtle idle changes and gait continuity need review, especially two-headed hound neck and limb continuity."
+    },
+    {
+      "group": "ashen-02",
+      "sheet": "A",
+      "file": "ashen-02-A-draft.png",
+      "grid": [
+        7,
+        4
+      ],
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.407614,
+      "soft_alpha_pixel_fraction": 0.592386,
+      "sha256": "c16ba9391a202d453c9cba108895eda54905eb96863da6beffc1c784b406ee55",
+      "provider": "built-in image_gen",
+      "prompt_file": "prompts/ashen-02-A.txt",
+      "conditioning": "references/ashen-02-reference.png",
+      "generation_status": "generated",
+      "quality_status": "review_candidate",
+      "known_issues": "Boulder size, release trajectory, and rigid hook-forearm continuity need frame review."
+    },
+    {
+      "group": "ashen-02",
+      "sheet": "B",
+      "file": "ashen-02-B-draft.png",
+      "grid": [
+        6,
+        4
+      ],
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.464337,
+      "soft_alpha_pixel_fraction": 0.535663,
+      "sha256": "a1ea045eaf2254c8e5fab243d81e2e9389c23bb55f75315facece535f45b4239",
+      "provider": "built-in image_gen",
+      "prompt_file": "prompts/ashen-02-B.txt",
+      "conditioning": "references/ashen-02-reference.png",
+      "generation_status": "generated",
+      "quality_status": "review_candidate",
+      "known_issues": "Boulder size, release trajectory, and rigid hook-forearm continuity need frame review."
+    },
+    {
+      "group": "ashen-03",
+      "sheet": "A",
+      "file": "ashen-03-A-draft.png",
+      "grid": [
+        7,
+        4
+      ],
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.348756,
+      "soft_alpha_pixel_fraction": 0.651244,
+      "sha256": "e7cdc1f0d77b016d1d98e2b223a3ac3c98c0496d0502fd69841c220296836602",
+      "provider": "built-in image_gen",
+      "prompt_file": "prompts/ashen-03-A.txt",
+      "conditioning": "references/ashen-03-reference.png",
+      "generation_status": "generated",
+      "quality_status": "review_candidate",
+      "known_issues": "Wing cycle, tooth and staff continuity, and small spell effects need frame review."
+    },
+    {
+      "group": "ashen-03",
+      "sheet": "B",
+      "file": "ashen-03-B-draft.png",
+      "grid": [
+        6,
+        4
+      ],
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.217944,
+      "soft_alpha_pixel_fraction": 0.782056,
+      "sha256": "78d173abbb4e330445ac8bcd05cddb5a3f986f3e9f75141cf826969728f9d4a3",
+      "provider": "built-in image_gen",
+      "prompt_file": "prompts/ashen-03-B.txt",
+      "conditioning": "references/ashen-03-reference.png",
+      "generation_status": "generated",
+      "quality_status": "review_candidate",
+      "known_issues": "Wing cycle, tooth and staff continuity, and small spell effects need frame review."
+    },
+    {
+      "group": "ashen-04",
+      "sheet": "A",
+      "file": "ashen-04-A-draft.png",
+      "grid": [
+        7,
+        4
+      ],
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.459048,
+      "soft_alpha_pixel_fraction": 0.540952,
+      "sha256": "f50764a402bbd077e034f39af48f65dade6ec17ac7a6cd9d93e90326b0271c5a",
+      "provider": "built-in image_gen",
+      "prompt_file": "prompts/ashen-04-A.txt",
+      "conditioning": "references/ashen-04-reference.png",
+      "generation_status": "generated",
+      "quality_status": "review_candidate",
+      "known_issues": "Heavy gait, spike geometry, jaw structure and attack recovery need frame review."
+    },
+    {
+      "group": "ashen-04",
+      "sheet": "B",
+      "file": "ashen-04-B-draft.png",
+      "grid": [
+        6,
+        4
+      ],
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.498576,
+      "soft_alpha_pixel_fraction": 0.501424,
+      "sha256": "278159f9c0aaebf50614e2784384d5d8993efa2085ea53e4e2414dd3a22258b9",
+      "provider": "built-in image_gen",
+      "prompt_file": "prompts/ashen-04-B.txt",
+      "conditioning": "references/ashen-04-reference.png",
+      "generation_status": "generated",
+      "quality_status": "review_candidate",
+      "known_issues": "Heavy gait, spike geometry, jaw structure and attack recovery need frame review."
+    }
+  ],
+  "notes": [
+    "Eight requested raw source sheets generated; not approved for runtime import.",
+    "RGB under alpha-zero pixels may appear as a brown backdrop in previews that ignore alpha.",
+    "Generated alpha includes intermediate values and needs production cleanup.",
+    "Dimensions and alpha verified automatically; grid and character review performed visually.",
+    "Original built-in outputs preserved without pixel modification."
+  ]
+}

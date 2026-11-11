@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/darkelf-foundation.png",
+  "source_sheet_sha256": "3c22ea9911bca46db6792da1d0449470c6d964ae43ae4bc5015f47b189efe777",
+  "size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-foundation.txt",
+  "prompt_sha256": "127892a9a4e37cef6d8dfe51b751bc8cdd353c5ff8743b889b948d84712b0c0e",
+  "conditioning": [
+    "assets/source/batches/concord-town-001/foundation.png",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/concord-town-001/foundation.png": "a1ceda73d6122e5f2d303fac933b53142fc351e4e5022243341ae7ea82d0669b",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png": "1e763406818c8e4c62c764cb79fc560c92098617f1ac064fa8835edae9699600"
+  },
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

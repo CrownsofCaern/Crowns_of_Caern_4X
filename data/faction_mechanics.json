@@ -1,0 +1,55 @@
+{
+  "_doc": "One adventure-map mechanic per playable faction (src/game/faction_mechanics.gd). Keyed by faction id; every faction with a town type must have exactly one. `mechanic` picks the rule, the other keys are its parameters. Player-wide mechanics follow the player's faction (militia_levy, plunder, whisper_web); hero mechanics follow the hero's own faction (wildwalk, tidebound, grave_harvest, feast_of_victory, deep_roads). ai: StrategicAI hints. militia_levy {per_mine, max_per_town}: at the start of each week every town of the player gains per_mine tier-1 recruits per mine the player holds (at most max_per_town). plunder {mine_days, town_days}: capturing a mine pays mine_days of its output at once; taking a town from another player pays town_days of its daily income. grave_harvest {pct, creature}: after a won battle, pct of the hit points of the living enemies slain rise as `creature` in the hero's army. wildwalk {mods}: HeroModifiers mods for the faction's heroes (terrain costs). tidebound {pct}: a hero that starts the day on swamp or a river ford, or next to water or a ford, moves pct farther that day. feast_of_victory {pct}: the first won battle of a day gives back pct of the hero's daily movement. deep_roads {min_movement_pct}: a hero on or next to one of the player's mines, or in one of its towns, can travel to any other of the player's mines or towns; it needs min_movement_pct of its daily movement left and spends all of it. whisper_web {mine_radius, hero_radius}: every day the player sees mine_radius around each of its mines and map sites; at the start of each week it also sees hero_radius around every enemy hero.",
+  "concord": {
+    "mechanic": "militia_levy",
+    "name": "Levy of the Shires",
+    "text": "Every mine you hold sends its sons to the colours: each week, every town you own musters 2 extra tier-1 recruits per mine you hold (at most 12 a town).",
+    "per_mine": 2,
+    "max_per_town": 12
+  },
+  "ashen": {
+    "mechanic": "plunder",
+    "name": "Brand and Plunder",
+    "text": "The Host strips what it takes. Capturing a mine pays four days of its output at once; taking a town from a rival pays three days of its income.",
+    "mine_days": 4,
+    "town_days": 3
+  },
+  "hollow": {
+    "mechanic": "grave_harvest",
+    "name": "Grave Harvest",
+    "text": "No corpse is wasted. After a victory, a tenth of the living foes your hero slew rise as Shamblers and join the army.",
+    "pct": 0.1,
+    "creature": "shambler"
+  },
+  "thornwood": {
+    "mechanic": "wildwalk",
+    "name": "Wildwalk",
+    "text": "The deep wood opens for its own. Thornwood heroes cross forest almost as easily as open ground, and swamp at half the usual toil.",
+    "mods": {"terrain_move_pct": {"forest": 0.9, "swamp": 0.5}}
+  },
+  "forge": {
+    "mechanic": "deep_roads",
+    "name": "Deep Roads",
+    "text": "The deep folk dig between their holdings. A Forgeborn hero on or next to one of your mines, or in one of your towns, can travel underground to any other mine or town you hold. It needs half a day's movement and spends all that is left.",
+    "min_movement_pct": 0.5
+  },
+  "frostmarch": {
+    "mechanic": "feast_of_victory",
+    "name": "Feast of Victory",
+    "text": "A won fight fires the blood. The first victory of each day gives a Frostmarch hero back a third of a day's movement.",
+    "pct": 0.33
+  },
+  "darkelf": {
+    "mechanic": "whisper_web",
+    "name": "Whisper Web",
+    "text": "Spies follow every road. Each of your mines and map sites watches 5 tiles around it, and at the start of each week your informants reveal the land around every enemy hero.",
+    "mine_radius": 5,
+    "hero_radius": 2
+  },
+  "fishmen": {
+    "mechanic": "tidebound",
+    "name": "Tidebound",
+    "text": "The Shoal rides the water. An Abyssal hero that starts the day on swamp or a river ford, or next to deep water or a ford, moves a quarter farther that day.",
+    "pct": 0.25
+  }
+}

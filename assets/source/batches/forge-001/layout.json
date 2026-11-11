@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1261,
+    1247
+  ],
+  "assets": [
+    {
+      "id": "creature_forge_thrall",
+      "crop_xyxy": [
+        78,
+        44,
+        235,
+        299
+      ]
+    },
+    {
+      "id": "creature_ironclad_thrall",
+      "crop_xyxy": [
+        374,
+        43,
+        552,
+        298
+      ]
+    },
+    {
+      "id": "creature_rivet_crossbowman",
+      "crop_xyxy": [
+        658,
+        87,
+        885,
+        300
+      ]
+    },
+    {
+      "id": "creature_rivet_arbalist",
+      "crop_xyxy": [
+        979,
+        82,
+        1234,
+        299
+      ]
+    },
+    {
+      "id": "creature_anvil_guard",
+      "crop_xyxy": [
+        49,
+        365,
+        255,
+        601
+      ]
+    },
+    {
+      "id": "creature_anvil_sworn",
+      "crop_xyxy": [
+        344,
+        355,
+        574,
+        601
+      ]
+    },
+    {
+      "id": "creature_slag_golem",
+      "crop_xyxy": [
+        639,
+        354,
+        889,
+        603
+      ]
+    },
+    {
+      "id": "creature_furnace_golem",
+      "crop_xyxy": [
+        941,
+        333,
+        1232,
+        604
+      ]
+    },
+    {
+      "id": "creature_cinder_engineer",
+      "crop_xyxy": [
+        68,
+        637,
+        242,
+        889
+      ]
+    },
+    {
+      "id": "creature_master_engineer",
+      "crop_xyxy": [
+        341,
+        624,
+        558,
+        890
+      ]
+    },
+    {
+      "id": "creature_ironhoof_charger",
+      "crop_xyxy": [
+        625,
+        641,
+        885,
+        887
+      ]
+    },
+    {
+      "id": "creature_ironhoof_warboar",
+      "crop_xyxy": [
+        939,
+        630,
+        1244,
+        887
+      ]
+    },
+    {
+      "id": "creature_thunder_bombard",
+      "crop_xyxy": [
+        9,
+        986,
+        290,
+        1179
+      ]
+    },
+    {
+      "id": "creature_doom_bombard",
+      "crop_xyxy": [
+        316,
+        969,
+        604,
+        1178
+      ]
+    },
+    {
+      "id": "creature_molten_engine",
+      "crop_xyxy": [
+        628,
+        929,
+        878,
+        1187
+      ]
+    },
+    {
+      "id": "creature_worldforge_engine",
+      "crop_xyxy": [
+        924,
+        908,
+        1251,
+        1197
+      ]
+    }
+  ],
+  "review": "Automatically staged isolated silhouettes; visual review pending"
+}

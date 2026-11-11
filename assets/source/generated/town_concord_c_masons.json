@@ -1,0 +1,25 @@
+{
+  "id": "c_masons",
+  "provider": "image_gen",
+  "source_sheet": "assets/source/batches/concord-town-001/base.png",
+  "source_sheet_sha256": "e1f2c3add657b9ba50e18345e1c2948fa2243e6ad5c058ff1eb6a37c3c40629f",
+  "crop_xyxy": [
+    0,
+    282,
+    315,
+    594
+  ],
+  "alpha_trim_xyxy": [
+    13,
+    47,
+    302,
+    294
+  ],
+  "source_sha256": "b1daded3c7c30a6e322560c105f9dd566c43767f73e12422a05454ec29818b43",
+  "conditioning": [
+    "foundation.png"
+  ],
+  "prompt_file": "assets/source/batches/concord-town-001/prompts.json",
+  "quality_status": "rendered_candidate",
+  "review": "docs/art/production/living-world/"
+}

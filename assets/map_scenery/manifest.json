@@ -1,0 +1,427 @@
+{
+  "schema_version": 1,
+  "tile_size": 40,
+  "placement_note": "Footprints describe reserved ground tiles; tall sprite art may extend above them. Landmarks are impassable across the entire reserved rectangle. Terrain variants retain the base biome gameplay. Editor integration pending.",
+  "assets": {
+    "terrain_moss_heath": {
+      "name": "Moss heath",
+      "category": "terrain",
+      "texture": "res://assets/map_scenery/terrain_moss_heath.png",
+      "size": [
+        40,
+        40
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "grass",
+      "anchor": [
+        0,
+        0
+      ],
+      "passable": true,
+      "source_sha256": "3325fa6ee27057b5c7530fd7fc4e43d82a3b88275133668b4d14dc06f1dd91a3",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "terrain_autumn_loam": {
+      "name": "Autumn loam",
+      "category": "terrain",
+      "texture": "res://assets/map_scenery/terrain_autumn_loam.png",
+      "size": [
+        40,
+        40
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "forest",
+      "anchor": [
+        0,
+        0
+      ],
+      "passable": true,
+      "source_sha256": "0a064f9199564cd89f1c9f691957d7639995e8c02f590cdfedf7528722f0e102",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "terrain_salt_flat": {
+      "name": "Salt flat",
+      "category": "terrain",
+      "texture": "res://assets/map_scenery/terrain_salt_flat.png",
+      "size": [
+        40,
+        40
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "desert",
+      "anchor": [
+        0,
+        0
+      ],
+      "passable": true,
+      "source_sha256": "14a5819214fd747a980d7cdc05fdc3c5153c9ed0f1e2003c7240421d823c373b",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "terrain_cooled_lava": {
+      "name": "Cooled lava",
+      "category": "terrain",
+      "texture": "res://assets/map_scenery/terrain_cooled_lava.png",
+      "size": [
+        40,
+        40
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "infernal",
+      "anchor": [
+        0,
+        0
+      ],
+      "passable": true,
+      "source_sha256": "f674a9b3b1dd20c9eee1b9e39752247ecec80ffc757ec51da5e9158901ba2843",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "scenery_weeping_willow": {
+      "name": "Weeping willow",
+      "category": "decoration",
+      "texture": "res://assets/map_scenery/scenery_weeping_willow.png",
+      "size": [
+        48,
+        64
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "swamp",
+      "anchor": [
+        24,
+        63
+      ],
+      "passable": false,
+      "source_sha256": "858e820c2c76d931fad8cf8e580c5c0324967b5332173408e0116db2abcb34bc",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "scenery_reed_pool": {
+      "name": "Reed pool",
+      "category": "decoration",
+      "texture": "res://assets/map_scenery/scenery_reed_pool.png",
+      "size": [
+        64,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "swamp",
+      "anchor": [
+        32,
+        47
+      ],
+      "passable": false,
+      "source_sha256": "37f107a4f73df85266e3a9b75ff4c2829e1d524dd5fb1a5d172052e9d67048d4",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "scenery_oath_stones": {
+      "name": "Oath stones",
+      "category": "decoration",
+      "texture": "res://assets/map_scenery/scenery_oath_stones.png",
+      "size": [
+        64,
+        64
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "grass",
+      "anchor": [
+        32,
+        63
+      ],
+      "passable": false,
+      "source_sha256": "850bdc1fe7d4e1b661e64297575b6aaa41f9cad5d5932128d32d93046ed80d39",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "scenery_broken_cart": {
+      "name": "Broken cart",
+      "category": "decoration",
+      "texture": "res://assets/map_scenery/scenery_broken_cart.png",
+      "size": [
+        64,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "biome": "rough",
+      "anchor": [
+        32,
+        47
+      ],
+      "passable": false,
+      "source_sha256": "9596962419b3566a2e57fab30101b9e13008f3c39e8f65019a63ce1099ad655f",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "settlement_concord_hamlet": {
+      "name": "Concord hamlet",
+      "category": "settlement",
+      "texture": "res://assets/map_scenery/settlement_concord_hamlet.png",
+      "size": [
+        120,
+        100
+      ],
+      "footprint": [
+        3,
+        2
+      ],
+      "biome": "grass",
+      "anchor": [
+        60,
+        99
+      ],
+      "passable": false,
+      "source_sha256": "c7a0ce03df80fd76d3aee8ed7f39d1c2b882f271895774775ba5c6318af4b684",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "settlement_frost_fishers": {
+      "name": "Frost fishers",
+      "category": "settlement",
+      "texture": "res://assets/map_scenery/settlement_frost_fishers.png",
+      "size": [
+        120,
+        100
+      ],
+      "footprint": [
+        3,
+        2
+      ],
+      "biome": "snow",
+      "anchor": [
+        60,
+        99
+      ],
+      "passable": false,
+      "source_sha256": "ba3c760d2137e1447ef788b9c733006c46539e66e1c12055131dbf8614a36525",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "settlement_thornwood_hamlet": {
+      "name": "Thornwood hamlet",
+      "category": "settlement",
+      "texture": "res://assets/map_scenery/settlement_thornwood_hamlet.png",
+      "size": [
+        120,
+        100
+      ],
+      "footprint": [
+        3,
+        2
+      ],
+      "biome": "forest",
+      "anchor": [
+        60,
+        99
+      ],
+      "passable": false,
+      "source_sha256": "beb3b961a1650acbf16ec914294348a5483955d4e8c46e2bf7086aa12ff7b8a6",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "settlement_cinder_miners": {
+      "name": "Cinder miners",
+      "category": "settlement",
+      "texture": "res://assets/map_scenery/settlement_cinder_miners.png",
+      "size": [
+        120,
+        100
+      ],
+      "footprint": [
+        3,
+        2
+      ],
+      "biome": "infernal",
+      "anchor": [
+        60,
+        99
+      ],
+      "passable": false,
+      "source_sha256": "6c496fe26c52d8e0e186a316a51719468aedd0ad7e47c917f0fad6c768dbbba3",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "dwelling_wayside_abbey": {
+      "name": "Wayside abbey",
+      "category": "dwelling",
+      "texture": "res://assets/map_scenery/dwelling_wayside_abbey.png",
+      "size": [
+        80,
+        96
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "biome": "grass",
+      "anchor": [
+        40,
+        95
+      ],
+      "passable": false,
+      "source_sha256": "f0b52cd8a239f597110b8a9e1898afbbf9e5de5fffe1a80f2e0eeb9cf58be78a",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "dwelling_windmill": {
+      "name": "Weathered windmill",
+      "category": "dwelling",
+      "texture": "res://assets/map_scenery/dwelling_windmill.png",
+      "size": [
+        80,
+        96
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "biome": "grass",
+      "anchor": [
+        40,
+        95
+      ],
+      "passable": false,
+      "source_sha256": "658dab8cd588f7e51046eb0b862cc806a1ee4d8120b0bb8ac0f87f5afd8e88f7",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "dwelling_marsh_hermit": {
+      "name": "Marsh hermit",
+      "category": "dwelling",
+      "texture": "res://assets/map_scenery/dwelling_marsh_hermit.png",
+      "size": [
+        80,
+        80
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "biome": "swamp",
+      "anchor": [
+        40,
+        79
+      ],
+      "passable": false,
+      "source_sha256": "46c04e1fa1c811b7b36308dc3be23e6cb1d49a9e0cc08eece28893cc3d6d31be",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "dwelling_border_watch": {
+      "name": "Border watchtower",
+      "category": "dwelling",
+      "texture": "res://assets/map_scenery/dwelling_border_watch.png",
+      "size": [
+        80,
+        96
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "biome": "rough",
+      "anchor": [
+        40,
+        95
+      ],
+      "passable": false,
+      "source_sha256": "578efcf17ea912a2aeb5ce55904416808e6f9820f92aaef34168de04ae18e39f",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "landmark_cinder_volcano": {
+      "name": "Cinder volcano",
+      "category": "landmark",
+      "texture": "res://assets/map_scenery/landmark_cinder_volcano.png",
+      "size": [
+        160,
+        160
+      ],
+      "footprint": [
+        4,
+        4
+      ],
+      "biome": "infernal",
+      "anchor": [
+        80,
+        159
+      ],
+      "passable": false,
+      "source_sha256": "aabf5a1a2c3489325132cd44102c52bc93cbc9a7784998cf5709f5ede0b99105",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "landmark_frozen_cascade": {
+      "name": "Frozen cascade",
+      "category": "landmark",
+      "texture": "res://assets/map_scenery/landmark_frozen_cascade.png",
+      "size": [
+        160,
+        160
+      ],
+      "footprint": [
+        4,
+        4
+      ],
+      "biome": "snow",
+      "anchor": [
+        80,
+        159
+      ],
+      "passable": false,
+      "source_sha256": "19961f85856334b64351e1e050016eb021f6b22735185902ea0a966b165a9b5a",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "landmark_shattered_citadel": {
+      "name": "Shattered citadel",
+      "category": "landmark",
+      "texture": "res://assets/map_scenery/landmark_shattered_citadel.png",
+      "size": [
+        160,
+        160
+      ],
+      "footprint": [
+        4,
+        4
+      ],
+      "biome": "mountain",
+      "anchor": [
+        80,
+        159
+      ],
+      "passable": false,
+      "source_sha256": "7446696530eaf98cd95e24d4cec131b8748612a8a4c1f943be12a58edbf5acf1",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    },
+    "landmark_elder_grove": {
+      "name": "Elder grove",
+      "category": "landmark",
+      "texture": "res://assets/map_scenery/landmark_elder_grove.png",
+      "size": [
+        160,
+        160
+      ],
+      "footprint": [
+        4,
+        4
+      ],
+      "biome": "forest",
+      "anchor": [
+        80,
+        159
+      ],
+      "passable": false,
+      "source_sha256": "330f401f4f93f0428d230d4e625b10471cb6b95d44670a527a15ca47011c2eec",
+      "quality_status": "native_size_reviewed_engine_review_pending"
+    }
+  }
+}

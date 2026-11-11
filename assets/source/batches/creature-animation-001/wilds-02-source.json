@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/wilds-02-source.png",
+  "source_sha256": "e294ff456a61f60932b6a273301d387bf3087637846b27ab89769aa5088083fa",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/wilds-02-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/wilds-02-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "crag_slinger",
+    "thornwolf",
+    "road_cutthroat",
+    "carrion_flock"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "crag_slinger",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_crag_slinger.png",
+      "reference_sha256": "b57ef87f1937dc66f36668f0ea20bee459b24a6436920e37ecab46e741591759"
+    },
+    {
+      "id": "thornwolf",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_thornwolf.png",
+      "reference_sha256": "c784721d59ebbd53ebbf1d5918e1e476f6f937010319361b8cd9542917099c71"
+    },
+    {
+      "id": "road_cutthroat",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_road_cutthroat.png",
+      "reference_sha256": "113b27916ebdd20ff89d511f06cb18edc75ad2a94a22733b2589356521b9820f"
+    },
+    {
+      "id": "carrion_flock",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_carrion_flock.png",
+      "reference_sha256": "940d67a545ea72b29e1a3631d83a5bb62a5684df360858136e6bb19f614e9ba8"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

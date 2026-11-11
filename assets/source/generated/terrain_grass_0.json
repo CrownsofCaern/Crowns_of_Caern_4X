@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "water-terrain-002",
+  "source_sheet": "assets/source/batches/water-terrain-002/source.png",
+  "source_sheet_sha256": "43f50b65ad7c249d25a1182aefe97d203dda4e8f8ed0710d2e236dcc6c5a732d",
+  "source_sha256": "7d9612216ff5ee3ef167e2c39902dde0c87bef00da0137a3db58245c7a31b168",
+  "crop_xyxy": [
+    0,
+    512,
+    384,
+    768
+  ],
+  "prompt_file": "assets/source/batches/water-terrain-002/prompt.txt",
+  "conditioning": "Approved Reignem Concord sheet; neutral sheets also conditioned on approved Hollow sheet",
+  "native_size": [
+    40,
+    40
+  ],
+  "quality_status": "pending_visual_review",
+  "isolation": "Full grid cell retained, including groups and disconnected effects"
+}

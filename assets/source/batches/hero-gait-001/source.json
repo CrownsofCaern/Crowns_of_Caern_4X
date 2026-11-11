@@ -1,0 +1,30 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/hero-gait-001/source.png",
+  "source_sha256": "3b8880909fe86615e872a404324efbbb05b3e16edd776ce762d92efe0b1a5747",
+  "source_size": [
+    2172,
+    724
+  ],
+  "prompt_file": "assets/source/batches/hero-gait-001/prompt.txt",
+  "conditioning": [
+    "assets/build/hero/hero_knight.png"
+  ],
+  "grid": [
+    4,
+    1
+  ],
+  "units": [
+    "knight"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "knight",
+      "reference_source": "assets/source/batches/creature-animation-001/references/hero_knight.png",
+      "reference_sha256": "3c8f0288a248e1ecbe1118e1a0cfa06008df15732c1392ebce2357944d4a8b32"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

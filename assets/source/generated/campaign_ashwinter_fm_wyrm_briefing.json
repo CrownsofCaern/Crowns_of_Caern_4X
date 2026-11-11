@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_ashwinter_fm_wyrm_briefing",
+  "campaign": "ashwinter",
+  "chapter": "fm_wyrm",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_ashwinter_fm_wyrm_briefing.txt",
+  "prompt_sha256": "6a12ad53b39abf94142e194d57e529201b424c5fb0dd6a5daffeaad7888df01f",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "90ecd6ece44172cd872c4d7198a19335753ba7ed542f561eb1286fc503ba1426",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "game_title": "Crowns of Cinder",
+  "id": "wordmark",
+  "source_size": [
+    2172,
+    724
+  ],
+  "source_sha256": "e17cc973e66c5c37d7ed0ede387e56b0070b5dd3e532fc91fb65e735990789a7",
+  "git_blob_sha": "c681ef785221f7eabb935ea979cf926cc98dcebf",
+  "prompt_file": "assets/source/batches/crowns-menu-001/menu_wordmark.txt",
+  "conditioning": [
+    "assets/source/generated/menu_emblem.png"
+  ],
+  "quality_status": "pending_godot_render",
+  "processing": "Full-resolution source preserved; game export is an exact byte copy",
+  "note": "Produced while the execution workspace was unavailable. PNG dimensions and SHA-256 checked in orchestration; engine validation delegated to CI."
+}

@@ -1,0 +1,24 @@
+{
+  "expected": 112,
+  "generated": 112,
+  "missing": [],
+  "qualities": {
+    "minor": 28,
+    "major": 28,
+    "relic": 28,
+    "legendary": 28
+  },
+  "slots": {
+    "weapon": 32,
+    "armor": 16,
+    "helm": 12,
+    "shield": 12,
+    "boots": 12,
+    "charm": 16,
+    "banner": 12
+  },
+  "unique_source_hashes": 112,
+  "transparent_sources_checked": 112,
+  "exports_per_size": 112,
+  "gameplay_integrated": false
+}

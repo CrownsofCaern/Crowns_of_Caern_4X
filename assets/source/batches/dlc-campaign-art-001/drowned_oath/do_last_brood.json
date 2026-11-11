@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_drowned_oath_do_last_brood_briefing",
+  "campaign": "drowned_oath",
+  "chapter": "do_last_brood",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.drowned_oath",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/drowned_oath/do_last_brood-prompt.txt",
+  "prompt_sha256": "0c864ed650527384e91ccbbd48a07f877f903f904bc0206dfb2ee524ea277d1e",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "d1c0169ffcaa952e479562ce4c9f1778d41aacd99fc01d282b9c2ac2be989a3c",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

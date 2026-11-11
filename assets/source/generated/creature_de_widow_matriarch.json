@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/darkelf-creatures.png",
+  "source_sheet_sha256": "1e763406818c8e4c62c764cb79fc560c92098617f1ac064fa8835edae9699600",
+  "size": [
+    1261,
+    1247
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-creatures.txt",
+  "prompt_sha256": "6affe4e1b4533bfa61d3fe6b864ba6b9c701f4f1eca7ffb578b683dd833d78a2",
+  "conditioning": [
+    "assets/source/batches/hollow-001/source.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/hollow-001/source.png": "c0a65504208fe13a5820f9e42439ee1d7ebaa5009c5ead6d0d49e9f4d65e03d1"
+  },
+  "asset_id": "creature_de_widow_matriarch",
+  "row": 2,
+  "column": 3,
+  "extraction": {
+    "row_bounds": [
+      617,
+      919
+    ],
+    "column_cuts": [
+      0,
+      279,
+      591,
+      908,
+      1261
+    ],
+    "bent_seams": {},
+    "warnings": [],
+    "row_extraction": {
+      "bounds": [
+        617,
+        919
+      ],
+      "top_seam": 617,
+      "bottom_seam": 919
+    }
+  },
+  "source_sha256": "0eb8b769c8fce59d4d4f829255a5bbfdf76eed4dc16524e3219987e147430497",
+  "native_size": [
+    128,
+    128
+  ],
+  "processing": "Adaptive transparent gutters; alpha below 64 cleared; palette preserved",
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

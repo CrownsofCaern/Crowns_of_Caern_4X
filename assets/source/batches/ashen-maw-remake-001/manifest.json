@@ -1,0 +1,28 @@
+{
+  "provider": "built-in image_gen",
+  "runtime_integrated": true,
+  "source_reference": "assets/source/batches/ashen-001/source.png",
+  "outputs": {
+    "ashen-04-A.png": {
+      "sha256": "4aa9be655ae2e213b25bacf98cade0b76d9cd2d552105c4b27a87a02bfd0e6d6"
+    },
+    "ashen-04-B.png": {
+      "sha256": "3d233d678965390157ca750af041f6698cb9d386acf565e9648e8b1fa8d69d51"
+    },
+    "ashen-04-reference.png": {
+      "sha256": "364b240ab8232cd97b61f143f6d48809c23b749f69b35bc0b1cfe6ce1d74a02b"
+    },
+    "move-attack-fallback.png": {
+      "sha256": "3ed7332d4d61f8c95a4a04c8fc7eecba9fdf1c82191479402e807a29ba987d66"
+    },
+    "references/creature_cinder_maw.png": {
+      "sha256": "f13ac9e1443afba294771127290ab7fbe496a57ba85b5e7271080ef12c283cf6"
+    },
+    "references/creature_maw_of_ruin.png": {
+      "sha256": "a0bc81ccf1e5c92c92ba28b6233207b052b7c696787a9e9d0ab40bf35c291c43"
+    },
+    "source.png": {
+      "sha256": "3a3376578a3aa8abdda44d812dcfacbbf611cf9a79980f06b81be922c9294e9e"
+    }
+  }
+}

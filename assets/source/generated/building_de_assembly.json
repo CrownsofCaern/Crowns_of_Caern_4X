@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/darkelf-buildings-2.png",
+  "source_sheet_sha256": "6f842af58e1f18bf802693b4805eecfcbb927222fbad1c81236b59000cc77838",
+  "size": [
+    1261,
+    1247
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-buildings-2.txt",
+  "prompt_sha256": "e2fc87e9542417b7f23d934825e11b5125cde63f64af23bc75c420676a6625fe",
+  "conditioning": [
+    "assets/source/batches/concord-town-001/foundation.png",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/concord-town-001/foundation.png": "a1ceda73d6122e5f2d303fac933b53142fc351e4e5022243341ae7ea82d0669b",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png": "1e763406818c8e4c62c764cb79fc560c92098617f1ac064fa8835edae9699600"
+  },
+  "asset_id": "building_de_assembly",
+  "row": 2,
+  "column": 2,
+  "extraction": {
+    "row_bounds": [
+      617,
+      933
+    ],
+    "column_cuts": [
+      0,
+      315,
+      630,
+      946,
+      1261
+    ],
+    "bent_seams": {},
+    "warnings": [],
+    "row_extraction": {
+      "bounds": [
+        617,
+        933
+      ],
+      "top_seam": 617,
+      "bottom_seam": 933
+    }
+  },
+  "source_sha256": "b4343e70c3bfb6e7e3c8785459694f2e08c99ef137f0762afd914d186b06b644",
+  "native_size": [
+    256,
+    256
+  ],
+  "processing": "Adaptive transparent gutters; alpha below 64 cleared; palette preserved",
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

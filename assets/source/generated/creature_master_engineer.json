@@ -1,0 +1,20 @@
+{
+  "batch": "forge-001",
+  "source_sheet": "assets/source/batches/forge-001/source.png",
+  "source_sheet_sha256": "512fed0eae191d195675c027defa031046fb96d15a6af42cdb32f82b768a6e16",
+  "crop_xyxy": [
+    341,
+    624,
+    558,
+    890
+  ],
+  "isolation": "largest 4-connected alpha>=128 component",
+  "source_sha256": "c94d8f165a8eb0825e5da3c4e14afcd960c3e83f925fc5764c238e950ca46de0",
+  "provider": "ChatGPT image_gen",
+  "quality_status": "pending_visual_review",
+  "native_size": [
+    128,
+    128
+  ],
+  "conditioning": "Approved Concord rendering; faction-specific repository definitions"
+}

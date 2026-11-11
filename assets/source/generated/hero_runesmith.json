@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "heroes-001",
+  "source_sheet": "assets/source/batches/heroes-001/source.png",
+  "source_sheet_sha256": "3fa291fdaedea9fe1819a3e334a42b020ab858d27307e8a4a1a6bbbf434faf4c",
+  "source_sha256": "0349807f8ec98a78a1de5b6c373ad5e76ffa25705fd36277a16982a183e47883",
+  "crop_xyxy": [
+    591,
+    1183,
+    887,
+    1478
+  ],
+  "prompt_file": "assets/source/batches/heroes-001/prompt.txt",
+  "conditioning": "Approved Reignem Concord sheet; neutral sheets also conditioned on approved Hollow sheet",
+  "native_size": [
+    128,
+    128
+  ],
+  "quality_status": "pending_visual_review",
+  "isolation": "Full grid cell retained, including groups and disconnected effects"
+}

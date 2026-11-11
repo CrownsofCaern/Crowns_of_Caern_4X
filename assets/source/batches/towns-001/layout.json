@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "grid": [
+    3,
+    2
+  ],
+  "source_dimensions": [
+    1536,
+    1024
+  ],
+  "review": "Mechanical grid extraction; design, silhouette and engine review pending",
+  "assets": [
+    {
+      "id": "town_concord",
+      "prompt": "grim walled human citadel of grey stone with slate-blue roofs, a central keep and lit windows",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "town_ashen",
+      "prompt": "demonic bastion of jagged obsidian spires with lava seams and a horned burning gate",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "town_hollow",
+      "prompt": "undead necropolis in a swamp: crooked black-stone keep with bruise-purple spires, rib gate, mausoleums, gibbets, green grave-light",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "town_thornwood",
+      "prompt": "hostile living-tree fortress: colossal gnarled tree grown into towers and halls, bramble palisades, pale lanterns",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "town_forge",
+      "prompt": "deep forge carved into a soot-black cliff: riveted iron gate, smoking chimneys, furnace grates, brass pipes, slag heaps",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "town_frostmarch",
+      "prompt": "timber longhouse steading in snow: snow-laden longhouse, log palisade with skulls, watch tower, blood-red shields",
+      "size": [
+        192,
+        160
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "keep_components": true
+    }
+  ]
+}

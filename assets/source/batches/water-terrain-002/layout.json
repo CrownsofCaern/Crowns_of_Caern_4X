@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1536,
+    1024
+  ],
+  "review": "Mechanical grid extraction; design, silhouette and engine review pending",
+  "assets": [
+    {
+      "id": "terrain_water_0",
+      "prompt": "deep cold blue lake water with subtle moonlit ripple wavelets, calm jewel-blue surface, no coast or objects; distinct natural variant 1",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_water_1",
+      "prompt": "deep cold blue lake water with subtle moonlit ripple wavelets, calm jewel-blue surface, no coast or objects; distinct natural variant 2",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        384,
+        0,
+        768,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_water_2",
+      "prompt": "deep cold blue lake water with subtle moonlit ripple wavelets, calm jewel-blue surface, no coast or objects; distinct natural variant 3",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        768,
+        0,
+        1152,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_water_3",
+      "prompt": "deep cold blue lake water with subtle moonlit ripple wavelets, calm jewel-blue surface, no coast or objects; distinct natural variant 4",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        1152,
+        0,
+        1536,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_river_0",
+      "prompt": "clear shallow teal river current over rounded submerged pebbles, fine directional white foam streaks, no banks or land; distinct natural variant 1",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        0,
+        256,
+        384,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_river_1",
+      "prompt": "clear shallow teal river current over rounded submerged pebbles, fine directional white foam streaks, no banks or land; distinct natural variant 2",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        384,
+        256,
+        768,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_river_2",
+      "prompt": "clear shallow teal river current over rounded submerged pebbles, fine directional white foam streaks, no banks or land; distinct natural variant 3",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        768,
+        256,
+        1152,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_river_3",
+      "prompt": "clear shallow teal river current over rounded submerged pebbles, fine directional white foam streaks, no banks or land; distinct natural variant 4",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        1152,
+        256,
+        1536,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_grass_0",
+      "prompt": "rich dark olive meadow grass tufts and earthy flecks, restrained low contrast; distinct natural variant 1",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        0,
+        512,
+        384,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_grass_1",
+      "prompt": "rich dark olive meadow grass tufts and earthy flecks, restrained low contrast; distinct natural variant 2",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        384,
+        512,
+        768,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_swamp_0",
+      "prompt": "dark peat mud and black shallow puddles with sparse reeds, damp blue green; distinct natural variant 1",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        768,
+        512,
+        1152,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_swamp_1",
+      "prompt": "dark peat mud and black shallow puddles with sparse reeds, damp blue green; distinct natural variant 2",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        1152,
+        512,
+        1536,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_rough_0",
+      "prompt": "grey weathered highland scree, mineral chips and subtle moss; distinct natural variant 1",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        0,
+        768,
+        384,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_rough_1",
+      "prompt": "grey weathered highland scree, mineral chips and subtle moss; distinct natural variant 2",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        384,
+        768,
+        768,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_forest_0",
+      "prompt": "dark pine-needle earth with rich soft moss, no trees; distinct natural variant 1",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        768,
+        768,
+        1152,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "terrain_forest_1",
+      "prompt": "dark pine-needle earth with rich soft moss, no trees; distinct natural variant 2",
+      "size": [
+        40,
+        40
+      ],
+      "crop_xyxy": [
+        1152,
+        768,
+        1536,
+        1024
+      ],
+      "keep_components": true
+    }
+  ]
+}

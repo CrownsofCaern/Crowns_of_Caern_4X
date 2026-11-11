@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "batch": "resource-pickups-001",
+  "generation_status": "generated",
+  "quality_status": "rendered_candidate",
+  "human_approval": "pending",
+  "resources": [
+    "gold",
+    "wood",
+    "ore",
+    "mercury",
+    "sulfur",
+    "crystal",
+    "gems"
+  ],
+  "map_pickups": 7,
+  "treasure_chests": 1,
+  "dedicated_ui_icons": 7,
+  "source_images": 2,
+  "source_dimensions": [
+    1774,
+    887
+  ],
+  "native_map_size": [
+    96,
+    96
+  ],
+  "map_scale": 0.5,
+  "native_icon_size": [
+    48,
+    48
+  ],
+  "hud_display_size": [
+    32,
+    32
+  ],
+  "cost_display_size": [
+    24,
+    24
+  ],
+  "review": "docs/art/production/resource-pickups/README.md",
+  "developer_report": "docs/art/RESOURCE_ART_REPORT.md",
+  "validation": {
+    "python_tests": 53,
+    "godot_resource_tests": 3,
+    "godot_ui_widget_tests": 24,
+    "fresh_build_check": "passed",
+    "asset_validation": "passed",
+    "real_godot_render": "passed",
+    "godot_version": "4.6.3",
+    "engine_screenshots": 4,
+    "integrated_main": "5e36775"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "_doc": "Secondary skills. Each skill has one entry per level in 'levels' (level N uses levels[N-1], values are totals for that level, not increments). 'mods' use the hero modifier keys of src/heroes/hero_modifiers.gd (validated); every key has a real effect in combat, movement, vision, economy or experience. Do not add skills without effects.",
+  "max_level": 3,
+  "skills": {
+    "veteran_training": {"name": "Veteran Training", "group": "command", "levels": [{"text": "Army stacks gain 10% more veteran experience.", "mods": {"veteran_xp_pct": 0.1}}, {"text": "Army stacks gain 20% more veteran experience.", "mods": {"veteran_xp_pct": 0.2}}, {"text": "Army stacks gain 30% more veteran experience.", "mods": {"veteran_xp_pct": 0.3}}]},
+    "faction_darkelf": {"name": "Umbral Discipline", "group": "faction", "levels": [{"text": "Umbral creatures gain +1 attack.", "mods": {"faction_attack": 1}}, {"text": "Umbral creatures gain +2 attack.", "mods": {"faction_attack": 2}}, {"text": "Umbral creatures gain +3 attack.", "mods": {"faction_attack": 3}}]},
+    "faction_fishmen": {"name": "Shoal Cohesion", "group": "faction", "levels": [{"text": "Abyssal creatures gain +1 defense.", "mods": {"faction_defense": 1}}, {"text": "Abyssal creatures gain +2 defense.", "mods": {"faction_defense": 2}}, {"text": "Abyssal creatures gain +3 defense.", "mods": {"faction_defense": 3}}]},
+    "class_de_dreadmarshal": {"name": "Dreadmarshal Mastery", "group": "class", "levels": [{"text": "Infantry gain +1 attack.", "mods": {"role_attack": {"infantry": 1}}}, {"text": "Infantry gain +2 attack.", "mods": {"role_attack": {"infantry": 2}}}, {"text": "Infantry gain +3 attack.", "mods": {"role_attack": {"infantry": 3}}}]},
+    "class_de_veilseer": {"name": "Veilseer Mastery", "group": "class", "levels": [{"text": "Gain +1 Power.", "mods": {"power": 1}}, {"text": "Gain +2 Power.", "mods": {"power": 2}}, {"text": "Gain +3 Power.", "mods": {"power": 3}}]},
+    "class_de_nightstalker": {"name": "Nightstalker Mastery", "group": "class", "levels": [{"text": "Ranged troops gain +1 attack.", "mods": {"role_attack": {"ranged": 1}}}, {"text": "Ranged troops gain +2 attack.", "mods": {"role_attack": {"ranged": 2}}}, {"text": "Ranged troops gain +3 attack.", "mods": {"role_attack": {"ranged": 3}}}]},
+    "class_fm_tidemarshal": {"name": "Tidemarshal Mastery", "group": "class", "levels": [{"text": "Infantry gain +1 defense.", "mods": {"role_defense": {"infantry": 1}}}, {"text": "Infantry gain +2 defense.", "mods": {"role_defense": {"infantry": 2}}}, {"text": "Infantry gain +3 defense.", "mods": {"role_defense": {"infantry": 3}}}]},
+    "class_fm_deep_oracle": {"name": "Deep Oracle Mastery", "group": "class", "levels": [{"text": "Gain +1 Knowledge.", "mods": {"knowledge": 1}}, {"text": "Gain +2 Knowledge.", "mods": {"knowledge": 2}}, {"text": "Gain +3 Knowledge.", "mods": {"knowledge": 3}}]},
+    "class_fm_reef_hunter": {"name": "Reef Hunter Mastery", "group": "class", "levels": [{"text": "Ranged troops gain +1 attack.", "mods": {"role_attack": {"ranged": 1}}}, {"text": "Ranged troops gain +2 attack.", "mods": {"role_attack": {"ranged": 2}}}, {"text": "Ranged troops gain +3 attack.", "mods": {"role_attack": {"ranged": 3}}}]},
+
+    "leadership": {"name": "Leadership", "group": "command", "levels": [
+      {"text": "+1 morale for the whole army.", "mods": {"morale": 1}},
+      {"text": "+2 morale for the whole army.", "mods": {"morale": 2}},
+      {"text": "+3 morale for the whole army.", "mods": {"morale": 3}}]},
+    "logistics": {"name": "Logistics", "group": "travel", "levels": [
+      {"text": "+10% daily movement.", "mods": {"movement_pct": 0.1}},
+      {"text": "+20% daily movement.", "mods": {"movement_pct": 0.2}},
+      {"text": "+30% daily movement.", "mods": {"movement_pct": 0.3}}]},
+    "wayfinding": {"name": "Wayfinding", "group": "travel", "levels": [
+      {"text": "Rough ground (forest, swamp, sand, snow, rock, fords) costs 25% less extra movement.", "mods": {"rough_ground_pct": 0.25}},
+      {"text": "Rough ground costs 50% less extra movement.", "mods": {"rough_ground_pct": 0.5}},
+      {"text": "Rough ground costs 75% less extra movement.", "mods": {"rough_ground_pct": 0.75}}]},
+    "scouting": {"name": "Scouting", "group": "travel", "levels": [
+      {"text": "+1 vision radius. Scouts cost a third less movement.", "mods": {"vision": 1, "scout_cost_pct": 0.34}},
+      {"text": "+2 vision radius. Scouts cost two thirds less movement.", "mods": {"vision": 2, "scout_cost_pct": 0.67}},
+      {"text": "+3 vision radius. Scouts cost no movement.", "mods": {"vision": 3, "scout_cost_pct": 1.0}}]},
+    "archery": {"name": "Archery", "group": "war", "levels": [
+      {"text": "+10% ranged damage.", "mods": {"ranged_damage_pct": 0.1}},
+      {"text": "+20% ranged damage.", "mods": {"ranged_damage_pct": 0.2}},
+      {"text": "+30% ranged damage.", "mods": {"ranged_damage_pct": 0.3}}]},
+    "onslaught": {"name": "Onslaught", "group": "war", "levels": [
+      {"text": "+8% melee damage.", "mods": {"melee_damage_pct": 0.08}},
+      {"text": "+15% melee damage.", "mods": {"melee_damage_pct": 0.15}},
+      {"text": "+22% melee damage.", "mods": {"melee_damage_pct": 0.22}}]},
+    "tactics": {"name": "Tactics", "group": "war", "levels": [
+      {"text": "Enemy cavalry and flyers are 10% less likely to slip past your front line. Battle orders open 2 levels sooner.", "mods": {"screen": 0.1}},
+      {"text": "Enemy cavalry and flyers are 20% less likely to slip past your front line. Battle orders open 4 levels sooner.", "mods": {"screen": 0.2}},
+      {"text": "Enemy cavalry and flyers are 30% less likely to slip past your front line. Battle orders open 6 levels sooner.", "mods": {"screen": 0.3}}]},
+    "shieldcraft": {"name": "Shieldcraft", "group": "war", "levels": [
+      {"text": "Front-line infantry and heavy troops gain +1 defense.", "mods": {"role_defense": {"infantry": 1, "heavy": 1}}},
+      {"text": "Front-line troops gain +2 defense.", "mods": {"role_defense": {"infantry": 2, "heavy": 2}}},
+      {"text": "Front-line troops gain +3 defense; the whole army takes 10% less damage from shots.", "mods": {"role_defense": {"infantry": 3, "heavy": 3}, "shot_resist_pct": 0.1}}]},
+    "drill": {"name": "Drill", "group": "command", "levels": [
+      {"text": "+1 initiative for every stack.", "mods": {"initiative": 1}},
+      {"text": "+1 initiative; combined arms needs one role fewer.", "mods": {"initiative": 1, "combined_arms_roles": 1}},
+      {"text": "+2 initiative; combined arms needs one role fewer.", "mods": {"initiative": 2, "combined_arms_roles": 1}}]},
+    "fieldcraft": {"name": "Fieldcraft", "group": "travel", "levels": [
+      {"text": "Your troops ignore hostile-terrain penalties.", "mods": {"ignore_hostile_terrain": 1}},
+      {"text": "Ignore hostile terrain; +1 attack on your creatures' native terrain.", "mods": {"ignore_hostile_terrain": 1, "native_bonus": 1}},
+      {"text": "Ignore hostile terrain; +2 attack on native terrain.", "mods": {"ignore_hostile_terrain": 1, "native_bonus": 2}}]},
+    "sorcery": {"name": "Sorcery", "group": "arcane", "levels": [
+      {"text": "Battle arts are 20% stronger.", "mods": {"art_power_pct": 0.2}},
+      {"text": "Battle arts are 40% stronger.", "mods": {"art_power_pct": 0.4}},
+      {"text": "Battle arts are 60% stronger and can be used once more per battle.", "mods": {"art_power_pct": 0.6, "art_uses": 1}}]},
+    "gravecalling": {"name": "Gravecalling", "group": "arcane", "levels": [
+      {"text": "After a victory, 10% of your fallen creatures rise to fight again.", "mods": {"recover_pct": 0.1}},
+      {"text": "After a victory, 20% of your fallen creatures rise again.", "mods": {"recover_pct": 0.2}},
+      {"text": "After a victory, 30% of your fallen creatures rise again.", "mods": {"recover_pct": 0.3}}]},
+    "stewardship": {"name": "Stewardship", "group": "rule", "levels": [
+      {"text": "+150 gold a day from the hero's estates.", "mods": {"income": {"gold": 150}}},
+      {"text": "+300 gold a day.", "mods": {"income": {"gold": 300}}},
+      {"text": "+500 gold a day.", "mods": {"income": {"gold": 500}}}]},
+    "quartermaster": {"name": "Quartermaster", "group": "rule", "levels": [
+      {"text": "Creatures recruited while this hero is in town cost 5% less gold.", "mods": {"recruit_discount_pct": 0.05}},
+      {"text": "Recruits cost 10% less gold.", "mods": {"recruit_discount_pct": 0.1}},
+      {"text": "Recruits cost 15% less gold.", "mods": {"recruit_discount_pct": 0.15}}]},
+    "lore": {"name": "Lore", "group": "arcane", "levels": [
+      {"text": "+5% experience.", "mods": {"xp_pct": 0.05}},
+      {"text": "+10% experience.", "mods": {"xp_pct": 0.1}},
+      {"text": "+15% experience.", "mods": {"xp_pct": 0.15}}]},
+    "faction_concord": {"name": "Concord Oaths", "group": "faction", "levels": [
+      {"text": "Concord creatures gain +1 defense.", "mods": {"faction_defense": 1}},
+      {"text": "Concord creatures gain +2 defense.", "mods": {"faction_defense": 2}},
+      {"text": "Concord creatures gain +3 defense.", "mods": {"faction_defense": 3}}]},
+    "faction_ashen": {"name": "Ashen Fury", "group": "faction", "levels": [
+      {"text": "Ashen creatures gain +1 attack.", "mods": {"faction_attack": 1}},
+      {"text": "Ashen creatures gain +2 attack.", "mods": {"faction_attack": 2}},
+      {"text": "Ashen creatures gain +3 attack.", "mods": {"faction_attack": 3}}]},
+    "faction_hollow": {"name": "Deathless Legion", "group": "faction", "levels": [
+      {"text": "Hollow creatures gain +1 defense.", "mods": {"faction_defense": 1}},
+      {"text": "Hollow creatures gain +2 defense.", "mods": {"faction_defense": 2}},
+      {"text": "Hollow creatures gain +3 defense.", "mods": {"faction_defense": 3}}]},
+    "faction_thornwood": {"name": "Grove Kinship", "group": "faction", "levels": [
+      {"text": "Thornwood creatures gain +1 attack.", "mods": {"faction_attack": 1}},
+      {"text": "Thornwood creatures gain +2 attack.", "mods": {"faction_attack": 2}},
+      {"text": "Thornwood creatures gain +3 attack.", "mods": {"faction_attack": 3}}]},
+    "faction_forge": {"name": "Forged Ranks", "group": "faction", "levels": [
+      {"text": "Forge creatures gain +1 defense.", "mods": {"faction_defense": 1}},
+      {"text": "Forge creatures gain +2 defense.", "mods": {"faction_defense": 2}},
+      {"text": "Forge creatures gain +3 defense.", "mods": {"faction_defense": 3}}]},
+    "faction_frostmarch": {"name": "March Warband", "group": "faction", "levels": [
+      {"text": "Frostmarch creatures gain +1 attack.", "mods": {"faction_attack": 1}},
+      {"text": "Frostmarch creatures gain +2 attack.", "mods": {"faction_attack": 2}},
+      {"text": "Frostmarch creatures gain +3 attack.", "mods": {"faction_attack": 3}}]},
+    "class_knight": {"name": "Oathkeeper", "group": "class", "levels": [
+      {"text": "Infantry gain +1 defense.", "mods": {"role_defense": {"infantry": 1}}},
+      {"text": "Infantry gain +2 defense.", "mods": {"role_defense": {"infantry": 2}}},
+      {"text": "Infantry gain +3 defense.", "mods": {"role_defense": {"infantry": 3}}}]},
+    "class_ranger": {"name": "Trail Archer", "group": "class", "levels": [
+      {"text": "Ranged troops gain +1 attack.", "mods": {"role_attack": {"ranged": 1}}},
+      {"text": "Ranged troops gain +2 attack.", "mods": {"role_attack": {"ranged": 2}}},
+      {"text": "Ranged troops gain +3 attack.", "mods": {"role_attack": {"ranged": 3}}}]},
+    "class_oracle": {"name": "Second Sight", "group": "class", "levels": [
+      {"text": "Gain +1 Knowledge.", "mods": {"knowledge": 1}},
+      {"text": "Gain +2 Knowledge.", "mods": {"knowledge": 2}},
+      {"text": "Gain +3 Knowledge.", "mods": {"knowledge": 3}}]},
+    "class_warlock": {"name": "Pactfire", "group": "class", "levels": [
+      {"text": "Gain +1 Power.", "mods": {"power": 1}},
+      {"text": "Gain +2 Power.", "mods": {"power": 2}},
+      {"text": "Gain +3 Power.", "mods": {"power": 3}}]},
+    "class_warlord": {"name": "Pit Commander", "group": "class", "levels": [
+      {"text": "Infantry gain +1 attack.", "mods": {"role_attack": {"infantry": 1}}},
+      {"text": "Infantry gain +2 attack.", "mods": {"role_attack": {"infantry": 2}}},
+      {"text": "Infantry gain +3 attack.", "mods": {"role_attack": {"infantry": 3}}}]},
+    "class_tormentor": {"name": "Cruel Dominion", "group": "class", "levels": [
+      {"text": "Enemy morale is reduced by 1.", "mods": {"enemy_morale": 1}},
+      {"text": "Enemy morale is reduced by 2.", "mods": {"enemy_morale": 2}},
+      {"text": "Enemy morale is reduced by 3.", "mods": {"enemy_morale": 3}}]},
+    "class_necromancer": {"name": "Grave Harvest", "group": "class", "levels": [
+      {"text": "After victory, recover 5% of fallen creatures.", "mods": {"recover_pct": 0.05}},
+      {"text": "After victory, recover 10% of fallen creatures.", "mods": {"recover_pct": 0.1}},
+      {"text": "After victory, recover 15% of fallen creatures.", "mods": {"recover_pct": 0.15000000000000002}}]},
+    "class_gravewarden": {"name": "Sepulchral Guard", "group": "class", "levels": [
+      {"text": "Heavy troops gain +1 defense.", "mods": {"role_defense": {"heavy": 1}}},
+      {"text": "Heavy troops gain +2 defense.", "mods": {"role_defense": {"heavy": 2}}},
+      {"text": "Heavy troops gain +3 defense.", "mods": {"role_defense": {"heavy": 3}}}]},
+    "class_blightcaller": {"name": "Virulent Rites", "group": "class", "levels": [
+      {"text": "Battle arts are 10% stronger.", "mods": {"art_power_pct": 0.1}},
+      {"text": "Battle arts are 20% stronger.", "mods": {"art_power_pct": 0.2}},
+      {"text": "Battle arts are 30% stronger.", "mods": {"art_power_pct": 0.30000000000000004}}]},
+    "class_grovewarden": {"name": "Bramble Guard", "group": "class", "levels": [
+      {"text": "Ranged troops gain +1 defense.", "mods": {"role_defense": {"ranged": 1}}},
+      {"text": "Ranged troops gain +2 defense.", "mods": {"role_defense": {"ranged": 2}}},
+      {"text": "Ranged troops gain +3 defense.", "mods": {"role_defense": {"ranged": 3}}}]},
+    "class_huntmaster": {"name": "Hunter's Mark", "group": "class", "levels": [
+      {"text": "Ranged troops gain +1 attack.", "mods": {"role_attack": {"ranged": 1}}},
+      {"text": "Ranged troops gain +2 attack.", "mods": {"role_attack": {"ranged": 2}}},
+      {"text": "Ranged troops gain +3 attack.", "mods": {"role_attack": {"ranged": 3}}}]},
+    "class_thornspeaker": {"name": "Forest Tribute", "group": "class", "levels": [
+      {"text": "Gain 1 wood per day.", "mods": {"income": {"wood": 1}}},
+      {"text": "Gain 2 wood per day.", "mods": {"income": {"wood": 2}}},
+      {"text": "Gain 3 wood per day.", "mods": {"income": {"wood": 3}}}]},
+    "class_artificer": {"name": "Ore Refining", "group": "class", "levels": [
+      {"text": "Gain 1 ore per day.", "mods": {"income": {"ore": 1}}},
+      {"text": "Gain 2 ore per day.", "mods": {"income": {"ore": 2}}},
+      {"text": "Gain 3 ore per day.", "mods": {"income": {"ore": 3}}}]},
+    "class_ironmarshal": {"name": "Iron Vanguard", "group": "class", "levels": [
+      {"text": "Heavy troops gain +1 attack.", "mods": {"role_attack": {"heavy": 1}}},
+      {"text": "Heavy troops gain +2 attack.", "mods": {"role_attack": {"heavy": 2}}},
+      {"text": "Heavy troops gain +3 attack.", "mods": {"role_attack": {"heavy": 3}}}]},
+    "class_runesmith": {"name": "Runic Mastery", "group": "class", "levels": [
+      {"text": "Gain +1 Power.", "mods": {"power": 1}},
+      {"text": "Gain +2 Power.", "mods": {"power": 2}},
+      {"text": "Gain +3 Power.", "mods": {"power": 3}}]},
+    "class_thane": {"name": "Holdfast", "group": "class", "levels": [
+      {"text": "Infantry gain +1 defense.", "mods": {"role_defense": {"infantry": 1}}},
+      {"text": "Infantry gain +2 defense.", "mods": {"role_defense": {"infantry": 2}}},
+      {"text": "Infantry gain +3 defense.", "mods": {"role_defense": {"infantry": 3}}}]},
+    "class_reaver": {"name": "Plunder", "group": "class", "levels": [
+      {"text": "Victories pay 0.1 gold per experience earned.", "mods": {"spoils_pct": 0.1}},
+      {"text": "Victories pay 0.2 gold per experience earned.", "mods": {"spoils_pct": 0.2}},
+      {"text": "Victories pay 0.3 gold per experience earned.", "mods": {"spoils_pct": 0.30000000000000004}}]},
+    "class_frostcaller": {"name": "Rime Lore", "group": "class", "levels": [
+      {"text": "Gain +1 Knowledge.", "mods": {"knowledge": 1}},
+      {"text": "Gain +2 Knowledge.", "mods": {"knowledge": 2}},
+      {"text": "Gain +3 Knowledge.", "mods": {"knowledge": 3}}]}
+  }
+}

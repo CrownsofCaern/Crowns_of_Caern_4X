@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_six_eyes_se_under_sky_briefing",
+  "campaign": "six_eyes",
+  "chapter": "se_under_sky",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_under_sky-prompt.txt",
+  "prompt_sha256": "008d697bd15ad1db94406daddd7955c89db6b63925c9db4085f69c9a1affedf9",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "5ffe23e85812eac00fa36ed595c8cfc4fb1dde1bb11a1902b350377349562eb5",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

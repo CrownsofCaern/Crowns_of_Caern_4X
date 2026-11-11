@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/frostmarch-02-source.png",
+  "source_sha256": "945096c0ba2a8e79ac8d8ecd946541f232168c7ef9ad43e7790776f42e9418cf",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/frostmarch-02-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/frostmarch-02-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "oathless_berserker",
+    "bloodfrenzy_berserker",
+    "tusk_rider",
+    "tusk_chieftain"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "oathless_berserker",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_oathless_berserker.png",
+      "reference_sha256": "050c795f2cfd1f357aef20da80c400baa0662b89364ec38d4d62912ed64ceafc"
+    },
+    {
+      "id": "bloodfrenzy_berserker",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_bloodfrenzy_berserker.png",
+      "reference_sha256": "8a9f565d5e64a1f5c94eaf5fe5d56d158feff66e68609bc19be05e7a92fde829"
+    },
+    {
+      "id": "tusk_rider",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_tusk_rider.png",
+      "reference_sha256": "66c87f60ddd182b0be372836c6980070dd18be07bdee23edd7f6676a9fdcd51f"
+    },
+    {
+      "id": "tusk_chieftain",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_tusk_chieftain.png",
+      "reference_sha256": "f970310a594220d96ef281a4c0114a959286426d4c3d10c90313c123531ba7a0"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

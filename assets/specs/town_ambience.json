@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "loop_seconds": 8,
+  "factions": {
+    "concord": {
+      "light": "#ffad45",
+      "particle_color": "#d6c69e",
+      "particles": "motes",
+      "buildings": {
+        "c_hall": {
+          "smoke": [
+            [
+              0.84,
+              0.15
+            ]
+          ],
+          "banner": [
+            0.39,
+            0.28,
+            0.2,
+            0.23
+          ]
+        },
+        "c_tavern": {
+          "smoke": [
+            [
+              0.3,
+              0.07
+            ]
+          ]
+        },
+        "c_yard": {
+          "smoke": [
+            [
+              0.68,
+              0.06
+            ]
+          ]
+        },
+        "c_dw8": {
+          "banner": [
+            0.43,
+            0.36,
+            0.11,
+            0.25
+          ]
+        }
+      }
+    },
+    "thornwood": {
+      "light": "#f4c65b",
+      "particle_color": "#bace6d",
+      "particles": "motes",
+      "buildings": {
+        "t_hall": {
+          "motes": [
+            [
+              0.5,
+              0.7
+            ]
+          ]
+        },
+        "t_tavern": {
+          "motes": [
+            [
+              0.52,
+              0.68
+            ]
+          ]
+        },
+        "t_yard": {
+          "motes": [
+            [
+              0.5,
+              0.65
+            ]
+          ]
+        },
+        "t_dw8": {
+          "motes": [
+            [
+              0.5,
+              0.6
+            ]
+          ]
+        }
+      }
+    },
+    "hollow": {
+      "light": "#b7ee83",
+      "particle_color": "#b0c793",
+      "particles": "motes",
+      "buildings": {
+        "h_hall": {
+          "motes": [
+            [
+              0.61,
+              0.72
+            ]
+          ]
+        },
+        "h_tavern": {
+          "motes": [
+            [
+              0.35,
+              0.42
+            ],
+            [
+              0.65,
+              0.42
+            ]
+          ]
+        },
+        "h_yard": {
+          "motes": [
+            [
+              0.25,
+              0.53
+            ],
+            [
+              0.53,
+              0.27
+            ],
+            [
+              0.78,
+              0.58
+            ]
+          ]
+        },
+        "h_dw8": {
+          "motes": [
+            [
+              0.5,
+              0.72
+            ]
+          ]
+        }
+      }
+    },
+    "frostmarch": {
+      "light": "#ffb55c",
+      "particle_color": "#d9e9f5",
+      "particles": "snow",
+      "buildings": {
+        "r_hall": {
+          "motes": [
+            [
+              0.61,
+              0.73
+            ]
+          ]
+        },
+        "r_tavern": {
+          "motes": [
+            [
+              0.4,
+              0.71
+            ]
+          ]
+        },
+        "r_dw8": {
+          "motes": [
+            [
+              0.58,
+              0.72
+            ]
+          ]
+        }
+      }
+    },
+    "forge": {
+      "light": "#ff9b32",
+      "particle_color": "#eeb56b",
+      "particles": "motes",
+      "buildings": {
+        "f_hall": {
+          "smoke": [
+            [
+              0.72,
+              0.16
+            ]
+          ]
+        },
+        "f_tavern": {
+          "smoke": [
+            [
+              0.37,
+              0.11
+            ]
+          ]
+        },
+        "f_yard": {
+          "smoke": [
+            [
+              0.29,
+              0.18
+            ],
+            [
+              0.48,
+              0.15
+            ]
+          ],
+          "motes": [
+            [
+              0.57,
+              0.62
+            ]
+          ]
+        },
+        "f_dw8": {
+          "smoke": [
+            [
+              0.63,
+              0.16
+            ]
+          ],
+          "motes": [
+            [
+              0.54,
+              0.46
+            ]
+          ]
+        }
+      }
+    },
+    "ashen": {
+      "light": "#ff762c",
+      "particle_color": "#ee8f47",
+      "particles": "motes",
+      "buildings": {
+        "a_hall": {
+          "motes": [
+            [
+              0.3,
+              0.77
+            ],
+            [
+              0.68,
+              0.6
+            ]
+          ],
+          "banner": [
+            0.36,
+            0.25,
+            0.08,
+            0.34
+          ]
+        },
+        "a_dw8": {
+          "motes": [
+            [
+              0.28,
+              0.78
+            ],
+            [
+              0.7,
+              0.8
+            ]
+          ]
+        }
+      }
+    },
+    "darkelf": {
+      "light": "#ca8cec",
+      "particle_color": "#b18cce",
+      "particles": "motes",
+      "buildings": {
+        "de_hall": {
+          "motes": [
+            [
+              0.26,
+              0.72
+            ],
+            [
+              0.75,
+              0.7
+            ]
+          ],
+          "banner": [
+            0.11,
+            0.43,
+            0.12,
+            0.27
+          ]
+        },
+        "de_tavern": {
+          "motes": [
+            [
+              0.25,
+              0.78
+            ],
+            [
+              0.76,
+              0.78
+            ]
+          ]
+        },
+        "de_yard": {
+          "motes": [
+            [
+              0.23,
+              0.73
+            ],
+            [
+              0.78,
+              0.71
+            ]
+          ]
+        },
+        "de_dw8": {
+          "motes": [
+            [
+              0.52,
+              0.64
+            ]
+          ],
+          "banner": [
+            0.76,
+            0.51,
+            0.1,
+            0.24
+          ]
+        }
+      }
+    },
+    "fishmen": {
+      "light": "#6cddd0",
+      "particle_color": "#91d9d3",
+      "particles": "bubbles",
+      "buildings": {
+        "fm_hall": {
+          "motes": [
+            [
+              0.51,
+              0.72
+            ]
+          ]
+        },
+        "fm_tavern": {
+          "smoke": [
+            [
+              0.68,
+              0.18
+            ]
+          ]
+        },
+        "fm_yard": {
+          "banner": [
+            0.47,
+            0.4,
+            0.09,
+            0.2
+          ]
+        },
+        "fm_dw8": {
+          "motes": [
+            [
+              0.49,
+              0.7
+            ]
+          ]
+        }
+      }
+    }
+  }
+}

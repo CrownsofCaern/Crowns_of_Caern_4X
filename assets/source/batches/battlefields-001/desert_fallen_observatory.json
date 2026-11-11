@@ -1,0 +1,23 @@
+{
+  "id": "desert_fallen_observatory",
+  "terrain": "desert",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/desert_fallen_observatory.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "85f84ae76ed95cec4ecb6f42d4a9930a80c8f678e03ddd0013465ae5514a3ae4",
+  "prompt_file": "assets/source/batches/battlefields-001/desert_fallen_observatory.txt",
+  "prompt_sha256": "6e39c2938410a143e88ae48092779561c34da47268534ac7b7387b74f431ad3d",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/desert_fallen_observatory-live.png",
+    "forecast": "docs/art/production/battlefields/desert_fallen_observatory-forecast.png"
+  }
+}

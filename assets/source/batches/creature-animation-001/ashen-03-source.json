@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/ashen-03-source.png",
+  "source_sha256": "891b55888c6183c3cb9f5bdfaa445d4c2bc3d9e2890b5b5c706f83c6d9c4b202",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/ashen-03-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/ashen-03-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "ash_witch",
+    "ash_matriarch",
+    "gorgewing",
+    "gorgewing_matron"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "ash_witch",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_ash_witch.png",
+      "reference_sha256": "8a9a909852014a60777514502d98cfb639c4b9323dea38d0c7ac63aa832dce70"
+    },
+    {
+      "id": "ash_matriarch",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_ash_matriarch.png",
+      "reference_sha256": "bd4cdfbd8f8dc02b66e74be196cd74a4cc8260f9987e8f747a11b31704b397a1"
+    },
+    {
+      "id": "gorgewing",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_gorgewing.png",
+      "reference_sha256": "a001030a832117a5b20f63d8c3aabc513953cebc929a075ab4f96fbff2c2a371"
+    },
+    {
+      "id": "gorgewing_matron",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_gorgewing_matron.png",
+      "reference_sha256": "12b8e4108bc5494679b875e3931708d988ebc857299f4229537d5a3d5ceec3b8"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

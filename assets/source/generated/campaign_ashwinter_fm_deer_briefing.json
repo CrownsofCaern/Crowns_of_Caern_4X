@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_ashwinter_fm_deer_briefing",
+  "campaign": "ashwinter",
+  "chapter": "fm_deer",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_ashwinter_fm_deer_briefing.txt",
+  "prompt_sha256": "72d59a46c9dc52d492ff4fb69fc50d609a94eab7cc3c99dda68e3458480b00b2",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "2a844a99932cfdc28716177ff1a820afba3ee461ef375d3ba7d322dd06440715",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

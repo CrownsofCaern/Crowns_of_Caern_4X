@@ -1,0 +1,23 @@
+{
+  "id": "swamp_sunken_abbey",
+  "terrain": "swamp",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/swamp_sunken_abbey.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "eab815183e2b8a530334928531667730c54ad0631c99833da0812784fba541fc",
+  "prompt_file": "assets/source/batches/battlefields-001/swamp_sunken_abbey.txt",
+  "prompt_sha256": "ecf848045016c3b3defd7e06c17b9da6002dcd9957d7562db997ad40a2b46599",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/swamp_sunken_abbey-live.png",
+    "forecast": "docs/art/production/battlefields/swamp_sunken_abbey-forecast.png"
+  }
+}

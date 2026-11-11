@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_pale_inheritance_ph_living_shore_briefing",
+  "campaign": "pale_inheritance",
+  "chapter": "ph_living_shore",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_pale_inheritance_ph_living_shore_briefing.txt",
+  "prompt_sha256": "3a4588adad09c691fc7df2391d3fd0d3f323d26f1fcdc3a576dbcfee6d126cc4",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "ff84bb932f91797458f7dde73777cbca3385082cffd3321b2bfc2f2a6f7be147",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

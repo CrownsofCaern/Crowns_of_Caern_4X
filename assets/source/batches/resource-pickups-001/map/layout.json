@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    2
+  ],
+  "source_dimensions": [
+    1774,
+    887
+  ],
+  "assets": [
+    {
+      "id": "resource_gold",
+      "crop_xyxy": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "keep_components": true,
+      "alpha_floor": 64
+    },
+    {
+      "id": "resource_wood",
+      "crop_xyxy": [
+        444,
+        0,
+        887,
+        444
+      ],
+      "keep_components": true,
+      "alpha_floor": 64
+    },
+    {
+      "id": "resource_ore",
+      "crop_xyxy": [
+        887,
+        0,
+        1330,
+        444
+      ],
+      "keep_components": true,
+      "alpha_floor": 64
+    },
+    {
+      "id": "resource_mercury",
+      "crop_xyxy": [
+        1330,
+        0,
+        1774,
+        444
+      ],
+      "keep_components": true,
+      "alpha_floor": 64
+    },
+    {
+      "id": "resource_sulfur",
+      "crop_xyxy": [
+        0,
+        444,
+        444,
+        887
+      ],
+      "keep_components": true,
+      "alpha_floor": 64
+    },
+    {
+      "id": "resource_crystal",
+      "crop_xyxy": [
+        444,
+        444,
+        887,
+        887
+      ],
+      "keep_components": true,
+      "alpha_floor": 64
+    },
+    {
+      "id": "resource_gems",
+      "crop_xyxy": [
+        887,
+        444,
+        1330,
+        887
+      ],
+      "keep_components": true,
+      "alpha_floor": 64
+    },
+    {
+      "id": "object_chest",
+      "crop_xyxy": [
+        1330,
+        444,
+        1774,
+        887
+      ],
+      "keep_components": true,
+      "alpha_floor": 64
+    }
+  ],
+  "review": "Explicit grid bounds, disconnected coins/mineral grains retained; low-alpha matte removed"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_six_eyes_se_stair_briefing",
+  "campaign": "six_eyes",
+  "chapter": "se_stair",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_stair-prompt.txt",
+  "prompt_sha256": "39d92d22f114ce2900087e917a5e9555594cea1c36486aa8dcb78647cb99b973",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "a2ec9c0fdd9fe5f02aaabcffce3e1767afcc0695a0bb6a53c2ace73efe17603d",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

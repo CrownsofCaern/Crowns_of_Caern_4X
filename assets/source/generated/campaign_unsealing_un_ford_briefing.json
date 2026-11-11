@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_unsealing_un_ford_briefing",
+  "campaign": "unsealing",
+  "chapter": "un_ford",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_unsealing_un_ford_briefing.txt",
+  "prompt_sha256": "b08d6885be8ebb7f60f6cdd93942cf41445683fe154570c856829ed1d7f014fc",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "8119e26dcc2b3ac1aa8f0a2060235bed26bbd7061df2161698526fb0269b4ee3",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

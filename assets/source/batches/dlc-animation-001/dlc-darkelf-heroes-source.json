@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-animation-001",
+  "source": "assets/source/batches/dlc-animation-001/dlc-darkelf-heroes-source.png",
+  "source_sha256": "0a9cfa41ecbfbe965e6efe42f309f17815634d4e374d9d23f172072791b37272",
+  "size": [
+    1448,
+    1086
+  ],
+  "prompt_file": "assets/source/batches/dlc-animation-001/dlc-darkelf-heroes-prompt.txt",
+  "prompt_sha256": "66c967c857366533a43b43778f0677b9868e781c3c6f1cca96398855fc7d0c59",
+  "conditioning": [
+    "assets/source/batches/dlc-animation-001/dlc-darkelf-heroes-reference.png"
+  ],
+  "reference_sha256": "9577cca7c031be896cd9ccb628237629b8d78a285922749b8f83d057b63cb28f",
+  "units": [
+    "de_dreadmarshal",
+    "de_veilseer",
+    "de_nightstalker"
+  ],
+  "grid": [
+    4,
+    3
+  ],
+  "processing": "Existing animation extraction and registration; native 128px reference; 320x256 action canvas",
+  "quality_status": "animation_candidate"
+}

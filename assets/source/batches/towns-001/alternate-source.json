@@ -1,0 +1,7 @@
+{
+  "provider": "ChatGPT image_gen",
+  "status": "unused_alternate_source",
+  "source": "alternate-source.png",
+  "prompt": "alternate-prompt.txt",
+  "note": "Original source remains the imported source; alternate preserved for provenance."
+}

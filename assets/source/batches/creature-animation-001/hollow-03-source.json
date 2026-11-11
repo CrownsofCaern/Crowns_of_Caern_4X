@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/hollow-03-source.png",
+  "source_sha256": "72c4a87de59c6cda3236563ae0fddcad295126453260603d96cf06fede4e7bda",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/hollow-03-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/hollow-03-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "corpse_weaver",
+    "charnel_weaver",
+    "gibbet_knight",
+    "gibbet_lord"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "corpse_weaver",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_corpse_weaver.png",
+      "reference_sha256": "bd36322de5e67bbeae9796e980e3181b412b22eb7f45b7a4d3ebb0b34113393b"
+    },
+    {
+      "id": "charnel_weaver",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_charnel_weaver.png",
+      "reference_sha256": "fddaa7abcdedcfe7f6c1d5d28e024bff2ab2b3b78b4cb06d5dac21ac8e61aba3"
+    },
+    {
+      "id": "gibbet_knight",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_gibbet_knight.png",
+      "reference_sha256": "2533bd894eb316c010944caa6c76fc9bab751911922a6e4aa0ea1caae0fc2bc7"
+    },
+    {
+      "id": "gibbet_lord",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_gibbet_lord.png",
+      "reference_sha256": "36682db1d78ddf94897c7b84c3e57bd1e72c41ce3d61ebdff8e136a9669ef84c"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

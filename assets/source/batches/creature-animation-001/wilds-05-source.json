@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/wilds-05-source.png",
+  "source_sha256": "f0769adbb6417ec81a95cd3081665933f084fe97b67511c3eeed5973bd8d5370",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/wilds-05-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/wilds-05-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "bog_lurker",
+    "ashscale_basilisk",
+    "salt_witch",
+    "steppe_centaur"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "bog_lurker",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_bog_lurker.png",
+      "reference_sha256": "d51aeb21604a37878d85f0c20703d224a680586ba49dd71120d66d22dda2efda"
+    },
+    {
+      "id": "ashscale_basilisk",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_ashscale_basilisk.png",
+      "reference_sha256": "df44f17cf1840ace320bbb6a82ad635250619338810d9a234d97aaf6f88a28f2"
+    },
+    {
+      "id": "salt_witch",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_salt_witch.png",
+      "reference_sha256": "275ac89c769015b3dac225ba82b48fff3391b7426ef84b274678219a07c93365"
+    },
+    {
+      "id": "steppe_centaur",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_steppe_centaur.png",
+      "reference_sha256": "12caa2ae163e9aa1b5852bdb0196057f2c9aaadee725af3044184c29dfbbe48b"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

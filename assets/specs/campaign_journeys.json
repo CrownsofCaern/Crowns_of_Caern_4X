@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "purpose": "Production regional campaign journey paintings and interactive chapter overlays; approved common world geography is the planning reference, local distances are authored for readability.",
+  "world_atlas": "assets/specs/world_atlas.json",
+  "style_reference": "assets/source/batches/world-atlas-001/source.png",
+  "campaigns": {
+    "last_light": {
+      "id": "journey_last_light",
+      "campaign": "last_light",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Last Light \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.last_light",
+      "source": "assets/source/batches/campaign-journeys-001/last_light/source.png",
+      "output": "assets/illustrations/journeys/last_light.png",
+      "status": "engine_reviewed",
+      "nodes": [
+        {
+          "chapter": "ll_harvest",
+          "location": "greyhold",
+          "at": [
+            0.48,
+            0.42
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ll_barrow_roads",
+          "location": "barrow_roads",
+          "at": [
+            0.58,
+            0.7
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ll_lanterns",
+          "location": "fen_lanterns",
+          "at": [
+            0.48,
+            0.65
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ll_knight",
+          "location": "saint_orrins_rest",
+          "at": [
+            0.48,
+            0.55
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ll_doors",
+          "location": "mountain_gates",
+          "at": [
+            0.19,
+            0.28
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ll_stumps",
+          "location": "elderwold_stumps",
+          "at": [
+            0.31,
+            0.43
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ll_red_sky",
+          "location": "northern_granaries",
+          "at": [
+            0.53,
+            0.13
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ll_ford",
+          "location": "burning_ford",
+          "at": [
+            0.61,
+            0.45
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ll_ashes",
+          "location": "ashen_wastes",
+          "at": [
+            0.79,
+            0.62
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ll_embers",
+          "location": "cindermaw",
+          "at": [
+            0.84,
+            0.37
+          ],
+          "layer": "surface"
+        }
+      ],
+      "generation_status": "generated",
+      "quality_status": "engine_reviewed"
+    },
+    "pale_inheritance": {
+      "id": "journey_pale_inheritance",
+      "campaign": "pale_inheritance",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Pale Inheritance \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.pale_inheritance",
+      "source": "assets/source/batches/campaign-journeys-001/pale_inheritance/source.png",
+      "output": "assets/illustrations/journeys/pale_inheritance.png",
+      "status": "engine_reviewed",
+      "nodes": [
+        {
+          "chapter": "ph_warm_earth",
+          "location": "sallowmere_court",
+          "at": [
+            0.32,
+            0.64
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ph_barrow_lords",
+          "location": "deep_fen",
+          "at": [
+            0.44,
+            0.77
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ph_living_shore",
+          "location": "living_shore",
+          "at": [
+            0.57,
+            0.37
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ph_rot",
+          "location": "fens_edge",
+          "at": [
+            0.25,
+            0.41
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ph_twice_dead",
+          "location": "greyhold",
+          "at": [
+            0.55,
+            0.18
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ph_lantern_siege",
+          "location": "lantern_fortress",
+          "at": [
+            0.78,
+            0.31
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ph_deep_barrows",
+          "location": "barrow_below",
+          "at": [
+            0.61,
+            0.77
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "ph_hungry_fire",
+          "location": "burning_tunnels",
+          "at": [
+            0.77,
+            0.76
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "ph_leviathan",
+          "location": "leviathan_mire",
+          "at": [
+            0.22,
+            0.81
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "ph_pale_crown",
+          "location": "barrow_gate",
+          "at": [
+            0.88,
+            0.86
+          ],
+          "layer": "underways"
+        }
+      ],
+      "generation_status": "generated",
+      "quality_status": "engine_reviewed"
+    },
+    "unsealing": {
+      "id": "journey_unsealing",
+      "campaign": "unsealing",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Unsealing \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.unsealing",
+      "source": "assets/source/batches/campaign-journeys-001/unsealing/source.png",
+      "output": "assets/illustrations/journeys/unsealing.png",
+      "status": "engine_reviewed",
+      "nodes": [
+        {
+          "chapter": "un_pit",
+          "location": "skarns_pit",
+          "at": [
+            0.78,
+            0.77
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "un_brood_war",
+          "location": "brood_pits",
+          "at": [
+            0.88,
+            0.85
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "un_wardens_keep",
+          "location": "wardens_keep",
+          "at": [
+            0.6,
+            0.3
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "un_under_barrows",
+          "location": "barrow_below",
+          "at": [
+            0.23,
+            0.8
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "un_lockstone",
+          "location": "lockstone",
+          "at": [
+            0.64,
+            0.23
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "un_kindling",
+          "location": "heartroots",
+          "at": [
+            0.19,
+            0.38
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "un_ford",
+          "location": "burning_ford",
+          "at": [
+            0.43,
+            0.33
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "un_ash_snow",
+          "location": "northern_host_flank",
+          "at": [
+            0.72,
+            0.13
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "un_maw",
+          "location": "maws_depths",
+          "at": [
+            0.65,
+            0.87
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "un_throne",
+          "location": "highmere",
+          "at": [
+            0.53,
+            0.13
+          ],
+          "layer": "surface"
+        }
+      ],
+      "generation_status": "generated",
+      "quality_status": "engine_reviewed"
+    },
+    "briar_oath": {
+      "id": "journey_briar_oath",
+      "campaign": "briar_oath",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Briar Oath \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.briar_oath",
+      "source": "assets/source/batches/campaign-journeys-001/briar_oath/source.png",
+      "output": "assets/illustrations/journeys/briar_oath.png",
+      "status": "engine_reviewed",
+      "nodes": [
+        {
+          "chapter": "tw_axe_line",
+          "location": "axe_line",
+          "at": [
+            0.3,
+            0.46
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "tw_smoke",
+          "location": "western_stumps",
+          "at": [
+            0.36,
+            0.65
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "tw_ambush",
+          "location": "elderwold_stumps",
+          "at": [
+            0.52,
+            0.47
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "tw_hunters",
+          "location": "oldwood_hunting_grounds",
+          "at": [
+            0.5,
+            0.18
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "tw_fens_edge",
+          "location": "fens_edge",
+          "at": [
+            0.51,
+            0.78
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "tw_roots",
+          "location": "heartroots",
+          "at": [
+            0.64,
+            0.63
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "tw_kindling",
+          "location": "elderwold_stumps",
+          "at": [
+            0.59,
+            0.53
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "tw_last_grove",
+          "location": "last_grove",
+          "at": [
+            0.14,
+            0.31
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "tw_seed",
+          "location": "mother_seed",
+          "at": [
+            0.25,
+            0.78
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "tw_briar_seal",
+          "location": "wound_gate",
+          "at": [
+            0.88,
+            0.43
+          ],
+          "layer": "surface"
+        }
+      ],
+      "generation_status": "generated",
+      "quality_status": "engine_reviewed"
+    },
+    "shuttered_halls": {
+      "id": "journey_shuttered_halls",
+      "campaign": "shuttered_halls",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Shuttered Halls \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.shuttered_halls",
+      "source": "assets/source/batches/campaign-journeys-001/shuttered_halls/source.png",
+      "output": "assets/illustrations/journeys/shuttered_halls.png",
+      "status": "engine_reviewed",
+      "nodes": [
+        {
+          "chapter": "fg_deep_shift",
+          "location": "stonevow",
+          "at": [
+            0.16,
+            0.64
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "fg_bones",
+          "location": "old_galleries",
+          "at": [
+            0.37,
+            0.75
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "fg_debtors",
+          "location": "mountain_gates",
+          "at": [
+            0.55,
+            0.35
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fg_iron_bread",
+          "location": "iron_pass",
+          "at": [
+            0.52,
+            0.13
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fg_heat",
+          "location": "deepest_hall",
+          "at": [
+            0.56,
+            0.83
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "fg_fallen_hold",
+          "location": "kharrak",
+          "at": [
+            0.71,
+            0.5
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fg_wardens_keep",
+          "location": "wardens_keep",
+          "at": [
+            0.87,
+            0.32
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fg_ore_ember",
+          "location": "ore_roads",
+          "at": [
+            0.78,
+            0.64
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fg_engine",
+          "location": "tobbins_workshop",
+          "at": [
+            0.47,
+            0.49
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fg_second_lockstone",
+          "location": "worldforge",
+          "at": [
+            0.2,
+            0.87
+          ],
+          "layer": "underways"
+        }
+      ],
+      "generation_status": "generated",
+      "quality_status": "engine_reviewed"
+    },
+    "ashwinter": {
+      "id": "journey_ashwinter",
+      "campaign": "ashwinter",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Ashwinter \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.ashwinter",
+      "source": "assets/source/batches/campaign-journeys-001/ashwinter/source.png",
+      "output": "assets/illustrations/journeys/ashwinter.png",
+      "status": "engine_reviewed",
+      "nodes": [
+        {
+          "chapter": "fm_sun_out",
+          "location": "grimfell",
+          "at": [
+            0.23,
+            0.18
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fm_one_hall",
+          "location": "last_clan_hall",
+          "at": [
+            0.45,
+            0.18
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fm_south",
+          "location": "northern_granaries",
+          "at": [
+            0.48,
+            0.38
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fm_iron_pass",
+          "location": "iron_pass",
+          "at": [
+            0.2,
+            0.35
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fm_highmere",
+          "location": "highmere",
+          "at": [
+            0.71,
+            0.39
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fm_deer",
+          "location": "oldwood_hunting_grounds",
+          "at": [
+            0.33,
+            0.55
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fm_cold_bones",
+          "location": "frozen_fens",
+          "at": [
+            0.52,
+            0.81
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fm_source",
+          "location": "northern_host_flank",
+          "at": [
+            0.79,
+            0.55
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fm_wyrm",
+          "location": "wyrm_glacier",
+          "at": [
+            0.31,
+            0.08
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "fm_bring_winter",
+          "location": "wound_gate",
+          "at": [
+            0.87,
+            0.74
+          ],
+          "layer": "surface"
+        }
+      ],
+      "generation_status": "generated",
+      "quality_status": "engine_reviewed"
+    },
+    "six_eyes": {
+      "id": "journey_six_eyes",
+      "campaign": "six_eyes",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Six Eyes \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.six_eyes",
+      "source": "assets/source/batches/dlc-campaign-art-001/six_eyes/source.png",
+      "output": "assets/illustrations/journeys/six_eyes.png",
+      "status": "engine_reviewed",
+      "nodes": [
+        {
+          "chapter": "se_below",
+          "location": "nightgate_caverns",
+          "at": [
+            0.15,
+            0.78
+          ],
+          "layer": "deep_underworld"
+        },
+        {
+          "chapter": "se_stair",
+          "location": "long_stair",
+          "at": [
+            0.25,
+            0.62
+          ],
+          "layer": "deep_underworld"
+        },
+        {
+          "chapter": "se_under_sky",
+          "location": "kharrak",
+          "at": [
+            0.24,
+            0.33
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "se_saints_eye",
+          "location": "greyhold",
+          "at": [
+            0.51,
+            0.4
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "se_thorn_mirror",
+          "location": "heartroots",
+          "at": [
+            0.31,
+            0.51
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "se_regents_price",
+          "location": "barrow_below",
+          "at": [
+            0.71,
+            0.8
+          ],
+          "layer": "underways"
+        },
+        {
+          "chapter": "se_red_sky",
+          "location": "cindermaw",
+          "at": [
+            0.83,
+            0.45
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "se_winters_eye",
+          "location": "wyrm_glacier",
+          "at": [
+            0.61,
+            0.13
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "se_long_stair",
+          "location": "stair_hold",
+          "at": [
+            0.12,
+            0.45
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "se_nightgate",
+          "location": "nightgate",
+          "at": [
+            0.43,
+            0.9
+          ],
+          "layer": "deep_underworld"
+        }
+      ],
+      "generation_status": "generated",
+      "quality_status": "engine_reviewed"
+    },
+    "drowned_oath": {
+      "id": "journey_drowned_oath",
+      "campaign": "drowned_oath",
+      "chapter": "",
+      "chapter_number": 0,
+      "chapter_name": "The Drowned Oath \u2014 journey map",
+      "usage": "journey",
+      "story_source": "data/campaigns.json#campaigns.drowned_oath",
+      "source": "assets/source/batches/dlc-campaign-art-001/drowned_oath/source.png",
+      "output": "assets/illustrations/journeys/drowned_oath.png",
+      "status": "engine_reviewed",
+      "nodes": [
+        {
+          "chapter": "do_tablets",
+          "location": "sarranth_vaults",
+          "at": [
+            0.82,
+            0.79
+          ],
+          "layer": "drowned_shelf"
+        },
+        {
+          "chapter": "do_one_shoal",
+          "location": "urrh_reef",
+          "at": [
+            0.91,
+            0.63
+          ],
+          "layer": "drowned_shelf"
+        },
+        {
+          "chapter": "do_landfall",
+          "location": "living_shore",
+          "at": [
+            0.64,
+            0.72
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "do_last_brood",
+          "location": "barrow_roads",
+          "at": [
+            0.51,
+            0.72
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "do_price_of_iron",
+          "location": "ore_roads",
+          "at": [
+            0.3,
+            0.44
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "do_three_weeks",
+          "location": "kharrak",
+          "at": [
+            0.24,
+            0.33
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "do_cold_road",
+          "location": "iron_pass",
+          "at": [
+            0.27,
+            0.21
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "do_who_pays",
+          "location": "last_clan_hall",
+          "at": [
+            0.5,
+            0.18
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "do_cairn",
+          "location": "whaleroad_cairn",
+          "at": [
+            0.6,
+            0.07
+          ],
+          "layer": "surface"
+        },
+        {
+          "chapter": "do_cold_first",
+          "location": "grimfell",
+          "at": [
+            0.51,
+            0.28
+          ],
+          "layer": "surface"
+        }
+      ],
+      "generation_status": "generated",
+      "quality_status": "engine_reviewed"
+    }
+  }
+}

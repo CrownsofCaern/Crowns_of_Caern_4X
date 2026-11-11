@@ -1,0 +1,61 @@
+campaign_id,chapter_id,chapter_name,gameplay_map,world_location,layer,x,y
+last_light,ll_harvest,Greyhold Harvest,greyhold_harvest,greyhold,surface,0.48,0.49
+last_light,ll_barrow_roads,The Barrow Roads,gen:broad_crossing:311,barrow_roads,surface,0.53,0.7
+last_light,ll_lanterns,Lanterns in the Fen,gen:broad_crossing:827,fen_lanterns,surface,0.48,0.69
+last_light,ll_knight,The Knight Who Came Back,knight_who_came_back,saint_orrins_rest,surface,0.48,0.63
+last_light,ll_doors,Doors of Stone,gen:broad_crossing:1409,mountain_gates,surface,0.322,0.375
+last_light,ll_stumps,The Stumps of Elderwold,gen:great_marches:2203,elderwold_stumps,surface,0.38,0.51
+last_light,ll_red_sky,Raiders under a Red Sky,gen:great_marches:3517,northern_granaries,surface,0.51,0.29
+last_light,ll_ford,The Burning Ford,burning_ford,burning_ford,surface,0.545,0.52
+last_light,ll_ashes,Ashes Return,ashes_return,ashen_wastes,surface,0.65,0.58
+last_light,ll_embers,Into the Embers,into_the_embers,cindermaw,surface,0.67,0.49
+pale_inheritance,ph_warm_earth,The Warm Earth,warm_earth,sallowmere_court,surface,0.43,0.73
+pale_inheritance,ph_barrow_lords,Barrow-Lords,gen:broad_crossing:4127,deep_fen,surface,0.5,0.83
+pale_inheritance,ph_living_shore,The Living Shore,gen:broad_crossing:5381,living_shore,surface,0.5,0.65
+pale_inheritance,ph_rot,Rot in the Roots,gen:broad_crossing:6029,fens_edge,surface,0.41,0.66
+pale_inheritance,ph_twice_dead,Twice Dead,twice_dead,greyhold,surface,0.48,0.49
+pale_inheritance,ph_lantern_siege,The Lantern Siege,gen:great_marches:7211,lantern_fortress,surface,0.57,0.6
+pale_inheritance,ph_deep_barrows,Down the Deep Barrows,gen:great_marches:7853,barrow_below,underways,0.49,0.76
+pale_inheritance,ph_hungry_fire,The Hungry Fire,gen:great_marches:8467,burning_tunnels,underways,0.57,0.73
+pale_inheritance,ph_leviathan,The Leviathan Stirs,gen:great_marches:9091,leviathan_mire,surface,0.42,0.82
+pale_inheritance,ph_pale_crown,The Pale Crown,pale_crown,barrow_gate,underways,0.6,0.7
+unsealing,un_pit,The Pit Below,pit_below,skarns_pit,underways,0.71,0.65
+unsealing,un_brood_war,Brood War,gen:broad_crossing:2741,brood_pits,underways,0.74,0.69
+unsealing,un_wardens_keep,The Wardens' Keep,gen:broad_crossing:3389,wardens_keep,surface,0.59,0.49
+unsealing,un_under_barrows,Under the Barrows,gen:broad_crossing:4463,barrow_below,underways,0.49,0.76
+unsealing,un_lockstone,Breaking the Lockstone,breaking_the_lockstone,lockstone,surface,0.605,0.48
+unsealing,un_kindling,Kindling the Elderwold,gen:great_marches:5519,heartroots,surface,0.365,0.56
+unsealing,un_ford,The Ford,gen:great_marches:6247,burning_ford,surface,0.545,0.52
+unsealing,un_ash_snow,Ash on the Snow,gen:great_marches:6911,northern_host_flank,surface,0.65,0.45
+unsealing,un_maw,The Maw Wakes,gen:great_marches:7603,maws_depths,underways,0.7,0.69
+unsealing,un_throne,The Red Sky Throne,red_sky_throne,highmere,surface,0.64,0.3
+briar_oath,tw_axe_line,The Axe Line,axe_line,axe_line,surface,0.27,0.56
+briar_oath,tw_smoke,Smoke over Elderwold,gen:broad_crossing:1187,western_stumps,surface,0.3,0.59
+briar_oath,tw_ambush,Ambush at the Stumps,gen:broad_crossing:1931,elderwold_stumps,surface,0.38,0.51
+briar_oath,tw_hunters,Hunters in the Snow,gen:broad_crossing:2657,oldwood_hunting_grounds,surface,0.38,0.49
+briar_oath,tw_fens_edge,The Fen's Edge,gen:broad_crossing:3301,fens_edge,surface,0.41,0.66
+briar_oath,tw_roots,What the Roots Remember,roots_remember,heartroots,surface,0.365,0.56
+briar_oath,tw_kindling,Kindling,gen:great_marches:4127,elderwold_stumps,surface,0.38,0.51
+briar_oath,tw_last_grove,The Last Grove,gen:great_marches:4789,last_grove,surface,0.195,0.5
+briar_oath,tw_seed,Seed of the Mother,gen:great_marches:5413,mother_seed,surface,0.27,0.63
+briar_oath,tw_briar_seal,The Briar Seal,briar_seal,wound_gate,surface,0.71,0.58
+shuttered_halls,fg_deep_shift,Deep Shift,deep_shift,stonevow,underways,0.19,0.32
+shuttered_halls,fg_bones,Bones in the Seams,gen:broad_crossing:1291,old_galleries,underways,0.26,0.43
+shuttered_halls,fg_debtors,The Debtors' Road,gen:broad_crossing:2083,mountain_gates,surface,0.322,0.375
+shuttered_halls,fg_iron_bread,Iron for Bread,gen:broad_crossing:2777,iron_pass,surface,0.322,0.23
+shuttered_halls,fg_heat,Heat from Below,gen:broad_crossing:3517,deepest_hall,underways,0.29,0.47
+shuttered_halls,fg_fallen_hold,The Fallen Hold,fallen_hold,kharrak,surface,0.34,0.48
+shuttered_halls,fg_wardens_keep,The Wardens' Keep,gen:great_marches:4241,wardens_keep,surface,0.59,0.49
+shuttered_halls,fg_ore_ember,Ore and Ember,gen:great_marches:4903,ore_roads,surface,0.4,0.43
+shuttered_halls,fg_engine,The Molten Engine,gen:great_marches:5651,tobbins_workshop,surface,0.31,0.41
+shuttered_halls,fg_second_lockstone,The Second Lockstone,second_lockstone,worldforge,underways,0.205,0.34
+ashwinter,fm_sun_out,The Sun Goes Out,sun_goes_out,grimfell,surface,0.39,0.16
+ashwinter,fm_one_hall,One Hall,gen:broad_crossing:1453,last_clan_hall,surface,0.48,0.17
+ashwinter,fm_south,South for Bread,gen:broad_crossing:2239,northern_granaries,surface,0.51,0.29
+ashwinter,fm_iron_pass,The Iron Pass,gen:broad_crossing:2903,iron_pass,surface,0.322,0.23
+ashwinter,fm_highmere,The Granary of Highmere,granary_of_highmere,highmere,surface,0.64,0.3
+ashwinter,fm_deer,Deer of the Old Wood,gen:great_marches:3671,oldwood_hunting_grounds,surface,0.38,0.49
+ashwinter,fm_cold_bones,Cold Bones,gen:great_marches:4357,frozen_fens,surface,0.52,0.74
+ashwinter,fm_source,The Source of Winter,gen:great_marches:5023,northern_host_flank,surface,0.65,0.45
+ashwinter,fm_wyrm,Wyrm-Wake,gen:great_marches:5779,wyrm_glacier,surface,0.42,0.07
+ashwinter,fm_bring_winter,Bring the Winter,bring_the_winter,wound_gate,surface,0.71,0.58

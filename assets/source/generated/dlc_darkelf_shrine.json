@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/darkelf-heroes-towns.png",
+  "source_sheet_sha256": "fa4053c2c7d4675d1c293c39612520363469b17837ec36b7f92b32feec73300b",
+  "size": [
+    1448,
+    1086
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-heroes-towns.txt",
+  "prompt_sha256": "023f05512911b2392dedbb446b5ef83259c7450d23373f5bd7b2cbc83b54f816",
+  "conditioning": [
+    "assets/source/batches/hollow-001/source.png",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/hollow-001/source.png": "c0a65504208fe13a5820f9e42439ee1d7ebaa5009c5ead6d0d49e9f4d65e03d1",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png": "1e763406818c8e4c62c764cb79fc560c92098617f1ac064fa8835edae9699600"
+  },
+  "asset_id": "dlc_darkelf_shrine",
+  "row": 2,
+  "column": 3,
+  "extraction": {
+    "row_bounds": [
+      724,
+      1086
+    ],
+    "column_cuts": [
+      0,
+      362,
+      724,
+      1086,
+      1448
+    ],
+    "bent_seams": {},
+    "warnings": [],
+    "row_extraction": {
+      "bounds": [
+        724,
+        1086
+      ],
+      "top_seam": 724,
+      "bottom_seam": 1086
+    }
+  },
+  "source_sha256": "7d6e54989956b15c7ec5fbfa8a31c02e41774a3f1c95d09d89397e6093277114",
+  "native_size": [
+    128,
+    128
+  ],
+  "processing": "Adaptive transparent gutters; alpha below 64 cleared; palette preserved",
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

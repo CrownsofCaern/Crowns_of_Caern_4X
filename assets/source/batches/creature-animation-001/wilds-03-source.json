@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/wilds-03-source.png",
+  "source_sha256": "8037e64a159ddca6f9a38ef87a56d005529d4916ef3d196da83f914239b499a7",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/wilds-03-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/wilds-03-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "corpse_light",
+    "marsh_hag",
+    "sand_reaver",
+    "rime_wight"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "corpse_light",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_corpse_light.png",
+      "reference_sha256": "70b0b5c367124ee71b5f5c6e1b950dfdf8dbab69eb25b796a40330330ca1c3dd"
+    },
+    {
+      "id": "marsh_hag",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_marsh_hag.png",
+      "reference_sha256": "5d12d732b870f77fb37d3432a32b1ed4734026ffe53d7238e36673d4abef9e17"
+    },
+    {
+      "id": "sand_reaver",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_sand_reaver.png",
+      "reference_sha256": "920c45764a4dea24d73e1106a0fe4cc6a69d645c1c28c54ead3cb93cb9023a3d"
+    },
+    {
+      "id": "rime_wight",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rime_wight.png",
+      "reference_sha256": "a482b6ae26dfbcdcca431330800b6ffc79c6289318cdb1ada53eb3fd9f1cdbc7"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

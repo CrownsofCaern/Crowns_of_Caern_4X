@@ -1,0 +1,23 @@
+{
+  "id": "swamp_blackfen",
+  "terrain": "swamp",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/swamp_blackfen.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "9b217b0e33c49d8c93ce3ce2d054f11059777d11bd9c03c4da4b676be45a1dde",
+  "prompt_file": "assets/source/batches/battlefields-001/swamp_blackfen.txt",
+  "prompt_sha256": "b1c64f422c2c84b21dde645957da046a183f596d3e78c734ac547247e09ea390",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/swamp_blackfen-live.png",
+    "forecast": "docs/art/production/battlefields/swamp_blackfen-forecast.png"
+  }
+}

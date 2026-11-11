@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1261,
+    1247
+  ],
+  "review": "Mechanical grid extraction; design, silhouette and engine review pending",
+  "assets": [
+    {
+      "id": "creature_bog_lurker",
+      "prompt": "Armoured swamp-things that wait under the water for weeks.; Bog Lurker",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        0,
+        315,
+        312
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_ashscale_basilisk",
+      "prompt": "A grey lizard whose gaze stiffens muscle like ash.; Ashscale Basilisk",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        315,
+        0,
+        630,
+        312
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_salt_witch",
+      "prompt": "Hermit healers of the salt flats who travel with bandit bands.; Salt Witch",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        630,
+        0,
+        946,
+        312
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_steppe_centaur",
+      "prompt": "Horse-bodied archers who shoot just as well when cornered.; Steppe Centaur",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        946,
+        0,
+        1261,
+        312
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_cave_stalker",
+      "prompt": "Blind ambush-hunters with hooked forelimbs.; Cave Stalker",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        312,
+        315,
+        624
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_hill_troll",
+      "prompt": "Warty brutes whose wounds close faster than you can cut.; Hill Troll",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        315,
+        312,
+        630,
+        624
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_ogre_mauler",
+      "prompt": "Gut-heavy ogres swinging tree-trunk clubs.; Ogre Mauler",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        630,
+        312,
+        946,
+        624
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_ruin_sentinel",
+      "prompt": "Stone guardians of a fallen empire, still obeying dead orders.; Ruin Sentinel",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        946,
+        312,
+        1261,
+        624
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_cinder_wraith",
+      "prompt": "Ghosts of the burned, trailing smoke and embers.; Cinder Wraith",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        624,
+        315,
+        935
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_barrow_revenant",
+      "prompt": "An old king in rusted mail, guarding a barrow nobody remembers.; Barrow Revenant",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        315,
+        624,
+        630,
+        935
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_venom_wyvern",
+      "prompt": "Two-legged drakes with a stinger on the tail.; Venom Wyvern",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        630,
+        624,
+        946,
+        935
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_frost_drake",
+      "prompt": "Lean blue-white drakes that breathe sleet.; Frost Drake",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        946,
+        624,
+        1261,
+        935
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_bog_serpent",
+      "prompt": "A coiled marsh-serpent that strikes at anything that comes close.; Bog Serpent",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        935,
+        315,
+        1247
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_dune_wurm",
+      "prompt": "A sand-swimming worm the length of a caravan.; Dune Wurm",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        315,
+        935,
+        630,
+        1247
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_hill_giant",
+      "prompt": "Club-wielding giants that smash shields like crockery.; Hill Giant",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        630,
+        935,
+        946,
+        1247
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "creature_primordial_wyrm",
+      "prompt": "Something that was old when the mountains were young. Rarely seen; never forgotten.; Primordial Wyrm",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        946,
+        935,
+        1261,
+        1247
+      ],
+      "keep_components": true
+    }
+  ]
+}

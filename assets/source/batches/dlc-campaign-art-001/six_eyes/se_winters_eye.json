@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_six_eyes_se_winters_eye_briefing",
+  "campaign": "six_eyes",
+  "chapter": "se_winters_eye",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_winters_eye-prompt.txt",
+  "prompt_sha256": "0def46674e5210c0fa4cf6606c2b19117dc358cc37b2b3ee519d4da32a82939f",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "2f6fd082dcf879296c4352b97cb72e166c6e4f518717a3e01c1c2f0ec1fb09f9",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

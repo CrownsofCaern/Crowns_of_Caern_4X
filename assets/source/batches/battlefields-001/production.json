@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "batch": "battlefields-001",
+  "generated": 17,
+  "quality_status": "rendered_candidate",
+  "human_approval": "pending",
+  "source_resolution": [
+    1536,
+    1024
+  ],
+  "processing": "Byte-preserved source export; no downsampling or quantization",
+  "engine_review": "17 live scenes and 17 forecast crops rendered in Godot 4.6.3 OpenGL; complete river playback final counts match recorded result",
+  "report": "docs/art/BATTLEFIELD_PRODUCTION_REPORT.md"
+}

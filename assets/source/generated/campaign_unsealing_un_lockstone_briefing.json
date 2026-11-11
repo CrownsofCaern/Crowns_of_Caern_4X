@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_unsealing_un_lockstone_briefing",
+  "campaign": "unsealing",
+  "chapter": "un_lockstone",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_unsealing_un_lockstone_briefing.txt",
+  "prompt_sha256": "dcf4ce6760c310faa8eb35afdb6f3e3fe091d2bda67a90ce40dd5e290bf08898",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "7107d53f400b94c14177d467cf8c09d9c3bcac4db76d77a3871ef39da1561a6a",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

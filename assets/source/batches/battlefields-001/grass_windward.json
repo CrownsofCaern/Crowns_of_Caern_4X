@@ -1,0 +1,23 @@
+{
+  "id": "grass_windward",
+  "terrain": "grass",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/grass_windward.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "prompt_file": "assets/source/batches/battlefields-001/grass_windward.txt",
+  "prompt_sha256": "c543a260af3dadf1a6789b3765acd4e38e65b2d85197e2322137c3cb5ae9f0f7",
+  "conditioning": [
+    "assets/source/batches/concord-town-001/foundation.png"
+  ],
+  "reference_sha256": "a1ceda73d6122e5f2d303fac933b53142fc351e4e5022243341ae7ea82d0669b",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/grass_windward-live.png",
+    "forecast": "docs/art/production/battlefields/grass_windward-forecast.png"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rough_shattered_quarry",
+  "terrain": "rough",
+  "provider": "ChatGPT image_gen",
+  "source": "assets/source/batches/battlefields-001/rough_shattered_quarry.png",
+  "size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "3172175f7b982d522b26d1439380f8548e5f491216e7d0c954c840ed22bb028d",
+  "prompt_file": "assets/source/batches/battlefields-001/rough_shattered_quarry.txt",
+  "prompt_sha256": "1ceb5b50edb7aaf1c9090d476ba676330cb5e6ccf82cf04d9720afeb0a30bab7",
+  "conditioning": [
+    "assets/source/batches/battlefields-001/grass_windward.png"
+  ],
+  "reference_sha256": "56bf2bd5c74eab9217a367646ef0583471ebdc5d5a7218d6fc196ae9427c3e1a",
+  "processing": "Exact full-resolution byte copy; no downsampling, palette quantization or sprite atlas",
+  "quality_status": "rendered_candidate",
+  "review": {
+    "live": "docs/art/production/battlefields/rough_shattered_quarry-live.png",
+    "forecast": "docs/art/production/battlefields/rough_shattered_quarry-forecast.png"
+  }
+}

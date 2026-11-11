@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_ashwinter_fm_highmere_briefing",
+  "campaign": "ashwinter",
+  "chapter": "fm_highmere",
+  "usage": "briefing",
+  "story_source": {
+    "ref": "30b89766065f67681d885831ae189d35d26376ab",
+    "path": "data/campaigns.json"
+  },
+  "story_snapshot": "assets/source/batches/new-campaigns-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/new-campaigns-001/campaign_ashwinter_fm_highmere_briefing.txt",
+  "prompt_sha256": "95ff83af5a97ea96ae10c5938796ab9862e6b64ac3965869658713a639eba3f2",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "4d6dc2b303f48046692d05b7cb20967ab7b424f30b73434afa40ffaae59b5f8e",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Preserve full source resolution; no quantization or atlas downsampling"
+}

@@ -1,0 +1,48 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/ashen-04-source.png",
+  "source_sha256": "434aee8f17008adbd2cf1a69d994e9f896bc0835881d997bdfc24a04509e7ea5",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/ashen-04-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/ashen-04-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "pyre_titan",
+    "pyre_sovereign",
+    "cinder_maw",
+    "maw_of_ruin"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "pyre_titan",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_pyre_titan.png",
+      "reference_sha256": "8d7634fd3032617ef752749972d15cbbac3699b54ba149699e93690159aab21d"
+    },
+    {
+      "id": "pyre_sovereign",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_pyre_sovereign.png",
+      "reference_sha256": "2e10bb100a6e23ead3a276cf60746872d8bafe2facf52efc14e738b30b551070"
+    },
+    {
+      "id": "cinder_maw",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_cinder_maw.png",
+      "reference_sha256": "71071f85b47b45760c1d7ff974ebc86c19760537a2eb3efb2d689a78502c8059"
+    },
+    {
+      "id": "maw_of_ruin",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_maw_of_ruin.png",
+      "reference_sha256": "b977e3cb45d65a3ef4dcf1fb74f346d9cbd37e37d5339982cc1c53f75b53d304"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged."
+}

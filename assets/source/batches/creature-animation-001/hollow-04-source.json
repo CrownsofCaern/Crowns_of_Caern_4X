@@ -1,0 +1,50 @@
+{
+  "provider": "ChatGPT image_gen",
+  "generation_status": "generated",
+  "quality_status": "animation_candidate",
+  "source": "assets/source/batches/creature-animation-001/hollow-04-source.png",
+  "source_sha256": "b77b4f03e7a9698486d3a2d3c2ca52d587d8024b36dec8409fa75b742b1af9c1",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt_file": "assets/source/batches/creature-animation-001/hollow-04-prompt.txt",
+  "conditioning": [
+    "assets/source/batches/creature-animation-001/hollow-04-reference.png"
+  ],
+  "grid": [
+    7,
+    4
+  ],
+  "units": [
+    "charnel_hulk",
+    "charnel_behemoth",
+    "rotwing_leviathan",
+    "rotwing_sovereign"
+  ],
+  "reference_snapshots": [
+    {
+      "id": "charnel_hulk",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_charnel_hulk.png",
+      "reference_sha256": "74efb68ed199fb5739262b5b0a32808fac00deb7f3d1e6d1dab9ad09c7b2adc3"
+    },
+    {
+      "id": "charnel_behemoth",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_charnel_behemoth.png",
+      "reference_sha256": "aa7d5d6e8b735020612e7909d6f7a3ff8850280f160e0e3b8a722bd61a7d13f9"
+    },
+    {
+      "id": "rotwing_leviathan",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rotwing_leviathan.png",
+      "reference_sha256": "1c904d0ad0d327fbe5a8f6e8319bf0fdb9b0c12811f92992cf62ca143ebe1126"
+    },
+    {
+      "id": "rotwing_sovereign",
+      "reference_source": "assets/source/batches/creature-animation-001/references/creature_rotwing_sovereign.png",
+      "reference_sha256": "fa2c926f3f573158af19fccdfe0761d5a225f00e40d9727e527b25f30ca04532"
+    }
+  ],
+  "processing": "Torso registration for walk cycles; unchanged canonical figure scale; adaptive transparent row/column gutters; lossless RGBA on a padded 320x256 action canvas. High-resolution source unchanged.",
+  "refinement_prompt": "assets/source/batches/creature-animation-001/hollow-04-transparency-prompt.txt",
+  "original_source": "assets/source/batches/creature-animation-001/revisions/hollow-04-initial.png"
+}

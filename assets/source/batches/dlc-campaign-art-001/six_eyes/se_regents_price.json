@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_six_eyes_se_regents_price_briefing",
+  "campaign": "six_eyes",
+  "chapter": "se_regents_price",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_regents_price-revision.txt",
+  "prompt_sha256": "aca34cc62e35842a5052eb871835827ad49e7f805485cd5d6c571d4ccfda5782",
+  "conditioning": [
+    "assets/source/batches/dlc-campaign-art-001/six_eyes/revisions/se_regents_price-v1.png"
+  ],
+  "source_sha256": "77a58b368586c59b742d88f72a6907c3117e3cfe6e78091c2360a4e04f7bc1ba",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

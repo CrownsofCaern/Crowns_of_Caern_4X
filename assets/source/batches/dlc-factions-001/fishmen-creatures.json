@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/fishmen-creatures.png",
+  "source_sheet_sha256": "5c2b01a428459b5cdff330050ebf414189f02a6154975f6dbd4767a44e99290f",
+  "size": [
+    1261,
+    1247
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/fishmen-creatures.txt",
+  "prompt_sha256": "4b350e7ac1fe0ec96ee92c0f092a1e897335cbf3f38c324705aa95e0eb723928",
+  "conditioning": [
+    "assets/source/batches/hollow-001/source.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/hollow-001/source.png": "c0a65504208fe13a5820f9e42439ee1d7ebaa5009c5ead6d0d49e9f4d65e03d1"
+  },
+  "extraction": [
+    {
+      "id": "creature_fm_brine_spear",
+      "row": 0,
+      "column": 0,
+      "size": [
+        234,
+        259
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_reef_guard",
+      "row": 0,
+      "column": 1,
+      "size": [
+        246,
+        295
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_hookcaster",
+      "row": 0,
+      "column": 2,
+      "size": [
+        256,
+        229
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_abyss_harpooner",
+      "row": 0,
+      "column": 3,
+      "size": [
+        284,
+        254
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_shellback",
+      "row": 1,
+      "column": 0,
+      "size": [
+        235,
+        237
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_barnacle_bulwark",
+      "row": 1,
+      "column": 1,
+      "size": [
+        280,
+        248
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_mire_crab",
+      "row": 1,
+      "column": 2,
+      "size": [
+        262,
+        194
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_siege_carapace",
+      "row": 1,
+      "column": 3,
+      "size": [
+        311,
+        245
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_lantern_acolyte",
+      "row": 2,
+      "column": 0,
+      "size": [
+        224,
+        258
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_drowned_oracle",
+      "row": 2,
+      "column": 1,
+      "size": [
+        266,
+        287
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_tide_mauler",
+      "row": 2,
+      "column": 2,
+      "size": [
+        240,
+        251
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_trench_reaver",
+      "row": 2,
+      "column": 3,
+      "size": [
+        297,
+        276
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_coil_serpent",
+      "row": 3,
+      "column": 0,
+      "size": [
+        261,
+        257
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_storm_leviathan",
+      "row": 3,
+      "column": 1,
+      "size": [
+        278,
+        274
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_trench_titan",
+      "row": 3,
+      "column": 2,
+      "size": [
+        240,
+        286
+      ],
+      "warnings": []
+    },
+    {
+      "id": "creature_fm_abyss_sovereign",
+      "row": 3,
+      "column": 3,
+      "size": [
+        320,
+        301
+      ],
+      "warnings": []
+    }
+  ],
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}

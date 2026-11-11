@@ -1,0 +1,22 @@
+{
+  "batch": "map",
+  "source_sheet": "assets/source/batches/resource-pickups-001/map/source.png",
+  "source_sheet_sha256": "0b548d1f1b3e81deb49e04c420d7e70d58d81b5545365f11ed7c4baacbac1b3f",
+  "crop_xyxy": [
+    444,
+    444,
+    887,
+    887
+  ],
+  "isolation": "all components retained; alpha below 64 cleared",
+  "source_sha256": "0adb14c82ab485b9afc0c5afe43e16f25e23d79c6a3a83e3642d7e560bd78a2d",
+  "provider": "ChatGPT image_gen",
+  "production_batch": "resource-pickups-001",
+  "quality_status": "rendered_candidate",
+  "human_approval": "pending",
+  "prompt_file": "assets/source/batches/resource-pickups-001/map/prompt.txt",
+  "prompt_sha256": "1ba3f2ab03bea996fa77a02f41d8784c48454ca27d3ae8d4aa76aebf216580f8",
+  "reference": "assets/source/batches/resource-places-001/source.png",
+  "reference_sha256": "35212b5db0aab58ed292423c2acee64de22a7c6c1ebc6a40b22f483d843eaaab",
+  "review": "docs/art/production/resource-pickups/README.md"
+}

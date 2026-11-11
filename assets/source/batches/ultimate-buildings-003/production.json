@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "quality_status": "rendered_candidate",
+  "human_approval": "pending",
+  "registered_factions": 8,
+  "preserved_native_buildings": 6,
+  "new_building_sources": 2,
+  "native_long_side": 350,
+  "source_registry": "assets/specs/ultimate_buildings.json",
+  "developer_report": "docs/art/ULTIMATE_BUILDINGS_REPORT.md",
+  "review": "docs/art/production/ultimate-buildings/README.md",
+  "validation": {
+    "godot_tests": 14,
+    "python_tests": 61,
+    "fresh_build_check": "passed",
+    "asset_validation": "passed",
+    "real_game_constructions": 8,
+    "real_godot_screenshots": 19,
+    "gold_payment_and_active_bonus": "verified",
+    "shader_still_move_attack": "verified",
+    "godot_version": "4.6.3"
+  }
+}

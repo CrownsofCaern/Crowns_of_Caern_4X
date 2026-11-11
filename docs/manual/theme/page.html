@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{page_title}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="{{description}}">
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<header class="topbar">
+	<a href="index.html"><img src="{{wordmark}}" alt="Crowns of Caern"></a>
+	<button type="button" id="menu-toggle" aria-controls="codex" aria-expanded="false">Index</button>
+</header>
+<aside class="codex" id="codex">
+	<a class="mark" href="index.html"><img src="{{wordmark}}" alt="Crowns of Caern"></a>
+	{{nav}}
+</aside>
+<main>
+	<header class="{{banner_class}}"{{banner_style}}>
+		<div class="inner">
+			{{crest}}
+			{{eyebrow}}
+			<h1>{{title}}</h1>
+			{{lede}}
+		</div>
+	</header>
+	<div class="page">
+		{{body}}
+		{{pager}}
+	</div>
+</main>
+<footer class="foot">Crowns of Caern &middot; game manual. Built from the game's own data and artwork.</footer>
+<script>
+(function () {
+	var btn = document.getElementById("menu-toggle");
+	var codex = document.getElementById("codex");
+	if (!btn || !codex) return;
+	btn.addEventListener("click", function () {
+		var open = codex.classList.toggle("open");
+		btn.setAttribute("aria-expanded", open ? "true" : "false");
+		btn.textContent = open ? "Close" : "Index";
+	});
+	var cur = codex.querySelector('[aria-current="page"]');
+	if (cur) codex.scrollTop = Math.max(0, cur.offsetTop - codex.clientHeight / 2);
+})();
+</script>
+</body>
+</html>

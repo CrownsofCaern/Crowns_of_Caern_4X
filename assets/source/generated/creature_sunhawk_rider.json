@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "batch": "concord-001",
+  "provider": "ChatGPT image_gen",
+  "generated_on": "2026-11-07",
+  "source_sheet": "assets/source/batches/concord-001/source.png",
+  "source_sheet_sha256": "2f4bb79e518c75f68ecb7ce2ba488dd8f73dfce7a65b119cbb6f13257733d672",
+  "source_sheet_dimensions": [
+    1261,
+    1247
+  ],
+  "crop_xyxy": [
+    637,
+    654,
+    894,
+    899
+  ],
+  "source_sha256": "7c4f8bf5373595a7a4dcdf28042af3f5c5ff9a3f016e9ac864757710e6b417bf",
+  "conditioning": "Two user-supplied Reignem visual benchmarks in conversation; original generation conditioned on both. User approved three-example preview.",
+  "prompt": "Original dark gothic fantasy pixel art sprite, slightly pixelated with strong dark outlines, detailed but readable at small size, ominous low-key lighting from the top left, muted desaturated palette with blood-red and ember accents. Dark fantasy, not cute and not cartoon horror. Single full-body creature, three-quarter view facing right, standing on the ground, centred, whole silhouette visible. armoured rider on a giant tawny hawk with spread wings and hooked beak. three-quarter view facing right, full body Plain flat solid magenta (#ff00ff) background, no scenery, no text, no watermark, no border. Original design: do not imitate any existing game, franchise, logo or heraldry.",
+  "prompt_note": "Per-asset reproducible prompt from structured spec; original batch was generated with a 4x4 arrangement and the same unit descriptions.",
+  "quality_status": "pending_native_and_engine_review",
+  "isolation": "largest 4-connected alpha>=128 component"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "id": "campaign_six_eyes_se_long_stair_briefing",
+  "campaign": "six_eyes",
+  "chapter": "se_long_stair",
+  "usage": "briefing",
+  "story_source": "data/campaigns.json#campaigns.six_eyes",
+  "story_snapshot": "assets/source/batches/dlc-campaign-art-001/story-snapshot.json",
+  "prompt_file": "assets/source/batches/dlc-campaign-art-001/six_eyes/se_long_stair-prompt.txt",
+  "prompt_sha256": "d7f9cfdab97c9b24e79d5a4f1cb355482c725ff7fce380fc4bc4195411365dfe",
+  "conditioning": [
+    "assets/illustrations/last_light/ll_knight_briefing.png"
+  ],
+  "source_sha256": "09cd843f1df26ed0a58772220f32b6d405863f1dbbeccf1327cb584e2113e74e",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "quality_status": "pending_visual_review",
+  "processing": "Full resolution; no palette quantization or atlas downsampling"
+}

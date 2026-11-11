@@ -1,0 +1,20 @@
+{
+  "batch": "symbols-001",
+  "source_sheet": "assets/source/batches/symbols-001/source.png",
+  "source_sheet_sha256": "5675ba673fbf7dce8e06f0729f7bd208334abe2e707c34ec5d28e46904a54194",
+  "crop_xyxy": [
+    450,
+    416,
+    813,
+    809
+  ],
+  "isolation": "grid cell, cropped to alpha>=128 bounds",
+  "source_sha256": "cdb021a7f33d9657365cd3ecdb7389d2f2029416c20c40d4aeddd95fb8206775",
+  "provider": "project owner",
+  "quality_status": "approved_by_owner",
+  "native_size": [
+    48,
+    48
+  ],
+  "conditioning": "Owner-supplied symbol sheet; crop and resize only"
+}

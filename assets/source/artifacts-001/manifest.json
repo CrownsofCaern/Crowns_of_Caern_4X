@@ -1,0 +1,426 @@
+{
+  "provider": "ChatGPT image_gen built-in",
+  "assets": [
+    {
+      "id": "notched_falchion",
+      "slot": "weapon",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Notched Falchion, a weapon artifact. +1 attack. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "notched_falchion.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "bleeding_glaive",
+      "slot": "weapon",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Bleeding Glaive, a weapon artifact. +2 attack, +5% melee damage. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "bleeding_glaive.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "longwatch_bow",
+      "slot": "weapon",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Longwatch Bow, a weapon artifact. +12% ranged damage. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "longwatch_bow.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "cinderbrand_rod",
+      "slot": "weapon",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Cinderbrand Rod, a weapon artifact. +1 power. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "cinderbrand_rod.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "sceptre_of_the_pyre",
+      "slot": "weapon",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Sceptre of the Pyre, a weapon artifact. +2 power, battle arts 25% stronger. Depict this specific named item as one clearly recognizable isolated object, with striking silhouette, ancient engraved materials, restrained supernatural glow. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "sceptre_of_the_pyre.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "headsmans_maul",
+      "slot": "weapon",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Headsman's Maul, a weapon artifact. +3 attack, heavy troops +1 attack. Depict this specific named item as one clearly recognizable isolated object, with striking silhouette, ancient engraved materials, restrained supernatural glow. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "headsmans_maul.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "riveted_hauberk",
+      "slot": "armor",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Riveted Hauberk, a armor artifact. +1 defense. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "riveted_hauberk.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "scarred_plate",
+      "slot": "armor",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Scarred Plate, a armor artifact. +2 defense, 5% less damage from shots. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "scarred_plate.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "shroud_of_ash",
+      "slot": "armor",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Shroud of Ash, a armor artifact. +1 knowledge, +1 defense. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "shroud_of_ash.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "wardstone_mail",
+      "slot": "armor",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Wardstone Mail, a armor artifact. +3 defense, ranged and support troops +1 defense. Depict this specific named item as one clearly recognizable isolated object, with striking silhouette, ancient engraved materials, restrained supernatural glow. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "wardstone_mail.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "pilgrims_cloak",
+      "slot": "armor",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Pilgrim's Cloak, a armor artifact. Rough ground costs 20% less extra movement. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "pilgrims_cloak.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "padded_gambeson",
+      "slot": "armor",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Padded Gambeson, a armor artifact. Ranged troops +1 defense. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "padded_gambeson.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "ossuary_brigandine",
+      "slot": "armor",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Ossuary Brigandine, a armor artifact. +2 defense; after a victory, 4% of fallen creatures rise again. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "ossuary_brigandine.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "emberforged_cuirass",
+      "slot": "armor",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Emberforged Cuirass, a armor artifact. +3 defense, +1 attack. Depict this specific named item as one clearly recognizable isolated object, with striking silhouette, ancient engraved materials, restrained supernatural glow. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "emberforged_cuirass.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "dented_sallet",
+      "slot": "helm",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Dented Sallet, a helm artifact. +1 defense. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "dented_sallet.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "gravewatch_visor",
+      "slot": "helm",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Gravewatch Visor, a helm artifact. +1 vision. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "gravewatch_visor.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "crowcrest_helm",
+      "slot": "helm",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Crowcrest Helm, a helm artifact. +1 morale, +1 defense. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "crowcrest_helm.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "bonewright_coif",
+      "slot": "helm",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Bonewright Coif, a helm artifact. +1 power, +1 knowledge. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "bonewright_coif.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "greathelm_of_dread",
+      "slot": "helm",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Greathelm of Dread, a helm artifact. +2 defense, enemies suffer -1 morale. Depict this specific named item as one clearly recognizable isolated object, with striking silhouette, ancient engraved materials, restrained supernatural glow. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "greathelm_of_dread.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "splintered_buckler",
+      "slot": "shield",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Splintered Buckler, a shield artifact. +1 defense. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "splintered_buckler.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "hornwall_targe",
+      "slot": "shield",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Hornwall Targe, a shield artifact. Enemy flankers find 8% fewer gaps. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "hornwall_targe.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "vigil_pavise",
+      "slot": "shield",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Vigil Pavise, a shield artifact. The army takes 10% less damage from shots. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "vigil_pavise.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "gatewardens_tower",
+      "slot": "shield",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Gatewarden's Tower, a shield artifact. Infantry and heavy troops +1 defense; enemy flankers find 5% fewer gaps. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "gatewardens_tower.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "aegis_of_cinders",
+      "slot": "shield",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Aegis of Cinders, a shield artifact. +2 defense, 10% less damage from shots, support troops +1 defense. Depict this specific named item as one clearly recognizable isolated object, with striking silhouette, ancient engraved materials, restrained supernatural glow. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "aegis_of_cinders.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "hobnailed_boots",
+      "slot": "boots",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Hobnailed Boots, a boots artifact. +5% daily movement. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "hobnailed_boots.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "marsh_waders",
+      "slot": "boots",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Marsh Waders, a boots artifact. Swamp costs half the extra movement. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "marsh_waders.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "rimetread_boots",
+      "slot": "boots",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Rimetread Boots, a boots artifact. Snow costs half the extra movement. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "rimetread_boots.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "outriders_greaves",
+      "slot": "boots",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Outrider's Greaves, a boots artifact. +10% daily movement, +1 defense. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "outriders_greaves.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "sabatons_of_the_long_road",
+      "slot": "boots",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Sabatons of the Long Road, a boots artifact. +15% daily movement, rough ground costs 25% less extra movement, +1 initiative. Depict this specific named item as one clearly recognizable isolated object, with striking silhouette, ancient engraved materials, restrained supernatural glow. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "sabatons_of_the_long_road.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "bone_dice",
+      "slot": "charm",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Bone Dice, a charm artifact. +100 gold a day. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "bone_dice.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "lantern_of_the_lost",
+      "slot": "charm",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Lantern of the Lost, a charm artifact. +1 vision, +1 knowledge. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "lantern_of_the_lost.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "hourglass_of_marrow",
+      "slot": "charm",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Hourglass of Marrow, a charm artifact. The battle art is used one extra round. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "hourglass_of_marrow.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "saints_knucklebone",
+      "slot": "charm",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Saint's Knucklebone, a charm artifact. After a victory, 8% of fallen creatures rise again. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "saints_knucklebone.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "scholars_quill",
+      "slot": "charm",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Scholar's Quill, a charm artifact. +10% experience. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "scholars_quill.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "crown_of_thorns",
+      "slot": "charm",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Crown of Thorns, a charm artifact. +1 power, +1 knowledge, enemies suffer -1 morale. Depict this specific named item as one clearly recognizable isolated object, with striking silhouette, ancient engraved materials, restrained supernatural glow. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "crown_of_thorns.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "wayfarers_compass",
+      "slot": "charm",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Wayfarer's Compass, a charm artifact. +10% daily movement. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "wayfarers_compass.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "tattered_pennant",
+      "slot": "banner",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Tattered Pennant, a banner artifact. +1 morale. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "tattered_pennant.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "standard_of_the_hold",
+      "slot": "banner",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Standard of the Hold, a banner artifact. +1 initiative, +1 morale. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "standard_of_the_hold.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "quartermasters_seal",
+      "slot": "banner",
+      "rarity": "major",
+      "prompt": "Single Quartermaster's Seal: round engraved brass signet seal with red wax and short parchment ribbon, handheld rather than a flag; major rarity, weathered brass and steel, transparent background, gritty hand-painted pixel art.",
+      "source": "quartermasters_seal-v2.png",
+      "status": "pending_visual_review",
+      "previous_source": "quartermasters_seal.png"
+    },
+    {
+      "id": "flayed_banner",
+      "slot": "banner",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Flayed Banner, a banner artifact. Enemies suffer -1 morale. Depict this specific named item as one clearly recognizable isolated object, with distinctive worked steel and brass, selective ornament, battle-worn. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "flayed_banner.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "warhost_oriflamme",
+      "slot": "banner",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Warhost Oriflamme, a banner artifact. +1 morale, +1 attack, +1 defense, enemy flankers find 10% fewer gaps. Depict this specific named item as one clearly recognizable isolated object, with striking silhouette, ancient engraved materials, restrained supernatural glow. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "warhost_oriflamme.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "surveyors_flag",
+      "slot": "banner",
+      "rarity": "minor",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Reignem dark medieval fantasy game. Subject: Surveyor's Flag, a banner artifact. +1 wood and +1 ore a day. Depict this specific named item as one clearly recognizable isolated object, with plain, worn iron, wood or leather, modest decoration. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "surveyors_flag.png",
+      "status": "pending_visual_review"
+    },
+    {
+      "id": "eye_of_the_anvil",
+      "slot": "charm",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Crowns of Cinder dark medieval fantasy game. Subject: Eye of the Anvil, a charm artifact and relic: one of the six Gate-Eyes, the Forge's keystone, a dull red stone that weighs more than it should. A lidded stone eye set in old dark silver, the iris glowing faintly. Depict this specific named item as one clearly recognizable isolated object. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "eye_of_the_anvil.png",
+      "status": "interim_derived_art",
+      "derived_by": "tools/story/derive_dlc_artifacts.py"
+    },
+    {
+      "id": "eye_of_the_saint",
+      "slot": "charm",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Crowns of Cinder dark medieval fantasy game. Subject: Eye of the Saint, a charm artifact and relic: one of the six Gate-Eyes, the Concord's reliquary jewel, the colour of a dawn that never comes. A lidded stone eye set in old dark silver, the iris glowing faintly. Depict this specific named item as one clearly recognizable isolated object. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "eye_of_the_saint.png",
+      "status": "interim_derived_art",
+      "derived_by": "tools/story/derive_dlc_artifacts.py"
+    },
+    {
+      "id": "eye_of_the_root",
+      "slot": "charm",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Crowns of Cinder dark medieval fantasy game. Subject: Eye of the Root, a charm artifact and relic: one of the six Gate-Eyes, the Thornwood's seed-stone, green, with something moving inside. A lidded stone eye set in old dark silver, the iris glowing faintly. Depict this specific named item as one clearly recognizable isolated object. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "eye_of_the_root.png",
+      "status": "interim_derived_art",
+      "derived_by": "tools/story/derive_dlc_artifacts.py"
+    },
+    {
+      "id": "eye_of_the_regent",
+      "slot": "charm",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Crowns of Cinder dark medieval fantasy game. Subject: Eye of the Regent, a charm artifact and relic: one of the six Gate-Eyes, the Hollow Regent's pendant, grey; the hand that holds it feels watched. A lidded stone eye set in old dark silver, the iris glowing faintly. Depict this specific named item as one clearly recognizable isolated object. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "eye_of_the_regent.png",
+      "status": "interim_derived_art",
+      "derived_by": "tools/story/derive_dlc_artifacts.py"
+    },
+    {
+      "id": "eye_of_embers",
+      "slot": "charm",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Crowns of Cinder dark medieval fantasy game. Subject: Eye of Embers, a charm artifact and relic: one of the six Gate-Eyes, the Red Sky King's trophy, hot to hold. A lidded stone eye set in old dark silver, the iris glowing faintly. Depict this specific named item as one clearly recognizable isolated object. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "eye_of_embers.png",
+      "status": "interim_derived_art",
+      "derived_by": "tools/story/derive_dlc_artifacts.py"
+    },
+    {
+      "id": "eye_of_winter",
+      "slot": "charm",
+      "rarity": "relic",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Crowns of Cinder dark medieval fantasy game. Subject: Eye of Winter, a charm artifact and relic: one of the six Gate-Eyes, the clans' cairn-stone, frozen into the winter wyrm's cairn. A lidded stone eye set in old dark silver, the iris glowing faintly. Depict this specific named item as one clearly recognizable isolated object. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "eye_of_winter.png",
+      "status": "interim_derived_art",
+      "derived_by": "tools/story/derive_dlc_artifacts.py"
+    },
+    {
+      "id": "emberglass_visor",
+      "slot": "helm",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Crowns of Cinder dark medieval fantasy game. Subject: Emberglass Visor, a helm artifact of the Forgewarm Harness: dark Forge iron run through with emberglass seams that glow orange, made to keep a fish-man warm on a glacier. Depict this specific named item as one clearly recognizable isolated object. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "emberglass_visor.png",
+      "status": "interim_derived_art",
+      "derived_by": "tools/story/derive_dlc_artifacts.py",
+      "derived_from": "gravewatch_visor"
+    },
+    {
+      "id": "furnace_mail",
+      "slot": "armor",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Crowns of Cinder dark medieval fantasy game. Subject: Furnace Mail, a armor artifact of the Forgewarm Harness: dark Forge iron run through with emberglass seams that glow orange, made to keep a fish-man warm on a glacier. Depict this specific named item as one clearly recognizable isolated object. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "furnace_mail.png",
+      "status": "interim_derived_art",
+      "derived_by": "tools/story/derive_dlc_artifacts.py",
+      "derived_from": "emberforged_cuirass"
+    },
+    {
+      "id": "hearthstride_greaves",
+      "slot": "boots",
+      "rarity": "major",
+      "prompt": "Use case: stylized-concept. Asset type: a single inventory item sprite for original Crowns of Cinder dark medieval fantasy game. Subject: Hearthstride Greaves, a boots artifact of the Forgewarm Harness: dark Forge iron run through with emberglass seams that glow orange, made to keep a fish-man warm on a glacier. Depict this specific named item as one clearly recognizable isolated object. Centered complete silhouette with ample transparent padding, three-quarter view, gritty detailed hand-painted slightly pixelated art, subdued earthy palette, warm upper-left light, readable at 40 pixels. No frame, text, letters, UI, or extra objects. Transparent background.",
+      "source": "hearthstride_greaves.png",
+      "status": "interim_derived_art",
+      "derived_by": "tools/story/derive_dlc_artifacts.py",
+      "derived_from": "rimetread_boots"
+    }
+  ]
+}

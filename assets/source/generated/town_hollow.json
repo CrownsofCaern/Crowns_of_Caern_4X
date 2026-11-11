@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "towns-001",
+  "source_sheet": "assets/source/batches/towns-001/source.png",
+  "source_sheet_sha256": "c9c290149beead2bd479096f65a9c3328d6efef638da562e1313d6dd026cb01e",
+  "source_sha256": "35149e06c8d21aa3498f2e1743099ec26fba5aa0588ff05a43e198c6ac0488a6",
+  "crop_xyxy": [
+    1024,
+    0,
+    1536,
+    512
+  ],
+  "prompt_file": "assets/source/batches/towns-001/prompt.txt",
+  "conditioning": "Approved Reignem Concord sheet; neutral sheets also conditioned on approved Hollow sheet",
+  "native_size": [
+    192,
+    160
+  ],
+  "quality_status": "pending_visual_review",
+  "isolation": "Full grid cell retained, including groups and disconnected effects"
+}

@@ -1,0 +1,39 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+
+config/name="Crowns of Caern"
+config/description="Original fantasy turn-based strategy game with automatic combat."
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/icon="res://assets/menus/menu_emblem.png"
+
+[autoload]
+
+Startup="*res://src/app/startup.gd"
+Audio="*res://src/audio/audio_manager.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=800
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=4
+
+[gui]
+
+timers/tooltip_delay_sec.mobile=0.15
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+
+[importer_defaults]
+
+scene={
+"gltf/embedded_image_handling": 2
+}

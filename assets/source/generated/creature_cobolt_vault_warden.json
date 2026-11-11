@@ -1,0 +1,14 @@
+{
+  "id": "creature_cobolt_vault_warden",
+  "prompt": "Use case: stylized-concept. Asset type: production still sprite for Crowns of Cinder, dark gothic fantasy strategy game. Reference images 1 and 2 define the existing in-game rendering style: dense hand-painted pixel detail, dark narrow outlines, realistic worn materials, top-left light, restrained highlights, muted colors, clear silhouette at 64px display size. Reference image 3 defines the approved cobolt species, costumes and trading houses; retain this identity, but render ONE isolated game asset with no sheet, labels, text or parchment. Small wiry reptilian humanoids, narrow angular snouts, swept-back modest horns, rust/slate scales, weathered charcoal/teal-brown merchant cloth, tarnished brass trade seals. Grim believable anatomy, no cute or cartoon face, no oversized head. Transparent background with clean alpha, NO ground plane, shadow oval, scenery, frame or watermark. All of the subject and equipment must fit fully inside the image with a small empty margin. Detailed sprite, not concept illustration, not vector, not flat blocks, not 3D.\nSubject: Vault Warden: heavily armoured cobolt shield infantry, same reptilian species and modest stature as other cobolts, broad dented iron shield with understated brass balance-scale emblem, short war pick, layered worn dark plate. Full body neutral combat-ready stance, three-quarter view facing RIGHT. Powerful but never gigantic.",
+  "references": [
+    "assets/build/creature/creature_pike_militia.png",
+    "assets/build/creature/creature_shieldwarden.png",
+    "assets/source/concepts/cobolts/cobolts-concept-v1.png"
+  ],
+  "tool": "built-in imagegen",
+  "transparent_background": true,
+  "sha256": "f8953697c402b9d991286434cf9a3b5adf2a09a160ae91ec2f8ec99e82bea212",
+  "date": "2026-11-09",
+  "role": "production still sprite; animations pending"
+}

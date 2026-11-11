@@ -1,0 +1,127 @@
+{
+  "_doc": "Rare map buildings (map object type \"site\", rules in src/game/map_sites.gd). kind: dwelling (captured by stepping on it like a mine; recruits a creature of another banner from a weekly pool: `tiers` [min, max] and `factions` (\"playable\" = the six town factions, \"any\" adds the wilds) choose the creature when the map is made; `rotate` draws a new creature every week instead and the old pool is lost; `growth_pct` scales the creature's weekly growth), attribute (`attributes` {attack|defense|power|knowledge: n} added once per hero for good), boon (`mods` HeroModifiers keys for `days` days; a hero can take it again once it has run out), lore (`xp` experience once per hero), watchtower (reveals `radius` tiles around the site, once for each player and its allies), drill (`veteran_xp` for every stack of the visiting hero's army, once per hero), mana_well (refills the visiting hero's mana, once per hero per week), village (scenario-only, never placed by the random generator: guarded; the first player to free it keeps it for good and may recruit its one-off `stock` [[creature, count]] (at most two stacks), which never refills; a map object without a stock gets `stock_types` creatures of the `tiers`/`factions` pool, `stock_weeks` of weekly growth each). guard: guard_levels key from map_templates.json; the guard is fought once, then the site is open. sprite: atlas sprite id (art from PR #49; a missing sprite draws the placeholder marker). ai: StrategicAI value of a visit, flat gold plus army_pct of the visiting hero's army value (dwellings are valued by their weekly troops instead). weight: how often the generator picks it (see sites in map_templates.json).",
+  "sites": {
+    "cobolt_stall": {"name": "Cobolt Roadside Stall", "kind": "cobolt", "sprite": "site_cobolt_stall", "text": "Closed awnings hide the escorts of the cobolt trading houses. Trade for recruits, one artefact and one fixed resource bargain, or risk robbery. Commercial wealth does not reveal military strength.", "guard": "none", "weight": 1, "ai": {"flat": 0, "army_pct": 0}, "cobolt": {"level": 1, "tiers": [1, 2], "artifact_rarities": ["minor"], "exchange_uses": 2, "discount": 0.4, "loot_gold": [800, 1600]}},
+    "cobolt_yard": {"name": "Cobolt Caravan Yard", "kind": "cobolt", "sprite": "site_cobolt_yard", "text": "Closed awnings hide the escorts of the cobolt trading houses. Trade for recruits, one artefact and one fixed resource bargain, or risk robbery. Commercial wealth does not reveal military strength.", "guard": "none", "weight": 1, "ai": {"flat": 0, "army_pct": 0}, "cobolt": {"level": 2, "tiers": [1, 4], "artifact_rarities": ["minor", "major"], "exchange_uses": 4, "discount": 0.4, "loot_gold": [1600, 3200]}},
+    "cobolt_exchange": {"name": "Cobolt Vault Exchange", "kind": "cobolt", "sprite": "site_cobolt_exchange", "text": "Closed awnings hide the escorts of the cobolt trading houses. Trade for recruits, one artefact and one fixed resource bargain, or risk robbery. Commercial wealth does not reveal military strength.", "guard": "none", "weight": 1, "ai": {"flat": 0, "army_pct": 0}, "cobolt": {"level": 3, "tiers": [2, 5], "artifact_rarities": ["minor", "major", "relic"], "exchange_uses": 6, "discount": 0.4, "loot_gold": [2400, 4800]}},
+    "road_trader": {"name": "Road Trader", "kind": "trader", "sprite": "site_road_trader", "text": "A lantern burns beneath a patched canvas awning. The road trader deals in relics salvaged from fallen kingdoms and charts of forgotten lands. Stock is shared by all visitors and does not replenish.", "guard": "none", "weight": 1, "ai": {"flat": 0, "army_pct": 0}, "trade": {"small_map_tiles": 4900, "small_map_chance": 0.5, "artifact_rarities": ["minor", "major", "relic"], "map_price": 750, "map_tiles": 40, "map_stock": 3}},
+    "spell_crypt": {"name": "Sealed Crypt", "kind": "spell", "sprite": "place_lockstone", "text": "A sealed vault holds a fragment of forbidden magic, guarded by ancient monsters.", "guard": "strong", "weight": 0.4, "ai": {"flat": 3000, "army_pct": 0.05}},
+    "outcast_camp": {
+      "name": "Outcast Camp",
+      "kind": "dwelling",
+      "sprite": "place_barrow_camp",
+      "text": "Behind the stakes live exiles of every banner: deserters, heretics, the last of broken warbands. They will march for whoever holds the camp and pays.",
+      "tiers": [1, 3],
+      "factions": "any",
+      "growth_pct": 1.0,
+      "guard": "weak",
+      "weight": 3
+    },
+    "pyre_citadel": {
+      "name": "Pyre Citadel",
+      "kind": "dwelling",
+      "sprite": "place_pyrehold",
+      "text": "A fortress older than any living banner. Its forges still breed elite warriors of a foreign host, and they serve whoever holds the keep.",
+      "tiers": [5, 6],
+      "factions": "playable",
+      "growth_pct": 1.0,
+      "guard": "strong",
+      "weight": 1
+    },
+    "sellsword_gate": {
+      "name": "Sellsword Gate",
+      "kind": "dwelling",
+      "sprite": "place_cindermaw_gate",
+      "text": "Each week a different company marches through the burning arch, sworn for a week to the lord of the gate. Who comes next, nobody knows.",
+      "tiers": [2, 4],
+      "factions": "any",
+      "rotate": true,
+      "growth_pct": 1.0,
+      "guard": "medium",
+      "weight": 2
+    },
+    "oathstone": {
+      "name": "Oathstone",
+      "kind": "attribute",
+      "sprite": "place_lockstone",
+      "text": "A boulder bound in old brass. Commanders who swear on it never forget the weight of the oath.",
+      "attributes": {"defense": 1},
+      "guard": "none",
+      "ai": {"flat": 600, "army_pct": 0.05},
+      "weight": 3
+    },
+    "bleeding_rift": {
+      "name": "Bleeding Rift",
+      "kind": "attribute",
+      "sprite": "place_wound",
+      "text": "The earth is split to its burning heart. Those who stare into it long enough come back harder, and stranger.",
+      "attributes": {"attack": 1, "power": 1},
+      "guard": "medium",
+      "ai": {"flat": 900, "army_pct": 0.07},
+      "weight": 2
+    },
+    "pilgrims_rest": {
+      "name": "Pilgrims' Rest",
+      "kind": "boon",
+      "sprite": "place_saint_orrins_rest",
+      "text": "A ruined chapel where the faithful still leave candles. Soldiers who pray here fight with lighter hearts, and more of the fallen rise again.",
+      "mods": {"morale": 1, "recover_pct": 0.1},
+      "days": 7,
+      "guard": "none",
+      "ai": {"flat": 300, "army_pct": 0.04},
+      "weight": 3
+    },
+    "wardens_causeway": {
+      "name": "Wardens' Causeway",
+      "kind": "boon",
+      "sprite": "place_fenwick_dike",
+      "text": "The old wardens of the dike know every dry path for leagues around, and they share them for a song.",
+      "mods": {"movement_pct": 0.2, "vision": 1},
+      "days": 7,
+      "guard": "none",
+      "ai": {"flat": 700, "army_pct": 0.0},
+      "weight": 3
+    },
+    "fenside_hamlet": {
+      "name": "Fenside Hamlet",
+      "kind": "village",
+      "sprite": "place_fenwick_dike",
+      "text": "A ring of turf houses behind a flood dike. Brigands hold the sluice gate; whoever drives them off will find the young folk ready to take up spears, if someone pays for the spears.",
+      "tiers": [1, 3],
+      "factions": "playable",
+      "stock_types": 2,
+      "stock_weeks": 1.0,
+      "guard": "light",
+      "weight": 1
+    },
+    "ashfield_steading": {
+      "name": "Ashfield Steading",
+      "kind": "village",
+      "sprite": "place_barrow_camp",
+      "text": "Farmers who burned their own fields rather than feed a passing host. A pack of scavengers has made camp among the ruins. Free them and they will sell you what is left of their sons.",
+      "tiers": [1, 3],
+      "factions": "playable",
+      "stock_types": 1,
+      "stock_weeks": 1.5,
+      "guard": "weak",
+      "weight": 1
+    },
+    "elder_rings": {
+      "name": "Elder Rings",
+      "kind": "lore",
+      "sprite": "place_elderwold_stumps",
+      "text": "Stumps of trees older than the kingdoms. Their rings record every war fought beneath them, for those who can read them.",
+      "xp": 1200,
+      "guard": "weak",
+      "ai": {"flat": 0, "army_pct": 0.0},
+      "weight": 2
+    },
+    "watchfire_ruin": {"name": "Watch-Fire Ruin", "kind": "watchtower", "sprite": "place_pyrehold", "text": "A broken signal keep on a crag. The beacon cradle at its top still holds old pitch, and from the parapet you can see three valleys and the smoke of every camp in them.", "radius": 13, "guard": "weak", "ai": {"flat": 900, "army_pct": 0.0}, "weight": 2},
+    "wellspring_wound": {"name": "Wellspring of the Wound", "kind": "mana_well", "sprite": "place_wound", "text": "Where the earth was torn open, raw magic seeps up like groundwater. Casters who kneel at the edge rise full, if a little scorched.", "guard": "none", "ai": {"flat": 500, "army_pct": 0.0}, "weight": 2},
+    "muster_field": {"name": "Old Muster Field", "kind": "drill", "sprite": "place_barrow_camp", "text": "Earthworks, practice dummies and a parade ground worn bare by a century of drilling. A veteran quartermaster still keeps it, for anyone who will feed him.", "veteran_xp": 1500, "guard": "medium", "ai": {"flat": 0, "army_pct": 0.12}, "weight": 2},
+    "lamplighters_ossuary": {"name": "Lamplighters' Ossuary", "kind": "attribute", "sprite": "place_saint_orrins_rest", "text": "Shelves of skulls, each with a candle burning in its crown. The lamplighters who tend them teach a little of what the dead taught them.", "attributes": {"knowledge": 1}, "guard": "weak", "ai": {"flat": 700, "army_pct": 0.04}, "weight": 2},
+    "smoulder_anvil": {"name": "Smoulder Anvil", "kind": "boon", "sprite": "place_pyrehold", "text": "A wayside forge whose coals never die. The smith asks no coin, only that you remember his name. Blades tempered here hold their edge for a week.", "mods": {"attack": 1, "defense": 1}, "days": 7, "guard": "weak", "ai": {"flat": 600, "army_pct": 0.06}, "weight": 2},
+    "drowned_archive": {"name": "Drowned Archive", "kind": "lore", "sprite": "place_fenwick_dike", "text": "A scriptorium half-sunk behind a failing dike. The monks bail with one hand and copy with the other, and they will read to anyone who helps with the buckets.", "xp": 1500, "guard": "medium", "ai": {"flat": 0, "army_pct": 0.0}, "weight": 1},
+    "beastmasters_kraal": {"name": "Beastmasters' Kraal", "kind": "dwelling", "sprite": "place_elderwold_stumps", "text": "Pens of split logs around a ring of old stumps. The beastmasters breed whatever the wild gives them and sell it to whoever holds the kraal.", "tiers": [2, 5], "factions": "any", "growth_pct": 1.0, "guard": "medium", "weight": 2}
+  }
+}

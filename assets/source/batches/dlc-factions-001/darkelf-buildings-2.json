@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "provider": "ChatGPT image_gen",
+  "batch": "dlc-factions-001",
+  "source_sheet": "assets/source/batches/dlc-factions-001/darkelf-buildings-2.png",
+  "source_sheet_sha256": "6f842af58e1f18bf802693b4805eecfcbb927222fbad1c81236b59000cc77838",
+  "size": [
+    1261,
+    1247
+  ],
+  "prompt_file": "assets/source/batches/dlc-factions-001/darkelf-buildings-2.txt",
+  "prompt_sha256": "e2fc87e9542417b7f23d934825e11b5125cde63f64af23bc75c420676a6625fe",
+  "conditioning": [
+    "assets/source/batches/concord-town-001/foundation.png",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png"
+  ],
+  "quality_status": "rendered_candidate",
+  "reference_hashes": {
+    "assets/source/batches/concord-town-001/foundation.png": "a1ceda73d6122e5f2d303fac933b53142fc351e4e5022243341ae7ea82d0669b",
+    "assets/source/batches/dlc-factions-001/darkelf-creatures.png": "1e763406818c8e4c62c764cb79fc560c92098617f1ac064fa8835edae9699600"
+  },
+  "extraction": [
+    {
+      "id": "building_de_dw8",
+      "row": 0,
+      "column": 0,
+      "size": [
+        270,
+        278
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_up1",
+      "row": 0,
+      "column": 1,
+      "size": [
+        271,
+        286
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_up2",
+      "row": 0,
+      "column": 2,
+      "size": [
+        277,
+        268
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_up3",
+      "row": 0,
+      "column": 3,
+      "size": [
+        276,
+        277
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_up4",
+      "row": 1,
+      "column": 0,
+      "size": [
+        280,
+        263
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_up5",
+      "row": 1,
+      "column": 1,
+      "size": [
+        273,
+        273
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_up6",
+      "row": 1,
+      "column": 2,
+      "size": [
+        287,
+        268
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_up7",
+      "row": 1,
+      "column": 3,
+      "size": [
+        285,
+        267
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_up8",
+      "row": 2,
+      "column": 0,
+      "size": [
+        278,
+        274
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_court",
+      "row": 2,
+      "column": 1,
+      "size": [
+        277,
+        274
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_assembly",
+      "row": 2,
+      "column": 2,
+      "size": [
+        284,
+        287
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_exchequer",
+      "row": 2,
+      "column": 3,
+      "size": [
+        289,
+        293
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_drill",
+      "row": 3,
+      "column": 0,
+      "size": [
+        283,
+        280
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_fletchers",
+      "row": 3,
+      "column": 1,
+      "size": [
+        285,
+        265
+      ],
+      "warnings": []
+    },
+    {
+      "id": "building_de_remount",
+      "row": 3,
+      "column": 2,
+      "size": [
+        288,
+        258
+      ],
+      "warnings": []
+    },
+    {
+      "id": "dlc_darkelf_portal",
+      "row": 3,
+      "column": 3,
+      "size": [
+        282,
+        283
+      ],
+      "warnings": []
+    }
+  ],
+  "engine_review": "docs/art/production/dlc-factions/README.md",
+  "human_approval": "pending"
+}
