@@ -6,6 +6,8 @@
 #   tools/release/package.sh [output dir]       (default: export/release)
 #
 # Needs Godot 4.5.1 on PATH (or $GODOT) with the matching export templates.
+# A missing LICENSE or CREDITS.md stops the build unless RELEASE_STRICT=0
+# (used for test builds on pull requests; never for a release).
 set -euo pipefail
 GODOT="${GODOT:-godot}"
 cd "$(dirname "$0")/../.."
@@ -16,8 +18,13 @@ if [[ -z "$version" ]]; then
 	echo "project.godot has no application/config/version" >&2
 	exit 1
 fi
+ship_files=()
 for f in LICENSE CREDITS.md; do
-	if [[ ! -f "$f" ]]; then
+	if [[ -f "$f" ]]; then
+		ship_files+=("$f")
+	elif [[ "${RELEASE_STRICT:-1}" == "0" ]]; then
+		echo "WARNING: $f is missing; this test build is not releasable" >&2
+	else
 		echo "$f is missing; every build must ship it" >&2
 		exit 1
 	fi
@@ -35,7 +42,7 @@ grep -q "Godot Engine contributors" "$stage/THIRD_PARTY_NOTICES.txt"
 
 # Licence files that ship next to the game in every archive.
 add_notices() {
-	cp LICENSE CREDITS.md "$stage/THIRD_PARTY_NOTICES.txt" "$1/"
+	cp "${ship_files[@]}" "$stage/THIRD_PARTY_NOTICES.txt" "$1/"
 	cp tools/release/README-player.txt "$1/README.txt"
 	mkdir -p "$1/licenses"
 	cp assets/fonts/*-OFL.txt "$1/licenses/"

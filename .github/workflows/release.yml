@@ -80,6 +80,8 @@ jobs:
           "$HOME/godot/godot" --headless --version
 
       - name: Build archives
+        env:
+          RELEASE_STRICT: ${{ startsWith(github.ref, 'refs/tags/') && '1' || '0' }}
         run: tools/release/package.sh "$RUNNER_TEMP/release"
 
       - name: Upload archives
