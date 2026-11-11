@@ -23,6 +23,9 @@ from . import animations
 
 SPEC = "assets/specs/creature_models.json"
 ACTIONS = ("idle", "move", "attack", "death")
+# Extra clips only the 3D battle units play (tools/assets/export_live_units.gd);
+# the sprite bake ignores them.
+LIVE_ONLY_ACTIONS = ("idle_alt", "attack_alt")
 DEFAULT_MS = {"idle": 160, "move": 110, "attack": 90, "death": 110}
 LOOPS = {"idle": True, "move": True, "attack": False, "death": False}
 

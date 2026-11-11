@@ -298,7 +298,12 @@ func test_encounters_tripled_and_every_faction_has_a_way_in() -> void:
 
 func test_encounter_sprites_fall_back_to_their_own() -> void:
 	assert_eq(EncounterSystem.sprite_id("ember_rift", data), "encounter_ember_rift")
-	assert_eq(EncounterSystem.sprite_id("bitter_well", data), String(data.encounters["bitter_well"]["sprite"]))
+	assert_eq(EncounterSystem.sprite_id("bitter_well", data), "encounter_bitter_well")
+	# An encounter may still borrow another sprite by declaring one.
+	var def: Dictionary = data.encounters["bitter_well"]
+	def["sprite"] = "encounter_ember_rift"
+	assert_eq(EncounterSystem.sprite_id("bitter_well", data), "encounter_ember_rift")
+	def.erase("sprite")
 
 
 func test_new_encounter_effects_apply() -> void:

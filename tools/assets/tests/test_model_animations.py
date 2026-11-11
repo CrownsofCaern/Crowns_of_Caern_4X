@@ -111,7 +111,7 @@ class ModelBuildTests(unittest.TestCase):
                 continue   # model made, not animated yet
             self.assertTrue(model_animations.layout(unit), unit["id"])
             for action in unit["clips"]:
-                self.assertIn(action, model_animations.ACTIONS)
+                self.assertIn(action, model_animations.ACTIONS + model_animations.LIVE_ONLY_ACTIONS)
 
 
 class PixelPassTests(unittest.TestCase):

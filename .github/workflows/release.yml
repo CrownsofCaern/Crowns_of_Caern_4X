@@ -1,0 +1,107 @@
+name: Release builds
+
+# Builds the Linux, Windows and macOS archives.
+# - Pull requests that touch the build setup, and manual runs: build and keep
+#   the archives as workflow artifacts for a week.
+# - A pushed tag vX.Y.Z (matching application/config/version): build and
+#   create a DRAFT GitHub release with the archives and
+#   docs/releases/vX.Y.Z.md as its notes. Publishing it stays a manual step.
+
+on:
+  push:
+    tags: ["v*"]
+  pull_request:
+    paths:
+      - export_presets.cfg
+      - project.godot
+      - tools/release/**
+      - src/app/third_party_notices.gd
+      - .github/workflows/release.yml
+  workflow_dispatch:
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GODOT_VERSION: 4.5.1
+
+jobs:
+  build:
+    name: Desktop builds
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Check the tag matches the project version
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          version=$(sed -n 's/^config\/version="\(.*\)"$/\1/p' project.godot)
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match project version $version" >&2
+            exit 1
+          fi
+          test -f "docs/releases/$GITHUB_REF_NAME.md"
+
+      - name: Cache Godot and export templates
+        id: godot-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/godot
+            ~/.local/share/godot/export_templates
+          key: godot-${{ env.GODOT_VERSION }}-linux-x86_64-desktop-templates
+
+      - name: Download Godot ${{ env.GODOT_VERSION }} and export templates
+        if: steps.godot-cache.outputs.cache-hit != 'true'
+        run: |
+          base="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable"
+          mkdir -p ~/godot
+          curl -fsSL --retry 4 -o /tmp/godot.zip "$base/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q /tmp/godot.zip -d ~/godot
+          mv ~/godot/Godot_v${GODOT_VERSION}-stable_linux.x86_64 ~/godot/godot
+          chmod +x ~/godot/godot
+          curl -fsSL --retry 4 -o /tmp/templates.tpz "$base/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          dest=~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          mkdir -p "$dest"
+          unzip -q -j /tmp/templates.tpz -d "$dest" \
+            'templates/version.txt' 'templates/linux_*.x86_64' 'templates/windows_*_x86_64*.exe' 'templates/macos.zip'
+          rm /tmp/templates.tpz /tmp/godot.zip
+          ls -lh "$dest"
+
+      - name: Put Godot on PATH
+        run: |
+          echo "$HOME/godot" >> "$GITHUB_PATH"
+          "$HOME/godot/godot" --headless --version
+
+      - name: Build archives
+        env:
+          RELEASE_STRICT: ${{ startsWith(github.ref, 'refs/tags/') && '1' || '0' }}
+        run: tools/release/package.sh "$RUNNER_TEMP/release"
+
+      - name: Upload archives
+        uses: actions/upload-artifact@v4
+        with:
+          name: crowns-of-caern-desktop
+          path: |
+            ${{ runner.temp }}/release/*.zip
+            ${{ runner.temp }}/release/*.tar.gz
+            ${{ runner.temp }}/release/SHA256SUMS.txt
+          retention-days: 7
+          compression-level: 0
+
+      - name: Create draft release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd "$RUNNER_TEMP/release"
+          gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --draft \
+            --title "Crowns of Caern $GITHUB_REF_NAME" \
+            --notes-file "$GITHUB_WORKSPACE/docs/releases/$GITHUB_REF_NAME.md" \
+            ./*.zip ./*.tar.gz SHA256SUMS.txt
