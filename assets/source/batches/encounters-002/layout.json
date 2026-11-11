@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "grid": [
+    4,
+    4
+  ],
+  "source_dimensions": [
+    1536,
+    1024
+  ],
+  "review": "Mechanical grid extraction; design, silhouette and engine review pending",
+  "assets": [
+    {
+      "id": "encounter_sunken_reliquary",
+      "prompt": "Sunken Reliquary: A reliquary chapel slid into a flooded quarry long ago. Through the green water you can see gilt glinting on the altar, and pale shapes drifting between the pews.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_market_of_bones",
+      "prompt": "Market of Bones: Stalls of bleached bone and lacquered skulls under a canvas of stitched hides. The traders wear masks and accept any coin, any soul.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        384,
+        0,
+        768,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_ironwood_grove",
+      "prompt": "Ironwood Grove: Black-barked trees with leaves like beaten copper, ringing faintly in the wind. Their wood turns axes. The air in the grove is very still, and very watchful.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        768,
+        0,
+        1152,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_cold_forge",
+      "prompt": "Cold Forge of the Deep: A deep-folk forge-hall cut into the hillside, its great furnace dead for an age. Half-finished constructs stand in rows, waiting for a fire that never came.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        1152,
+        0,
+        1536,
+        256
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_masked_envoy",
+      "prompt": "The Masked Envoy: A palanquin of black lacquer under a silk awning, guarded by slender figures in mirrored masks. A voice from behind the curtain offers to sell you the truth.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        256,
+        384,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_frozen_warband",
+      "prompt": "Frozen Warband: A whole raiding party frozen where it camped, rimed men still sitting round a dead fire. One of them blinks.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        384,
+        256,
+        768,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_low_tide_shrine",
+      "prompt": "Shrine of the Low Tide: When the marsh draws back, a ring of carved stones rises from the mud, each one shaped like a coiled fish. Offerings of shell and bone lie on the central slab.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        768,
+        256,
+        1152,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_brand_sergeant",
+      "prompt": "The Brand-Sergeant: A horned demon in a sergeant's sash sits on a crate of chains beside a glowing brazier. 'Recruiting,' it says, and grins with too many teeth.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        1152,
+        256,
+        1536,
+        512
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_tomb_of_the_unbowed",
+      "prompt": "Tomb of the Unbowed: A knight's tomb on a hill, the effigy's sword still clasped in stone hands. Fresh flowers lie at its feet, though there is no village for leagues.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        512,
+        384,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_giants_toll",
+      "prompt": "The Giant's Toll: A cairn giant sits across the pass with a boulder in its lap, chewing on a tree. 'Toll,' it rumbles. 'Or song. Or fight. Giant is bored.'",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        384,
+        512,
+        768,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_stargazers_tower",
+      "prompt": "Stargazer's Broken Tower: A tower snapped off halfway up, its top storey lying in the field like a fallen crown. Brass instruments still turn in the wind, tracking stars no one has seen since the sky went red.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        768,
+        512,
+        1152,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_plague_cart",
+      "prompt": "The Plague Cart: A cart heaped with the shrouded dead, its driver slumped over the reins. A bell on the shaft still tolls with every gust of wind.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        1152,
+        512,
+        1536,
+        768
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_ember_crucible",
+      "prompt": "The Ember Crucible: A ring of slag around a pit of cinders that has not cooled in living memory. A blind tender rakes the coals and says the fire takes one soldier in and gives back what that soldier would have become after a lifetime of war.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        0,
+        768,
+        384,
+        1024
+      ],
+      "keep_components": true
+    },
+    {
+      "id": "encounter_barrow_of_the_last_rank",
+      "prompt": "Barrow of the Last Rank: A long mound where a whole regiment was buried standing, shields still locked. The shepherds say that whoever keeps the night watch here wakes up with the old regiment's discipline in their bones.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5,
+      "crop_xyxy": [
+        384,
+        768,
+        768,
+        1024
+      ],
+      "keep_components": true
+    }
+  ]
+}

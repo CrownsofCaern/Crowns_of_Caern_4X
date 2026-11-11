@@ -13,7 +13,7 @@
    "path": "res://assets/atlases/objects.png",
    "size": [
     506,
-    2094
+    3384
    ]
   },
   "ui": {
@@ -5055,6 +5055,27 @@
     128
    ]
   },
+  "encounter_abandoned_quarry": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "abandoned_quarry"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    1,
+    629,
+    128,
+    128
+   ]
+  },
   "encounter_ash_pit_champion": {
    "atlas": "objects",
    "category": "object",
@@ -5070,7 +5091,7 @@
    },
    "map_scale": 0.5,
    "rect": [
-    1,
+    130,
     629,
     128,
     128
@@ -5091,7 +5112,7 @@
    },
    "map_scale": 0.5,
    "rect": [
-    130,
+    259,
     629,
     128,
     128
@@ -5112,8 +5133,71 @@
    },
    "map_scale": 0.5,
    "rect": [
+    1,
+    758,
+    128,
+    128
+   ]
+  },
+  "encounter_barrow_of_the_last_rank": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "barrow_of_the_last_rank"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    130,
+    758,
+    128,
+    128
+   ]
+  },
+  "encounter_besieged_hamlet": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "besieged_hamlet"
+   },
+   "map_scale": 0.5,
+   "rect": [
     259,
-    629,
+    758,
+    128,
+    128
+   ]
+  },
+  "encounter_bitter_well": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "bitter_well"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    1,
+    887,
     128,
     128
    ]
@@ -5133,8 +5217,29 @@
    },
    "map_scale": 0.5,
    "rect": [
-    1,
-    758,
+    130,
+    887,
+    128,
+    128
+   ]
+  },
+  "encounter_brand_sergeant": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "brand_sergeant"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    259,
+    887,
     128,
     128
    ]
@@ -5154,8 +5259,92 @@
    },
    "map_scale": 0.5,
    "rect": [
+    1,
+    1016,
+    128,
+    128
+   ]
+  },
+  "encounter_burned_field_hospital": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "burned_field_hospital"
+   },
+   "map_scale": 0.5,
+   "rect": [
     130,
-    758,
+    1016,
+    128,
+    128
+   ]
+  },
+  "encounter_charcoal_burners": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "charcoal_burners"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    259,
+    1016,
+    128,
+    128
+   ]
+  },
+  "encounter_cold_forge": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "cold_forge"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    1,
+    1145,
+    128,
+    128
+   ]
+  },
+  "encounter_deserters_fire": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "deserters_fire"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    130,
+    1145,
     128,
     128
    ]
@@ -5176,7 +5365,7 @@
    "map_scale": 0.5,
    "rect": [
     259,
-    758,
+    1145,
     128,
     128
    ]
@@ -5197,7 +5386,7 @@
    "map_scale": 0.5,
    "rect": [
     1,
-    887,
+    1274,
     128,
     128
    ]
@@ -5218,7 +5407,28 @@
    "map_scale": 0.5,
    "rect": [
     130,
-    887,
+    1274,
+    128,
+    128
+   ]
+  },
+  "encounter_ember_crucible": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "ember_crucible"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    259,
+    1274,
     128,
     128
    ]
@@ -5238,8 +5448,8 @@
    },
    "map_scale": 0.5,
    "rect": [
-    259,
-    887,
+    1,
+    1403,
     128,
     128
    ]
@@ -5259,8 +5469,71 @@
    },
    "map_scale": 0.5,
    "rect": [
+    130,
+    1403,
+    128,
+    128
+   ]
+  },
+  "encounter_frozen_warband": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "frozen_warband"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    259,
+    1403,
+    128,
+    128
+   ]
+  },
+  "encounter_giants_toll": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "giants_toll"
+   },
+   "map_scale": 0.5,
+   "rect": [
     1,
-    1016,
+    1532,
+    128,
+    128
+   ]
+  },
+  "encounter_grey_ferryman": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "grey_ferryman"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    130,
+    1532,
     128,
     128
    ]
@@ -5280,8 +5553,155 @@
    },
    "map_scale": 0.5,
    "rect": [
+    259,
+    1532,
+    128,
+    128
+   ]
+  },
+  "encounter_hedge_witch_hut": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "hedge_witch_hut"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    1,
+    1661,
+    128,
+    128
+   ]
+  },
+  "encounter_ironwood_grove": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "ironwood_grove"
+   },
+   "map_scale": 0.5,
+   "rect": [
     130,
-    1016,
+    1661,
+    128,
+    128
+   ]
+  },
+  "encounter_lost_pilgrims_band": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "lost_pilgrims_band"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    259,
+    1661,
+    128,
+    128
+   ]
+  },
+  "encounter_low_tide_shrine": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "low_tide_shrine"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    1,
+    1790,
+    128,
+    128
+   ]
+  },
+  "encounter_market_of_bones": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "market_of_bones"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    130,
+    1790,
+    128,
+    128
+   ]
+  },
+  "encounter_masked_envoy": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "masked_envoy"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    259,
+    1790,
+    128,
+    128
+   ]
+  },
+  "encounter_old_drillmaster": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "old_drillmaster"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    1,
+    1919,
     128,
     128
    ]
@@ -5301,8 +5721,155 @@
    },
    "map_scale": 0.5,
    "rect": [
+    130,
+    1919,
+    128,
+    128
+   ]
+  },
+  "encounter_plague_cart": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "plague_cart"
+   },
+   "map_scale": 0.5,
+   "rect": [
     259,
-    1016,
+    1919,
+    128,
+    128
+   ]
+  },
+  "encounter_rune_cairn": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "rune_cairn"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    1,
+    2048,
+    128,
+    128
+   ]
+  },
+  "encounter_smugglers_cove": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "smugglers_cove"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    130,
+    2048,
+    128,
+    128
+   ]
+  },
+  "encounter_stargazers_tower": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "stargazers_tower"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    259,
+    2048,
+    128,
+    128
+   ]
+  },
+  "encounter_starving_hounds": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "starving_hounds"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    1,
+    2177,
+    128,
+    128
+   ]
+  },
+  "encounter_stranded_salt_caravan": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "stranded_salt_caravan"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    130,
+    2177,
+    128,
+    128
+   ]
+  },
+  "encounter_sunken_reliquary": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "sunken_reliquary"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    259,
+    2177,
     128,
     128
    ]
@@ -5323,7 +5890,70 @@
    "map_scale": 0.5,
    "rect": [
     1,
-    1145,
+    2306,
+    128,
+    128
+   ]
+  },
+  "encounter_tomb_of_the_unbowed": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "tomb_of_the_unbowed"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    130,
+    2306,
+    128,
+    128
+   ]
+  },
+  "encounter_weeping_spring": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "weeping_spring"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    259,
+    2306,
+    128,
+    128
+   ]
+  },
+  "encounter_wyrm_carcass": {
+   "atlas": "objects",
+   "category": "object",
+   "source": "generated",
+   "scale": 1,
+   "anchor": [
+    64,
+    127
+   ],
+   "data": {
+    "type": "encounter",
+    "id": "wyrm_carcass"
+   },
+   "map_scale": 0.5,
+   "rect": [
+    1,
+    2435,
     128,
     128
    ]
@@ -5846,7 +6476,7 @@
    ],
    "rect": [
     130,
-    1532,
+    2822,
     128,
     112
    ]
@@ -5871,7 +6501,7 @@
    ],
    "rect": [
     259,
-    1532,
+    2822,
     128,
     112
    ]
@@ -5896,7 +6526,7 @@
    ],
    "rect": [
     1,
-    1661,
+    2951,
     128,
     112
    ]
@@ -5921,7 +6551,7 @@
    ],
    "rect": [
     130,
-    1661,
+    2951,
     128,
     112
    ]
@@ -5946,7 +6576,7 @@
    ],
    "rect": [
     259,
-    1661,
+    2951,
     128,
     112
    ]
@@ -5971,7 +6601,7 @@
    ],
    "rect": [
     1,
-    1774,
+    3064,
     128,
     112
    ]
@@ -5996,7 +6626,7 @@
    ],
    "rect": [
     130,
-    1774,
+    3064,
     128,
     112
    ]
@@ -6013,7 +6643,7 @@
    "map_scale": 0.5,
    "rect": [
     259,
-    1774,
+    3064,
     96,
     96
    ]
@@ -6030,7 +6660,7 @@
    "map_scale": 2,
    "rect": [
     1,
-    2081,
+    3371,
     13,
     12
    ]
@@ -6047,7 +6677,7 @@
    "map_scale": 0.5,
    "rect": [
     130,
-    1145,
+    2435,
     128,
     128
    ]
@@ -6064,7 +6694,7 @@
    "map_scale": 0.5,
    "rect": [
     259,
-    1145,
+    2435,
     128,
     128
    ]
@@ -6081,7 +6711,7 @@
    "map_scale": 0.5,
    "rect": [
     1,
-    1274,
+    2564,
     128,
     128
    ]
@@ -6098,7 +6728,7 @@
    "map_scale": 0.5,
    "rect": [
     130,
-    1274,
+    2564,
     128,
     128
    ]
@@ -6115,7 +6745,7 @@
    "map_scale": 0.5,
    "rect": [
     259,
-    1274,
+    2564,
     128,
     128
    ]
@@ -6132,7 +6762,7 @@
    "map_scale": 0.5,
    "rect": [
     1,
-    1403,
+    2693,
     128,
     128
    ]
@@ -6149,7 +6779,7 @@
    "map_scale": 0.5,
    "rect": [
     130,
-    1403,
+    2693,
     128,
     128
    ]
@@ -6166,7 +6796,7 @@
    "map_scale": 0.5,
    "rect": [
     259,
-    1403,
+    2693,
     128,
     128
    ]
@@ -6187,7 +6817,7 @@
    "map_scale": 0.5,
    "rect": [
     356,
-    1774,
+    3064,
     96,
     96
    ]
@@ -6208,7 +6838,7 @@
    "map_scale": 0.5,
    "rect": [
     1,
-    1887,
+    3177,
     96,
     96
    ]
@@ -6229,7 +6859,7 @@
    "map_scale": 0.5,
    "rect": [
     98,
-    1887,
+    3177,
     96,
     96
    ]
@@ -6250,7 +6880,7 @@
    "map_scale": 0.5,
    "rect": [
     195,
-    1887,
+    3177,
     96,
     96
    ]
@@ -6271,7 +6901,7 @@
    "map_scale": 0.5,
    "rect": [
     292,
-    1887,
+    3177,
     96,
     96
    ]
@@ -6292,7 +6922,7 @@
    "map_scale": 0.5,
    "rect": [
     389,
-    1887,
+    3177,
     96,
     96
    ]
@@ -6313,7 +6943,7 @@
    "map_scale": 0.5,
    "rect": [
     1,
-    1984,
+    3274,
     96,
     96
    ]
@@ -6381,7 +7011,7 @@
    "map_scale": 0.5,
    "rect": [
     1,
-    1532,
+    2822,
     128,
     128
    ]
@@ -6716,7 +7346,7 @@
    "map_scale": 1,
    "rect": [
     98,
-    1984,
+    3274,
     64,
     64
    ]
@@ -7204,7 +7834,7 @@
    ],
    "rect": [
     163,
-    1984,
+    3274,
     48,
     48
    ]
@@ -7220,7 +7850,7 @@
    ],
    "rect": [
     212,
-    1984,
+    3274,
     48,
     48
    ]
@@ -7236,7 +7866,7 @@
    ],
    "rect": [
     261,
-    1984,
+    3274,
     48,
     48
    ]
@@ -7252,7 +7882,7 @@
    ],
    "rect": [
     310,
-    1984,
+    3274,
     48,
     48
    ]
@@ -7268,7 +7898,7 @@
    ],
    "rect": [
     359,
-    1984,
+    3274,
     48,
     48
    ]
@@ -7284,7 +7914,7 @@
    ],
    "rect": [
     408,
-    1984,
+    3274,
     48,
     48
    ]
@@ -7300,7 +7930,7 @@
    ],
    "rect": [
     457,
-    1984,
+    3274,
     48,
     48
    ]

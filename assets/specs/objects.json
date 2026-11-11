@@ -1385,6 +1385,610 @@
       "prompt": "Use case: stylized-concept. Asset type: production adventure-map building sprite for Crowns of Cinder. Reference image 1 is the current road-trader sprite and defines the rendering style: richly detailed painterly pixel art, restrained realistic materials, thin dark outline and warm lantern highlights. Reference image 2 is the approved cobolt concept: retain the cobolt architecture and merchant identity. ONE building, elevated three-quarter overhead adventure-map view with roof and two sides visible, top-left light. Weathered wood, patched muted umber canvas with small desaturated petrol-teal cloth accents, tarnished brass scales, iron-bound chests, amber lantern. Closed awnings, screens and shuttered entrances hide all guards. NO people, creatures or visible troops. Compact readable silhouette and dense hand-painted detail, same world as existing road-trader sprite, not smooth cartoon, not vector, not glossy 3D. Transparent background with clean alpha. No surrounding terrain, roads, scenery, text, labels, borders, numbers, ground plane or shadow oval. Entire building and equipment visible with empty margins.\nSubject: Cobolt Vault Exchange, level three: small fortified stone counting house with thick shuttered vault door, low weathered slate roof and a single chimney, attached closed canvas-covered caravan yard, brass scales over the entrance, stacked iron-bound chests and amber lanterns. Wealthy trade house, not a castle or huge town.",
       "generate": true,
       "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_stranded_salt_caravan",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "stranded_salt_caravan"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_overturned_wagon.txt"
+      },
+      "prompt": "Stranded Salt Caravan: Six wagons of rock salt sit axle-deep in a sinkhole. The drovers have eaten their mules and are starting to eye each other.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_bitter_well",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "bitter_well"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_drowned_chapel.txt"
+      },
+      "prompt": "The Bitter Well: A well-house of cracked tile, its rope still wet. The water smells of iron and something older. Someone has scratched 'do not drink' into the lintel, and someone else has scratched it out.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_hedge_witch_hut",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "hedge_witch_hut"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_barrow_field.txt"
+      },
+      "prompt": "Hedge-Witch's Hut: A turf hut hung with bird skulls and drying nettles. The old woman inside does not look up from her pot. 'Coin first,' she says, 'questions after.'",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_deserters_fire",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "deserters_fire"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_free_company_camp.txt"
+      },
+      "prompt": "Deserters' Fire: A dozen crossbowmen in mismatched livery huddle round a fire in a ditch. They have the look of men who ran from the same battle in different directions.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_lost_pilgrims_band",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "lost_pilgrims_band"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_dispossessed_column.txt"
+      },
+      "prompt": "Lost Pilgrims: Barefoot pilgrims in ash-grey robes, searching for a shrine that burned a generation ago. They ask you the way as if you might know.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_grey_ferryman",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "grey_ferryman"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_brigand_toll.txt"
+      },
+      "prompt": "The Grey Ferryman: A flat barge on a rope, and a ferryman with a face like wet clay. 'Across is quicker,' he says. 'Across is always quicker.'",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_abandoned_quarry",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "abandoned_quarry"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ember_rift.txt"
+      },
+      "prompt": "Abandoned Quarry: Terraces of cut stone step down into a flooded pit. Rusted picks still lie where the quarrymen dropped them the day the sky turned red.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_charcoal_burners",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "charcoal_burners"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_thornwolf_den.txt"
+      },
+      "prompt": "Charcoal Burners: Smoke mounds smoulder among fresh stumps. Soot-black families are felling an old wood one tree at a time and selling the char to anyone with a forge.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_rune_cairn",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "rune_cairn"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ember_rift.txt"
+      },
+      "prompt": "Rune Cairn: A man-high cairn of flat stones, each cut with angular runes that seem to shift when you look away. The grass around it will not grow.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_burned_field_hospital",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "burned_field_hospital"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_drowned_chapel.txt"
+      },
+      "prompt": "Burned Field Hospital: Scorched tents and rows of cots. A handful of wounded soldiers from a lost battle still breathe, tended by a single exhausted surgeon.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_starving_hounds",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "starving_hounds"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_thornwolf_den.txt"
+      },
+      "prompt": "Starving Hounds: A pack of frost-furred war dogs, collars still on, circling the frozen body of their handler. Their ribs show through the fur.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_smugglers_cove",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "smugglers_cove"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_brigand_toll.txt"
+      },
+      "prompt": "Smugglers' Cove: Lanterns hooded with sacking, barrels rolled up a shingle beach by night. The smugglers freeze when they see your banners, then decide to smile.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_old_drillmaster",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "old_drillmaster"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_hall_of_echoes.txt"
+      },
+      "prompt": "The Old Drillmaster: A one-legged sergeant on a barrel by the roadside, watching your column march past with open contempt. 'Call that a file?' he says. 'Give me a week.'",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_weeping_spring",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "weeping_spring"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_drowned_chapel.txt"
+      },
+      "prompt": "Weeping Spring: Water runs down the face of a rock carved into a woman's shape, pooling in a basin worn smooth by centuries of hands. It hums faintly with old magic.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_wyrm_carcass",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "wyrm_carcass"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ember_rift.txt"
+      },
+      "prompt": "Carcass of a Wyrm: A wyrm the length of a village lies dead in a scorched furrow it ploughed when it fell. Carrion birds blacken its back. Something else is feeding at the far end.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_besieged_hamlet",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "besieged_hamlet"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_barrow_field.txt"
+      },
+      "prompt": "Besieged Hamlet: Brigands have ringed a walled hamlet and are working a ram on the gate. On the wall, villagers wave torn sheets at your banners.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_sunken_reliquary",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "sunken_reliquary"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_drowned_chapel.txt"
+      },
+      "prompt": "Sunken Reliquary: A reliquary chapel slid into a flooded quarry long ago. Through the green water you can see gilt glinting on the altar, and pale shapes drifting between the pews.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_market_of_bones",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "market_of_bones"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_barrow_field.txt"
+      },
+      "prompt": "Market of Bones: Stalls of bleached bone and lacquered skulls under a canvas of stitched hides. The traders wear masks and accept any coin, any soul.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_ironwood_grove",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "ironwood_grove"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_thornwolf_den.txt"
+      },
+      "prompt": "Ironwood Grove: Black-barked trees with leaves like beaten copper, ringing faintly in the wind. Their wood turns axes. The air in the grove is very still, and very watchful.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_cold_forge",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "cold_forge"
+      },
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "town_ashen"
+      },
+      "prompt": "Cold Forge of the Deep: A deep-folk forge-hall cut into the hillside, its great furnace dead for an age. Half-finished constructs stand in rows, waiting for a fire that never came.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_masked_envoy",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "masked_envoy"
+      },
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "town_ashen"
+      },
+      "prompt": "The Masked Envoy: A palanquin of black lacquer under a silk awning, guarded by slender figures in mirrored masks. A voice from behind the curtain offers to sell you the truth.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_frozen_warband",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "frozen_warband"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_barrow_field.txt"
+      },
+      "prompt": "Frozen Warband: A whole raiding party frozen where it camped, rimed men still sitting round a dead fire. One of them blinks.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_low_tide_shrine",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "low_tide_shrine"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_drowned_chapel.txt"
+      },
+      "prompt": "Shrine of the Low Tide: When the marsh draws back, a ring of carved stones rises from the mud, each one shaped like a coiled fish. Offerings of shell and bone lie on the central slab.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_brand_sergeant",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "brand_sergeant"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ember_rift.txt"
+      },
+      "prompt": "The Brand-Sergeant: A horned demon in a sergeant's sash sits on a crate of chains beside a glowing brazier. 'Recruiting,' it says, and grins with too many teeth.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_tomb_of_the_unbowed",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "tomb_of_the_unbowed"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_drowned_chapel.txt"
+      },
+      "prompt": "Tomb of the Unbowed: A knight's tomb on a hill, the effigy's sword still clasped in stone hands. Fresh flowers lie at its feet, though there is no village for leagues.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_giants_toll",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "giants_toll"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_ember_rift.txt"
+      },
+      "prompt": "The Giant's Toll: A cairn giant sits across the pass with a boulder in its lap, chewing on a tree. 'Toll,' it rumbles. 'Or song. Or fight. Giant is bored.'",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_stargazers_tower",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "stargazers_tower"
+      },
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "town_ashen"
+      },
+      "prompt": "Stargazer's Broken Tower: A tower snapped off halfway up, its top storey lying in the field like a fallen crown. Brass instruments still turn in the wind, tracking stars no one has seen since the sky went red.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_plague_cart",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "plague_cart"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_overturned_wagon.txt"
+      },
+      "prompt": "The Plague Cart: A cart heaped with the shrouded dead, its driver slumped over the reins. A bell on the shaft still tolls with every gust of wind.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_ember_crucible",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "ember_crucible"
+      },
+      "source": {
+        "kind": "procedural",
+        "drawer": "structure",
+        "name": "town_ashen"
+      },
+      "prompt": "The Ember Crucible: A ring of slag around a pit of cinders that has not cooled in living memory. A blind tender rakes the coals and says the fire takes one soldier in and gives back what that soldier would have become after a lifetime of war.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
+    },
+    {
+      "id": "encounter_barrow_of_the_last_rank",
+      "category": "object",
+      "size": [
+        128,
+        128
+      ],
+      "atlas": "objects",
+      "data": {
+        "type": "encounter",
+        "id": "barrow_of_the_last_rank"
+      },
+      "source": {
+        "kind": "pixel",
+        "file": "pixel/objects64/encounter_barrow_field.txt"
+      },
+      "prompt": "Barrow of the Last Rank: A long mound where a whole regiment was buried standing, shields still locked. The shepherds say that whoever keeps the night watch here wakes up with the old regiment's discipline in their bones.",
+      "map_scale": 0.5,
+      "generated_palette": "preserve"
     }
   ]
 }

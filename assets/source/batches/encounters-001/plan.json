@@ -1,0 +1,157 @@
+{
+  "name": "encounters-001",
+  "grid": [
+    4,
+    4
+  ],
+  "category": "object",
+  "spec_file": "objects.json",
+  "provider": "Project owner supplied sheet",
+  "conditioning": "Matches the special-sites-001 encounter style; generation prompt not recorded",
+  "assets": [
+    {
+      "id": "encounter_stranded_salt_caravan",
+      "prompt": "Stranded Salt Caravan: Six wagons of rock salt sit axle-deep in a sinkhole. The drovers have eaten their mules and are starting to eye each other.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_bitter_well",
+      "prompt": "The Bitter Well: A well-house of cracked tile, its rope still wet. The water smells of iron and something older. Someone has scratched 'do not drink' into the lintel, and someone else has scratched it out.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_hedge_witch_hut",
+      "prompt": "Hedge-Witch's Hut: A turf hut hung with bird skulls and drying nettles. The old woman inside does not look up from her pot. 'Coin first,' she says, 'questions after.'",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_deserters_fire",
+      "prompt": "Deserters' Fire: A dozen crossbowmen in mismatched livery huddle round a fire in a ditch. They have the look of men who ran from the same battle in different directions.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_lost_pilgrims_band",
+      "prompt": "Lost Pilgrims: Barefoot pilgrims in ash-grey robes, searching for a shrine that burned a generation ago. They ask you the way as if you might know.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_grey_ferryman",
+      "prompt": "The Grey Ferryman: A flat barge on a rope, and a ferryman with a face like wet clay. 'Across is quicker,' he says. 'Across is always quicker.'",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_abandoned_quarry",
+      "prompt": "Abandoned Quarry: Terraces of cut stone step down into a flooded pit. Rusted picks still lie where the quarrymen dropped them the day the sky turned red.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_charcoal_burners",
+      "prompt": "Charcoal Burners: Smoke mounds smoulder among fresh stumps. Soot-black families are felling an old wood one tree at a time and selling the char to anyone with a forge.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_rune_cairn",
+      "prompt": "Rune Cairn: A man-high cairn of flat stones, each cut with angular runes that seem to shift when you look away. The grass around it will not grow.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_burned_field_hospital",
+      "prompt": "Burned Field Hospital: Scorched tents and rows of cots. A handful of wounded soldiers from a lost battle still breathe, tended by a single exhausted surgeon.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_starving_hounds",
+      "prompt": "Starving Hounds: A pack of frost-furred war dogs, collars still on, circling the frozen body of their handler. Their ribs show through the fur.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_smugglers_cove",
+      "prompt": "Smugglers' Cove: Lanterns hooded with sacking, barrels rolled up a shingle beach by night. The smugglers freeze when they see your banners, then decide to smile.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_old_drillmaster",
+      "prompt": "The Old Drillmaster: A one-legged sergeant on a barrel by the roadside, watching your column march past with open contempt. 'Call that a file?' he says. 'Give me a week.'",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_weeping_spring",
+      "prompt": "Weeping Spring: Water runs down the face of a rock carved into a woman's shape, pooling in a basin worn smooth by centuries of hands. It hums faintly with old magic.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_wyrm_carcass",
+      "prompt": "Carcass of a Wyrm: A wyrm the length of a village lies dead in a scorched furrow it ploughed when it fell. Carrion birds blacken its back. Something else is feeding at the far end.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    },
+    {
+      "id": "encounter_besieged_hamlet",
+      "prompt": "Besieged Hamlet: Brigands have ringed a walled hamlet and are working a ram on the gate. On the wall, villagers wave torn sheets at your banners.",
+      "size": [
+        128,
+        128
+      ],
+      "map_scale": 0.5
+    }
+  ]
+}
