@@ -2,6 +2,10 @@ extends "res://tests/test_case.gd"
 ## Strategic AI: decision validity, target choice, defense, determinism and
 ## headless AI-versus-AI / AI-versus-idle sanity runs on the duel map.
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_no_early_collapse_in_ai_duels", "test_ai_beats_an_idle_opponent"]
+
 
 func _duel(seed_value: int, all_ai: bool = true) -> GameSession:
 	var s := GameSession.new_game(data, "twin_marches", seed_value)

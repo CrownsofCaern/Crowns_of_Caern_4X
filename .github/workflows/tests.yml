@@ -17,7 +17,7 @@ jobs:
   tests:
     name: Godot tests and asset pipeline
     runs-on: ubuntu-24.04
-    timeout-minutes: 45
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:

@@ -122,8 +122,8 @@ func test_village_stock_is_validated() -> void:
 
 
 func test_random_generator_never_places_villages() -> void:
-	for seed_value in [1, 2, 3]:
-		for o in MapGenerator.generate(data, "twin_marches", seed_value)["objects"]:
+	for seed_value in [1, 17]:
+		for o in generated_map("twin_marches", seed_value)["objects"]:
 			if o["type"] == "site":
 				assert_ne(data.sites[o["site"]]["kind"], "village")
 

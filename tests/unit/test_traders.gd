@@ -38,10 +38,8 @@ func test_seeded_stock_and_spawn_distribution() -> void:
 		if GameRng.new(seed_value).chance(MapTraders.spawn_chance(70, 70, data)):
 			seen += 1
 	assert_true(seen > 430 and seen < 570, "small map encounter rate: %d/1000" % seen)
-	for seed_value in [1, 2, 3, 4]:
-		var a := MapGenerator.generate(data, "crossing", seed_value)
-		var b := MapGenerator.generate(data, "crossing", seed_value)
-		assert_eq(a, b, "trader placement and stock deterministic")
+	for seed_value in [1, 17]:   # determinism of whole maps: test_mapgen
+		var a := generated_map("crossing", seed_value)
 		assert_true(MapValidator.validate(a, data).is_empty())
 		var traders: Array = a["objects"].filter(func(o): return o.get("site", "") == MapTraders.SITE_ID)
 		assert_true(traders.size() <= 1)

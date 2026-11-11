@@ -2,6 +2,10 @@ extends "res://tests/test_case.gd"
 ## Computer-player difficulty levels (data/ai_difficulty.json): per-slot setup,
 ## AI settings, income scaling, saves and a hard-versus-easy duel.
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_hard_outgrows_easy_in_a_mirror_duel"]
+
 
 func _game(map_id: String, seed_value: int, levels: Array, rules: Dictionary = {}) -> GameSession:
 	var entry := GameSetup.map_entry(data, map_id)

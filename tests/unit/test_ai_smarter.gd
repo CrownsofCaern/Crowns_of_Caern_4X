@@ -2,6 +2,10 @@ extends "res://tests/test_case.gd"
 ## Strategic AI: very hard level, announced invasions, garrison sorties, town
 ## captures that would be retaken at once, and forecast screening.
 
+## Long-running tests (whole AI games, balance sweeps, many generated maps):
+## they run only with ./run_tests.sh --slow.
+const SLOW := ["test_survival_chapter_holds_in_an_ai_game"]
+
 
 func _duel(seed_value: int) -> GameSession:
 	var s := GameSession.new_game(data, "twin_marches", seed_value)

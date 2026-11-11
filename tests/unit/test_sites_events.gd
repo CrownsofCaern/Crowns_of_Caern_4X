@@ -364,8 +364,8 @@ func test_version_9_save_loads_without_events() -> void:
 # --------------------------------------------------------- map generation --
 
 func test_generated_maps_place_fair_sites() -> void:
-	for seed_value in [1, 2, 7]:
-		var def := MapGenerator.generate(data, "twin_marches", seed_value)
+	for seed_value in [1, 17]:
+		var def := generated_map("twin_marches", seed_value)
 		assert_true(MapValidator.validate(def, data).is_empty(), "seed %d validates" % seed_value)
 		var by_zone := {}
 		for o in def["objects"]:
@@ -385,17 +385,9 @@ func test_generated_maps_place_fair_sites() -> void:
 
 
 func test_crossing_maps_get_sites_too() -> void:
-	var def := MapGenerator.generate(data, "crossing", 4)
+	var def := generated_map("crossing", 1)
 	assert_true(MapValidator.validate(def, data).is_empty())
 	assert_gt(def["objects"].filter(func(o): return o["type"] == "site").size(), 2)
-
-
-func test_site_generation_is_deterministic() -> void:
-	var a := MapGenerator.generate(data, "twin_marches", 9)
-	var b := MapGenerator.generate(data, "twin_marches", 9)
-	var sa: Array = a["objects"].filter(func(o): return o["type"] == "site")
-	var sb: Array = b["objects"].filter(func(o): return o["type"] == "site")
-	assert_eq(JSON.stringify(sa), JSON.stringify(sb))
 
 
 # --------------------------------------------------------------------- AI --

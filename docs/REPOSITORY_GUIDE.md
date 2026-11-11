@@ -22,7 +22,7 @@ Crowns of Caern is a Godot 4 turn-based strategy game. The GitHub repository is 
 | `src/ui/` | Menus, map and screens; `art.gd` resolves sprite assets. UI calls `GameSession` rather than changing rules directly. |
 | `src/audio/`, `data/audio.json` | Audio catalog and playback. |
 | `data/` | Game definitions, including factions, buildings, classes, spells and rules. `creatures/` contains faction rosters; `maps/` contains authored maps; `map_templates.json` configures generated maps. |
-| `tests/unit/`, `tests/run_tests.gd` | Headless tests and runner. `./run_tests.sh [filter]` imports the project, runs tests and checks the asset pipeline when Python dependencies are available. |
+| `tests/unit/`, `tests/run_tests.gd` | Headless tests and runner. `./run_tests.sh [--slow] [filter]` imports the project, runs the tests in one Godot process per CPU core (each with its own empty user data folder) and, without a filter, checks the asset pipeline when Python dependencies are available. `--slow` adds the tests that files list in `const SLOW`. |
 | `tools/` | Map, balance, screenshot, art and audio tools. See `tools/assets/README.md` for asset commands and dependencies. |
 
 ## Artwork and generated files

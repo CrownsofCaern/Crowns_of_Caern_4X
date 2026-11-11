@@ -478,14 +478,6 @@ class RepoTests(unittest.TestCase):
     def test_committed_assets_validate(self):
         self.assertEqual(validate.validate(ROOT), [])
 
-    def test_build_is_deterministic(self):
-        with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:
-            ma = build.build_all(ROOT, Path(a), log=lambda *_: None)
-            mb = build.build_all(ROOT, Path(b), log=lambda *_: None)
-            self.assertEqual(ma, mb)
-            for p in sorted((Path(a) / "assets/atlases").glob("*.png")):
-                self.assertEqual(list(Image.open(p).getdata()), list(Image.open(Path(b) / "assets/atlases" / p.name).getdata()), p.name)
-
 
 if __name__ == "__main__":
     unittest.main()

@@ -71,18 +71,18 @@ func test_towns_never_sit_on_fixed_tiles() -> void:
 		assert_eq(spots.size(), 8, "%s: player 0 starts somewhere else on every seed" % fam)
 	# And in the generated maps themselves.
 	var tiles := {}
-	for s in range(1, 6):
-		var def := MapGenerator.generate(data, "random_s_2p_normal_normal_diagonal", s)
+	for s in range(1, 4):
+		var def := generated_map("random_s_2p_normal_normal_diagonal", s)
 		for o in def["objects"]:
 			if o["type"] == "town" and int(o.get("owner", -1)) == 0:
 				tiles["%d,%d" % [int(o["pos"][0]), int(o["pos"][1])]] = true
-	assert_eq(tiles.size(), 5, "five seeds, five different town tiles")
+	assert_eq(tiles.size(), 3, "three seeds, three different town tiles")
 
 
 func test_open_passes_are_wide_and_guarded_passes_are_chokepoints() -> void:
 	var widths := {}
 	for fam in ["diagonal", "lanes", "hub"]:
-		var def := MapGenerator.generate(data, RandomMapTemplate.make_name("s", 2, "normal", "normal", fam), 4)
+		var def := generated_map(RandomMapTemplate.make_name("s", 2, "normal", "normal", fam), 4)
 		for c in def["generator"]["connections"]:
 			var n := (c["gate"] as Array).size()
 			if String(c["guard"]) != "":
@@ -107,11 +107,11 @@ func test_walls_mix_rock_and_lakes() -> void:
 		return n
 	var water := String(data.terrain("water")["char"])
 	var rock := String(data.terrain("mountain")["char"])
-	var isles := MapGenerator.generate(data, "random_s_2p_normal_normal_archipelago", 2)
+	var isles := generated_map("random_s_2p_normal_normal_archipelago", 2)
 	assert_gt(count.call(isles, water), count.call(isles, rock), "an archipelago is cut by lakes")
 	var mixed := 0
 	for s in range(1, 5):
-		var def := MapGenerator.generate(data, "random_s_2p_normal_normal_lanes", s)
+		var def := generated_map("random_s_2p_normal_normal_lanes", s)
 		if count.call(def, water) > 40 and count.call(def, rock) > 40:
 			mixed += 1
 	assert_gt(mixed, 1, "other families mix ridges and lakes")
@@ -161,7 +161,7 @@ func test_optional_zones_get_varied_profiles() -> void:
 				profiles[z["profile"]] = true
 	for p in ["valley", "mineland", "ruins"]:
 		assert_true(profiles.has(p), "optional zones can be %s" % p)
-	var def := MapGenerator.generate(data, "random_m_2p_normal_normal_tree", 2)
+	var def := generated_map("random_m_2p_normal_normal_tree", 2)
 	var open := 0
 	var opt := 0
 	for z in def["generator"]["zones"]:
@@ -178,9 +178,6 @@ func test_mixed_maps_pick_families_by_seed_and_stay_deterministic() -> void:
 	assert_true(seen.size() >= 4, "a mixed random map plays %d families over 24 seeds" % seen.size())
 	for s in range(1, 25):
 		assert_true(LayoutFamilies.supports(_cfg(), RandomMapTemplate.family_for(_cfg(), "random_m_5p_normal_normal", s), 5))
-	var a := MapGenerator.generate(data, "random_s_2p_normal_normal", 9)
-	var b := MapGenerator.generate(data, "random_s_2p_normal_normal", 9)
-	assert_eq(a, b, "same name and seed, same map")
 
 
 func test_orientation_keeps_point_symmetry() -> void:

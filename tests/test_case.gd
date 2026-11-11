@@ -7,6 +7,19 @@ var failures: Array[String] = []
 var _current: String = ""
 var data: GameData = GameData.get_default()
 
+## Generated maps shared by every test file a runner process runs: generating a
+## map takes seconds, and many files test the same templates and seeds.
+static var _generated_maps: Dictionary = {}
+
+
+## MapGenerator.generate(data, template, seed), cached per runner. Returns a deep
+## copy, so a test may change the map freely.
+func generated_map(template: String, seed_number: int) -> Dictionary:
+	var key := "%s:%d" % [template, seed_number]
+	if not _generated_maps.has(key):
+		_generated_maps[key] = MapGenerator.generate(GameData.get_default(), template, seed_number)
+	return (_generated_maps[key] as Dictionary).duplicate(true)
+
 
 func _fail(msg: String) -> void:
 	failures.append("%s: %s" % [_current, msg])

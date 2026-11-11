@@ -55,10 +55,18 @@ static func populate_authored(state: GameState, data: GameData) -> void:
 	for h in state.heroes.values():
 		starts.append(map.index(h.pos))
 	var reached := GridSearch.flood(map.width, map.height, passable, starts)
+	var occupied := {}
+	for o in map.objects.values():
+		occupied[AdventureMap.object_pos(o)] = true
+	var hero_pos: Array[Vector2i] = []
+	for h in state.heroes.values():
+		hero_pos.append(h.pos)
 	var candidates: Array[int] = []
 	for i in reached.size():
+		if reached[i] == 0:
+			continue
 		var p := Vector2i(i % map.width, i / map.width)
-		if reached[i] != 0 and map.object_at(p).is_empty() and not state.heroes.values().any(func(h): return h.pos.distance_squared_to(p) < 36):
+		if not occupied.has(p) and not hero_pos.any(func(q): return q.distance_squared_to(p) < 36):
 			candidates.append(i)
 	if candidates.is_empty():
 		return

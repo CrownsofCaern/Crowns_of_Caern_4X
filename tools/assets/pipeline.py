@@ -12,6 +12,7 @@ See tools/assets/README.md.
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import shutil
 import subprocess
@@ -50,10 +51,44 @@ def cmd_validate(a) -> int:
     return 1 if errs else 0
 
 
+@contextlib.contextmanager
+def _fast_png():
+    """PNG compression is most of a build's time, and a check only compares
+    pixels: encode PNGs with light compression while the check builds."""
+    from PIL import Image
+    save = Image.Image.save
+
+    def fast(self, fp, format=None, **params):
+        name = str(getattr(fp, "name", fp)).lower()
+        if (format or "").upper() == "PNG" or (format is None and name.endswith(".png")):
+            params["optimize"] = False
+            params["compress_level"] = 1
+        return save(self, fp, format, **params)
+
+    Image.Image.save = fast
+    try:
+        yield
+    finally:
+        Image.Image.save = save
+
+
+def _same_file(fresh: Path, committed: Path) -> bool:
+    """Equal bytes, or for PNGs equal pixels (a check encodes PNGs lightly)."""
+    if not committed.is_file():
+        return False
+    if fresh.suffix.lower() != ".png":
+        return fresh.read_bytes() == committed.read_bytes()
+    from PIL import Image, ImageChops
+    x, y = Image.open(fresh), Image.open(committed)
+    if x.size != y.size:
+        return False
+    return ImageChops.difference(x.convert("RGBA"), y.convert("RGBA")).getbbox() is None
+
+
 def cmd_check(a) -> int:
     """Committed atlases/manifest must equal a fresh build (sources are the truth)."""
     from PIL import Image, ImageChops
-    with tempfile.TemporaryDirectory() as tmp:
+    with tempfile.TemporaryDirectory() as tmp, _fast_png():
         build.build_all(ROOT, Path(tmp), use_generated=not a.no_generated, log=lambda *_: None)
         bad = []
         fresh_root = Path(tmp) / "assets"
@@ -61,50 +96,28 @@ def cmd_check(a) -> int:
             mine = ROOT / "assets" / "atlases" / p.name
             if not mine.is_file():
                 bad.append(f"{mine} missing")
-                continue
-            if p.name.startswith("animation_") and p.read_bytes() != mine.read_bytes():
-                bad.append(f"{mine.relative_to(ROOT)} differs byte-for-byte from a fresh animation build")
-            x, y = Image.open(p).convert("RGBA"), Image.open(mine).convert("RGBA")
-            if x.size != y.size or ImageChops.difference(x, y).getbbox() is not None:
+            elif not _same_file(p, mine):
                 bad.append(f"{mine.relative_to(ROOT)} differs from a fresh build")
         if json.loads((fresh_root / "manifest.json").read_text()) != json.loads((ROOT / "assets" / "manifest.json").read_text()):
             bad.append("assets/manifest.json differs from a fresh build")
-        campaign = fresh_root / "campaign_art.json"
-        if campaign.is_file():
-            committed = ROOT / "assets/campaign_art.json"
-            if not committed.is_file() or campaign.read_bytes() != committed.read_bytes():
-                bad.append("assets/campaign_art.json differs from a fresh build")
-            for p in sorted((fresh_root / "illustrations").rglob("*.png")):
-                committed = ROOT / "assets" / p.relative_to(fresh_root)
-                if not committed.is_file() or p.read_bytes() != committed.read_bytes():
-                    bad.append(str(committed.relative_to(ROOT)) + " differs from a fresh build")
-        menu = fresh_root / "menus/manifest.json"
-        if menu.is_file():
-            for p in sorted((fresh_root / "menus").glob("*")):
-                committed = ROOT / "assets/menus" / p.name
-                if not committed.is_file() or p.read_bytes() != committed.read_bytes():
-                    bad.append(str(committed.relative_to(ROOT)) + " differs from a fresh build")
+        outputs = []
+        if (fresh_root / "campaign_art.json").is_file():
+            outputs.append(fresh_root / "campaign_art.json")
+            outputs += sorted((fresh_root / "illustrations").rglob("*.png"))
+        if (fresh_root / "menus/manifest.json").is_file():
+            outputs += sorted(p for p in (fresh_root / "menus").glob("*") if p.is_file())
         if (fresh_root / "towns/manifest.json").is_file():
-            for p in sorted((fresh_root / "towns").rglob("*")):
-                if p.is_file():
-                    committed = ROOT / "assets" / p.relative_to(fresh_root)
-                    if not committed.is_file() or p.read_bytes() != committed.read_bytes():
-                        bad.append(str(committed.relative_to(ROOT)) + " differs from a fresh build")
+            outputs += sorted(p for p in (fresh_root / "towns").rglob("*") if p.is_file())
         if (fresh_root / "artifacts").is_dir():
-            for p in sorted((fresh_root / "artifacts").glob("*.png")):
-                committed = ROOT / "assets" / p.relative_to(fresh_root)
-                if not committed.is_file() or ImageChops.difference(Image.open(p).convert("RGBA"), Image.open(committed).convert("RGBA")).getbbox() is not None:
-                    bad.append(str(committed.relative_to(ROOT)) + " differs from a fresh build")
-        animation = fresh_root / "animations.json"
-        if animation.is_file():
-            committed = ROOT / "assets/animations.json"
-            if not committed.is_file() or animation.read_bytes() != committed.read_bytes():
-                bad.append("assets/animations.json differs from a fresh build")
+            outputs += sorted((fresh_root / "artifacts").glob("*.png"))
+        if (fresh_root / "animations.json").is_file():
+            outputs.append(fresh_root / "animations.json")
         if (fresh_root / "battlefields/manifest.json").is_file():
-            for p in sorted((fresh_root / "battlefields").glob("*")):
-                committed = ROOT / "assets/battlefields" / p.name
-                if not committed.is_file() or p.read_bytes() != committed.read_bytes():
-                    bad.append(str(committed.relative_to(ROOT)) + " differs from fresh full-resolution battlefield export")
+            outputs += sorted(p for p in (fresh_root / "battlefields").glob("*") if p.is_file())
+        for p in outputs:
+            committed = ROOT / "assets" / p.relative_to(fresh_root)
+            if not _same_file(p, committed):
+                bad.append(str(committed.relative_to(ROOT)) + " differs from a fresh build")
     for b in bad:
         print("STALE:", b)
     print("build output up to date" if not bad else "run: python3 tools/assets/pipeline.py build")

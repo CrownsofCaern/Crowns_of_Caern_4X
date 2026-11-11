@@ -3,6 +3,9 @@ extends "res://tests/test_case.gd"
 ## and generous bounds; tools/balance_report.gd prints the same matchups.
 
 const RUNS := 150
+## Per direction in the stack-splitting tests: 2 x 100 fights per case keep the
+## standard error near 0.035, well inside their 0.4-0.65 band.
+const SPLIT_RUNS := 100
 
 var bs: BalanceScenarios
 
@@ -129,8 +132,8 @@ func test_splitting_one_unit_into_stacks_is_neutral() -> void:
 	]
 	var sim := _sim_with({})
 	for c in cases:
-		var split := _rate(sim, c[0], c[1], 300)
-		var reverse := 1.0 - _rate(sim, c[1], c[0], 300)
+		var split := _rate(sim, c[0], c[1], SPLIT_RUNS)
+		var reverse := 1.0 - _rate(sim, c[1], c[0], SPLIT_RUNS)
 		var wr := (split + reverse) / 2.0   # average over who attacks
 		assert_between(wr, 0.4, 0.65, "%s vs %s: split wins %.2f" % [bs.describe(c[0]), bs.describe(c[1]), wr])
 
@@ -150,8 +153,8 @@ func test_splitting_into_ten_stacks_is_neutral() -> void:
 	]
 	var sim := _sim_with({})
 	for c in cases:
-		var split := _rate(sim, c[0], c[1], 300)
-		var reverse := 1.0 - _rate(sim, c[1], c[0], 300)
+		var split := _rate(sim, c[0], c[1], SPLIT_RUNS)
+		var reverse := 1.0 - _rate(sim, c[1], c[0], SPLIT_RUNS)
 		var wr := (split + reverse) / 2.0
 		assert_between(wr, 0.4, 0.65, "%s vs %s: split wins %.2f" % [bs.describe(c[0]), bs.describe(c[1]), wr])
 

@@ -185,7 +185,7 @@ func test_ai_values_guarded_prize_by_its_guard() -> void:
 func test_random_maps_leave_guarded_prizes_in_the_open() -> void:
 	var tpl := MapGenerator.find_template(data.map_templates, "random_m_2p_normal_normal", 3)
 	assert_eq(String(tpl.get("guard_pockets", "")), "open")
-	var def := MapGenerator.generate(data, "random_m_2p_normal_normal", 3)
+	var def := generated_map("random_m_2p_normal_normal", 3)
 	assert_false(def.is_empty())
 	var by_id := {}
 	for o in def["objects"]:
