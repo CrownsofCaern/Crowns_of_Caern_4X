@@ -46,9 +46,10 @@ def validate(root: Path, out_root: Path | None = None) -> list[str]:
         if f"mine_{rid}" not in sprites:
             errors.append(f"mine of '{rid}' has no sprite (expected id mine_{rid})")
     if (data / "encounters.json").is_file():
-        for eid in json.loads((data / "encounters.json").read_text())["encounters"]:
-            if f"encounter_{eid}" not in sprites:
-                errors.append(f"encounter '{eid}' has no sprite (expected id encounter_{eid})")
+        for eid, edef in json.loads((data / "encounters.json").read_text())["encounters"].items():
+            sid = edef.get("sprite", f"encounter_{eid}")
+            if sid not in sprites:
+                errors.append(f"encounter '{eid}' has no sprite (expected id {sid})")
     for tid in json.loads((data / "terrains.json").read_text())["terrains"]:
         if tid not in man.get("terrain", {}).get("terrains", {}):
             errors.append(f"terrain '{tid}' missing from the terrain atlas")
