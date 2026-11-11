@@ -26,8 +26,9 @@ def stage(root: Path, name: str, source: Path) -> None:
         shutil.copyfile(source, archive)
     image = Image.open(archive).convert("RGBA")
     cols, rows = plan["grid"]
-    if len(plan["assets"]) != cols * rows:
-        raise ValueError("Plan count does not match grid")
+    # A sheet may leave trailing cells empty (row-major), never more assets than cells.
+    if not 0 < len(plan["assets"]) <= cols * rows:
+        raise ValueError("Plan count does not fit the grid")
     generated = root / "assets/source/generated"
     generated.mkdir(parents=True, exist_ok=True)
     for asset in plan["assets"]:
@@ -51,11 +52,11 @@ def stage(root: Path, name: str, source: Path) -> None:
     for asset in layout["assets"]:
         dest = generated / (asset["id"] + ".png")
         dest.with_suffix(".json").write_text(json.dumps({
-            "schema_version": 1, "provider": "ChatGPT image_gen", "batch": name,
+            "schema_version": 1, "provider": plan.get("provider", "ChatGPT image_gen"), "batch": name,
             "source_sheet": str(archive.relative_to(root)), "source_sheet_sha256": production.sha256(archive),
             "source_sha256": production.sha256(dest), "crop_xyxy": asset["crop_xyxy"],
             "prompt_file": str((batch / "prompt.txt").relative_to(root)),
-            "conditioning": "Approved Reignem Concord sheet; neutral sheets also conditioned on approved Hollow sheet",
+            "conditioning": plan.get("conditioning", "Approved Reignem Concord sheet; neutral sheets also conditioned on approved Hollow sheet"),
             "native_size": asset["size"], "quality_status": "pending_visual_review",
             "isolation": "Full grid cell retained, including groups and disconnected effects"
         }, indent=2) + "\n")
