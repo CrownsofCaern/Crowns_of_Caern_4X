@@ -42,7 +42,10 @@ class DlcTests(unittest.TestCase):
         self.assertFalse(dlc_ids.intersection(animation['pending']))
         self.assertEqual(set(animation['optional_creatures']), set(pack['creatures']))
         for cid in pack['creatures']:
-            self.assertEqual(set(animation['units']['creature_'+cid]['actions']), {'move','attack'})
+            # Every DLC creature moves and attacks; idle and death clips are added as they are made.
+            actions = set(animation['units']['creature_'+cid]['actions'])
+            self.assertLessEqual({'move','attack'}, actions, cid)
+            self.assertLessEqual(actions, {'idle','move','attack','death'}, cid)
         for hid in pack['hero_classes']:
             self.assertEqual(set(animation['units']['hero_'+hid]['actions']), {'move'})
 
