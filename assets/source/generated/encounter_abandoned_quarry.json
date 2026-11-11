@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "provider": "Project owner supplied sheet",
+  "batch": "encounters-001",
+  "source_sheet": "assets/source/batches/encounters-001/source.png",
+  "source_sheet_sha256": "cb59238a79df42b37c7e1783e32f7e1e78a44eda20be132a303c92865089931e",
+  "source_sha256": "19cf46cb423cc9d1ce4553ee1b13cd7c1864e7c82c9246e23879174c7c0bb0ab",
+  "crop_xyxy": [
+    768,
+    256,
+    1152,
+    512
+  ],
+  "prompt_file": "assets/source/batches/encounters-001/prompt.txt",
+  "conditioning": "Matches the special-sites-001 encounter style; generation prompt not recorded",
+  "native_size": [
+    128,
+    128
+  ],
+  "quality_status": "pending_visual_review",
+  "isolation": "Full grid cell retained, including groups and disconnected effects"
+}

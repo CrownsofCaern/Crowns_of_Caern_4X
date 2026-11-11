@@ -174,3 +174,9 @@ armies mostly match their final tile's terrain; occasional outsiders remain poss
 
 Implementation and verification: [gameplay update plan](docs/GAMEPLAY_VARIETY_PLAN.md)
 and [verification report](docs/reports/GAMEPLAY_VARIETY_VERIFICATION.md).
+
+## Licence and credits
+
+The project's code, data, documentation, art and audio are released under the [MIT licence](LICENSE).
+Third-party material (the Godot engine, the Cinzel and Lora fonts, CC0 textures and scenery, and the
+Mixamo-derived unit animations) keeps its own licence or terms; see [CREDITS.md](CREDITS.md).
