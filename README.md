@@ -66,7 +66,15 @@
 
 ## Installation
 
-There are currently no packaged downloads in the repository's [Releases](https://github.com/CrownsofCaern/Crowns_of_Caern_4X/releases). To play on Windows or macOS, download the project and run it using the Godot editor. The iPhone version must be built and signed on a Mac.
+Ready-to-play builds for **Windows**, **macOS** and **Linux** are on the [Releases](https://github.com/CrownsofCaern/Crowns_of_Caern_4X/releases) page. Download the archive for your system, extract it and start the game:
+
+- **Windows:** run `CrownsOfCaern.exe`. The build is not code-signed, so in the SmartScreen warning choose **More info → Run anyway**.
+- **macOS:** move *Crowns of Caern.app* to Applications and open it. The app is not notarized, so the first time use **System Settings → Privacy & Security → Open Anyway**.
+- **Linux:** run `./CrownsOfCaern.x86_64`.
+
+To run the latest development version instead, open the project in the Godot editor as described below. The iPhone version must be built and signed on a Mac.
+
+## Run from source
 
 ### Windows PC
 
