@@ -19,7 +19,7 @@
   "ui": {
    "path": "res://assets/atlases/ui.png",
    "size": [
-    485,
+    509,
     382
    ]
   },
@@ -4677,7 +4677,7 @@
     40
    ]
   },
-  "cursor_default": {
+  "cursor_capture": {
    "atlas": "ui",
    "category": "ui",
    "source": "procedural",
@@ -4697,7 +4697,7 @@
     40
    ]
   },
-  "cursor_encounter": {
+  "cursor_default": {
    "atlas": "ui",
    "category": "ui",
    "source": "procedural",
@@ -4717,7 +4717,7 @@
     40
    ]
   },
-  "cursor_move": {
+  "cursor_encounter": {
    "atlas": "ui",
    "category": "ui",
    "source": "procedural",
@@ -4737,7 +4737,7 @@
     40
    ]
   },
-  "cursor_pickup": {
+  "cursor_move": {
    "atlas": "ui",
    "category": "ui",
    "source": "procedural",
@@ -4757,7 +4757,7 @@
     40
    ]
   },
-  "cursor_select": {
+  "cursor_pickup": {
    "atlas": "ui",
    "category": "ui",
    "source": "procedural",
@@ -4777,7 +4777,7 @@
     40
    ]
   },
-  "cursor_town": {
+  "cursor_select": {
    "atlas": "ui",
    "category": "ui",
    "source": "procedural",
@@ -4797,7 +4797,7 @@
     40
    ]
   },
-  "cursor_wait": {
+  "cursor_town": {
    "atlas": "ui",
    "category": "ui",
    "source": "procedural",
@@ -4812,6 +4812,26 @@
    ],
    "rect": [
     288,
+    308,
+    40,
+    40
+   ]
+  },
+  "cursor_wait": {
+   "atlas": "ui",
+   "category": "ui",
+   "source": "procedural",
+   "scale": 1,
+   "anchor": [
+    20,
+    20
+   ],
+   "hotspot": [
+    2,
+    2
+   ],
+   "rect": [
+    329,
     308,
     40,
     40
@@ -7367,7 +7387,7 @@
     8
    ],
    "rect": [
-    370,
+    411,
     308,
     48,
     32
@@ -7389,7 +7409,7 @@
     8
    ],
    "rect": [
-    419,
+    460,
     308,
     48,
     32
@@ -7951,7 +7971,7 @@
     8
    ],
    "rect": [
-    329,
+    370,
     308,
     40,
     40

@@ -16,9 +16,13 @@ Warning/success colours, artifact rarity, resource icons and player banner colou
 retain their meaning. Accent-on-panel contrast is tested for all six palettes;
 progress text has a dark outline so bright green/orange fills remain readable.
 
-Nine 40x40 iron-and-brass cursor assets are built deterministically from structured
-specs: default, movement, town entry, attack, pickup/capture, encounter, hero
-selection, blocked route and wait. Every cursor has the same 2,2 hotspot.
+Ten 40x40 dark fantasy cursors: default pointer, movement boot, town gate, attack
+sword, capture flag, pickup chest, encounter scroll, selection gauntlet, blocked
+route and wait hourglass. Their art comes from generated sources in
+assets/source/cursors-001/ (prompts and hashes beside them) and is fitted into the
+40x40 frame by ui_art.py, which draws the same opaque click tip at the 2,2 hotspot
+on every cursor. Unowned mines, neutral or enemy towns and unclaimed dwellings use
+the capture flag; resources and artifacts keep the chest.
 AdventureCursor reads session state without issuing game commands. It caches the
 hover decision and invalidates it for state/selection/camera changes, respects GUI
 and modal ownership, and resets custom cursors on exit. It checks fog before hidden

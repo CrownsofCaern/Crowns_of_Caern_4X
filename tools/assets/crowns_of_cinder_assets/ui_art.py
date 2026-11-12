@@ -1,8 +1,32 @@
 """Small functional UI drawings with fixed, reproducible cursor hotspots."""
 from PIL import Image, ImageDraw
+from pathlib import Path
+
+from . import postprocess
 
 
-def cursor(pal, rng, size, action="default"):
+def cursor(pal, rng, size, action="default", generated_source=None):
+    if generated_source:
+        # Keep generated subjects separate from the precise, shared click tip.
+        root = Path(__file__).resolve().parents[3]
+        raw = Image.open(root / generated_source)
+        directional = action in ("default", "attack", "capture", "select")
+        native_size = (36, 36) if directional else (29, 29)
+        subject = postprocess.process_generated(raw, {
+            "size": native_size, "anchor": "center", "outline": True,
+            "outline_weight": 1, "export_scale": 1,
+        }, pal)
+        image = Image.new("RGBA", size)
+        image.alpha_composite(subject, (2, 2) if directional else (10, 10))
+        draw = ImageDraw.Draw(image)
+        # Exact opaque 2,2 hotspot on every cursor, regardless of source margins.
+        if directional:
+            draw.polygon([(2, 2), (2, 6), (6, 6)], fill=pal.c("X"), outline=pal.outline)
+            return image
+        draw.polygon([(2, 2), (2, 17), (6, 13), (9, 19), (12, 17), (8, 11), (15, 11)],
+                     fill=pal.c("X"), outline=pal.outline, width=1)
+        draw.line([(4, 6), (4, 12), (6, 10), (10, 10)], fill=pal.c("h"), width=1)
+        return image
     image = Image.new("RGBA", size)
     draw = ImageDraw.Draw(image)
     ink, steel, gold = pal.outline, pal.c("X"), pal.c("h")

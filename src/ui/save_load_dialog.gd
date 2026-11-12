@@ -31,8 +31,8 @@ func open(game_data: GameData, open_mode: String, can_save: bool = true, directo
 		var slot: String = row["slot"]
 		if mode == "save":
 			b.text = "Overwrite" if row["exists"] else "Save"
-			# The autosave slot is written by the game itself.
-			b.disabled = slot == SaveSlots.AUTOSAVE or not can_save
+			# The autosave and online slots are written by the game itself.
+			b.disabled = slot == SaveSlots.AUTOSAVE or SaveSlots.is_online_slot(slot) or not can_save
 		else:
 			b.text = "Load"
 			b.disabled = not row["valid"]

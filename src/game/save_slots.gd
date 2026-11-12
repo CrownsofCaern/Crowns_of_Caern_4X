@@ -7,6 +7,8 @@ extends RefCounted
 
 const DEFAULT_DIR := "user://saves"
 const AUTOSAVE := "auto"
+## Online games keep their own slot per match ("online_<match id>", see OnlineMatch.save_slot).
+const ONLINE_PREFIX := "online_"
 
 
 static func slot_ids(data: GameData) -> Array[String]:
@@ -54,13 +56,33 @@ static func load_slot(data: GameData, slot: String, dir: String = DEFAULT_DIR) -
 	return GameSession.load_from_file(data, path_for(slot, dir))
 
 
-## Every slot, autosave first: [{slot, path, exists, valid, label, meta}].
+## The online games saved in dir (slot ids), in name order.
+static func online_slots(dir: String = DEFAULT_DIR) -> Array[String]:
+	var out: Array[String] = []
+	if not DirAccess.dir_exists_absolute(dir):
+		return out
+	var files := Array(DirAccess.get_files_at(dir))
+	files.sort()
+	for f in files:
+		var fname := String(f)
+		if fname.begins_with("slot_" + ONLINE_PREFIX) and fname.ends_with(".json"):
+			out.append(fname.trim_prefix("slot_").trim_suffix(".json"))
+	return out
+
+
+static func is_online_slot(slot: String) -> bool:
+	return slot.begins_with(ONLINE_PREFIX)
+
+
+## Every slot, autosave first, online games last: [{slot, path, exists, valid, label, meta}].
 static func list(data: GameData, dir: String = DEFAULT_DIR) -> Array:
 	var out := []
-	for slot in slot_ids(data):
+	var slots := slot_ids(data)
+	slots.append_array(online_slots(dir))
+	for slot in slots:
 		var path := path_for(slot, dir)
 		var row := {"slot": slot, "path": path, "exists": FileAccess.file_exists(path), "valid": false, "meta": {},
-			"label": "Autosave" if slot == AUTOSAVE else "Slot %s" % slot}
+			"label": "Autosave" if slot == AUTOSAVE else ("Online" if is_online_slot(slot) else "Slot %s" % slot)}
 		if row["exists"]:
 			var f := FileAccess.open(path, FileAccess.READ)
 			var d: Variant = JSON.parse_string(f.get_as_text()) if f != null else null

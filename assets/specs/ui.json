@@ -504,10 +504,11 @@
         "drawer": "ui",
         "name": "cursor",
         "params": {
-          "action": "default"
+          "action": "default",
+          "generated_source": "assets/source/cursors-001/default.png"
         }
       },
-      "prompt": "Functional iron and brass default cursor with fixed top-left hotspot"
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single medieval mouse pointer arrow pointing to upper left, long clean triangular ivory-steel arrowhead, short diagonal tail toward lower right, narrow tarnished brass inset\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
     },
     {
       "id": "cursor_move",
@@ -531,10 +532,11 @@
         "drawer": "ui",
         "name": "cursor",
         "params": {
-          "action": "move"
+          "action": "move",
+          "generated_source": "assets/source/cursors-001/move.png"
         }
       },
-      "prompt": "Functional iron and brass move cursor with fixed top-left hotspot"
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single sturdy worn brown leather travelling boot, side view, toe pointing right, brass buckle\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
     },
     {
       "id": "cursor_town",
@@ -558,10 +560,11 @@
         "drawer": "ui",
         "name": "cursor",
         "params": {
-          "action": "town"
+          "action": "town",
+          "generated_source": "assets/source/cursors-001/town.png"
         }
       },
-      "prompt": "Functional iron and brass town cursor with fixed top-left hotspot"
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single small grim stone castle gate with two crenellated towers, navy roofs and warm dark doorway\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
     },
     {
       "id": "cursor_attack",
@@ -585,10 +588,11 @@
         "drawer": "ui",
         "name": "cursor",
         "params": {
-          "action": "attack"
+          "action": "attack",
+          "generated_source": "assets/source/cursors-001/attack.png"
         }
       },
-      "prompt": "Functional iron and brass attack cursor with fixed top-left hotspot"
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single battle-worn steel longsword pointing diagonally to upper left, sharp tip at upper left, broad bright blade, tarnished brass crossguard and dark leather grip at lower right\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
     },
     {
       "id": "cursor_pickup",
@@ -612,10 +616,11 @@
         "drawer": "ui",
         "name": "cursor",
         "params": {
-          "action": "pickup"
+          "action": "pickup",
+          "generated_source": "assets/source/cursors-001/pickup.png"
         }
       },
-      "prompt": "Functional iron and brass pickup cursor with fixed top-left hotspot"
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single open dark wooden treasure chest with tarnished brass bands and a few bright gold coins\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
     },
     {
       "id": "cursor_encounter",
@@ -639,10 +644,11 @@
         "drawer": "ui",
         "name": "cursor",
         "params": {
-          "action": "encounter"
+          "action": "encounter",
+          "generated_source": "assets/source/cursors-001/encounter.png"
         }
       },
-      "prompt": "Functional iron and brass encounter cursor with fixed top-left hotspot"
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single unrolled ivory parchment scroll with a large dark brass question mark, no other writing\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
     },
     {
       "id": "cursor_select",
@@ -666,10 +672,11 @@
         "drawer": "ui",
         "name": "cursor",
         "params": {
-          "action": "select"
+          "action": "select",
+          "generated_source": "assets/source/cursors-001/select.png"
         }
       },
-      "prompt": "Functional iron and brass select cursor with fixed top-left hotspot"
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single articulated steel gauntlet hand with index finger pointing toward upper left, other fingers curled\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
     },
     {
       "id": "cursor_blocked",
@@ -693,10 +700,11 @@
         "drawer": "ui",
         "name": "cursor",
         "params": {
-          "action": "blocked"
+          "action": "blocked",
+          "generated_source": "assets/source/cursors-001/blocked.png"
         }
       },
-      "prompt": "Functional iron and brass blocked cursor with fixed top-left hotspot"
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single iron circular prohibition ring with a broad diagonal crimson slash, clear simple silhouette\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
     },
     {
       "id": "cursor_wait",
@@ -720,10 +728,39 @@
         "drawer": "ui",
         "name": "cursor",
         "params": {
-          "action": "wait"
+          "action": "wait",
+          "generated_source": "assets/source/cursors-001/wait.png"
         }
       },
-      "prompt": "Functional iron and brass wait cursor with fixed top-left hotspot"
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single medieval hourglass with tarnished brass caps, dark frame and bright ivory sand\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
+    },
+    {
+      "id": "cursor_capture",
+      "size": [
+        40,
+        40
+      ],
+      "category": "ui",
+      "atlas": "ui",
+      "outline": false,
+      "export_scale": 1,
+      "background": "transparent",
+      "anchor": "center",
+      "hotspot": [
+        2,
+        2
+      ],
+      "generate": false,
+      "source": {
+        "kind": "procedural",
+        "drawer": "ui",
+        "name": "cursor",
+        "params": {
+          "action": "capture",
+          "generated_source": "assets/source/cursors-001/capture.png"
+        }
+      },
+      "prompt": "Use case: stylized-concept\nAsset type: transparent gameplay cursor sprite for Crowns of Caern.\nPrimary request: a single windblown deep crimson swallowtail capture flag on a slim tarnished brass pole, spearhead finial at upper left, fabric waving right\nStyle: original dark gothic fantasy pixel art, bold clean silhouette readable at 32 pixels, crisp stepped pixel edges, restrained detail, top-left lighting, very dark brown outline #120d0b, cool pale steel and aged brass. Center one isolated object filling 80 percent of square canvas, generous transparent margin, front/three-quarter icon view. Truly transparent background, no scenery, no cast shadow, no glow, no border tile, no labels, no watermark. Not cute, not glossy 3D. This is a production sprite, not a mockup."
     },
     {
       "id": "ui_resource_gold",

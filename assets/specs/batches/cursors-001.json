@@ -1,0 +1,26 @@
+{
+  "id": "cursors-001",
+  "tool": "built-in image_gen",
+  "size": [
+    40,
+    40
+  ],
+  "palette": "assets/specs/palette.json",
+  "outline": "#120d0b",
+  "hotspot": [
+    2,
+    2
+  ],
+  "actions": [
+    "default",
+    "move",
+    "attack",
+    "capture",
+    "town",
+    "pickup",
+    "encounter",
+    "select",
+    "blocked",
+    "wait"
+  ]
+}

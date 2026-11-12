@@ -47,6 +47,8 @@ done
 if [[ -z "$FILTER" ]]; then
   (isolated integration "$GODOT" --headless --path . --script res://tests/integration/enemy_turn.gd \
     >"$tmp/integration.log" 2>&1; echo $? >"$tmp/integration.code") &
+  (isolated online "$GODOT" --headless --path . --script res://tests/integration/online_loopback.gd \
+    >"$tmp/online.log" 2>&1; echo $? >"$tmp/online.code") &
 fi
 wait
 
@@ -81,6 +83,10 @@ echo "$total tests, $failed failed ($JOBS runners; $skipped slow tests skipped, 
 if [[ -z "$FILTER" ]]; then
   cat "$tmp/integration.log"
   if [[ "$(cat "$tmp/integration.code")" != 0 ]] || grep -qE "SCRIPT ERROR|Parse Error|Failed to load script" "$tmp/integration.log"; then
+    code=1
+  fi
+  cat "$tmp/online.log"
+  if [[ "$(cat "$tmp/online.code")" != 0 ]] || grep -qE "SCRIPT ERROR|Parse Error|Failed to load script" "$tmp/online.log"; then
     code=1
   fi
 fi
