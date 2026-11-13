@@ -32,6 +32,11 @@ var game_over_dialog: GameOverDialog
 var curtain: TurnCurtain
 var sound_dialog: SoundDialog
 var chapter_dialog: ChapterDialog
+## Online play (host or join by address); idle unless a game is online.
+var net: NetSession
+var online_panel: OnlinePanel
+## True while this computer plays its turn of an online game.
+var _online_playing := false
 var found_dialog: ArtifactFoundDialog
 ## Artifacts the hero gained in an encounter, shown once its result closes.
 var _found_in_encounter: Array[String] = []
@@ -177,6 +182,26 @@ func _ready() -> void:
 	save_dialog.build(data, 760)
 	save_dialog.slot_chosen.connect(_on_slot_chosen)
 	save_dialog.closed.connect(func(): _set_busy(false))
+	net = NetSession.new(data)
+	add_child(net)
+	online_panel = OnlinePanel.new()
+	dialog_layer.add_child(online_panel)
+	online_panel.build(data, 620)
+	online_panel.net = net
+	online_panel.host_requested.connect(_host_online)
+	online_panel.join_requested.connect(_join_online)
+	online_panel.take_requested.connect(func(i: int): net.take_seat(i))
+	online_panel.free_requested.connect(func(i: int): net.free_seat(i))
+	online_panel.leave_requested.connect(_leave_online)
+	online_panel.closed.connect(func():
+		map_view.visible = true
+		menu.open(session != null and not session.state.game_over, editor_playtest))
+	net.game_received.connect(_on_online_game)
+	net.people_changed.connect(online_panel.refresh)
+	net.notice.connect(func(t: String):
+		online_panel.add_note(t)
+		hud.log_message("[color=#e0b450]%s[/color]" % t))
+	net.closed.connect(_on_online_closed)
 	sound_dialog = SoundDialog.new()
 	dialog_layer.add_child(sound_dialog)
 	sound_dialog.build(data, 520)
@@ -207,6 +232,7 @@ func _ready() -> void:
 	menu.build(data)
 	menu.start_requested.connect(start_new_game)
 	menu.load_requested.connect(func(): _open_saves("load"))
+	menu.online_requested.connect(_open_online)
 	menu.resume_requested.connect(func():
 		menu.hide()
 		AudioManager.set_music("map")
@@ -270,6 +296,7 @@ func _quit() -> void:
 func start_new_game(map_id: String, seed_value: int, setup: Dictionary) -> void:
 	if editor_playtest:
 		return
+	_leave_online(false)
 	var candidate := GameSession.new_game(data, map_id, seed_value, setup)
 	if candidate == null:
 		menu.show_launch_error("This map could not be started. Reopen setup or check the map in the editor.")
@@ -648,6 +675,7 @@ func _on_slot_chosen(mode: String, slot: String) -> void:
 	if s == null:
 		hud.log_message("That save could not be read.")
 		return
+	_leave_online(false)
 	# A campaign chapter keeps its campaign, whichever slot it was saved to.
 	campaign = null if editor_playtest else Campaign.of_session(data, s)
 	_start(s)
@@ -1276,6 +1304,9 @@ func _end_turn() -> void:
 		return
 	_last_human = session.state.current_player
 	_before_turns = _turn_snapshot()
+	if net.active():
+		_end_online_turn()
+		return
 	# The new day's own messages (week, timers, eliminations) are summed up by
 	# _report_turn_events() once the next human is to move, in the right order.
 	_ai_playing = true
@@ -1295,3 +1326,98 @@ func _enlarge_added_control(reference: WeakRef) -> void:
 	var node := reference.get_ref() as Node
 	if is_instance_valid(node):
 		UiStyle.enlarge_touch_controls(node)
+
+
+# ----------------------------------------------------------- online play --
+
+func _open_online() -> void:
+	if net.active():
+		menu.hide()
+		online_panel.open_match()
+		return
+	var can_host := session != null and not session.state.game_over and not editor_playtest \
+		and not OnlineMatch.human_players(session.state).is_empty()
+	online_panel.open_connect(can_host)
+
+
+func _host_online(person: String, port: int) -> void:
+	var why := net.host(session, person, port)
+	if why != "":
+		online_panel.open_connect(true, why)
+		return
+	campaign = null   # an online game advances no campaign
+	hud.log_message("Hosting online as %s." % net.my_name)
+
+
+func _join_online(address: String, person: String) -> void:
+	var why := net.join(address, person)
+	if why != "":
+		online_panel.open_connect(session != null and not session.state.game_over, why)
+		return
+	menu.hide()
+	online_panel.open_match("Connecting to %s..." % address.strip_edges())
+
+
+## Ends online play; back_to_menu: show the menu (not when a new game or a
+## loaded one takes over the screen).
+func _leave_online(back_to_menu: bool = true) -> void:
+	_online_playing = false
+	if net != null and net.active():
+		net.leave()
+	if online_panel != null and online_panel.visible:
+		online_panel.hide()
+		map_view.visible = true
+		if back_to_menu and session != null and not menu.visible:
+			_open_menu()
+
+
+## A new state of the online game arrived (or the seats changed).
+func _on_online_game(s: GameSession) -> void:
+	if s == session and _online_playing and net.my_turn():
+		online_panel.refresh()   # seats changed during our turn
+		return
+	if s != session:
+		var before := _before_turns
+		_start(s)
+		_before_turns = before
+		campaign = null
+	menu.hide()
+	if s.state.game_over:
+		online_panel.hide()
+		map_view.visible = true
+		_report_turn_events()
+		_refresh()
+		_check_game_over()
+		return
+	if net.my_turn():
+		online_panel.hide()
+		_online_playing = true
+		_last_human = s.state.current_player
+		_report_turn_events()
+		map_view.clear_path()
+		selected_hero_id = ""
+		_look_at = Vector2(-1, -1)
+		_begin_human_turn()
+		return
+	_online_playing = false
+	map_view.visible = false
+	_set_busy(true)
+	online_panel.open_match("")
+
+
+func _end_online_turn() -> void:
+	_online_playing = false
+	session.end_turn()
+	map_view.clear_path()
+	map_view.visible = false
+	_set_busy(true)
+	online_panel.open_match("Turn sent. The next player is on the move.")
+	net.finish_turn(session)
+
+
+func _on_online_closed(reason: String) -> void:
+	_online_playing = false
+	if reason == "":
+		return
+	hud.log_message("[color=#e0b450]%s[/color]" % reason)
+	online_panel.open_connect(false, reason)

@@ -45,8 +45,12 @@ func test_cursors_match_towns_pickups_encounters_and_guards() -> void:
 	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(3, 6)), "pickup")
 	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(12, 8)), "attack")
 	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(3, 8)), "move")
+	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(3, 4)), "capture", "unowned mines use the capture flag")
 	s.state.map.objects["mine_wood"]["owner"] = s.state.current_player
 	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(3, 4)), "move", "owned mines are not presented as unclaimed pickups")
+	s.state.map.objects["cursor_town_fixture"] = {"id": "cursor_town_fixture", "type": "town", "owner": -1, "pos": [3, 8], "garrison": []}
+	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(3, 8)), "capture", "unguarded neutral towns use the capture flag")
+	s.state.map.objects.erase("cursor_town_fixture")
 	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(5, 0)), "blocked")
 	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(-1, 8)), "default")
 	for object in s.state.map.objects.values():
@@ -56,7 +60,9 @@ func test_cursors_match_towns_pickups_encounters_and_guards() -> void:
 				assert_eq(AdventureCursor.action_for(s, "hero_wren", pos), "encounter")
 				break
 	s.state.map.objects["cursor_site_fixture"] = {"id": "cursor_site_fixture", "type": "site", "pos": [3, 8], "site": "outcast_camp", "guard": []}
-	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(3, 8)), "encounter", "unguarded rare sites are interactive")
+	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(3, 8)), "capture", "unguarded dwellings use the capture flag")
+	s.state.map.objects["cursor_site_fixture"]["owner"] = s.state.current_player
+	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(3, 8)), "encounter", "owned dwellings remain interactive")
 	s.state.map.objects.erase("cursor_site_fixture")
 	s.hero("hero_wren").movement_left = 0
 	assert_eq(AdventureCursor.action_for(s, "hero_wren", Vector2i(3, 8)), "blocked")
@@ -77,3 +83,6 @@ func test_every_cursor_has_a_fixed_in_bounds_hotspot() -> void:
 		var hotspot: Array = info.get("hotspot", [0, 0])
 		assert_eq(Vector2(hotspot[0], hotspot[1]), Vector2(2, 2), action)
 		assert_eq(Art.sprite("cursor_" + action).get_size(), Vector2(40, 40), action)
+		var image := Art.sprite("cursor_" + action).get_image()
+		assert_eq(image.get_pixel(2, 2).a, 1.0, action + " click tip is visible")
+		assert_eq(image.get_pixel(0, 0).a, 0.0, action + " outer margin stays transparent")

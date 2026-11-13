@@ -66,7 +66,7 @@ static func new_game_from_definition(game_data: GameData, definition: Dictionary
 			"is_human": bool(p["is_human"]), "difficulty": String(p.get("difficulty", game_data.default_difficulty())),
 			"team": maxi(0, int(p.get("team", 0))), "defeated": false, "days_without_town": 0, "eliminated_day": 0, "scouted": {},
 			"resources": ResourceBank.new(game_data.starting_resources),
-			"fog": FogOfWar.new(st.map.width, st.map.height), "news": []})
+			"fog": FogOfWar.new(st.map.width, st.map.height), "news": [], "seat": ""})
 	for hd in def["heroes"]:
 		var h := Hero.create(hd, game_data)
 		st.heroes[h.id] = h
@@ -985,10 +985,31 @@ func attack(hero_id: String, target_id: String, defender_flees: bool = false) ->
 	result["defender_hero_id"] = foe.id if foe != null else ""
 	result["target_kind"] = tgt["kind"]
 	result["hero_id"] = hero_id
+	_report_to_defender(h, tgt, result)
 	VictoryRules.update(self)
 	battle_resolved.emit(result)
 	state_changed.emit()
 	return result
+
+
+## Online, the defender sits at another computer: the battle waits in their
+## news until their next turn. (Offline the defender watches it happen.)
+func _report_to_defender(attacker: Hero, tgt: Dictionary, result: Dictionary) -> void:
+	if state.online.is_empty():
+		return
+	var foe: Hero = tgt["hero"]
+	var defender := foe.owner if foe != null else int(tgt["object"].get("owner", -1))
+	if defender < 0 or defender == attacker.owner or defender >= state.players.size():
+		return
+	var where: String = foe.name if foe != null else String(tgt["object"].get("name", "your holding"))
+	var line := "%s of %s attacked %s on day %d." % [attacker.name, state.player(attacker.owner)["name"], where, state.day]
+	if bool(result.get("defender_fled", false)):
+		line += " %s fled and left the army behind." % where
+	elif bool(result.get("defender_retreated", false)):
+		line += " %s fell back with the survivors." % where
+	else:
+		line += " You held." if int(result["winner"]) == 1 else " You lost the battle."
+	_add_news(state.player(defender), line)
 
 
 ## After a victory, a share of the hero's fallen creatures rise again

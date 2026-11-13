@@ -8,6 +8,7 @@ Crowns of Caern is a Godot 4 turn-based strategy game. The GitHub repository is 
 - [Agent and contributor rules](../CLAUDE.md): determinism, headless logic, save compatibility, art and tests. [AGENTS.md](../AGENTS.md) is the agent entry point.
 - [Design and architecture](DESIGN.md): game systems and data models. [Faction guide](FACTIONS.md): faction identities. [Story bible](STORY.md): world, timeline, cast and every campaign's beats. [Art bible](ART_BIBLE.md): visual direction; older sheets linked there are historical references, not necessarily current production art.
 - [Game manual](manual/README.md): the player manual (lore, peoples, heroes, campaigns, rules) and the developer docs as one illustrated website, generated from `data/` and the artwork by `tools/manual/build_manual.py`.
+- [Online play](ONLINE.md): hosting, joining, Tailscale, resuming online games.
 - [iOS guide](IOS.md): export and signing. Reports under `docs/art/` document individual art batches and are historical snapshots, not necessarily current instructions.
 
 ## Code and data
@@ -20,6 +21,7 @@ Crowns of Caern is a Godot 4 turn-based strategy game. The GitHub repository is 
 | `src/world/` | Adventure map, movement and procedural generation. |
 | `src/heroes/`, `src/armies/`, `src/economy/`, `src/combat/`, `src/ai/` | Rules for heroes, armies, towns, battles and computer players. |
 | `src/ui/` | Menus, map and screens; `art.gd` resolves sprite assets. UI calls `GameSession` rather than changing rules directly. |
+| `src/game/online_match.gd`, `src/net/`, `src/ui/online_panel.gd` | Online play by turn handoff over ENet. See [ONLINE.md](ONLINE.md). |
 | `src/audio/`, `data/audio.json` | Audio catalog and playback. |
 | `data/` | Game definitions, including factions, buildings, classes, spells and rules. `creatures/` contains faction rosters; `maps/` contains authored maps; `map_templates.json` configures generated maps. |
 | `tests/unit/`, `tests/run_tests.gd` | Headless tests and runner. `./run_tests.sh [--slow] [filter]` imports the project, runs the tests in one Godot process per CPU core (each with its own empty user data folder) and, without a filter, checks the asset pipeline when Python dependencies are available. `--slow` adds the tests that files list in `const SLOW`. |

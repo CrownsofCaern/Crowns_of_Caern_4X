@@ -48,14 +48,19 @@ extends RefCounted
 ##     fight to the last), which play exactly as before.
 ## 23: cobolt posts carry stock, local hostility, fixed loot and plundered state.
 ## Older saves have no cobolt posts; none are inserted on load.
-const SAVE_VERSION := 23
+## 24: online play: "online" ({match_id} while the game is hosted for players on
+##     other computers, else {}) and players carry a "seat" (the name of the
+##     person who plays them online, "" for none). Older saves are offline games
+##     with no seats taken.
+const SAVE_VERSION := 24
 
 var map: AdventureMap
 var day: int = 1
 var current_player: int = 0
 var players: Array = []        # [{id, name, faction, color, is_human, difficulty, team, resources: ResourceBank, fog: FogOfWar,
                                #   defeated, days_without_town, eliminated_day, news: [String], scouted}]; difficulty: a data/ai_difficulty.json level;
-                               #   team: 0 = alone, players sharing a team > 0 are allies (see allied())
+                               #   team: 0 = alone, players sharing a team > 0 are allies (see allied());
+                               #   seat: who plays this player in an online game ("" = nobody yet, see OnlineMatch)
 var heroes: Dictionary = {}    # id -> Hero
 var rng: GameRng = GameRng.new(1)
 var game_seed: int = 1
@@ -74,6 +79,8 @@ var omen: Dictionary = {}
 ## Objective id -> completed visit; ordinary games have no scenario progress.
 var scenario_progress: Dictionary = {}
 var scenario_runtime: Dictionary = {}
+## Online play (OnlineMatch): {match_id: String} while hosted for other computers, else {}.
+var online: Dictionary = {}
 
 
 ## Select the closest town held at the start, with an id tie-breaker.
@@ -157,7 +164,7 @@ func to_dict() -> Dictionary:
 			"scouted": (p.get("scouted", {}) as Dictionary).duplicate(),
 			"known_enemy_heroes": (p.get("known_enemy_heroes", {}) as Dictionary).duplicate(),
 			"resources": p["resources"].to_dict(), "fog": p["fog"].to_dict(),
-			"news": (p.get("news", []) as Array).duplicate()})
+			"news": (p.get("news", []) as Array).duplicate(), "seat": String(p.get("seat", ""))})
 	var hs := {}
 	for id in heroes:
 		hs[id] = heroes[id].to_dict()
@@ -180,6 +187,7 @@ func to_dict() -> Dictionary:
 		"omen": omen.duplicate(true),
 		"scenario_progress": scenario_progress.duplicate(true),
 		"scenario_runtime": scenario_runtime.duplicate(true),
+		"online": online.duplicate(true),
 	}
 	out["map"] = map.static_definition()
 	return out
@@ -263,7 +271,9 @@ static func from_dict(d: Dictionary, data: GameData) -> GameState:
 			"days_without_town": int(p.get("days_without_town", 0)), "eliminated_day": int(p.get("eliminated_day", 0)), "scouted": scouted,
 			"known_enemy_heroes": (p.get("known_enemy_heroes", {}) as Dictionary).duplicate(),
 			"resources": ResourceBank.from_dict(p["resources"]), "fog": FogOfWar.from_dict(p["fog"]),
-			"news": (p.get("news", []) as Array).map(func(n): return String(n))})
+			"news": (p.get("news", []) as Array).map(func(n): return String(n)),
+			# v23 -> v24: offline games have no seats taken.
+			"seat": String(p.get("seat", ""))})
 	for id in d["heroes"]:
 		s.heroes[id] = Hero.from_dict(d["heroes"][id])
 		s.heroes[id].army.initialize_veterans(data)
@@ -293,6 +303,9 @@ static func from_dict(d: Dictionary, data: GameData) -> GameState:
 	s.scenario_progress = progress.duplicate(true) if typeof(progress) == TYPE_DICTIONARY else {}
 	var runtime: Variant = d.get("scenario_runtime", {})
 	s.scenario_runtime = runtime.duplicate(true) if typeof(runtime) == TYPE_DICTIONARY else {}
+	# v23 -> v24: older saves were never hosted online.
+	var online_in: Variant = d.get("online", {})
+	s.online = online_in.duplicate(true) if typeof(online_in) == TYPE_DICTIONARY else {}
 	return s
 
 

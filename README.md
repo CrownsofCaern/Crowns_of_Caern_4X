@@ -112,6 +112,10 @@ godot --path .
 
 The title screen offers campaigns and new-game setup with map, faction, player slots, seed and difficulty options. Campaigns open as painted regional journeys: select a numbered destination to inspect the mission, continue at the gold stop, and zoom or drag to explore the map.
 
+Choose **Online Game** to play with friends on other computers: one hosts the game in progress, the others
+join by address and everyone takes their turn on their own computer. Over the internet, use Tailscale so nobody
+needs router settings. See the [online play guide](docs/ONLINE.md).
+
 Choose **Map Editor** to create local drafts, configure players, and edit terrain,
 roads, scenery, objects and heroes on copies of bundled maps. See the [map editor guide](docs/MAP_EDITOR.md) for controls
 and the features still in progress.

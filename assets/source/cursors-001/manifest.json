@@ -1,0 +1,46 @@
+{
+  "generator": "built-in image_gen",
+  "prompts": "assets/source/cursors-001/prompts.json",
+  "sources": {
+    "attack": {
+      "path": "assets/source/cursors-001/attack.png",
+      "sha256": "17d574cd66478aa5b929ad32ee8044b1d191e3e99951b72792512a7f22fb7249"
+    },
+    "blocked": {
+      "path": "assets/source/cursors-001/blocked.png",
+      "sha256": "d371fcc3cb82830a034d0c2c497083209513034e9770de1bc59796747771e5a5"
+    },
+    "capture": {
+      "path": "assets/source/cursors-001/capture.png",
+      "sha256": "91612efa33f3ac7cf90656fe58e0e6bbb8edc14e6fd737540ec38baf85779520"
+    },
+    "default": {
+      "path": "assets/source/cursors-001/default.png",
+      "sha256": "27e969f70bb36840d010daec83e7e9a7efafecbf24f7e59516719d5c9acecad2"
+    },
+    "encounter": {
+      "path": "assets/source/cursors-001/encounter.png",
+      "sha256": "59b767e9f462b3e5df46e908c096a9727603ec38348a17de4e839d780ea1bf10"
+    },
+    "move": {
+      "path": "assets/source/cursors-001/move.png",
+      "sha256": "8723a1e7808563fbf59586d571fe4e1daddbbd62960ea725688984de55bd6b91"
+    },
+    "pickup": {
+      "path": "assets/source/cursors-001/pickup.png",
+      "sha256": "69b17e323f077cab4d0a74c76283e9f275d636e55f1790bfce064a243e37ca19"
+    },
+    "select": {
+      "path": "assets/source/cursors-001/select.png",
+      "sha256": "4e1490f0806983298611c67f6a2b7463e5147f99a37f3c7758c481d1734e8cfe"
+    },
+    "town": {
+      "path": "assets/source/cursors-001/town.png",
+      "sha256": "eccc4bd1486ad3b576023c6d21b3944018f2cacd748f2ac0fe905dc6d41a295d"
+    },
+    "wait": {
+      "path": "assets/source/cursors-001/wait.png",
+      "sha256": "f23b46a199503017eb9e4ff13c705635521f501c5ad084d9358412309d8b642a"
+    }
+  }
+}

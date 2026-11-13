@@ -512,6 +512,10 @@ From launch to the end of a game. Rules are headless (`src/game/game_setup.gd`, 
 - **Hot-seat and computer players:** after each turn the computer players move (`StrategicAI.play_ai_turns`);
   with two or more humans a curtain hides the map until the next player begins, so nobody sees another's fog.
   The autosave slot is written at the start of every human turn.
+- **Online play** ([ONLINE.md](ONLINE.md)): the save is the turn token. The computer of the player to move plays
+  the turn and sends the save to the host at End Turn; the host checks it (`OnlineMatch.check_handoff`), plays
+  the computer players and sends the game to everyone. A player's `seat` names the person playing it, so a
+  saved online game resumes with the same people and anyone can join a game in progress.
 - **Hero battles:** an enemy hero may be the destination of a move; `move_hero` returns `battle` = that hero's
   id (or the town's id if the hero stands in its own town). `battle_target(id)` resolves an id to
   `{kind: hero|town|mine|neutral_army…, pos, object, hero}`; `battle_setup`, `preview_battle` and `attack` take

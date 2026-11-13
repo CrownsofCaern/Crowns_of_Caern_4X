@@ -5,6 +5,7 @@ extends Control
 
 signal start_requested(map_id: String, seed_value: int, setup: Dictionary)
 signal load_requested
+signal online_requested
 signal resume_requested
 signal quit_requested
 signal sound_requested
@@ -118,6 +119,7 @@ func build(data: GameData) -> void:
 	_menu_button("New Game", _show_setup)
 	_menu_button("Campaign", show_campaigns)
 	_menu_button("Load Game", func(): load_requested.emit())
+	_menu_button("Online Game", func(): online_requested.emit())
 	_menu_button("Map Editor", func(): editor_requested.emit())
 	_menu_button("Sound", func(): sound_requested.emit())
 	_menu_button("Quit", func(): quit_requested.emit())

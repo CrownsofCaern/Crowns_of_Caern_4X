@@ -370,7 +370,8 @@ func test_ai_versus_ai_sanity() -> void:
 			assert_gt(s.mines_of(i).size() + s.towns_of(i).size(), 0, "player %d holds something %s" % [i, where])
 	for i in 2:
 		assert_gt(s.state.player(i)["fog"].explored_count(), 120, "player %d explored" % i)
-	assert_lt(ms, 20000, "three weeks of AI turns stay fast (%d ms)" % ms)
+	# Wall-clock time on shared CI runners varies 2x (12-23 s), so this only catches a real slowdown.
+	assert_lt(ms, 45000, "three weeks of AI turns stay fast (%d ms)" % ms)
 
 
 func test_ai_beats_an_idle_opponent() -> void:

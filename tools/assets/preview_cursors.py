@@ -6,8 +6,8 @@ from PIL import Image, ImageDraw
 root = Path(__file__).resolve().parents[2]
 manifest = json.loads((root / "assets/manifest.json").read_text())
 atlas = Image.open(root / manifest["atlases"]["ui"]["path"].removeprefix("res://")).convert("RGBA")
-actions = ["default", "move", "town", "attack", "pickup", "encounter", "select", "blocked", "wait"]
-output = Image.new("RGB", (750, 510), "#1a1c20")
+actions = ["default", "move", "town", "attack", "capture", "pickup", "encounter", "select", "blocked", "wait"]
+output = Image.new("RGB", (750, 680), "#1a1c20")
 draw = ImageDraw.Draw(output)
 for i, action in enumerate(actions):
     x, y, w, h = manifest["sprites"]["cursor_" + action]["rect"]

@@ -2,7 +2,7 @@ class_name AdventureCursor
 extends Node
 ## Presentation-only cursor intent. Hidden objects never influence its shape.
 
-const ACTIONS := ["default", "move", "town", "attack", "pickup", "encounter", "select", "blocked", "wait"]
+const ACTIONS := ["default", "move", "town", "attack", "capture", "pickup", "encounter", "select", "blocked", "wait"]
 var map_view: MapView
 var current_action := ""
 var _textures: Dictionary = {}
@@ -97,8 +97,12 @@ static func action_for(s: GameSession, hero_id: String, tile: Vector2i) -> Strin
 	if (other != null and other.owner != h.owner) or s.is_guarded(object, h.owner):
 		return "attack"
 	match String(object.get("type", "")):
-		"town": return "town"
+		"town": return "town" if int(object.get("owner", -1)) == h.owner or s.allied(int(object.get("owner", -1)), h.owner) else "capture"
 		"resource", "artifact": return "pickup"
-		"mine": return "move" if int(object.get("owner", -1)) == h.owner else "pickup"
-		"encounter", "site": return "encounter"
+		"mine": return "move" if int(object.get("owner", -1)) == h.owner or s.allied(int(object.get("owner", -1)), h.owner) else "capture"
+		"site":
+			if MapSites.kind(object, s.data) == "dwelling" and not s.allied(int(object.get("owner", -1)), h.owner):
+				return "capture"
+			return "encounter"
+		"encounter": return "encounter"
 	return "move"
