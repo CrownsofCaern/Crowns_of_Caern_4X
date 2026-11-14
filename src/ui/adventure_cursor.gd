@@ -60,7 +60,7 @@ func _process(_delta: float) -> void:
 		show_action("default")
 		_dirty = true
 		return
-	if not map_view.input_enabled or not s.current_player()["is_human"]:
+	if not map_view.input_enabled or not s.current_player()["is_human"] or s is OnlineView:
 		show_action("wait")
 		_dirty = true
 		return

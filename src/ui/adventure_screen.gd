@@ -30,13 +30,21 @@ var _editor_previous_process_mode: Node.ProcessMode = Node.PROCESS_MODE_INHERIT
 var save_dialog: SaveLoadDialog
 var game_over_dialog: GameOverDialog
 var curtain: TurnCurtain
-var sound_dialog: SoundDialog
+## Top-right hammer while a town can still build today.
+var build_hammer: BuildHammer
+var options_dialog: OptionsDialog
 var chapter_dialog: ChapterDialog
 ## Online play (host or join by address); idle unless a game is online.
 var net: NetSession
 var online_panel: OnlinePanel
 ## True while this computer plays its turn of an online game.
 var _online_playing := false
+## The last online game received; while waiting, session is a look-only
+## OnlineView copy of it and this is the real one.
+var _online_game: GameSession
+## Shown over the map while another person moves in an online game.
+var waiting_bar: PanelContainer
+var _waiting_label: Label
 var found_dialog: ArtifactFoundDialog
 ## Artifacts the hero gained in an encounter, shown once its result closes.
 var _found_in_encounter: Array[String] = []
@@ -89,6 +97,15 @@ func _ready() -> void:
 	layer.add_child(hud)
 	hud.build(data)
 	_build_zoom_bar(layer)
+	build_hammer = BuildHammer.new()
+	build_hammer.theme = UiStyle.make_theme()
+	build_hammer.anchor_left = 1.0
+	build_hammer.anchor_right = 1.0
+	build_hammer.grow_horizontal = Control.GROW_DIRECTION_BEGIN
+	build_hammer.offset_right = -Hud.map_margins().z - 8
+	build_hammer.offset_top = Hud.map_margins().y + 8
+	build_hammer.town_requested.connect(_open_town)
+	layer.add_child(build_hammer)
 	panels = BattlePanels.new()
 	layer.add_child(panels)
 	panels.build(data)
@@ -147,6 +164,7 @@ func _ready() -> void:
 	map_view.hero_stepped.connect(_on_hero_stepped)
 	map_view.zoom_requested.connect(func(steps: int, at: Vector2): zoom_by(steps, at))
 	map_view.pan_requested.connect(_pan)
+	map_view.path_cleared.connect(func(): hud.show_route_cost(null, 0))
 	hud.end_turn_pressed.connect(_end_turn)
 	hud.save_pressed.connect(func(): _open_saves("save"))
 	hud.load_pressed.connect(func(): _open_saves("load"))
@@ -195,17 +213,20 @@ func _ready() -> void:
 	online_panel.leave_requested.connect(_leave_online)
 	online_panel.closed.connect(func():
 		map_view.visible = true
+		if session is OnlineView:
+			return   # back to looking around while the others move
 		menu.open(session != null and not session.state.game_over, editor_playtest))
+	_build_waiting_bar(flow_layer)
 	net.game_received.connect(_on_online_game)
 	net.people_changed.connect(online_panel.refresh)
 	net.notice.connect(func(t: String):
 		online_panel.add_note(t)
 		hud.log_message("[color=#e0b450]%s[/color]" % t))
 	net.closed.connect(_on_online_closed)
-	sound_dialog = SoundDialog.new()
-	dialog_layer.add_child(sound_dialog)
-	sound_dialog.build(data, 520)
-	sound_dialog.closed.connect(func():
+	options_dialog = OptionsDialog.new()
+	dialog_layer.add_child(options_dialog)
+	options_dialog.build(data, 520)
+	options_dialog.closed.connect(func():
 		if not menu.visible:
 			_set_busy(false))
 	game_over_dialog = GameOverDialog.new()
@@ -239,9 +260,9 @@ func _ready() -> void:
 		_set_busy(false))
 	menu.campaign_requested.connect(start_campaign)
 	menu.quit_requested.connect(_quit)
-	menu.sound_requested.connect(func():
+	menu.options_requested.connect(func():
 		_set_busy(true)
-		sound_dialog.open())
+		options_dialog.open())
 	menu.editor_requested.connect(_open_editor)
 	menu.editor_return_requested.connect(func(): playtest_return_requested.emit())
 	if editor_playtest:
@@ -722,6 +743,7 @@ func _refresh() -> void:
 		for th in session.town_threats(session.state.current_player):
 			map_view.threatened.append(AdventureMap.object_pos(session.town(th["town_id"])))
 	hud.refresh(session, _hero())
+	build_hammer.update(session)
 	_keep_hero_in_view()
 	map_view.refresh()
 
@@ -1040,6 +1062,9 @@ func _show_planned_route() -> void:
 		return
 	var obj := session.state.map.object_at(target)
 	map_view.set_path(plan["path"], plan["reachable"], session.is_guarded(obj, h.owner) or (not obj.is_empty() and obj["type"] == "encounter"))
+	# A route that is in reach today shows what it leaves on the movement bar.
+	if int(plan["reachable"]) == (plan["costs"] as Array).size():
+		hud.show_route_cost(h, int(plan["total_cost"]))
 
 
 func _on_tile_clicked(t: Vector2i) -> void:
@@ -1066,6 +1091,14 @@ func _on_tile_clicked(t: Vector2i) -> void:
 	if h.pos == t and here.get("type", "") == "scenario_site":
 		_open_objectives(String(here["id"]))
 		return
+	if session is OnlineView:
+		# Waiting online: own towns open on a click, routes are only shown.
+		if here.get("type", "") == "town" and int(here.get("owner", -1)) == h.owner:
+			_open_town(String(here["id"]))
+			return
+		if not map_view.path.is_empty() and map_view.path[-1] == t:
+			hud.log_message(OnlineView.WAIT + ".")
+			return
 	# Second click on the planned destination executes the move.
 	if not map_view.path.is_empty() and map_view.path[-1] == t:
 		await _execute_move(t)
@@ -1302,6 +1335,9 @@ func _next_hero() -> void:
 func _end_turn() -> void:
 	if _busy or session.state.game_over:
 		return
+	if session is OnlineView:
+		hud.log_message(OnlineView.WAIT + ".")
+		return
 	_last_human = session.state.current_player
 	_before_turns = _turn_snapshot()
 	if net.active():
@@ -1364,6 +1400,7 @@ func _leave_online(back_to_menu: bool = true) -> void:
 	_online_playing = false
 	if net != null and net.active():
 		net.leave()
+	_drop_online_view()
 	if online_panel != null and online_panel.visible:
 		online_panel.hide()
 		map_view.visible = true
@@ -1373,9 +1410,13 @@ func _leave_online(back_to_menu: bool = true) -> void:
 
 ## A new state of the online game arrived (or the seats changed).
 func _on_online_game(s: GameSession) -> void:
+	_online_game = s
 	if s == session and _online_playing and net.my_turn():
 		online_panel.refresh()   # seats changed during our turn
 		return
+	if not s.state.game_over and not net.my_turn() and _show_online_view(s):
+		return
+	waiting_bar.hide()
 	if s != session:
 		var before := _before_turns
 		_start(s)
@@ -1412,11 +1453,64 @@ func _end_online_turn() -> void:
 	map_view.visible = false
 	_set_busy(true)
 	online_panel.open_match("Turn sent. The next player is on the move.")
-	net.finish_turn(session)
+	var sent := session
+	net.finish_turn(sent)
+	# A joiner waits for the host's answer: look around the turn just sent.
+	if session == sent and not sent.state.game_over and net.active():
+		_show_online_view(sent)
+
+
+## While someone else moves: show this person's own side of a copy of game
+## (towns, heroes, armies; orders are refused). False when they hold no seat.
+func _show_online_view(game: GameSession) -> bool:
+	var view := OnlineView.of(game, net.my_name)
+	if view == null:
+		return false
+	var before := _before_turns
+	_start(view)
+	_before_turns = before
+	campaign = null
+	_online_playing = false
+	online_panel.hide()
+	map_view.visible = true
+	var who := OnlineMatch.person_to_move(game.state)
+	_waiting_label.text = "%s is on the move. Look around your side; orders wait for your turn." \
+		% (who if who != "" else String(game.current_player().get("name", "Another player")))
+	waiting_bar.show()
+	return true
+
+
+## Puts the real online game back in place of a look-only copy.
+func _drop_online_view() -> void:
+	if waiting_bar != null:
+		waiting_bar.hide()
+	if session is OnlineView:
+		_start(_online_game if _online_game != null else GameSession.from_state(data, session.state))
+	_online_game = null
+
+
+func _build_waiting_bar(flow_layer: CanvasLayer) -> void:
+	waiting_bar = PanelContainer.new()
+	waiting_bar.add_theme_stylebox_override("panel", UiStyle.frame_panel(8))
+	waiting_bar.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP, Control.PRESET_MODE_MINSIZE, 8)
+	waiting_bar.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 12)
+	waiting_bar.add_child(row)
+	_waiting_label = UiStyle.label("", 14, UiStyle.BRASS)
+	row.add_child(_waiting_label)
+	var open := Button.new()
+	open.text = "Online"
+	open.tooltip_text = "Players, seats and notes of this online game"
+	open.pressed.connect(_open_online)
+	row.add_child(open)
+	flow_layer.add_child(waiting_bar)
+	waiting_bar.hide()
 
 
 func _on_online_closed(reason: String) -> void:
 	_online_playing = false
+	_drop_online_view()
 	if reason == "":
 		return
 	hud.log_message("[color=#e0b450]%s[/color]" % reason)

@@ -161,3 +161,20 @@ func test_data_fingerprint_is_stable() -> void:
 	var a := OnlineMatch.data_fingerprint()
 	assert_eq(a.length(), 12)
 	assert_eq(OnlineMatch.data_fingerprint(), a)
+
+
+func test_waiting_player_sees_own_side_of_a_copy_and_gives_no_orders() -> void:
+	var s := _match()
+	var before := JSON.stringify(s.state.to_dict())
+	assert_true(OnlineView.of(s, "Cy") == null, "no seat, no view")
+	var v := OnlineView.of(s, "Ben")
+	assert_eq(v.state.current_player, 2, "Ben sees his own player while Ana moves")
+	assert_eq(v.current_player()["fog"].explored_count(), s.state.player(2)["fog"].explored_count())
+	var town_id: String = v.towns_of(2)[0]["id"]
+	assert_false(v.build(town_id, "x")["ok"])
+	assert_ne(v.can_hire_hero(town_id), "")
+	assert_false(v.move_hero(v.state.heroes_of(2)[0].id, Vector2i(0, 0))["ok"])
+	v.end_turn()
+	assert_eq(v.state.day, 1)
+	assert_eq(v.save_to_file("user://never.json"), ERR_UNAVAILABLE)
+	assert_eq(JSON.stringify(s.state.to_dict()), before, "the real game is untouched")

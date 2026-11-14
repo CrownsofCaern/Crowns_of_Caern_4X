@@ -1,0 +1,29 @@
+{
+  "_doc": "Spell icons (128x128) taken unchanged from the project's own RTS game, Crowns of Caern: Warbound (its path given as source), made with OpenAI image generation. Shown by the hero screen's spell tab as res://assets/spells/<spell id>.png.",
+  "icons": {
+    "marching_spark": {
+      "source": "assets/ui/skills/leap.png",
+      "sha256": "e2e6134be4c0fbf64b9cf7a1896158850948e19d515488cabdcfaca712afbdc8"
+    },
+    "swiftwind": {
+      "source": "assets/ui/passives/aura_haste.png",
+      "sha256": "72bfae5aab1feb558d15bfda959020fd94a044a0f24c821778ac629a15535756"
+    },
+    "keen_edge": {
+      "source": "assets/ui/skills/judgement.png",
+      "sha256": "8aedfe9198b69a4fcf9754b38c5a9f5981c98873bce7d0c302bbdccf36e01758"
+    },
+    "warfire": {
+      "source": "assets/ui/skills/firestorm.png",
+      "sha256": "d376ddd803e5d54b7b38135aa7d8a38dc6f18c854036057fefffd0f3f84bbbaa"
+    },
+    "homeward": {
+      "source": "assets/ui/skills/lantern_of_mending.png",
+      "sha256": "eec03177eccc5eb852d5b511c52e1d81c5776382a364be85efc093277b0347cd"
+    },
+    "town_gate": {
+      "source": "assets/ui/skills/sanctuary.png",
+      "sha256": "73cb03f57dab818aacc66f208bb0f6655a81f159432466b9c0687c44939d837f"
+    }
+  }
+}

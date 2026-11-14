@@ -96,6 +96,7 @@ func load_all(dir: String) -> void:
 	var e: Dictionary = read_json(dir + "/encounters.json")
 	encounters = e["encounters"]
 	encounter_rules = {"chance_floor": float(e.get("chance_floor", 0.05)), "chance_cap": float(e.get("chance_cap", 0.95)),
+		"spell_find_chance": float(e.get("spell_find_chance", 0.0)),
 		"marks": e.get("marks", {})}
 	var b: Dictionary = read_json(dir + "/buildings.json")
 	town_types = b["towns"]

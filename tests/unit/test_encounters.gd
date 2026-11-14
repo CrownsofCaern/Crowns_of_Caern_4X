@@ -300,3 +300,23 @@ func test_encounter_xp_stays_modest() -> void:
 				for e in c.get(key, {}).get("effects", []):
 					if e["type"] == "xp":
 						assert_true(int(e["amount"]) <= 500, "%s xp %d" % [eid, int(e["amount"])])
+
+
+func test_won_encounters_can_turn_up_a_rare_spell() -> void:
+	var before: float = data.encounter_rules["spell_find_chance"]
+	assert_gt(before, 0.0, "a small chance is configured")
+	assert_lt(before, 0.25, "and it stays small")
+	data.encounter_rules["spell_find_chance"] = 1.0
+	var out := {"lines": []}
+	session.encounters._maybe_find_spell(hero, out)
+	var found := String(out.get("spell", ""))
+	assert_eq(data.magic["spells"][found]["source"], "rare")
+	assert_true(hero.known_spells(data).has(found))
+	# Once every rare spell is known, nothing more is found.
+	for id in data.magic["spells"]:
+		if data.magic["spells"][id]["source"] == "rare" and not hero.spells.has(id):
+			hero.spells.append(id)
+	out = {"lines": []}
+	session.encounters._maybe_find_spell(hero, out)
+	assert_false(out.has("spell"))
+	data.encounter_rules["spell_find_chance"] = before

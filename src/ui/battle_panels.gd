@@ -31,6 +31,8 @@ var _body: VBoxContainer
 var _mode := ""             # "forecast" or "report"
 var _details: VBoxContainer
 var _details_toggle: Button
+## Whether the forecast's orders and formation are unfolded (kept for the session).
+var _advanced_open := false
 
 
 func build(data: GameData) -> void:
@@ -259,7 +261,23 @@ func show_forecast(enemy_name: String, pred: Dictionary) -> void:
 	_two_columns(_column("Your army (expected losses)" if odds == "exact" else "Your army", my_cards, "No troops"),
 		_column("Scouts report (exact)" if scouted else "Rough estimate", foe_cards, "Unknown"))
 	if pred.has("orders"):
-		_body.add_child(_orders_row(pred["orders"]))
+		# Orders and formation stay folded away until Advanced is opened.
+		var orders := _orders_row(pred["orders"])
+		orders.visible = _advanced_open
+		var advanced := Button.new()
+		advanced.name = "Advanced"
+		advanced.flat = true
+		advanced.focus_mode = Control.FOCUS_NONE
+		advanced.toggle_mode = true
+		advanced.button_pressed = _advanced_open
+		advanced.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		advanced.text = ("▾ " if _advanced_open else "▸ ") + "Advanced: orders and formation"
+		advanced.toggled.connect(func(on: bool):
+			_advanced_open = on
+			orders.visible = on
+			advanced.text = ("▾ " if on else "▸ ") + "Advanced: orders and formation")
+		_body.add_child(advanced)
+		_body.add_child(orders)
 	var buttons := [["Withdraw", _cancel, "Back away  (Esc)"]]
 	if not scouted:
 		var why := String(pred.get("scout_reason", ""))

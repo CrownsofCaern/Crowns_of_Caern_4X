@@ -153,9 +153,13 @@ func test_watch_setting_is_remembered_and_off_by_default() -> void:
 	DirAccess.remove_absolute(TMP_SETTINGS)
 
 
-func test_3d_setting_is_remembered_and_on_by_default() -> void:
+func test_3d_setting_is_remembered_and_off_by_default() -> void:
 	DirAccess.remove_absolute(TMP_SETTINGS)
-	assert_true(BattleViewer.three_d_enabled(TMP_SETTINGS), "3D unless unticked")
+	assert_false(BattleViewer.three_d_enabled(TMP_SETTINGS), "sprite battlefield unless ticked")
+	BattleViewer.set_watch_enabled(true, TMP_SETTINGS)
+	assert_false(BattleViewer.three_d_enabled(TMP_SETTINGS), "still off with other settings saved")
+	BattleViewer.set_three_d_enabled(true, TMP_SETTINGS)
+	assert_true(BattleViewer.three_d_enabled(TMP_SETTINGS))
 	BattleViewer.set_three_d_enabled(false, TMP_SETTINGS)
 	assert_false(BattleViewer.three_d_enabled(TMP_SETTINGS), "the sprite battlefield")
 	BattleViewer.set_watch_enabled(true, TMP_SETTINGS)

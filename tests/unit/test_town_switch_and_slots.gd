@@ -139,3 +139,53 @@ func test_town_scene_preview_clears_when_switching_town() -> void:
 	assert_false(ts._building_preview.visible)
 	assert_eq(ts._preview_site, "")
 	ts.free()
+
+
+func _recruit_names(ts: TownScreen) -> Array:
+	var out := []
+	for b in ts._right.find_children("*", "Button", true, false):
+		if (b as Button).text == "Recruit":
+			var info: Node = b.get_parent().get_child(1)
+			out.append((info.get_child(0).get_child(0) as Label).text)
+	return out
+
+
+func test_recruit_lists_the_upgrade_with_a_swap_to_the_base_unit() -> void:
+	var t := session.town(TOWN)
+	var base := String(Town.dwellings(t, data)[0])
+	var up := String(data.creature(base)["upgrade"])
+	for b in Town.building_ids(t, data):
+		for e in Town.building(t, b, data).get("effects", []):
+			if e["type"] == "dwelling_upgrade" and e["creature"] == base and not t["built"].has(b):
+				t["built"].append(b)
+	assert_true(Town.recruitable(t, data).has(up), "the upgraded dwelling stands")
+	var ts := _screen()
+	var names := _recruit_names(ts)
+	assert_eq(names.size(), Town.dwellings(t, data).size(), "one row per dwelling")
+	assert_true(String(names[0]).begins_with(data.creature(up)["name"]), "the better unit by default")
+	var swap: Button = ts._right.find_children("*", "Button", true, false).filter(func(b): return (b as Button).text == "⇅")[0]
+	swap.pressed.emit()
+	assert_true(String(_recruit_names(ts)[0]).begins_with(data.creature(base)["name"]), "swapped to the base unit")
+	ts.free()
+
+
+func test_market_amounts_snap_to_whole_units_bought() -> void:
+	var t := session.town(TOWN)
+	for b in Town.building_ids(t, data):
+		for e in Town.building(t, b, data).get("effects", []):
+			if e["type"] == "market" and not t["built"].has(b):
+				t["built"].append(b)
+	assert_gt(session.market_count(0), 0)
+	var ts := _screen()
+	ts._sell.select(data.resource_order.find("gold"))
+	ts._buy.select(data.resource_order.find("crystal"))
+	# Out of the scene tree the SpinBox sends no value_changed, so call what it would.
+	ts._amount.set_value_no_signal(1)
+	ts._snap_amount(1)
+	var one := Economy.trade_price("gold", "crystal", 1, session.market_count(0), data)
+	assert_eq(int(ts._amount.value), one, "gold snaps to one whole crystal")
+	ts._amount.set_value_no_signal(one + 1)
+	ts._snap_amount(one + 1)
+	assert_eq(int(ts._amount.value), Economy.trade_price("gold", "crystal", 2, session.market_count(0), data), "up a step buys one more")
+	assert_eq(ts._sell.get_item_icon(0) != null, true, "resources show their icons")
+	ts.free()

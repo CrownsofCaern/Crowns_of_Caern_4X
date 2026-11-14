@@ -18,6 +18,8 @@ signal zoom_requested(steps: int, at: Vector2)
 signal pan_requested(delta: Vector2)
 ## Emitted as an animated hero sets foot on each tile (footsteps, pickups).
 signal hero_stepped(hero_id: String, tile: Vector2i)
+## The planned route was removed (moved along, cancelled or replaced).
+signal path_cleared
 
 const TILE := 40                       # on-screen pixels per map cell
 const TERRITORY_RADIUS := 3
@@ -304,6 +306,7 @@ func clear_path() -> void:
 	path_reachable = 0
 	if _overlay:
 		_overlay.queue_redraw()
+	path_cleared.emit()
 
 
 func tile_to_px(t: Vector2i) -> Vector2:

@@ -339,8 +339,8 @@
   "map": {
    "files": [
     "music/map.ogg",
-    "music/map_highlands.ogg",
-    "music/map_dusk.ogg"
+    "music/map_alt.ogg",
+    "music/menu.ogg"
    ],
    "loop": true,
    "volume_db": -4.0
@@ -381,7 +381,10 @@
    "volume_db": 0.0
   },
   "battle": {
-   "file": "music/battle.ogg",
+   "files": [
+    "music/battle.ogg",
+    "music/battle_ashen_pass.ogg"
+   ],
    "loop": true,
    "volume_db": -6.0
   },

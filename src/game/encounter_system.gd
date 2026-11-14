@@ -132,7 +132,30 @@ func resolve(h: Hero, obj: Dictionary, choice_idx: int) -> Dictionary:
 	state.map.remove_object(obj["id"])
 	for e in outcome.get("effects", []):
 		_apply(e, h, obj, out)
+	if success and out["battle"] == "":
+		_maybe_find_spell(h, out)
 	return out
+
+
+## A small chance (spell_find_chance) that a won encounter also turns up a
+## scroll of a rare spell the hero does not know yet.
+func _maybe_find_spell(h: Hero, out: Dictionary) -> void:
+	var chance := float(data.encounter_rules.get("spell_find_chance", 0.0))
+	if chance <= 0.0 or state.rng.next_float() >= chance:
+		return
+	var known := h.known_spells(data)
+	var spells: Dictionary = data.magic.get("spells", {})
+	var unknown := []
+	for id in _sorted_keys(spells):
+		if spells[id].get("source", "") == "rare" and not known.has(id):
+			unknown.append(id)
+	if unknown.is_empty():
+		return
+	var spell_id := String(unknown[state.rng.next_int(0, unknown.size() - 1)])
+	h.spells.append(spell_id)
+	h.spells.sort()
+	out["spell"] = spell_id
+	out["lines"].append("Found a scroll: learned %s" % spells[spell_id]["name"])
 
 
 # ------------------------------------------------------------ conditions --

@@ -30,6 +30,10 @@ var _sell: OptionButton
 var _buy: OptionButton
 var _amount: SpinBox
 var _quote: Label
+## Sell amount before the last change, so the market can snap up or down.
+var _amount_prev := 0
+## Dwelling pools whose base creature is shown instead of the upgrade.
+var _show_base: Dictionary = {}
 var _prev_btn: Button
 var _next_btn: Button
 var _town_pick: OptionButton
@@ -504,8 +508,19 @@ func _fill_right(t: Dictionary) -> void:
 	var target := UiStyle.label("Recruits join %s." % (visitor.name if visitor != null else "the garrison"), 12, UiStyle.TEXT_DIM)
 	_right.add_child(target)
 	var bank: ResourceBank = session.current_player()["resources"]
+	# One row per dwelling: the upgrade when it is built, with a swap to the base unit.
+	var by_pool := {}
+	var pools := []
 	for o in session.recruit_options(town_id):
-		_right.add_child(_recruit_row(o, bank))
+		if not by_pool.has(o["pool"]):
+			by_pool[o["pool"]] = []
+			pools.append(o["pool"])
+		by_pool[o["pool"]].append(o)
+	for pool in pools:
+		var opts: Array = by_pool[pool]
+		var shown: Dictionary = opts[0] if opts.size() == 1 or _show_base.get(pool, false) else opts[-1]
+		var other: Dictionary = {} if opts.size() == 1 else (opts[-1] if shown == opts[0] else opts[0])
+		_right.add_child(_recruit_row(shown, bank, pool, other))
 	_right.add_child(UiStyle.section("Garrison and visiting hero" if visitor != null else "Garrison"))
 	var rows := [[GameSession.garrison_ref(town_id), "Garrison"]]
 	if visitor != null:
@@ -583,11 +598,12 @@ func _fill_right(t: Dictionary) -> void:
 		tb.text = "Trade"
 		tb.pressed.connect(func(): _act(session.trade(_res_at(_sell), _res_at(_buy), int(_amount.value)), "trade"))
 		row.add_child(tb)
-		_sell.item_selected.connect(func(_i): _update_quote())
-		_buy.item_selected.connect(func(_i): _update_quote())
-		_amount.value_changed.connect(func(_v): _update_quote())
+		_amount_prev = int(_amount.value)
+		_sell.item_selected.connect(func(_i): _snap_amount(int(_amount.value)))
+		_buy.item_selected.connect(func(_i): _snap_amount(int(_amount.value)))
+		_amount.value_changed.connect(func(v: float): _snap_amount(int(v)))
 		_right.add_child(row)
-		_update_quote()
+		_snap_amount(int(_amount.value))
 
 	_add_ally_courier()
 
@@ -628,9 +644,34 @@ func _add_ally_courier() -> void:
 func _resource_picker(selected: int) -> OptionButton:
 	var ob := OptionButton.new()
 	for res in _data.resource_order:
-		ob.add_item(_data.resources[res]["name"])
+		var tex := Art.resource_icon(res)
+		if tex != null:
+			ob.add_icon_item(tex, _data.resources[res]["name"])
+		else:
+			ob.add_item(_data.resources[res]["name"])
+	ob.add_theme_constant_override("icon_max_width", 20)
+	ob.get_popup().add_theme_constant_override("icon_max_width", 20)
 	ob.select(selected)
 	return ob
+
+
+## Sell amounts snap to whole units bought: stepping up asks for one more
+## unit, stepping down or typing keeps what that amount buys, at its lowest price.
+func _snap_amount(v: int) -> void:
+	if _amount == null or not is_instance_valid(_amount):
+		return
+	var sell := _res_at(_sell)
+	var buy := _res_at(_buy)
+	var markets := session.market_count(session.state.current_player)
+	var units := session.trade_quote(sell, buy, v)
+	if v > _amount_prev and units == session.trade_quote(sell, buy, _amount_prev):
+		units += 1
+	var price := Economy.trade_price(sell, buy, maxi(1, units), markets, _data)
+	if price > 0 and price != v:
+		_amount_prev = mini(price, int(_amount.max_value))
+		_amount.value = _amount_prev   # comes back here once, already snapped
+	_amount_prev = int(_amount.value)
+	_update_quote()
 
 
 func _res_at(ob: OptionButton) -> String:
@@ -646,7 +687,8 @@ func _update_quote() -> void:
 
 ## One dwelling: portrait with the creatures available, name, weekly growth,
 ## unit cost, an amount and Recruit / Max buttons.
-func _recruit_row(o: Dictionary, bank: ResourceBank) -> Control:
+## other: the dwelling's other creature (base or upgrade), offered by a swap button.
+func _recruit_row(o: Dictionary, bank: ResourceBank, pool: String = "", other: Dictionary = {}) -> Control:
 	var cid: String = o["creature"]
 	var c := _data.creature(cid)
 	var row := HBoxContainer.new()
@@ -663,7 +705,21 @@ func _recruit_row(o: Dictionary, bank: ResourceBank) -> Control:
 	var n := UiStyle.label("%s  (tier %d)" % [c["name"], int(c["tier"])], 15)
 	n.tooltip_text = tip
 	n.mouse_filter = Control.MOUSE_FILTER_PASS
-	info.add_child(n)
+	var name_row := HBoxContainer.new()
+	name_row.add_theme_constant_override("separation", 8)
+	name_row.add_child(n)
+	info.add_child(name_row)
+	if not other.is_empty():
+		var swap := Button.new()
+		swap.text = "⇅"
+		swap.custom_minimum_size = Vector2(26, 22)
+		swap.add_theme_font_size_override("font_size", 12)
+		var to_base: bool = String(_data.creature(String(other["creature"])).get("upgrade", "")) == cid
+		swap.tooltip_text = "Show the %s unit: %s" % ["base" if to_base else "upgraded", _data.creature(String(other["creature"]))["name"]]
+		swap.pressed.connect(func():
+			_show_base[pool] = to_base
+			refresh())
+		name_row.add_child(swap)
 	info.add_child(UiStyle.label("%d available  ·  +%d a week" % [o["available"], o["growth"]], 12, UiStyle.TEXT_DIM))
 	var cost := HBoxContainer.new()
 	cost.add_child(UiStyle.label("Each:", 12, UiStyle.TEXT_DIM))

@@ -8,7 +8,7 @@ signal load_requested
 signal online_requested
 signal resume_requested
 signal quit_requested
-signal sound_requested
+signal options_requested
 signal editor_requested
 signal editor_return_requested
 ## fresh: start the campaign over; otherwise continue its saved progress.
@@ -121,7 +121,7 @@ func build(data: GameData) -> void:
 	_menu_button("Load Game", func(): load_requested.emit())
 	_menu_button("Online Game", func(): online_requested.emit())
 	_menu_button("Map Editor", func(): editor_requested.emit())
-	_menu_button("Sound", func(): sound_requested.emit())
+	_menu_button("Options", func(): options_requested.emit())
 	_menu_button("Quit", func(): quit_requested.emit())
 
 	_setup_panel = PanelContainer.new()
@@ -244,12 +244,12 @@ static func _ember_gradient() -> GradientTexture2D:
 
 
 ## Shows the title screen; can_resume adds "Resume" for a game in progress.
-## playtest: an editor playtest offers only Resume, Return to Editor, Load Game and Sound.
+## playtest: an editor playtest offers only Resume, Return to Editor, Load Game and Options.
 func open(can_resume: bool, playtest: bool = false) -> void:
 	_set_menu_screen("title")
 	for child in _home.get_children():
 		if child is Button:
-			child.visible = not playtest or child.text in ["Resume", "Return to Editor", "Load Game", "Sound"]
+			child.visible = not playtest or child.text in ["Resume", "Return to Editor", "Load Game", "Options"]
 	_return_editor_btn.visible = playtest
 	_resume_btn.visible = can_resume
 	_setup_panel.hide()

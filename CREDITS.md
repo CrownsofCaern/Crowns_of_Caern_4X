@@ -62,11 +62,15 @@ the MIT licence. Records of each file's prompt, source and hashes are kept besid
 | 2D artwork: creatures, heroes, towns, terrain, map scenery, illustrations, menus, emblems, icons and their source sheets (`assets/source/`, `assets/atlases/` and the folders built from them) | OpenAI image generation (ChatGPT image_gen) |
 | 3D unit meshes, textures and rigs (`assets/units3d/`, built from `assets/source/models/`) | Tripo AI (https://www.tripo3d.ai), from the project's own reference art (`3d-ref/`) |
 | A few UI icons (`provider: "project owner"` in their records) | Made by the project |
+| Spell icons (`assets/spells/`, records in `assets/spells/sources.json`) | OpenAI image generation, from the project's RTS game Crowns of Caern: Warbound |
 
 ## Audio
 
-Every sound and music file under `assets/audio/` is synthesized from code by `tools/audio/synth.py`. No
-samples or third-party recordings are used; it is the project's own work under the MIT licence.
+The menu, overworld and battle music (*Embers of the Elder Vale*, *Mosslight*, a second overworld theme,
+*Stone and Standard* and *Through the Ashen Pass*) was composed and produced for the game in FL Studio. Every
+other sound and music file under `assets/audio/` is synthesized from code by `tools/audio/synth.py`. No samples
+from third-party recordings are used; all of it is the project's own work under the MIT licence. Details:
+`assets/audio/LICENSES.md`.
 
 ## Build-time tools
 

@@ -77,7 +77,13 @@ func _run() -> void:
 	if not await _until(func(): return b._online_playing, "Ben's turn"):
 		return _finish()
 	_check(b.session.state.current_player == 2, "Ben plays slot 2")
-	_check(a.online_panel.is_match_page() and not a.map_view.visible, "the host's map is hidden while Ben moves")
+	# While Ben moves, Ana looks around her own side of a copy; orders are refused.
+	_check(a.session is OnlineView and a.session.state.current_player == 0 and a.map_view.visible \
+		and a.waiting_bar.visible and not a.online_panel.visible, "Ana sees her side while Ben moves")
+	var town_id: String = a.session.towns_of(0)[0]["id"]
+	_check(not a.session.recruit(town_id, "x", 1)["ok"] and a.session.can_hire_hero(town_id) != "", "waiting orders are refused")
+	a._end_turn()
+	_check(b._online_playing and a.net.session.state.current_player == 2, "End Turn while waiting sends nothing")
 	_check(b.session.hero(hero.id).pos == start_pos, "Ben sees the same game")
 
 	# Ben ends the day: back to Ana on day 2.
@@ -86,7 +92,7 @@ func _run() -> void:
 		return _finish()
 	_check(a.session.state.day == 2, "a new day began")
 	await _until(func(): return b.net.session.state.day == 2, "Ben to receive day 2")
-	_check(not b._online_playing and b.online_panel.is_match_page(), "Ben waits again")
+	_check(not b._online_playing and b.session is OnlineView and b.session.state.current_player == 2, "Ben waits again on his side")
 
 	# The host leaves; Ben keeps the match and hosts it from his save.
 	var dropped := [""]
@@ -100,7 +106,7 @@ func _run() -> void:
 	var match_id := OnlineMatch.match_id(b.session.state)
 	b._host_online("Ben", PORT + 1)
 	_check(OnlineMatch.match_id(b.session.state) == match_id, "a resumed game stays the same match")
-	_check(b.online_panel.is_match_page(), "Ana is to move, so Ben waits")
+	_check(b.session is OnlineView and b.waiting_bar.visible, "Ana is to move, so Ben waits")
 	a._join_online("127.0.0.1:%d" % (PORT + 1), "Ana")
 	await _until(func(): return a.net.session != null and a.net.session.state.day == 2, "Ana to rejoin")
 	_check(OnlineMatch.seat_of(a.net.session.state, 0) == "Ana", "Ana's seat was kept in the save")

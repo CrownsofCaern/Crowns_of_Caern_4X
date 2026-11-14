@@ -35,6 +35,9 @@ var _hero_sub: Label
 var _stats: HBoxContainer
 var _xp_bar: ProgressBar
 var _mp_bar: ProgressBar
+## Dashed line on the movement bar: what a planned route would leave.
+var _route_mark: Control
+var _route_left := -1
 var _army_box: GridContainer
 var _tile_label: Label
 var _log: RichTextLabel
@@ -277,6 +280,11 @@ func build(data: GameData) -> void:
 	cinfo.add_child(_stats)
 	_xp_bar = _bar_row(v, "xp", "Experience")
 	_mp_bar = _bar_row(v, "move", "Movement")
+	_route_mark = Control.new()
+	_route_mark.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_route_mark.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_route_mark.draw.connect(_draw_route_mark)
+	_mp_bar.add_child(_route_mark)
 	_skills_btn = Button.new()
 	_skills_btn.custom_minimum_size.y = 30
 	_skills_btn.pressed.connect(func(): skills_pressed.emit())
@@ -349,6 +357,30 @@ func _bar_row(parent: Control, icon_name: String, tip: String) -> ProgressBar:
 	bar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	row.add_child(bar)
 	return bar
+
+
+## Marks on the movement bar the points hero keeps after a route costing cost;
+## a null hero clears the mark.
+func show_route_cost(hero: Hero, cost: int) -> void:
+	_route_left = -1 if hero == null else maxi(0, hero.movement_left - cost)
+	_route_mark.tooltip_text = ""
+	if hero != null:
+		_mp_bar.tooltip_text = "%d / %d movement points\nThis route costs %d, leaving %d" % [
+			hero.movement_left, int(_mp_bar.max_value), cost, _route_left]
+	_route_mark.queue_redraw()
+
+
+func route_mark_left() -> int:
+	return _route_left
+
+
+func _draw_route_mark() -> void:
+	if _route_left < 0:
+		return
+	var w := _route_mark.size.x
+	var x := clampf(w * float(_route_left) / maxf(1.0, _mp_bar.max_value), 1.0, w - 1.0)
+	var h := _route_mark.size.y
+	_route_mark.draw_dashed_line(Vector2(x, -3), Vector2(x, h + 3), Color(0.82, 0.82, 0.82, 0.95), 2.0, 3.0)
 
 
 func set_minimap_visible(on: bool) -> void:

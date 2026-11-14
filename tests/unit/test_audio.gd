@@ -98,8 +98,11 @@ func test_map_music_has_alternatives_and_battle_music_exists() -> void:
 	var c := _catalog()
 	var tracks := AudioCatalog.music_tracks(c.music_entry("map"))
 	assert_eq(tracks.size(), 3, "the map theme and two alternatives")
-	assert_eq(tracks[0], "res://assets/audio/music/map.ogg", "the original map theme comes first")
-	assert_eq(AudioCatalog.music_tracks(c.music_entry("battle")).size(), 1)
+	assert_eq(tracks[0], "res://assets/audio/music/map.ogg", "Mosslight comes first")
+	assert_eq(tracks[2], "res://assets/audio/music/menu.ogg", "the title theme doubles as the third")
+	assert_eq(AudioCatalog.music_tracks(c.music_entry("battle")).size(), 2, "two battle themes")
+	for t in tracks + AudioCatalog.music_tracks(c.music_entry("battle")):
+		assert_true(ResourceLoader.exists(t), t)
 	for e in ["battle_hit", "battle_shot", "battle_drums", "battle_horn"]:
 		assert_gt((c.sounds[e]["files"] as Array).size(), 1, "%s has several takes" % e)
 		assert_lt(float(c.sounds[e]["volume_db"]), -8.0, "%s stays under the battle music" % e)
@@ -118,16 +121,16 @@ func test_manager_rotates_map_themes_and_returns_from_battle() -> void:
 	AudioManager.set_music("map")
 	assert_eq(m.current_bed().stream.resource_path, first, "staying on the map: no restart")
 	m._on_bed_finished(m.current_bed())
-	assert_eq(m.current_bed().stream.resource_path, "res://assets/audio/music/map_highlands.ogg", "next theme")
+	assert_eq(m.current_bed().stream.resource_path, "res://assets/audio/music/map_alt.ogg", "next theme")
 	AudioManager.set_music("town", "forge")
 	AudioManager.begin_battle_music()
 	assert_eq(m.current_bed().stream.resource_path, "res://assets/audio/music/battle.ogg")
-	assert_true(m.current_bed().stream.get("loop"), "battle music loops")
+	assert_false(m.current_bed().stream.get("loop"), "battle themes take turns")
 	AudioManager.end_battle_music()
 	assert_eq(m.music_context, "town")
 	assert_eq(m.music_faction, "forge")
 	AudioManager.set_music("map")
-	assert_eq(m.current_bed().stream.resource_path, "res://assets/audio/music/map_dusk.ogg",
+	assert_eq(m.current_bed().stream.resource_path, "res://assets/audio/music/menu.ogg",
 		"coming back to the map starts the next theme")
 	AudioManager.play_stinger("battle_victory")
 	assert_eq(m.stinger_player().stream.resource_path, "res://assets/audio/music/battle_victory_forge.ogg")
@@ -221,3 +224,37 @@ func test_manager_plays_events_and_music_when_enabled() -> void:
 	quiet.free()
 	m.free()
 	_cleanup()
+
+
+func test_display_options_persist_beside_audio_and_open_in_options() -> void:
+	_cleanup()
+	var c := _catalog()
+	var a := AudioSettings.create(c, SETTINGS)
+	a.set_volume("Music", 0.25)
+	a.save_file()
+	var v := VideoSettings.new()
+	v.path = SETTINGS
+	v.fullscreen = true
+	v.brightness = 9.0
+	v.save_file()
+	var again := VideoSettings.new()
+	again.path = SETTINGS
+	again.load_file()
+	assert_true(again.fullscreen)
+	assert_eq(again.brightness, VideoSettings.MAX_BRIGHTNESS, "clamped")
+	assert_eq(AudioSettings.create(c, SETTINGS).volume("Music"), 0.25, "audio kept")
+	v.free()
+	again.free()
+	var live := VideoSettings.new()   # the "Video" autoload of a running game
+	live._ready()
+	var dlg := OptionsDialog.new()
+	dlg.build(data, 520)
+	dlg.open()
+	var texts := []
+	for n in dlg.find_children("*", "Label", true, false):
+		texts.append((n as Label).text)
+	assert_true(texts.has("Options") and texts.has("Brightness") and texts.has("Display"), str(texts))
+	dlg.free()
+	live._exit_tree()
+	live.free()
+	assert_true(VideoSettings.instance() == null)

@@ -18,6 +18,8 @@ var hero_id := ""
 var exchange: ArmyExchange
 var _equip_hint: Label
 var _active_tab := 0
+## Army slot shown on the Experience tab.
+var _xp_slot := -1
 
 
 func open(s: GameSession, id: String) -> void:
@@ -104,11 +106,19 @@ func refresh() -> void:
 	army_scroll.add_child(army)
 	army.add_child(UiStyle.section("Army"))
 	exchange = ArmyExchange.new()
-	exchange.show_veteran_details = true
 	exchange.columns = 5 if TouchGestures.touch_ui() else Army.MAX_SLOTS
 	exchange.setup(session, army_rows(h))
 	exchange.changed.connect(func(): changed.emit())
 	army.add_child(exchange)
+	var xp_scroll := ScrollContainer.new()
+	xp_scroll.name = "Experience"
+	xp_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	tabs.add_child(xp_scroll)
+	var xp_page := VBoxContainer.new()
+	xp_page.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	xp_page.add_theme_constant_override("separation", 10)
+	xp_scroll.add_child(xp_page)
+	_fill_experience(xp_page, h)
 	var inventory := VBoxContainer.new()
 	inventory.name = "Inventory"
 	inventory.add_theme_constant_override("separation", 12)
@@ -132,7 +142,13 @@ func refresh() -> void:
 		if spell.is_empty():
 			continue
 		var row := HBoxContainer.new()
+		row.add_theme_constant_override("separation", 10)
 		spell_list.add_child(row)
+		var icon_tex := Art.texture_at("res://assets/spells/%s.png" % spell_id)
+		if icon_tex != null:
+			var ic := UiStyle.icon(icon_tex, Vector2(48, 48))
+			ic.tooltip_text = String(spell["name"])
+			row.add_child(ic)
 		var description := VBoxContainer.new()
 		description.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		row.add_child(description)
@@ -223,6 +239,71 @@ func refresh() -> void:
 	tabs.tab_changed.connect(func(index: int): _active_tab = index)
 	_buttons([["Close  (H)", close_screen]])
 	UiStyle.enlarge_touch_controls(self)
+
+
+## One stack at a time, as in the town's Units tab: portrait, veteran level,
+## progress to the next level and the stack's stats at that level.
+func _fill_experience(page: VBoxContainer, h: Hero) -> void:
+	for child in page.get_children():
+		page.remove_child(child)
+		child.queue_free()
+	var filled: Array[int] = []
+	for i in Army.MAX_SLOTS:
+		if not h.army.slots[i].is_empty():
+			filled.append(i)
+	if filled.is_empty():
+		page.add_child(UiStyle.label("No troops.", 14, UiStyle.TEXT_DIM))
+		return
+	if not filled.has(_xp_slot):
+		_xp_slot = filled[0]
+	var at := filled.find(_xp_slot)
+	var stack: Dictionary = h.army.slots[_xp_slot]
+	var level := Army.veteran_level(stack)
+	var stats := Army.creature_stats(stack, _data)
+	var nav := HBoxContainer.new()
+	page.add_child(nav)
+	var prev := Button.new()
+	prev.text = "<"
+	prev.tooltip_text = "Previous stack"
+	prev.custom_minimum_size = Vector2(48, 40)
+	prev.disabled = at == 0
+	prev.pressed.connect(func(): _xp_slot = filled[at - 1]; _fill_experience(page, h))
+	nav.add_child(prev)
+	var heading := UiStyle.label("Slot %d  ·  %d %s  ·  Level %d" % [_xp_slot + 1, int(stack["count"]), stats["name"], level], 20, UiStyle.BRASS)
+	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	heading.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	nav.add_child(heading)
+	var next := Button.new()
+	next.text = ">"
+	next.tooltip_text = "Next stack"
+	next.custom_minimum_size = Vector2(48, 40)
+	next.disabled = at == filled.size() - 1
+	next.pressed.connect(func(): _xp_slot = filled[at + 1]; _fill_experience(page, h))
+	nav.add_child(next)
+	UiStyle.enlarge_touch_controls(nav)
+	var top := HBoxContainer.new()
+	top.add_theme_constant_override("separation", 16)
+	page.add_child(top)
+	var cid := String(stack["creature"])
+	top.add_child(UiStyle.icon(Art.creature(cid), Vector2(140, 140)))
+	var right := VBoxContainer.new()
+	right.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	right.alignment = BoxContainer.ALIGNMENT_CENTER
+	top.add_child(right)
+	right.add_child(UiStyle.label(Army.veteran_description(stack), 15))
+	var bar := ProgressBar.new()
+	bar.custom_minimum_size.y = 14
+	bar.show_percentage = false
+	if level >= Army.VETERAN_THRESHOLDS.size():
+		bar.value = 100
+	else:
+		bar.max_value = Army.VETERAN_THRESHOLDS[level] - Army.VETERAN_THRESHOLDS[level - 1]
+		bar.value = int(stack.get("veteran_xp", 0)) - Army.VETERAN_THRESHOLDS[level - 1]
+	right.add_child(bar)
+	right.add_child(UiStyle.label("Troops gain experience in battle; veterans fight harder.", 12, UiStyle.TEXT_DIM))
+	var info := UiStyle.label(UiStyle.creature_tooltip(_data, cid, int(stack["count"]), level), 15)
+	info.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	page.add_child(info)
 
 
 func _bar_row(h: Hero) -> Control:

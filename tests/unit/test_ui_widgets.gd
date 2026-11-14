@@ -115,7 +115,34 @@ func test_hud_builds_and_refreshes() -> void:
 	hud.refresh(session, null)
 	hud.set_minimap_visible(false)
 	assert_false(hud.minimap_visible())
+	var h := session.hero("hero_wren")
+	hud.show_route_cost(h, 3)
+	assert_eq(hud.route_mark_left(), maxi(0, h.movement_left - 3), "a planned route marks what it leaves")
+	hud.show_route_cost(null, 0)
+	assert_eq(hud.route_mark_left(), -1, "no route, no mark")
 	hud.free()
+
+
+func test_build_hammer_shows_while_a_town_can_build_and_cycles_towns() -> void:
+	var towns := BuildHammer.buildable_towns(session)
+	assert_false(towns.is_empty(), "a fresh town can build")
+	var hammer := BuildHammer.new()
+	var opened := []
+	hammer.town_requested.connect(func(id: String): opened.append(id))
+	hammer.update(session)
+	assert_true(hammer.visible)
+	hammer.pressed.emit()
+	hammer.pressed.emit()
+	assert_eq(opened[0], towns[0])
+	assert_eq(opened[1], towns[1 % towns.size()], "the next click opens the next town")
+	for id in towns:
+		for o in session.build_options(id):
+			if not o["built"] and o["reason"] == "":
+				assert_true(session.build(id, o["id"])["ok"])
+				break
+	hammer.update(session)
+	assert_false(hammer.visible, "hidden once every town built today")
+	hammer.free()
 
 
 func test_main_menu_opens_campaign_map_and_previews_chapters() -> void:
@@ -212,8 +239,11 @@ func test_forecast_order_pickers_offer_open_orders_and_report_changes() -> void:
 	var pred := session.preview_battle("hero_wren", "neutral_wolves")
 	pred["orders"] = session.order_choices("hero_wren")
 	bp.show_forecast("Wolves", pred)
-	var row: Node = bp.find_child("Orders", true, false)
-	assert_true(row != null, "the forecast shows the orders")
+	var row: Control = bp.find_child("Orders", true, false)
+	assert_true(row != null, "the forecast has the orders")
+	assert_false(row.visible, "folded away until Advanced is opened")
+	(bp.find_child("Advanced", true, false) as Button).toggled.emit(true)
+	assert_true(row.visible)
 	var stance: OptionButton = row.find_child("Stance", true, false)
 	var focus: OptionButton = row.find_child("Focus", true, false)
 	var formation: OptionButton = row.find_child("Formation", true, false)
@@ -230,6 +260,17 @@ func test_forecast_order_pickers_offer_open_orders_and_report_changes() -> void:
 	assert_eq(got, [["defensive", "any", "line", "never"]])
 	assert_eq(String(focus.get_item_metadata(focus.selected)), "any")
 	bp.free()
+
+
+func test_hero_screen_has_an_experience_tab_per_stack() -> void:
+	var hs := HeroScreen.new()
+	hs.build(data)
+	hs.open(session, "hero_wren")
+	var tab: Node = hs.find_child("Experience", true, false)
+	assert_true(tab != null)
+	var heading: Label = tab.find_children("*", "Label", true, false)[0]
+	assert_true(heading.text.begins_with("Slot 1"), heading.text)
+	hs.free()
 
 
 func test_hero_screen_equipment_wear_take_off_and_hand_over() -> void:

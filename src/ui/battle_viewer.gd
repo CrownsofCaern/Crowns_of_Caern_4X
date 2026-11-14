@@ -140,8 +140,8 @@ static func set_watch_enabled(on: bool, path: String = SETTINGS_PATH) -> void:
 static func three_d_enabled(path: String = SETTINGS_PATH) -> bool:
 	var cfg := ConfigFile.new()
 	if cfg.load(path) != OK:
-		return true
-	return bool(cfg.get_value(SECTION, "three_d", true))
+		return false
+	return bool(cfg.get_value(SECTION, "three_d", false))
 
 
 static func set_three_d_enabled(on: bool, path: String = SETTINGS_PATH) -> void:

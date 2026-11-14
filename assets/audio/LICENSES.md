@@ -14,7 +14,21 @@ ffmpeg with libvorbis (encoder only; nothing from it is shipped beyond the encod
 | Files | Source | Licence |
 |---|---|---|
 | `sfx/*.ogg`, `sfx/faction/*.ogg` (UI, footsteps, pickups, captures, town actions, battle and fight sounds, turn, encounter, level-up, with extra takes and one take per faction for the coloured events) | `tools/audio/synth.py` | Project-owned (original) |
-| `music/*.ogg` (menu, map, map_highlands, map_dusk, battle, town_concord, town_ashen, town_default, battle_victory and its faction versions, battle_defeat) | `tools/audio/synth.py` | Project-owned (original) |
+| `music/*.ogg` (town_concord, town_ashen, town_default, battle_victory and its faction versions, battle_defeat) | `tools/audio/synth.py` | Project-owned (original) |
+
+## Composed for this project
+
+Original music composed and produced for Crowns of Caern in FL Studio (with Image-Line's FLEX instruments)
+and exported as WAV; encoded to Ogg Vorbis (stereo, 44.1 kHz,
+quality 4) and levelled to -16 LUFS with ffmpeg. Project-owned (original).
+
+| File | Title | Used for |
+|---|---|---|
+| `music/menu.ogg` | Embers of the Elder Vale | Title screen; third overworld theme |
+| `music/map.ogg` | Mosslight | Overworld (first theme) |
+| `music/map_alt.ogg` | Overworld theme II | Overworld (second theme) |
+| `music/battle.ogg` | Stone and Standard | Battles (first theme) |
+| `music/battle_ashen_pass.ogg` | Through the Ashen Pass | Battles (second theme) |
 
 ## Third-party audio
 

@@ -35,7 +35,9 @@ Every computer needs the same version of the game; the host refuses a join from 
 
 ## While you play
 
-- While another person moves, your map stays hidden and the online panel shows whose turn it is.
+- While another person moves, you see your own side as it was at your last turn: your map, towns, heroes and
+  armies, to read and plan. Orders wait for your turn. A bar at the top says who is moving; its **Online** button
+  opens the player list. You don't see what the others do until your turn comes.
 - One person may play several players. A player whose person has left shows "(away)" and can be taken
   over, for example by the host for one turn.
 - A battle against your heroes or towns during someone else's turn is reported at the start of your turn.
