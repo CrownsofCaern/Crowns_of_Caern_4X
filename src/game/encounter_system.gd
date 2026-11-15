@@ -133,15 +133,18 @@ func resolve(h: Hero, obj: Dictionary, choice_idx: int) -> Dictionary:
 	for e in outcome.get("effects", []):
 		_apply(e, h, obj, out)
 	if success and out["battle"] == "":
-		_maybe_find_spell(h, out)
+		_maybe_find_spell(h, out, String(obj["id"]))
 	return out
 
 
 ## A small chance (spell_find_chance) that a won encounter also turns up a
-## scroll of a rare spell the hero does not know yet.
-func _maybe_find_spell(h: Hero, out: Dictionary) -> void:
+## scroll of a rare spell the hero does not know yet. It rolls on its own
+## generator (from the game seed and the encounter), so the game's shared
+## random sequence, and with it every other outcome, stays as it was.
+func _maybe_find_spell(h: Hero, out: Dictionary, salt: String = "") -> void:
 	var chance := float(data.encounter_rules.get("spell_find_chance", 0.0))
-	if chance <= 0.0 or state.rng.next_float() >= chance:
+	var rng := GameRng.new(GameRng.mix(state.game_seed, hash(salt + "/" + h.id)))
+	if chance <= 0.0 or rng.next_float() >= chance:
 		return
 	var known := h.known_spells(data)
 	var spells: Dictionary = data.magic.get("spells", {})
@@ -151,7 +154,7 @@ func _maybe_find_spell(h: Hero, out: Dictionary) -> void:
 			unknown.append(id)
 	if unknown.is_empty():
 		return
-	var spell_id := String(unknown[state.rng.next_int(0, unknown.size() - 1)])
+	var spell_id := String(unknown[rng.next_int(0, unknown.size() - 1)])
 	h.spells.append(spell_id)
 	h.spells.sort()
 	out["spell"] = spell_id

@@ -24,6 +24,46 @@
     "town_gate": {
       "source": "assets/ui/skills/sanctuary.png",
       "sha256": "73cb03f57dab818aacc66f208bb0f6655a81f159432466b9c0687c44939d837f"
+    },
+    "stoneskin": {
+      "source": "assets/ui/skills/riveted_aegis.png",
+      "sha256": "28c00766f9869068e8a5a52e15b6396c19c0290accf4bddfca0a432aa6720054"
+    },
+    "warcry": {
+      "source": "assets/ui/skills/warcry.png",
+      "sha256": "f2beb7cd0dce591c25b9ef2ec19dda45da44bc5622bf7f91e8bc2971d4fbb4d4"
+    },
+    "unbroken_line": {
+      "source": "assets/ui/skills/unbroken_line.png",
+      "sha256": "9fc82d6bb20251f057479f7808fee9fc6026182eabc677f5cd6687bcf5de15be"
+    },
+    "hunters_mark": {
+      "source": "assets/ui/skills/called_shot.png",
+      "sha256": "d5c0462376688581ed48b591e5c532a84cf49eff101527a1e7767caff1059006"
+    },
+    "rootwalk": {
+      "source": "assets/ui/skills/entangle.png",
+      "sha256": "f2e8b7b2841eba76afd2e72fd7732571f48e48f99de81a9a5fc1a2c585af75ca"
+    },
+    "red_harvest": {
+      "source": "assets/ui/skills/red_harvest.png",
+      "sha256": "a57fa0e9d341ffaf9f058461e2ac4be6d5d6f2de9bb20e0093a886631ed99562"
+    },
+    "veil_of_shadows": {
+      "source": "assets/ui/skills/veil_of_shadows.png",
+      "sha256": "68760f8d075874ea6d8a01d431d6b7c11f8ac721fcea5cf0dce1f20123b42198"
+    },
+    "dawnbreak": {
+      "source": "assets/ui/skills/dawnbreak.png",
+      "sha256": "045e573ae4eb572f9b2caf8833f3e40c852e1b95438792a428dc2beba6ea39dd"
+    },
+    "call_the_pack": {
+      "source": "assets/ui/skills/call_the_pack.png",
+      "sha256": "ff71c598500a9434a82a0ab703b77292ad3ff88a96b970c0fd39cbd89a396396"
+    },
+    "horn_of_the_hold": {
+      "source": "assets/ui/skills/horn_of_the_hold.png",
+      "sha256": "9171aaaebad4efe4d93ae35420554d58b5eaee9a66a5eadaca83902e2d71f2ae"
     }
   }
 }

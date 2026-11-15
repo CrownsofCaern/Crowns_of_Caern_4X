@@ -255,7 +255,19 @@ func validate() -> Array[String]:
 			errors.append("magic has no class spell for %s" % kind)
 	for id in spells:
 		var spell: Dictionary = spells[id]
-		if not spell.has("name") or not spell.has("description") or int(spell.get("cost", 0)) <= 0 or float(spell.get("amount", 0)) <= 0 or float(spell.get("amount", 0)) > 1.0 or not spell.get("effect", "") in ["movement", "battle_damage", "home", "town_gate"] or not spell.get("source", "") in ["class", "rare"]:
+		var effect := String(spell.get("effect", ""))
+		var ok: bool = spell.has("name") and spell.has("description") and int(spell.get("cost", 0)) > 0 and spell.get("source", "") in ["class", "rare"]
+		match effect:
+			"movement", "battle_damage", "home", "town_gate":
+				ok = ok and float(spell.get("amount", 0)) > 0 and float(spell.get("amount", 0)) <= 1.0
+			"boon":   # mods (HeroModifiers keys) for `days` days
+				ok = ok and int(spell.get("days", 0)) >= 1 and spell.get("mods", {}) is Dictionary and not (spell["mods"] as Dictionary).is_empty() \
+					and (spell["mods"] as Dictionary).keys().all(func(k): return HeroModifiers.KEYS.has(k))
+			"reveal", "summon", "veteran_xp":   # a radius, a creature count, experience points
+				ok = ok and int(spell.get("amount", 0)) > 0
+			_:
+				ok = false
+		if not ok:
 			errors.append("invalid spell %s" % id)
 	errors.append_array(MapSites.validate(self))
 	errors.append_array(WorldEvents.validate(self))
