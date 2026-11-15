@@ -168,7 +168,9 @@ func setup(id: String, n: int, face: float, phase: float, upgraded: bool = false
 	_impact = float(timing[0])
 	_total = float(timing[1])
 	var size := squad_size(id, n)
-	_member_scale = SCALE * (1.0 if size == 1 else (0.74 if size <= 4 else 0.64))
+	# Every figure keeps the creature's own drawn size; the badge, not the
+	# figure size, tells how many creatures the stack holds.
+	_member_scale = SCALE
 	figure_width = _still_width(id) * _member_scale
 	for i in size:
 		var holder := Node2D.new()
