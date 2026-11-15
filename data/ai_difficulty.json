@@ -32,7 +32,7 @@
     },
     "hard": {
       "name": "Hard",
-      "description": "Aggressive: takes riskier battles, hunts your towns and heroes, keeps more heroes and earns a quarter more.",
+      "description": "Aggressive: takes riskier battles, scouts out and hunts your towns and heroes, breaks out of its lands to expand, keeps more heroes and earns a quarter more.",
       "income_percent": 125,
       "ai": {
         "min_win_probability": 0.72,
@@ -41,7 +41,10 @@
         "max_heroes": 4,
         "enemy_bonus": 1.8,
         "hero_kill_value": 6000,
-        "town_value": 11000
+        "town_value": 11000,
+        "rival_intel": true,
+        "gate_value_share": 0.5,
+        "human_bonus": 1.25
       }
     },
     "very_hard": {
@@ -59,7 +62,10 @@
         "town_value": 12000,
         "danger_days": 3.0,
         "chase_rate": 0.35,
-        "screen_width": 2.0
+        "screen_width": 2.0,
+        "rival_intel": true,
+        "gate_value_share": 0.6,
+        "human_bonus": 1.3
       }
     }
   }
