@@ -383,6 +383,13 @@ a map. Not yet: underground level.
 - **Mines and towns on the map:** stepping on an unguarded mine or town captures it. Guarded mines and garrisoned
   foreign towns are fought like neutral armies (forecast, battle, capture on victory); the town's fortifications
   act as a defending "hero" with a defense bonus. Guarded objects block paths through them.
+- **Sieges:** a defended town (garrison or hero) holds out one day per fortification built. The first attack lays
+  siege (the hero's movement ends); the siege belongs to the attacking player and holds while one of its heroes
+  stays next to the town, so the owner can bring a hero in or strike the besiegers. Once the days pass the walls
+  can be stormed. At the start the defenders may lose heart and fight at once (up to 35%, more when badly
+  outnumbered, less with good morale); that roll has its own `GameRng` seeded from the game, town, player and day.
+  Empty towns are walked into; scripted invasion armies and `rules.sieges: false` skip sieges. State lives in the
+  town object (`sieges`), so it travels in saves and online handoffs (`GameSession.siege_status/begin_siege`).
 - **Six town types** (concord, ashen, hollow, thornwood, forge, frostmarch), 29–30 buildings each, including one
   upgrade building per creature (category `upgrade`). Dwelling and upgrade costs follow the faction's
   `economy.curve`: early factions pay ~70% for tier 1–3 dwellings and ~130% for tier 6–8, late factions the
