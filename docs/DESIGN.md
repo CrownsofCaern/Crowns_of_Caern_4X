@@ -459,6 +459,13 @@ state, never writes it), so it cannot do anything a human could not. Rule-based 
   (the garrison stays) and threatens it once the main hero needs the remaining days to get home
   (`reads_invasions`). Waves not yet announced stay unknown. The Shuttered Halls survival chapter, lost on day
   14 in AI-only games before, now holds.
+- **Going to war (hard and very hard):** in games with several rivals a computer player used to clear its own
+  sector and wait there: rival towns lay in the fog behind guarded gates, and every unseen rival hero was assumed
+  to be as strong as all its troops. `rival_intel` gives it scouts: it knows where rival towns, mines and heroes
+  are and what they hold, so it plans attacks and strikes when humans have worn each other down. A neutral army
+  barring the cheapest way to an unreachable rival town is worth `gate_value_share` of that town
+  (`_gate_values`), so it breaks out of its lands, and `human_bonus` makes human-held targets worth more.
+  `tools/ai_roam_probe.gd` measures how far one computer seat ventures and what it takes in 3-player games.
 - **Chasing:** an enemy hero out of today's reach is worth `chase_rate` (0.5) of its value, since it moves.
 - **Forecast screening:** with `screen_width` above 1 (very hard: 2), the top `screen_width ×
   forecasts_per_decision` guarded targets first get a quick forecast with a quarter of the simulations; fights
@@ -478,7 +485,7 @@ state, never writes it), so it cannot do anything a human could not. Rule-based 
   (`passive`, `easy`, `normal`, `hard`, `very_hard`; default `normal`), chosen per computer slot in the new-game setup or by a
   campaign chapter's `setup.players[i].difficulty`. A level overrides `StrategicAI` settings (passive: never
   targets the player; easy: surer fights, fewer heroes; hard: riskier fights, more heroes, higher value on rival
-  towns and heroes; very hard: as hard plus 10 forecasts per decision with screening, three-day danger horizon,
+  towns and heroes, rival intel and gate breaking; very hard: as hard plus 10 forecasts per decision with screening, three-day danger horizon,
   up to five heroes) and scales the computer player's daily income by `income_percent` (easy 85, hard 125, very
   hard 150; humans always 100). Scenario `wave_strength` presets without a `very_hard` entry use 1.2 × `hard`.
   `tools/ai_ladder.gd` plays two levels (or tunings) against each other with seats swapped. Settings merge in the order defaults, level, `GameState.rules.ai`, constructor overrides.
