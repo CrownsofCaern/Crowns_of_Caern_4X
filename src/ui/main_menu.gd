@@ -13,6 +13,8 @@ signal editor_requested
 signal editor_return_requested
 ## fresh: start the campaign over; otherwise continue its saved progress.
 signal campaign_requested(campaign_id: String, fresh: bool)
+## The Battle Arena (sandbox battles and rogue runs, see ArenaScreen).
+signal arena_requested
 
 const DISPLAY_FONT := preload("res://assets/fonts/Cinzel.ttf")
 const BODY_FONT := preload("res://assets/fonts/Lora.ttf")
@@ -118,6 +120,7 @@ func build(data: GameData) -> void:
 	_return_editor_btn.hide()
 	_menu_button("New Game", _show_setup)
 	_menu_button("Campaign", show_campaigns)
+	_menu_button("Battle Arena", func(): arena_requested.emit())
 	_menu_button("Load Game", func(): load_requested.emit())
 	_menu_button("Online Game", func(): online_requested.emit())
 	_menu_button("Map Editor", func(): editor_requested.emit())

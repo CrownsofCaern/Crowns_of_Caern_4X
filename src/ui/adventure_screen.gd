@@ -46,6 +46,8 @@ var _online_game: GameSession
 var waiting_bar: PanelContainer
 var _waiting_label: Label
 var found_dialog: ArtifactFoundDialog
+## The Battle Arena, from the title screen or while waiting in an online game.
+var arena_screen: ArenaScreen
 ## Artifacts the hero gained in an encounter, shown once its result closes.
 var _found_in_encounter: Array[String] = []
 ## The campaign being played, or null in a skirmish or a game loaded from a slot.
@@ -259,6 +261,18 @@ func _ready() -> void:
 		AudioManager.set_music("map")
 		_set_busy(false))
 	menu.campaign_requested.connect(start_campaign)
+	var arena_layer := CanvasLayer.new()
+	arena_layer.layer = 12
+	add_child(arena_layer)
+	arena_screen = ArenaScreen.new()
+	arena_layer.add_child(arena_screen)
+	arena_screen.build(data)
+	arena_screen.closed.connect(func():
+		if not arena_screen.mini_game:
+			menu.open(session != null and not session.state.game_over, editor_playtest))
+	menu.arena_requested.connect(func():
+		menu.hide()
+		arena_screen.open(false))
 	menu.quit_requested.connect(_quit)
 	menu.options_requested.connect(func():
 		_set_busy(true)
@@ -1432,6 +1446,9 @@ func _on_online_game(s: GameSession) -> void:
 		return
 	if net.my_turn():
 		online_panel.hide()
+		if arena_screen.visible and arena_screen.mini_game:
+			arena_screen.leave()
+			hud.log_message("[color=#e0b450]Your turn. The arena waits for you while the others move.[/color]")
 		_online_playing = true
 		_last_human = s.state.current_player
 		_report_turn_events()
@@ -1504,6 +1521,11 @@ func _build_waiting_bar(flow_layer: CanvasLayer) -> void:
 	open.tooltip_text = "Players, seats and notes of this online game"
 	open.pressed.connect(_open_online)
 	row.add_child(open)
+	var arena := Button.new()
+	arena.text = "Arena"
+	arena.tooltip_text = "Play the Battle Arena while the others move (it never touches this game)"
+	arena.pressed.connect(func(): arena_screen.open(true))
+	row.add_child(arena)
 	flow_layer.add_child(waiting_bar)
 	waiting_bar.hide()
 
