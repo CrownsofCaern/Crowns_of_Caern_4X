@@ -42,6 +42,8 @@ var _online_playing := false
 ## The last online game received; while waiting, session is a look-only
 ## OnlineView copy of it and this is the real one.
 var _online_game: GameSession
+## A new game waiting to be hosted as a lobby: {map_id, seed, setup}.
+var _lobby_def: Dictionary = {}
 ## Shown over the map while another person moves in an online game.
 var waiting_bar: PanelContainer
 var _waiting_label: Label
@@ -213,6 +215,8 @@ func _ready() -> void:
 	online_panel.take_requested.connect(func(i: int): net.take_seat(i))
 	online_panel.free_requested.connect(func(i: int): net.free_seat(i))
 	online_panel.leave_requested.connect(_leave_online)
+	online_panel.pick_requested.connect(func(i: int, f: String, c: String): net.pick(i, f, c))
+	online_panel.begin_requested.connect(func(): net.begin_match())
 	online_panel.closed.connect(func():
 		map_view.visible = true
 		if session is OnlineView:
@@ -254,6 +258,13 @@ func _ready() -> void:
 	menu_layer.add_child(menu)
 	menu.build(data)
 	menu.start_requested.connect(start_new_game)
+	menu.host_lobby_requested.connect(func(map_id: String, seed_value: int, setup: Dictionary):
+		var before := session
+		start_new_game(map_id, seed_value, setup)
+		if session == null or session == before:
+			return
+		_lobby_def = {"map_id": map_id, "seed": seed_value, "setup": setup}
+		online_panel.open_connect(true, "Enter your name and choose Host this game. Friends who join take a human player and choose its faction and hero; then you begin the match."))
 	menu.load_requested.connect(func(): _open_saves("load"))
 	menu.online_requested.connect(_open_online)
 	menu.resume_requested.connect(func():
@@ -1395,6 +1406,10 @@ func _host_online(person: String, port: int) -> void:
 	if why != "":
 		online_panel.open_connect(true, why)
 		return
+	if not _lobby_def.is_empty() and session != null:
+		OnlineMatch.open_lobby(session.state, _lobby_def)
+		_lobby_def = {}
+		net.share()
 	campaign = null   # an online game advances no campaign
 	hud.log_message("Hosting online as %s." % net.my_name)
 
@@ -1427,6 +1442,18 @@ func _on_online_game(s: GameSession) -> void:
 	_online_game = s
 	if s == session and _online_playing and net.my_turn():
 		online_panel.refresh()   # seats changed during our turn
+		return
+	if OnlineMatch.in_lobby(s.state):
+		# Before the match begins: everyone stays on the lobby page.
+		_online_playing = false
+		waiting_bar.hide()
+		if s != session:
+			_start(s)
+			campaign = null
+		menu.hide()
+		map_view.visible = false
+		_set_busy(true)
+		online_panel.open_match("")
 		return
 	if not s.state.game_over and not net.my_turn() and _show_online_view(s):
 		return

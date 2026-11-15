@@ -178,3 +178,26 @@ func test_waiting_player_sees_own_side_of_a_copy_and_gives_no_orders() -> void:
 	assert_eq(v.state.day, 1)
 	assert_eq(v.save_to_file("user://never.json"), ERR_UNAVAILABLE)
 	assert_eq(JSON.stringify(s.state.to_dict()), before, "the real game is untouched")
+
+
+func test_lobby_players_choose_faction_and_hero_before_the_match_begins() -> void:
+	var setup := {"players": [
+		{"type": "human", "faction": "concord", "hero_class": "", "team": 0}, {"type": "computer", "faction": "ashen", "hero_class": "", "team": 0, "difficulty": "normal"},
+		{"type": "human", "faction": "ashen", "hero_class": "", "team": 0}, {"type": "closed", "faction": "concord", "hero_class": "", "team": 0}], "standard_start": true}
+	var s := GameSession.new_game(data, "mournfield", 5, setup)
+	OnlineMatch.begin(s.state, "m1")
+	OnlineMatch.open_lobby(s.state, {"map_id": "mournfield", "seed": 5, "setup": setup})
+	assert_eq(OnlineMatch.claim(s.state, 2, "Ben"), "")
+	assert_eq(OnlineMatch.person_to_move(s.state), "", "nobody moves in the lobby")
+	var faction: String = GameSetup.playable_factions(data)[2]
+	var cls: String = GameSetup.classes_for_faction(data, faction)[0]
+	var why := []
+	var next := OnlineMatch.rebuild_with_choice(_copy(s), 2, faction, cls, why)
+	assert_true(next != null, str(why))
+	assert_eq(String(next.state.player(2)["faction"]), faction)
+	assert_eq(OnlineMatch.seat_of(next.state, 2), "Ben", "seats kept")
+	assert_eq(OnlineMatch.lobby_choice(next.state, 2)["hero_class"], cls)
+	assert_true(next.state.heroes.values().any(func(h: Hero) -> bool: return h.owner == 2 and h.class_id == cls), "the chosen hero leads")
+	OnlineMatch.close_lobby(next.state)
+	assert_false(OnlineMatch.in_lobby(next.state))
+	assert_true(OnlineMatch.rebuild_with_choice(next, 2, faction, "", why) == null, "no changes once begun")

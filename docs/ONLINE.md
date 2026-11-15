@@ -33,6 +33,12 @@ join with the host's local address.
 
 Every computer needs the same version of the game; the host refuses a join from another version.
 
+## A new match where everyone picks their side
+
+Set up a new game as usual (map, seed, which players are human), then press **Host online** instead of Begin.
+Enter your name and choose **Host this game**. The match opens as a lobby: friends join with your address, take
+a human player and choose its faction and hero right there. When everyone is ready, press **Begin match**.
+
 ## While you play
 
 - While another person moves, you see your own side as it was at your last turn: your map, towns, heroes and
