@@ -632,6 +632,7 @@ func preview_battle(hero_id: String, target_id: String) -> Dictionary:
 	pred["defending_hero"] = battle_target(target_id)["hero"] != null
 	pred["scouted"] = is_scouted(target_id)
 	pred["odds"] = odds_shown(target_id)
+	pred["siege"] = siege_status(hero_id, target_id)
 	return pred
 
 
@@ -830,6 +831,14 @@ func attack(hero_id: String, target_id: String, defender_flees: bool = false) ->
 		obj["hostile_players"] = hostile
 	var foe: Hero = tgt["hero"]
 	var pos: Vector2i = tgt["pos"]
+	var siege := siege_status(hero_id, target_id)
+	if siege["needed"] and not siege["ready"] and not defender_flees:
+		var started := begin_siege(hero_id, target_id)
+		if not started["surrendered"]:
+			started["siege"] = true
+			return started
+	if tgt["kind"] == "town":
+		obj.erase("sieges")
 	var escape := flee_destination(foe.id, pos) if foe != null and (defender_flees or tgt["kind"] == "hero") else Vector2i(-1, -1)
 	if defender_flees and escape == Vector2i(-1, -1):
 		return {"ok": false, "reason": "No safe town is available to flee to."}
@@ -990,6 +999,155 @@ func attack(hero_id: String, target_id: String, defender_flees: bool = false) ->
 	battle_resolved.emit(result)
 	state_changed.emit()
 	return result
+
+
+# ---------------------------------------------------------------- sieges --
+# A defended town with fortifications cannot be stormed at once: each
+# fortification (defense building) adds a day of siege. The siege belongs to
+# the attacking player and holds while one of its heroes stays next to the
+# town; the town owner can bring a hero in or strike the besiegers meanwhile.
+# When the siege starts the defenders may lose heart and come out at once
+# (morale and how badly they are outnumbered); that roll uses its own GameRng
+# seeded from the game, never the shared game RNG. Sieges live in the town
+# object ("sieges": {player: {ready_day, started}}), so they travel in saves
+# and online turn handoffs.
+
+## Number of fortification buildings in the town (siege days).
+func fortification_level(t: Dictionary) -> int:
+	var n := 0
+	for b in t.get("built", []):
+		if String(Town.building(t, b, data).get("category", "")) == "defense":
+			n += 1
+	return n
+
+
+## True if the town has defenders: a garrison or the owner's hero inside.
+func town_defended(t: Dictionary) -> bool:
+	return not Town.garrison(t).is_empty() or town_defender(t) != null
+
+
+## A living hero of player_idx standing next to the town, or null.
+func _besieger_near(t: Dictionary, player_idx: int) -> Hero:
+	var p := AdventureMap.object_pos(t)
+	for h in _heroes_sorted(player_idx):
+		if h.alive and h.pos != p and absi(h.pos.x - p.x) <= 1 and absi(h.pos.y - p.y) <= 1 and not h.army.is_empty():
+			return h
+	return null
+
+
+## Drops sieges that no longer hold (besiegers gone, town changed hands or emptied).
+func _prune_sieges(t: Dictionary) -> void:
+	var sieges: Dictionary = t.get("sieges", {})
+	if sieges.is_empty():
+		return
+	for key in sieges.keys():
+		var s: Dictionary = sieges[key]
+		var pl := int(key)
+		if int(s.get("town_owner", -2)) != int(t["owner"]) or not town_defended(t) or _besieger_near(t, pl) == null:
+			sieges.erase(key)
+	if sieges.is_empty():
+		t.erase("sieges")
+
+
+## The siege player_idx holds on the town, or {} ({ready_day, started, days}).
+func siege_of(t: Dictionary, player_idx: int) -> Dictionary:
+	_prune_sieges(t)
+	return (t.get("sieges", {}) as Dictionary).get(str(player_idx), {})
+
+
+## Every player besieging the town (sorted), after dropping broken sieges.
+func besiegers(t: Dictionary) -> Array:
+	_prune_sieges(t)
+	var out := []
+	for key in t.get("sieges", {}):
+		out.append(int(key))
+	out.sort()
+	return out
+
+
+## What storming target_id needs from hero_id: {needed, active, ready, days_left, days}.
+## needed is false for anything but a defended, fortified, hostile town.
+func siege_status(hero_id: String, target_id: String) -> Dictionary:
+	var out := {"needed": false, "active": false, "ready": true, "days_left": 0, "days": 0}
+	var h := hero(hero_id)
+	var tgt := battle_target(target_id)
+	if h == null or tgt.is_empty() or tgt["kind"] != "town" or WaveDirector.has_order(state, h.id) \
+			or not bool(state.rules.get("sieges", true)):
+		return out
+	var t: Dictionary = tgt["object"]
+	var level := fortification_level(t)
+	if level <= 0 or not town_defended(t) or allied(int(t["owner"]), h.owner):
+		return out
+	out["needed"] = true
+	out["days"] = level
+	var s := siege_of(t, h.owner)
+	if s.is_empty():
+		out["ready"] = false
+		out["days_left"] = level
+		return out
+	out["active"] = true
+	out["days_left"] = maxi(0, int(s["ready_day"]) - state.day)
+	out["ready"] = out["days_left"] == 0
+	return out
+
+
+## Chance that the defenders give up waiting and fight at once.
+func surrender_chance(h: Hero, t: Dictionary) -> float:
+	var attack := _side_power(h.army.to_combat_stacks())
+	var garrison := Town.garrison(t).to_combat_stacks()
+	var foe := town_defender(t)
+	var defend := _side_power(garrison + (foe.army.to_combat_stacks() if foe != null else []))
+	var ratio := attack / maxf(1.0, defend * (1.0 + 0.05 * Town.defense_bonus(t, data)))
+	var morale := 0
+	var factions := {}
+	for st in garrison + (foe.army.to_combat_stacks() if foe != null else []):
+		factions[data.creature(st["creature"])["faction"]] = true
+	if factions.size() == 1:
+		morale += 1
+	if foe != null:
+		morale += HeroModifiers.whole(foe.modifiers(data), "morale")
+	else:
+		morale -= 1   # nobody to lead the defence
+	morale -= HeroModifiers.whole(h.modifiers(data), "enemy_morale")
+	return clampf(0.08 * (ratio - 1.5) - 0.05 * morale, 0.0, 0.35)
+
+
+func _side_power(stacks: Array) -> float:
+	var v := 0.0
+	for st in stacks:
+		var c := Army.creature_stats(st, data)
+		v += float(st["count"]) * float(c["hp"]) * float(int(c["damage"][0]) + int(c["damage"][1])) * (1.0 + 0.05 * (int(c["attack"]) + int(c["defense"])))
+	return v
+
+
+## Lays siege to a fortified town (the hero stands next to it). Returns
+## {ok, started, surrendered, days_left, reason}: surrendered means the
+## defenders came out and the battle can be fought now.
+func begin_siege(hero_id: String, target_id: String) -> Dictionary:
+	var st := siege_status(hero_id, target_id)
+	if not st["needed"] or st["ready"]:
+		return {"ok": true, "started": false, "surrendered": false, "days_left": 0, "reason": ""}
+	if st["active"]:
+		return {"ok": false, "started": false, "surrendered": false, "days_left": st["days_left"],
+			"reason": "The siege lasts %d more day%s." % [st["days_left"], "" if st["days_left"] == 1 else "s"]}
+	var h := hero(hero_id)
+	var t: Dictionary = battle_target(target_id)["object"]
+	var rng := GameRng.new(("siege:%d:%s:%d:%d" % [state.game_seed, t["id"], h.owner, state.day]).hash())
+	var chance := surrender_chance(h, t)
+	h.movement_left = 0
+	if rng.chance(chance):
+		message.emit("The defenders of %s lose heart and come out to fight." % t["name"])
+		return {"ok": true, "started": false, "surrendered": true, "days_left": 0, "chance": chance,
+			"reason": "The defenders of %s lose heart and come out to fight." % t["name"]}
+	var sieges: Dictionary = t.get("sieges", {})
+	sieges[str(h.owner)] = {"ready_day": state.day + int(st["days"]), "started": state.day, "town_owner": int(t["owner"])}
+	t["sieges"] = sieges
+	var line := "%s lays siege to %s. The walls hold for %d day%s." % [h.name, t["name"], int(st["days"]), "" if int(st["days"]) == 1 else "s"]
+	message.emit(line)
+	if int(t["owner"]) >= 0:
+		_add_news(state.player(int(t["owner"])), "%s besieges %s! Storm in %d day%s: send a hero to relieve it." % [h.name, t["name"], int(st["days"]), "" if int(st["days"]) == 1 else "s"])
+	state_changed.emit()
+	return {"ok": false, "started": true, "surrendered": false, "days_left": int(st["days"]), "chance": chance, "reason": line}
 
 
 ## Online, the defender sits at another computer: the battle waits in their

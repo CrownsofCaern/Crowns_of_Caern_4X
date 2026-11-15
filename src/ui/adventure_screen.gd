@@ -1287,6 +1287,12 @@ func _on_attack_confirmed() -> void:
 	AudioManager.play("battle_start")
 	var result := session.attack(h.id, _pending_battle)
 	_pending_battle = ""
+	if result.get("siege", false) or not result.has("winner"):
+		panels.hide()
+		hud.log_message("[color=#e0b450]%s[/color]" % String(result.get("reason", "The attack cannot be made.")))
+		_refresh()
+		_set_busy(false)
+		return
 	if BattleViewer.watch_enabled(panels.settings_path) and result.has("log"):
 		await battle_viewer.play(result, h.name, 0, panels.settings_path)
 	AudioManager.play_stinger("battle_victory" if result["winner"] == 0 else "battle_defeat")

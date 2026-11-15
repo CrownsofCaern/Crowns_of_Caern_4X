@@ -370,6 +370,13 @@ func _compute_threats() -> void:
 			_danger[t["id"]] = maxf(float(_danger.get(t["id"], 0.0)), strength)
 			if cost <= int(move * float(settings["threat_days"])) and strength > garrison_defense(t):
 				_threats[t["id"]] = maxf(float(_threats.get(t["id"], 0.0)), strength)
+	for t in towns:
+		for pl in session.besiegers(t):
+			var e := session._besieger_near(t, pl)
+			if e != null:
+				var strength := army_value(e.army)
+				_danger[t["id"]] = maxf(float(_danger.get(t["id"], 0.0)), strength)
+				_threats[t["id"]] = maxf(float(_threats.get(t["id"], 0.0)), strength)
 	_add_unseen_heroes(fog)
 	_add_invasion_threats()
 
@@ -1033,6 +1040,38 @@ func _blocked_for(h: Hero) -> Dictionary:
 	return out
 
 
+## A siege this hero is part of: {hold: true, label} while the walls still
+## stand (the hero stays put so the siege holds), the town as a target once
+## they fall (a best_target-shaped choice), or {}.
+func _siege_duty(h: Hero) -> Dictionary:
+	for oid in _sorted_object_ids():
+		var t: Dictionary = session.state.map.objects[oid]
+		if t["type"] != "town" or session.siege_of(t, player).is_empty():
+			continue
+		var p := AdventureMap.object_pos(t)
+		if absi(h.pos.x - p.x) > 1 or absi(h.pos.y - p.y) > 1:
+			continue
+		var target := session.hostile_target_at(p, player)
+		var st := session.siege_status(h.id, target if target != "" else String(t["id"]))
+		if st["needed"] and not st["ready"]:
+			return {"hold": true, "label": t["name"]}
+		return {"id": t["id"], "pos": p, "kind": "town", "label": t["name"], "days": 0.0}
+	return {}
+
+
+## Starts (or keeps) a siege before storming a fortified town. True if the
+## hero must wait instead of fighting now.
+func _must_besiege(h: Hero, target_id: String, label: String) -> bool:
+	var st := session.siege_status(h.id, target_id)
+	if not st["needed"] or st["ready"]:
+		return false
+	var res := session.begin_siege(h.id, target_id)
+	if res.get("surrendered", false):
+		return false
+	_note("%s besieges %s (%d day%s)." % [h.name, label, int(res.get("days_left", 0)), "" if int(res.get("days_left", 0)) == 1 else "s"])
+	return true
+
+
 func _run_hero(h: Hero, report: Dictionary) -> int:
 	if WaveDirector.has_order(session.state, h.id):
 		return WaveDirector.play_order(session, h)
@@ -1042,6 +1081,10 @@ func _run_hero(h: Hero, report: Dictionary) -> int:
 	equip_best(h)
 	_teleport_to_defend(h)
 	_relieve_town(h)
+	var siege_choice := _siege_duty(h)
+	if siege_choice.get("hold", false):
+		_note("%s keeps up the siege of %s." % [h.name, siege_choice["label"]])
+		return 0
 	for _i in int(settings["max_actions_per_hero"]):
 		if not h.alive or session.state.game_over or h.movement_left <= 0:
 			break
@@ -1057,6 +1100,9 @@ func _run_hero(h: Hero, report: Dictionary) -> int:
 			if not _sortie.is_empty():
 				choice = _sortie
 				_sortie = {}
+		if not siege_choice.is_empty():
+			choice = siege_choice   # the walls fall today: storm them
+			siege_choice = {}
 		if choice.is_empty():
 			break
 		if float(choice.get("days", 0.0)) > 1.0 and _take_deep_road(h, choice["pos"]):
@@ -1081,6 +1127,8 @@ func _run_hero(h: Hero, report: Dictionary) -> int:
 			var plan := battle_plan(h, r["battle"])
 			var pred: Dictionary = plan["pred"]
 			if _fight_ok(pred, is_decisive(r["battle"])):
+				if _must_besiege(h, r["battle"], choice["label"]):
+					break
 				_cast(h, plan["spell"])
 				var res := session.attack(h.id, r["battle"])
 				battles += 1
@@ -1118,6 +1166,10 @@ func _run_hero_interactive(h: Hero, report: Dictionary) -> int:
 	equip_best(h)
 	_teleport_to_defend(h)
 	_relieve_town(h)
+	var siege_choice := _siege_duty(h)
+	if siege_choice.get("hold", false):
+		_note("%s keeps up the siege of %s." % [h.name, siege_choice["label"]])
+		return 0
 	for _i in int(settings["max_actions_per_hero"]):
 		if not h.alive or session.state.game_over or h.movement_left <= 0:
 			break
@@ -1133,6 +1185,9 @@ func _run_hero_interactive(h: Hero, report: Dictionary) -> int:
 			if not _sortie.is_empty():
 				choice = _sortie
 				_sortie = {}
+		if not siege_choice.is_empty():
+			choice = siege_choice   # the walls fall today: storm them
+			siege_choice = {}
 		if choice.is_empty():
 			break
 		if float(choice.get("days", 0.0)) > 1.0 and _take_deep_road(h, choice["pos"]):
@@ -1157,6 +1212,8 @@ func _run_hero_interactive(h: Hero, report: Dictionary) -> int:
 			var plan := battle_plan(h, r["battle"])
 			var pred: Dictionary = plan["pred"]
 			if _fight_ok(pred, is_decisive(r["battle"])):
+				if _must_besiege(h, r["battle"], choice["label"]):
+					break
 				_cast(h, plan["spell"])
 				var tgt := session.battle_target(r["battle"])
 				var defender: Hero = tgt["hero"]

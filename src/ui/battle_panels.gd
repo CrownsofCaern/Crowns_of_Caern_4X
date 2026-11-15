@@ -200,6 +200,16 @@ func show_forecast(enemy_name: String, pred: Dictionary) -> void:
 	vig.setup(String(pred.get("visual_terrain",pred["terrain"])), mine, theirs, int(pred.get("visual_seed",0)))
 	_body.add_child(vig)
 	_body.add_child(_centered("Engage %s?" % enemy_name, 24, UiStyle.BRASS))
+	var siege: Dictionary = pred.get("siege", {})
+	if bool(siege.get("needed", false)) and not bool(siege.get("ready", true)):
+		var days := int(siege["days_left"])
+		var plural := "" if days == 1 else "s"
+		if bool(siege["active"]):
+			_body.add_child(_centered("Under siege: the walls fall in %d day%s. Keep a hero next to the town." % [days, plural], 15, UiStyle.BRASS))
+		else:
+			_body.add_child(_centered("Fortified town: attacking starts a siege of %d day%s (the defenders may give up and fight at once)." % [days, plural], 15, UiStyle.BRASS))
+	elif bool(siege.get("needed", false)):
+		_body.add_child(_centered("The siege is over: the walls can be stormed today.", 15, UiStyle.BRASS))
 	var ter: Dictionary = _data.terrain(pred["terrain"])
 	_body.add_child(_centered("Battlefield: %s  ·  forecast from %d simulated battles" % [ter.get("name", pred["terrain"]), pred["simulations"]], 13, UiStyle.TEXT_DIM))
 
