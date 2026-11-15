@@ -101,6 +101,24 @@ func test_rare_buildings_say_what_they_do() -> void:
 		"a visited site says so")
 
 
+func test_visited_sites_name_who_has_been_there() -> void:
+	var s := _session()
+	var heroes: Array = s.state.heroes_of(0)
+	var h: Hero = heroes[0]
+	var lore := _put(s, {"id": "test_lore", "type": "site", "site": "elder_rings"})
+	MapSites.normalize(lore, data)
+	var p := AdventureMap.object_pos(lore)
+	assert_false(_texts(MapTipInfo.describe(s, p, null)).contains("Visited"), "a fresh site says nothing")
+	lore["visitors"] = [h.id]
+	assert_true(_texts(MapTipInfo.describe(s, p, null)).contains("Visited by " + h.name), "even with no hero selected")
+	var rival: Hero = s.state.heroes_of(1)[0]
+	lore["visitors"] = [rival.id]
+	assert_false(_texts(MapTipInfo.describe(s, p, null)).contains("Visited"), "a rival's visit is not ours")
+	var tower := _put(s, {"id": "test_tower", "type": "site", "site": "watchfire_ruin", "visitors": [MapSites.player_key(0)]})
+	MapSites.normalize(tower, data)
+	assert_true(_texts(MapTipInfo.describe(s, AdventureMap.object_pos(tower), null)).contains("Visited"), "a once-per-player site says so too")
+
+
 func test_heroes_are_described() -> void:
 	var s := _session()
 	var mine: Hero = s.state.heroes_of(0)[0]

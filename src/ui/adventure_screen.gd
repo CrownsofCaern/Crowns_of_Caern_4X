@@ -59,6 +59,7 @@ var show_menu_on_start := true
 var _game_over_shown := false
 var _last_human := -1
 var _pending_battle := ""
+var _site_after_battle := {}   # {id, lines}: the site a won battle just opened, shown once the report closes
 var _pending_encounter := ""
 var _points_before := 0
 var _busy := false
@@ -183,7 +184,7 @@ func _ready() -> void:
 	panels.scout_requested.connect(_on_forecast_scout)
 	panels.orders_changed.connect(_on_forecast_orders)
 	panels.report_closed.connect(func():
-		if not _ai_playing:
+		if not _ai_playing and not _open_won_site():
 			_after_event())
 	panels.watch_requested.connect(_watch_again)
 	hud.hero_selected.connect(_select_hero)
@@ -1109,7 +1110,8 @@ func _on_tile_clicked(t: Vector2i) -> void:
 	if h.pos == t and here.get("type", "") == "town" and int(here.get("owner", -1)) == h.owner:
 		_open_town(String(here["id"]))
 		return
-	if h.pos == t and here.get("type", "") == "site" and MapSites.kind(here, data) in ["trader", "cobolt"]:
+	# Standing on a site (a dwelling just won, a trader): a click opens it again.
+	if h.pos == t and here.get("type", "") == "site":
 		_set_busy(true)
 		site_dialog.open(session, String(here["id"]), h.id)
 		return
@@ -1285,8 +1287,16 @@ func _on_attack_confirmed() -> void:
 	var h := _hero()
 	var from := h.pos
 	AudioManager.play("battle_start")
+	var target := _pending_battle
 	var result := session.attack(h.id, _pending_battle)
 	_pending_battle = ""
+	_site_after_battle = {}
+	var won_at := session.state.map.object_at(h.pos) if result.get("winner", 1) == 0 and h.alive else {}
+	if not won_at.is_empty() and won_at["id"] == target and won_at["type"] == "site":
+		var lines := []
+		for v in result.get("site_visit", []):
+			lines = v["lines"]
+		_site_after_battle = {"id": target, "lines": lines}
 	if result.get("siege", false) or not result.has("winner"):
 		panels.hide()
 		hud.log_message("[color=#e0b450]%s[/color]" % String(result.get("reason", "The attack cannot be made.")))
@@ -1303,6 +1313,22 @@ func _on_attack_confirmed() -> void:
 		hud.log_message("[color=#d96a52]%s[/color] against %s." % ["Withdrew" if result["outcome"] in ["attacker_withdrew", "attacker_retreated"] else "Defeat", result["sides"][1]["name"]])
 	_refresh()
 	panels.show_report(result)
+
+
+## After the report of a won battle for a site (a guarded dwelling): the hero
+## now stands on it, so its dialog opens as if the hero had walked in.
+## True if it opened.
+func _open_won_site() -> bool:
+	var won := _site_after_battle
+	_site_after_battle = {}
+	var h := _hero()
+	if won.is_empty() or h == null or not h.alive or not session.state.map.objects.has(won["id"]) \
+			or AdventureMap.object_pos(session.state.map.objects[won["id"]]) != h.pos:
+		return false
+	_set_busy(true)
+	AudioManager.play("ui_open")
+	site_dialog.open(session, String(won["id"]), h.id, won["lines"])
+	return true
 
 
 ## Replays the battle from the report, then brings the report back.
