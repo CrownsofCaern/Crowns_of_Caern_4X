@@ -1867,6 +1867,31 @@ func can_cast_spell(hero_id: String, spell_id: String, destination_id: String = 
 		return "movement already full"
 	if spell["effect"] == "battle_damage" and h.battle_spell_damage >= float(spell["amount"]):
 		return "an equal or stronger battle spell is already active"
+	if spell["effect"] == "boon":
+		for b in h.boons:
+			if String(b["source"]) == "spell_" + spell_id and int(b["until_day"]) >= state.day:
+				return "already active"
+	if spell["effect"] == "summon":
+		var cid := summon_creature(h)
+		if cid == "":
+			return "no troops to call"
+		var has_stack := h.army.slots.any(func(st: Dictionary) -> bool: return not st.is_empty() and String(st["creature"]) == cid)
+		if not has_stack and h.army.stack_count() >= Army.MAX_SLOTS:
+			return "no free army slot"
+	if spell["effect"] == "veteran_xp" and h.army.stack_count() == 0:
+		return "no troops"
+	return ""
+
+
+## The first-tier base creature of the hero's faction, called by summoning spells.
+func summon_creature(h: Hero) -> String:
+	var faction := String(data.hero_classes.get(h.class_id, {}).get("faction", ""))
+	var ids := data.creatures.keys()
+	ids.sort()
+	for id in ids:
+		var c: Dictionary = data.creatures[id]
+		if String(c.get("faction", "")) == faction and int(c.get("tier", 0)) == 1 and not c.has("upgrade_of"):
+			return String(id)
 	return ""
 
 
@@ -1886,6 +1911,15 @@ func cast_spell(hero_id: String, spell_id: String, destination_id: String = "") 
 			var destination := town(h.home_town if spell["effect"] == "home" else destination_id)
 			h.pos = AdventureMap.object_pos(destination)
 			_reveal_around(h)
+		"boon":
+			h.add_boon("spell_" + spell_id, String(spell["name"]), state.day + int(spell.get("days", 1)) - 1, spell["mods"])
+		"reveal":
+			(state.player(h.owner)["fog"] as FogOfWar).reveal(h.pos, int(spell["amount"]))
+		"summon":
+			var n := int(spell["amount"]) + int(spell.get("per_power", 0)) * h.total_attr("power", data)
+			h.army.add(summon_creature(h), n)
+		"veteran_xp":
+			h.army.gain_veteran_xp(int(spell["amount"]), data)
 	message.emit("%s casts %s." % [h.name, spell["name"]])
 	state_changed.emit()
 	return {"ok": true, "reason": ""}

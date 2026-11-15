@@ -7,6 +7,16 @@
     "homeward": {"name": "Homeward", "description": "Teleport to your home town, if you still hold it.", "cost": 12, "effect": "home", "amount": 1, "source": "rare"},
     "town_gate": {"name": "Town Gate", "description": "Travel from one of your towns to another.", "cost": 10, "effect": "town_gate", "amount": 1, "source": "rare"},
     "swiftwind": {"name": "Swiftwind", "description": "Restore 50% of daily movement.", "cost": 10, "effect": "movement", "amount": 0.5, "source": "rare"},
-    "warfire": {"name": "Warfire", "description": "Your army deals 20% more damage in its next battle.", "cost": 10, "effect": "battle_damage", "amount": 0.2, "source": "rare"}
+    "warfire": {"name": "Warfire", "description": "Your army deals 20% more damage in its next battle.", "cost": 10, "effect": "battle_damage", "amount": 0.2, "source": "rare"},
+    "stoneskin": {"name": "Stoneskin", "description": "The army gains +2 defense until the end of the day.", "cost": 8, "effect": "boon", "days": 1, "mods": {"defense": 2}, "source": "rare"},
+    "warcry": {"name": "Warcry", "description": "The army gains +2 attack until the end of the day.", "cost": 8, "effect": "boon", "days": 1, "mods": {"attack": 2}, "source": "rare"},
+    "unbroken_line": {"name": "Unbroken Line", "description": "+2 morale in battle for three days.", "cost": 10, "effect": "boon", "days": 3, "mods": {"morale": 2}, "source": "rare"},
+    "hunters_mark": {"name": "Hunter's Mark", "description": "Ranged troops deal 15% more damage for three days.", "cost": 10, "effect": "boon", "days": 3, "mods": {"ranged_damage_pct": 0.15}, "source": "rare"},
+    "rootwalk": {"name": "Rootwalk", "description": "Rough ground costs half its extra movement for two days.", "cost": 8, "effect": "boon", "days": 2, "mods": {"rough_ground_pct": 0.5}, "source": "rare"},
+    "red_harvest": {"name": "Red Harvest", "description": "After each battle in the next three days, 15% of the fallen rise to fight again.", "cost": 12, "effect": "boon", "days": 3, "mods": {"recover_pct": 0.15}, "source": "rare"},
+    "veil_of_shadows": {"name": "Veil of Shadows", "description": "Scouting costs no movement for three days.", "cost": 6, "effect": "boon", "days": 3, "mods": {"scout_cost_pct": 1.0}, "source": "rare"},
+    "dawnbreak": {"name": "Dawnbreak", "description": "Lifts the shroud in a wide circle around the hero.", "cost": 6, "effect": "reveal", "amount": 9, "source": "rare"},
+    "call_the_pack": {"name": "Call the Pack", "description": "Calls 4 of your faction's first-tier troops to the army, +2 per Power.", "cost": 14, "effect": "summon", "amount": 4, "per_power": 2, "source": "rare"},
+    "horn_of_the_hold": {"name": "Horn of the Hold", "description": "Every stack in the army gains 400 veteran experience.", "cost": 15, "effect": "veteran_xp", "amount": 400, "source": "rare"}
   }
 }

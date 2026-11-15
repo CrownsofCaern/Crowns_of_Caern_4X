@@ -134,3 +134,35 @@ func test_version_13_save_gets_mana_and_preserves_battle_orders() -> void:
 	assert_eq(h.mana, h.max_mana(data))
 	assert_ne(h.home_town, "")
 	assert_eq(h.orders, s.hero("hero_wren").orders)
+
+
+func test_new_rare_spells_bless_reveal_summon_and_train() -> void:
+	var s := GameSession.new_game(data, "ember_ford", 11)
+	var h := s.hero("hero_wren")
+	for id in ["stoneskin", "warcry", "unbroken_line", "hunters_mark", "rootwalk", "red_harvest", "veil_of_shadows", "dawnbreak", "call_the_pack", "horn_of_the_hold"]:
+		assert_eq(data.magic["spells"][id]["source"], "rare", id)
+		assert_true(ResourceLoader.exists("res://assets/spells/%s.png" % id), id + " has an icon")
+		h.spells.append(id)
+	h.mana = 1000
+	var defense := h.total_attr("defense", data)
+	assert_true(s.cast_spell(h.id, "stoneskin")["ok"])
+	assert_eq(h.total_attr("defense", data), defense + 2, "a blessing changes the hero's modifiers")
+	assert_ne(s.can_cast_spell(h.id, "stoneskin"), "", "not twice while active")
+	var fog: FogOfWar = s.current_player()["fog"]
+	var seen := fog.explored_count()
+	assert_true(s.cast_spell(h.id, "dawnbreak")["ok"])
+	assert_gt(fog.explored_count(), seen)
+	var cid := s.summon_creature(h)
+	assert_eq(int(data.creature(cid)["tier"]), 1)
+	var count_of := func() -> int:
+		var n := 0
+		for st in h.army.slots:
+			if not st.is_empty() and st["creature"] == cid:
+				n += int(st["count"])
+		return n
+	var before: int = count_of.call()
+	assert_true(s.cast_spell(h.id, "call_the_pack")["ok"])
+	assert_true(int(count_of.call()) - before >= 4, "at least four troops answer")
+	assert_true(s.cast_spell(h.id, "horn_of_the_hold")["ok"])
+	s._start_new_day()
+	assert_false(h.has_boon("spell_stoneskin"), "one-day blessings end overnight")
