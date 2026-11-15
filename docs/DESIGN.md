@@ -459,7 +459,7 @@ state, never writes it), so it cannot do anything a human could not. Rule-based 
   (the garrison stays) and threatens it once the main hero needs the remaining days to get home
   (`reads_invasions`). Waves not yet announced stay unknown. The Shuttered Halls survival chapter, lost on day
   14 in AI-only games before, now holds.
-- **Going to war (hard and very hard):** in games with several rivals a computer player used to clear its own
+- **Going to war (normal and up):** in games with several rivals a computer player used to clear its own
   sector and wait there: rival towns lay in the fog behind guarded gates, and every unseen rival hero was assumed
   to be as strong as all its troops. `rival_intel` gives it scouts: it knows where rival towns, mines and heroes
   are and what they hold, so it plans attacks and strikes when humans have worn each other down. A neutral army
@@ -483,11 +483,13 @@ state, never writes it), so it cannot do anything a human could not. Rule-based 
   `DEFAULT_SETTINGS`), the hook for difficulty levels and personalities.
 - **Difficulty levels** (save version 9): every player has a `difficulty` from `data/ai_difficulty.json`
   (`passive`, `easy`, `normal`, `hard`, `very_hard`; default `normal`), chosen per computer slot in the new-game setup or by a
-  campaign chapter's `setup.players[i].difficulty`. A level overrides `StrategicAI` settings (passive: never
-  targets the player; easy: surer fights, fewer heroes; hard: riskier fights, more heroes, higher value on rival
-  towns and heroes, rival intel and gate breaking; very hard: as hard plus 10 forecasts per decision with screening, three-day danger horizon,
-  up to five heroes) and scales the computer player's daily income by `income_percent` (easy 85, hard 125, very
-  hard 150; humans always 100). Scenario `wave_strength` presets without a `very_hard` entry use 1.2 × `hard`.
+  campaign chapter's `setup.players[i].difficulty`. A level overrides `StrategicAI` settings and scales the computer
+  player's daily income by `income_percent` (humans always 100). Since 1.2 every level above easy sits one step
+  higher than in 1.1: passive never targets the player; easy (85%) takes only sure fights with fewer heroes;
+  normal (125%, the old hard) takes riskier fights, keeps four heroes, values rival towns and heroes higher and
+  goes to war (rival intel, gate breaking); hard (150%, the old very hard) adds 10 forecasts per decision with
+  screening, a three-day danger horizon and five heroes; very hard (175%) gambles on closer fights, keeps six
+  heroes and values human targets most. Scenario `wave_strength` presets without a `very_hard` entry use 1.2 × `hard`.
   `tools/ai_ladder.gd` plays two levels (or tunings) against each other with seats swapped. Settings merge in the order defaults, level, `GameState.rules.ai`, constructor overrides.
 - **Running it:** the adventure screen runs computer players right after the human ends the turn
   (`StrategicAI.play_ai_turns`). `data/maps/twin_marches.json` is a mirror-symmetric two-player duel map (human

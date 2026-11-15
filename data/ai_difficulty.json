@@ -26,13 +26,7 @@
     },
     "normal": {
       "name": "Normal",
-      "description": "The standard opponent.",
-      "income_percent": 100,
-      "ai": {}
-    },
-    "hard": {
-      "name": "Hard",
-      "description": "Aggressive: takes riskier battles, scouts out and hunts your towns and heroes, breaks out of its lands to expand, keeps more heroes and earns a quarter more.",
+      "description": "The standard opponent, and no pushover: takes riskier battles, scouts out and hunts your towns and heroes, breaks out of its lands to expand, keeps up to four heroes and earns a quarter more.",
       "income_percent": 125,
       "ai": {
         "min_win_probability": 0.72,
@@ -47,9 +41,9 @@
         "human_bonus": 1.25
       }
     },
-    "very_hard": {
-      "name": "Very hard",
-      "description": "Ruthless: weighs more battles before choosing, sees armies coming from further away, keeps up to five heroes and earns half again as much.",
+    "hard": {
+      "name": "Hard",
+      "description": "Ruthless: everything Normal does, but weighs more battles before choosing, sees armies coming from further away, keeps up to five heroes and earns half again as much.",
       "income_percent": 150,
       "ai": {
         "min_win_probability": 0.7,
@@ -66,6 +60,27 @@
         "rival_intel": true,
         "gate_value_share": 0.6,
         "human_bonus": 1.3
+      }
+    },
+    "very_hard": {
+      "name": "Very hard",
+      "description": "Merciless: everything Hard does, goes for your towns and heroes first, gambles on closer battles, keeps up to six heroes and earns three quarters more.",
+      "income_percent": 175,
+      "ai": {
+        "min_win_probability": 0.66,
+        "max_loss_fraction": 0.6,
+        "forecast_simulations": 64,
+        "forecasts_per_decision": 12,
+        "max_heroes": 6,
+        "enemy_bonus": 2.2,
+        "hero_kill_value": 10000,
+        "town_value": 14000,
+        "danger_days": 3.0,
+        "chase_rate": 0.3,
+        "screen_width": 2.0,
+        "rival_intel": true,
+        "gate_value_share": 0.7,
+        "human_bonus": 1.4
       }
     }
   }

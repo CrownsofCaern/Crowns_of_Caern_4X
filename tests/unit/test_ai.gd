@@ -65,6 +65,11 @@ func _put_hero(s: GameSession, hero_id: String, pos: Vector2i, pairs: Array) -> 
 
 
 ## Removes every map object except the listed ones and the towns.
+## These scenes test one mechanic each with the rival hero out of sight: the
+## level's rival intel (normal and up know where it is) would change the scene.
+const BLIND := {"rival_intel": false}
+
+
 func _only_keep(s: GameSession, ids: Array) -> void:
 	for id in s.state.map.objects.keys():
 		if not ids.has(id) and s.state.map.objects[id]["type"] != "town":
@@ -124,7 +129,7 @@ func test_first_turn_builds_recruits_and_grabs_nearby_things() -> void:
 func test_attacks_a_weak_neutral() -> void:
 	var s := _duel(5)
 	_only_keep(s, ["neutral_thornwolf_w"])
-	var ai := StrategicAI.new(s, 0)
+	var ai := StrategicAI.new(s, 0, BLIND)
 	# Strong army right next to the western thornwolf pack (12 thornwolves at 7,9).
 	var h := _put_hero(s, "hero_west", Vector2i(6, 9), [["shieldwarden", 40], ["longbowman", 60], ["lancer", 15]])
 	var pred := ai.forecast(h, "neutral_thornwolf_w")
@@ -162,7 +167,7 @@ func test_captures_an_empty_enemy_town() -> void:
 	var east := s.hero("hero_east")
 	east.pos = Vector2i(20, 3)   # away from home: Emberkeep stands empty
 	_put_hero(s, "hero_west", Vector2i(21, 10), [["pike_militia", 30]])
-	StrategicAI.new(s, 0).play_turn()
+	StrategicAI.new(s, 0, BLIND).play_turn()
 	assert_eq(int(s.town("town_emberkeep")["owner"]), 0, "walks in and takes it")
 
 
@@ -283,7 +288,7 @@ func test_leaves_enough_garrison_while_an_enemy_is_near() -> void:
 	var s := _duel(5)
 	var t := s.town("town_greywatch")
 	Town.set_garrison(t, Army.from_pairs([["pike_militia", 50], ["longbowman", 30], ["shieldwarden", 10]]))
-	var ai := StrategicAI.new(s, 0)
+	var ai := StrategicAI.new(s, 0, BLIND)
 	ai._compute_threats()
 	assert_eq(ai.spare_garrison_slots(t).size(), 3, "no enemy near: take everything")
 	_put_hero(s, "hero_east", Vector2i(9, 10), [["cinderling", 40]])
@@ -409,7 +414,7 @@ func test_resolves_a_worthwhile_encounter() -> void:
 	var s := _duel(5)
 	_only_keep(s, ["enc_wagon_w"])
 	var h := s.hero("hero_west")
-	var ai := StrategicAI.new(s, 0)
+	var ai := StrategicAI.new(s, 0, BLIND)
 	var pick := ai.encounter_choice(h, "enc_wagon_w")
 	assert_false(pick.is_empty(), "the wagon is worth searching")
 	assert_gt(pick["value"], 0.0)

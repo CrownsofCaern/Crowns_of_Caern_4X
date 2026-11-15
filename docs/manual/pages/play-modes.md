@@ -40,9 +40,9 @@ In a standard game each player starts with one hero, leading tier 1-2 creatures.
 |---|---|
 | Passive | Builds and grows, but never goes after your heroes, towns or mines. |
 | Easy | Fights only sure battles, keeps fewer heroes and earns a little less. |
-| Normal | The standard opponent. |
-| Hard | Takes riskier battles, hunts your towns and heroes, keeps more heroes and earns a quarter more. |
-| Very hard | Weighs more battles, sees armies coming from further away, keeps up to five heroes and earns half again as much. |
+| Normal | No pushover: takes riskier battles, scouts out your towns and heroes and comes for them, breaks out of its lands to expand, keeps up to four heroes and earns a quarter more. |
+| Hard | Everything Normal does, but weighs more battles, sees armies coming from further away, keeps up to five heroes and earns half again as much. |
+| Very hard | Merciless: goes for human players first, gambles on closer battles, keeps up to six heroes and earns three quarters more. |
 
 The **Hard odds** setting hides every win chance; you judge fights from what your scouts tell you.
 

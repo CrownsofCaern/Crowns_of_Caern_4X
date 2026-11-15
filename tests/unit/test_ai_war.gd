@@ -1,5 +1,5 @@
 extends "res://tests/test_case.gd"
-## Hard and very hard computer players go to war: they know where rival towns
+## Computer players from normal up go to war: they know where rival towns
 ## and heroes are (rival_intel), value a neutral army barring the way to a
 ## rival town (gate_value_share) and prefer human rivals (human_bonus).
 
@@ -25,12 +25,12 @@ func _rival_targets(s: GameSession, ai: StrategicAI, h: Hero) -> Array:
 	return out
 
 
-func test_only_hard_and_up_go_to_war() -> void:
-	for level in ["passive", "easy", "normal"]:
+func test_only_normal_and_up_go_to_war() -> void:
+	for level in ["passive", "easy"]:
 		var over: Dictionary = data.difficulty(level)["ai"]
 		assert_false(bool(over.get("rival_intel", false)), level)
 		assert_eq(float(over.get("gate_value_share", 0.0)), 0.0, level)
-	for level in ["hard", "very_hard"]:
+	for level in ["normal", "hard", "very_hard"]:
 		var over: Dictionary = data.difficulty(level)["ai"]
 		assert_true(bool(over["rival_intel"]), level)
 		assert_gt(float(over["gate_value_share"]), 0.0, level)
@@ -39,7 +39,7 @@ func test_only_hard_and_up_go_to_war() -> void:
 
 func test_hard_knows_rival_towns_in_the_fog() -> void:
 	var found := []
-	for level in ["normal", "hard"]:
+	for level in ["easy", "hard"]:
 		var s := _game("burning_ford", 3, ["", level])
 		var ai := StrategicAI.new(s, 1, {"strength_prefilter": 0.0, "gate_value_share": 0.0})
 		var h: Hero = s.state.heroes_of(1)[0]
@@ -47,12 +47,12 @@ func test_hard_knows_rival_towns_in_the_fog() -> void:
 		for t in s.towns_of(0):
 			assert_false(fog.is_explored(AdventureMap.object_pos(t)), "the rival town starts in the fog")
 		found.append(_rival_targets(s, ai, h).size())
-	assert_eq(found[0], 0, "a normal AI only goes for towns it has seen")
+	assert_eq(found[0], 0, "an easy AI only goes for towns it has seen")
 	assert_gt(found[1], 0, "a hard AI knows where its rivals live")
 
 
 func test_hard_does_not_fear_rivals_it_cannot_see() -> void:
-	for level in ["normal", "hard"]:
+	for level in ["easy", "hard"]:
 		var s := _game("burning_ford", 3, ["", level])
 		var ai := StrategicAI.new(s, 1)
 		var fog: FogOfWar = s.state.player(1)["fog"]
@@ -61,8 +61,8 @@ func test_hard_does_not_fear_rivals_it_cannot_see() -> void:
 		ai._begin_turn(ai._new_report())
 		var guesses := ai._reach.filter(func(r): return not bool(r["seen"]))
 		var rival_seen := ai._reach.filter(func(r): return bool(r["seen"]))
-		if level == "normal":
-			assert_gt(guesses.size(), 0, "normal assumes a hero as strong as its own troops behind every rival town")
+		if level == "easy":
+			assert_gt(guesses.size(), 0, "easy assumes a hero as strong as its own troops behind every rival town")
 		else:
 			assert_eq(guesses.size(), 0, "hard knows where the rival heroes really are")
 			assert_eq(rival_seen.size(), s.state.heroes_of(0).filter(func(e): return not e.army.is_empty()).size())

@@ -369,6 +369,10 @@ func _compute_threats() -> void:
 				blocked[AdventureMap.object_pos(o)] = true
 		var field := AiDistanceField.build(session.state.map, e.pos, blocked, int(move * float(settings["danger_days"])))
 		var strength := army_value(e.army)
+		# A hero in its own town can march out with the garrison tomorrow.
+		var home := session.state.map.object_at(e.pos)
+		if not home.is_empty() and home["type"] == "town" and int(home["owner"]) == e.owner:
+			strength += army_value(Town.garrison(home))
 		_reach.append({"field": field, "move": move, "strength": strength * (1.0 + 0.05 * e.defense), "seen": true})
 		for t in towns:
 			var cost := field.cost_to(AdventureMap.object_pos(t))
@@ -1290,7 +1294,11 @@ func best_target(h: Hero, skip: Dictionary = {}, guard_home: bool = false) -> Di
 			c["loss_fraction"] = pred["expected_loss_fraction"]
 			if c["utility"] <= 0.0:
 				continue
-		if c["kind"] != "hero" and not (c["kind"] == "town" and (_owned_town_at(c["pos"]) or int(c["cost"]) <= h.movement_left)) \
+		# A town taken today shelters the hero; one that must first be besieged
+		# leaves it camped outside the walls for the night.
+		var shelters: bool = c["kind"] == "town" and (_owned_town_at(c["pos"]) or (int(c["cost"]) <= h.movement_left \
+			and not _siege_first(h, c["id"])))
+		if c["kind"] != "hero" and not shelters \
 				and exposed(c["pos"], hero_value * (1.0 - float(c.get("loss_fraction", 0.0)))):
 			continue   # a stronger enemy hero would catch us there tomorrow
 		if c["kind"] == "town" and not _owned_town_at(c["pos"]) and bool(settings["guarded_captures"]) \
@@ -1299,6 +1307,12 @@ func best_target(h: Hero, skip: Dictionary = {}, guard_home: bool = false) -> Di
 		if best.is_empty() or c["utility"] > best["utility"]:
 			best = c
 	return best
+
+
+## True if taking this town means camping outside it first (a siege not yet ripe).
+func _siege_first(h: Hero, town_id: String) -> bool:
+	var st: Dictionary = session.siege_status(h.id, town_id)
+	return bool(st["needed"]) and not bool(st["ready"])
 
 
 ## True if a stronger visible enemy hero could reach town candidate c tomorrow
