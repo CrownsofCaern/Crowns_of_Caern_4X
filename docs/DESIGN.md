@@ -796,6 +796,22 @@ pick goes into every zone of its zone group with the same guard and creature, so
 `site_capture_weeks`, or the affordable pool at a held one; others: the data `ai` value or XP), and it
 recruits on arrival.
 
+**Hamlets** (`data/sites.json` kind `hamlet`, rules in `src/game/hamlets.gd`, numbers in game_rules.json
+`hamlets`): the new-game default; unticking the setup checkbox gives a **Classic** game without them
+(`setup.hamlets` -> `rules.hamlets`). Three levels: Hamlet (100 gold a day, tier 1-2, light guard), Village
+(250, tier 3-4, medium) and Freehold (500, tier 5-6, strong). They are placed when the game starts, not by
+the map generator (`Hamlets.place`, an RNG stream of its own, so a Classic game and every other mode keep
+their maps): `per_player` sites by movement cost from each player's first town, `contested` ones where the
+two nearest players are equally far. A held hamlet pays its gold daily (`Economy.daily_income`) and raises a
+weekly levy of `growth_pct` of the town growth, hired at `price_pct` of the town price
+(`MapSites.recruit_cost`) and capped at `levy_cap_weeks`. The unhired levy and any stationed troops
+(`hamlet_station` / `hamlet_withdraw`, `garrison_slots` kinds) defend it against rivals. A levy of a
+week's growth or more left unhired for `unrest_weeks` weeks brings unrest, and from the week after the hamlet
+turns neutral with `revolt_chance`, guarded by that levy, unless a town of the owner lies within
+`realm_radius` or the garrison is worth `garrison_weeks` of the levy. **AI**: `_hamlet_value` (gold like a
+mine plus the levy), and `_hamlet_hire` keeps `hamlet_gold_reserve` for the towns but always hires a levy
+that would breed unrest. It does not station troops.
+
 **Events** (`data/events.json`, `src/game/world_events.gd`): from day 8, each new week draws one omen (12, by
 weight; a quiet week is the most likely) that holds for everyone: growth +50% / -25% or double for one rolled
 tier, hero boons for the week (+1 attack, -1 morale, -15% / +10% movement), income -25% gold or +50% other

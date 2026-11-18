@@ -26,7 +26,7 @@ static func content_field(type: String) -> String:
 
 
 static func supports_owner(data: GameData, type: String, content: String) -> bool:
-	return data.sites.get(content, {}).get("kind") == "dwelling" if type == "site" else type in ["town", "hero", "mine"]
+	return data.sites.get(content, {}).get("kind") in ["dwelling", "hamlet"] if type == "site" else type in ["town", "hero", "mine"]
 
 
 static func make_entity(data: GameData, type: String, content: String, owner: int) -> Dictionary:
@@ -50,7 +50,7 @@ static func make_entity(data: GameData, type: String, content: String, owner: in
 		"resource": entity["amount"] = 500 if content == "gold" else 5
 		"neutral_army": entity["stacks"] = [[content, 10]]
 		"site":
-			if data.sites[content].get("kind") == "dwelling":
+			if data.sites[content].get("kind") in ["dwelling", "hamlet"]:
 				var pool := MapSites.creature_pool(data.sites[content], data)
 				if not pool.is_empty():
 					entity["creature"] = pool[0]
@@ -117,7 +117,7 @@ static func entity_errors(value: Dictionary, hero: bool, definition: Dictionary,
 			for building in value.get("built", []):
 				if not buildings.has(building):
 					errors.append("Unknown building: %s." % str(building))
-	if type == "site" and data.sites.has(value.get("site", "")) and data.sites[value["site"]].get("kind") == "dwelling":
+	if type == "site" and data.sites.has(value.get("site", "")) and data.sites[value["site"]].get("kind") in ["dwelling", "hamlet"]:
 		var pool := MapSites.creature_pool(data.sites[value["site"]], data)
 		if not value.get("creature", "") in pool:
 			errors.append("Choose a creature allowed by this dwelling.")

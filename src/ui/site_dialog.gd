@@ -48,6 +48,8 @@ func _render() -> void:
 		for offer in info.get("offers", []):
 			_body.add_child(HSeparator.new())
 			_body.add_child(_recruit_row(offer))
+	if info["kind"] == "hamlet":
+		_hamlet_rows(info)
 	_buttons([["Close", _close]])
 
 
@@ -96,6 +98,88 @@ func _recruit_row(info: Dictionary) -> Control:
 		_render())
 	row.add_child(rb)
 	return row
+
+
+## A hamlet's mood, the troops stationed in it and, for its holder standing
+## there, the controls to station a company or take one back.
+func _hamlet_rows(info: Dictionary) -> void:
+	var data := session.data
+	var mine := int(info["owner"]) == session.state.current_player
+	_body.add_child(HSeparator.new())
+	if int(info["owner"]) < 0:
+		_body.add_child(_wrapped("Unclaimed. Beat its guard to hold it: +%d gold a day and a weekly levy to hire." % int(info["gold"]), 13, UiStyle.TEXT_DIM))
+		return
+	if not mine:
+		return
+	var mood := String(info["mood"])
+	if bool(info["secure"]):
+		_body.add_child(_wrapped("Loyal: %s." % ("your garrison holds it" if int(info["garrison_worth"]) >= int(info["garrison_needed"]) else "it lies within your realm"), 13, UiStyle.GOOD))
+	elif mood != "":
+		_body.add_child(_wrapped("%s. Hire the levy or station troops here, or it may rise against you." % mood.capitalize(), 13, UiStyle.WARN))
+	else:
+		_body.add_child(_wrapped("Outside your realm: a levy left unhired for weeks grows restless. Hire it, or station a garrison, to keep the place loyal.", 13, UiStyle.TEXT_DIM))
+	_body.add_child(UiStyle.label("STATIONED TROOPS", 12, UiStyle.BRASS))
+	var stationed: Array = info["garrison"]
+	if stationed.is_empty():
+		_body.add_child(UiStyle.label("None. The unhired levy alone defends it.", 12, UiStyle.TEXT_DIM))
+	if int(info["garrison_worth"]) < int(info["garrison_needed"]):
+		_body.add_child(UiStyle.label("A garrison worth %d gold keeps it loyal (stationed: %d)." % [int(info["garrison_needed"]), int(info["garrison_worth"])], 12, UiStyle.TEXT_DIM))
+	for i in stationed.size():
+		var row := HBoxContainer.new()
+		row.add_theme_constant_override("separation", 10)
+		var cid := String(stationed[i][0])
+		var slot := ArmySlot.new().setup(0, cid, int(stationed[i][1]), UiStyle.creature_tooltip(data, cid))
+		slot.mouse_filter = Control.MOUSE_FILTER_PASS
+		row.add_child(slot)
+		var name_label := UiStyle.label(String(data.creature(cid)["name"]), 14)
+		name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		row.add_child(name_label)
+		var back := Button.new()
+		back.text = "Take back"
+		back.disabled = not bool(info["can_station"])
+		back.custom_minimum_size = Vector2(96, 32)
+		back.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		back.pressed.connect(func():
+			var r := session.hamlet_withdraw(_site_id, _hero_id, i)
+			if not r["ok"]:
+				session.message.emit(String(r["reason"]).capitalize())
+			_render())
+		row.add_child(back)
+		_body.add_child(row)
+	var h := session.hero(_hero_id)
+	if h == null or not bool(info["can_station"]):
+		return
+	var pick := OptionButton.new()
+	pick.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	for s in Army.MAX_SLOTS:
+		if not h.army.slots[s].is_empty():
+			pick.add_item("%d %s" % [int(h.army.slots[s]["count"]), data.creature(String(h.army.slots[s]["creature"]))["name"]])
+			pick.set_item_metadata(pick.item_count - 1, s)
+	if pick.item_count == 0:
+		pick.queue_free()
+		return
+	var spin := SpinBox.new()
+	spin.min_value = 1
+	spin.custom_minimum_size.x = 84
+	var fit := func():
+		spin.max_value = maxi(1, int(h.army.slots[int(pick.get_selected_metadata())]["count"]))
+		spin.value = spin.max_value
+	fit.call()
+	pick.item_selected.connect(func(_i: int): fit.call())
+	var station := Button.new()
+	station.text = "Station"
+	station.custom_minimum_size = Vector2(96, 32)
+	station.pressed.connect(func():
+		var r := session.hamlet_station(_site_id, _hero_id, int(pick.get_selected_metadata()), int(spin.value))
+		if not r["ok"]:
+			session.message.emit(String(r["reason"]).capitalize())
+		_render())
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 10)
+	row.add_child(pick)
+	row.add_child(spin)
+	row.add_child(station)
+	_body.add_child(row)
 
 
 ## A compact illustrated storefront, using the same modal and controls as

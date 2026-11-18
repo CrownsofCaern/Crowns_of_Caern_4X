@@ -175,6 +175,7 @@ static func _site_kind(kind: String) -> String:
 		"trader": return "trader · artifacts & maps"
 		"cobolt": return "neutral cobolt trading house"
 		"dwelling": return "dwelling"
+		"hamlet": return "gold and a levy"
 		"village": return "village · recruits once"
 		"attribute": return "training ground"
 		"boon": return "blessing"

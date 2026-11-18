@@ -5,6 +5,9 @@ extends RefCounted
 ##   id, type = "site", pos, site (data id), guard?: [[creature, count]] (fought
 ##   once, like a guarded mine), and by kind:
 ##   dwelling:  owner (-1 = nobody), creature, available (weekly pool)
+##   hamlet:    owner, creature, available (the unhired levy, which also defends
+##              the site), garrison [[creature, count]] (troops a hero stationed),
+##              idle_weeks (full weeks the levy stood unhired, see Hamlets)
 ##   village:   owner (-1 = nobody; the first player to free it keeps it for
 ##              good), stock [[creature, count]] (a one-off stock, never refilled)
 ##   attribute, lore: visitors [hero ids] (each hero benefits once)
@@ -15,9 +18,9 @@ extends RefCounted
 ##   mana_well: drawn {hero id: week} (each hero draws once a week)
 ## All functions are static and take the dictionaries, like Town.
 
-const KINDS := ["dwelling", "village", "attribute", "boon", "lore", "spell", "trader", "watchtower", "drill", "mana_well", "cobolt"]
+const KINDS := ["dwelling", "village", "hamlet", "attribute", "boon", "lore", "spell", "trader", "watchtower", "drill", "mana_well", "cobolt"]
 ## Kinds a player owns and recruits from.
-const RECRUIT_KINDS := ["dwelling", "village"]
+const RECRUIT_KINDS := ["dwelling", "village", "hamlet"]
 const ATTRIBUTES := ["attack", "defense", "power", "knowledge"]
 
 
@@ -56,7 +59,14 @@ static func normalize(obj: Dictionary, data: GameData) -> void:
 		for hid in obj.get("drawn", {}):
 			drawn[String(hid)] = int(obj["drawn"][hid])
 		obj["drawn"] = drawn
-	if kind(obj, data) == "dwelling":
+	if kind(obj, data) == "hamlet":
+		obj["idle_weeks"] = int(obj.get("idle_weeks", 0))
+		var stationed: Array = []
+		for pair in obj.get("garrison", []):
+			if int(pair[1]) > 0:
+				stationed.append([String(pair[0]), int(pair[1])])
+		obj["garrison"] = stationed
+	if kind(obj, data) in ["dwelling", "hamlet"]:
 		obj["owner"] = int(obj.get("owner", -1))
 		var c := String(obj.get("creature", ""))
 		if c == "" or data.creature(c).is_empty():
@@ -99,7 +109,7 @@ static func default_stock(obj: Dictionary, data: GameData) -> Array:
 ## in stock order (a dwelling has one entry). Other kinds offer nothing.
 static func offers(obj: Dictionary, data: GameData) -> Array:
 	match kind(obj, data):
-		"dwelling":
+		"dwelling", "hamlet":
 			return [[String(obj.get("creature", "")), int(obj.get("available", 0))]]
 		"village":
 			return (obj.get("stock", []) as Array).duplicate(true)
@@ -116,7 +126,7 @@ static func available(obj: Dictionary, creature: String, data: GameData) -> int:
 
 ## Takes count creatures out of the site's pool (callers check availability).
 static func take(obj: Dictionary, creature: String, count: int, data: GameData) -> void:
-	if kind(obj, data) == "dwelling":
+	if kind(obj, data) in ["dwelling", "hamlet"]:
 		obj["available"] = int(obj["available"]) - count
 		return
 	for pair in obj.get("stock", []):
@@ -153,6 +163,64 @@ static func weekly_growth(obj: Dictionary, data: GameData, extra_pct: float = 0.
 		return 0
 	var pct := float(definition(obj, data).get("growth_pct", 1.0))
 	return maxi(0, int(floor(float(data.creature(c).get("growth", 0)) * pct * (1.0 + extra_pct))))
+
+
+## What count of creature costs at this site: the town price, times a hamlet's
+## price_pct (each resource rounded up per creature).
+static func recruit_cost(obj: Dictionary, creature: String, count: int, data: GameData) -> Dictionary:
+	var pct := float(definition(obj, data).get("price_pct", 1.0))
+	if pct == 1.0:
+		return Town.recruit_cost(creature, count, data)
+	var out := {}
+	var unit: Dictionary = data.creature(creature).get("cost", {})
+	for res in unit:
+		out[res] = int(ceil(float(unit[res]) * pct)) * count
+	return out
+
+
+static func is_hamlet(obj: Dictionary, data: GameData) -> bool:
+	return obj.get("type", "") == "site" and kind(obj, data) == "hamlet"
+
+
+## Gold a held hamlet pays its owner each day.
+static func daily_gold(obj: Dictionary, data: GameData) -> int:
+	return int(definition(obj, data).get("gold", 0)) if is_hamlet(obj, data) else 0
+
+
+## Who fights for a held hamlet: stationed troops and the unhired levy,
+## [[creature, count]] with one entry per creature.
+static func defenders(obj: Dictionary, data: GameData) -> Array:
+	var out: Array = []
+	if not is_hamlet(obj, data):
+		return out
+	for pair in obj.get("garrison", []):
+		if int(pair[1]) > 0:
+			out.append([String(pair[0]), int(pair[1])])
+	var levy := int(obj.get("available", 0))
+	if levy > 0:
+		var c := String(obj.get("creature", ""))
+		for pair in out:
+			if pair[0] == c:
+				pair[1] = int(pair[1]) + levy
+				return out
+		out.append([c, levy])
+	return out
+
+
+## After a failed attack on a held hamlet: the survivors [[creature, count]]
+## fill the stationed stacks first, the rest of the levy creature is the levy.
+static func set_survivors(obj: Dictionary, remaining: Array) -> void:
+	var left := {}
+	for pair in remaining:
+		left[String(pair[0])] = int(left.get(String(pair[0]), 0)) + int(pair[1])
+	var stationed: Array = []
+	for pair in obj.get("garrison", []):
+		var n := mini(int(pair[1]), int(left.get(String(pair[0]), 0)))
+		left[String(pair[0])] = int(left.get(String(pair[0]), 0)) - n
+		if n > 0:
+			stationed.append([String(pair[0]), n])
+	obj["garrison"] = stationed
+	obj["available"] = mini(int(obj.get("available", 0)), int(left.get(String(obj.get("creature", "")), 0)))
 
 
 ## Why this hero gains nothing by visiting, or "" if the visit pays off.
@@ -277,6 +345,11 @@ static func summary(obj: Dictionary, data: GameData) -> String:
 			var cname: String = data.creature(c).get("name", "?")
 			return "Recruit %s (%d available)%s" % [cname, int(obj.get("available", 0)),
 				", a new company each week" if bool(def.get("rotate", false)) else ""]
+		"hamlet":
+			var hname: String = data.creature(String(obj.get("creature", ""))).get("name", "?")
+			var line := "+%d gold a day · levy of %d %s" % [int(def.get("gold", 0)), int(obj.get("available", 0)), hname]
+			var unrest := Hamlets.mood(obj, data)
+			return line if unrest == "" else "%s · %s" % [line, unrest]
 		"village":
 			var parts := []
 			for pair in obj.get("stock", []):
@@ -310,6 +383,7 @@ static func summary(obj: Dictionary, data: GameData) -> String:
 
 static func validate(data: GameData) -> Array[String]:
 	var errors: Array[String] = MapTraders.validate(data)
+	errors.append_array(Hamlets.validate(data))
 	errors.append_array(MapCobolts.validate(data))
 	var levels: Dictionary = data.map_templates.get("guard_levels", {})
 	for sid in data.sites:
@@ -336,6 +410,18 @@ static func validate(data: GameData) -> Array[String]:
 					errors.append("%s has unknown factions %s" % [where, d.get("factions", "")])
 				if float(d.get("growth_pct", 1.0)) <= 0.0:
 					errors.append("%s needs a positive growth_pct" % where)
+			"hamlet":
+				var tiers: Array = d.get("tiers", [])
+				if tiers.size() != 2 or int(tiers[0]) < 1 or int(tiers[0]) > int(tiers[1]):
+					errors.append("%s needs tiers [min, max]" % where)
+				elif creature_pool(d, data).is_empty():
+					errors.append("%s has no creature to house" % where)
+				if int(d.get("gold", 0)) <= 0 or int(d.get("level", 0)) < 1:
+					errors.append("%s needs gold > 0 and a level >= 1" % where)
+				if float(d.get("growth_pct", 1.0)) <= 0.0 or float(d.get("price_pct", 1.0)) < 1.0:
+					errors.append("%s needs growth_pct > 0 and price_pct >= 1" % where)
+				if String(d.get("guard", "none")) == "none":
+					errors.append("%s must be guarded" % where)
 			"village":
 				var tiers: Array = d.get("tiers", [])
 				if tiers.size() != 2 or int(tiers[0]) < 1 or int(tiers[0]) > int(tiers[1]):
@@ -383,7 +469,7 @@ static func validate(data: GameData) -> Array[String]:
 		if not bands.has(String(per.get("band", ""))):
 			errors.append("map_templates sites.per_player: unknown band")
 		for k in per.get("kinds", []):
-			if not KINDS.has(k) or k == "village":
+			if not KINDS.has(k) or k in ["village", "hamlet"]:
 				errors.append("map_templates sites.per_player: unknown kind %s" % k)
 	var extra: Dictionary = cfg.get("extras", {})
 	if not extra.is_empty():

@@ -25,6 +25,8 @@ var encounters: EncounterSystem
 ## map): [{id, name, class, owner, army, replaces?}], see _place_cast().
 ## setup.hide_odds: true starts a hard-mode game in which battle odds are never
 ## shown (stored as rules.hide_odds, see odds_hidden()).
+## setup.hamlets: true adds hamlets, villages and freeholds to the map (stored
+## as rules.hamlets, see Hamlets); without it the game is a Classic one.
 ## rules: rule overrides kept for the whole game (GameState.rules), such as a
 ## campaign chapter's max_tier and computer-player settings.
 static func new_game(game_data: GameData, map_id: String, seed_value: int, setup: Dictionary = {},
@@ -61,6 +63,9 @@ static func new_game_from_definition(game_data: GameData, definition: Dictionary
 	if bool(setup.get("hide_odds", false)):
 		st.rules["hide_odds"] = true
 	st.map = AdventureMap.from_definition(def, game_data)
+	if bool(setup.get("hamlets", false)) and not ScenarioRules.active(st):
+		st.rules["hamlets"] = true
+		Hamlets.place(st.map, (def["players"] as Array).size(), seed_value, game_data)
 	for p in def["players"]:
 		st.players.append({"id": int(p["id"]), "name": p["name"], "faction": p["faction"], "color": p["color"],
 			"is_human": bool(p["is_human"]), "difficulty": String(p.get("difficulty", game_data.default_difficulty())),
@@ -466,7 +471,11 @@ func is_guarded(obj: Dictionary, player_idx: int) -> bool:
 		"resource", "artifact":
 			return not claim_guard(obj, player_idx).is_empty()
 		"site", "scenario_site":
-			return not (obj.get("guard", []) as Array).is_empty()
+			if not (obj.get("guard", []) as Array).is_empty():
+				return true
+			# A held hamlet is defended by its levy and stationed troops.
+			return MapSites.is_hamlet(obj, data) and int(obj.get("owner", -1)) >= 0 \
+				and not allied(int(obj["owner"]), player_idx) and not MapSites.defenders(obj, data).is_empty()
 		"town":
 			if allied(int(obj["owner"]), player_idx):
 				return false
@@ -595,7 +604,11 @@ func _defender_side(tgt: Dictionary) -> Dictionary:
 		"scenario_site":
 			return {"name": "%s guards" % obj["name"], "hero": null, "stacks": _pairs_to_stacks(obj.get("guard", []))}
 		"site":
-			return {"name": "%s guards" % MapSites.site_name(obj, data), "hero": null, "stacks": _pairs_to_stacks(obj.get("guard", []))}
+			var guard: Array = obj.get("guard", [])
+			if guard.is_empty() and MapSites.is_hamlet(obj, data) and int(obj.get("owner", -1)) >= 0:
+				return {"name": "%s levy" % MapSites.site_name(obj, data), "hero": null,
+					"stacks": _pairs_to_stacks(MapSites.defenders(obj, data)), "upgrades": army_upgrades(int(obj["owner"]))}
+			return {"name": "%s guards" % MapSites.site_name(obj, data), "hero": null, "stacks": _pairs_to_stacks(guard)}
 	return {"name": obj.get("name", "Neutral army"), "hero": null, "stacks": _pairs_to_stacks(obj["stacks"])}
 
 
@@ -911,6 +924,10 @@ func attack(hero_id: String, target_id: String, defender_flees: bool = false) ->
 				obj["owner"] = h.owner
 			"site":
 				obj.erase("guard")
+				if MapSites.is_hamlet(obj, data) and int(obj.get("owner", -1)) >= 0:
+					# The levy and the stationed troops fell with the site.
+					obj["available"] = 0
+					obj["garrison"] = []
 				if MapCobolts.is_post(obj, data):
 					_plunder_cobolt(h, obj, result)
 			"hero":
@@ -968,7 +985,10 @@ func attack(hero_id: String, target_id: String, defender_flees: bool = false) ->
 				for st in result["sides"][1]["stacks"]:
 					if st["end"] > 0:
 						remaining.append([st["creature"], st["end"]])
-				obj["guard" if obj["type"] in ["mine", "site", "scenario_site"] else "stacks"] = remaining
+				if MapSites.is_hamlet(obj, data) and int(obj.get("owner", -1)) >= 0:
+					MapSites.set_survivors(obj, remaining)
+				else:
+					obj["guard" if obj["type"] in ["mine", "site", "scenario_site"] else "stacks"] = remaining
 		if foe != null and not defender_flees:
 			defender_xp = foe.xp_with_bonus(int(round(result["hp_killed"][1] * xp_rate)), data)
 			result["defender_levels_gained"] = foe.add_xp(defender_xp, data)
@@ -1240,8 +1260,9 @@ func transfer_quest_item(from_id: String, to_id: String, item: String) -> Dictio
 ## (an ally's stays theirs), any other site applies its effect if this hero can still benefit.
 ## Appends {id, lines} to into["visited"] and captured ids to into["captured"].
 func _enter_site(h: Hero, obj: Dictionary, into: Dictionary) -> void:
-	if MapSites.kind(obj, data) == "dwelling":
+	if MapSites.kind(obj, data) in ["dwelling", "hamlet"]:
 		if not allied(int(obj.get("owner", -1)), h.owner):
+			obj["idle_weeks"] = 0
 			_capture(obj, h.owner)
 			into["captured"].append(obj["id"])
 		return
@@ -1288,7 +1309,7 @@ func site_info(site_id: String, hero_id: String = "") -> Dictionary:
 			var c := String(pair[0])
 			var mx := max_site_recruitable(site_id, hero_id, c)
 			var reason := site_recruit_error(site_id, hero_id, maxi(1, mx), c)
-			offers.append({"creature": c, "available": int(pair[1]), "cost": data.creature(c).get("cost", {}),
+			offers.append({"creature": c, "available": int(pair[1]), "cost": MapSites.recruit_cost(obj, c, 1, data),
 				"max": mx, "reason": reason, "can_recruit": reason == ""})
 		out["offers"] = offers
 		var first: Dictionary = offers[0] if not offers.is_empty() else {"creature": "", "available": 0, "cost": {}, "max": 0, "reason": "nothing to recruit", "can_recruit": false}
@@ -1298,6 +1319,15 @@ func site_info(site_id: String, hero_id: String = "") -> Dictionary:
 				break
 		for key in ["creature", "available", "cost", "max", "reason", "can_recruit"]:
 			out[key] = first[key]
+	if out["kind"] == "hamlet":
+		out["gold"] = MapSites.daily_gold(obj, data)
+		out["garrison"] = (obj.get("garrison", []) as Array).duplicate(true)
+		out["garrison_slots"] = int(Hamlets.config(data).get("garrison_slots", 3))
+		out["garrison_worth"] = Hamlets.garrison_worth(obj, data)
+		out["garrison_needed"] = Hamlets.garrison_needed(obj, data)
+		out["mood"] = Hamlets.mood(obj, data)
+		out["secure"] = int(obj.get("owner", -1)) >= 0 and Hamlets.is_secure(obj, state.map, data)
+		out["can_station"] = h != null and hamlet_station_error(site_id, hero_id, -1) == ""
 	return out
 
 
@@ -1407,7 +1437,7 @@ func max_site_recruitable(site_id: String, hero_id: String, creature: String = "
 		return 0
 	var c := _site_creature(obj, creature)
 	var n := MapSites.available(obj, c, data)
-	var unit: Dictionary = data.creature(c).get("cost", {})
+	var unit := MapSites.recruit_cost(obj, c, 1, data)
 	for res in unit:
 		if int(unit[res]) > 0:
 			n = mini(n, _bank(h.owner).get_amount(res) / int(unit[res]))
@@ -1444,7 +1474,7 @@ func site_recruit_error(site_id: String, hero_id: String, count: int, creature: 
 		return "nothing to recruit"
 	if MapSites.available(obj, c, data) < count:
 		return "only %d available" % MapSites.available(obj, c, data)
-	if not _bank(h.owner).can_afford(Town.recruit_cost(c, count, data)):
+	if not _bank(h.owner).can_afford(MapSites.recruit_cost(obj, c, count, data)):
 		return "not enough resources"
 	if not _has_room(h.army, c):
 		return "no free army slot"
@@ -1460,13 +1490,117 @@ func site_recruit(site_id: String, hero_id: String, count: int, creature: String
 	var obj: Dictionary = state.map.objects[site_id]
 	var h := hero(hero_id)
 	var c := _site_creature(obj, creature)
-	var cost := Town.recruit_cost(c, count, data)
+	var cost := MapSites.recruit_cost(obj, c, count, data)
 	_bank(h.owner).spend(cost)
 	MapSites.take(obj, c, count, data)
 	h.army.add(c, count)
 	message.emit("Recruited %d %s at the %s." % [count, data.creature(c)["name"], MapSites.site_name(obj, data)])
 	state_changed.emit()
 	return {"ok": true, "reason": "", "count": count, "cost": cost}
+
+
+## Why the hero standing on a hamlet cannot station troops there, or "".
+## slot: the hero's army slot to station (-1 = only ask whether stationing is possible at all).
+func hamlet_station_error(site_id: String, hero_id: String, slot: int, count: int = 0) -> String:
+	var obj: Dictionary = state.map.objects.get(site_id, {})
+	var h := hero(hero_id)
+	if not MapSites.is_hamlet(obj, data):
+		return "not a hamlet"
+	if h == null or not h.alive or h.owner != state.current_player or state.game_over:
+		return "not your hero"
+	if h.pos != AdventureMap.object_pos(obj):
+		return "a hero must stand at the %s" % MapSites.site_name(obj, data)
+	if int(obj.get("owner", -1)) != h.owner:
+		return "you do not hold the %s" % MapSites.site_name(obj, data)
+	if slot < 0:
+		return ""
+	if slot >= Army.MAX_SLOTS or h.army.slots[slot].is_empty():
+		return "empty slot"
+	var have := int(h.army.slots[slot]["count"])
+	var n := have if count <= 0 else count
+	if n > have:
+		return "not enough creatures"
+	if n == h.army.total_creatures():
+		return "a hero needs at least one creature"
+	var c := String(h.army.slots[slot]["creature"])
+	var stationed: Array = obj.get("garrison", [])
+	if stationed.filter(func(p): return String(p[0]) == c).is_empty() \
+			and stationed.size() >= int(Hamlets.config(data).get("garrison_slots", 3)):
+		return "the %s has no room for another company" % MapSites.site_name(obj, data)
+	return ""
+
+
+## Leaves count creatures (0 = the whole stack) of the hero's army slot in the
+## hamlet the hero stands on. Stationed troops keep the hamlet loyal and
+## defend it beside the levy.
+func hamlet_station(site_id: String, hero_id: String, slot: int, count: int = 0) -> Dictionary:
+	var err := hamlet_station_error(site_id, hero_id, slot, count)
+	if err != "":
+		return _fail(err)
+	var obj: Dictionary = state.map.objects[site_id]
+	var h := hero(hero_id)
+	var have := int(h.army.slots[slot]["count"])
+	var n := have if count <= 0 else count
+	var c := String(h.army.slots[slot]["creature"])
+	if n == have:
+		h.army.slots[slot] = {}
+	else:
+		h.army.slots[slot]["count"] = have - n
+	var stationed: Array = obj.get("garrison", [])
+	var merged := false
+	for pair in stationed:
+		if String(pair[0]) == c:
+			pair[1] = int(pair[1]) + n
+			merged = true
+	if not merged:
+		stationed.append([c, n])
+	obj["garrison"] = stationed
+	if Hamlets.is_secure(obj, state.map, data):
+		obj["idle_weeks"] = 0
+	message.emit("%d %s stay to hold the %s." % [n, data.creature(c)["name"], MapSites.site_name(obj, data)])
+	state_changed.emit()
+	return {"ok": true, "reason": "", "count": n}
+
+
+## Takes a stationed company (index into the hamlet's garrison) back into the
+## army of the hero standing there.
+func hamlet_withdraw(site_id: String, hero_id: String, index: int) -> Dictionary:
+	var err := hamlet_station_error(site_id, hero_id, -1)
+	if err != "":
+		return _fail(err)
+	var obj: Dictionary = state.map.objects[site_id]
+	var h := hero(hero_id)
+	var stationed: Array = obj.get("garrison", [])
+	if index < 0 or index >= stationed.size():
+		return _fail("no such company")
+	var c := String(stationed[index][0])
+	var n := int(stationed[index][1])
+	if not _has_room(h.army, c):
+		return _fail("no free army slot")
+	h.army.add(c, n)
+	stationed.remove_at(index)
+	obj["garrison"] = stationed
+	message.emit("%d %s rejoin %s." % [n, data.creature(c)["name"], h.name])
+	state_changed.emit()
+	return {"ok": true, "reason": "", "count": n}
+
+
+## A held hamlet's week: unrest first (see Hamlets.on_week), then the levy
+## grows up to levy_cap_weeks weeks of growth. A neutral hamlet keeps its guard.
+func _hamlet_week(o: Dictionary) -> void:
+	var owner := int(o.get("owner", -1))
+	if owner < 0:
+		return
+	var site := MapSites.site_name(o, data)
+	match Hamlets.on_week(o, state.map, state.rng, data):
+		"revolt":
+			_add_news(state.player(owner), "The %s has risen against you. Its levy now guards it." % site)
+			return
+		"unrest":
+			_add_news(state.player(owner), "The levy at the %s is restless: hire it or station troops there, or it may rise." % site)
+	var week := MapSites.weekly_growth(o, data, WorldEvents.growth_bonus(state, data, o["creature"]))
+	var cap := maxi(1, MapSites.weekly_growth(o, data)) * maxi(1, int(Hamlets.config(data).get("levy_cap_weeks", 4)))
+	o["available"] = maxi(int(o.get("available", 0)), mini(cap, int(o.get("available", 0)) + week))
 
 
 ## Dwelling sites a player holds.
@@ -1499,6 +1633,8 @@ func _weekly_growth() -> void:
 			Town.apply_weekly_growth(o, data, bonus)
 		elif MapCobolts.is_post(o, data):
 			MapCobolts.restock(o)
+		elif MapSites.is_hamlet(o, data):
+			_hamlet_week(o)
 		elif o["type"] == "site" and MapSites.kind(o, data) == "dwelling":
 			var def := MapSites.definition(o, data)
 			if bool(def.get("rotate", false)):
@@ -1911,6 +2047,16 @@ func income_breakdown(player_idx: int) -> Dictionary:
 		for mname in names:
 			var e: Array = by_name[mname]
 			out[res]["sources"].append(["%s%s" % ["%d× " % int(e[0]) if int(e[0]) > 1 else "", mname], "%+d" % int(e[1])])
+	var hamlets := {}   # name -> [count, gold]
+	for o in sites_of(player_idx):
+		if MapSites.daily_gold(o, data) > 0:
+			var e: Array = hamlets.get(MapSites.site_name(o, data), [0, 0])
+			hamlets[MapSites.site_name(o, data)] = [int(e[0]) + 1, int(e[1]) + MapSites.daily_gold(o, data)]
+	var hamlet_names := hamlets.keys()
+	hamlet_names.sort()
+	for hname in hamlet_names:
+		var e: Array = hamlets[hname]
+		out["gold"]["sources"].append(["%s%s" % ["%d× " % int(e[0]) if int(e[0]) > 1 else "", hname], "%+d" % int(e[1])])
 	for h in _heroes_sorted(player_idx):
 		var inc: Dictionary = h.modifiers(data).get("income", {})
 		for res in data.resource_order:

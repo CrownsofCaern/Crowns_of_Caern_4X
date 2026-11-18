@@ -53,6 +53,10 @@ const DEFAULT_SETTINGS := {
 	"trade_value_ratio": 1.5,       # trade for a building only if its score beats the best affordable one by this
 	"hero_kill_value": 4000,        # value of removing an enemy hero from the map (besides its army)
 	"site_capture_weeks": 3.0,      # weeks of a dwelling site's troops that taking it is worth
+	"hamlet_horizon_days": 30,      # days of gold a hamlet is worth (it pays all game and nothing wears it out)
+	"hamlet_retake_days": 12,       # ... and of one a rival holds: it changes hands as easily again
+	"hamlet_hunt_rate": 0.5,        # in a game with hamlets, unexplored land is worth this much more per week while no rival town is known
+	"hamlet_gold_reserve": 4000,    # gold kept for the towns before a hamlet's dearer levy is hired (a restless one is hired regardless)
 	"site_recruit_rate": 0.8,       # utility per gold of troops the hero can recruit at a held dwelling site
 	"artifact_value_rate": 1.0,     # utility per gold of artifact value that the hero would wear
 	"spare_artifact_rate": 0.15,    # ... and of one it can only carry in the pack
@@ -337,6 +341,8 @@ func defender_value(obj: Dictionary) -> float:
 				walls += foe.defense
 			return value * (1.0 + 0.05 * walls)
 		"mine", "site":
+			if (obj.get("guard", []) as Array).is_empty() and MapSites.is_hamlet(obj, data) and int(obj.get("owner", -1)) >= 0:
+				return stacks_value(GameSession._pairs_to_stacks(MapSites.defenders(obj, data)))
 			return stacks_value(GameSession._pairs_to_stacks(obj.get("guard", [])))
 		"neutral_army":
 			return stacks_value(GameSession._pairs_to_stacks(obj.get("stacks", [])))
@@ -1552,6 +1558,8 @@ func site_value(h: Hero, o: Dictionary) -> float:
 		return float(n) * creature_value(cid) * float(settings["site_recruit_rate"])
 	if MapSites.kind(o, data) == "village":
 		return _village_value(h, o)
+	if MapSites.kind(o, data) == "hamlet":
+		return _hamlet_value(h, o)
 	if MapSites.kind(o, data) == "dwelling":
 		var c := String(o["creature"])
 		var cap := session.tier_cap()
@@ -1580,6 +1588,48 @@ func site_value(h: Hero, o: Dictionary) -> float:
 		return float(def["xp"]) * float(settings["xp_value"])
 	var ai: Dictionary = def.get("ai", {})
 	return float(ai.get("flat", 0)) + float(ai.get("army_pct", 0)) * army_value(h.army)
+
+
+## How many of a held hamlet's levy this player would hire now: what the purse
+## spares above hamlet_gold_reserve, and in any case enough of a levy that
+## would otherwise breed unrest to bring it under a week's growth.
+func _hamlet_hire(h: Hero, o: Dictionary) -> int:
+	var c := String(o["creature"])
+	var cap := session.tier_cap()
+	if not bool(settings["recruits"]) or not GameSession._has_room(h.army, c) or (cap > 0 and int(data.creature(c)["tier"]) > cap):
+		return 0
+	var price := int(MapSites.recruit_cost(o, c, 1, data).get("gold", 0))
+	if price <= 0:
+		return 0
+	var gold := _bank().get_amount("gold")
+	var have := int(o.get("available", 0))
+	var n := clampi((gold - int(settings["hamlet_gold_reserve"])) / price, 0, have)
+	var week := maxi(1, MapSites.weekly_growth(o, data))
+	if have >= week and not Hamlets.is_secure(o, session.state.map, data):
+		n = maxi(n, mini(have - week + 1, gold / price))
+	return n
+
+
+## A hamlet someone else holds is worth its gold (as a gold mine is) and
+## site_capture_weeks of its levy; our own is worth the levy we would hire,
+## and the gold it would stop paying if its unrest were left alone.
+func _hamlet_value(h: Hero, o: Dictionary) -> float:
+	var c := String(o["creature"])
+	var site_owner := int(o.get("owner", -1))
+	var gold_value := float(MapSites.daily_gold(o, data)) * resource_value("gold") * float(settings["hamlet_horizon_days"])
+	if site_owner != player:
+		if session.allied(site_owner, player):
+			return 0.0
+		if site_owner >= 0:
+			gold_value *= float(settings["hamlet_retake_days"]) / maxf(1.0, float(settings["hamlet_horizon_days"]))
+		return gold_value + float(MapSites.weekly_growth(o, data)) * creature_value(c) * float(settings["site_capture_weeks"]) * 0.5
+	var n := _hamlet_hire(h, o)
+	if n <= 0:
+		return 0.0
+	var v := float(n) * creature_value(c) * float(settings["site_recruit_rate"])
+	if Hamlets.mood(o, data) != "" and not Hamlets.is_secure(o, session.state.map, data):
+		v += gold_value
+	return v
 
 
 ## A village frees once and sells its stock once: an unclaimed one is worth
@@ -1630,6 +1680,8 @@ func _recruit_at_site(h: Hero, site_id: String) -> void:
 	for offer in info.get("offers", []):
 		var c := String(offer["creature"])
 		var n := session.max_site_recruitable(site_id, h.id, c)
+		if String(info["kind"]) == "hamlet":
+			n = mini(n, _hamlet_hire(h, session.state.map.objects[site_id]))
 		if n > 0 and session.site_recruit(site_id, h.id, n, c)["ok"]:
 			_recruited += n
 			_note("%s recruits %d %s at the %s." % [h.name, n, data.creature(c)["name"], info["name"]])
@@ -1673,8 +1725,15 @@ func _explore_targets(h: Hero, field: AiDistanceField, move: float) -> Array:
 	var radius := maxi(1, h.vision_radius(data))
 	var best := {}
 	var taken := {}
+	# A game with hamlets offers more to do at home: the longer no rival town
+	# is known, the more the unknown is worth, so the war still gets found.
+	var hunt := 1.0
+	if Hamlets.enabled(session.state):
+		hunt += float(settings["hamlet_hunt_rate"]) * float(session.state.day / 7)
 	for o in map.objects.values():
 		taken[AdventureMap.object_pos(o)] = true
+		if o["type"] == "town" and int(o["owner"]) >= 0 and not session.allied(int(o["owner"]), player) and fog.is_explored(AdventureMap.object_pos(o)):
+			hunt = 1.0
 	for e in session.state.heroes.values():
 		if e.alive:
 			taken[e.pos] = true
@@ -1692,7 +1751,7 @@ func _explore_targets(h: Hero, field: AiDistanceField, move: float) -> Array:
 					var q := p + Vector2i(dx, dy)
 					if map.in_bounds(q) and dx * dx + dy * dy <= radius * radius and not fog.is_explored(q):
 						hidden += 1
-			var value := float(hidden) * float(settings["explore_value_per_tile"])
+			var value := float(hidden) * float(settings["explore_value_per_tile"]) * hunt
 			var days := float(cost) / move
 			var u := value / (1.0 + days)
 			if best.is_empty() or u > best["utility"]:

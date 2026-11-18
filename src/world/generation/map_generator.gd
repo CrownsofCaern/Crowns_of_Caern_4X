@@ -977,7 +977,7 @@ func _place_crown_sites() -> void:
 func _pick_site(kinds: Array, used: Dictionary) -> String:
 	var ids := data.sites.keys()
 	ids.sort()
-	var pool: Array = ids.filter(func(id): return data.sites[id]["kind"] not in ["trader", "village", "cobolt"] and not used.has(id) and (kinds.is_empty() or kinds.has(data.sites[id]["kind"])))
+	var pool: Array = ids.filter(func(id): return data.sites[id]["kind"] not in ["trader", "village", "cobolt", "hamlet"] and not used.has(id) and (kinds.is_empty() or kinds.has(data.sites[id]["kind"])))
 	if pool.is_empty():
 		return ""
 	var pick := String(pool[rng.weighted_index(pool.map(func(id): return float(data.sites[id].get("weight", 1))))])

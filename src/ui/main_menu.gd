@@ -48,6 +48,7 @@ var _random_fields: Dictionary = {}  # option -> the field (caption and picker)
 var _slots_box: GridContainer
 var _seed_edit: LineEdit
 var _hard_check: CheckBox
+var _hamlets_check: CheckBox
 var _error: Label
 var _setup_scroll: ScrollContainer
 var _setup_footer: VBoxContainer
@@ -377,6 +378,11 @@ func _build_setup() -> void:
 	_hard_check.text = "Hide battle odds and encounter chances" if TouchGestures.touch_ui() else "Hard mode: battle odds and encounter chances are never shown"
 	_hard_check.tooltip_text = "Hovering an enemy shows only its rough size; scouts still count it exactly."
 	v.add_child(_hard_check)
+	_hamlets_check = CheckBox.new()
+	_hamlets_check.button_pressed = true
+	_hamlets_check.text = "Hamlets (untick for a Classic game)" if TouchGestures.touch_ui() else "Hamlets: villages across the map pay gold and raise a levy (untick for a Classic game)"
+	_hamlets_check.tooltip_text = "Hamlets, villages and freeholds stand guarded on every side of the map and between the players.\nA held one pays gold every day and raises a weekly levy you can hire at half again the town price.\nA levy left unhired for three weeks grows restless and may rise, unless troops are stationed there\nor one of your towns is near. Classic: the map as it always was, without them."
+	v.add_child(_hamlets_check)
 	_setup_footer = VBoxContainer.new()
 	root.add_child(_setup_footer)
 	_error = UiStyle.label("", 13, UiStyle.BAD)
@@ -859,7 +865,14 @@ func current_setup() -> Dictionary:
 		out["preserve_authored"] = true
 	if _hard_check != null and _hard_check.button_pressed:
 		out["hide_odds"] = true
+	if _hamlets_check != null and _hamlets_check.button_pressed and _hamlets_offered(_selected_map()):
+		out["hamlets"] = true
 	return out
+
+
+## Hamlets are a choice of the open conquest game: scenarios and a player's own maps keep what their author placed.
+static func _hamlets_offered(m: Dictionary) -> bool:
+	return not m.is_empty() and not bool(m.get("custom", false)) and not bool(m.get("scenario", false))
 
 
 func _validate() -> bool:
@@ -927,6 +940,8 @@ func _refresh_preview() -> void:
 	if entry.is_empty():
 		return
 	_preview_timer.stop()
+	if _hamlets_check != null:
+		_hamlets_check.visible = _hamlets_offered(entry)
 	var id := GameSetup.map_id_for(entry, preview_seed(), current_setup())
 	if id != _preview_map_id or entry.get("custom", false):
 		_preview_definition = _data.load_map(id)
