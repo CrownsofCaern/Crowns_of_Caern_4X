@@ -101,7 +101,7 @@ static func action_for(s: GameSession, hero_id: String, tile: Vector2i) -> Strin
 		"resource", "artifact": return "pickup"
 		"mine": return "move" if int(object.get("owner", -1)) == h.owner or s.allied(int(object.get("owner", -1)), h.owner) else "capture"
 		"site":
-			if MapSites.kind(object, s.data) == "dwelling" and not s.allied(int(object.get("owner", -1)), h.owner):
+			if MapSites.kind(object, s.data) in ["dwelling", "hamlet"] and not s.allied(int(object.get("owner", -1)), h.owner):
 				return "capture"
 			return "encounter"
 		"encounter": return "encounter"

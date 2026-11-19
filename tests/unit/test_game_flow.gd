@@ -523,7 +523,7 @@ func test_ai_main_hero_swaps_weak_stacks_for_the_garrison() -> void:
 		["shieldwarden", 1], ["bulwark_sworn", 1], ["lancer", 1], ["lightbearer", 1], ["sunhawk_rider", 1], ["cinderling", 1]])
 	Town.set_garrison(pyre, Army.from_pairs([["bastion_colossus", 6], ["pike_militia", 40]]))
 	s.state.current_player = 1
-	var ai := StrategicAI.new(s, 1)
+	var ai := StrategicAI.new(s, 1, {"rival_intel": false})   # the scene assumes no rival in sight
 	ai._compute_threats()
 	var before := ai.army_value(h.army)
 	assert_gt(ai._town_visit_value(pyre, h), 0.0, "a garrison stronger than the hero's stacks is worth a visit")

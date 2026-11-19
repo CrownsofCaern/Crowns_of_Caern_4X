@@ -23,6 +23,7 @@ signal path_cleared
 
 const TILE := 40                       # on-screen pixels per map cell
 const TERRITORY_RADIUS := 3
+const PAINTED_TERRITORY_RADIUS := 6    # wide enough for a realm's sites to join into one border
 const NEUTRAL_TERRITORY := Color("#999999")
 const TOWN_GATE_NUDGE := 2.0           # native pixels a hero in a town stands below its feet
 const SITE_FLAG := [30, 14]                  # owner pennant on a held dwelling site (sprite pixels; landmark sprites carry no flag spot)
@@ -78,6 +79,9 @@ var _glow: Node2D                      # additive ember light over infernal grou
 var _glow_cells: Array = []
 var _glow_tex: GradientTexture2D
 var _fog: TileMapLayer
+var _painted := false                  # MapPaint draws ground, fog and realm borders
+var _paint_ground: ColorRect
+var _paint_fog: ColorRect
 var _font: Font
 
 
@@ -88,6 +92,7 @@ func _ready() -> void:
 	if tiles.is_valid():
 		_native = int(tiles.info["tile_size"])
 		_art_scale = float(TILE) / _native
+		_painted = MapPaint.supported(tiles.info)
 	_ground = _layer("Ground")
 	_surface = TileMapLayer.new()
 	_surface.name = "GroundVariants"
@@ -218,6 +223,8 @@ func update_terrain_preview(map: AdventureMap, cells: Array[Vector2i], radius: i
 			layer.erase_cell(cell)
 		_glow_cells.erase(cell)
 		_paint_static_cell(map, cell, occupied)
+	if _paint_ground != null:
+		MapPaint.update_ground(_paint_ground, tiles.info["order"], func(t: Vector2i) -> String: return _visual_terrain(map, t), affected.keys())
 	_glow.queue_redraw()
 
 
@@ -494,6 +501,11 @@ func _build_static() -> void:
 	if _fog:
 		_fog.queue_free()
 		_fog = null
+	for quad in [_paint_ground, _paint_fog]:
+		if quad != null:
+			quad.queue_free()
+	_paint_ground = null
+	_paint_fog = null
 	for n in [_territory, _under, _world, _glow, _overlay]:
 		if n.get_parent() == self:
 			remove_child(n)
@@ -532,6 +544,13 @@ func _build_static() -> void:
 	add_child(_glow)
 	add_child(_overlay)
 	_fog = _layer("Fog")
+	if _painted:
+		_paint_ground = MapPaint.build_ground(map, tiles, TILE, func(t: Vector2i) -> String: return _visual_terrain(map, t))
+		add_child(_paint_ground)
+		move_child(_paint_ground, 0)
+		_ground.visible = false
+		_paint_fog = MapPaint.build_fog(map, tiles, TILE)
+		add_child(_paint_fog)
 	var occupied := {}
 	for o in map.objects.values():
 		occupied[AdventureMap.object_pos(o)] = true
@@ -610,7 +629,13 @@ func _paint_static_cell(map: AdventureMap, t: Vector2i, occupied: Dictionary) ->
 	var visual_tid := _visual_terrain(map, t)
 	_ground.set_cell(t, TerrainTiles.SOURCE_TERRAIN, tiles.ground_coords(visual_tid, t))
 	var covered := map.scenery_cover.has(t)
-	if map.surface.has(t) and _surface_sources.has(map.surface[t]):
+	var seam := false   # painted ground: tile-shaped extras stay off the brushed borders
+	if _painted:
+		for d in TerrainTiles.DIRS:
+			var n: Vector2i = t + d[1]
+			if map.in_bounds(n) and _visual_terrain(map, n) != visual_tid:
+				seam = true
+	if not seam and map.surface.has(t) and _surface_sources.has(map.surface[t]):
 		# Fades in over two tiles from the patch edge; a stable flip/turn per tile.
 		var depth := 2
 		for dy in range(-2, 3):
@@ -620,7 +645,7 @@ func _paint_static_cell(map: AdventureMap, t: Vector2i, occupied: Dictionary) ->
 					depth = mini(depth, maxi(absi(dx), absi(dy)) - 1)
 		_surface.set_cell(t, int(_surface_sources[map.surface[t]]), Vector2i.ZERO, TerrainTiles.cell_hash(t, 4, 41) + 4 * (2 - depth))
 	var detail := tiles.detail_coords(visual_tid, t)
-	if detail.x >= 0:
+	if detail.x >= 0 and not seam:
 		_details.set_cell(t, TerrainTiles.SOURCE_TERRAIN, detail)
 	if tid == "mountain" and not map.has_road(t) and not covered:
 		var style := _barrier_style(t)
@@ -639,14 +664,14 @@ func _paint_static_cell(map: AdventureMap, t: Vector2i, occupied: Dictionary) ->
 				_barriers.set_cell(t, TerrainTiles.SOURCE_TERRAIN, coords)
 	if tid == "infernal" and TerrainTiles.cell_hash(t, 3, 17) == 0:
 		_glow_cells.append(t)
-	for other in _blend_order:
+	for other in ([] if _painted else _blend_order):
 		if other == visual_tid or tiles.has_specific_edge(visual_tid, other):
 			continue
 		var bits := TerrainTiles.neighbor_bits(func(n: Vector2i) -> bool: return map.in_bounds(n) and _visual_terrain(map, n) == other, t)
 		var c := tiles.transition_coords(tiles.terrain_row(other), TerrainTiles.reduce_mask(bits), t)
 		if c.x >= 0:
 			_blends[other].set_cell(t, TerrainTiles.SOURCE_TERRAIN, c)
-	for kind in _edges:
+	for kind in ({} if _painted else _edges):
 		var entry: Dictionary = tiles.info["edges"]["types"][kind]
 		if String(entry["base"]) != visual_tid:
 			continue
@@ -736,6 +761,9 @@ func _barrier_style(t: Vector2i) -> int:
 		"forest": [3], "swamp": [3, 7], "infernal": [2],
 		"snow": [0, 1, 6], "mountain": [0],
 	}.get(biome, [0])
+	if _painted:
+		# On painted ground chasms read as black scratches: ridges and rock take their place.
+		choices = {"grass": [0], "rough": [0, 5], "desert": [5]}.get(biome, choices)
 	var region := Vector2i(floori(float(t.x) / 8.0), floori(float(t.y) / 8.0))
 	var style := int(choices[TerrainTiles.cell_hash(region, choices.size(), 29)])
 	_barrier_styles[t] = style
@@ -855,7 +883,7 @@ func _add_flag(parent: Sprite2D, sid: String, owner: int, at: Array = []) -> voi
 		return
 	if at.is_empty():
 		at = Art.sprite_info(sid)["flag"]
-	flag.scale = Vector2.ONE      # inherits the parent's map scale
+	flag.scale = Vector2.ONE * (1.7 if _painted else 1.0)      # inherits the parent's map scale
 	flag.position = parent.offset + Vector2(at[0], at[1])
 	flag.modulate = Color(session.state.player(owner)["color"]).lightened(0.15) if owner >= 0 else Color("#8a8478")
 	parent.add_child(flag)
@@ -912,6 +940,9 @@ func _sync_fog() -> void:
 	_fog.clear()
 	var map := session.state.map
 	var fog: FogOfWar = session.current_player()["fog"]
+	if _paint_fog != null:
+		MapPaint.sync_fog(_paint_fog, map, fog)
+		return
 	var hidden := func(n: Vector2i) -> bool: return map.in_bounds(n) and not fog.is_explored(n)
 	for y in map.height:
 		for x in map.width:
@@ -939,6 +970,7 @@ func _draw_territory() -> void:
 	var map := session.state.map
 	var fog: FogOfWar = session.current_player()["fog"]
 	var cells := {} # tile -> [squared distance, owner]
+	var radius := PAINTED_TERRITORY_RADIUS if _painted else TERRITORY_RADIUS
 	var ids := map.objects.keys()
 	ids.sort()
 	for id in ids:
@@ -949,14 +981,21 @@ func _draw_territory() -> void:
 		if not fog.is_explored(pos):
 			continue
 		var owner := int(o["owner"])
-		for dy in range(-TERRITORY_RADIUS, TERRITORY_RADIUS + 1):
-			for dx in range(-TERRITORY_RADIUS, TERRITORY_RADIUS + 1):
+		for dy in range(-radius, radius + 1):
+			for dx in range(-radius, radius + 1):
 				var distance := dx * dx + dy * dy
 				var p := pos + Vector2i(dx, dy)
-				if distance > TERRITORY_RADIUS * TERRITORY_RADIUS or not map.in_bounds(p):
+				if distance > radius * radius or not map.in_bounds(p):
 					continue
 				if not cells.has(p) or distance < int(cells[p][0]):
 					cells[p] = [distance, owner]
+	if _paint_ground != null:
+		var tint := {}
+		for p in cells:
+			if int(cells[p][1]) >= 0:
+				tint[p] = Color(session.state.player(int(cells[p][1]))["color"])
+		MapPaint.sync_territory(_paint_ground, map, tint)
+		return
 	for p in cells:
 		var owner: int = cells[p][1]
 		var color := NEUTRAL_TERRITORY if owner < 0 else Color(session.state.player(owner)["color"])

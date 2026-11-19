@@ -19,8 +19,9 @@ func _game(map_id: String, seed_value: int, levels: Array, rules: Dictionary = {
 func test_levels_are_valid_data() -> void:
 	assert_eq(data.difficulty_levels(), ["passive", "easy", "normal", "hard", "very_hard"])
 	assert_eq(data.default_difficulty(), "normal")
-	assert_eq(data.difficulty("normal")["ai"], {}, "normal is the standard AI")
-	assert_eq(int(data.difficulty("normal")["income_percent"]), 100)
+	assert_true(bool(data.difficulty("normal")["ai"]["rival_intel"]), "normal already goes to war (1.2: every level above easy moved up a step)")
+	assert_eq(int(data.difficulty("normal")["income_percent"]), 125)
+	assert_eq(int(data.difficulty("easy")["income_percent"]), 85, "easy stays as it was")
 	assert_eq(data.difficulty("no_such_level")["name"], "Normal", "unknown ids fall back to the default")
 	var errors := data._validate_ai_difficulty()
 	assert_true(errors.is_empty(), "\n".join(errors))
@@ -108,17 +109,17 @@ func test_passive_level_ignores_rival_heroes_and_towns() -> void:
 
 
 func test_income_scales_with_the_level() -> void:
-	var normal := _game("twin_marches", 3, ["", "normal"])
-	var gold := int(normal.daily_income(1)["gold"])
+	var base := _game("twin_marches", 3, ["", "passive"])   # 100%
+	var gold := int(base.daily_income(1)["gold"])
 	assert_gt(gold, 0)
-	for level in ["easy", "hard"]:
+	for level in ["easy", "normal", "hard"]:
 		var s := _game("twin_marches", 3, ["", level])
 		var pct := int(data.difficulty(level)["income_percent"])
 		assert_eq(s.income_percent(1), pct)
 		assert_eq(int(s.daily_income(1)["gold"]), int(round(float(gold) * float(pct) / 100.0)), level)
 	var hard := _game("twin_marches", 3, ["", "hard"])
 	assert_gt(int(hard.daily_income(1)["gold"]), gold)
-	assert_eq(hard.daily_income(0), normal.daily_income(0), "the human's income is untouched")
+	assert_eq(hard.daily_income(0), base.daily_income(0), "the human's income is untouched")
 	# The scaled income is what the bank receives at the start of a day.
 	var bank: ResourceBank = hard.state.player(1)["resources"]
 	var before := bank.get_amount("gold")
@@ -147,7 +148,7 @@ func test_v8_save_plays_at_the_default_level() -> void:
 	assert_true(GameState.validate_save(d).is_empty())
 	var back := GameSession.from_state(data, GameState.from_dict(d, data))
 	assert_eq(back.difficulty_of(1), "normal")
-	assert_eq(back.income_percent(1), 100)
+	assert_eq(back.income_percent(1), int(data.difficulty("normal")["income_percent"]))
 
 
 func test_game_over_standings_name_the_level() -> void:

@@ -42,6 +42,8 @@ var _online_playing := false
 ## The last online game received; while waiting, session is a look-only
 ## OnlineView copy of it and this is the real one.
 var _online_game: GameSession
+## A new game waiting to be hosted as a lobby: {map_id, seed, setup}.
+var _lobby_def: Dictionary = {}
 ## Shown over the map while another person moves in an online game.
 var waiting_bar: PanelContainer
 var _waiting_label: Label
@@ -57,6 +59,7 @@ var show_menu_on_start := true
 var _game_over_shown := false
 var _last_human := -1
 var _pending_battle := ""
+var _site_after_battle := {}   # {id, lines}: the site a won battle just opened, shown once the report closes
 var _pending_encounter := ""
 var _points_before := 0
 var _busy := false
@@ -181,7 +184,7 @@ func _ready() -> void:
 	panels.scout_requested.connect(_on_forecast_scout)
 	panels.orders_changed.connect(_on_forecast_orders)
 	panels.report_closed.connect(func():
-		if not _ai_playing:
+		if not _ai_playing and not _open_won_site():
 			_after_event())
 	panels.watch_requested.connect(_watch_again)
 	hud.hero_selected.connect(_select_hero)
@@ -213,6 +216,8 @@ func _ready() -> void:
 	online_panel.take_requested.connect(func(i: int): net.take_seat(i))
 	online_panel.free_requested.connect(func(i: int): net.free_seat(i))
 	online_panel.leave_requested.connect(_leave_online)
+	online_panel.pick_requested.connect(func(i: int, f: String, c: String): net.pick(i, f, c))
+	online_panel.begin_requested.connect(func(): net.begin_match())
 	online_panel.closed.connect(func():
 		map_view.visible = true
 		if session is OnlineView:
@@ -254,6 +259,13 @@ func _ready() -> void:
 	menu_layer.add_child(menu)
 	menu.build(data)
 	menu.start_requested.connect(start_new_game)
+	menu.host_lobby_requested.connect(func(map_id: String, seed_value: int, setup: Dictionary):
+		var before := session
+		start_new_game(map_id, seed_value, setup)
+		if session == null or session == before:
+			return
+		_lobby_def = {"map_id": map_id, "seed": seed_value, "setup": setup}
+		online_panel.open_connect(true, "Enter your name and choose Host this game. Friends who join take a human player and choose its faction and hero; then you begin the match."))
 	menu.load_requested.connect(func(): _open_saves("load"))
 	menu.online_requested.connect(_open_online)
 	menu.resume_requested.connect(func():
@@ -1098,7 +1110,8 @@ func _on_tile_clicked(t: Vector2i) -> void:
 	if h.pos == t and here.get("type", "") == "town" and int(here.get("owner", -1)) == h.owner:
 		_open_town(String(here["id"]))
 		return
-	if h.pos == t and here.get("type", "") == "site" and MapSites.kind(here, data) in ["trader", "cobolt"]:
+	# Standing on a site (a dwelling just won, a trader): a click opens it again.
+	if h.pos == t and here.get("type", "") == "site":
 		_set_busy(true)
 		site_dialog.open(session, String(here["id"]), h.id)
 		return
@@ -1274,8 +1287,22 @@ func _on_attack_confirmed() -> void:
 	var h := _hero()
 	var from := h.pos
 	AudioManager.play("battle_start")
+	var target := _pending_battle
 	var result := session.attack(h.id, _pending_battle)
 	_pending_battle = ""
+	_site_after_battle = {}
+	var won_at := session.state.map.object_at(h.pos) if result.get("winner", 1) == 0 and h.alive else {}
+	if not won_at.is_empty() and won_at["id"] == target and won_at["type"] == "site":
+		var lines := []
+		for v in result.get("site_visit", []):
+			lines = v["lines"]
+		_site_after_battle = {"id": target, "lines": lines}
+	if result.get("siege", false) or not result.has("winner"):
+		panels.hide()
+		hud.log_message("[color=#e0b450]%s[/color]" % String(result.get("reason", "The attack cannot be made.")))
+		_refresh()
+		_set_busy(false)
+		return
 	if BattleViewer.watch_enabled(panels.settings_path) and result.has("log"):
 		await battle_viewer.play(result, h.name, 0, panels.settings_path)
 	AudioManager.play_stinger("battle_victory" if result["winner"] == 0 else "battle_defeat")
@@ -1286,6 +1313,22 @@ func _on_attack_confirmed() -> void:
 		hud.log_message("[color=#d96a52]%s[/color] against %s." % ["Withdrew" if result["outcome"] in ["attacker_withdrew", "attacker_retreated"] else "Defeat", result["sides"][1]["name"]])
 	_refresh()
 	panels.show_report(result)
+
+
+## After the report of a won battle for a site (a guarded dwelling): the hero
+## now stands on it, so its dialog opens as if the hero had walked in.
+## True if it opened.
+func _open_won_site() -> bool:
+	var won := _site_after_battle
+	_site_after_battle = {}
+	var h := _hero()
+	if won.is_empty() or h == null or not h.alive or not session.state.map.objects.has(won["id"]) \
+			or AdventureMap.object_pos(session.state.map.objects[won["id"]]) != h.pos:
+		return false
+	_set_busy(true)
+	AudioManager.play("ui_open")
+	site_dialog.open(session, String(won["id"]), h.id, won["lines"])
+	return true
 
 
 ## Replays the battle from the report, then brings the report back.
@@ -1395,6 +1438,10 @@ func _host_online(person: String, port: int) -> void:
 	if why != "":
 		online_panel.open_connect(true, why)
 		return
+	if not _lobby_def.is_empty() and session != null:
+		OnlineMatch.open_lobby(session.state, _lobby_def)
+		_lobby_def = {}
+		net.share()
 	campaign = null   # an online game advances no campaign
 	hud.log_message("Hosting online as %s." % net.my_name)
 
@@ -1427,6 +1474,18 @@ func _on_online_game(s: GameSession) -> void:
 	_online_game = s
 	if s == session and _online_playing and net.my_turn():
 		online_panel.refresh()   # seats changed during our turn
+		return
+	if OnlineMatch.in_lobby(s.state):
+		# Before the match begins: everyone stays on the lobby page.
+		_online_playing = false
+		waiting_bar.hide()
+		if s != session:
+			_start(s)
+			campaign = null
+		menu.hide()
+		map_view.visible = false
+		_set_busy(true)
+		online_panel.open_match("")
 		return
 	if not s.state.game_over and not net.my_turn() and _show_online_view(s):
 		return

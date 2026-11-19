@@ -383,6 +383,13 @@ a map. Not yet: underground level.
 - **Mines and towns on the map:** stepping on an unguarded mine or town captures it. Guarded mines and garrisoned
   foreign towns are fought like neutral armies (forecast, battle, capture on victory); the town's fortifications
   act as a defending "hero" with a defense bonus. Guarded objects block paths through them.
+- **Sieges:** a defended town (garrison or hero) holds out one day per fortification built. The first attack lays
+  siege (the hero's movement ends); the siege belongs to the attacking player and holds while one of its heroes
+  stays next to the town, so the owner can bring a hero in or strike the besiegers. Once the days pass the walls
+  can be stormed. At the start the defenders may lose heart and fight at once (up to 35%, more when badly
+  outnumbered, less with good morale); that roll has its own `GameRng` seeded from the game, town, player and day.
+  Empty towns are walked into; scripted invasion armies and `rules.sieges: false` skip sieges. State lives in the
+  town object (`sieges`), so it travels in saves and online handoffs (`GameSession.siege_status/begin_siege`).
 - **Six town types** (concord, ashen, hollow, thornwood, forge, frostmarch), 29–30 buildings each, including one
   upgrade building per creature (category `upgrade`). Dwelling and upgrade costs follow the faction's
   `economy.curve`: early factions pay ~70% for tier 1–3 dwellings and ~130% for tier 6–8, late factions the
@@ -452,6 +459,13 @@ state, never writes it), so it cannot do anything a human could not. Rule-based 
   (the garrison stays) and threatens it once the main hero needs the remaining days to get home
   (`reads_invasions`). Waves not yet announced stay unknown. The Shuttered Halls survival chapter, lost on day
   14 in AI-only games before, now holds.
+- **Going to war (normal and up):** in games with several rivals a computer player used to clear its own
+  sector and wait there: rival towns lay in the fog behind guarded gates, and every unseen rival hero was assumed
+  to be as strong as all its troops. `rival_intel` gives it scouts: it knows where rival towns, mines and heroes
+  are and what they hold, so it plans attacks and strikes when humans have worn each other down. A neutral army
+  barring the cheapest way to an unreachable rival town is worth `gate_value_share` of that town
+  (`_gate_values`), so it breaks out of its lands, and `human_bonus` makes human-held targets worth more.
+  `tools/ai_roam_probe.gd` measures how far one computer seat ventures and what it takes in 3-player games.
 - **Chasing:** an enemy hero out of today's reach is worth `chase_rate` (0.5) of its value, since it moves.
 - **Forecast screening:** with `screen_width` above 1 (very hard: 2), the top `screen_width ×
   forecasts_per_decision` guarded targets first get a quick forecast with a quarter of the simulations; fights
@@ -469,11 +483,13 @@ state, never writes it), so it cannot do anything a human could not. Rule-based 
   `DEFAULT_SETTINGS`), the hook for difficulty levels and personalities.
 - **Difficulty levels** (save version 9): every player has a `difficulty` from `data/ai_difficulty.json`
   (`passive`, `easy`, `normal`, `hard`, `very_hard`; default `normal`), chosen per computer slot in the new-game setup or by a
-  campaign chapter's `setup.players[i].difficulty`. A level overrides `StrategicAI` settings (passive: never
-  targets the player; easy: surer fights, fewer heroes; hard: riskier fights, more heroes, higher value on rival
-  towns and heroes; very hard: as hard plus 10 forecasts per decision with screening, three-day danger horizon,
-  up to five heroes) and scales the computer player's daily income by `income_percent` (easy 85, hard 125, very
-  hard 150; humans always 100). Scenario `wave_strength` presets without a `very_hard` entry use 1.2 × `hard`.
+  campaign chapter's `setup.players[i].difficulty`. A level overrides `StrategicAI` settings and scales the computer
+  player's daily income by `income_percent` (humans always 100). Since 1.2 every level above easy sits one step
+  higher than in 1.1: passive never targets the player; easy (85%) takes only sure fights with fewer heroes;
+  normal (125%, the old hard) takes riskier fights, keeps four heroes, values rival towns and heroes higher and
+  goes to war (rival intel, gate breaking); hard (150%, the old very hard) adds 10 forecasts per decision with
+  screening, a three-day danger horizon and five heroes; very hard (175%) gambles on closer fights, keeps six
+  heroes and values human targets most. Scenario `wave_strength` presets without a `very_hard` entry use 1.2 × `hard`.
   `tools/ai_ladder.gd` plays two levels (or tunings) against each other with seats swapped. Settings merge in the order defaults, level, `GameState.rules.ai`, constructor overrides.
 - **Running it:** the adventure screen runs computer players right after the human ends the turn
   (`StrategicAI.play_ai_turns`). `data/maps/twin_marches.json` is a mirror-symmetric two-player duel map (human
@@ -779,6 +795,23 @@ pick goes into every zone of its zone group with the same guard and creature, so
 (own RNG stream, like the armour drops). **AI**: `StrategicAI.site_value` (dwellings: weekly troops x
 `site_capture_weeks`, or the affordable pool at a held one; others: the data `ai` value or XP), and it
 recruits on arrival.
+
+**Hamlets** (`data/sites.json` kind `hamlet`, rules in `src/game/hamlets.gd`, numbers in game_rules.json
+`hamlets`): the new-game default; unticking the setup checkbox gives a **Classic** game without them
+(`setup.hamlets` -> `rules.hamlets`). "Host online" uses the same setup, so the host's choice is kept in the
+lobby definition and every rebuilt lobby game, and every joiner's copy, has the same hamlets. Three levels: Hamlet (100 gold a day, tier 1-2, light guard), Village
+(250, tier 3-4, medium) and Freehold (500, tier 5-6, strong). They are placed when the game starts, not by
+the map generator (`Hamlets.place`, an RNG stream of its own, so a Classic game and every other mode keep
+their maps): `per_player` sites by movement cost from each player's first town, `contested` ones where the
+two nearest players are equally far. A held hamlet pays its gold daily (`Economy.daily_income`) and raises a
+weekly levy of `growth_pct` of the town growth, hired at `price_pct` of the town price
+(`MapSites.recruit_cost`) and capped at `levy_cap_weeks`. The unhired levy and any stationed troops
+(`hamlet_station` / `hamlet_withdraw`, `garrison_slots` kinds) defend it against rivals. A levy of a
+week's growth or more left unhired for `unrest_weeks` weeks brings unrest, and from the week after the hamlet
+turns neutral with `revolt_chance`, guarded by that levy, unless a town of the owner lies within
+`realm_radius` or the garrison is worth `garrison_weeks` of the levy. **AI**: `_hamlet_value` (gold like a
+mine plus the levy), and `_hamlet_hire` keeps `hamlet_gold_reserve` for the towns but always hires a levy
+that would breed unrest. It does not station troops.
 
 **Events** (`data/events.json`, `src/game/world_events.gd`): from day 8, each new week draws one omen (12, by
 weight; a quiet week is the most likely) that holds for everyone: growth +50% / -25% or double for one rolled

@@ -4,6 +4,8 @@ extends Control
 ## Emits the player's choice; the AdventureScreen starts or loads the game.
 
 signal start_requested(map_id: String, seed_value: int, setup: Dictionary)
+## The same game set up as an online lobby: joining players choose their faction and hero.
+signal host_lobby_requested(map_id: String, seed_value: int, setup: Dictionary)
 signal load_requested
 signal online_requested
 signal resume_requested
@@ -46,6 +48,7 @@ var _random_fields: Dictionary = {}  # option -> the field (caption and picker)
 var _slots_box: GridContainer
 var _seed_edit: LineEdit
 var _hard_check: CheckBox
+var _hamlets_check: CheckBox
 var _error: Label
 var _setup_scroll: ScrollContainer
 var _setup_footer: VBoxContainer
@@ -375,6 +378,11 @@ func _build_setup() -> void:
 	_hard_check.text = "Hide battle odds and encounter chances" if TouchGestures.touch_ui() else "Hard mode: battle odds and encounter chances are never shown"
 	_hard_check.tooltip_text = "Hovering an enemy shows only its rough size; scouts still count it exactly."
 	v.add_child(_hard_check)
+	_hamlets_check = CheckBox.new()
+	_hamlets_check.button_pressed = true
+	_hamlets_check.text = "Hamlets (untick for a Classic game)" if TouchGestures.touch_ui() else "Hamlets: villages across the map pay gold and raise a levy (untick for a Classic game)"
+	_hamlets_check.tooltip_text = "Hamlets, villages and freeholds stand guarded on every side of the map and between the players.\nA held one pays gold every day and raises a weekly levy you can hire at half again the town price.\nA levy left unhired for three weeks grows restless and may rise, unless troops are stationed there\nor one of your towns is near. Classic: the map as it always was, without them."
+	v.add_child(_hamlets_check)
 	_setup_footer = VBoxContainer.new()
 	root.add_child(_setup_footer)
 	_error = UiStyle.label("", 13, UiStyle.BAD)
@@ -396,6 +404,13 @@ func _build_setup() -> void:
 	_start_btn.text = "Begin"
 	_start_btn.custom_minimum_size = Vector2(160, 38)
 	_start_btn.pressed.connect(_start)
+	var host := Button.new()
+	host.text = "Host online"
+	host.tooltip_text = "Host this game as an online lobby: friends join, take a human player and choose its faction and hero, then you begin."
+	host.custom_minimum_size = Vector2(160, 38)
+	host.pressed.connect(func(): _start(true))
+	_start_btn.set_meta("host", host)
+	buttons.add_child(host)
 	buttons.add_child(_start_btn)
 	UiStyle.enlarge_touch_controls(_setup_panel)
 
@@ -628,6 +643,14 @@ func _slot_title(m: Dictionary, i: int) -> String:
 
 
 func _fill_slots() -> void:
+	# Choices made before the map or seed changed carry over to the same slots.
+	var kept := []
+	for row in _slot_rows:
+		var r := {}
+		for k in ["color", "type", "faction", "hero_class", "difficulty", "team"]:
+			var pick: OptionButton = row[k]
+			r[k] = pick.get_item_text(pick.selected) if pick.selected >= 0 else ""
+		kept.append(r)
 	for c in _slots_box.get_children():
 		_slots_box.remove_child(c)
 		c.queue_free()
@@ -746,9 +769,38 @@ func _fill_slots() -> void:
 		team_pick.item_selected.connect(func(_x): _validate())
 		color_pick.item_selected.connect(func(_x): _validate())
 		_slot_rows.append({"color": color_pick, "type": type_pick, "faction": fac_pick, "hero_class": class_pick, "difficulty": level_pick, "team": team_pick})
+		if i < kept.size():
+			_restore_slot(_slot_rows[i], kept[i], m, i)
 	UiStyle.enlarge_touch_controls(_slots_box)
 	_validate()
 	_refresh_preview()
+
+
+## Puts a slot's earlier choices back (by item text), except what the new map fixes:
+## authored colours, and scenario roles other than the player's own realm.
+func _restore_slot(row: Dictionary, kept: Dictionary, m: Dictionary, i: int) -> void:
+	var fixed: bool = m.get("scenario", false)
+	var keys := ["difficulty"]
+	if not m.get("custom", false):
+		keys.append("color")
+	if not fixed:
+		keys.append_array(["type", "team"])
+	if not fixed or i == 0:
+		keys.append("faction")
+	for k in keys:
+		var pick: OptionButton = row[k]
+		for idx in pick.item_count:
+			if pick.get_item_text(idx) == String(kept[k]):
+				pick.select(idx)
+				if k == "faction":
+					_fill_class_picker(row["hero_class"], GameSetup.playable_factions(_data)[idx])
+				break
+	if "faction" in keys:
+		var cls: OptionButton = row["hero_class"]
+		for idx in cls.item_count:
+			if cls.get_item_text(idx) == String(kept["hero_class"]):
+				cls.select(idx)
+				break
 
 
 ## Survival, defence and endless: fixed defender, invaders and potential ally.
@@ -813,7 +865,14 @@ func current_setup() -> Dictionary:
 		out["preserve_authored"] = true
 	if _hard_check != null and _hard_check.button_pressed:
 		out["hide_odds"] = true
+	if _hamlets_check != null and _hamlets_check.button_pressed and _hamlets_offered(_selected_map()):
+		out["hamlets"] = true
 	return out
+
+
+## Hamlets are a choice of the open conquest game: scenarios and a player's own maps keep what their author placed.
+static func _hamlets_offered(m: Dictionary) -> bool:
+	return not m.is_empty() and not bool(m.get("custom", false)) and not bool(m.get("scenario", false))
 
 
 func _validate() -> bool:
@@ -881,6 +940,8 @@ func _refresh_preview() -> void:
 	if entry.is_empty():
 		return
 	_preview_timer.stop()
+	if _hamlets_check != null:
+		_hamlets_check.visible = _hamlets_offered(entry)
 	var id := GameSetup.map_id_for(entry, preview_seed(), current_setup())
 	if id != _preview_map_id or entry.get("custom", false):
 		_preview_definition = _data.load_map(id)
@@ -922,7 +983,7 @@ func _refresh_preview() -> void:
 	_preview_legend.add_child(UiStyle.label("%d × %d tiles · %s" % [int(_preview_definition["width"]), int(_preview_definition["height"]), seed_text], 12, UiStyle.TEXT_DIM))
 
 
-func _start() -> void:
+func _start(online: bool = false) -> void:
 	if not _validate():
 		return
 	_refresh_preview()
@@ -930,7 +991,11 @@ func _start() -> void:
 		return
 	var m := _selected_map()
 	var seed_value := preview_seed()
-	start_requested.emit(GameSetup.map_id_for(m, seed_value, current_setup()), seed_value, current_setup())
+	var map_id := GameSetup.map_id_for(m, seed_value, current_setup())
+	if online:
+		host_lobby_requested.emit(map_id, seed_value, current_setup())
+	else:
+		start_requested.emit(map_id, seed_value, current_setup())
 
 
 func show_launch_error(message: String) -> void:

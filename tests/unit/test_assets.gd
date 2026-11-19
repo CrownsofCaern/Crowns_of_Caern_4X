@@ -179,6 +179,7 @@ func test_specific_edges_replace_haze_but_other_pairs_keep_blending() -> void:
 	map.terrain[map.index(Vector2i(2, 1))] = "snow"
 	var mv := MapView.new()
 	mv._ready()
+	mv._painted = false   # the tile layers: what the map falls back to without the painted ground (MapPaint)
 	mv.bind(session)
 	assert_eq(mv._blends["water"].get_cell_source_id(grass), -1, "dedicated shore has no water haze")
 	assert_eq(mv._blends["grass"].get_cell_source_id(water), -1, "dedicated shore has no grass haze")

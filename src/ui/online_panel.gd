@@ -10,6 +10,8 @@ signal join_requested(address: String, person: String)
 signal take_requested(player_idx: int)
 signal free_requested(player_idx: int)
 signal leave_requested
+signal pick_requested(player_idx: int, faction: String, hero_class: String)
+signal begin_requested
 signal closed
 
 const SETTINGS := "user://online.cfg"
@@ -98,7 +100,10 @@ func refresh() -> void:
 	var st := s.state
 	var mover := OnlineMatch.person_to_move(st)
 	var line := ""
-	if st.game_over:
+	var lobby := OnlineMatch.in_lobby(st)
+	if lobby:
+		line = "Lobby: take a player, then choose its faction and hero. " + ("Begin the match when everyone is ready." if net.is_host else "The host begins the match.")
+	elif st.game_over:
 		line = "The game is over."
 	elif not bool(st.player(st.current_player)["is_human"]):
 		line = "The computer players are moving..."
@@ -118,6 +123,8 @@ func refresh() -> void:
 		here[String(p["name"])] = true
 	for row in OnlineMatch.seat_rows(st):
 		_body.add_child(_seat_row(row, here))
+		if lobby and String(row["seat"]) == net.my_name:
+			_body.add_child(_lobby_picks(st, int(row["player"])))
 	if OnlineMatch.seats_held(st, net.my_name).is_empty():
 		_body.add_child(_wrapped("Take a player to play.", 13, UiStyle.WARN))
 	var names := []
@@ -132,8 +139,40 @@ func refresh() -> void:
 			NetSession.DEFAULT_PORT], 13, UiStyle.TEXT_DIM))
 	for n in _notes:
 		_body.add_child(_wrapped(n, 13, UiStyle.WARN))
-	_buttons([["Leave game", func(): leave_requested.emit(),
-		"Close the connection. The latest turn stays saved under Load Game."]])
+	var buttons := [["Leave game", func(): leave_requested.emit(),
+		"Close the connection. The latest turn stays saved under Load Game."]]
+	if lobby and net.is_host:
+		buttons.append(["Begin match", func(): begin_requested.emit(), "Start the game with the players and choices as they are"])
+	_buttons(buttons)
+
+
+## Lobby pickers for a player this person holds: faction and hero class.
+func _lobby_picks(st: GameState, idx: int) -> Control:
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	var spacer := Control.new()
+	spacer.custom_minimum_size.x = 24
+	row.add_child(spacer)
+	var choice := OnlineMatch.lobby_choice(st, idx)
+	var factions := GameSetup.playable_factions(_data)
+	var fac := OptionButton.new()
+	for f in factions:
+		fac.add_icon_item(Art.faction_emblem_icon(f), String(_data.factions[f]["name"]))
+	fac.select(maxi(0, factions.find(String(choice.get("faction", "")))))
+	row.add_child(fac)
+	var cls := OptionButton.new()
+	cls.add_item("Default hero")
+	cls.set_item_metadata(0, "")
+	var faction: String = factions[fac.selected]
+	for id in GameSetup.classes_for_faction(_data, faction):
+		cls.add_item(String(_data.hero_classes[id]["name"]))
+		cls.set_item_metadata(cls.item_count - 1, id)
+		if id == String(choice.get("hero_class", "")):
+			cls.select(cls.item_count - 1)
+	row.add_child(cls)
+	fac.item_selected.connect(func(i: int): pick_requested.emit(idx, String(factions[i]), ""))
+	cls.item_selected.connect(func(i: int): pick_requested.emit(idx, faction, String(cls.get_item_metadata(i))))
+	return row
 
 
 func _seat_row(row: Dictionary, here: Dictionary) -> Control:

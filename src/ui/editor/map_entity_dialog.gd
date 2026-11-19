@@ -223,7 +223,7 @@ func _fill_dwelling(site: String, original: Dictionary) -> void:
 				options[id] = _data.magic["spells"][id].get("name", id)
 		_field("Spell", _choice(options, original.get("spell", options.keys()[0] if not options.is_empty() else "")), _dwelling_box)
 		return
-	if _data.sites.get(site, {}).get("kind") != "dwelling":
+	if not _data.sites.get(site, {}).get("kind") in ["dwelling", "hamlet"]:
 		return
 	var pool := MapSites.creature_pool(_data.sites[site], _data)
 	var options := {}

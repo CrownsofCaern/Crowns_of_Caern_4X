@@ -90,6 +90,9 @@ static func describe(session: GameSession, t: Vector2i, hero: Hero) -> Dictionar
 				var why := MapSites.visit_block(hero, o, data, session.state.day)
 				if why != "":
 					lines.append([why, UiStyle.TEXT_DIM])
+			var seen := visited_line(session, o, me)
+			if seen != "":
+				lines.append([seen, UiStyle.TEXT_DIM])
 			var flavor := flavor_text(String(def.get("text", "")))
 			if flavor != "":
 				lines.append([flavor, UiStyle.TEXT_DIM])
@@ -111,6 +114,21 @@ static func describe(session: GameSession, t: Vector2i, hero: Hero) -> Dictionar
 		"neutral_army":
 			return {"title": String(o.get("name", "Neutral army")), "kind": "Neutral army", "lines": lines}
 	return {}
+
+
+## Which of the current player's heroes have already used this site, for the
+## hover card: "Visited by A, B", "Visited" for a once-per-player site, or ""
+## if none has (or the site is not used up by a visit).
+static func visited_line(session: GameSession, o: Dictionary, me: int) -> String:
+	var visitors: Array = o.get("visitors", [])
+	if visitors.has(MapSites.player_key(me)):
+		return "Visited: your scouts have already been here"
+	var names := []
+	for h in session.state.heroes_of(me):
+		if visitors.has(h.id) or (MapSites.kind(o, session.data) == "boon" and h.has_boon(String(o["id"]))):
+			names.append(h.name)
+	names.sort()
+	return "" if names.is_empty() else "Visited by " + ", ".join(names)
 
 
 ## Adds the warning for a prize a neutral army stands guard over (see
@@ -157,6 +175,7 @@ static func _site_kind(kind: String) -> String:
 		"trader": return "trader · artifacts & maps"
 		"cobolt": return "neutral cobolt trading house"
 		"dwelling": return "dwelling"
+		"hamlet": return "gold and a levy"
 		"village": return "village · recruits once"
 		"attribute": return "training ground"
 		"boon": return "blessing"

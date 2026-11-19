@@ -48,6 +48,12 @@ static func daily_income(map: AdventureMap, player_idx: int, data: GameData) -> 
 			out[res] = int(out.get(res, 0)) + int(inc[res])
 	for m in mines_of(map, player_idx):
 		out[m["resource"]] = int(out.get(m["resource"], 0)) + mine_income(m, data)
+	for id in map.objects:
+		var o: Dictionary = map.objects[id]
+		if o["type"] == "site" and int(o.get("owner", -1)) == player_idx:
+			var gold := MapSites.daily_gold(o, data)
+			if gold > 0:
+				out["gold"] = int(out.get("gold", 0)) + gold
 	return out
 
 

@@ -53,6 +53,10 @@ const DEFAULT_SETTINGS := {
 	"trade_value_ratio": 1.5,       # trade for a building only if its score beats the best affordable one by this
 	"hero_kill_value": 4000,        # value of removing an enemy hero from the map (besides its army)
 	"site_capture_weeks": 3.0,      # weeks of a dwelling site's troops that taking it is worth
+	"hamlet_horizon_days": 30,      # days of gold a hamlet is worth (it pays all game and nothing wears it out)
+	"hamlet_retake_days": 12,       # ... and of one a rival holds: it changes hands as easily again
+	"hamlet_hunt_rate": 0.5,        # in a game with hamlets, unexplored land is worth this much more per week while no rival town is known
+	"hamlet_gold_reserve": 4000,    # gold kept for the towns before a hamlet's dearer levy is hired (a restless one is hired regardless)
 	"site_recruit_rate": 0.8,       # utility per gold of troops the hero can recruit at a held dwelling site
 	"artifact_value_rate": 1.0,     # utility per gold of artifact value that the hero would wear
 	"spare_artifact_rate": 0.15,    # ... and of one it can only carry in the pack
@@ -85,6 +89,12 @@ const DEFAULT_SETTINGS := {
 	"screen_width": 1.0,            # quick-forecast this many x forecasts_per_decision fights first (above 1: drop the clearly lost ones)
 	"screen_margin": 0.25,          # ... a quick forecast this far below min_win_probability drops the fight
 	"guarded_captures": true,       # takes a town only if a stronger enemy hero cannot retake it tomorrow (or it ends the rival)
+	# Going to war (hard and up): without these an AI that has cleared its own
+	# sector waits there, because rival towns lie in the fog behind guarded gates
+	# and an unseen rival is assumed to be as strong as all its own troops.
+	"rival_intel": false,           # knows where rival towns, mines and heroes are and what they hold (scouts and spies)
+	"gate_value_share": 0.0,        # a neutral army barring the way to a rival town is worth this share of the town
+	"human_bonus": 1.0,             # targets held by human players are worth this much more (on top of enemy_bonus)
 }
 
 var session: GameSession
@@ -103,6 +113,7 @@ var _home_guard := 0.0   # assumed strength of an enemy hero we cannot see (all 
 var _report := {}        # this turn's report (counters for upgrades, spells, purchases, gifts)
 var _sortie := {}        # a target chosen by _try_sortie for the hero's next step
 var _reserved := {}      # town id -> true: kept free for the main hero coming to defend it
+var _open_fields := {}   # rival town id -> AiDistanceField from it through neutral armies (gate_value_share)
 
 
 func _init(game_session: GameSession, player_idx: int, overrides: Dictionary = {}) -> void:
@@ -330,6 +341,8 @@ func defender_value(obj: Dictionary) -> float:
 				walls += foe.defense
 			return value * (1.0 + 0.05 * walls)
 		"mine", "site":
+			if (obj.get("guard", []) as Array).is_empty() and MapSites.is_hamlet(obj, data) and int(obj.get("owner", -1)) >= 0:
+				return stacks_value(GameSession._pairs_to_stacks(MapSites.defenders(obj, data)))
 			return stacks_value(GameSession._pairs_to_stacks(obj.get("guard", [])))
 		"neutral_army":
 			return stacks_value(GameSession._pairs_to_stacks(obj.get("stacks", [])))
@@ -352,7 +365,7 @@ func _compute_threats() -> void:
 	ids.sort()
 	for id in ids:
 		var e: Hero = session.state.heroes[id]
-		if not e.alive or session.allied(e.owner, player) or not fog.is_explored(e.pos) or e.army.is_empty():
+		if not e.alive or session.allied(e.owner, player) or not _knows_hero(e, fog) or e.army.is_empty():
 			continue
 		var move := e.max_movement(data)
 		var blocked := {}
@@ -362,6 +375,10 @@ func _compute_threats() -> void:
 				blocked[AdventureMap.object_pos(o)] = true
 		var field := AiDistanceField.build(session.state.map, e.pos, blocked, int(move * float(settings["danger_days"])))
 		var strength := army_value(e.army)
+		# A hero in its own town can march out with the garrison tomorrow.
+		var home := session.state.map.object_at(e.pos)
+		if not home.is_empty() and home["type"] == "town" and int(home["owner"]) == e.owner:
+			strength += army_value(Town.garrison(home))
 		_reach.append({"field": field, "move": move, "strength": strength * (1.0 + 0.05 * e.defense), "seen": true})
 		for t in towns:
 			var cost := field.cost_to(AdventureMap.object_pos(t))
@@ -369,6 +386,13 @@ func _compute_threats() -> void:
 				continue
 			_danger[t["id"]] = maxf(float(_danger.get(t["id"], 0.0)), strength)
 			if cost <= int(move * float(settings["threat_days"])) and strength > garrison_defense(t):
+				_threats[t["id"]] = maxf(float(_threats.get(t["id"], 0.0)), strength)
+	for t in towns:
+		for pl in session.besiegers(t):
+			var e := session._besieger_near(t, pl)
+			if e != null:
+				var strength := army_value(e.army)
+				_danger[t["id"]] = maxf(float(_danger.get(t["id"], 0.0)), strength)
 				_threats[t["id"]] = maxf(float(_threats.get(t["id"], 0.0)), strength)
 	_add_unseen_heroes(fog)
 	_add_invasion_threats()
@@ -461,7 +485,7 @@ func _add_unseen_heroes(fog: FogOfWar) -> void:
 	ids.sort()
 	for id in ids:
 		var e: Hero = session.state.heroes[id]
-		if e.alive and not session.allied(e.owner, player) and not fog.is_explored(e.pos):
+		if e.alive and not session.allied(e.owner, player) and not _knows_hero(e, fog):
 			players[e.owner] = true
 	var main := main_hero()
 	if players.is_empty() or main == null:
@@ -1033,6 +1057,38 @@ func _blocked_for(h: Hero) -> Dictionary:
 	return out
 
 
+## A siege this hero is part of: {hold: true, label} while the walls still
+## stand (the hero stays put so the siege holds), the town as a target once
+## they fall (a best_target-shaped choice), or {}.
+func _siege_duty(h: Hero) -> Dictionary:
+	for oid in _sorted_object_ids():
+		var t: Dictionary = session.state.map.objects[oid]
+		if t["type"] != "town" or session.siege_of(t, player).is_empty():
+			continue
+		var p := AdventureMap.object_pos(t)
+		if absi(h.pos.x - p.x) > 1 or absi(h.pos.y - p.y) > 1:
+			continue
+		var target := session.hostile_target_at(p, player)
+		var st := session.siege_status(h.id, target if target != "" else String(t["id"]))
+		if st["needed"] and not st["ready"]:
+			return {"hold": true, "label": t["name"]}
+		return {"id": t["id"], "pos": p, "kind": "town", "label": t["name"], "days": 0.0}
+	return {}
+
+
+## Starts (or keeps) a siege before storming a fortified town. True if the
+## hero must wait instead of fighting now.
+func _must_besiege(h: Hero, target_id: String, label: String) -> bool:
+	var st := session.siege_status(h.id, target_id)
+	if not st["needed"] or st["ready"]:
+		return false
+	var res := session.begin_siege(h.id, target_id)
+	if res.get("surrendered", false):
+		return false
+	_note("%s besieges %s (%d day%s)." % [h.name, label, int(res.get("days_left", 0)), "" if int(res.get("days_left", 0)) == 1 else "s"])
+	return true
+
+
 func _run_hero(h: Hero, report: Dictionary) -> int:
 	if WaveDirector.has_order(session.state, h.id):
 		return WaveDirector.play_order(session, h)
@@ -1042,6 +1098,10 @@ func _run_hero(h: Hero, report: Dictionary) -> int:
 	equip_best(h)
 	_teleport_to_defend(h)
 	_relieve_town(h)
+	var siege_choice := _siege_duty(h)
+	if siege_choice.get("hold", false):
+		_note("%s keeps up the siege of %s." % [h.name, siege_choice["label"]])
+		return 0
 	for _i in int(settings["max_actions_per_hero"]):
 		if not h.alive or session.state.game_over or h.movement_left <= 0:
 			break
@@ -1057,6 +1117,9 @@ func _run_hero(h: Hero, report: Dictionary) -> int:
 			if not _sortie.is_empty():
 				choice = _sortie
 				_sortie = {}
+		if not siege_choice.is_empty():
+			choice = siege_choice   # the walls fall today: storm them
+			siege_choice = {}
 		if choice.is_empty():
 			break
 		if float(choice.get("days", 0.0)) > 1.0 and _take_deep_road(h, choice["pos"]):
@@ -1081,6 +1144,8 @@ func _run_hero(h: Hero, report: Dictionary) -> int:
 			var plan := battle_plan(h, r["battle"])
 			var pred: Dictionary = plan["pred"]
 			if _fight_ok(pred, is_decisive(r["battle"])):
+				if _must_besiege(h, r["battle"], choice["label"]):
+					break
 				_cast(h, plan["spell"])
 				var res := session.attack(h.id, r["battle"])
 				battles += 1
@@ -1118,6 +1183,10 @@ func _run_hero_interactive(h: Hero, report: Dictionary) -> int:
 	equip_best(h)
 	_teleport_to_defend(h)
 	_relieve_town(h)
+	var siege_choice := _siege_duty(h)
+	if siege_choice.get("hold", false):
+		_note("%s keeps up the siege of %s." % [h.name, siege_choice["label"]])
+		return 0
 	for _i in int(settings["max_actions_per_hero"]):
 		if not h.alive or session.state.game_over or h.movement_left <= 0:
 			break
@@ -1133,6 +1202,9 @@ func _run_hero_interactive(h: Hero, report: Dictionary) -> int:
 			if not _sortie.is_empty():
 				choice = _sortie
 				_sortie = {}
+		if not siege_choice.is_empty():
+			choice = siege_choice   # the walls fall today: storm them
+			siege_choice = {}
 		if choice.is_empty():
 			break
 		if float(choice.get("days", 0.0)) > 1.0 and _take_deep_road(h, choice["pos"]):
@@ -1157,6 +1229,8 @@ func _run_hero_interactive(h: Hero, report: Dictionary) -> int:
 			var plan := battle_plan(h, r["battle"])
 			var pred: Dictionary = plan["pred"]
 			if _fight_ok(pred, is_decisive(r["battle"])):
+				if _must_besiege(h, r["battle"], choice["label"]):
+					break
 				_cast(h, plan["spell"])
 				var tgt := session.battle_target(r["battle"])
 				var defender: Hero = tgt["hero"]
@@ -1226,7 +1300,11 @@ func best_target(h: Hero, skip: Dictionary = {}, guard_home: bool = false) -> Di
 			c["loss_fraction"] = pred["expected_loss_fraction"]
 			if c["utility"] <= 0.0:
 				continue
-		if c["kind"] != "hero" and not (c["kind"] == "town" and (_owned_town_at(c["pos"]) or int(c["cost"]) <= h.movement_left)) \
+		# A town taken today shelters the hero; one that must first be besieged
+		# leaves it camped outside the walls for the night.
+		var shelters: bool = c["kind"] == "town" and (_owned_town_at(c["pos"]) or (int(c["cost"]) <= h.movement_left \
+			and not _siege_first(h, c["id"])))
+		if c["kind"] != "hero" and not shelters \
 				and exposed(c["pos"], hero_value * (1.0 - float(c.get("loss_fraction", 0.0)))):
 			continue   # a stronger enemy hero would catch us there tomorrow
 		if c["kind"] == "town" and not _owned_town_at(c["pos"]) and bool(settings["guarded_captures"]) \
@@ -1235,6 +1313,12 @@ func best_target(h: Hero, skip: Dictionary = {}, guard_home: bool = false) -> Di
 		if best.is_empty() or c["utility"] > best["utility"]:
 			best = c
 	return best
+
+
+## True if taking this town means camping outside it first (a siege not yet ripe).
+func _siege_first(h: Hero, town_id: String) -> bool:
+	var st: Dictionary = session.siege_status(h.id, town_id)
+	return bool(st["needed"]) and not bool(st["ready"])
 
 
 ## True if a stronger visible enemy hero could reach town candidate c tomorrow
@@ -1283,10 +1367,11 @@ func candidate_targets(h: Hero, field: AiDistanceField) -> Array:
 	var fog: FogOfWar = session.state.player(player)["fog"]
 	var hero_value := army_value(h.army)
 	var move := float(maxi(1, h.max_movement(data)))
+	var gates := _gate_values(h, field, fog)
 	for id in _sorted_object_ids():
 		var o: Dictionary = session.state.map.objects[id]
 		var p := AdventureMap.object_pos(o)
-		if p == h.pos or not fog.is_explored(p):
+		if p == h.pos or not (fog.is_explored(p) or _spied(o)):
 			continue
 		var cost := field.cost_to(p)
 		if cost == AiDistanceField.UNREACHABLE:
@@ -1316,7 +1401,7 @@ func candidate_targets(h: Hero, field: AiDistanceField) -> Array:
 				value = float(Economy.mine_income(o, data)) * resource_value(o["resource"]) * float(settings["mine_horizon_days"])
 				value += faction_capture_bonus(o)
 				if owner >= 0:
-					value *= float(settings["enemy_bonus"])
+					value *= rival_factor(owner)
 				label = Economy.mine_name(o, data)
 			"town":
 				if owner == player:
@@ -1324,10 +1409,7 @@ func candidate_targets(h: Hero, field: AiDistanceField) -> Array:
 						continue
 					value = _town_visit_value(o, h)
 				else:
-					value = float(settings["town_value"]) + bundle_value(Town.daily_income(o, data)) * float(settings["income_horizon_days"])
-					value += faction_capture_bonus(o)
-					if owner >= 0:
-						value *= float(settings["enemy_bonus"])
+					value = capture_value(o)
 					if other != null:
 						value += float(settings["hero_kill_value"])
 			"neutral_army":
@@ -1339,6 +1421,7 @@ func candidate_targets(h: Hero, field: AiDistanceField) -> Array:
 					value += artifact_value(h, String(held["artifact"]))   # the pocket behind the guard
 				elif not held.is_empty() and held["type"] == "resource":
 					value += float(held["amount"]) * resource_value(held["resource"])
+				value += float(gates.get(id, 0.0))   # the way to a rival's town
 			"artifact":
 				value = artifact_value(h, String(o["artifact"]))
 				label = String(data.artifacts[o["artifact"]]["name"])
@@ -1365,6 +1448,97 @@ func candidate_targets(h: Hero, field: AiDistanceField) -> Array:
 	return out
 
 
+## What taking a town that is not ours is worth (besides a hero standing in it).
+func capture_value(o: Dictionary) -> float:
+	var value := float(settings["town_value"]) + bundle_value(Town.daily_income(o, data)) * float(settings["income_horizon_days"])
+	value += faction_capture_bonus(o)
+	var owner := int(o.get("owner", -1))
+	if owner >= 0:
+		value *= rival_factor(owner)
+	return value
+
+
+## How much more a rival's town, mine or hero is worth than a neutral one:
+## enemy_bonus, and human_bonus on top when a human plays the rival.
+func rival_factor(owner: int) -> float:
+	var f := float(settings["enemy_bonus"])
+	if owner >= 0 and owner < session.state.players.size() and bool(session.state.player(owner)["is_human"]):
+		f *= float(settings["human_bonus"])
+	return f
+
+
+## With rival_intel the AI knows every rival hero as if it stood in sight.
+func _knows_hero(e: Hero, fog: FogOfWar) -> bool:
+	return fog.is_explored(e.pos) or (bool(settings["rival_intel"]) and e.owner >= 0 and not session.allied(e.owner, player))
+
+
+## With rival_intel the AI knows where rival towns and mines stand, fog or not.
+func _spied(o: Dictionary) -> bool:
+	if not bool(settings["rival_intel"]) or not (o["type"] in ["town", "mine"]):
+		return false
+	var owner := int(o.get("owner", -1))
+	return owner >= 0 and owner != player and not session.allied(owner, player)
+
+
+## Neutral armies that bar this hero's way to a rival town it cannot reach
+## otherwise (a gate guard between sectors): neutral army id -> a
+## gate_value_share of the town's capture value. The guard picked for a town
+## is the one on the cheapest route, counting the fight as a step: the hero's
+## cost to the guard plus the cost from the guard to the town with neutral
+## armies treated as open ground.
+func _gate_values(h: Hero, field: AiDistanceField, fog: FogOfWar) -> Dictionary:
+	var out := {}
+	var share := float(settings["gate_value_share"])
+	if share <= 0.0 or bool(settings["passive"]):
+		return out
+	var guards := []
+	for id in _sorted_object_ids():
+		var o: Dictionary = session.state.map.objects[id]
+		if o["type"] == "neutral_army" and field.cost_to(AdventureMap.object_pos(o)) != AiDistanceField.UNREACHABLE:
+			guards.append(o)
+	if guards.is_empty():
+		return out
+	for id in _sorted_object_ids():
+		var t: Dictionary = session.state.map.objects[id]
+		if t["type"] != "town":
+			continue
+		var owner := int(t["owner"])
+		if owner < 0 or owner == player or session.allied(owner, player):
+			continue
+		var tp := AdventureMap.object_pos(t)
+		if not (fog.is_explored(tp) or _spied(t)) or field.cost_to(tp) != AiDistanceField.UNREACHABLE:
+			continue
+		var from_town := _open_field(t)
+		var best_id := ""
+		var best_cost := 0
+		for g in guards:
+			var gp := AdventureMap.object_pos(g)
+			var back := from_town.cost_to(gp)
+			if back == AiDistanceField.UNREACHABLE:
+				continue
+			var total := field.cost_to(gp) + back
+			if best_id == "" or total < best_cost:
+				best_id = g["id"]
+				best_cost = total
+		if best_id != "":
+			out[best_id] = maxf(float(out.get(best_id, 0.0)), capture_value(t) * share)
+	return out
+
+
+## Distances from a rival town with neutral armies walkable (cached per turn).
+func _open_field(t: Dictionary) -> AiDistanceField:
+	if not _open_fields.has(t["id"]):
+		var blocked := {}
+		for id in _sorted_object_ids():
+			var o: Dictionary = session.state.map.objects[id]
+			if o["type"] == "neutral_army" or o["id"] == t["id"]:
+				continue
+			if o["type"] == "encounter" or session.is_guarded(o, player) or session.is_allied_town(o, player):
+				blocked[AdventureMap.object_pos(o)] = true
+		_open_fields[t["id"]] = AiDistanceField.build(session.state.map, AdventureMap.object_pos(t), blocked)
+	return _open_fields[t["id"]]
+
+
 ## What walking onto a map site is worth to this hero: a dwelling is worth
 ## its weekly troops for site_capture_weeks when someone else holds it, and its
 ## affordable pool when we hold it; other sites are worth their data "ai" value
@@ -1384,6 +1558,8 @@ func site_value(h: Hero, o: Dictionary) -> float:
 		return float(n) * creature_value(cid) * float(settings["site_recruit_rate"])
 	if MapSites.kind(o, data) == "village":
 		return _village_value(h, o)
+	if MapSites.kind(o, data) == "hamlet":
+		return _hamlet_value(h, o)
 	if MapSites.kind(o, data) == "dwelling":
 		var c := String(o["creature"])
 		var cap := session.tier_cap()
@@ -1412,6 +1588,48 @@ func site_value(h: Hero, o: Dictionary) -> float:
 		return float(def["xp"]) * float(settings["xp_value"])
 	var ai: Dictionary = def.get("ai", {})
 	return float(ai.get("flat", 0)) + float(ai.get("army_pct", 0)) * army_value(h.army)
+
+
+## How many of a held hamlet's levy this player would hire now: what the purse
+## spares above hamlet_gold_reserve, and in any case enough of a levy that
+## would otherwise breed unrest to bring it under a week's growth.
+func _hamlet_hire(h: Hero, o: Dictionary) -> int:
+	var c := String(o["creature"])
+	var cap := session.tier_cap()
+	if not bool(settings["recruits"]) or not GameSession._has_room(h.army, c) or (cap > 0 and int(data.creature(c)["tier"]) > cap):
+		return 0
+	var price := int(MapSites.recruit_cost(o, c, 1, data).get("gold", 0))
+	if price <= 0:
+		return 0
+	var gold := _bank().get_amount("gold")
+	var have := int(o.get("available", 0))
+	var n := clampi((gold - int(settings["hamlet_gold_reserve"])) / price, 0, have)
+	var week := maxi(1, MapSites.weekly_growth(o, data))
+	if have >= week and not Hamlets.is_secure(o, session.state.map, data):
+		n = maxi(n, mini(have - week + 1, gold / price))
+	return n
+
+
+## A hamlet someone else holds is worth its gold (as a gold mine is) and
+## site_capture_weeks of its levy; our own is worth the levy we would hire,
+## and the gold it would stop paying if its unrest were left alone.
+func _hamlet_value(h: Hero, o: Dictionary) -> float:
+	var c := String(o["creature"])
+	var site_owner := int(o.get("owner", -1))
+	var gold_value := float(MapSites.daily_gold(o, data)) * resource_value("gold") * float(settings["hamlet_horizon_days"])
+	if site_owner != player:
+		if session.allied(site_owner, player):
+			return 0.0
+		if site_owner >= 0:
+			gold_value *= float(settings["hamlet_retake_days"]) / maxf(1.0, float(settings["hamlet_horizon_days"]))
+		return gold_value + float(MapSites.weekly_growth(o, data)) * creature_value(c) * float(settings["site_capture_weeks"]) * 0.5
+	var n := _hamlet_hire(h, o)
+	if n <= 0:
+		return 0.0
+	var v := float(n) * creature_value(c) * float(settings["site_recruit_rate"])
+	if Hamlets.mood(o, data) != "" and not Hamlets.is_secure(o, session.state.map, data):
+		v += gold_value
+	return v
 
 
 ## A village frees once and sells its stock once: an unclaimed one is worth
@@ -1462,6 +1680,8 @@ func _recruit_at_site(h: Hero, site_id: String) -> void:
 	for offer in info.get("offers", []):
 		var c := String(offer["creature"])
 		var n := session.max_site_recruitable(site_id, h.id, c)
+		if String(info["kind"]) == "hamlet":
+			n = mini(n, _hamlet_hire(h, session.state.map.objects[site_id]))
 		if n > 0 and session.site_recruit(site_id, h.id, n, c)["ok"]:
 			_recruited += n
 			_note("%s recruits %d %s at the %s." % [h.name, n, data.creature(c)["name"], info["name"]])
@@ -1478,7 +1698,7 @@ func _hero_targets(h: Hero, field: AiDistanceField, move: float, hero_value: flo
 	ids.sort()
 	for id in ids:
 		var e: Hero = session.state.heroes[id]
-		if not e.alive or session.allied(e.owner, player) or not fog.is_explored(e.pos):
+		if not e.alive or session.allied(e.owner, player) or not _knows_hero(e, fog):
 			continue
 		if session.battle_target(e.id).get("kind", "") != "hero":
 			continue
@@ -1489,7 +1709,7 @@ func _hero_targets(h: Hero, field: AiDistanceField, move: float, hero_value: flo
 		if hero_value < strength * float(settings["strength_prefilter"]):
 			continue
 		var value := (army_value(e.army) * float(settings["neutral_value_rate"]) + float(settings["hero_kill_value"])) \
-			* float(settings["enemy_bonus"])
+			* rival_factor(e.owner)
 		if cost > h.movement_left:
 			value *= float(settings["chase_rate"])   # it will not wait for us
 		var days := float(cost) / move
@@ -1505,8 +1725,15 @@ func _explore_targets(h: Hero, field: AiDistanceField, move: float) -> Array:
 	var radius := maxi(1, h.vision_radius(data))
 	var best := {}
 	var taken := {}
+	# A game with hamlets offers more to do at home: the longer no rival town
+	# is known, the more the unknown is worth, so the war still gets found.
+	var hunt := 1.0
+	if Hamlets.enabled(session.state):
+		hunt += float(settings["hamlet_hunt_rate"]) * float(session.state.day / 7)
 	for o in map.objects.values():
 		taken[AdventureMap.object_pos(o)] = true
+		if o["type"] == "town" and int(o["owner"]) >= 0 and not session.allied(int(o["owner"]), player) and fog.is_explored(AdventureMap.object_pos(o)):
+			hunt = 1.0
 	for e in session.state.heroes.values():
 		if e.alive:
 			taken[e.pos] = true
@@ -1524,7 +1751,7 @@ func _explore_targets(h: Hero, field: AiDistanceField, move: float) -> Array:
 					var q := p + Vector2i(dx, dy)
 					if map.in_bounds(q) and dx * dx + dy * dy <= radius * radius and not fog.is_explored(q):
 						hidden += 1
-			var value := float(hidden) * float(settings["explore_value_per_tile"])
+			var value := float(hidden) * float(settings["explore_value_per_tile"]) * hunt
 			var days := float(cost) / move
 			var u := value / (1.0 + days)
 			if best.is_empty() or u > best["utility"]:

@@ -217,6 +217,47 @@ func free_seat(player_idx: int) -> void:
 		_rpc_release.rpc_id(1, player_idx)
 
 
+## Lobby: choose the faction and hero class of a player this person holds.
+func pick(player_idx: int, faction: String, hero_class: String) -> void:
+	if is_host:
+		_host_pick(player_idx, my_name, faction, hero_class)
+	elif _connected:
+		_rpc_pick.rpc_id(1, player_idx, faction, hero_class)
+
+
+## Host: ends the lobby and starts the match.
+func begin_match() -> void:
+	if is_host and session != null and OnlineMatch.in_lobby(session.state):
+		OnlineMatch.close_lobby(session.state)
+		_after_seats()
+
+
+## Host: shares the game again after the host changed it here (lobby opened).
+func share() -> void:
+	if is_host and session != null:
+		_after_seats()
+
+
+func _host_pick(player_idx: int, who: String, faction: String, hero_class: String) -> void:
+	if OnlineMatch.seat_of(session.state, player_idx) != who:
+		_tell(who, "Take that player first.")
+		return
+	var why := []
+	var next := OnlineMatch.rebuild_with_choice(session, player_idx, faction, hero_class, why)
+	if next == null:
+		_tell(who, String(why[0]))
+		return
+	session = next
+	_after_seats()
+
+
+@rpc("any_peer", "call_remote", "reliable")
+func _rpc_pick(player_idx: int, faction: String, hero_class: String) -> void:
+	var id := multiplayer.get_remote_sender_id()
+	if is_host and _names.has(id):
+		_host_pick(player_idx, String(_names[id]), faction, hero_class)
+
+
 ## True if this computer plays the player to move now.
 func my_turn() -> bool:
 	return session != null and active() and OnlineMatch.person_to_move(session.state) == my_name

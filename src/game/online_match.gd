@@ -23,6 +23,58 @@ static func begin(state: GameState, match_id: String) -> void:
 		state.online = {"match_id": match_id}
 
 
+## Lobby: a new game hosted before anyone moves, so the people who join can
+## choose their player's faction and hero class. def = {map_id, seed, setup}
+## as passed to GameSession.new_game; the game is rebuilt from it on each choice.
+static func open_lobby(state: GameState, def: Dictionary) -> void:
+	state.online["lobby"] = def.duplicate(true)
+
+
+static func in_lobby(state: GameState) -> bool:
+	return state.online.get("lobby", {}) is Dictionary and not (state.online.get("lobby", {}) as Dictionary).is_empty()
+
+
+static func close_lobby(state: GameState) -> void:
+	state.online.erase("lobby")
+
+
+## {faction, hero_class} chosen for a player in the lobby.
+static func lobby_choice(state: GameState, player_idx: int) -> Dictionary:
+	var players: Array = state.online.get("lobby", {}).get("setup", {}).get("players", [])
+	if player_idx < 0 or player_idx >= players.size():
+		return {}
+	return {"faction": String(players[player_idx].get("faction", "")), "hero_class": String(players[player_idx].get("hero_class", ""))}
+
+
+## The lobby game rebuilt with a new faction and hero class for one player
+## (seats and match kept), or null with the reason in why[0].
+static func rebuild_with_choice(game: GameSession, player_idx: int, faction: String, hero_class: String, why: Array) -> GameSession:
+	var data := game.data
+	if not in_lobby(game.state):
+		why.append("The match has already begun.")
+		return null
+	if not GameSetup.playable_factions(data).has(faction) or (hero_class != "" and not GameSetup.classes_for_faction(data, faction).has(hero_class)):
+		why.append("That faction or hero is not available.")
+		return null
+	var def: Dictionary = (game.state.online["lobby"] as Dictionary).duplicate(true)
+	var players: Array = def["setup"]["players"]
+	if player_idx < 0 or player_idx >= players.size():
+		why.append("No such player.")
+		return null
+	players[player_idx]["faction"] = faction
+	players[player_idx]["hero_class"] = hero_class
+	for p in players:   # a save read back turns whole numbers into floats
+		if p.has("team"):
+			p["team"] = int(p["team"])
+	var next := GameSession.new_game(data, String(def["map_id"]), int(def["seed"]), def["setup"])
+	if next == null:
+		why.append("The game could not be set up with that choice.")
+		return null
+	copy_seats(game.state, next.state)
+	next.state.online["lobby"] = def
+	return next
+
+
 static func is_online(state: GameState) -> bool:
 	return String(state.online.get("match_id", "")) != ""
 
@@ -95,7 +147,7 @@ static func copy_seats(from: GameState, to: GameState) -> void:
 ## The person whose turn it is ("" if nobody has taken that player yet, or the
 ## game is over or a computer player is to move).
 static func person_to_move(state: GameState) -> String:
-	if state.game_over or not bool(state.player(state.current_player)["is_human"]):
+	if in_lobby(state) or state.game_over or not bool(state.player(state.current_player)["is_human"]):
 		return ""
 	return seat_of(state, state.current_player)
 

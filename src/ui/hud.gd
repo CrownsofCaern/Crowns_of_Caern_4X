@@ -553,11 +553,14 @@ func show_tile(session: GameSession, t: Vector2i) -> void:
 			if MapSites.RECRUIT_KINDS.has(MapSites.kind(o, session.data)):
 				txt += ", %s" % ("unclaimed" if owner < 0 else session.state.player(owner)["name"])
 			var guard: Array = [] if MapCobolts.is_post(o, session.data) else o.get("guard", [])
+			var defended := guard.is_empty() and MapSites.is_hamlet(o, session.data) and owner >= 0 and session.is_guarded(o, session.state.current_player)
+			if defended:
+				guard = MapSites.defenders(o, session.data)
 			if not guard.is_empty():
 				var parts := []
 				for s in guard:
 					parts.append("%s %s" % [UiStyle.count_word(int(s[1])), session.data.creature(s[0])["name"]])
-				txt += "\nGuarded by " + ", ".join(parts)
+				txt += ("\nDefended by " if defended else "\nGuarded by ") + ", ".join(parts)
 		elif o["type"] == "town":
 			var owner := int(o["owner"])
 			txt += "\n%s (%s), %s" % [o["name"], session.data.town_types[o["town_type"]]["name"],

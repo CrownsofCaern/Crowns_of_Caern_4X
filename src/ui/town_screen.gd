@@ -17,6 +17,7 @@ var _town_pic: TownPicture
 var _faction_emblem: TextureRect
 var _subtitle: Label
 var _status: HBoxContainer
+var _treasury: HBoxContainer
 var exchange: ArmyExchange
 var _town_tabs: TabContainer
 var _unit_content: VBoxContainer
@@ -91,6 +92,10 @@ func build_ui(data: GameData) -> void:
 	_status = HBoxContainer.new()
 	_status.add_theme_constant_override("separation", 8)
 	titles.add_child(_status)
+	_treasury = HBoxContainer.new()
+	_treasury.name = "Treasury"
+	_treasury.add_theme_constant_override("separation", 8)
+	titles.add_child(_treasury)
 	var navigation := header
 	navigation.add_child(_build_switcher())
 	var close := Button.new()
@@ -329,6 +334,21 @@ func refresh() -> void:
 	_status.add_child(UiStyle.ui_icon("defense", 20))
 	var def := UiStyle.label("Garrison defense +%d" % Town.defense_bonus(t, _data), 13, UiStyle.TEXT_DIM)
 	_status.add_child(def)
+	var forts := session.fortification_level(t)
+	if forts > 0:
+		def.text += "  ·  Siege %d day%s" % [forts, "" if forts == 1 else "s"]
+		def.tooltip_text = "Each fortification makes attackers besiege a defended town one more day before they can storm it."
+	for pl in session.besiegers(t):
+		var left := maxi(0, int(session.siege_of(t, pl)["ready_day"]) - session.state.day)
+		_status.add_child(UiStyle.label("Besieged by %s: %s" % [session.state.player(pl)["name"],
+			"walls fall today" if left == 0 else "%d day%s left" % [left, "" if left == 1 else "s"]], 13, UiStyle.BAD))
+	for c in _treasury.get_children():
+		_treasury.remove_child(c)
+		c.queue_free()
+	if owner >= 0:
+		var bank: ResourceBank = session.state.player(owner)["resources"]
+		_treasury.add_child(UiStyle.label("Treasury:", 13, UiStyle.TEXT_DIM))
+		_treasury.add_child(UiStyle.cost_row(bank.to_dict(), _data))
 	_fill_buildings()
 	_fill_units(t)
 	_fill_right(t)
