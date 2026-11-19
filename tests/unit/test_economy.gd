@@ -95,6 +95,7 @@ func test_siege_neutral_town() -> void:
 	var setup := session.battle_setup("hero_wren", "town_cindermaw")
 	assert_eq(setup["sides"][1]["hero"]["defense"], 2, "walls help the garrison")
 	_make_strong()
+	session.state.rules["sieges"] = false   # the storm itself; waiting out the walls is test_sieges
 	var res := session.attack("hero_wren", "town_cindermaw")
 	assert_eq(res["winner"], 0)
 	assert_eq(int(t["owner"]), 0)
@@ -114,6 +115,7 @@ func test_failed_siege_weakens_garrison() -> void:
 	hero.army = Army.from_pairs([["pike_militia", 5]])
 	hero.pos = Vector2i(21, 3)
 	var before := Town.garrison(t).total_creatures()
+	session.state.rules["sieges"] = false   # the storm itself; waiting out the walls is test_sieges
 	var res := session.attack("hero_wren", "town_cindermaw")
 	assert_eq(res["winner"], 1)
 	assert_eq(int(t["owner"]), -1)
