@@ -798,7 +798,8 @@ recruits on arrival.
 
 **Hamlets** (`data/sites.json` kind `hamlet`, rules in `src/game/hamlets.gd`, numbers in game_rules.json
 `hamlets`): the new-game default; unticking the setup checkbox gives a **Classic** game without them
-(`setup.hamlets` -> `rules.hamlets`). Three levels: Hamlet (100 gold a day, tier 1-2, light guard), Village
+(`setup.hamlets` -> `rules.hamlets`). "Host online" uses the same setup, so the host's choice is kept in the
+lobby definition and every rebuilt lobby game, and every joiner's copy, has the same hamlets. Three levels: Hamlet (100 gold a day, tier 1-2, light guard), Village
 (250, tier 3-4, medium) and Freehold (500, tier 5-6, strong). They are placed when the game starts, not by
 the map generator (`Hamlets.place`, an RNG stream of its own, so a Classic game and every other mode keep
 their maps): `per_player` sites by movement cost from each player's first town, `contested` ones where the

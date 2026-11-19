@@ -201,3 +201,51 @@ func test_lobby_players_choose_faction_and_hero_before_the_match_begins() -> voi
 	OnlineMatch.close_lobby(next.state)
 	assert_false(OnlineMatch.in_lobby(next.state))
 	assert_true(OnlineMatch.rebuild_with_choice(next, 2, faction, "", why) == null, "no changes once begun")
+
+
+## [site, x, y, owner, creature] of every hamlet, village and freehold on the map, in id order.
+func _hamlet_rows(s: GameSession) -> Array:
+	var out := []
+	for id in s._sorted_object_ids():
+		var o: Dictionary = s.state.map.objects[id]
+		if MapSites.is_hamlet(o, data):
+			var p := AdventureMap.object_pos(o)
+			out.append([String(o["site"]), p.x, p.y, int(o.get("owner", -1)), String(o.get("creature", ""))])
+	return out
+
+
+func test_hosted_lobby_plays_with_hamlets_by_default_on_every_computer() -> void:
+	# "Host online" sends the same current_setup() as "Begin": hamlets are on unless unticked.
+	var menu := MainMenu.new()
+	menu.build(data)
+	menu._show_setup()
+	for i in menu._maps.size():
+		if menu._maps[i]["generated"] and not menu._maps[i].get("scenario", false):
+			menu._map_pick.select(i)
+			break
+	menu._fill_slots()
+	var hosted := menu.current_setup()
+	menu.free()
+	assert_true(bool(hosted.get("hamlets", false)), "a hosted conquest game has hamlets by default")
+	var setup := {"players": [
+		{"type": "human", "faction": "concord", "hero_class": "", "team": 0}, {"type": "computer", "faction": "ashen", "hero_class": "", "team": 0, "difficulty": "normal"},
+		{"type": "human", "faction": "ashen", "hero_class": "", "team": 0}, {"type": "closed", "faction": "concord", "hero_class": "", "team": 0}],
+		"standard_start": true, "hamlets": hosted["hamlets"]}
+	var host := GameSession.new_game(data, "mournfield", 5, setup)
+	OnlineMatch.begin(host.state, "m1")
+	OnlineMatch.open_lobby(host.state, {"map_id": "mournfield", "seed": 5, "setup": setup})
+	assert_true(Hamlets.enabled(host.state))
+	var rows := _hamlet_rows(host)
+	assert_gt(rows.size(), 0, "hamlets stand on the map")
+	assert_eq(_hamlet_rows(GameSession.new_game(data, "mournfield", 5, setup)), rows, "the same setup and seed place the same hamlets")
+	# Ben picks a faction: the host rebuilds the lobby game and every joiner receives that game.
+	assert_eq(OnlineMatch.claim(host.state, 2, "Ben"), "")
+	var faction: String = GameSetup.playable_factions(data)[2]
+	var why := []
+	var next := OnlineMatch.rebuild_with_choice(host, 2, faction, "", why)
+	assert_true(next != null, str(why))
+	assert_true(Hamlets.enabled(next.state), "the rebuilt lobby game keeps hamlets")
+	assert_eq(_hamlet_rows(next).map(func(r: Array) -> Array: return r.slice(0, 4)), rows.map(func(r: Array) -> Array: return r.slice(0, 4)), "and puts them in the same places")
+	var ben := _copy(next)
+	assert_true(Hamlets.enabled(ben.state))
+	assert_eq(_hamlet_rows(ben), _hamlet_rows(next), "a joiner plays on the host's hamlets")
